@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-export const Openai = (props: SVGProps) => (
+export const Openai = (props: SVGProps<SVGSVGElement>) => (
     <svg
         {...props}
         preserveAspectRatio="xMidYMid"

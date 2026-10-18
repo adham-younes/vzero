@@ -1,43 +1,4 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { HeroHeader } from '@/components/landing-5-header'
-import { ChevronRight } from 'lucide-react'
-import LogoCloud from '@/components/landing-5-logo-cloud'
-import HeroVideo from '@/components/landing-5-hero-video'
-
-export default function HeroSection() {
-    return (
-        <>
-            <HeroHeader />
-            <main className="overflow-x-hidden">
-                <section>
-                    <div className="lg:min-h-200 sm:aspect-3/2 min-[1996px]:max-h-240 relative mx-auto flex aspect-square flex-col justify-end lg:aspect-auto xl:aspect-video">
-                        <div className="relative z-10 flex flex-col justify-end">
-                            <div className="mx-auto w-full max-w-7xl px-6 pb-6 lg:pb-12">
-                                <div className="flex flex-wrap items-end justify-between gap-4 lg:w-2/3">
-                                    <h1 className="max-w-md text-balance text-5xl md:text-6xl">Build 10x Faster with Ada</h1>
-
-                                    <div className="flex items-center gap-2">
-                                        <Button
-                                            nativeButton={false}
-                                            render={
-                                                <Link href="#link">
-                                                    <span className="text-nowrap">Start Building</span>
-                                                    <ChevronRight className="ml-1" />
-                                                </Link>
-                                            }
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mask-y-from-45% mask-b-to-90% 2xl:mask-x-from-90% pointer-events-none absolute inset-0">
-                            <HeroVideo />
-                        </div>
-                    </div>
-                </section>
-                <LogoCloud />
-            </main>
-        </>
-    )
-}
+'use client'
+import HeroVideo from './landing-5-hero-video'
+import {Action,useLanguage} from './agynexa-shell'
+export default function HeroSection(){const {t}=useLanguage();return <section className="relative mx-auto flex min-h-[640px] flex-col justify-end lg:min-h-200 xl:aspect-video"><div className="absolute inset-0 overflow-hidden"><HeroVideo/><div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background via-background/10 to-transparent"/></div><div className="container relative z-10 pb-12 pointer-events-none"><div className="max-w-4xl"><p className="eyebrow">{t(['Enterprise agent engineering','هندسة وكلاء المؤسسات'])}</p><h1 className="max-w-3xl text-5xl tracking-tight md:text-7xl">{t(['Intelligence, built to do real work.','ذكاء مصمّم لإنجاز عمل حقيقي.'])}</h1><div className="mt-8 flex flex-wrap items-end justify-between gap-8"><p className="max-w-lg muted text-lg">{t(['Connect your knowledge, tools and decisions. Keep permissions explicit. Keep people in control.','اربط المعرفة والأدوات والقرارات. بصلاحيات واضحة، وتحكم يبقى بيد الإنسان.'])}</p><div className="pointer-events-auto"><Action href="/start">{t(['Define your next system','حدّد نظامك القادم'])}</Action></div></div></div></div></section>}

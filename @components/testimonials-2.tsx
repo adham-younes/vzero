@@ -12,7 +12,7 @@ const testimonials: {
     highlight: string
     author: string
     role: string
-    Logo: ComponentType
+    Logo: ComponentType<SVGProps<SVGSVGElement>>
 }[] = [
     {
         quote: 'Tailark helped our revenue team move from scattered updates to one shared CRM view.',
@@ -110,7 +110,7 @@ export default function Testimonials() {
     )
 }
 
-const ArrowIcon = (props: SVGProps) => {
+const ArrowIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <svg
             {...props}
