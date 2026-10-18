@@ -6,9 +6,7 @@ export default function HeroVideo() {
  useEffect(() => {
   const video = ref.current
   if (!video) return
-  const preference = matchMedia('(prefers-reduced-motion: reduce)')
   const resume = () => {
-   if (preference.matches) { video.pause(); return }
    if (document.visibilityState !== 'visible') return
    video.muted = true
    video.defaultMuted = true
@@ -22,14 +20,21 @@ export default function HeroVideo() {
   document.addEventListener('visibilitychange', resume)
   document.addEventListener('pointerdown', resume)
   document.addEventListener('keydown', resume)
-  preference.addEventListener('change', resume)
+  const fallback = () => {
+   if (video.dataset.fallback) return
+   video.dataset.fallback = 'true'
+   video.src = 'https://videos.pexels.com/video-files/18419650/18419650-uhd_2560_1440_30fps.mp4'
+   video.load()
+   resume()
+  }
+  video.addEventListener('error', fallback)
   return () => {
    video.removeEventListener('canplay', resume)
    window.removeEventListener('pageshow', resume)
    document.removeEventListener('visibilitychange', resume)
    document.removeEventListener('pointerdown', resume)
    document.removeEventListener('keydown', resume)
-   preference.removeEventListener('change', resume)
+   video.removeEventListener('error', fallback)
   }
  }, [])
  return <div className="home-video-background" aria-hidden="true"><video ref={ref} autoPlay muted loop playsInline preload="auto" className="architecture-video" src="/videos/background.mp4"/><div className="video-tint"/></div>
