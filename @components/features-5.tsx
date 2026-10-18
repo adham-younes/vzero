@@ -200,14 +200,11 @@ function DownloadIllustration() {
         <div className="z-1 absolute inset-0 m-auto size-fit scale-95">
             <Button
                 variant="secondary"
-                asChild
                 className="bg-background/25 inset-ring inset-ring-foreground/25 ml-1 backdrop-blur"
                 size="sm">
-                <div>
-                    <HardDriveDownload className="opacity-75" />
-                    <span className="border-r pr-2">Download</span>
-                    <ChevronDown className="opacity-50" />
-                </div>
+                <HardDriveDownload className="opacity-75" />
+                <span className="border-r pr-2">Download</span>
+                <ChevronDown className="opacity-50" />
             </Button>
 
             <div className="shadow-black/6.5 ring-black/6.5 mt-3 min-w-52 rounded-2xl bg-white p-1 shadow-xl ring *:cursor-pointer">
