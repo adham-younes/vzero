@@ -1,4 +1,4 @@
-import HeroSection from '@/components/pages-landing-five'
+import HeroSection from '@/components/landing-5-hero-section'
 import FeaturesTwo from '@/components/features-2'
 import FeaturesThree from '@/components/features-3'
 import FeaturesFive from '@/components/features-5'

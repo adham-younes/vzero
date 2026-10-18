@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { HeroHeader } from '@/components/pages-landing-five'
+import { HeroHeader } from '@/components/landing-5-header'
 import { ChevronRight } from 'lucide-react'
-import LogoCloud from '@/components/pages-landing-five'
-import HeroVideo from '@/components/pages-landing-five'
+import LogoCloud from '@/components/landing-5-logo-cloud'
+import HeroVideo from '@/components/landing-5-hero-video'
 
 export default function HeroSection() {
     return (
