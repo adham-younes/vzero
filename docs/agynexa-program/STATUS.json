@@ -2,7 +2,7 @@
   "program": "AGYNEXA",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
-  "updated_at": "2026-10-19T01:19:15.213155+00:00",
+  "updated_at": "2026-10-19T01:24:10.652418+00:00",
   "stage": 3,
   "status": "STAGES_1_TO_3_IMPLEMENTED_AND_SPECIFIED_RELEASE_PENDING",
   "owner_review": "THREE_STAGES_AUTHORIZED",
@@ -88,5 +88,13 @@
     "match_own_brand_colors": true,
     "correct_post_hero_width": true,
     "hero_video_must_remain": true
+  },
+  "editorial_followup": "Owner explicitly requested Humanizer and authorized layout judgment; applied without altering frozen Hero",
+  "intermediate_release": {
+    "commit": "b1dc77c1e3e168059bdc8bcbd2130a21cdde0285",
+    "preview_id": "dpl_Ef81PtZ7iqGJrRJQcN9sU698U2Jq",
+    "production_id": "dpl_7yiEohPoqUHu2BSHPPBQSB1w1oAj",
+    "production_url": "https://vzero-nn4liz7dq-adhamlouxors-projects.vercel.app",
+    "status": "READY; editorial follow-up pending final release"
   }
 }

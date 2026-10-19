@@ -1,8 +1,8 @@
 {
   "architecture": {
     "title": [
-      "Architecture that makes responsibility visible.",
-      "بنية توضّح المسؤولية في كل خطوة."
+      "How your sources, tools and approvals fit together.",
+      "كيف نربط المصادر والأدوات والاعتمادات."
     ],
     "intro": [
       "We design the system around your sources, operating rules and approval boundaries. Models support the work; they do not define who is allowed to act.",
@@ -15,8 +15,8 @@
           "01 / مصادر موثوقة"
         ],
         "body": [
-          "We identify the system of record, document owner and allowed audience before ingestion. Versions, citations and deletion rules travel with the content.",
-          "نحدد مصدر السجل ومالك المستند والجمهور المسموح قبل إدخال البيانات. وترافق المحتوى إصداراته واستشهاداته وقواعد حذفه."
+          "Before importing content, we identify its system of record, owner and permitted audience. We keep its version and source references, and define how deletion rules apply.",
+          "قبل استيراد المحتوى نحدد مصدر السجل ومالكه ومن يحق له الاطلاع عليه. ونحفظ الإصدار ومراجع المصدر ونحدد طريقة تطبيق قواعد الحذف."
         ]
       },
       {
@@ -68,8 +68,8 @@
   },
   "security": {
     "title": [
-      "Control access. Explain every action.",
-      "اضبط الوصول. ووثّق كل إجراء."
+      "Access controls and a record of each action.",
+      "ضوابط للوصول وسجل لكل إجراء."
     ],
     "intro": [
       "We design security into the workflow and validate it against the agreed risk model. Controls and evidence are part of delivery, with responsibilities assigned to your team and ours.",
@@ -148,8 +148,8 @@
       "ابدأ بالعمل الذي يحتاجه قطاعك."
     ],
     "intro": [
-      "We scope each engagement around a concrete workflow, its data owners and its operating constraints. Sector examples describe possible project scopes, not a claim of deployed customer systems.",
-      "نحدد كل مشروع حول سير عمل ملموس ومالكي بياناته وقيوده التشغيلية. أمثلة القطاعات تصف نطاقات ممكنة للتنفيذ دون نسب تطبيقات غير موثقة إلى عملاء."
+      "Each sector has different data, responsibilities and operating constraints. These examples show workflows we can scope with your team; they do not describe deployed customer projects.",
+      "تختلف البيانات والمسؤوليات وقيود التشغيل من قطاع إلى آخر. توضح هذه الأمثلة مسارات يمكن تحديد نطاقها مع فريقك، ولا تصف مشروعات منفذة لدى عملاء."
     ],
     "sections": [
       {
@@ -337,12 +337,12 @@
   },
   "methodology": {
     "title": [
-      "Clear scope. Evidence at every step.",
-      "نطاق واضح. وأدلة في كل خطوة."
+      "From an agreed scope to a working handover.",
+      "من نطاق متفق عليه إلى التسليم والتشغيل."
     ],
     "intro": [
-      "We start with one valuable workflow and agree what successful delivery looks like before implementation. Expansion follows evidence from the first scope.",
-      "نبدأ بسير عمل ذي قيمة ونتفق على معنى نجاح التسليم قبل التنفيذ. يأتي التوسع بناءً على أدلة النطاق الأول."
+      "We start with one workflow and agree how your team will assess the result. That first implementation gives us evidence for any expansion.",
+      "نبدأ بمسار عمل واحد ونتفق على طريقة تقييم نتيجته. ثم نستند إلى نتائج التنفيذ الأول عند تحديد أي توسع."
     ],
     "sections": [
       {
@@ -403,8 +403,8 @@
   },
   "about": {
     "title": [
-      "Engineering agents with clear boundaries.",
-      "هندسة الوكلاء بحدود واضحة."
+      "Enterprise agents built around your work.",
+      "وكلاء للمؤسسات بحسب احتياجات العمل."
     ],
     "intro": [
       "AGYNEXA designs, develops and implements enterprise AI-agent solutions around defined business tasks, trustworthy sources and accountable decisions.",
@@ -423,8 +423,8 @@
       },
       {
         "title": [
-          "Engineering before promises",
-          "الهندسة قبل الوعود"
+          "Work with your existing systems",
+          "البناء على أنظمتك الحالية"
         ],
         "body": [
           "A useful agent has a defined job, reliable context and clear limits. We preserve existing systems where they serve the business and add only the coordination the workflow needs.",
@@ -437,8 +437,8 @@
           "المساءلة البشرية"
         ],
         "body": [
-          "People retain ownership of consequential decisions. Permissions, evidence and approval paths are part of the design, not a message added after implementation.",
-          "يحتفظ الإنسان بمسؤولية القرارات المؤثرة. الصلاحيات والأدلة ومسارات الاعتماد جزء من التصميم منذ البداية."
+          "Your team retains responsibility for consequential decisions. We define permissions, evidence requirements and approval paths during design.",
+          "يحتفظ فريقك بمسؤولية القرارات المؤثرة. ونحدد الصلاحيات والأدلة المطلوبة ومسارات الاعتماد أثناء التصميم."
         ]
       },
       {
@@ -447,8 +447,8 @@
           "نطاق تجاري واضح"
         ],
         "body": [
-          "Deliverables, integration dependencies, evaluation criteria, support and provider usage costs are agreed for each project. We do not substitute general AI claims for a delivery plan.",
-          "نتفق لكل مشروع على المخرجات وتبعيات التكامل ومعايير التقييم والدعم وتكلفة استخدام المزودين. ونضع خطة تسليم محددة بدل الوعود العامة."
+          "For each project, we agree the deliverables, integration dependencies, evaluation criteria and support. The delivery plan also identifies provider usage costs.",
+          "نتفق لكل مشروع على المخرجات وتبعيات التكامل ومعايير التقييم والدعم، ونوضح تكلفة استخدام المزودين ضمن خطة التسليم."
         ]
       }
     ],
@@ -483,8 +483,8 @@
           "معيار قبول مفيد"
         ],
         "body": [
-          "Specify the expected output, required evidence and escalation condition. Include edge cases and denied actions, not just the happy path.",
-          "حدّد المخرج المتوقع والأدلة المطلوبة وشرط التصعيد. ضمّن الحالات الحدية والإجراءات الممنوعة إلى جانب المسار المعتاد."
+          "Specify the expected output, required evidence and when the task needs escalation. Test ordinary requests alongside edge cases and actions the system must deny.",
+          "حدد المخرج المتوقع والأدلة المطلوبة ومتى تحتاج المهمة إلى تصعيد. واختبر الطلبات المعتادة والحالات الحدية والإجراءات التي يجب أن يرفضها النظام."
         ]
       },
       {
@@ -526,8 +526,8 @@
   },
   "agentnexos": {
     "title": [
-      "Design a workspace around accountable tasks.",
-      "صمّم مساحة عمل حول مهام قابلة للمساءلة."
+      "A workspace for tasks and their review.",
+      "مساحة للمهام ومراجعتها."
     ],
     "intro": [
       "AgentNexOS is our workspace design direction for connecting tasks, sources, tools, review and outputs within an agreed implementation scope.",

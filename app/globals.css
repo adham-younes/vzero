@@ -264,3 +264,5 @@ a.panel>div:first-child { border-color: var(--border); }
     @apply bg-background text-foreground;
   }
 }
+
+@media(min-width:768px) { .editorial-grid > article:last-child:nth-child(odd) { grid-column: 1 / -1; } }

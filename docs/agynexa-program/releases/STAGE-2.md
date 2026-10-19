@@ -8,3 +8,6 @@ Own-site meaning captured from agynexa.si, read-only. Tokens match #050505 / #10
 Build passed including TypeScript and static generation. Local 33 routes returned 200 with H1/brand; invalid detail and removed photo returned 404. Browser: English procurement search→service, FAQ disclosure, Arabic RTL at390 with no overflow, CTA→brief. The first FAQ role locator did not match native summary semantics; observed text locator succeeded. No product failure was hidden.
 
 The brief prepares a local download; no automatic submission. AgentNexOS is service/design direction, not a claimed operational platform. Complete URL-based i18n/metadata, additional industry detail pages and live execution remain later-stage work.
+
+## Owner editorial follow-up
+Owner authorized layout/taxonomy judgment and explicitly invoked Humanizer. Applied humanizer3.0.0 in embedded/file mode to public bilingual service/editorial/shared copy; frozen Hero text excluded. Rewrote repetitive offers and staged contrasts, clarified Arabic terminology, preserved approval/access and availability boundaries. Prose review receipt: evidence/humanizer-review.json. Odd editorial grids now give the final card a full row. Existing emerald utility accents in changed shell/sections now use the exact primary token #10B981. No images generated or external design paid service used.

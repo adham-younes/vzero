@@ -15,8 +15,8 @@
       "تتباين الإجابات بين الموظفين، ويضيع السياق عند التحويل، وتزاحم الطلبات الروتينية الحالات الاستثنائية."
     ],
     "offer": [
-      "We design service agents that classify requests, retrieve approved policy and prepare the next action, with a clear route to a human.",
-      "نصمّم وكلاء يصنّفون الطلبات ويسترجعون السياسة المعتمدة ويجهّزون الإجراء التالي، مع مسار واضح للتحويل إلى موظف."
+      "We design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.",
+      "نصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة."
     ],
     "inputs": [
       "Service policies, ticket taxonomy, permitted customer history and escalation rules.",
@@ -38,8 +38,8 @@
     ],
     "outputs": [
       [
-        "Intent catalogue, escalation map and approved response flows.",
-        "دليل النوايا وخريطة التصعيد ومسارات الرد المعتمدة."
+        "Request categories, escalation map and approved response flows.",
+        "تصنيف الطلبات وخريطة التصعيد ومسارات الرد المعتمدة."
       ],
       [
         "A tested channel integration and evaluation set within the agreed scope.",
@@ -71,8 +71,8 @@
           "هل يعالج الوكيل كل الحالات؟"
         ],
         "answer": [
-          "No. We define supported intents and escalation rules; uncertain or sensitive cases stay with your team.",
-          "نحدد النوايا المدعومة وقواعد التصعيد؛ وتبقى الحالات غير المؤكدة أو الحساسة لدى فريقك."
+          "We define the request types the agent can handle. Uncertain or sensitive cases go to your team under agreed escalation rules.",
+          "نحدد أنواع الطلبات التي يعالجها الوكيل، ونحوّل الحالات غير المؤكدة أو الحساسة إلى فريقك وفق قواعد التصعيد المتفق عليها."
         ]
       },
       {
@@ -82,13 +82,13 @@
         ],
         "answer": [
           "Yes. One queue and one channel provide a focused pilot before adding more systems.",
-          "نعم. طابور واحد وقناة واحدة يتيحان بداية محددة قبل إضافة أنظمة أخرى."
+          "نعم. نبدأ بقائمة طلبات وقناة واحدة قبل إضافة أنظمة أخرى."
         ]
       }
     ],
     "seo": [
-      "We design service agents that classify requests, retrieve approved policy and prepare the next action, with a clear route to a human.",
-      "نصمّم وكلاء يصنّفون الطلبات ويسترجعون السياسة المعتمدة ويجهّزون الإجراء التالي، مع مسار واضح للتحويل إلى موظف."
+      "We design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.",
+      "نصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة."
     ]
   },
   {
@@ -107,8 +107,8 @@
       "يبحث الموظفون في بوابات متعددة ويكررون بياناتهم ويصعب عليهم معرفة مسؤول الطلب."
     ],
     "offer": [
-      "We build internal assistants for policy questions and structured employee requests, respecting department and employee access boundaries.",
-      "نطوّر مساعدين داخليين لأسئلة السياسات وطلبات الموظفين المنظمة مع احترام حدود وصول الأقسام والأفراد."
+      "Give employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.",
+      "نطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم."
     ],
     "inputs": [
       "Published policies, service catalogue, employee identity and access matrix.",
@@ -179,8 +179,8 @@
       }
     ],
     "seo": [
-      "We build internal assistants for policy questions and structured employee requests, respecting department and employee access boundaries.",
-      "نطوّر مساعدين داخليين لأسئلة السياسات وطلبات الموظفين المنظمة مع احترام حدود وصول الأقسام والأفراد."
+      "Give employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.",
+      "نطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم."
     ]
   },
   {
@@ -199,8 +199,8 @@
       "تتعارض بيانات الطلب وأمر الشراء والاستلام والفاتورة، وتنتقل الاستثناءات دون مسؤول واضح."
     ],
     "offer": [
-      "We design traceable workflows for purchase requests, invoice matching and receivables follow-up, with approvals at consequential steps.",
-      "نصمّم مسارات قابلة للتتبع لطلبات الشراء ومطابقة الفواتير ومتابعة التحصيل، مع اعتماد الإجراءات المؤثرة."
+      "We design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.",
+      "نصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل."
     ],
     "inputs": [
       "Requests, supplier records, purchase orders, receipts, invoices, aging schedules and matching tolerances.",
@@ -271,8 +271,8 @@
       }
     ],
     "seo": [
-      "We design traceable workflows for purchase requests, invoice matching and receivables follow-up, with approvals at consequential steps.",
-      "نصمّم مسارات قابلة للتتبع لطلبات الشراء ومطابقة الفواتير ومتابعة التحصيل، مع اعتماد الإجراءات المؤثرة."
+      "We design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.",
+      "نصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل."
     ]
   },
   {
@@ -291,8 +291,8 @@
       "يعرض البحث مستندات دون حسم السؤال، وقد تتجاهل الإجابات المولدة تغييرات السياسات أو قيود الوصول."
     ],
     "offer": [
-      "We implement permission-aware retrieval with source citations, content freshness controls and explicit handling of missing evidence.",
-      "ننفّذ استرجاعًا يراعي الصلاحيات مع الاستشهاد بالمصادر وضبط حداثة المحتوى والتعامل الصريح مع غياب الأدلة."
+      "We build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.",
+      "نبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها."
     ],
     "inputs": [
       "Approved repositories, document owners, access groups and representative questions.",
@@ -328,7 +328,7 @@
     ],
     "metrics": [
       "Evaluate citation validity, groundedness, retrieval recall and denied-access tests.",
-      "تقييم صحة الاستشهاد واستناد الإجابة للأدلة واستدعاء النتائج واختبارات منع الوصول."
+      "قياس صحة الاستشهاد واستناد الإجابة للمصادر، ومدى استرجاع النتائج ذات الصلة، مع اختبار منع الوصول غير المصرح."
     ],
     "systems": [
       "SharePoint",
@@ -363,8 +363,8 @@
       }
     ],
     "seo": [
-      "We implement permission-aware retrieval with source citations, content freshness controls and explicit handling of missing evidence.",
-      "ننفّذ استرجاعًا يراعي الصلاحيات مع الاستشهاد بالمصادر وضبط حداثة المحتوى والتعامل الصريح مع غياب الأدلة."
+      "We build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.",
+      "نبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها."
     ]
   },
   {
@@ -383,8 +383,8 @@
       "يصعب ضبط مساعد واحد عندما يتولى كل المهام والأدوات."
     ],
     "offer": [
-      "We design task boundaries and handoffs between specialized agents, deterministic workflows and accountable reviewers.",
-      "نصمّم حدود المهام والتحويل بين وكلاء متخصصين ومسارات محددة ومراجعين مسؤولين."
+      "We define what each agent does and how it hands work to other agents, fixed workflow steps or a reviewer. Each handoff has a clear responsibility.",
+      "نحدد مهمة كل وكيل وكيف يسلّم العمل إلى وكيل آخر أو خطوة محددة في المسار أو مراجع. ولكل انتقال مسؤولية واضحة."
     ],
     "inputs": [
       "Task definitions, tool schemas, shared-state boundaries and success criteria.",
@@ -434,7 +434,7 @@
     "faq": [
       {
         "question": [
-          "Is more agents always better?",
+          "Are more agents always better?",
           "هل زيادة الوكلاء أفضل دائمًا؟"
         ],
         "answer": [
@@ -454,8 +454,8 @@
       }
     ],
     "seo": [
-      "We design task boundaries and handoffs between specialized agents, deterministic workflows and accountable reviewers.",
-      "نصمّم حدود المهام والتحويل بين وكلاء متخصصين ومسارات محددة ومراجعين مسؤولين."
+      "We define what each agent does and how it hands work to other agents, fixed workflow steps or a reviewer. Each handoff has a clear responsibility.",
+      "نحدد مهمة كل وكيل وكيف يسلّم العمل إلى وكيل آخر أو خطوة محددة في المسار أو مراجع. ولكل انتقال مسؤولية واضحة."
     ]
   },
   {
@@ -470,12 +470,12 @@
       "لمالكي التطبيقات وتقنية المعلومات الراغبين في ربط الأنظمة المعتمدة."
     ],
     "problem": [
-      "Point-to-point scripts hide permissions, lose events and duplicate business actions.",
-      "تخفي السكربتات المنفصلة الصلاحيات وتفقد الأحداث وقد تكرر الإجراءات التجارية."
+      "Separate integration scripts can lose events or repeat an action when permission checks and recovery rules are unclear.",
+      "قد تفقد برامج الربط المنفصلة أحداثًا أو تكرر إجراءً عندما تكون الصلاحيات وقواعد الاستعادة غير واضحة."
     ],
     "offer": [
-      "We implement scoped connectors and event flows with reliable synchronization, explicit data ownership and auditable writes.",
-      "ننفّذ موصلات محددة الصلاحيات وتدفقات أحداث بمزامنة موثوقة وملكية واضحة للبيانات وكتابة قابلة للتدقيق."
+      "We connect approved systems within defined permissions. The work covers synchronization, ownership of each data source and an audit trail for changes.",
+      "نربط الأنظمة المعتمدة بصلاحيات محددة. يشمل العمل مزامنة البيانات وتحديد مصدرها المسؤول وتسجيل التغييرات للمراجعة."
     ],
     "inputs": [
       "Provider documentation, sandbox access, object mappings and data-retention requirements.",
@@ -506,8 +506,8 @@
       ]
     ],
     "controls": [
-      "Secrets stay server-side; signed events are verified; destinations are allowlisted; tenant context is resolved by trusted identities.",
-      "الأسرار على الخادم؛ والتحقق من توقيع الأحداث؛ وقائمة وجهات مسموحة؛ وسياق المؤسسة مشتق من هويات موثوقة."
+      "Keep credentials on the server and verify signed events before processing. Allow only approved destinations and derive organization access from verified identities.",
+      "نحفظ بيانات الوصول على الخادم ونتحقق من توقيع الأحداث قبل معالجتها. نسمح بالوجهات المعتمدة فقط ونحدد المؤسسة من الهوية المتحقق منها."
     ],
     "metrics": [
       "Measure sync freshness, failed-event recovery and duplicate-action prevention.",
@@ -547,8 +547,8 @@
       }
     ],
     "seo": [
-      "We implement scoped connectors and event flows with reliable synchronization, explicit data ownership and auditable writes.",
-      "ننفّذ موصلات محددة الصلاحيات وتدفقات أحداث بمزامنة موثوقة وملكية واضحة للبيانات وكتابة قابلة للتدقيق."
+      "We connect approved systems within defined permissions. The work covers synchronization, ownership of each data source and an audit trail for changes.",
+      "نربط الأنظمة المعتمدة بصلاحيات محددة. يشمل العمل مزامنة البيانات وتحديد مصدرها المسؤول وتسجيل التغييرات للمراجعة."
     ]
   },
   {
@@ -567,8 +567,8 @@
       "يكرر المتصلون المعلومات وينتظرون التحويل، وقد تؤدي أخطاء الفهم الصوتي إلى إجراء غير مناسب."
     ],
     "offer": [
-      "We design licensed voice journeys with interruption handling, confirmation of critical details and a dependable transfer to staff.",
-      "نصمّم رحلات صوتية عبر قنوات مرخصة تدعم المقاطعة وتأكيد التفاصيل الحرجة والتحويل الموثوق للموظفين."
+      "We design calls over licensed voice channels, including how the agent handles interruptions and confirms critical details. Callers can transfer to staff with their context.",
+      "نصمّم المكالمات عبر قنوات صوتية مرخصة، بما يشمل التعامل مع المقاطعة وتأكيد التفاصيل المهمة. ويمكن تحويل المتصل إلى موظف مع معلومات المحادثة."
     ],
     "inputs": [
       "Call scripts, languages, escalation queues, consent requirements and telephony access.",
@@ -638,8 +638,8 @@
       }
     ],
     "seo": [
-      "We design licensed voice journeys with interruption handling, confirmation of critical details and a dependable transfer to staff.",
-      "نصمّم رحلات صوتية عبر قنوات مرخصة تدعم المقاطعة وتأكيد التفاصيل الحرجة والتحويل الموثوق للموظفين."
+      "We design calls over licensed voice channels, including how the agent handles interruptions and confirms critical details. Callers can transfer to staff with their context.",
+      "نصمّم المكالمات عبر قنوات صوتية مرخصة، بما يشمل التعامل مع المقاطعة وتأكيد التفاصيل المهمة. ويمكن تحويل المتصل إلى موظف مع معلومات المحادثة."
     ]
   },
   {
@@ -658,8 +658,8 @@
       "ينتقل الموظف بين السياسة وسجل العميل والملاحظات أثناء استمرار المحادثة."
     ],
     "offer": [
-      "We build in-workflow assistance that retrieves relevant guidance, drafts responses and prepares case summaries for staff review.",
-      "نطوّر مساعدة داخل سير العمل تسترجع الإرشاد المناسب وتقترح الردود وتجهّز ملخصات الحالات لمراجعة الموظف."
+      "We bring relevant guidance and response drafts into the support workflow. Staff review the suggestions and case summaries before using them.",
+      "نوفر الإرشادات المناسبة ومسودات الرد داخل مسار الدعم. يراجع الموظف الاقتراحات وملخصات الحالات قبل استخدامها."
     ],
     "inputs": [
       "Permitted conversation context, current policy and the support-system field schema.",
@@ -729,8 +729,8 @@
       }
     ],
     "seo": [
-      "We build in-workflow assistance that retrieves relevant guidance, drafts responses and prepares case summaries for staff review.",
-      "نطوّر مساعدة داخل سير العمل تسترجع الإرشاد المناسب وتقترح الردود وتجهّز ملخصات الحالات لمراجعة الموظف."
+      "We bring relevant guidance and response drafts into the support workflow. Staff review the suggestions and case summaries before using them.",
+      "نوفر الإرشادات المناسبة ومسودات الرد داخل مسار الدعم. يراجع الموظف الاقتراحات وملخصات الحالات قبل استخدامها."
     ]
   },
   {
@@ -749,8 +749,8 @@
       "يصعب اعتماد الاستقلالية دون معرفة البيانات والأدوات والقرارات التي يصل إليها كل وكيل."
     ],
     "offer": [
-      "We design authorization boundaries, approval policies and audit evidence around the actions your organization permits.",
-      "نصمّم حدود التفويض وسياسات الاعتماد وأدلة التدقيق حول الإجراءات التي تسمح بها مؤسستك."
+      "We define which actions an agent may take, who must approve them and what evidence the audit record needs. The rules follow your organization’s permissions.",
+      "نحدد الإجراءات المسموحة للوكيل ومن يعتمدها والأدلة المطلوبة في سجل التدقيق، وفق صلاحيات مؤسستك."
     ],
     "inputs": [
       "Role matrix, sensitive actions, data classifications and retention obligations.",
@@ -820,8 +820,8 @@
       }
     ],
     "seo": [
-      "We design authorization boundaries, approval policies and audit evidence around the actions your organization permits.",
-      "نصمّم حدود التفويض وسياسات الاعتماد وأدلة التدقيق حول الإجراءات التي تسمح بها مؤسستك."
+      "We define which actions an agent may take, who must approve them and what evidence the audit record needs. The rules follow your organization’s permissions.",
+      "نحدد الإجراءات المسموحة للوكيل ومن يعتمدها والأدلة المطلوبة في سجل التدقيق، وفق صلاحيات مؤسستك."
     ]
   },
   {
@@ -840,8 +840,8 @@
       "العرض الناجح لا يكشف الإخفاق مع المدخلات الفعلية وتغير المصادر وأخطاء المزود."
     ],
     "offer": [
-      "We build evaluation datasets, execution traces and review loops that connect technical performance to agreed business acceptance criteria.",
-      "نبني مجموعات تقييم وسجلات تنفيذ ودورات مراجعة تربط الأداء التقني بمعايير قبول العمل المتفق عليها."
+      "We build test cases and execution records to check results against your acceptance criteria. Regular reviews show where the workflow needs changes.",
+      "نبني حالات اختبار وسجلات تنفيذ لفحص النتائج مقابل معايير القبول. وتوضح المراجعة الدورية المواضع التي تحتاج تعديلًا في سير العمل."
     ],
     "inputs": [
       "Representative cases, expected evidence, error taxonomy and cost budgets.",
@@ -863,8 +863,8 @@
     ],
     "outputs": [
       [
-        "Evaluation suite, operational dashboard specification and release gates.",
-        "مجموعة تقييم ومواصفات لوحة تشغيل وشروط إطلاق."
+        "Evaluation suite, operational dashboard specification and release acceptance criteria.",
+        "مجموعة تقييم ومواصفات لوحة تشغيل ومعايير قبول الإطلاق."
       ],
       [
         "Failure-review procedure, alert thresholds and rollback playbook.",
@@ -911,8 +911,8 @@
       }
     ],
     "seo": [
-      "We build evaluation datasets, execution traces and review loops that connect technical performance to agreed business acceptance criteria.",
-      "نبني مجموعات تقييم وسجلات تنفيذ ودورات مراجعة تربط الأداء التقني بمعايير قبول العمل المتفق عليها."
+      "We build test cases and execution records to check results against your acceptance criteria. Regular reviews show where the workflow needs changes.",
+      "نبني حالات اختبار وسجلات تنفيذ لفحص النتائج مقابل معايير القبول. وتوضح المراجعة الدورية المواضع التي تحتاج تعديلًا في سير العمل."
     ]
   }
 ]
