@@ -1,0 +1,7 @@
+import {test} from 'node:test'
+import assert from 'node:assert/strict'
+import {parseReviewInput,reviewProcurement} from '../lib/procurement.ts'
+test('missing warranty prevents readiness despite cheaper price',()=>{const r=reviewProcurement(parseReviewInput({quantity:12,budget:15000,warrantyMonths:null}));assert.equal(r.quotes[0].total,14400);assert.equal(r.quotes[1].total,14160);assert.equal(r.status,'CLARIFICATION_REQUIRED');assert.deepEqual(r.issues,[{supplier:'B',code:'MISSING_WARRANTY'}]);assert.equal(r.orderCreated,false)})
+test('complete within-budget comparison needs human review, never purchase authorization',()=>{const r=reviewProcurement(parseReviewInput({quantity:12,budget:14400,warrantyMonths:24}));assert.equal(r.status,'READY_FOR_HUMAN_REVIEW');assert.equal(r.issues.length,0);assert.equal(r.orderCreated,false)})
+test('budget boundary and zero warranty remain explicit',()=>{const r=reviewProcurement(parseReviewInput({quantity:12,budget:14160,warrantyMonths:0}));assert.deepEqual(r.issues,[{supplier:'A',code:'OVER_BUDGET'}]);assert.equal(r.quotes[1].warrantyMonths,0)})
+test('reject malformed, excessive, fractional and unexpected data',()=>{for(const bad of [null,[],{}, {quantity:1,budget:5,warrantyMonths:24,approved:true},{quantity:1.5,budget:1000,warrantyMonths:null},{quantity:1001,budget:1000,warrantyMonths:null},{quantity:1,budget:Infinity,warrantyMonths:2},{quantity:1,budget:100,warrantyMonths:-1},{quantity:'12',budget:100,warrantyMonths:null}])assert.throws(()=>parseReviewInput(bad))})

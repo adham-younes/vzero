@@ -2,12 +2,12 @@
   "program": "AGYNEXA",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
-  "updated_at": "2026-10-19T01:37:15.858939+00:00",
-  "stage": 3,
-  "status": "STAGES_1_TO_3_DELIVERED_PRODUCTION_VERIFIED",
-  "owner_review": "THREE_STAGES_AUTHORIZED",
-  "next_stage": 4,
-  "next_stage_authorized": false,
+  "updated_at": "2026-10-19T02:11:28.100612+00:00",
+  "stage": 6,
+  "status": "STAGES_4_TO_6_IMPLEMENTED_AWAITING_DEPLOYMENT_VERIFICATION",
+  "owner_review": "STAGES_4_TO_6_AND_PRODUCTION_AUTHORIZED",
+  "next_stage": null,
+  "next_stage_authorized": true,
   "source_commit": "a4a8a5daf00c36074f9db0e43184fe84d64a9f7a",
   "branch": "codex/agynexa-stage-0",
   "stage_commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/releases/STAGE-0.md",
@@ -61,7 +61,7 @@
     "Vendor private behavior and account settings not inspected",
     "Live APIs/database/connectors not implemented; specification only"
   ],
-  "next_action": "Await owner selection for remaining stage4 visual expansion or stage5 scoped live implementation. Keep Hero freeze and use saved research. No automatic database changes.",
+  "next_action": "Verify preview and production for the implemented stages4–6 scope; retain video hashes and do not connect external databases.",
   "deployment_test": {
     "authorized_by_user": true,
     "production_authorized_by_user": true,
@@ -85,13 +85,17 @@
     "stages": [
       1,
       2,
-      3
+      3,
+      4,
+      5,
+      6
     ],
     "production": true,
     "photo_removal": true,
     "match_own_brand_colors": true,
     "correct_post_hero_width": true,
-    "hero_video_must_remain": true
+    "hero_video_must_remain": true,
+    "hero_css_color_and_brightness_correction": true
   },
   "editorial_followup": "Owner explicitly requested Humanizer and authorized layout judgment; applied without altering frozen Hero",
   "intermediate_release": {
@@ -132,5 +136,20 @@
     "video_playing": true,
     "browser_errors_captured": 0,
     "evidence": "releases/SPEED-INSIGHTS-VERIFICATION.md"
+  },
+  "stage_4_6": {
+    "branch": "codex/agynexa-stages-4-6",
+    "build": "PASS",
+    "http_checks": 28,
+    "unit_tests": 4,
+    "canonical_locale_urls": 64,
+    "public_apis": [
+      "GET /api/v1/catalog/services",
+      "POST /api/v1/procurement/review"
+    ],
+    "external_writes": false,
+    "email_delivery": "visitor-controlled email draft and attachment; no server send",
+    "video_hash_matches": true,
+    "design_review": "in-thread fallback; independent reviewer unavailable"
   }
 }
