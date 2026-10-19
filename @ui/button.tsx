@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 const buttonVariants = cva('cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none active:scale-98 duration-200 [&_svg]:size-4 [&_svg]:shrink-0', {
     variants: {
         variant: {
-            default: 'shadow-sm shadow-black/10 bg-primary text-primary-foreground hover:bg-primary/90',
+            default: 'shadow-sm shadow-black/10 bg-primary text-primary-foreground hover:bg-primary hover:ring-1 hover:ring-foreground',
             destructive: 'bg-destructive text-destructive-foreground shadow-md hover:bg-destructive/90',
             outline: 'shadow-sm bg-foreground/5 shadow-black/10  ring-1 ring-foreground/10 duration-200 hover:bg-muted/50',
             secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',

@@ -159,7 +159,7 @@ export default function FeaturesSection() {
                                 <div className="md:pr-6 lg:pr-0">
                                     <h3 className="text-muted-foreground mb-6 text-sm font-medium">Timeline</h3>
                                     <p className="text-muted-foreground text-balance text-lg font-medium">
-                                        <span className="text-foreground">Shared timeline.</span> Sales, success, and support work from one account view so <span className="rounded bg-emerald-500/10 px-1.5 text-emerald-500">every handoff keeps context</span>.
+                                        <span className="text-foreground">Shared timeline.</span> Sales, success, and support work from one account view so <span className="rounded bg-primary/10 px-1.5 text-primary">every handoff keeps context</span>.
                                     </p>
                                 </div>
                                 <FeatureList items={featureHighlights.timeline} />

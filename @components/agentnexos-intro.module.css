@@ -1,0 +1,22 @@
+.intro {
+ position:relative;
+ isolation:isolate;
+ overflow:hidden;
+ min-height:640px;
+ display:flex;
+ align-items:center;
+ border-bottom:1px solid var(--border);
+ margin-bottom:48px;
+}
+.art { z-index:-1; object-fit:contain; object-position:right center; }
+.copy { width:49%; padding-block:64px; }
+.copy h1 { font-size:clamp(34px,4.8vw,64px); font-weight:500; }
+.description { color:var(--muted-foreground); font-size:18px; margin:24px 0 32px; max-width:54ch; }
+:global([dir=rtl]) .art { transform:scaleX(-1); }
+@media(max-width:767px) {
+ .intro { min-height:0; display:block; margin-bottom:32px; }
+ .art { height:320px!important; object-fit:cover; object-position:right center; }
+ .copy { width:100%; padding-block:340px 40px; }
+ .copy h1 { font-size:38px; }
+ .description { font-size:16px; }
+}
