@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-19T02:45:13.517700+00:00",
+  "updated_at": "2026-10-19T03:00:29.117365+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -134,10 +134,10 @@
     "future_unscoped_stages_authorized": false
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-documentation",
+    "branch": "codex/agynexa-connected-design-tools",
     "product_code_changed": false,
     "manual_production_deployment_required": false,
-    "commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/README.md"
+    "commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/CONNECTED-DESIGN-TOOLS.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -154,5 +154,14 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Keep cloud documentation current; collect final owner visual acceptance. Select a bounded backlog scope before implementing connected enterprise functionality."
+  "next_action": "Keep cloud documentation current; collect final owner visual acceptance. Select a bounded backlog scope before implementing connected enterprise functionality.",
+  "connected_design_resources": {
+    "count": 11,
+    "connection_status": "CONNECTED_OWNER_CONFIRMED",
+    "execution_status": "NOT_TESTED_IN_THIS_UPDATE",
+    "documentation": "CONNECTED-DESIGN-TOOLS.md",
+    "inventory": "connected-design-tools.json",
+    "source": "Owner-provided Vercel Connect list dated 2026-10-19",
+    "runtime_integration_claimed": false
+  }
 }

@@ -6,6 +6,7 @@ Documentation is a delivery requirement explicitly requested by the owner. Start
 - Preserve the AGYNEXA identity, approved bilingual content, ten services and nine solutions unless the owner requests a change. `DESIGN.md` describes the design contract.
 - Follow actual aliases in `tsconfig.json`: active UI components are under `@components/` and `@ui/`.
 - Distinguish `IMPLEMENTED`, `VERIFIED`, `SPECIFIED`, `REQUIRES_ACCESS`, and `BLOCKED`. The public site has two small APIs; it is not a connected enterprise agent platform.
+- Before UI/design work, read `docs/agynexa-program/CONNECTED-DESIGN-TOOLS.md`: the owner confirms 11 Vercel Connect resources for interface enrichment. Verify the needed capability and resource scope when using a connector; do not conflate connection with tested runtime integration.
 - Use saved public reference research. Re-fetch only a specific missing or outdated item that affects the work.
 - No secrets, customer data, private account output, dependencies or build artifacts in this public repository.
 - Do not change external accounts, databases, paid services, protection settings or send messages without applicable authorization.
