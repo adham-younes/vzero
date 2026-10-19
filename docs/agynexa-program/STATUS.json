@@ -2,9 +2,9 @@
   "program": "AGYNEXA",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
-  "updated_at": "2026-10-19T02:11:28.100612+00:00",
+  "updated_at": "2026-10-19T02:18:17.960871+00:00",
   "stage": 6,
-  "status": "STAGES_4_TO_6_IMPLEMENTED_AWAITING_DEPLOYMENT_VERIFICATION",
+  "status": "STAGES_4_TO_6_SCOPED_DELIVERY_PRODUCTION_VERIFIED",
   "owner_review": "STAGES_4_TO_6_AND_PRODUCTION_AUTHORIZED",
   "next_stage": null,
   "next_stage_authorized": true,
@@ -61,7 +61,7 @@
     "Vendor private behavior and account settings not inspected",
     "Live APIs/database/connectors not implemented; specification only"
   ],
-  "next_action": "Verify preview and production for the implemented stages4–6 scope; retain video hashes and do not connect external databases.",
+  "next_action": "Owner visual review of production. Further live enterprise connectors, database or server-side email require a separately scoped authorized implementation.",
   "deployment_test": {
     "authorized_by_user": true,
     "production_authorized_by_user": true,
@@ -150,6 +150,15 @@
     "external_writes": false,
     "email_delivery": "visitor-controlled email draft and attachment; no server send",
     "video_hash_matches": true,
-    "design_review": "in-thread fallback; independent reviewer unavailable"
+    "design_review": "in-thread fallback; independent reviewer unavailable",
+    "production_id": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+    "production_commit": "f6e92b3169be1dd96e7a9af197baf65c85957c16",
+    "implementation_commit": "991deca5805636b090a7098c8f999ed162eb72de",
+    "preview_id": "dpl_7XcvmYr1Bq41sUhTvqrK4sAL6ir1",
+    "production_status": "READY",
+    "production_http_checks": 28,
+    "production_browser_errors": 0,
+    "production_video_playing": true,
+    "receipt": "releases/STAGES-4-6-DELIVERY.md"
   }
 }
