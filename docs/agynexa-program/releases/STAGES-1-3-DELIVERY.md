@@ -1,5 +1,8 @@
 # AGYNEXA: تسليم المراحل 1–3 ومراجعة Humanizer
 
+> سجل تاريخي يصف هذا التسليم وقت تنفيذه. الحالة الجارية في [مصفوفة المراحل](../STAGE-MATRIX.md) و[STATUS](../STATUS.json).
+
+
 النسخة المنشورة: https://vzero-nine-beryl.vercel.app/
 معاينة ثابتة: https://vzero-2tc7gi5yf-adhamlouxors-projects.vercel.app/
 النشر: dpl_26bRUbwQYStofkVuEwCLd8zFsHEo — READY.

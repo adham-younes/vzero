@@ -1,0 +1,487 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AGYNEXA implemented public API",
+    "version": "2026-10-19",
+    "description": "Source-derived contract for implementation commit 991deca5805636b090a7098c8f999ed162eb72de, deployed via merge f6e92b3169be1dd96e7a9af197baf65c85957c16. Two public, stateless endpoints only. No database, authenticated approval, live AI, external connector or server email. Stage-3 openapi.yaml is a separate proposal."
+  },
+  "servers": [
+    {
+      "url": "https://vzero-nine-beryl.vercel.app",
+      "description": "Public production domain; may advance to later releases"
+    },
+    {
+      "url": "http://localhost:3011",
+      "description": "Local development when started on port 3011"
+    }
+  ],
+  "security": [],
+  "paths": {
+    "/api/v1/catalog/services": {
+      "get": {
+        "operationId": "getPublishedServiceCatalog",
+        "summary": "Read the local bilingual service catalog",
+        "x-implementation-status": "IMPLEMENTED",
+        "description": "Public projection only. No custom distributed quota. An absent or empty lang selects en; an unsupported non-empty value returns 400. This envelope differs from the stage-3 proposed array.",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "en",
+                "ar",
+                ""
+              ],
+              "default": "en"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published catalog",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Catalog"
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "const": "public, max-age=300"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "const": "nosniff"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unsupported non-empty lang",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "lang must be en or ar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/procurement/review": {
+      "post": {
+        "operationId": "reviewIllustrativeProcurement",
+        "summary": "Calculate a fictional quote comparison",
+        "x-implementation-status": "IMPLEMENTED",
+        "x-max-body-bytes": 2048,
+        "description": "Quantity, whole-USD budget and supplier B warranty only. Supplier A fixed at USD 1200/unit, 24 months; B at USD 1180/unit. No supplier verification, order creation, authenticated approval or persistence. Missing Origin is accepted; cross-origin Origin is rejected. Handler checks streamed size, not only Content-Length. No custom distributed rate limit.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewInput"
+              },
+              "example": {
+                "quantity": 12,
+                "budget": 15000,
+                "warrantyMonths": null
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Calculation result, possibly requiring clarification",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewResult"
+                },
+                "example": {
+                  "mode": "ILLUSTRATIVE",
+                  "currency": "USD",
+                  "input": {
+                    "quantity": 12,
+                    "budget": 15000,
+                    "warrantyMonths": null
+                  },
+                  "quotes": [
+                    {
+                      "id": "A",
+                      "unitPrice": 1200,
+                      "warrantyMonths": 24,
+                      "total": 14400,
+                      "withinBudget": true,
+                      "complete": true
+                    },
+                    {
+                      "id": "B",
+                      "unitPrice": 1180,
+                      "warrantyMonths": null,
+                      "total": 14160,
+                      "withinBudget": true,
+                      "complete": false
+                    }
+                  ],
+                  "issues": [
+                    {
+                      "supplier": "B",
+                      "code": "MISSING_WARRANTY"
+                    }
+                  ],
+                  "status": "CLARIFICATION_REQUIRED",
+                  "orderCreated": false,
+                  "policy": "Compare prices only after warranty and budget checks; a responsible person must decide."
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "const": "no-store"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "const": "nosniff"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing body, malformed JSON, invalid input or body read error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "const": "no-store"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "const": "nosniff"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Present Origin header does not equal request URL origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "const": "no-store"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "const": "nosniff"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Body exceeds 2048 bytes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "const": "no-store"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "const": "nosniff"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Content-Type does not start with application/json",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "const": "no-store"
+                }
+              },
+              "X-Content-Type-Options": {
+                "schema": {
+                  "type": "string",
+                  "const": "nosniff"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported method, including GET. Framework-generated; no custom JSON error shape is guaranteed."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "Service": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "description": "Relative locale-aware page path"
+          }
+        },
+        "required": [
+          "slug",
+          "title",
+          "description",
+          "url"
+        ]
+      },
+      "Catalog": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "locale": {
+            "type": "string",
+            "enum": [
+              "en",
+              "ar"
+            ]
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Service"
+            },
+            "description": "10 services in the documented release"
+          }
+        },
+        "required": [
+          "locale",
+          "services"
+        ]
+      },
+      "ReviewInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "budget": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000000
+          },
+          "warrantyMonths": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 120
+          }
+        },
+        "required": [
+          "quantity",
+          "budget",
+          "warrantyMonths"
+        ]
+      },
+      "Quote": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "unitPrice": {
+            "type": "integer",
+            "enum": [
+              1200,
+              1180
+            ]
+          },
+          "warrantyMonths": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 120
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 1180,
+            "maximum": 1200000
+          },
+          "withinBudget": {
+            "type": "boolean"
+          },
+          "complete": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "unitPrice",
+          "warrantyMonths",
+          "total",
+          "withinBudget",
+          "complete"
+        ]
+      },
+      "Issue": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "supplier": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "MISSING_WARRANTY",
+              "OVER_BUDGET"
+            ]
+          }
+        },
+        "required": [
+          "supplier",
+          "code"
+        ]
+      },
+      "ReviewResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mode": {
+            "const": "ILLUSTRATIVE"
+          },
+          "currency": {
+            "const": "USD"
+          },
+          "input": {
+            "$ref": "#/components/schemas/ReviewInput"
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Quote"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Issue"
+            },
+            "maxItems": 4
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "CLARIFICATION_REQUIRED",
+              "READY_FOR_HUMAN_REVIEW"
+            ]
+          },
+          "orderCreated": {
+            "const": false
+          },
+          "policy": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "mode",
+          "currency",
+          "input",
+          "quotes",
+          "issues",
+          "status",
+          "orderCreated",
+          "policy"
+        ]
+      }
+    }
+  }
+}
