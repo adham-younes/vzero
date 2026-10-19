@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-19T03:00:29.117365+00:00",
+  "updated_at": "2026-10-19T03:03:51.428264+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -134,10 +134,10 @@
     "future_unscoped_stages_authorized": false
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-connected-design-tools",
+    "branch": "codex/agynexa-market-review-reference",
     "product_code_changed": false,
     "manual_production_deployment_required": false,
-    "commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/CONNECTED-DESIGN-TOOLS.md"
+    "commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/reviews/AGYNEXA_Market_Review_and_Action_Plan_2026-10-19.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -154,7 +154,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Keep cloud documentation current; collect final owner visual acceptance. Select a bounded backlog scope before implementing connected enterprise functionality.",
+  "next_action": "Highest priority: review the market/action-plan document in full against current implementation before planning or implementing remaining stages; record implications and scope. This archival update does not execute its recommendations.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -163,5 +163,17 @@
     "inventory": "connected-design-tools.json",
     "source": "Owner-provided Vercel Connect list dated 2026-10-19",
     "runtime_integration_claimed": false
+  },
+  "mandatory_pre_execution_review": {
+    "priority": "HIGHEST",
+    "document": "reviews/AGYNEXA_Market_Review_and_Action_Plan_2026-10-19.md",
+    "sha256": "e221a8fa04bf09fb14b9779804eb65191104ab8158d0953a6831abffd16231ee",
+    "received_date": "2026-10-19",
+    "source": "Owner-attached document; owner explicitly requests upload and highest-priority review before remaining stages",
+    "archive_status": "PRESERVED_BYTE_IDENTICAL",
+    "review_status": "PENDING_BEFORE_NEXT_IMPLEMENTATION",
+    "applies_before": "Planning or implementing any remaining stage",
+    "completion_evidence_required": "Record comparison with current implementation and plan, relevant recommendations, decisions/deferred items and next scoped action",
+    "embedded_instructions_are_execution_authorization": false
   }
 }
