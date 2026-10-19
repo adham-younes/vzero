@@ -2,7 +2,7 @@
   "program": "AGYNEXA",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
-  "updated_at": "2026-10-19T03:19:39.810811+03:00",
+  "updated_at": "2026-10-19T00:55:49.596994+00:00",
   "stage": 0,
   "status": "COMPLETE_WITH_RECORDED_UNKNOWNS",
   "owner_review": "PENDING",
@@ -12,9 +12,9 @@
   "branch": "codex/agynexa-stage-0",
   "stage_commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/releases/STAGE-0.md",
   "product_code_changed": false,
-  "production_changed": false,
+  "production_changed": true,
   "push_performed": true,
-  "preview_created": false,
+  "preview_created": true,
   "evidence": [
     "source-map.json",
     "brand-lock.json",
@@ -51,8 +51,8 @@
     "API/database tests"
   ],
   "unknowns": [
-    "Git SHA of historical Vercel deployment is not shown; current repository HEAD is not represented as proven deployed SHA.",
-    "Original approved procurement/receivables material beyond current repository not yet located."
+    "Original approved procurement/receivables material beyond current repository not yet located.",
+    "Historical deployment SHA remains unknown; current production is now verified at 2330c961df914e7b3f9b2762ae3577767248345f."
   ],
   "next_action": "After explicit owner approval, start Stage 1 using prior-research evidence and fill only missing reference details. No product implementation in Stage 1.",
   "deployment_test": {
@@ -65,6 +65,13 @@
     "vercel_login_connection": "adham-younes",
     "initial_attributed_author": "adhamyoune",
     "remediation": "Repository-local author configuration corrected to authenticated user GitHub noreply identity. No history rewrite or account permission change.",
-    "state": "RETEST_PENDING"
+    "state": "VERIFIED",
+    "preview_id": "dpl_2sDNZj32Pg7yr5hSPTKgafquL74Q",
+    "production_id": "dpl_D4MhV7Lgdj7Fxa8Bpfca5sfz5wGp",
+    "deployed_commit": "2330c961df914e7b3f9b2762ae3577767248345f",
+    "production_url": "https://vzero-nine-beryl.vercel.app",
+    "production_status": "READY",
+    "main_branch_changed": false,
+    "product_content_changed": false
   }
 }
