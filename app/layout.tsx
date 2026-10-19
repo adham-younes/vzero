@@ -4,9 +4,12 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { Almarai } from 'next/font/google'
 import Shell from '@/components/agynexa-shell'
+import {headers} from 'next/headers'
+import {siteUrl} from '@/lib/site-routes'
 const almarai = Almarai({ subsets: ['arabic'], weight: ['400', '700'], variable: '--font-arabic' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: { default: 'AGYNEXA — Enterprise agent systems', template: '%s | AGYNEXA' },
   description: 'Enterprise AI agents, RAG and workflow automation with explicit permissions and acceptance criteria.',
   generator: 'v0.app',
@@ -34,14 +37,16 @@ export const viewport: Viewport = {
   themeColor: '#050505',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const ar=(await headers()).get('x-agynexa-locale')==='ar'
   return (
-    <html lang="en" className="dark">
+    <html lang={ar?'ar':'en'} dir={ar?'rtl':'ltr'} className="dark">
       <body className={`${almarai.variable} antialiased`}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'Organization',name:'AGYNEXA',url:siteUrl,email:'adham@agynexa.si',founder:{'@type':'Person',name:'Adham Younes'}})}}/>
         <Shell>{children}</Shell>
         {process.env.NODE_ENV === 'production' && <Analytics />}
         <SpeedInsights />

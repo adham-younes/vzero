@@ -1,0 +1,2 @@
+import services from '@/lib/service-catalog.json'
+export function GET(request:Request){const locale=new URL(request.url).searchParams.get('lang')||'en';if(!['en','ar'].includes(locale))return Response.json({error:'lang must be en or ar'},{status:400});const i=locale==='ar'?1:0;return Response.json({locale,services:services.map(s=>({slug:s.slug,title:s.title[i],description:s.offer[i],url:`${i?'/ar':''}/services/${s.slug}`}))},{headers:{'Cache-Control':'public, max-age=300','X-Content-Type-Options':'nosniff'}})}
