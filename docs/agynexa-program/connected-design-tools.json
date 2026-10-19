@@ -1,0 +1,94 @@
+{
+  "recorded_date": "2026-10-19",
+  "source": {
+    "type": "OWNER_PROVIDED_VERCEL_CONNECT_LIST",
+    "page": "https://vercel.com/adhamlouxors-projects/vzero/connect",
+    "statement": "Owner confirms all listed connectors are connected to the application and requests documenting them for UI/design enrichment.",
+    "independently_inspected_this_update": false
+  },
+  "purpose": "Resources for repositioning and enriching AGYNEXA UI design with images, components and other interface needs, preserving the approved identity and original video.",
+  "count": 11,
+  "connection_status": "CONNECTED_OWNER_CONFIRMED",
+  "execution_status": "NOT_TESTED_IN_THIS_UPDATE",
+  "runtime_integration_claimed": false,
+  "connectors": [
+    {
+      "display_name": "vzero-templated",
+      "resource": "templated/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-mobbin",
+      "resource": "mobbin/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "adham-ai-agent-2026-api.lovable.dev",
+      "resource": "api.lovable.dev/prj_fRpOQ1OjPZqHoUBZbeHiTYi34Yqu",
+      "updated_label_as_supplied": "Sep 22",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE",
+      "scope_note": "Name references another project; verify the exact resource and intended project before using it. Keep separate from lovable/vzero."
+    },
+    {
+      "display_name": "vzero-creatomate",
+      "resource": "creatomate/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-quicknode",
+      "resource": "quicknode/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-better-design",
+      "resource": "better-design/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-lovable",
+      "resource": "lovable/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-tavily",
+      "resource": "tavily/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-miromiro",
+      "resource": "miromiro/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero-adobe",
+      "resource": "adobe/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    },
+    {
+      "display_name": "vzero",
+      "resource": "zeplin/vzero",
+      "updated_label_as_supplied": "Oct 19",
+      "connection_status": "CONNECTED_OWNER_CONFIRMED",
+      "execution_status": "NOT_TESTED_IN_THIS_UPDATE"
+    }
+  ]
+}
