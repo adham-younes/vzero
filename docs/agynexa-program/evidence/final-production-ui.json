@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "accent": "rgb(16, 185, 129)",
+    "background": "rgb(5, 5, 5)",
+    "bandWidth": 1280,
+    "hero": {
+      "bottom": 721,
+      "height": 640,
+      "left": 0,
+      "right": 1280,
+      "top": 81,
+      "width": 1280,
+      "x": 0,
+      "y": 81
+    },
+    "icon": "rgb(16, 185, 129)",
+    "overflow": false,
+    "url": "https://vzero-nine-beryl.vercel.app/",
+    "video": {
+      "autoplay": true,
+      "currentTime": 4.184821,
+      "height": 1440,
+      "loop": true,
+      "muted": true,
+      "paused": false,
+      "readyState": 4,
+      "width": 2560
+    },
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "videoTime2": 5.952303,
+  "errors": [],
+  "searchToDetail": "PASS",
+  "arabicDetail": "PASS",
+  "mobile390": "PASS local pre-editorial follow-up; final remote viewport remained1280 so not claimed as390"
+}

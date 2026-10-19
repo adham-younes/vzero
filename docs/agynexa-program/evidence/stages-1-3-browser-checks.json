@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "band": {
+      "background": "rgb(5, 5, 5)",
+      "width": 1280
+    },
+    "hero": {
+      "bottom": 721,
+      "height": 640,
+      "left": 0,
+      "right": 1280,
+      "top": 81,
+      "width": 1280,
+      "x": 0,
+      "y": 81
+    },
+    "overflow": false,
+    "sections": [
+      {
+        "background": "rgb(5, 5, 5)",
+        "width": 1280
+      },
+      {
+        "background": "rgb(5, 5, 5)",
+        "width": 1280
+      },
+      {
+        "background": "rgb(5, 5, 5)",
+        "width": 1280
+      },
+      {
+        "background": "rgb(5, 5, 5)",
+        "width": 1280
+      }
+    ],
+    "video": {
+      "height": 1440,
+      "paused": false,
+      "readyState": 4,
+      "src": "http://localhost:3100/videos/background.mp4",
+      "time": 7.07425,
+      "width": 2560
+    },
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "mobile": {
+    "dir": "rtl",
+    "h1": "المشتريات والفواتير والتحصيل",
+    "lang": "ar",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "catalogSearch": "procurement returned process-automation",
+  "faq": "native details opened and displayed ERP answer",
+  "language": "Arabic RTL persisted across client navigation",
+  "brief": "synthetic local draft prepared; no submission sent",
+  "testedAt": "2026-10-19T01:20:41.615Z"
+}
