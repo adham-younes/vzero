@@ -1,0 +1,14 @@
+# How to write effective agent goals, personas, instructions, and limitations
+
+Source: https://docs.kore.ai/agent-platform/abl/how-to/write-agent-goals-personas-instructions.md
+Captured: 2026-10-19T00:59:48Z
+HTTP: 200
+Evidence: How to write effective agent goals, personas, instructions, and limitations; Concept; Minimal working example; How it works; Common variations
+CTA observed: UNKNOWN
+
+Coverage: public text capture. Vendor claims are not independently verified.
+Audience/problem: INFERRED from the page title and evidence above.
+Inputs/workflow/outputs: see functional-map.md for reviewed product families; UNKNOWN for this individual page unless mapped there.
+Integrations/permissions: UNKNOWN unless explicitly documented in the linked technical sources.
+Visuals/motion: UNKNOWN for unviewed pages; see visual-patterns.md for observed samples.
+Use: internal reference only; no customer stories, metrics, text or artwork copied into AGYNEXA.

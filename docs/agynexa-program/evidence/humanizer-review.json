@@ -1,0 +1,174 @@
+{
+  "skill": "humanizer 3.0.0",
+  "mode": "embedded/file prose-only",
+  "reviewed": "10 bilingual service records, 8 editorial pages, 9 solutions and shared public UI copy",
+  "frozen_exclusions": "Hero component text/video; API contracts, source records, URLs, identifiers and technical facts unchanged",
+  "edits": [
+    {
+      "scope": "customer-service.offer",
+      "before": [
+        "We design service agents that classify requests, retrieve approved policy and prepare the next action, with a clear route to a human.",
+        "نصمّم وكلاء يصنّفون الطلبات ويسترجعون السياسة المعتمدة ويجهّزون الإجراء التالي، مع مسار واضح للتحويل إلى موظف."
+      ],
+      "after": [
+        "We design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.",
+        "نصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة."
+      ]
+    },
+    {
+      "scope": "employee-operations.offer",
+      "before": [
+        "We build internal assistants for policy questions and structured employee requests, respecting department and employee access boundaries.",
+        "نطوّر مساعدين داخليين لأسئلة السياسات وطلبات الموظفين المنظمة مع احترام حدود وصول الأقسام والأفراد."
+      ],
+      "after": [
+        "Give employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.",
+        "نطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم."
+      ]
+    },
+    {
+      "scope": "process-automation.offer",
+      "before": [
+        "We design traceable workflows for purchase requests, invoice matching and receivables follow-up, with approvals at consequential steps.",
+        "نصمّم مسارات قابلة للتتبع لطلبات الشراء ومطابقة الفواتير ومتابعة التحصيل، مع اعتماد الإجراءات المؤثرة."
+      ],
+      "after": [
+        "We design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.",
+        "نصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل."
+      ]
+    },
+    {
+      "scope": "enterprise-knowledge.offer",
+      "before": [
+        "We implement permission-aware retrieval with source citations, content freshness controls and explicit handling of missing evidence.",
+        "ننفّذ استرجاعًا يراعي الصلاحيات مع الاستشهاد بالمصادر وضبط حداثة المحتوى والتعامل الصريح مع غياب الأدلة."
+      ],
+      "after": [
+        "We build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.",
+        "نبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها."
+      ]
+    },
+    {
+      "scope": "agent-orchestration.offer",
+      "before": [
+        "We design task boundaries and handoffs between specialized agents, deterministic workflows and accountable reviewers.",
+        "نصمّم حدود المهام والتحويل بين وكلاء متخصصين ومسارات محددة ومراجعين مسؤولين."
+      ],
+      "after": [
+        "We define what each agent does and how it hands work to other agents, fixed workflow steps or a reviewer. Each handoff has a clear responsibility.",
+        "نحدد مهمة كل وكيل وكيف يسلّم العمل إلى وكيل آخر أو خطوة محددة في المسار أو مراجع. ولكل انتقال مسؤولية واضحة."
+      ]
+    },
+    {
+      "scope": "enterprise-integrations.offer",
+      "before": [
+        "We implement scoped connectors and event flows with reliable synchronization, explicit data ownership and auditable writes.",
+        "ننفّذ موصلات محددة الصلاحيات وتدفقات أحداث بمزامنة موثوقة وملكية واضحة للبيانات وكتابة قابلة للتدقيق."
+      ],
+      "after": [
+        "We connect approved systems within defined permissions. The work covers synchronization, ownership of each data source and an audit trail for changes.",
+        "نربط الأنظمة المعتمدة بصلاحيات محددة. يشمل العمل مزامنة البيانات وتحديد مصدرها المسؤول وتسجيل التغييرات للمراجعة."
+      ]
+    },
+    {
+      "scope": "voice-agents.offer",
+      "before": [
+        "We design licensed voice journeys with interruption handling, confirmation of critical details and a dependable transfer to staff.",
+        "نصمّم رحلات صوتية عبر قنوات مرخصة تدعم المقاطعة وتأكيد التفاصيل الحرجة والتحويل الموثوق للموظفين."
+      ],
+      "after": [
+        "We design calls over licensed voice channels, including how the agent handles interruptions and confirms critical details. Callers can transfer to staff with their context.",
+        "نصمّم المكالمات عبر قنوات صوتية مرخصة، بما يشمل التعامل مع المقاطعة وتأكيد التفاصيل المهمة. ويمكن تحويل المتصل إلى موظف مع معلومات المحادثة."
+      ]
+    },
+    {
+      "scope": "agent-assist.offer",
+      "before": [
+        "We build in-workflow assistance that retrieves relevant guidance, drafts responses and prepares case summaries for staff review.",
+        "نطوّر مساعدة داخل سير العمل تسترجع الإرشاد المناسب وتقترح الردود وتجهّز ملخصات الحالات لمراجعة الموظف."
+      ],
+      "after": [
+        "We bring relevant guidance and response drafts into the support workflow. Staff review the suggestions and case summaries before using them.",
+        "نوفر الإرشادات المناسبة ومسودات الرد داخل مسار الدعم. يراجع الموظف الاقتراحات وملخصات الحالات قبل استخدامها."
+      ]
+    },
+    {
+      "scope": "governance-security.offer",
+      "before": [
+        "We design authorization boundaries, approval policies and audit evidence around the actions your organization permits.",
+        "نصمّم حدود التفويض وسياسات الاعتماد وأدلة التدقيق حول الإجراءات التي تسمح بها مؤسستك."
+      ],
+      "after": [
+        "We define which actions an agent may take, who must approve them and what evidence the audit record needs. The rules follow your organization’s permissions.",
+        "نحدد الإجراءات المسموحة للوكيل ومن يعتمدها والأدلة المطلوبة في سجل التدقيق، وفق صلاحيات مؤسستك."
+      ]
+    },
+    {
+      "scope": "evaluation-observability.offer",
+      "before": [
+        "We build evaluation datasets, execution traces and review loops that connect technical performance to agreed business acceptance criteria.",
+        "نبني مجموعات تقييم وسجلات تنفيذ ودورات مراجعة تربط الأداء التقني بمعايير قبول العمل المتفق عليها."
+      ],
+      "after": [
+        "We build test cases and execution records to check results against your acceptance criteria. Regular reviews show where the workflow needs changes.",
+        "نبني حالات اختبار وسجلات تنفيذ لفحص النتائج مقابل معايير القبول. وتوضح المراجعة الدورية المواضع التي تحتاج تعديلًا في سير العمل."
+      ]
+    },
+    {
+      "scope": "architecture.title",
+      "before": [
+        "Architecture that makes responsibility visible.",
+        "بنية توضّح المسؤولية في كل خطوة."
+      ],
+      "after": [
+        "How your sources, tools and approvals fit together.",
+        "كيف نربط المصادر والأدوات والاعتمادات."
+      ]
+    },
+    {
+      "scope": "security.title",
+      "before": [
+        "Control access. Explain every action.",
+        "اضبط الوصول. ووثّق كل إجراء."
+      ],
+      "after": [
+        "Access controls and a record of each action.",
+        "ضوابط للوصول وسجل لكل إجراء."
+      ]
+    },
+    {
+      "scope": "methodology.title",
+      "before": [
+        "Clear scope. Evidence at every step.",
+        "نطاق واضح. وأدلة في كل خطوة."
+      ],
+      "after": [
+        "From an agreed scope to a working handover.",
+        "من نطاق متفق عليه إلى التسليم والتشغيل."
+      ]
+    },
+    {
+      "scope": "about.title",
+      "before": [
+        "Engineering agents with clear boundaries.",
+        "هندسة الوكلاء بحدود واضحة."
+      ],
+      "after": [
+        "Enterprise agents built around your work.",
+        "وكلاء للمؤسسات بحسب احتياجات العمل."
+      ]
+    },
+    {
+      "scope": "agentnexos.title",
+      "before": [
+        "Design a workspace around accountable tasks.",
+        "صمّم مساحة عمل حول مهام قابلة للمساءلة."
+      ],
+      "after": [
+        "A workspace for tasks and their review.",
+        "مساحة للمهام ومراجعتها."
+      ]
+    }
+  ],
+  "checks": "Preserved approval, access, human review, provider availability, founder attribution and local-download boundaries. Removed staged contrast, vague slogans, repetitive openings and dense Arabic jargon; retained meaningful lists and actual limitations."
+}

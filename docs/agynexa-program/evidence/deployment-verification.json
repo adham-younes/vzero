@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-10-19T00:54:23.784917+00:00",
+  "production_url": "https://vzero-nine-beryl.vercel.app",
+  "deployment_id": "dpl_D4MhV7Lgdj7Fxa8Bpfca5sfz5wGp",
+  "deployed_commit": "2330c961df914e7b3f9b2762ae3577767248345f",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/architecture",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/methodology",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/integrations",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/resources",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/start",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/agentnexos",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions/knowledge",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions/documents",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions/sales",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions/service",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions/finance",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    },
+    {
+      "path": "/solutions/logistics",
+      "status": 200,
+      "brand_present": true,
+      "has_h1": true
+    }
+  ],
+  "video": {
+    "bytes": 9885990,
+    "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+    "baseline_match": true
+  }
+}

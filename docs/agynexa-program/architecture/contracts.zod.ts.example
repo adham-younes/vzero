@@ -1,0 +1,11 @@
+// SPECIFIED ONLY. Not imported by the application; requires Zod in the future API package.
+import {z} from 'zod'
+const bounded = (max: number) => z.string().min(1).max(max)
+const uuid = z.string().uuid()
+export const projectBrief = z.object({organization:bounded(200),email:z.string().email().max(254),problem:bounded(4000),sources:z.array(bounded(200)).max(20),acceptanceCriteria:bounded(4000),consentToContact:z.literal(true)}).strict()
+export const connectRequest = z.object({returnPath:z.literal('/integrations')}).strict()
+export const searchRequest = z.object({query:bounded(2000),sourceIds:z.array(uuid).max(20).optional(),limit:z.number().int().min(1).max(20).optional()}).strict()
+export const runRequest = z.object({input:bounded(12000),workflowVersion:bounded(80),sourceIds:z.array(uuid).max(20)}).strict()
+export const approvalDecision = z.object({decision:z.enum(['approve','reject']),expectedVersion:z.number().int().min(1),actionHash:z.string().regex(/^[a-f0-9]{64}$/),reason:bounded(1000)}).strict()
+// Authentication, tenant resolution, body byte limits, rate limiting and action-hash recomputation
+// are server responsibilities. Schema validation does not authorize an action.

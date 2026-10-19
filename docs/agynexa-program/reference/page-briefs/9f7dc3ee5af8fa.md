@@ -1,0 +1,14 @@
+# Position creation
+
+Source: https://kore.ai/use-cases/position-creation-64c87
+Captured: 2026-10-19T00:59:34Z
+HTTP: 200
+Evidence: Position creation; Integrations; Candidate experience; Interview transcription and feedback; Candidate screening
+CTA observed: Agentic Contact Center, Contact Us, Talk to an expert Not sure which product is right for you or have questions? Schedule a call with our experts., Request a Demo Double click on w
+
+Coverage: public text capture. Vendor claims are not independently verified.
+Audience/problem: INFERRED from the page title and evidence above.
+Inputs/workflow/outputs: see functional-map.md for reviewed product families; UNKNOWN for this individual page unless mapped there.
+Integrations/permissions: UNKNOWN unless explicitly documented in the linked technical sources.
+Visuals/motion: UNKNOWN for unviewed pages; see visual-patterns.md for observed samples.
+Use: internal reference only; no customer stories, metrics, text or artwork copied into AGYNEXA.

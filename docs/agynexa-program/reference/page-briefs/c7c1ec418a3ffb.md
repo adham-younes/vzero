@@ -1,0 +1,14 @@
+# What is AutoNLP and why does it matter?
+
+Source: https://kore.ai/ai-glossary/what-is-autonlp
+Captured: 2026-10-19T00:59:12Z
+HTTP: 200
+Evidence: Auto-NLP; What is AutoNLP and why does it matter?; What are the key capabilities of AutoNLP?; Why is AutoNLP needed?; FAQ
+CTA observed: AI-native contact center, Contact us, Sign in, Book a demo, Request for proposal
+
+Coverage: public text capture. Vendor claims are not independently verified.
+Audience/problem: INFERRED from the page title and evidence above.
+Inputs/workflow/outputs: see functional-map.md for reviewed product families; UNKNOWN for this individual page unless mapped there.
+Integrations/permissions: UNKNOWN unless explicitly documented in the linked technical sources.
+Visuals/motion: UNKNOWN for unviewed pages; see visual-patterns.md for observed samples.
+Use: internal reference only; no customer stories, metrics, text or artwork copied into AGYNEXA.

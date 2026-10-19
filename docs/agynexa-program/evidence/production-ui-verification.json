@@ -1,0 +1,35 @@
+{
+  "english": {
+    "dir": "ltr",
+    "lang": "en",
+    "scrollWidth": 1280,
+    "title": "Intelligence, engineered.Built for your business.",
+    "video": [
+      {
+        "error": null,
+        "paused": false,
+        "readyState": 4,
+        "src": "https://vzero-nine-beryl.vercel.app/videos/background.mp4",
+        "time": 6.781633
+      }
+    ],
+    "width": 1280
+  },
+  "arabic": {
+    "dir": "rtl",
+    "lang": "ar",
+    "title": "ذكاءٌ مُهندَس.مصمّم لأعمالك.",
+    "videoTime": 3.762035
+  },
+  "mobile": {
+    "dir": "rtl",
+    "scrollWidth": 390,
+    "videoPlaying": true,
+    "width": 390
+  },
+  "mobileMenuNavigation": {
+    "url": "https://vzero-nine-beryl.vercel.app/services",
+    "title": "من مشكلة محددة إلى نظام قابل للمساءلة."
+  },
+  "consoleErrors": []
+}

@@ -248,8 +248,11 @@ a.panel>div:first-child { border-color: var(--border); }
 [data-slot=dialog-content] { background: var(--popover); border-color: var(--border); }
 .home-video-background .video-tint { background: linear-gradient(90deg,#05050588,#05050544 50%,#05050588); }
 .hero-actions [data-variant=outline] { background: #0b0b0bcc; }
-.home-page>.section { background: #050505dc; }
-.home-page>.container { background: #050505bc; }
+.home-page>.section, .capability-band { background: var(--background); }
+.capability-band { border-bottom: 1px solid var(--border); }
+.architecture-overview h2 { max-width: 940px; }
+.architecture-overview > div > p.muted { max-width: 800px; }
+
 .editorial-photo { background: var(--card); border-color: var(--border); }
 @media(max-width:640px) { .home-video-background .video-tint { background: #05050588; } }
 
@@ -261,3 +264,5 @@ a.panel>div:first-child { border-color: var(--border); }
     @apply bg-background text-foreground;
   }
 }
+
+@media(min-width:768px) { .editorial-grid > article:last-child:nth-child(odd) { grid-column: 1 / -1; } }

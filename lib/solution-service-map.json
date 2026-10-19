@@ -1,0 +1,38 @@
+{
+  "knowledge": [
+    "enterprise-knowledge",
+    "governance-security"
+  ],
+  "documents": [
+    "process-automation",
+    "enterprise-knowledge"
+  ],
+  "sales": [
+    "enterprise-knowledge",
+    "enterprise-integrations"
+  ],
+  "service": [
+    "customer-service",
+    "agent-assist"
+  ],
+  "finance": [
+    "process-automation",
+    "enterprise-integrations"
+  ],
+  "logistics": [
+    "process-automation",
+    "enterprise-integrations"
+  ],
+  "procurement": [
+    "process-automation",
+    "governance-security"
+  ],
+  "receivables": [
+    "process-automation",
+    "enterprise-integrations"
+  ],
+  "customer-operations": [
+    "customer-service",
+    "agent-orchestration"
+  ]
+}

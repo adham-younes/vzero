@@ -1,0 +1,8 @@
+# Content and route model
+lib/service-catalog.json is the bilingual source for ten deep service pages. Each service has audience, problem, offer, inputs, steps, deliverables, controls, metrics, candidate systems, industries, FAQs and SEO. Internal family names are planning labels pending commercial-name checks; public pages use descriptive names.
+
+lib/program-pages.json holds architecture, security, industries, integrations, methodology, resources, about and AgentNexOS positioning. Existing six solutions are retained and procurement, receivables and customer operations added. The original site's procurement missing-warranty example and receivables disputed-invoice example establish the review/approval boundaries; we preserve that meaning without claiming live execution.
+
+Navigation and sitemap follow the existing Next catch-all router. /services/solutions aliases the service catalog; /contact aliases the downloadable brief. No account sign-in or live integrations are implied. Form copy explicitly says the brief is prepared locally and not automatically sent. Complete route-localized metadata, legal pages, individual industry detail pages and backend execution remain future scope.
+
+Better Design text comprehension check: initial introductory copy was shortened after a heuristic review. Follow-up returned no issues for the shorter passage. This is text-only evidence, not visual certification. REA required a loopback CDP endpoint unavailable in the current browser transport; public browser observations and public source fetches were used instead. No Figma generation, paid images or new UI libraries were required.

@@ -1,0 +1,847 @@
+openapi: 3.1.0
+info:
+  title: AGYNEXA proposed API contracts
+  version: 0.1.0
+  description: Design artifact only. These endpoints are NOT implemented or deployed.
+    No Kore.ai private API is copied. All limits below are proposed policy, not measured
+    capacity.
+servers:
+- url: https://api.example.invalid
+  description: Non-routable placeholder; no active AGYNEXA API
+paths:
+  /api/v1/catalog/services:
+    get:
+      operationId: listServices
+      summary: List published service descriptions
+      description: SPECIFIED ONLY. Published catalog metadata only; no tenant records
+        or secrets.
+      security: []
+      x-implementation-status: SPECIFIED
+      x-required-role: public
+      x-rate-limit:
+        requests: 60
+        windowSeconds: 60
+        key: IP
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Service'
+        '400': &id001
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401': &id002
+          description: Authentication missing or expired
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403': &id003
+          description: Actor lacks permission
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404': &id004
+          description: Not found or outside organization
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409': &id005
+          description: Version or idempotency conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '413': &id006
+          description: Body too large
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422': &id007
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '429': &id008
+          description: Rate limited; Retry-After applies
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          headers:
+            Retry-After:
+              schema:
+                type: integer
+                minimum: 1
+              description: Seconds before retry
+        '503': &id009
+          description: Dependency unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/project-briefs:
+    post:
+      operationId: createBrief
+      summary: Create a brief for the authenticated organization
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: member
+      x-rate-limit:
+        requests: 10
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '202':
+          description: Accepted durably; poll returned run ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receipt'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectBrief'
+      parameters:
+      - name: Idempotency-Key
+        in: header
+        required: true
+        schema:
+          type: string
+          minLength: 16
+          maxLength: 128
+        description: Scoped to org, actor, method and route; payload hash must match.
+          Retain 24 hours, and external-action deduplication for the full business
+          lifecycle.
+  /api/v1/integrations:
+    get:
+      operationId: listIntegrations
+      summary: List candidate integration capabilities
+      description: SPECIFIED ONLY. Published catalog metadata only; no tenant records
+        or secrets.
+      security: []
+      x-implementation-status: SPECIFIED
+      x-required-role: public
+      x-rate-limit:
+        requests: 60
+        windowSeconds: 60
+        key: IP
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Integration'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+  /api/v1/connectors/{provider}/connect:
+    post:
+      operationId: startConnector
+      summary: Create a one-time OAuth authorization transaction
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: admin
+      x-rate-limit:
+        requests: 5
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnectResponse'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConnectRequest'
+    parameters:
+    - name: provider
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: &id010
+        - salesforce
+        - hubspot
+        - dynamics
+        - zoho
+        - zendesk
+        - servicenow
+        - jira
+        - freshdesk
+        - microsoft
+        - google
+        - slack
+        - sap
+        - odoo
+        - erpnext
+        - whatsapp
+        - twilio
+  /api/v1/connectors/{provider}/callback:
+    get:
+      operationId: finishConnector
+      summary: Complete the bound OAuth authorization transaction
+      description: SPECIFIED. Require initiating authenticated admin session plus
+        single-use server-stored state bound to user, org, provider, redirect URI
+        and PKCE S256 verifier; TTL 10 minutes. No open redirect. Authorization-error
+        callbacks reject without token exchange. Never log code or tokens.
+      security:
+      - cookieSession: []
+      x-implementation-status: SPECIFIED
+      x-required-role: bound initiating admin
+      x-rate-limit:
+        requests: 20
+        windowSeconds: 60
+        key: IP
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receipt'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      parameters:
+      - name: code
+        in: query
+        required: true
+        schema:
+          type: string
+          minLength: 1
+          maxLength: 2048
+      - name: state
+        in: query
+        required: true
+        schema:
+          type: string
+          minLength: 1
+          maxLength: 2048
+    parameters:
+    - name: provider
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: *id010
+  /api/v1/knowledge/search:
+    post:
+      operationId: searchKnowledge
+      summary: Search documents permitted for this user
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: member
+      x-rate-limit:
+        requests: 30
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchRequest'
+  /api/v1/agents/{id}/runs:
+    post:
+      operationId: createRun
+      summary: Queue a versioned agent workflow
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: member
+      x-rate-limit:
+        requests: 10
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '202':
+          description: Accepted durably; poll returned run ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Run'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RunRequest'
+      parameters:
+      - name: Idempotency-Key
+        in: header
+        required: true
+        schema:
+          type: string
+          minLength: 16
+          maxLength: 128
+        description: Scoped to org, actor, method and route; payload hash must match.
+          Retain 24 hours, and external-action deduplication for the full business
+          lifecycle.
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: &id011
+        type: string
+        format: uuid
+  /api/v1/runs/{runId}:
+    get:
+      operationId: getRun
+      summary: Read a run visible to this user
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: member
+      x-rate-limit:
+        requests: 60
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Run'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+    parameters:
+    - name: runId
+      in: path
+      required: true
+      schema: *id011
+  /api/v1/approvals/{id}/decision:
+    post:
+      operationId: decideApproval
+      summary: Atomically decide the exact proposed action
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: assigned approver; no self-approval
+      x-rate-limit:
+        requests: 20
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receipt'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApprovalDecision'
+      parameters:
+      - name: Idempotency-Key
+        in: header
+        required: true
+        schema:
+          type: string
+          minLength: 16
+          maxLength: 128
+        description: Scoped to org, actor, method and route; payload hash must match.
+          Retain 24 hours, and external-action deduplication for the full business
+          lifecycle.
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema: *id011
+  /api/v1/webhooks/{provider}:
+    post:
+      operationId: acceptWebhook
+      summary: Verify and durably enqueue a provider event
+      description: SPECIFIED. Provider adapter verifies the exact raw bytes with its
+        documented algorithm, timestamp and replay defense before parsing. Resolve
+        organization from the verified installed connection; never trust payload tenant
+        ID. No generic signature header is assumed. Provider setup challenge is a
+        separate verified adapter concern. Unsupported provider adapter returns 503,
+        never success.
+      security:
+      - providerSignature: []
+      x-implementation-status: SPECIFIED
+      x-required-role: verified provider connection
+      x-rate-limit:
+        requests: 1000
+        windowSeconds: 60
+        key: IP
+      responses:
+        '202':
+          description: Accepted durably; poll returned run ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receipt'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Provider-specific validated event. Maximum raw body 256
+                KiB. Unknown event types quarantined, not executed.
+      x-provider-signature-header: TO_VERIFY per integration-matrix.csv; placeholder
+        security scheme is descriptive, not a literal universal header
+    parameters:
+    - name: provider
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: *id010
+  /api/v1/observability/runs:
+    get:
+      operationId: listRuns
+      summary: Read redacted run metadata for the organization
+      description: SPECIFIED ONLY. No handler is deployed. Tenant derives from verified
+        membership, never client organization headers.
+      security:
+      - sessionBearer: []
+      x-implementation-status: SPECIFIED
+      x-required-role: operator or admin
+      x-rate-limit:
+        requests: 60
+        windowSeconds: 60
+        key: verified organization + user
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunPage'
+        '400': *id001
+        '401': *id002
+        '403': *id003
+        '404': *id004
+        '409': *id005
+        '413': *id006
+        '422': *id007
+        '429': *id008
+        '503': *id009
+      parameters:
+      - name: cursor
+        in: query
+        schema:
+          type: string
+          minLength: 1
+          maxLength: 500
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 100
+          default: 25
+components:
+  securitySchemes:
+    sessionBearer:
+      type: http
+      scheme: bearer
+      bearerFormat: Verified session JWT; issuer/audience/expiry and live membership
+        checks
+    providerSignature:
+      type: apiKey
+      in: header
+      name: Provider-Specific-Signature
+      description: Descriptive placeholder; actual scheme is provider-specific, see
+        integration matrix.
+    cookieSession:
+      type: apiKey
+      in: cookie
+      name: __Host-agynexa-session
+      description: Secure HttpOnly SameSite=Lax initiating admin session; callback
+        binds verified live session to one-time server state.
+  schemas:
+    Error:
+      type: object
+      additionalProperties: false
+      properties:
+        code:
+          type: string
+          minLength: 1
+          maxLength: 80
+        message:
+          type: string
+          minLength: 1
+          maxLength: 500
+        requestId: *id011
+      required:
+      - code
+      - message
+      - requestId
+    Service:
+      type: object
+      additionalProperties: false
+      properties:
+        slug:
+          type: string
+          minLength: 1
+          maxLength: 80
+        name:
+          type: string
+          minLength: 1
+          maxLength: 200
+        description:
+          type: string
+          minLength: 1
+          maxLength: 2000
+      required:
+      - slug
+      - name
+      - description
+    Integration:
+      type: object
+      additionalProperties: false
+      properties:
+        provider:
+          type: string
+          minLength: 1
+          maxLength: 80
+        status:
+          type: string
+          enum:
+          - SPECIFIED
+          - REQUIRES_ACCESS
+          - IMPLEMENTED
+          - BLOCKED
+      required:
+      - provider
+      - status
+    ProjectBrief:
+      type: object
+      additionalProperties: false
+      properties:
+        organization:
+          type: string
+          minLength: 1
+          maxLength: 200
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        problem:
+          type: string
+          minLength: 1
+          maxLength: 4000
+        sources:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            maxLength: 200
+          maxItems: 20
+        acceptanceCriteria:
+          type: string
+          minLength: 1
+          maxLength: 4000
+        consentToContact:
+          const: true
+      required:
+      - organization
+      - email
+      - problem
+      - sources
+      - acceptanceCriteria
+      - consentToContact
+    Receipt:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id011
+        status:
+          type: string
+          minLength: 1
+          maxLength: 40
+      required:
+      - id
+      - status
+    ConnectRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        returnPath:
+          type: string
+          enum:
+          - /integrations
+      required:
+      - returnPath
+    ConnectResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        authorizationUrl:
+          type: string
+          format: uri
+        expiresAt:
+          type: string
+          format: date-time
+      required:
+      - authorizationUrl
+      - expiresAt
+    SearchRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        query:
+          type: string
+          minLength: 1
+          maxLength: 2000
+        sourceIds:
+          type: array
+          items: *id011
+          maxItems: 20
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 20
+      required:
+      - query
+    Citation:
+      type: object
+      additionalProperties: false
+      properties:
+        documentId: *id011
+        chunkId: *id011
+        text:
+          type: string
+          minLength: 1
+          maxLength: 2000
+        sourceLabel:
+          type: string
+          minLength: 1
+          maxLength: 200
+      required:
+      - documentId
+      - chunkId
+      - text
+      - sourceLabel
+    SearchResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Citation'
+          maxItems: 20
+        requestId: *id011
+      required:
+      - results
+      - requestId
+    RunRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        input:
+          type: string
+          minLength: 1
+          maxLength: 12000
+        workflowVersion:
+          type: string
+          minLength: 1
+          maxLength: 80
+        sourceIds:
+          type: array
+          items: *id011
+          maxItems: 20
+      required:
+      - input
+      - workflowVersion
+      - sourceIds
+    Run:
+      type: object
+      additionalProperties: false
+      properties:
+        id: *id011
+        state:
+          type: string
+          enum:
+          - queued
+          - running
+          - waiting_approval
+          - succeeded
+          - failed
+          - cancelled
+          - expired
+        version:
+          type: integer
+          minimum: 1
+        output:
+          type:
+          - string
+          - 'null'
+          maxLength: 20000
+        errorCode:
+          type:
+          - string
+          - 'null'
+          maxLength: 80
+      required:
+      - id
+      - state
+      - version
+      - output
+      - errorCode
+    ApprovalDecision:
+      type: object
+      additionalProperties: false
+      properties:
+        decision:
+          type: string
+          enum:
+          - approve
+          - reject
+        expectedVersion:
+          type: integer
+          minimum: 1
+        actionHash:
+          type: string
+          pattern: ^[a-f0-9]{64}$
+        reason:
+          type: string
+          minLength: 1
+          maxLength: 1000
+      required:
+      - decision
+      - expectedVersion
+      - actionHash
+      - reason
+    RunPage:
+      type: object
+      additionalProperties: false
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Run'
+          maxItems: 100
+        nextCursor:
+          type:
+          - string
+          - 'null'
+          maxLength: 500
+      required:
+      - items
+      - nextCursor

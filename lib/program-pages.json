@@ -1,0 +1,574 @@
+{
+  "architecture": {
+    "title": [
+      "How your sources, tools and approvals fit together.",
+      "كيف نربط المصادر والأدوات والاعتمادات."
+    ],
+    "intro": [
+      "We design the system around your sources, operating rules and approval boundaries. Models support the work; they do not define who is allowed to act.",
+      "نصمّم النظام حول مصادرك وقواعد عملك وحدود الاعتماد. تساعد النماذج في التنفيذ، لكنها لا تحدد من يملك صلاحية التصرف."
+    ],
+    "sections": [
+      {
+        "title": [
+          "01 / Trusted sources",
+          "01 / مصادر موثوقة"
+        ],
+        "body": [
+          "Before importing content, we identify its system of record, owner and permitted audience. We keep its version and source references, and define how deletion rules apply.",
+          "قبل استيراد المحتوى نحدد مصدر السجل ومالكه ومن يحق له الاطلاع عليه. ونحفظ الإصدار ومراجع المصدر ونحدد طريقة تطبيق قواعد الحذف."
+        ]
+      },
+      {
+        "title": [
+          "02 / Knowledge and reasoning",
+          "02 / المعرفة والاستدلال"
+        ],
+        "body": [
+          "A retrieval layer selects evidence the user may access. A reasoning step prepares an answer or a structured proposal, and distinguishes missing facts from confirmed information.",
+          "تختار طبقة الاسترجاع الأدلة المسموح بها للمستخدم. وتعد خطوة الاستدلال إجابة أو مقترحًا منظمًا مع تمييز نقص المعلومات عن الحقائق المؤكدة."
+        ]
+      },
+      {
+        "title": [
+          "03 / Bounded tools and workflows",
+          "03 / أدوات ومسارات محددة"
+        ],
+        "body": [
+          "Each tool has a defined input, permission and expected result. Long-running work records progress durably; retries must not repeat an external action.",
+          "لكل أداة مدخل وصلاحية ونتيجة متوقعة. تحفظ المهام الطويلة تقدمها بصورة دائمة، ولا يجوز أن تكرر المحاولة إجراءً خارجيًا."
+        ]
+      },
+      {
+        "title": [
+          "04 / Human approval",
+          "04 / اعتماد بشري"
+        ],
+        "body": [
+          "The reviewer sees the exact action, recipient, affected records and reason. An approval expires or becomes invalid when the proposed action changes.",
+          "يرى المراجع الإجراء المحدد والمستلم والسجلات المتأثرة والسبب. ينتهي الاعتماد بمرور مدته أو يصبح غير صالح عند تغير الإجراء."
+        ]
+      },
+      {
+        "title": [
+          "05 / Evidence and operations",
+          "05 / الأدلة والتشغيل"
+        ],
+        "body": [
+          "Execution receipts, failures and evaluation results support an operating decision. We agree retention, access, incident handling and rollback before launch.",
+          "تدعم إيصالات التنفيذ والإخفاق ونتائج التقييم القرار التشغيلي. ونتفق على الاحتفاظ والوصول والحوادث والتراجع قبل الإطلاق."
+        ]
+      }
+    ],
+    "related": [
+      "enterprise-knowledge",
+      "agent-orchestration",
+      "governance-security"
+    ]
+  },
+  "security": {
+    "title": [
+      "Access controls and a record of each action.",
+      "ضوابط للوصول وسجل لكل إجراء."
+    ],
+    "intro": [
+      "We design security into the workflow and validate it against the agreed risk model. Controls and evidence are part of delivery, with responsibilities assigned to your team and ours.",
+      "نضمّن الأمان في سير العمل ونختبره وفق نموذج المخاطر المتفق عليه. الضوابط والأدلة جزء من التسليم مع تحديد مسؤوليات فريقك وفريقنا."
+    ],
+    "sections": [
+      {
+        "title": [
+          "Identity and least privilege",
+          "الهوية وأقل الصلاحيات"
+        ],
+        "body": [
+          "Connect approved identities and grant only the data and actions required for the task. Separate administrative access from everyday use and review permissions when roles change.",
+          "ربط الهويات المعتمدة ومنح البيانات والإجراءات اللازمة للمهمة فقط، وفصل الإدارة عن الاستخدام اليومي ومراجعة الصلاحيات عند تغير الأدوار."
+        ]
+      },
+      {
+        "title": [
+          "Tenant and document boundaries",
+          "حدود المؤسسات والمستندات"
+        ],
+        "body": [
+          "Enforce organization boundaries in every query and background job. Source-level access applies to retrieval, citations, cached results and downloads.",
+          "فرض حدود المؤسسة في كل استعلام ومهمة خلفية. وتُطبّق صلاحيات المصدر على الاسترجاع والاستشهاد والنتائج المؤقتة والتنزيل."
+        ]
+      },
+      {
+        "title": [
+          "Action approval and audit",
+          "اعتماد الإجراءات وتدقيقها"
+        ],
+        "body": [
+          "Sensitive actions require an authenticated, authorized reviewer. Audit records link intent, approved payload and execution result; the model cannot approve its own request.",
+          "تتطلب الإجراءات الحساسة مراجعًا موثقًا ومخولًا. تربط سجلات التدقيق النية والبيانات المعتمدة ونتيجة التنفيذ، ولا يعتمد النموذج طلبه بنفسه."
+        ]
+      },
+      {
+        "title": [
+          "Data handling and retention",
+          "التعامل مع البيانات والاحتفاظ"
+        ],
+        "body": [
+          "Minimize collected fields, keep credentials server-side and agree deletion periods. Region, subprocessors and model data-use terms are reviewed for the selected providers.",
+          "تقليل الحقول المجمعة وحفظ الأسرار على الخادم والاتفاق على مدد الحذف. تُراجع المنطقة والمعالجون وشروط استخدام البيانات للمزودين المختارين."
+        ]
+      },
+      {
+        "title": [
+          "Testing and incident response",
+          "الاختبار والاستجابة للحوادث"
+        ],
+        "body": [
+          "Test cross-tenant access, revoked permissions, injected instructions and failed tools. Delivery includes escalation contacts, credential revocation and a recovery procedure.",
+          "اختبار الوصول بين المؤسسات والصلاحيات الملغاة والتعليمات الدخيلة وإخفاق الأدوات. يشمل التسليم جهات التصعيد وإلغاء بيانات الوصول وإجراء الاستعادة."
+        ]
+      },
+      {
+        "title": [
+          "Evidence before certification claims",
+          "الأدلة قبل ادعاءات الاعتماد"
+        ],
+        "body": [
+          "We document the controls implemented within the project. Formal certifications, regulatory opinions and provider guarantees require separate verification and are not implied by this service.",
+          "نوثّق الضوابط المنفذة ضمن المشروع. الشهادات الرسمية والآراء التنظيمية وضمانات المزود تحتاج تحققًا مستقلًا ولا تُفهم ضمنًا من هذه الخدمة."
+        ]
+      }
+    ],
+    "related": [
+      "governance-security",
+      "evaluation-observability"
+    ]
+  },
+  "industries": {
+    "title": [
+      "Start with the work your sector needs done.",
+      "ابدأ بالعمل الذي يحتاجه قطاعك."
+    ],
+    "intro": [
+      "Each sector has different data, responsibilities and operating constraints. These examples show workflows we can scope with your team; they do not describe deployed customer projects.",
+      "تختلف البيانات والمسؤوليات وقيود التشغيل من قطاع إلى آخر. توضح هذه الأمثلة مسارات يمكن تحديد نطاقها مع فريقك، ولا تصف مشروعات منفذة لدى عملاء."
+    ],
+    "sections": [
+      {
+        "title": [
+          "Banking and financial services",
+          "البنوك والخدمات المالية"
+        ],
+        "body": [
+          "Assist service staff with policy retrieval, document review and reconciliation exceptions. Account access, financial decisions and payments remain behind explicit authorization boundaries.",
+          "مساعدة فرق الخدمة باسترجاع السياسات ومراجعة المستندات واستثناءات المطابقة. تبقى بيانات الحساب والقرارات المالية والمدفوعات ضمن حدود تفويض صريحة."
+        ]
+      },
+      {
+        "title": [
+          "Insurance",
+          "التأمين"
+        ],
+        "body": [
+          "Organize claim documents, identify missing evidence and prepare review summaries. Coverage and settlement decisions remain with authorized specialists.",
+          "تنظيم مستندات المطالبات وتحديد الأدلة الناقصة وإعداد ملخصات المراجعة. تبقى قرارات التغطية والتسوية لدى المتخصصين المخولين."
+        ]
+      },
+      {
+        "title": [
+          "Healthcare administration",
+          "إدارة الخدمات الصحية"
+        ],
+        "body": [
+          "Support scheduling information, administrative document routing and staff knowledge. Clinical diagnosis and treatment decisions are outside these administrative workflows.",
+          "دعم معلومات المواعيد وتوجيه المستندات الإدارية ومعرفة الموظفين. التشخيص وقرارات العلاج خارج نطاق هذه المسارات الإدارية."
+        ]
+      },
+      {
+        "title": [
+          "Retail and commerce",
+          "التجزئة والتجارة"
+        ],
+        "body": [
+          "Connect product guidance, order status and returns policy with a clear escalation path. Refunds and changes to orders follow the merchant’s approval rules.",
+          "ربط إرشاد المنتجات وحالة الطلب وسياسة الإرجاع بمسار تصعيد واضح. تخضع المبالغ المستردة وتغييرات الطلب لقواعد اعتماد التاجر."
+        ]
+      },
+      {
+        "title": [
+          "Telecommunications",
+          "الاتصالات"
+        ],
+        "body": [
+          "Triage service issues, retrieve troubleshooting guidance and route account requests with context. Changes to plans, billing or identity data require the relevant permissions.",
+          "فرز مشكلات الخدمة واسترجاع إرشادات المعالجة وتحويل طلبات الحساب بسياقها. تتطلب تغييرات الباقات والفواتير والهوية صلاحيات مناسبة."
+        ]
+      },
+      {
+        "title": [
+          "Travel and hospitality",
+          "السفر والضيافة"
+        ],
+        "body": [
+          "Prepare booking guidance and handle policy questions across channels. Changes, cancellations and passenger details require identity checks and approved actions.",
+          "إعداد إرشاد الحجز والإجابة عن السياسات عبر القنوات. تتطلب التعديلات والإلغاء وبيانات المسافرين تحققًا من الهوية وإجراءات معتمدة."
+        ]
+      },
+      {
+        "title": [
+          "Professional services",
+          "الخدمات المهنية"
+        ],
+        "body": [
+          "Turn approved expertise into cited research, proposal inputs and document briefs while preserving client confidentiality and access restrictions.",
+          "تحويل الخبرة المعتمدة إلى بحث موثق ومدخلات عروض وموجزات مستندات مع حفظ سرية العملاء وقيود الوصول."
+        ]
+      },
+      {
+        "title": [
+          "Logistics and foreign trade",
+          "اللوجستيات والتجارة الخارجية"
+        ],
+        "body": [
+          "Prepare shipment-exception reviews and compare trade documents against the agreed checklist. Missing certificates, dates and account references remain explicit; the responsible team approves external instructions.",
+          "تجهيز مراجعات استثناءات الشحن ومقارنة مستندات التجارة بقائمة متفق عليها. يظل نقص الشهادات والتواريخ ومراجع الحساب واضحًا، ويعتمد الفريق المسؤول التعليمات الخارجية."
+        ]
+      },
+      {
+        "title": [
+          "Energy, oil and gas",
+          "الطاقة والنفط والغاز"
+        ],
+        "body": [
+          "Organize approved operating documents, supplier submissions and maintenance requests for specialist review. Safety-critical decisions remain with authorized specialists and require a separately validated scope.",
+          "تنظيم مستندات التشغيل المعتمدة وملفات الموردين وطلبات الصيانة لمراجعة المختصين. تبقى القرارات المرتبطة بالسلامة لدى المختصين المخولين وضمن نطاق متحقق منه بصورة مستقلة."
+        ]
+      },
+      {
+        "title": [
+          "Trade and distribution",
+          "التجارة والتوزيع"
+        ],
+        "body": [
+          "Connect order context, stock records and invoice follow-up for the team reviewing an exception. Distinguish recorded facts from missing updates before proposing a delivery commitment or customer message.",
+          "ربط سياق الطلب وسجلات المخزون ومتابعة الفواتير للفريق المراجع للاستثناء. التمييز بين الحقائق المسجلة والتحديثات الناقصة قبل اقتراح التزام تسليم أو رسالة عميل."
+        ]
+      }
+    ],
+    "related": [
+      "customer-service",
+      "process-automation",
+      "enterprise-knowledge"
+    ]
+  },
+  "integrations": {
+    "title": [
+      "Connect the systems that own your work.",
+      "اربط الأنظمة التي يعتمد عليها عملك."
+    ],
+    "intro": [
+      "We assess your edition, API access and permissions before committing to an integration. The systems below are implementation candidates; each connection is scoped and tested in your authorized environment.",
+      "نفحص إصدار النظام وإتاحة الواجهة والصلاحيات قبل الالتزام بالتكامل. الأنظمة التالية خيارات للتنفيذ؛ ويُحدد نطاق كل اتصال ويُختبر في بيئتك المصرح بها."
+    ],
+    "sections": [
+      {
+        "title": [
+          "CRM and revenue operations",
+          "أنظمة العملاء والمبيعات"
+        ],
+        "body": [
+          "Salesforce, HubSpot, Microsoft Dynamics 365 and Zoho: scoped customer records, opportunities and follow-up drafts. Agree record ownership, field mapping and approval before write-back.",
+          "Salesforce وHubSpot وMicrosoft Dynamics 365 وZoho: سجلات عملاء وفرص ومسودات متابعة محددة النطاق. نتفق على ملكية السجلات وخرائط الحقول والاعتماد قبل الكتابة."
+        ]
+      },
+      {
+        "title": [
+          "Support and service management",
+          "الدعم وإدارة الخدمة"
+        ],
+        "body": [
+          "Zendesk, ServiceNow, Jira and Freshdesk: ticket context, routing and case summaries. We validate account-specific API limits, permissions and event behavior.",
+          "Zendesk وServiceNow وJira وFreshdesk: سياق التذاكر والتوجيه وملخصات الحالات. نتحقق من حدود الواجهة والصلاحيات وسلوك الأحداث في حسابك."
+        ]
+      },
+      {
+        "title": [
+          "Workplace knowledge and collaboration",
+          "معرفة المؤسسة والتعاون"
+        ],
+        "body": [
+          "Microsoft Graph, Teams, SharePoint, Google Workspace and Slack: permission-scoped knowledge and approved notifications. Source access and deletions must propagate into the index.",
+          "Microsoft Graph وTeams وSharePoint وGoogle Workspace وSlack: معرفة ضمن الصلاحيات وإشعارات معتمدة. يجب نقل صلاحيات المصدر وحذفه إلى الفهرس."
+        ]
+      },
+      {
+        "title": [
+          "ERP and operational records",
+          "أنظمة الموارد والسجلات التشغيلية"
+        ],
+        "body": [
+          "SAP, Odoo and ERPNext: purchasing, invoices and operational records. We confirm version-specific APIs and use reconciliation to detect missing or duplicate changes.",
+          "SAP وOdoo وERPNext: المشتريات والفواتير والسجلات التشغيلية. نتحقق من واجهات الإصدار ونستخدم المطابقة لكشف التغييرات المفقودة أو المكررة."
+        ]
+      },
+      {
+        "title": [
+          "Voice and messaging",
+          "الصوت والمراسلة"
+        ],
+        "body": [
+          "WhatsApp Business and Twilio can support approved journeys subject to account eligibility, consent, templates and provider charges. Outbound communication requires an explicit sending policy.",
+          "يمكن لـWhatsApp Business وTwilio دعم رحلات معتمدة وفق أهلية الحساب والموافقة والقوالب ورسوم المزود. التواصل الصادر يتطلب سياسة إرسال صريحة."
+        ]
+      },
+      {
+        "title": [
+          "Data and custom services",
+          "البيانات والخدمات الخاصة"
+        ],
+        "body": [
+          "PostgreSQL and pgvector support structured records and retrieval where appropriate. REST, SOAP and MCP adapters need validated schemas, restricted destinations and tested error handling.",
+          "يدعم PostgreSQL وpgvector السجلات والاسترجاع حيث يلائمان المطلوب. تحتاج موائمات REST وSOAP وMCP إلى مخططات متحقق منها ووجهات محددة ومعالجة أخطاء مختبرة."
+        ]
+      }
+    ],
+    "related": [
+      "enterprise-integrations",
+      "governance-security"
+    ]
+  },
+  "methodology": {
+    "title": [
+      "From an agreed scope to a working handover.",
+      "من نطاق متفق عليه إلى التسليم والتشغيل."
+    ],
+    "intro": [
+      "We start with one workflow and agree how your team will assess the result. That first implementation gives us evidence for any expansion.",
+      "نبدأ بمسار عمل واحد ونتفق على طريقة تقييم نتيجته. ثم نستند إلى نتائج التنفيذ الأول عند تحديد أي توسع."
+    ],
+    "sections": [
+      {
+        "title": [
+          "01 / Discover and scope",
+          "01 / الاكتشاف وتحديد النطاق"
+        ],
+        "body": [
+          "Map the bottleneck, users, data owners, risks and existing systems. Deliver a scoped brief with exclusions, dependencies and measurable acceptance conditions.",
+          "تحديد العائق والمستخدمين ومالكي البيانات والمخاطر والأنظمة الحالية. تسليم موجز بنطاق واستثناءات وتبعيات ومعايير قبول قابلة للقياس."
+        ]
+      },
+      {
+        "title": [
+          "02 / Design the boundaries",
+          "02 / تصميم الحدود"
+        ],
+        "body": [
+          "Define retrieval sources, tools, permissions and the approval matrix. Review API and data contracts before any connection writes to a business system.",
+          "تعريف مصادر الاسترجاع والأدوات والصلاحيات ومصفوفة الاعتماد. مراجعة عقود الواجهات والبيانات قبل أي كتابة في نظام العمل."
+        ]
+      },
+      {
+        "title": [
+          "03 / Build a focused scope",
+          "03 / تنفيذ نطاق محدد"
+        ],
+        "body": [
+          "Implement one end-to-end journey in an isolated environment. Use representative data supplied with permission and record unsupported cases explicitly.",
+          "تنفيذ رحلة متكاملة في بيئة معزولة باستخدام بيانات ممثلة ومصرح بها، مع تسجيل الحالات غير المدعومة صراحة."
+        ]
+      },
+      {
+        "title": [
+          "04 / Evaluate with your team",
+          "04 / التقييم مع فريقك"
+        ],
+        "body": [
+          "Test normal requests, missing evidence, unauthorized access and provider failure. Review quality and cost against the baseline before accepting the workflow.",
+          "اختبار الطلبات المعتادة ونقص الأدلة والوصول غير المصرح وإخفاق المزود. مراجعة الجودة والتكلفة مقابل خط الأساس قبل القبول."
+        ]
+      },
+      {
+        "title": [
+          "05 / Launch and hand over",
+          "05 / الإطلاق والتسليم"
+        ],
+        "body": [
+          "Agree release approval, monitoring, support ownership and rollback. Provide operating documentation and identify which additional integrations need a new scope.",
+          "الاتفاق على اعتماد الإطلاق والمراقبة ومسؤولية الدعم والتراجع. تسليم توثيق التشغيل وتحديد التكاملات الإضافية التي تحتاج نطاقًا جديدًا."
+        ]
+      }
+    ],
+    "related": [
+      "evaluation-observability",
+      "governance-security"
+    ]
+  },
+  "about": {
+    "title": [
+      "Enterprise agents built around your work.",
+      "وكلاء للمؤسسات بحسب احتياجات العمل."
+    ],
+    "intro": [
+      "AGYNEXA designs, develops and implements enterprise AI-agent solutions around defined business tasks, trustworthy sources and accountable decisions.",
+      "تصمّم AGYNEXA وتطوّر وتنفّذ حلول وكلاء الذكاء الاصطناعي للمؤسسات حول مهام عمل محددة ومصادر موثوقة وقرارات قابلة للمساءلة."
+    ],
+    "sections": [
+      {
+        "title": [
+          "Founder and CEO",
+          "المؤسس والرئيس التنفيذي"
+        ],
+        "body": [
+          "Engineer Adham Younes is the founder and CEO of AGYNEXA. Our engagements begin with a business problem, a named owner and an agreed definition of delivery.",
+          "المهندس أدهم يونس هو المؤسس والرئيس التنفيذي لـAGYNEXA. تبدأ مشروعاتنا بمشكلة عمل ومسؤول محدد وتعريف متفق عليه للتسليم."
+        ]
+      },
+      {
+        "title": [
+          "Work with your existing systems",
+          "البناء على أنظمتك الحالية"
+        ],
+        "body": [
+          "A useful agent has a defined job, reliable context and clear limits. We preserve existing systems where they serve the business and add only the coordination the workflow needs.",
+          "للوكيل المفيد مهمة محددة وسياق موثوق وحدود واضحة. نحافظ على الأنظمة التي تخدم العمل ونضيف التنسيق الذي يحتاجه سير العمل فقط."
+        ]
+      },
+      {
+        "title": [
+          "Human accountability",
+          "المساءلة البشرية"
+        ],
+        "body": [
+          "Your team retains responsibility for consequential decisions. We define permissions, evidence requirements and approval paths during design.",
+          "يحتفظ فريقك بمسؤولية القرارات المؤثرة. ونحدد الصلاحيات والأدلة المطلوبة ومسارات الاعتماد أثناء التصميم."
+        ]
+      },
+      {
+        "title": [
+          "A defined commercial scope",
+          "نطاق تجاري واضح"
+        ],
+        "body": [
+          "For each project, we agree the deliverables, integration dependencies, evaluation criteria and support. The delivery plan also identifies provider usage costs.",
+          "نتفق لكل مشروع على المخرجات وتبعيات التكامل ومعايير التقييم والدعم، ونوضح تكلفة استخدام المزودين ضمن خطة التسليم."
+        ]
+      }
+    ],
+    "related": [
+      "process-automation",
+      "enterprise-knowledge"
+    ]
+  },
+  "resources": {
+    "title": [
+      "Practical guides for better system decisions.",
+      "أدلة عملية لقرارات تقنية أفضل."
+    ],
+    "intro": [
+      "Use these starting points to prepare a scoped conversation about your workflow. Every project still needs its own source review, access assessment and acceptance criteria.",
+      "استخدم هذه النقاط لتجهيز نقاش محدد عن سير عملك. يظل كل مشروع بحاجة لمراجعة مصادره وصلاحياته ومعايير قبوله."
+    ],
+    "sections": [
+      {
+        "title": [
+          "Before commissioning an agent",
+          "قبل التعاقد على وكيل"
+        ],
+        "body": [
+          "Write down the task, its current owner, the information used and what may go wrong. Bring examples of a successful result and a result that must be rejected.",
+          "اكتب المهمة ومسؤولها الحالي والمعلومات المستخدمة وما قد يفشل. جهّز مثالًا لنتيجة ناجحة وآخر لنتيجة يجب رفضها."
+        ]
+      },
+      {
+        "title": [
+          "A useful acceptance criterion",
+          "معيار قبول مفيد"
+        ],
+        "body": [
+          "Specify the expected output, required evidence and when the task needs escalation. Test ordinary requests alongside edge cases and actions the system must deny.",
+          "حدد المخرج المتوقع والأدلة المطلوبة ومتى تحتاج المهمة إلى تصعيد. واختبر الطلبات المعتادة والحالات الحدية والإجراءات التي يجب أن يرفضها النظام."
+        ]
+      },
+      {
+        "title": [
+          "When retrieval is appropriate",
+          "متى يناسب الاسترجاع المعرفي؟"
+        ],
+        "body": [
+          "Use retrieval when answers need approved, changing organizational knowledge. It must preserve permissions, cite sources and handle missing evidence without inventing facts.",
+          "يناسب الاسترجاع الإجابات التي تحتاج معرفة مؤسسية معتمدة ومتغيرة. ويجب أن يحفظ الصلاحيات ويوثق المصادر ويتعامل مع نقص الأدلة دون اختلاق."
+        ]
+      },
+      {
+        "title": [
+          "Preparing an integration",
+          "تجهيز تكامل"
+        ],
+        "body": [
+          "Identify the product edition, API owner, sandbox, permitted records, retention rules and expected event volume. Distinguish reading data from approving a write action.",
+          "حدّد إصدار المنتج ومسؤول الواجهة وبيئة الاختبار والسجلات المسموحة وقواعد الاحتفاظ وحجم الأحداث. ميّز قراءة البيانات عن اعتماد الكتابة."
+        ]
+      },
+      {
+        "title": [
+          "Evaluating procurement workflows",
+          "تقييم مسارات المشتريات"
+        ],
+        "body": [
+          "Test missing purchase orders, duplicate invoices, currency differences and supplier-detail changes. Every exception should show its source and the reviewer responsible for it.",
+          "اختبر غياب أوامر الشراء وتكرار الفواتير واختلاف العملات وتغيير بيانات المورد. يجب أن يظهر لكل استثناء مصدره والمراجع المسؤول عنه."
+        ]
+      }
+    ],
+    "related": [
+      "enterprise-knowledge",
+      "process-automation",
+      "evaluation-observability"
+    ]
+  },
+  "agentnexos": {
+    "title": [
+      "A workspace for tasks and their review.",
+      "مساحة للمهام ومراجعتها."
+    ],
+    "intro": [
+      "AgentNexOS is our workspace design direction for connecting tasks, sources, tools, review and outputs within an agreed implementation scope.",
+      "AgentNexOS هو توجهنا لتصميم مساحة تربط المهام والمصادر والأدوات والمراجعة والمخرجات ضمن نطاق تنفيذ متفق عليه."
+    ],
+    "sections": [
+      {
+        "title": [
+          "A task with clear acceptance",
+          "مهمة بمعيار قبول واضح"
+        ],
+        "body": [
+          "Define the user, requested result, evidence and stopping conditions. Give each run a traceable identity and an accountable owner.",
+          "تحديد المستخدم والنتيجة المطلوبة والأدلة وشروط التوقف، ومنح كل تنفيذ هوية قابلة للتتبع ومسؤولًا محددًا."
+        ]
+      },
+      {
+        "title": [
+          "Sources and bounded tools",
+          "مصادر وأدوات محددة"
+        ],
+        "body": [
+          "Show the approved sources and tools available to the task. Permission checks happen before a tool runs and again before sensitive outputs are delivered.",
+          "عرض المصادر والأدوات المعتمدة للمهمة. تُفحص الصلاحيات قبل تشغيل الأداة وقبل تسليم المخرجات الحساسة."
+        ]
+      },
+      {
+        "title": [
+          "Review and delivery",
+          "المراجعة والتسليم"
+        ],
+        "body": [
+          "A reviewer sees the proposed action and supporting evidence. The final output distinguishes a proposal from an action with a confirmed execution receipt.",
+          "يرى المراجع الإجراء المقترح وأدلته. ويميز المخرج النهائي المقترح عن الإجراء الذي يملك إيصال تنفيذ مؤكدًا."
+        ]
+      }
+    ],
+    "related": [
+      "agent-orchestration",
+      "governance-security",
+      "evaluation-observability"
+    ]
+  }
+}

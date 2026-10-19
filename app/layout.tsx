@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { Almarai } from 'next/font/google'
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body className={`${almarai.variable} antialiased`}>
         <Shell>{children}</Shell>
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        <SpeedInsights />
       </body>
     </html>
   )
