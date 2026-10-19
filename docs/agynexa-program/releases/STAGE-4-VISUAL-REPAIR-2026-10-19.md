@@ -20,3 +20,7 @@ Build وTypeScript ناجحان باستخدام التبعيات القائمة
 ## التالي والتراجع
 
 مراجعة هذا المرشح ضمن المرحلة 4. لا إعادة بحث أو تنفيذ للمرحلة 3، ولا بدء مراحل A–D أو backend إضافي. لم يُفوّض إنتاج جديد لهذا التسليم. للتراجع عن المرشح يكفي revert لالتزام المنتج أعلاه؛ لا DB أو أسرار أو إعدادات خارجية تغيرت.
+
+## معاينة الفرع
+
+[PR #9](https://github.com/adham-younes/vzero/pull/9) مفتوح؛ فحصا Vercel وPreview Comments ناجحان على `da6d88f`، وهو نفس مصدر المنتج `dc62aac`. [معاينة Vercel](https://vzero-git-codex-agynexa-stage4-vis-125459-adhamlouxors-projects.vercel.app) Ready وفق حالة GitHub وتعليق Vercel. محاولة المتصفح تحولت إلى صفحة تسجيل الدخول؛ 200 النهائي خاص بصفحة الدخول وليس نجاح التطبيق. لم تتغير الحماية. [إيصال المعاينة](../evidence/visual-repair-2026-10-19/preview-receipt.json).

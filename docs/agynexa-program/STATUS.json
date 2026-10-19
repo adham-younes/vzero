@@ -204,6 +204,11 @@
       1440
     ],
     "protected_hero_files": "SHA256_MATCH",
-    "local_telemetry": "Vercel analytics scripts unavailable on localhost; documented console errors, no application exceptions"
+    "local_telemetry": "Vercel analytics scripts unavailable on localhost; documented console errors, no application exceptions",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/9",
+    "preview_url": "https://vzero-git-codex-agynexa-stage4-vis-125459-adhamlouxors-projects.vercel.app",
+    "preview_status": "READY_FROM_GITHUB_VERCEL_STATUS",
+    "preview_browser_access": "VERCEL_LOGIN_REQUIRED",
+    "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
   }
 }

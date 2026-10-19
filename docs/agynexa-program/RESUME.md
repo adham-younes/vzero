@@ -26,3 +26,5 @@
 ## أين توجد التفاصيل؟
 
 [الخطة الأصلية](MASTER-PLAN.md) · [التفويضات والقرارات](DECISIONS.md) · [الخطة التقنية](TECHNICAL-PLAN.md) · [الإصدارات والتراجع](RELEASES.md). ملفات الجرد الأصلية وتقارير المراحل التاريخية محفوظة، ولا تُقرأ كأنها الحالة الراهنة.
+
+نسخة المراجعة: [PR #9](https://github.com/adham-younes/vzero/pull/9) و[Preview](https://vzero-git-codex-agynexa-stage4-vis-125459-adhamlouxors-projects.vercel.app). النشر Ready، لكن فحص التطبيق عن بُعد يتطلب تسجيل Vercel؛ دليل التصميم المتاح هو لقطات البناء المحلي.
