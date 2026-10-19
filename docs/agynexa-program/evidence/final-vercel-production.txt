@@ -1,0 +1,77 @@
+Browser tab: 1, Title: "vzero – Deployment Overview – Vercel", URL: "https://vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo".
+1 AXWebArea Deployment Overview, URL: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo
+	2 container
+		3 link Description: Skip to content, Value: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo#geist-skip-nav
+		4 container
+			5 link Description: Back to Deployments, Value: vercel.com/adhamlouxors-projects/vzero/deployments
+			6 container Breadcrumb
+				7 text 26bRUbwQY
+			8 container
+				9 container
+					10 link Description: Deployment, Value: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo
+					11 link Description: Logs, Value: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo/logs
+					12 link Description: Resources, Value: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo/resources
+					13 link Description: Source, Value: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo/source
+					14 link Description: Open Graph, Value: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo/og
+				15 link Description: Visit Deployment, Value: vzero-m4otbvbo0-adhamlouxors-projects.vercel.app/
+				16 link Description: Visit, Value: vzero-m4otbvbo0-adhamlouxors-projects.vercel.app/
+				17 pop up button (collapsed) Description: Visit with, ID: menu-button-_r_13p_, Secondary Actions: Expand
+					18 image
+				19 pop up button (collapsed) Description: Deployment Actions, ID: menu-button-_r_13t_, Secondary Actions: Expand
+					20 image
+				21 text Created
+				22 container adhamlouxor Avatar
+				23 text adhamlouxor 2m ago Status
+				24 container This deployment is ready.
+					25 text Ready
+				26 text Duration
+				27 container Oct 19, 2026, 4:25:39 AM GMT+3
+					28 text 23s
+					29 text 2m ago
+				30 text Environment
+				31 image
+				32 link Description: Production, Value: vercel.com/adhamlouxors-projects/vzero/settings/environments/production
+				33 text Domains
+				34 image
+				35 link Description: vzero-nine-beryl.vercel.app, Value: vzero-nine-beryl.vercel.app/
+				36 image
+				37 link Description: vzero-git-codex-agynexa-stage-0-adhamlouxors-projects.vercel.app, Value: vzero-git-codex-agynexa-stage-0-adhamlouxors-projects.vercel.app/
+				38 image
+				39 link Description: vzero-m4otbvbo0-adhamlouxors-projects.vercel.app, Value: vzero-m4otbvbo0-adhamlouxors-projects.vercel.app/
+				40 text Source
+				41 image
+				42 link Description: codex/agynexa-stage-0, Help: Git Branch, Value: github.com/adham-younes/vzero/tree/codex/agynexa-stage-0
+				43 image
+				44 link Description: 95e0efe Refine bilingual copy with Humanizer and balance editorial layouts, Help: Git Commit, Value: github.com/adham-younes/vzero/commit/95e0efec7a6117e12631877d0bcf80dbdc53b6d8
+				45 button (collapsed) Deployment Settings, ID: radix-_r_146_, Secondary Actions: Expand
+					46 image
+					47 text Deployment Settings
+				48 heading Build Logs Loading, Value: 2
+					49 container radix-_r_14h_
+						50 image
+						51 text Build Logs
+						52 container Loading
+							53 text Loading...
+				54 heading Summary, Value: 2
+					55 container radix-_r_14j_
+						56 image
+						57 text Summary
+						58 image
+				59 heading Checks, Value: 2
+					60 container radix-_r_14l_
+						61 image
+						62 text Checks
+						63 image
+				64 heading Assigning Custom Domains, Value: 2
+					65 container radix-_r_14n_
+						66 image
+						67 text Assigning Custom Domains
+						68 image
+			69 container
+				70 button Find
+					71 image
+					72 text Find
+				73 button
+					74 image
+
+The focused UI element is 1 AXWebArea Deployment Overview, URL: vercel.com/adhamlouxors-projects/vzero/26bRUbwQYStofkVuEwCLd8zFsHEo
