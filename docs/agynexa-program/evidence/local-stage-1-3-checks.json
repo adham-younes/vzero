@@ -1,0 +1,261 @@
+{
+  "contracts": {
+    "paths": 11,
+    "schemas": 14,
+    "local_refs": "PASS",
+    "path_parameters": "PASS",
+    "valid_invalid_schema_cases": 6,
+    "runtime_tests": "NOT_RUN_SPECIFICATION_ONLY"
+  },
+  "hero_hashes": {
+    "public/videos/background.mp4": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+    "@components/landing-5-hero-video.tsx": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+    "@components/landing-5-hero-section.tsx": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1"
+  },
+  "bilingual_catalog": "10 complete services; related references valid",
+  "http": {
+    "base": "http://localhost:3100",
+    "pages": [
+      {
+        "path": "/",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/security",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/contact",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/architecture",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/methodology",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/integrations",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/industries",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/resources",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/about",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/start",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/agentnexos",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/knowledge",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/documents",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/sales",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/service",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/finance",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/logistics",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/procurement",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/receivables",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/solutions/customer-operations",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/customer-service",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/employee-operations",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/process-automation",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/enterprise-knowledge",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/agent-orchestration",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/enterprise-integrations",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/voice-agents",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/agent-assist",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/governance-security",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/evaluation-observability",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      },
+      {
+        "path": "/services/solutions",
+        "status": 200,
+        "h1": true,
+        "brand": true,
+        "photo_removed": true
+      }
+    ],
+    "invalid_route": {
+      "path": "/services/does-not-exist",
+      "status": 404
+    },
+    "removed_image": {
+      "path": "/images/infrastructure.jpg",
+      "status": 404
+    }
+  },
+  "passed": true
+}
