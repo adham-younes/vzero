@@ -1,0 +1,307 @@
+{
+  "status": "Research and proposed scope; implementation has not started.",
+  "user_requirement": "Expand AGYNEXA with Kore.ai service and page coverage while strictly preserving the homepage, original video, brand, colors and template; replace unsuitable images elsewhere.",
+  "target": "https://vzero-nine-beryl.vercel.app/",
+  "reference": "https://kore.ai/",
+  "coverage": {
+    "reference_pages_fetched": 32,
+    "agynexa_top_level_pages_fetched": 11,
+    "limit": "Not an exhaustive recursive site crawl. Fetched pages returned HTTP 200; interactive flows have not yet been fully tested."
+  },
+  "design_lock": {
+    "brand": "AGYNEXA",
+    "preserve": [
+      "Existing dark surfaces and green accent roles",
+      "Current hero image treatment, typography, navigation and component language",
+      "English and Arabic language support",
+      "Existing six solution pages and routes"
+    ],
+    "exact_tokens": "Verified directly from app/globals.css; homepage CSS rules and existing palette remain protected.",
+    "protected_files": [
+      "app/page.tsx",
+      "@components/landing-5-hero-section.tsx",
+      "@components/landing-5-hero-video.tsx",
+      "public/videos/background.mp4"
+    ],
+    "tokens": {
+      "background": "#050505",
+      "foreground": "#EBEBEB",
+      "card": "#0B0B0B",
+      "muted": "#BFBFBF",
+      "primary": "#10B981"
+    }
+  },
+  "source_evidence": {
+    "deployment": "dpl_2BgMXxiePrvjPQjsnLrWZiDrzmmz",
+    "source_view": "https://vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/source",
+    "files_observed": [
+      "app/globals.css",
+      "app/layout.tsx",
+      "app/page.tsx",
+      "app/[...path]",
+      "lib/agynexa.ts"
+    ],
+    "content_shape": "Bilingual text pairs and solution records containing problem, input, flow, output and acceptance criteria.",
+    "access_limit": "Repository cloned successfully. Source is now available locally. No product implementation has started; written implementation plan awaits review."
+  },
+  "page_mapping": [
+    {
+      "reference_url": "https://kore.ai",
+      "reference_title": "Enterprise Agentic AI Platform | Kore.ai",
+      "proposed_agynexa_path": "/",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/about",
+      "reference_title": "About Kore.ai | Leading Agentic AI Company",
+      "proposed_agynexa_path": "/about",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/acceptable-use-policy",
+      "reference_title": "Acceptable Use Policy",
+      "proposed_agynexa_path": "/acceptable-use",
+      "content_rule": "Write for actual AGYNEXA operations and data handling; never replace company names in Kore.ai legal text."
+    },
+    {
+      "reference_url": "https://kore.ai/ai-agent-platform",
+      "reference_title": "AI-native Agent Platform for the Enterprise | Kore.ai",
+      "proposed_agynexa_path": "/architecture",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/contact-us",
+      "reference_title": "Contact us",
+      "proposed_agynexa_path": "/contact",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/cookie-policy",
+      "reference_title": "Cookie Policy",
+      "proposed_agynexa_path": "/cookies",
+      "content_rule": "Write for actual AGYNEXA operations and data handling; never replace company names in Kore.ai legal text."
+    },
+    {
+      "reference_url": "https://kore.ai/customer-experience",
+      "reference_title": "AI Agents for Customer Service & Customer Experience",
+      "proposed_agynexa_path": "/solutions/customer-experience",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/customer-stories",
+      "reference_title": "Customer Success Stories | Kore.ai AI Case Studies",
+      "proposed_agynexa_path": "/resources/use-cases",
+      "content_rule": "Use AGYNEXA facts only. Publish illustrative use cases instead of invented customer proof; include careers only with actual openings."
+    },
+    {
+      "reference_url": "https://kore.ai/employee-experience",
+      "reference_title": "AI Agents for Employee Experience | Kore.ai",
+      "proposed_agynexa_path": "/solutions/employee-experience",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/healthcare-life-sciences",
+      "reference_title": "AI Agents for Life Sciences & Pharma",
+      "proposed_agynexa_path": "/industries/healthcare-life-sciences",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/healthcare-payer",
+      "reference_title": "Agentic AI for Healthcare Payers | Kore.ai",
+      "proposed_agynexa_path": "/industries/healthcare-payer",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/healthcare-provider",
+      "reference_title": "AI Agents for Healthcare Providers | Kore.ai",
+      "proposed_agynexa_path": "/industries/healthcare-provider",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/insurance",
+      "reference_title": "Insurance",
+      "proposed_agynexa_path": "/industries/insurance",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/retail",
+      "reference_title": "AI Agents for Retail & Ecommerce | Kore.ai",
+      "proposed_agynexa_path": "/industries/retail",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/retail-banking",
+      "reference_title": "AI Agents for Retail Banking | Kore.ai",
+      "proposed_agynexa_path": "/industries/retail-banking",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/telco",
+      "reference_title": "AI Agents for Telecom | Kore.ai",
+      "proposed_agynexa_path": "/industries/telco",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/travel-and-hospitality",
+      "reference_title": "AI Agents for Travel & Hospitality | Kore.ai",
+      "proposed_agynexa_path": "/industries/travel-and-hospitality",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/industry/wealth-management",
+      "reference_title": "AI Agents for Wealth Management | Kore.ai",
+      "proposed_agynexa_path": "/industries/wealth-management",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/partners",
+      "reference_title": "Kore.ai Partners | AI Technology & Solution Partners",
+      "proposed_agynexa_path": "/partners",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/patents-trademarks",
+      "reference_title": "Patents and Trademarks",
+      "proposed_agynexa_path": "/brand",
+      "content_rule": "Use AGYNEXA facts only. Publish illustrative use cases instead of invented customer proof; include careers only with actual openings."
+    },
+    {
+      "reference_url": "https://kore.ai/privacy-policy",
+      "reference_title": "Privacy Policy",
+      "proposed_agynexa_path": "/privacy",
+      "content_rule": "Write for actual AGYNEXA operations and data handling; never replace company names in Kore.ai legal text."
+    },
+    {
+      "reference_url": "https://kore.ai/request-a-demo",
+      "reference_title": "Request a demo",
+      "proposed_agynexa_path": "/start",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/request-for-proposal",
+      "reference_title": "Request for Proposal",
+      "proposed_agynexa_path": "/request-for-proposal",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/support",
+      "reference_title": "AI Customer Support | Kore.ai Support & Help Center",
+      "proposed_agynexa_path": "/support",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/terms-of-service",
+      "reference_title": "Terms of Service",
+      "proposed_agynexa_path": "/terms",
+      "content_rule": "Write for actual AGYNEXA operations and data handling; never replace company names in Kore.ai legal text."
+    },
+    {
+      "reference_url": "https://kore.ai/ai-research-reports/kore-ai-named-a-leader-in-everest-groups-agentic-ai-products-peak-matrix-assessment-2026",
+      "reference_title": "Kore.ai Named a Leader in Everest Group's 2026 PEAK Matrix",
+      "proposed_agynexa_path": "/resources/evaluation",
+      "content_rule": "Reference research only. Do not attribute Kore.ai awards or third-party reports to AGYNEXA."
+    },
+    {
+      "reference_url": "https://kore.ai/ai-research-reports/kore-ai-named-a-leader-in-the-forrester-wave-tm-conversational-ai-platforms-for-employee-services-q3-2026",
+      "reference_title": "Kore.ai named a Leader in The Forrester Wave™: Conversational AI Platforms for Employee Services, Q3 2026",
+      "proposed_agynexa_path": "/resources/evaluation",
+      "content_rule": "Reference research only. Do not attribute Kore.ai awards or third-party reports to AGYNEXA."
+    },
+    {
+      "reference_url": "https://kore.ai/ai-research-reports/kore-ai-named-a-leader-in-the-gartner-magic-quadrant-for-conversational-ai-platforms",
+      "reference_title": "Kore.ai named a Leader in the Gartner® Magic Quadrant™ for Conversational AI Platforms again",
+      "proposed_agynexa_path": "/resources/evaluation",
+      "content_rule": "Reference research only. Do not attribute Kore.ai awards or third-party reports to AGYNEXA."
+    },
+    {
+      "reference_url": "https://kore.ai/analyst-recognition",
+      "reference_title": "Analyst Recognition",
+      "proposed_agynexa_path": "/resources/evaluation",
+      "content_rule": "Use AGYNEXA facts only. Publish illustrative use cases instead of invented customer proof; include careers only with actual openings."
+    },
+    {
+      "reference_url": "https://kore.ai/careers",
+      "reference_title": "Careers at Kore.ai | Join the Agentic AI Revolution",
+      "proposed_agynexa_path": "/careers",
+      "content_rule": "Use AGYNEXA facts only. Publish illustrative use cases instead of invented customer proof; include careers only with actual openings."
+    },
+    {
+      "reference_url": "https://kore.ai/resource",
+      "reference_title": "Resources | Blogs, Reports & Whitepapers | Kore.ai",
+      "proposed_agynexa_path": "/resources",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    },
+    {
+      "reference_url": "https://kore.ai/videos",
+      "reference_title": "Kore.ai videos: AI agent demos and product walkthroughs",
+      "proposed_agynexa_path": "/resources/demos",
+      "content_rule": "Adapt coverage and write AGYNEXA-specific English and Arabic copy."
+    }
+  ],
+  "service_details_required": {
+    "customer_experience": [
+      "Voice and digital agents",
+      "Agent assistance",
+      "Quality management",
+      "AI contact center"
+    ],
+    "employee_experience": [
+      "Enterprise search",
+      "HR assistance",
+      "IT service desk",
+      "Recruiting assistance"
+    ],
+    "platform": [
+      "Agent definitions and tools",
+      "Workflow orchestration",
+      "Knowledge retrieval and source citations",
+      "Memory and context",
+      "Permissions and approval gates",
+      "Integrations and channel connectors",
+      "Evaluation",
+      "Run tracing and analytics",
+      "Versioning and deployment lifecycle"
+    ]
+  },
+  "detail_page_template": [
+    "Customer problem",
+    "Who uses the service",
+    "Capabilities",
+    "Inputs and supported integrations",
+    "Step-by-step workflow",
+    "Human review and exceptions",
+    "Expected deliverables",
+    "Acceptance criteria",
+    "Relevant use cases",
+    "Related services",
+    "Contact or project brief call to action"
+  ],
+  "behavior_requirements": [
+    "Navigation and every internal route work in both languages",
+    "Arabic RTL layout and localized metadata",
+    "Service and industry cross-links",
+    "Mobile menu and keyboard focus",
+    "Project brief validation and useful error states",
+    "Explicit submission success only after a connected backend accepts the request",
+    "Resources search/filter if sufficient real content exists",
+    "Consent behavior matches actual trackers"
+  ],
+  "verification": [
+    "Route and broken-link checks",
+    "English and Arabic at 390, 768 and 1440 CSS pixels",
+    "Compare shared components and hero against the unchanged baseline",
+    "Test form validation, submission, failure and duplicate prevention if a backend is connected",
+    "Verify metadata and sitemap",
+    "Preview deployment reviewed before production release"
+  ],
+  "external_surfaces": [
+    "docs.kore.ai, marketplace.kore.ai and trust.kore.ai are separate applications, not automatically part of the marketing-site implementation. Their equivalent scope and data must be defined."
+  ],
+  "truthfulness": [
+    "Service descriptions do not prove a live backend exists",
+    "Do not transfer Kore.ai customer logos, metrics, awards or proprietary product names to AGYNEXA",
+    "Implement observable behavior; do not claim knowledge of private Kore.ai backend code"
+  ],
+  "repository": "https://github.com/adham-younes/vzero.git",
+  "implementation_plan": "agynexa-implementation-plan.md"
+}

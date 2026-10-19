@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-10-19T03:19:39.810811+03:00",
+  "repository": {
+    "url": "https://github.com/adham-younes/vzero.git",
+    "base_branch": "main",
+    "base_commit": "a4a8a5daf00c36074f9db0e43184fe84d64a9f7a",
+    "remote_main_verified": "a4a8a5daf00c36074f9db0e43184fe84d64a9f7a",
+    "work_branch": "codex/agynexa-stage-0",
+    "workspace": "/Users/adham/Documents/Codex/2026-10-19/understand-how-search-works-in-the/work/vzero",
+    "isolation": "Dedicated clone inside this task, with a separate local branch; original main ref untouched.",
+    "dirty_on_stage_entry": false
+  },
+  "vercel": {
+    "team_slug": "adhamlouxors-projects",
+    "project_name": "vzero",
+    "connected_repository": "adham-younes/vzero",
+    "git_connection_status": "VERIFIED",
+    "production_branch": "main",
+    "production_branch_status": "VERIFIED",
+    "deployment_id": "dpl_2BgMXxiePrvjPQjsnLrWZiDrzmmz",
+    "deployment_url": "https://vzero-1tw92iibt-adhamlouxors-projects.vercel.app/",
+    "current_domain": "https://vzero-nine-beryl.vercel.app/",
+    "observed_deployment_status": "READY",
+    "observed_environment": "Production",
+    "deployed_git_commit": null,
+    "deployed_git_commit_status": "UNKNOWN",
+    "limitation": "The deployment overview shows View code, not a Git SHA. Do not infer that the deployed build equals the current repository HEAD.",
+    "evidence": [
+      "evidence/vercel-deployment.txt",
+      "evidence/vercel-deployment.png",
+      "evidence/vercel-git-settings.txt",
+      "evidence/vercel-git-connection.png",
+      "evidence/vercel-production-environment.txt"
+    ]
+  },
+  "source_comparison": {
+    "local_vs_main": "No product diff at stage completion.",
+    "published_video": "Byte-identical SHA-256 match to repository file.",
+    "public_ui": "Brand, Hero copy, palette and language behavior observed; not full source equivalence.",
+    "other_projects": "No other checkout, database, secrets or settings were modified. A separate legacy primary project was not identified by the owner; no equivalence with unrelated repositories is assumed."
+  },
+  "publication": {
+    "push_performed": false,
+    "deployment_created": false,
+    "preview_url": null,
+    "localhost_url": null,
+    "reason": "Stage 0 contains documentation and evidence only; the existing published site was used for baseline, not represented as a new preview."
+  }
+}

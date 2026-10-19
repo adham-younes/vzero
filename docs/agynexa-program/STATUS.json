@@ -1,0 +1,70 @@
+{
+  "program": "AGYNEXA",
+  "master_plan": "MASTER-PLAN.md",
+  "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
+  "updated_at": "2026-10-19T03:19:39.810811+03:00",
+  "stage": 0,
+  "status": "COMPLETE_WITH_RECORDED_UNKNOWNS",
+  "owner_review": "PENDING",
+  "next_stage": 1,
+  "next_stage_authorized": false,
+  "source_commit": "a4a8a5daf00c36074f9db0e43184fe84d64a9f7a",
+  "branch": "codex/agynexa-stage-0",
+  "stage_commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/releases/STAGE-0.md",
+  "product_code_changed": false,
+  "production_changed": false,
+  "push_performed": true,
+  "preview_created": false,
+  "evidence": [
+    "source-map.json",
+    "brand-lock.json",
+    "baseline/hero-protection.json",
+    "baseline/product-files.json",
+    "routes.json",
+    "dependencies.json",
+    "content-inventory.json",
+    "tool-inventory.json",
+    "releases/STAGE-0.md"
+  ],
+  "checks_run": [
+    "Local working tree initially clean",
+    "All seven previous baseline hashes matched",
+    "GitHub main equals pinned source commit",
+    "Vercel UI connected repository verified",
+    "Vercel production branch main verified",
+    "Published/local video SHA-256 match",
+    "Live video loaded and playing; two distinct time samples",
+    "English/Arabic Hero screenshots and computed palette",
+    "Product diff against base empty",
+    "All 64 tracked source file hashes and sizes unchanged",
+    "Master plan copy byte-identical to approved document",
+    "JSON parsing and local Markdown links valid",
+    "English/Arabic baseline screenshots visually inspected",
+    "git diff --check passed"
+  ],
+  "checks_not_run": [
+    "dependency install",
+    "build",
+    "lint",
+    "typecheck",
+    "full route smoke",
+    "API/database tests"
+  ],
+  "unknowns": [
+    "Git SHA of historical Vercel deployment is not shown; current repository HEAD is not represented as proven deployed SHA.",
+    "Original approved procurement/receivables material beyond current repository not yet located."
+  ],
+  "next_action": "After explicit owner approval, start Stage 1 using prior-research evidence and fill only missing reference details. No product implementation in Stage 1.",
+  "deployment_test": {
+    "authorized_by_user": true,
+    "production_authorized_by_user": true,
+    "initial_commit": "5f584caf9ba5df8bf8b11fd4560add3b0b955fc1",
+    "initial_deployment": "dpl_FBfYtTYtibnKdC8UYAVm3TWw4Xkc",
+    "initial_result": "BLOCKED_COMMIT_AUTHOR_ACCESS",
+    "authenticated_github_user": "adham-younes",
+    "vercel_login_connection": "adham-younes",
+    "initial_attributed_author": "adhamyoune",
+    "remediation": "Repository-local author configuration corrected to authenticated user GitHub noreply identity. No history rewrite or account permission change.",
+    "state": "RETEST_PENDING"
+  }
+}

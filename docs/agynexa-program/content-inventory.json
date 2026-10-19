@@ -1,0 +1,25 @@
+{
+  "source": "lib/agynexa.ts and @components/agynexa-pages.tsx",
+  "existing_solution_slugs": [
+    "knowledge",
+    "documents",
+    "sales",
+    "service",
+    "finance",
+    "logistics"
+  ],
+  "available_languages": [
+    "en",
+    "ar"
+  ],
+  "current_purchasing_coverage": "Finance solution mentions invoices, purchase orders and reconciliation; no dedicated procurement route.",
+  "receivables_coverage": "No dedicated receivables or collections page found in inspected catalog. Do not invent recovered approved copy. Locate prior accepted material before Stage 2 changes.",
+  "existing_ui_features": {
+    "solution_search": "IMPLEMENTED in source; not re-tested in stage 0",
+    "integration_filter": "IMPLEMENTED in source; not re-tested in stage 0",
+    "project_brief": "IMPLEMENTED as local preview/download only; no server submission",
+    "agent_workspace": "IMPLEMENTED as local UI state only; no live runs or external tools",
+    "server_api_or_database": "No app/api or database code found in the inspected project"
+  },
+  "positioning_changes": "SPECIFIED for later stage: remove public trial/local-preview framing while describing real engineering services accurately; do not falsely activate existing UI controls."
+}

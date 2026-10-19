@@ -1,0 +1,26 @@
+{
+  "count": 17,
+  "source": "app/[...path]/page.tsx + lib/agynexa.ts + app/page.tsx",
+  "routes": [
+    "/",
+    "/solutions",
+    "/services",
+    "/architecture",
+    "/methodology",
+    "/integrations",
+    "/industries",
+    "/resources",
+    "/about",
+    "/start",
+    "/agentnexos",
+    "/solutions/knowledge",
+    "/solutions/documents",
+    "/solutions/sales",
+    "/solutions/service",
+    "/solutions/finance",
+    "/solutions/logistics"
+  ],
+  "api_routes_found": [],
+  "locale_strategy": "Client context in agynexa-shell.tsx changes html lang and dir; no locale-prefixed routes or localized server metadata currently implemented.",
+  "scope": "Source inventory; not a new HTTP smoke test of all routes."
+}

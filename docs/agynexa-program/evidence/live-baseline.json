@@ -1,0 +1,40 @@
+{
+  "colors": {
+    "--background": "#050505",
+    "--card": "#0b0b0b",
+    "--foreground": "#ebebeb",
+    "--muted-foreground": "#bfbfbf",
+    "--primary": "#10b981"
+  },
+  "headingFont": "-apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+  "heroRect": {
+    "bottom": 721,
+    "height": 640,
+    "left": 0,
+    "right": 1280,
+    "top": 81,
+    "width": 1280,
+    "x": 0,
+    "y": 81
+  },
+  "lang": "en",
+  "title": "Intelligence, engineered.Built for your business.",
+  "url": "https://vzero-nine-beryl.vercel.app/",
+  "video": {
+    "autoplay": true,
+    "currentTime": 9.462585,
+    "duration": 10.01,
+    "error": null,
+    "height": 1440,
+    "loop": true,
+    "muted": true,
+    "paused": false,
+    "readyState": 4,
+    "src": "https://vzero-nine-beryl.vercel.app/videos/background.mp4",
+    "width": 2560
+  },
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}
