@@ -1,0 +1,42 @@
+{
+  "repository": "https://github.com/adham-younes/vzero.git",
+  "commit": "a4a8a5daf00c36074f9db0e43184fe84d64a9f7a",
+  "files": {
+    "app/page.tsx": {
+      "sha256": "333e59b56d844ad38ffabf35be1f5e182bcafe7b6f9703c6a6e8baf2c60e3203",
+      "bytes": 329
+    },
+    "@components/landing-5-hero-section.tsx": {
+      "sha256": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1",
+      "bytes": 2339
+    },
+    "@components/landing-5-hero-video.tsx": {
+      "sha256": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+      "bytes": 1556
+    },
+    "@components/agynexa-sections.tsx": {
+      "sha256": "c4a860b2cd6daf1d4e7fc041a4d007505d6b280bb954d825b8f5abf9f57935b9",
+      "bytes": 5797
+    },
+    "app/globals.css": {
+      "sha256": "ec660cf03390c35dd1bfe12e5633d89194bd1691ec67fcc2286d1c396f577d34",
+      "bytes": 14874
+    },
+    "public/videos/background.mp4": {
+      "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+      "bytes": 9885990
+    },
+    "public/images/infrastructure.jpg": {
+      "sha256": "57a710a14865eada56b5a3256e1b69de729d0d54a6a13b9c86c73e2c972678f6",
+      "bytes": 354730
+    }
+  },
+  "palette": {
+    "background": "#050505",
+    "foreground": "#EBEBEB",
+    "card": "#0B0B0B",
+    "muted": "#BFBFBF",
+    "primary": "#10B981"
+  },
+  "preserve": "Homepage composition, original video, video fallback, headline, description, section order and first six solutions. Shared navigation may gain links without changing the header dimensions."
+}

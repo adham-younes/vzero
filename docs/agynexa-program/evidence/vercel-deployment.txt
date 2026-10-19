@@ -1,0 +1,130 @@
+Browser tab: 5, Title: "vzero – Deployment Overview – Vercel", URL: "https://vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz".
+0 AXWebArea vzero – Deployment Overview – Vercel, URL: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz
+	1 container
+		2 link Description: Skip to content, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz#geist-skip-nav
+		3 container
+			4 container
+				5 link Description: adhamlouxor's projects Hobby, Value: vercel.com/adhamlouxors-projects
+				6 button
+					7 image
+				8 button Find F
+					9 image
+					10 text Find
+					11 text F
+				12 container
+					13 link Description: Overview, Value: vercel.com/adhamlouxors-projects/vzero
+					14 link Description: Deployments, Value: vercel.com/adhamlouxors-projects/vzero/deployments
+					15 link Description: Logs, Value: vercel.com/adhamlouxors-projects/vzero/logs
+					16 link Description: Analytics, Value: vercel.com/adhamlouxors-projects/vzero/analytics
+					17 link Description: Speed Insights, Value: vercel.com/adhamlouxors-projects/vzero/speed-insights
+					18 link Description: Observability, Value: vercel.com/adhamlouxors-projects/vzero/observability
+					19 link Description: Firewall, Value: vercel.com/adhamlouxors-projects/vzero/firewall
+					20 link Description: CDN, Value: vercel.com/adhamlouxors-projects/vzero/cdn
+					21 link Description: Environment Variables, Value: vercel.com/adhamlouxors-projects/vzero/settings/environment-variables
+					22 link Description: Domains, Value: vercel.com/adhamlouxors-projects/vzero/settings/domains
+					23 link Description: Connect, Value: vercel.com/adhamlouxors-projects/vzero/connect
+					24 link Description: Integrations, Value: vercel.com/adhamlouxors-projects/vzero/settings/integrations
+					25 link Description: Storage, Value: vercel.com/adhamlouxors-projects/vzero/stores
+					26 link Description: Flags, Value: vercel.com/adhamlouxors-projects/vzero/flags
+					27 link Description: Agent, Value: vercel.com/adhamlouxors-projects/vzero/agent
+					28 link Description: AI Gateway, Value: vercel.com/adhamlouxors-projects/vzero/ai-gateway
+					29 link Description: Sandboxes, Value: vercel.com/adhamlouxors-projects/vzero/sandboxes
+					30 link Description: Workflows, Value: vercel.com/adhamlouxors-projects/vzero/workflows
+					31 link Description: Images, Value: vercel.com/adhamlouxors-projects/vzero/images
+					32 link Description: Daemons, Value: vercel.com/adhamlouxors-projects/vzero/daemons
+					33 link Description: Usage, Value: vercel.com/adhamlouxors-projects/vzero/usage
+					34 link Description: Support, Value: vercel.com/adhamlouxors-projects/vzero/support
+					35 link Description: Settings, Value: vercel.com/adhamlouxors-projects/vzero/settings
+				36 pop up button (collapsed) Avatar for adhamlouxor adhamlouxor, Secondary Actions: Expand
+					37 container Avatar for adhamlouxor
+					38 text adhamlouxor
+					39 image
+				122 pop up button (collapsed) Description: 368 unseen notifications, Secondary Actions: Expand
+					123 image
+					124 image
+			41 container
+				42 link Description: vzero, Value: vercel.com/adhamlouxors-projects/vzero
+				43 button
+					44 image
+				45 link Description: Back to team view, Value: vercel.com/adhamlouxors-projects/~/deployments
+			46 container Breadcrumb
+				47 link Description: Deployments, Value: vercel.com/adhamlouxors-projects/vzero/deployments
+				48 container
+					49 text 2BgMXxieP
+					50 button Copy ID
+			51 button Vercel Agent is available on Pro
+				52 image
+				125 text Agent
+			53 container
+				54 container
+					55 link Description: Deployment, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz
+					56 link Description: Logs, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/logs
+					57 link Description: Resources, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/resources
+					58 link Description: Source, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/source
+					59 link Description: Open Graph, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/og
+				60 heading Deployment Details, Value: 3
+					61 text Deployment Details
+				62 button Share
+					63 image
+					64 text Share
+				65 link Description: Logs, Value: vercel.com/adhamlouxors-projects/vzero/logs?deploymentIds=dpl_2BgMXxiePrvjPQjsnLrWZiDrzmmz
+				66 link Description: Visit, Value: vzero-1tw92iibt-adhamlouxors-projects.vercel.app/
+				67 pop up button (collapsed) Description: Visit with, ID: menu-button-_r_l8_, Secondary Actions: Expand
+					68 image
+				69 pop up button (collapsed) Description: Deployment Actions, ID: menu-button-_r_m4_, Secondary Actions: Expand
+					70 image
+				71 link Description: Visit Deployment, Value: vzero-1tw92iibt-adhamlouxors-projects.vercel.app/
+				72 text Created
+				73 container adhamlouxor Avatar
+				74 text adhamlouxor 5h ago Status
+				75 container This deployment is ready.
+					76 text Ready
+				77 text Duration
+				78 container Oct 18, 2026, 10:09:22 PM GMT+3
+					79 text 21s
+					80 text 5h ago
+				81 text Environment
+				82 image
+				83 link Description: Production, Value: vercel.com/adhamlouxors-projects/vzero/settings/environments/production
+				84 text Current Domains
+				85 image
+				86 link Description: vzero-nine-beryl.vercel.app, Value: vzero-nine-beryl.vercel.app/
+				87 container
+					88 text + 1
+				89 image
+				90 link Description: vzero-1tw92iibt-adhamlouxors-projects.vercel.app, Value: vzero-1tw92iibt-adhamlouxors-projects.vercel.app/
+				91 text Source
+				92 image
+				93 link Description: View code, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/source
+				94 button (collapsed) Deployment Settings 2 Recommendations, ID: radix-_r_lm_, Secondary Actions: Expand
+					95 image
+					96 text Deployment Settings
+					126 container
+						127 text 2  Recommendation s
+				128 heading Build Logs 21s, Value: 2
+					129 container radix-_r_m7_
+						130 image
+						131 text Build Logs 21s
+						132 image
+				103 heading Deployment Summary Resources, Value: 2
+					104 container radix-_r_lr_
+						105 image
+						106 text Deployment Summary
+						133 link Description: Resources, Value: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz/resources
+						107 image
+				108 heading Deployment Checks, Value: 2
+					109 container radix-_r_lt_
+						110 image
+						111 text Deployment Checks
+						112 image
+				113 heading Assigning Custom Domains, Value: 2
+					114 container radix-_r_lv_
+						115 image
+						116 text Assigning Custom Domains
+						117 image
+				118 link Description: Runtime Logs View and debug runtime logs & errors, Value: vercel.com/adhamlouxors-projects/vzero/logs
+				119 link Description: Observability Monitor app health & performance, Value: vercel.com/adhamlouxors-projects/vzero/observability/serverless-functions
+				120 link Description: Speed Insights Not Enabled Performance metrics from real users, Value: vercel.com/adhamlouxors-projects/vzero/speed-insights
+				121 link Description: Web Analytics No Data Analyze visitors & traffic in real-time, Value: vercel.com/adhamlouxors-projects/vzero/analytics
+
+The focused UI element is 0 AXWebArea vzero – Deployment Overview – Vercel, URL: vercel.com/adhamlouxors-projects/vzero/2BgMXxiePrvjPQjsnLrWZiDrzmmz

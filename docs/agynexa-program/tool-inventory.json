@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-19T03:19:39.810811+03:00",
+  "tools": [
+    {
+      "name": "Git local and GitHub remote",
+      "state": "VERIFIED",
+      "evidence": "clone, local status, branch creation, ls-remote main"
+    },
+    {
+      "name": "CUA browser",
+      "state": "VERIFIED",
+      "evidence": "public Hero and authenticated Vercel read-only observations"
+    },
+    {
+      "name": "Better Design",
+      "state": "VERIFIED_WITH_LIMITATION",
+      "evidence": "extract_design_system returned a result; its theme inference conflicts with final CSS cascade; see evidence/better-design-extraction.json"
+    },
+    {
+      "name": "Vercel connector",
+      "state": "BLOCKED",
+      "evidence": "Earlier project/deployment requests returned 404; UI access works. No repeated connector probes in stage 0."
+    },
+    {
+      "name": "REA",
+      "state": "EXPOSED_NOT_TESTED",
+      "evidence": "Tools are listed in the current environment. No REA execution needed for source baseline; no server capability is presumed verified."
+    },
+    {
+      "name": "Figma",
+      "state": "EXPOSED_NOT_TESTED",
+      "evidence": "Figma tools including whoami are exposed; authentication not tested and no file created."
+    },
+    {
+      "name": "Image generation",
+      "state": "EXPOSED_NOT_USED",
+      "evidence": "No image generation or credit-consuming request made."
+    },
+    {
+      "name": "Karpathy guidelines",
+      "state": "READ_VERIFIED",
+      "source": "/Users/adham/.codex/plugins/cache/openai-curated-remote/andrej-karpathy-skills/1.0.0/skills/karpathy-guidelines/SKILL.md",
+      "sha256": "481700642a68354587bed80e2287edf8fd048c87a33568946ca4cb93c15811cb",
+      "evidence": "Local plugin skill read earlier in this chat; no executable installed or run."
+    },
+    {
+      "name": "Humanizer",
+      "state": "LISTED_NOT_APPLIED",
+      "evidence": "No transformation or safety assessment performed; manual writing used."
+    }
+  ],
+  "installs": [],
+  "paid_generation_requests": []
+}

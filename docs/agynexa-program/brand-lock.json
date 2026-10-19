@@ -1,0 +1,66 @@
+{
+  "status": "VERIFIED",
+  "sources": [
+    "app/globals.css",
+    "@ui/button.tsx",
+    "@ui/card.tsx",
+    "@ui/input.tsx",
+    "@ui/dialog.tsx",
+    "app/layout.tsx",
+    "evidence/live-baseline.json"
+  ],
+  "name": "AGYNEXA",
+  "scheme": "dark",
+  "palette": {
+    "background": "#050505",
+    "foreground": "#EBEBEB",
+    "card": "#0B0B0B",
+    "muted_foreground": "#BFBFBF",
+    "primary": "#10B981",
+    "primary_foreground": "#050505",
+    "border": "#EBEBEB26",
+    "focus_ring": "#10B981"
+  },
+  "typography": {
+    "english": "System sans stack; actual live heading font recorded in evidence/live-baseline.json",
+    "arabic": "Almarai, weights 400 and 700, via next/font/google",
+    "brand": "Arial, 700, 24px, letter spacing -0.055em",
+    "h1_hero": "clamp(38px,5.2vw,72px); mobile clamp(34px,9vw,48px)",
+    "h2": "clamp(28px,4vw,48px)",
+    "h3": "22px",
+    "body_line_height": 1.65,
+    "arabic_heading_line_height": 1.6,
+    "hero_english_line_height": 1.08,
+    "hero_arabic_line_height": 1.45
+  },
+  "layout": {
+    "container_max_width": "1280px",
+    "inline_padding": "24px",
+    "section_block_padding": "96px; 64px at <=640px",
+    "panel_padding": "32px; 24px at <=640px",
+    "panel_radius": "10px final override",
+    "field_radius": "8px",
+    "field_min_height": "48px",
+    "base_radius": "0.625rem",
+    "button_large": "h-12 px-6; rounded-lg",
+    "hero_desktop_min_height": "calc(100svh - 80px)",
+    "hero_mobile_min_height": "calc(100svh - 76px)"
+  },
+  "components": {
+    "aliases": "@/components/ui/* resolves to @ui/*; do not accidentally edit the unused components/ui/button.tsx",
+    "buttons": "@ui/button.tsx (Base UI + existing variants)",
+    "cards": "@ui/card.tsx and existing .panel",
+    "input": "@ui/input.tsx and existing .field",
+    "dialog": "@ui/dialog.tsx",
+    "icons": "lucide-react",
+    "language": "useLanguage() in @components/agynexa-shell.tsx"
+  },
+  "interaction": {
+    "focus": "Existing visible emerald focus ring",
+    "disabled": "pointer-events none and opacity 0.5 for actual disabled controls",
+    "reduced_motion": "Existing CSS disables animation and transitions; autoplay video remains existing behavior and is not changed in stage 0",
+    "mobile_breakpoint": "640px in custom CSS; preserve existing Tailwind responsive rules",
+    "rtl": "html lang=ar, dir=rtl; logical spacing where present"
+  },
+  "tool_discrepancy": "Better Design extraction completed but reported system-driven light/dark themes from earlier CSS declarations. Final cascade and measured computed tokens force dark; those verified values take precedence. No tool-generated theme was applied."
+}

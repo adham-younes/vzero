@@ -1,0 +1,157 @@
+Browser tab: 5, Title: "vzero – Git – Vercel", URL: "https://vercel.com/adhamlouxors-projects/vzero/settings/git".
+0 AXWebArea vzero – Git – Vercel, URL: vercel.com/adhamlouxors-projects/vzero/settings/git
+	1 container
+		2 link Description: Skip to content, Value: vercel.com/adhamlouxors-projects/vzero/settings/git#geist-skip-nav
+		3 container
+			4 container
+				5 link Description: adhamlouxor's projects Hobby, Value: vercel.com/adhamlouxors-projects
+				6 button
+					7 image
+				8 button Find F
+					9 image
+					10 text Find
+					11 text F
+				134 container
+					135 button Settings
+						136 image
+						137 text Settings
+					138 link Description: General, Value: vercel.com/adhamlouxors-projects/vzero/settings/general
+					139 link Description: Build and Deployment, Value: vercel.com/adhamlouxors-projects/vzero/settings/build-and-deployment
+					140 link Description: Environments, Value: vercel.com/adhamlouxors-projects/vzero/settings/environments
+					141 link Description: Git, Value: vercel.com/adhamlouxors-projects/vzero/settings/git
+					142 link Description: Deployment Protection, Value: vercel.com/adhamlouxors-projects/vzero/settings/deployment-protection
+					143 link Description: Passport, Value: vercel.com/adhamlouxors-projects/vzero/settings/passport
+					144 link Description: Functions, Value: vercel.com/adhamlouxors-projects/vzero/settings/functions
+					145 link Description: Sandboxes, Value: vercel.com/adhamlouxors-projects/vzero/settings/sandboxes
+					146 link Description: Cron Jobs, Value: vercel.com/adhamlouxors-projects/vzero/settings/cron-jobs
+					147 link Description: Microfrontends, Value: vercel.com/adhamlouxors-projects/vzero/settings/microfrontends
+					148 link Description: Project Members, Value: vercel.com/adhamlouxors-projects/vzero/settings/project-members
+					149 link Description: Drains, Value: vercel.com/adhamlouxors-projects/vzero/settings/drains
+					150 link Description: Alerts, Value: vercel.com/adhamlouxors-projects/vzero/settings/alerts
+					151 link Description: Tracing, Value: vercel.com/adhamlouxors-projects/vzero/settings/tracing
+					152 link Description: Security, Value: vercel.com/adhamlouxors-projects/vzero/settings/security
+					153 link Description: Networking, Value: vercel.com/adhamlouxors-projects/vzero/settings/networking
+					154 link Description: Activity, Value: vercel.com/adhamlouxors-projects/vzero/settings/activity
+					155 link Description: Advanced, Value: vercel.com/adhamlouxors-projects/vzero/settings/advanced
+				36 pop up button (collapsed) Avatar for adhamlouxor adhamlouxor, Secondary Actions: Expand
+					37 container Avatar for adhamlouxor
+					38 text adhamlouxor
+					39 image
+				122 pop up button (collapsed) Description: 368 unseen notifications, Secondary Actions: Expand
+					123 image
+					124 image
+			156 container
+				157 link Description: vzero, Value: vercel.com/adhamlouxors-projects/vzero
+				158 button
+					159 image
+				160 link Description: Back to team view, Value: vercel.com/adhamlouxors-projects/~/settings/git
+			161 container Breadcrumb
+				162 link Description: Project Settings, Value: vercel.com/adhamlouxors-projects/vzero/settings
+				163 text Git
+			164 button Vercel Agent is available on Pro
+				165 image
+				166 text Agent
+			167 container
+				168 container
+					169 heading Connected Git Repository, Value: 4
+						170 link Description: Connected Git Repository, Value: vercel.com/adhamlouxors-projects/vzero/settings/git#connected-git-repository
+						171 image
+					172 text Seamlessly create Deployments for any commits pushed to your Git repository.
+					173 container
+						174 image github
+						175 container
+							176 link Description: adham-younes/vzero, Value: github.com/adham-younes/vzero
+							177 text Connected  2h ago
+						178 button Disconnect
+					179 container
+						180 text Toggle  Pull Request Comments Pull Request Comments
+						181 image
+						182 button Manage projects
+						183 container Toggle Pull Request Comments
+							184 checkbox (settable, integer) Description: Toggle Pull Request Comments, Value: 1
+					185 container
+						186 text Toggle  Commit Comments Commit Comments
+						187 image
+						188 button Manage projects
+						189 container Toggle Commit Comments
+							190 checkbox (settable, integer) Description: Toggle Commit Comments, Value: 0
+					191 container
+						192 text Toggle
+						193 container
+							194 text deployment_status  Events
+						195 text deployment_status  Events
+						196 image
+						197 button Manage projects
+						198 container Toggle [object Object]
+							199 checkbox (settable, integer) Description: Toggle [object Object], Value: 0
+					200 container
+						201 text Toggle
+						202 container
+							203 text repository_dispatch  Events
+						204 text repository_dispatch  Events
+						205 image
+						206 button Manage projects
+						207 container Toggle [object Object]
+							208 checkbox (settable, integer) Description: Toggle [object Object], Value: 0
+					209 container
+						210 text Learn more about
+						211 link Description: Vercel for Git, Value: vercel.com/docs/git
+				212 container
+					213 heading Git Commits, Value: 4
+						214 link Description: Git Commits, Value: vercel.com/adhamlouxors-projects/vzero/settings/git#git-commits
+						215 image
+					216 text Control how Vercel handles commits in your connected Git repository.
+					217 container
+						218 text Toggle  Commit Status Commit Status
+						219 image
+						220 button Manage projects
+						221 container Toggle Commit Status
+							222 checkbox (settable, integer) Description: Toggle Commit Status, Value: 1
+					223 container
+						224 text Consolidated Commit Status Consolidated Commit Status
+						225 image
+						226 button Manage projects
+						227 checkbox (disabled, settable, integer) Description: ​ With Soft Failures, Value: 0, ID: checkbox-_r_n4_
+						228 text With Soft Failures
+						229 image
+						230 container Consolidated Commit Status
+							231 checkbox (settable, integer) Description: Consolidated Commit Status, Value: 0
+					232 container
+						233 text Require Verified Commits Require Verified Commits
+						234 image
+						235 button Manage projects
+						236 pop up button (collapsed) Description: Require Verified Commits, ID: menu-button-_r_na_, Secondary Actions: Expand
+							237 text Inherit from Team (Disabled)
+							238 image
+					239 container
+						240 text Learn more about
+						241 link Description: Vercel for Git, Value: vercel.com/docs/git
+				242 container
+					243 heading Git Large File Storage (LFS), Value: 4
+						244 link Description: Git Large File Storage (LFS), Value: vercel.com/adhamlouxors-projects/vzero/settings/git#git-large-file-storage-(lfs)
+						245 image
+					246 text Git LFS replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+					247 container
+						248 text Disabled
+						249 checkbox (settable, integer) Disabled, Value: 0
+					250 container
+						251 text Learn more about
+						252 link Description: Git LFS, Value: vercel.com/docs/project-configuration/git-settings#git-large-file-storage-lfs
+					253 button (disabled) Save
+				254 container
+					255 heading Deploy Hooks, Value: 4
+						256 link Description: Deploy Hooks, Value: vercel.com/adhamlouxors-projects/vzero/settings/git#deploy-hooks
+						257 image
+					258 text Deploy hooks are unique URLs that allow you to trigger a deployment of a given branch.
+					259 text This project does not have any deploy hooks.
+					260 container
+						261 text Name
+						262 text field (settable) hook-name
+						263 text Branch
+						264 text field (settable) hook-branch
+						265 button Create Hook
+					266 container
+						267 text Learn more about
+						268 link Description: Deploy Hooks, Value: vercel.com/docs/deploy-hooks
+
+The focused UI element is 141 link Description: Git, URL: vercel.com/adhamlouxors-projects/vzero/settings/git
