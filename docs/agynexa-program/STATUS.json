@@ -1,155 +1,158 @@
 {
+  "schema_version": 2,
   "program": "AGYNEXA",
+  "updated_at": "2026-10-19T02:45:13.517700+00:00",
+  "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
+  "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
-  "updated_at": "2026-10-19T02:11:28.100612+00:00",
   "stage": 6,
-  "status": "STAGES_4_TO_6_IMPLEMENTED_AWAITING_DEPLOYMENT_VERIFICATION",
-  "owner_review": "STAGES_4_TO_6_AND_PRODUCTION_AUTHORIZED",
-  "next_stage": null,
-  "next_stage_authorized": true,
-  "source_commit": "a4a8a5daf00c36074f9db0e43184fe84d64a9f7a",
-  "branch": "codex/agynexa-stage-0",
-  "stage_commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/releases/STAGE-0.md",
-  "product_code_changed": true,
-  "production_changed": true,
-  "push_performed": true,
-  "preview_created": true,
-  "evidence": [
-    "source-map.json",
-    "brand-lock.json",
-    "baseline/hero-protection.json",
-    "baseline/product-files.json",
-    "routes.json",
-    "dependencies.json",
-    "content-inventory.json",
-    "tool-inventory.json",
-    "releases/STAGE-0.md"
-  ],
-  "checks_run": [
-    "Local working tree initially clean",
-    "All seven previous baseline hashes matched",
-    "GitHub main equals pinned source commit",
-    "Vercel UI connected repository verified",
-    "Vercel production branch main verified",
-    "Published/local video SHA-256 match",
-    "Live video loaded and playing; two distinct time samples",
-    "English/Arabic Hero screenshots and computed palette",
-    "Product diff against base empty",
-    "All 64 tracked source file hashes and sizes unchanged",
-    "Master plan copy byte-identical to approved document",
-    "JSON parsing and local Markdown links valid",
-    "English/Arabic baseline screenshots visually inspected",
-    "git diff --check passed",
-    "Next production build with TypeScript",
-    "33 local page routes and404 boundaries",
-    "OpenAPI structural/schema cases",
-    "English catalog search, FAQ, Arabic390px and CTA",
-    "Strict Hero/video hashes unchanged",
-    "Final production33page HTTP smoke and404 boundaries",
-    "Production video SHA256 matches original",
-    "Final production English search to Arabic service; no captured console errors",
-    "Vercel production dashboard source95e0efe confirmed"
-  ],
-  "checks_not_run": [
-    "API runtime tests",
-    "Database/RLS execution tests",
-    "Full localized URL SEO (future stage)"
-  ],
-  "unknowns": [
-    "11 reference whitepaper URLs unavailable",
-    "Vendor private behavior and account settings not inspected",
-    "Live APIs/database/connectors not implemented; specification only"
-  ],
-  "next_action": "Verify preview and production for the implemented stages4–6 scope; retain video hashes and do not connect external databases.",
-  "deployment_test": {
-    "authorized_by_user": true,
-    "production_authorized_by_user": true,
-    "initial_commit": "5f584caf9ba5df8bf8b11fd4560add3b0b955fc1",
-    "initial_deployment": "dpl_FBfYtTYtibnKdC8UYAVm3TWw4Xkc",
-    "initial_result": "BLOCKED_COMMIT_AUTHOR_ACCESS",
-    "authenticated_github_user": "adham-younes",
-    "vercel_login_connection": "adham-younes",
-    "initial_attributed_author": "adhamyoune",
-    "remediation": "Repository-local author configuration corrected to authenticated user GitHub noreply identity. No history rewrite or account permission change.",
-    "state": "VERIFIED",
-    "preview_id": "dpl_2sDNZj32Pg7yr5hSPTKgafquL74Q",
-    "production_id": "dpl_D4MhV7Lgdj7Fxa8Bpfca5sfz5wGp",
-    "deployed_commit": "2330c961df914e7b3f9b2762ae3577767248345f",
-    "production_url": "https://vzero-nine-beryl.vercel.app",
-    "production_status": "READY",
-    "main_branch_changed": false,
-    "product_content_changed": false
+  "status": "SCOPED_SITE_DELIVERED_ENTERPRISE_BACKEND_SPECIFIED",
+  "repository": {
+    "url": "https://github.com/adham-younes/vzero",
+    "visibility": "PUBLIC",
+    "production_branch": "main"
   },
-  "authorization_override": {
-    "stages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
+  "current_product_release": {
+    "implementation_commit": "991deca5805636b090a7098c8f999ed162eb72de",
+    "merge_commit": "f6e92b3169be1dd96e7a9af197baf65c85957c16",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/5",
+    "pull_request_state": "MERGED",
+    "production_id": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+    "production_url": "https://vzero-aitmxp0td-adhamlouxors-projects.vercel.app",
+    "domain": "https://vzero-nine-beryl.vercel.app",
+    "status_at_verification": "READY",
+    "target": "production",
+    "verified_date": "2026-10-19",
+    "preview_id": "dpl_7XcvmYr1Bq41sUhTvqrK4sAL6ir1",
+    "preview_url": "https://vzero-gl3sb5hcu-adhamlouxors-projects.vercel.app",
+    "receipt": "releases/STAGES-4-6-DELIVERY.md",
+    "note": "Latest verified product change. Later documentation commits/deployments may contain the same product source. Inspect live alias before further release work."
+  },
+  "stage_status": [
+    {
+      "stage": 0,
+      "status": "VERIFIED_HISTORICAL",
+      "receipt": "releases/STAGE-0.md"
+    },
+    {
+      "stage": 1,
+      "status": "RESEARCH_DELIVERED_WITH_UNKNOWNS",
+      "receipt": "releases/STAGE-1.md"
+    },
+    {
+      "stage": 2,
+      "status": "IMPLEMENTED",
+      "receipt": "releases/STAGE-2.md"
+    },
+    {
+      "stage": 3,
+      "status": "SPECIFIED_NOT_CONNECTED",
+      "receipt": "releases/STAGE-3.md"
+    },
+    {
+      "stage": 4,
+      "status": "IMPLEMENTED_VISUAL_ACCEPTANCE_OPEN",
+      "receipt": "releases/STAGE-4.md"
+    },
+    {
+      "stage": 5,
+      "status": "SCOPED_IMPLEMENTATION_ENTERPRISE_EXTENSION_NOT_IMPLEMENTED",
+      "receipt": "releases/STAGE-5.md"
+    },
+    {
+      "stage": 6,
+      "status": "SCOPED_SEO_AND_DELIVERY_VERIFIED",
+      "receipt": "releases/STAGE-6.md"
+    }
+  ],
+  "implemented": {
+    "service_count": 10,
+    "solution_count": 9,
+    "canonical_urls": 64,
+    "locales": [
+      "en",
+      "ar"
     ],
-    "production": true,
-    "photo_removal": true,
-    "match_own_brand_colors": true,
-    "correct_post_hero_width": true,
-    "hero_video_must_remain": true,
-    "hero_css_color_and_brightness_correction": true
-  },
-  "editorial_followup": "Owner explicitly requested Humanizer and authorized layout judgment; applied without altering frozen Hero",
-  "intermediate_release": {
-    "commit": "b1dc77c1e3e168059bdc8bcbd2130a21cdde0285",
-    "preview_id": "dpl_Ef81PtZ7iqGJrRJQcN9sU698U2Jq",
-    "production_id": "dpl_7yiEohPoqUHu2BSHPPBQSB1w1oAj",
-    "production_url": "https://vzero-nn4liz7dq-adhamlouxors-projects.vercel.app",
-    "status": "READY; editorial follow-up pending final release"
-  },
-  "final_release": {
-    "commit": "95e0efec7a6117e12631877d0bcf80dbdc53b6d8",
-    "preview_id": "dpl_2nGoEvVgR2tg6iA1CPeSk1XnLkQw",
-    "preview_url": "https://vzero-2tc7gi5yf-adhamlouxors-projects.vercel.app",
-    "production_id": "dpl_26bRUbwQYStofkVuEwCLd8zFsHEo",
-    "production_url": "https://vzero-m4otbvbo0-adhamlouxors-projects.vercel.app",
-    "domain": "https://vzero-nine-beryl.vercel.app",
-    "status": "READY",
-    "http_pages": 33,
-    "video_hash_matches": true,
-    "captured_browser_errors": 0,
-    "main_changed": false
-  },
-  "speed_insights": {
-    "status": "PRODUCTION_EVENTS_VERIFIED",
-    "package": "@vercel/speed-insights@2.0.0",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/2",
-    "integration_commit": "44350bd8ac2ec3656d4dfea9a7b9aa93452b1b2e",
-    "production_commit": "2a761aed107d83be5230ca656a89954c63c38302",
-    "production_branch": "main",
-    "production_id": "dpl_BmTLpb3Q7V9jH9y83kctz3y6m17T",
-    "production_url": "https://vzero-lbud5jgsv-adhamlouxors-projects.vercel.app",
-    "domain": "https://vzero-nine-beryl.vercel.app",
-    "observed_desktop_events": 3,
-    "observed_desktop_res": 100,
-    "sample_caveat": "Initial sample only; not a representative performance benchmark.",
-    "plus_enabled": false,
-    "hero_hashes_unchanged": true,
-    "video_playing": true,
-    "browser_errors_captured": 0,
-    "evidence": "releases/SPEED-INSIGHTS-VERIFICATION.md"
-  },
-  "stage_4_6": {
-    "branch": "codex/agynexa-stages-4-6",
-    "build": "PASS",
-    "http_checks": 28,
-    "unit_tests": 4,
-    "canonical_locale_urls": 64,
     "public_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review"
     ],
-    "external_writes": false,
-    "email_delivery": "visitor-controlled email draft and attachment; no server send",
-    "video_hash_matches": true,
-    "design_review": "in-thread fallback; independent reviewer unavailable"
-  }
+    "api_contract": "architecture/current-api.openapi.json",
+    "route_inventory": "current-routes.json",
+    "project_brief": "Browser-only review, consent, TXT download and visitor-controlled email draft",
+    "procurement": "Stateless deterministic fictional comparison, not authenticated approval or purchasing",
+    "database_connected": false,
+    "authenticated_tenants": false,
+    "live_ai_provider": false,
+    "server_email_delivery": false,
+    "live_enterprise_connectors": false
+  },
+  "last_product_checks": {
+    "build_typescript": "PASS",
+    "unit_tests": 4,
+    "http_checks_local": 28,
+    "http_checks_production": 28,
+    "representative_pages": 15,
+    "sitemap_urls": 64,
+    "browser_console_errors_captured": 0,
+    "strict_hero_hashes": "MATCH",
+    "video_playing_production": true,
+    "production_interactions": [
+      "insurance selector updates content",
+      "Arabic procurement review returns missing warranty clarification"
+    ],
+    "mobile_local_width": 390,
+    "production_mobile_width_verified": false,
+    "lint": "NOT_CONFIGURED",
+    "not_run": [
+      "database/RLS execution",
+      "authenticated enterprise operations",
+      "server email delivery",
+      "load test",
+      "full accessibility audit",
+      "all browser/device combinations"
+    ],
+    "evidence": "evidence/stages-4-6/production-verification.json"
+  },
+  "speed_insights": {
+    "status": "INSTRUMENTATION_EVENTS_VERIFIED",
+    "sdk": "2.0.0",
+    "initial_events": 3,
+    "initial_desktop_res": 100,
+    "representative_benchmark": false,
+    "plus_enabled": false,
+    "receipt": "releases/SPEED-INSIGHTS-VERIFICATION.md"
+  },
+  "authorization": {
+    "source": "Direct owner messages recorded in DECISIONS.md",
+    "stages_1_to_6_in_groups": true,
+    "production_for_recorded_deliveries": true,
+    "scoped_hero_color_overlay_correction": true,
+    "preserve_video_and_hero_files": true,
+    "cloud_documentation_update": true,
+    "future_unscoped_stages_authorized": false
+  },
+  "current_documentation_work": {
+    "branch": "codex/agynexa-documentation",
+    "product_code_changed": false,
+    "manual_production_deployment_required": false,
+    "commit_lookup": "git log -1 --format=%H -- docs/agynexa-program/README.md"
+  },
+  "known_limitations": [
+    "BACKLOG.md",
+    "architecture/API-STATUS.md",
+    "evidence/README.md"
+  ],
+  "historical_snapshots": {
+    "prior_combined_status": "history/status-before-documentation-2026-10-19.json",
+    "source_baseline": "source-map.json",
+    "route_baseline": "routes.json",
+    "dependency_baseline": "dependencies.json",
+    "content_baseline": "content-inventory.json",
+    "tool_baseline": "tool-inventory.json"
+  },
+  "next_stage": null,
+  "next_stage_authorized": false,
+  "next_action": "Keep cloud documentation current; collect final owner visual acceptance. Select a bounded backlog scope before implementing connected enterprise functionality."
 }

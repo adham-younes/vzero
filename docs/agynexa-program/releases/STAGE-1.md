@@ -1,4 +1,7 @@
 # Stage 1 — Public reference research
+
+> سجل تاريخي يصف هذا التسليم وقت تنفيذه. الحالة الجارية في [مصفوفة المراحل](../STAGE-MATRIX.md) و[STATUS](../STATUS.json).
+
 Status COMPLETE_WITH_RECORDED_UNKNOWNS. Owner explicitly authorized three consecutive stages; intermediate review stops are superseded for stages 1–3. No additional stages inferred.
 
 Collected 1,051 normalized public URLs: 1,040 HTTP 200, 11 HTTP 404. page-inventory.csv and page-briefs/ retain a per-page extraction. Thirteen core product/technical briefs are annotated; functional-map.md consolidates the reviewed patterns. This is not a claim that every page received manual visual or interaction testing. Unobserved inputs, permissions and motion remain UNKNOWN. No private APIs/accounts or demo submission used.

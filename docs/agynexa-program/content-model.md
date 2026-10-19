@@ -1,8 +1,29 @@
-# Content and route model
-lib/service-catalog.json is the bilingual source for ten deep service pages. Each service has audience, problem, offer, inputs, steps, deliverables, controls, metrics, candidate systems, industries, FAQs and SEO. Internal family names are planning labels pending commercial-name checks; public pages use descriptive names.
+# نموذج المحتوى والمسارات الحالي
 
-lib/program-pages.json holds architecture, security, industries, integrations, methodology, resources, about and AgentNexOS positioning. Existing six solutions are retained and procurement, receivables and customer operations added. The original site's procurement missing-warranty example and receivables disputed-invoice example establish the review/approval boundaries; we preserve that meaning without claiming live execution.
+آخر تحديث: 19 أكتوبر 2026، إصدار المراحل 4–6. جرد المرحلة 0 في `content-inventory.json` و`routes.json` تاريخي؛ [current-routes.json](current-routes.json) يعكس البنية الحالية.
 
-Navigation and sitemap follow the existing Next catch-all router. /services/solutions aliases the service catalog; /contact aliases the downloadable brief. No account sign-in or live integrations are implied. Form copy explicitly says the brief is prepared locally and not automatically sent. Complete route-localized metadata, legal pages, individual industry detail pages and backend execution remain future scope.
+## مصادر المحتوى
 
-Better Design text comprehension check: initial introductory copy was shortened after a heuristic review. Follow-up returned no issues for the shorter passage. This is text-only evidence, not visual certification. REA required a loopback CDP endpoint unavailable in the current browser transport; public browser observations and public source fetches were used instead. No Figma generation, paid images or new UI libraries were required.
+- `lib/service-catalog.json`: عشر خدمات؛ لكل منها جمهور ومشكلة وعرض ومدخلات وخطوات ومخرجات وضوابط ومقاييس وأنظمة مرشحة وقطاعات وFAQ وSEO. كل حقل لغوي زوج إنجليزي/عربي متكافئ المعنى.
+- `lib/agynexa.ts`: الحلول الستة الأصلية — المعرفة والمستندات والمبيعات وخدمة العملاء والمالية واللوجستيات — بالإضافة إلى المشتريات والمستحقات وعمليات العملاء. المجموع تسعة.
+- `lib/program-pages.json`: المعمارية والأمان والقطاعات والتكاملات والمنهجية والموارد والمؤسس واتجاه AgentNexOS.
+- `lib/solution-service-map.json`: روابط مناسبة بين مشكلة الأعمال والخدمات التي تساعد في تنفيذها.
+- [service-mapping.csv](service-mapping.csv): تتبع مفاهيم المرجع إلى عروض AGYNEXA المستقلة. أسماء العائلات الداخلية تحتاج فحصًا تجاريًا؛ الموقع يستخدم وصفًا للخدمة.
+
+الخدمة هي ما يصمم وينفذ للعميل، والحل هو مسار لمشكلة أعمال، والقطاع هو سياق المؤسسة. المشتريات والمستحقات وعمليات العملاء حلول أعمال عابرة للقطاعات وليست قطاعات مستقلة. حفظ هذه الثلاثة ورد صراحة في الخطة، مع قراءة محتوى الموقع الأصلي كمرجع للمعنى.
+
+## اللغة والروابط
+
+الإنجليزي على المسار العادي والعربي تحت `/ar`. توجد 32 صفحة أساسية لكل لغة، و64 URL في sitemap. عنوان `/services/solutions` أصبح redirect دائمًا 308 إلى `/services`، وكذلك النسخة العربية. `/contact` يستخدم مكوّن الموجز نفسه الموجود في `/start` لكنه ما زال URL أساسيًا مستقلًا.
+
+Metadata والـcanonical وhreflang وHTML lang/dir أصبحت مشتقة من URL من الخادم. لم تعد هذه المهمة مؤجلة كما في تقرير المرحلة 2. صفحات قطاع مستقلة، صفحات قانونية، ومحتوى موارد أوسع ما زالت ضمن [المتبقي](BACKLOG.md).
+
+## الحقيقة التجارية والوظيفية
+
+صفحات المعرفة والتحصيل وخدمة العملاء والتكاملات تعرض خدمات قابلة للتعاقد والتنفيذ بحسب النطاق؛ لا تثبت وجود مصادر عملاء متصلة. AgentNexOS اتجاه خدمة ومساحة توضيحية، وليس منصة تشغيل وكلاء كاملة. مثال المشتريات المنشور يحسب بيانات افتراضية فقط. الموجز يراجع وينزل محليًا ويفتح مسودة في تطبيق البريد، دون إرسال أو حفظ خادمي.
+
+اسم المهندس أدهم يونس وصفته كمؤسس ورئيس تنفيذي وفق توجيه المالك. لا سيرة أو نتائج أو شهادات عملاء مؤلفة. أسماء الموردين في المثال A وB افتراضية. لا صور أو شعارات أو دراسات حالة Kore.ai في أصول المنتج الجديدة.
+
+## أسلوب التحرير
+
+مراجعة Humanizer 3.0.0 مطبقة على النصوص العامة مع حفظ المعنى والمحددات الفنية؛ نص Hero الأصلي مستثنى. الدليل: [humanizer-review.json](evidence/humanizer-review.json). المراجعة النصية الآلية ليست شهادة جودة بصرية. أي تعديل محتوى لاحق يحافظ على التكافؤ العربي/الإنجليزي وتفاصيل نطاق الخدمة، ويُوثق ما حُذف أو تغير فعليًا.

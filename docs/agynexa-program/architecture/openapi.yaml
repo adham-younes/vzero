@@ -2,9 +2,12 @@ openapi: 3.1.0
 info:
   title: AGYNEXA proposed API contracts
   version: 0.1.0
-  description: Design artifact only. These endpoints are NOT implemented or deployed.
-    No Kore.ai private API is copied. All limits below are proposed policy, not measured
-    capacity.
+  description: Historical stage-3 proposal, not the deployed API contract. A later
+    catalog implementation uses a different response envelope, and a separate
+    stateless procurement endpoint was added. See API-STATUS.md and
+    current-api.openapi.json for actual runtime behavior. The other operations
+    below remain unimplemented. No Kore.ai private API is copied. All limits
+    below are proposed policy, not measured capacity.
 servers:
 - url: https://api.example.invalid
   description: Non-routable placeholder; no active AGYNEXA API

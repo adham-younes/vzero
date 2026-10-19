@@ -1,0 +1,59 @@
+{
+  "assets": [
+    {
+      "file": "production-hero.png",
+      "environment": "production",
+      "captured_date": "2026-10-19",
+      "release_context": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+      "sha256": "ac47f118f7b0aa3e470419d69a12e40278974e167a5d3102d93b8ce0e201cd8b",
+      "bytes": 83514,
+      "edited": false
+    },
+    {
+      "file": "production-components.png",
+      "environment": "production",
+      "captured_date": "2026-10-19",
+      "release_context": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+      "sha256": "e4b9fee889234ac1daafc9a14ce07d0f83a640397d86c4542683f8a027053962",
+      "bytes": 72841,
+      "edited": false
+    },
+    {
+      "file": "production-industries.png",
+      "environment": "production",
+      "captured_date": "2026-10-19",
+      "release_context": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+      "sha256": "84fb80c9ff3de1cd4ee3cc3b735ebca9f2e245c7d2175c7b525b3808db850e6f",
+      "bytes": 57738,
+      "edited": false
+    },
+    {
+      "file": "production-procurement.png",
+      "environment": "production",
+      "captured_date": "2026-10-19",
+      "release_context": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+      "sha256": "aebbc797c3db8c5fdfcd83ac77f24ae3f9bbc7691027b95cfefb4d5d736a2d0e",
+      "bytes": 63938,
+      "edited": false
+    },
+    {
+      "file": "local-hero-ar-mobile.png",
+      "environment": "localhost, 390px sample during verification",
+      "captured_date": "2026-10-19",
+      "release_context": "stage 4-6 local verification; not a production capture",
+      "sha256": "39f951f608481ee3836a749c9cabb8baec17ee4334f39b43746cff56febb66b4",
+      "bytes": 33258,
+      "edited": false
+    },
+    {
+      "file": "local-procurement-ar-mobile.png",
+      "environment": "localhost, 390px sample during verification",
+      "captured_date": "2026-10-19",
+      "release_context": "stage 4-6 local verification; not a production capture",
+      "sha256": "08db11923d682c71ee546844cad3701fa181ca6618c847e6f2c99f3f3b9437f9",
+      "bytes": 34581,
+      "edited": false
+    }
+  ],
+  "note": "Original screenshots copied without editing. Captured during previous product validation, not regenerated for this documentation update."
+}

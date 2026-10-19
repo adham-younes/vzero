@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "markdown_files": 1088,
+  "local_file_links": 172,
+  "json_files": 36,
+  "canonical_urls": 64,
+  "current_api_operations": 2,
+  "evidence_hashes": 6,
+  "master_plan_unchanged": true,
+  "scope": "Document structure, local file links, JSON, internal contract references, source-derived inventory and evidence integrity; no app/network/runtime/schema-execution tests.",
+  "recorded_date": "2026-10-19",
+  "product_release_commit": "f6e92b3169be1dd96e7a9af197baf65c85957c16",
+  "application_build_run": false,
+  "application_tests_run": false,
+  "external_link_checks_run": false,
+  "product_files_changed": false,
+  "note": "Counts describe document validation for this handover, not product runtime verification."
+}

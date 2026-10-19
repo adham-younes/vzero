@@ -18,7 +18,7 @@ Verified on 2026-10-19. This is an instrumentation follow-up; stages 1–3 and t
 - Browser DOM on the public domain contains one `@vercel/speed-insights/next` script, SDK version `2.0.0`. Its Vercel-assigned path is `/4882fc50ca84c9b8/script.js`; filtering script URLs only by the words `speed-insights` would miss it.
 - Production/Desktop dashboard showed **3 events**, homepage route `/`, **Real Experience Score 100**. This tiny initial sample verifies collection, not representative site performance.
 - No Plus upgrade or paid settings change was made.
-- Screenshot: task output `outputs/speed-insights-production.png`.
+- Screenshot: [repository evidence](../evidence/speed-insights-production.png).
 
 ## Validation
 

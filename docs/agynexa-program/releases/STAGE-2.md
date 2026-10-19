@@ -1,4 +1,7 @@
 # Stage 2 — Service catalog and bilingual content
+
+> سجل تاريخي يصف هذا التسليم وقت تنفيذه. الحالة الجارية في [مصفوفة المراحل](../STAGE-MATRIX.md) و[STATUS](../STATUS.json).
+
 Status IMPLEMENTED, build and local smoke PASS; production receipt recorded separately. Owner authorized preliminary components plus photo removal, matching own-brand colors, width correction and production publishing.
 
 Ten original bilingual service-detail pages, search catalog, supporting editorial pages and three preserved business scopes (procurement, receivables, customer operations) added around existing six solutions. Proposed commercial family names stay internal pending name availability. Founder attribution follows owner instruction. 33 public page routes plus sitemap. Service-to-solution links work both directions. Industries lists sectors rather than procurement/collections departments.

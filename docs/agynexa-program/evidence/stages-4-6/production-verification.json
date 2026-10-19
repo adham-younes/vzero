@@ -1,0 +1,20 @@
+{
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "production_id": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+  "status": "READY",
+  "http_checks": 28,
+  "sample_pages": 15,
+  "canonical_urls": 64,
+  "video": {
+    "paused": false,
+    "readyState": 4,
+    "time": 7.392593
+  },
+  "heading_accent": "rgb(16, 185, 129)",
+  "speed_insights_sdk": [
+    "2.0.0"
+  ],
+  "browser_errors": [],
+  "industry_toggle": "insurance selected and content changed",
+  "procurement": "CLARIFICATION_REQUIRED for missing supplier B warranty"
+}

@@ -1,0 +1,234 @@
+{
+  "recorded_date": "2026-10-19",
+  "product_commit": "991deca5805636b090a7098c8f999ed162eb72de",
+  "source_files": [
+    "lib/site-routes.ts",
+    "lib/agynexa.ts",
+    "lib/service-catalog.json",
+    "app/sitemap.ts"
+  ],
+  "canonical_count": 64,
+  "services": 10,
+  "solutions": 9,
+  "pages": [
+    {
+      "en": "/",
+      "ar": "/ar",
+      "status": "IMPLEMENTED",
+      "kind": "home"
+    },
+    {
+      "en": "/security",
+      "ar": "/ar/security",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/contact",
+      "ar": "/ar/contact",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/services",
+      "ar": "/ar/services",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/architecture",
+      "ar": "/ar/architecture",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/methodology",
+      "ar": "/ar/methodology",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/integrations",
+      "ar": "/ar/integrations",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/industries",
+      "ar": "/ar/industries",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/resources",
+      "ar": "/ar/resources",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/about",
+      "ar": "/ar/about",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/solutions",
+      "ar": "/ar/solutions",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/start",
+      "ar": "/ar/start",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/agentnexos",
+      "ar": "/ar/agentnexos",
+      "status": "IMPLEMENTED",
+      "kind": "page"
+    },
+    {
+      "en": "/solutions/knowledge",
+      "ar": "/ar/solutions/knowledge",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/documents",
+      "ar": "/ar/solutions/documents",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/sales",
+      "ar": "/ar/solutions/sales",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/service",
+      "ar": "/ar/solutions/service",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/finance",
+      "ar": "/ar/solutions/finance",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/logistics",
+      "ar": "/ar/solutions/logistics",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/procurement",
+      "ar": "/ar/solutions/procurement",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/receivables",
+      "ar": "/ar/solutions/receivables",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/solutions/customer-operations",
+      "ar": "/ar/solutions/customer-operations",
+      "status": "IMPLEMENTED",
+      "kind": "solution"
+    },
+    {
+      "en": "/services/customer-service",
+      "ar": "/ar/services/customer-service",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/employee-operations",
+      "ar": "/ar/services/employee-operations",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/process-automation",
+      "ar": "/ar/services/process-automation",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/enterprise-knowledge",
+      "ar": "/ar/services/enterprise-knowledge",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/agent-orchestration",
+      "ar": "/ar/services/agent-orchestration",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/enterprise-integrations",
+      "ar": "/ar/services/enterprise-integrations",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/voice-agents",
+      "ar": "/ar/services/voice-agents",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/agent-assist",
+      "ar": "/ar/services/agent-assist",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/governance-security",
+      "ar": "/ar/services/governance-security",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    },
+    {
+      "en": "/services/evaluation-observability",
+      "ar": "/ar/services/evaluation-observability",
+      "status": "IMPLEMENTED",
+      "kind": "service"
+    }
+  ],
+  "redirects": [
+    {
+      "from": "/services/solutions",
+      "to": "/services",
+      "status": 308
+    },
+    {
+      "from": "/ar/services/solutions",
+      "to": "/ar/services",
+      "status": 308
+    }
+  ],
+  "public_apis": [
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/services"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/procurement/review"
+    }
+  ],
+  "metadata_routes": [
+    "/sitemap.xml",
+    "/robots.txt"
+  ],
+  "verification_scope": "Inventory is source-derived; final production smoke sampled 15 pages, not every canonical URL."
+}

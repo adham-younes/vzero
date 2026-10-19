@@ -1,4 +1,7 @@
 # Stage 3 — Architecture and integration design
+
+> سجل تاريخي يصف هذا التسليم وقت تنفيذه. الحالة الجارية في [مصفوفة المراحل](../STAGE-MATRIX.md) و[STATUS](../STATUS.json).
+
 Status SPECIFIED / REQUIRES_ACCESS. No connected database touched, no migrations executed, no production API handlers added.
 
 OpenAPI3.1: 11 proposed operations and14 schemas; Zod request schema draft; 20-table private PostgreSQL/Supabase design and ERD; fail-closed review SQL; workflow and threat model. Covers identity/tenant boundaries, source ACL, approvals, outbox, idempotency, OAuth state/PKCE, webhook verification, retries, errors and trace privacy.
