@@ -12,3 +12,5 @@
 10. At each stage end, update STATUS, RESUME and releases/STAGE-N, report evidence and stop.
 
 Runtime/reference notes: local Git and CUA verified; Better Design returned a misleading light/dark classification from legacy CSS. Use the final source cascade and measured values. REA/Figma are exposed but untested. Vercel connector returned 404 in earlier attempts, while signed-in browser read access succeeds.
+
+Deployment follow-up: user explicitly authorized a deployment test and then production publication. Initial Git preview was blocked because inherited Git author email attributed our commit to adhamyoune, while authenticated GitHub and Vercel login connection are adham-younes. Repository-local author identity corrected to authenticated user. No history rewrite. Stage 1 remains unapproved. Consult STATUS deployment_test and outputs for latest result.
