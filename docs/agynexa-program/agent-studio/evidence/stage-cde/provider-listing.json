@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-20T11:58:02.422456+00:00",
+  "http": 200,
+  "listings": {
+    "models": [
+      {
+        "model": "openai/gpt-oss-120b",
+        "status": "listed",
+        "http": 200
+      },
+      {
+        "model": "openai/gpt-oss-20b",
+        "status": "listed",
+        "http": 200
+      },
+      {
+        "model": "qwen/qwen3.8-27b",
+        "status": "listed",
+        "http": 200
+      }
+    ]
+  },
+  "prior_attempt": "401; retried after a fresh login; inference probes subsequently succeeded on all three slots."
+}

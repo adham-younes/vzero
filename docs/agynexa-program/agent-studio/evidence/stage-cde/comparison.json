@@ -1,0 +1,61 @@
+{
+  "mode": "concurrent_requests",
+  "results": [
+    {
+      "case": "en-hours",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 2070,
+        "request_id": "req_01m5cjx8ybex5bt298va0txby0",
+        "input_tokens": 598,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 837,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0005919
+      },
+      "run_id": "cb83015a-44f1-416f-8967-d78b33bd414a"
+    },
+    {
+      "case": "en-hours",
+      "model": "openai/gpt-oss-20b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 2,
+        "latency_ms": 1383,
+        "request_id": "req_01m5cjx8z4e219xsf6n4wx5x65",
+        "input_tokens": 598,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 1043,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00035775
+      },
+      "run_id": "c226e0b7-a91d-4750-bfc3-60c46eadf102"
+    }
+  ]
+}

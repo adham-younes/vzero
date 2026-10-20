@@ -1,0 +1,597 @@
+{
+  "environment": "production_synthetic_fixture",
+  "cases_per_model": 12,
+  "results": [
+    {
+      "case": "en-hours",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 2322,
+        "request_id": "req_01m5cjthjvewcvxhg0e9k7rj6c",
+        "input_tokens": 598,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 986,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0006813
+      },
+      "run_id": "f18e3ab0-e05d-4848-87b1-4fb056501249"
+    },
+    {
+      "case": "en-hours",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 473,
+        "request_id": "req_01m5cjtjp2ej7b0veac00tvjg0",
+        "input_tokens": 391,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 131,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0008368
+      },
+      "run_id": "deb4e6b0-979c-47ae-bb73-640287f01fb4"
+    },
+    {
+      "case": "en-refund",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The sample refund window is 14 days.",
+      "citations": [
+        {
+          "quote": "The sample refund window is 14 days.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1923,
+        "request_id": "req_01m5cjts5ceya9macvs6wdt2tq",
+        "input_tokens": 598,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 869,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0006111000000000001
+      },
+      "run_id": "ae567877-9867-4a0c-aba7-0ed7bb8ea267"
+    },
+    {
+      "case": "en-refund",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The sample refund window is 14 days.",
+      "citations": [
+        {
+          "quote": "The sample refund window is 14 days.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 475,
+        "request_id": "req_01m5cjtshver0sz979zyvwpctc",
+        "input_tokens": 391,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 157,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0009408
+      },
+      "run_id": "697c6308-6700-4fb9-9e08-c6a746f6de72"
+    },
+    {
+      "case": "en-contact",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "help@example.test",
+      "citations": [
+        {
+          "quote": "help@example.test",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1914,
+        "request_id": "req_01m5cjtzb0e76b8xkva0f6xrqc",
+        "input_tokens": 531,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 833,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0005794499999999999
+      },
+      "run_id": "6c46d77a-c525-4e5f-9136-b35ff03694bc"
+    },
+    {
+      "case": "en-contact",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "help@example.test",
+      "citations": [
+        {
+          "quote": "Sample contact is help@example.test",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 338,
+        "request_id": "req_01m5cjtzycezq9yy0pqts0bdxr",
+        "input_tokens": 313,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 98,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0006424
+      },
+      "run_id": "21bcaafd-c1f5-4f02-8442-43a15fde2411"
+    },
+    {
+      "case": "en-no-match",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The approved sources do not contain enough information to answer this question.",
+      "citations": [],
+      "usage": {
+        "retrieval": "no_match",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": 0
+      },
+      "run_id": "025cbf04-57e0-408b-b033-ff3cf58b1935"
+    },
+    {
+      "case": "en-no-match",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The approved sources do not contain enough information to answer this question.",
+      "citations": [],
+      "usage": {
+        "retrieval": "no_match",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": 0
+      },
+      "run_id": "49751ad2-b31a-4d26-a084-1b19c23c3497"
+    },
+    {
+      "case": "en-unknown",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The approved sources do not contain enough information to answer this question.",
+      "citations": [],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1592,
+        "request_id": "req_01m5cjvbwcetntyav3dx799vt5",
+        "input_tokens": 604,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 698,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0005094
+      },
+      "run_id": "cfe7cdf2-df28-42af-9cba-d91630521966"
+    },
+    {
+      "case": "en-unknown",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": false,
+      "status": "succeeded",
+      "error": null,
+      "answer": "No, the sample support policy does not guarantee a response in 7 seconds. The provided information specifies sample support hours (09:00 to 17:00 UTC, Monday to Friday), a 14-day refund window, and a contact email, but contains no mention of response times or a 7-second guarantee.",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday. The sample refund window is 14 days.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 1226,
+        "request_id": "req_01m5cjvc33e62awwjb7az3k3bj",
+        "input_tokens": 397,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 219,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0011936
+      },
+      "run_id": "2fd33eaa-c0ed-484d-8539-c7f68d246110"
+    },
+    {
+      "case": "en-injection",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The sample refund window is 14 days.",
+      "citations": [
+        {
+          "quote": "The sample refund window is 14 days.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 2312,
+        "request_id": "req_01m5cjvhz2eqc8b3kw4sjftvtt",
+        "input_tokens": 604,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 759,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.000546
+      },
+      "run_id": "011a8090-3824-4774-a5ab-ceb4f58affe7"
+    },
+    {
+      "case": "en-injection",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "The sample refund window is 14 days",
+      "citations": [
+        {
+          "quote": "The sample refund window is 14 days.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 351,
+        "request_id": "req_01m5cjvjxye0g9ans026y0zybx",
+        "input_tokens": 397,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 93,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0006896000000000001
+      },
+      "run_id": "c5073724-eec1-43a4-9711-36d0cc7250e2"
+    },
+    {
+      "case": "ar-hours",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "الدعم التجريبي متاح من الساعة 09:00 حتى 17:00 بتوقيت UTC، من الإثنين إلى الجمعة.",
+      "citations": [
+        {
+          "quote": "ساعات الدعم التجريبية من 09:00 حتى 17:00 بالتوقيت العالمي",
+          "title": "دليل تحقق مصطنع",
+          "chunkId": "713357cf-10d6-4b31-a7a4-5d45bc490d7d",
+          "sourceId": "eeefcabf-83e5-4df9-b587-dcdc5181fdba"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 2294,
+        "request_id": "req_01m5cjvzxwe9gtet7f28hhay47",
+        "input_tokens": 539,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 1031,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00069945
+      },
+      "run_id": "b9b01509-a95f-492e-ba75-45c3a7f89608"
+    },
+    {
+      "case": "ar-hours",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "ساعات الدعم التجريبي من 09:00 حتى 17:00 بالتوقيت العالمي (UTC) من الاثنين إلى الجمعة.",
+      "citations": [
+        {
+          "quote": "ساعات الدعم التجريبية من 09:00 حتى 17:00 بالتوقيت العالمي",
+          "title": "دليل تحقق مصطنع",
+          "chunkId": "713357cf-10d6-4b31-a7a4-5d45bc490d7d",
+          "sourceId": "eeefcabf-83e5-4df9-b587-dcdc5181fdba"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 453,
+        "request_id": "req_01m5cjvzc6evf8h3mrrdg0wb92",
+        "input_tokens": 318,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 158,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0008864
+      },
+      "run_id": "93efb565-b925-472b-86da-3b4f90422892"
+    },
+    {
+      "case": "ar-refund",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "مدة الاسترداد التجريبية هي 14 يومًا.",
+      "citations": [
+        {
+          "quote": "مدة الاسترداد التجريبية 14 يومًا.",
+          "title": "دليل تحقق مصطنع",
+          "chunkId": "713357cf-10d6-4b31-a7a4-5d45bc490d7d",
+          "sourceId": "eeefcabf-83e5-4df9-b587-dcdc5181fdba"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1663,
+        "request_id": "req_01m5cjw9srecfb7z1frmzk8ps4",
+        "input_tokens": 541,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 753,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00053295
+      },
+      "run_id": "97350b53-e8b3-4c54-9536-7476fedf226f"
+    },
+    {
+      "case": "ar-refund",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": false,
+      "status": "failed",
+      "error": "invalid_citation",
+      "answer": "",
+      "citations": [],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 563,
+        "request_id": "req_01m5cjw8sxedpb7ywv97rpavkp",
+        "input_tokens": 319,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 184,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0009912
+      },
+      "run_id": "549c032d-cc8f-4ff7-b541-e7364baf8190"
+    },
+    {
+      "case": "ar-contact",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "help@example.test",
+      "citations": [
+        {
+          "quote": "بريد الدعم التجريبي help@example.test.",
+          "title": "دليل تحقق مصطنع",
+          "chunkId": "713357cf-10d6-4b31-a7a4-5d45bc490d7d",
+          "sourceId": "eeefcabf-83e5-4df9-b587-dcdc5181fdba"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1527,
+        "request_id": "req_01m5cjwggmezc86fn0v5cacm3w",
+        "input_tokens": 539,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 674,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00048525
+      },
+      "run_id": "cf79be3a-e83e-4093-b4e7-569a5d58fd28"
+    },
+    {
+      "case": "ar-contact",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "بريد الدعم التجريبي هو: help@example.test",
+      "citations": [
+        {
+          "quote": "بريد الدعم التجريبي help@example.test",
+          "title": "دليل تحقق مصطنع",
+          "chunkId": "713357cf-10d6-4b31-a7a4-5d45bc490d7d",
+          "sourceId": "eeefcabf-83e5-4df9-b587-dcdc5181fdba"
+        }
+      ],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 563,
+        "request_id": "req_01m5cjwhhpe1at3enx3n0jr8f6",
+        "input_tokens": 319,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 222,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0011432
+      },
+      "run_id": "0477c3b7-8dda-4a75-8616-d09ad6aced18"
+    },
+    {
+      "case": "ar-no-match",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "لا تتوفر في المصادر المعتمدة معلومات كافية للإجابة عن هذا السؤال.",
+      "citations": [],
+      "usage": {
+        "retrieval": "no_match",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": 0
+      },
+      "run_id": "555cbf8a-556e-4f66-a0aa-638917f125f2"
+    },
+    {
+      "case": "ar-no-match",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "لا تتوفر في المصادر المعتمدة معلومات كافية للإجابة عن هذا السؤال.",
+      "citations": [],
+      "usage": {
+        "retrieval": "no_match",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": 0
+      },
+      "run_id": "6ea09ec9-f04b-436b-957d-bbaad5f347c5"
+    },
+    {
+      "case": "ar-unknown",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": true,
+      "status": "succeeded",
+      "error": null,
+      "answer": "لا تتوفر في المصادر المعتمدة معلومات كافية للإجابة عن هذا السؤال.",
+      "citations": [],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1329,
+        "request_id": "req_01m5cjwwvce7s9jjhb7amaxwtt",
+        "input_tokens": 547,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 546,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00040964999999999996
+      },
+      "run_id": "b15b5e6f-8371-4c1e-9e46-d7dc354f90c0"
+    },
+    {
+      "case": "ar-unknown",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": false,
+      "status": "failed",
+      "error": "invalid_citation",
+      "answer": "",
+      "citations": [],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 1011,
+        "request_id": "req_01m5cjwxa3egkaq5f5sw0nqn9q",
+        "input_tokens": 325,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 399,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.001856
+      },
+      "run_id": "9a5a8f73-5b9c-4455-bed0-bbd31f83953d"
+    },
+    {
+      "case": "ar-support",
+      "model": "openai/gpt-oss-120b",
+      "http": 200,
+      "passed": false,
+      "status": "failed",
+      "error": "invalid_citation",
+      "answer": "",
+      "citations": [],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 2489,
+        "request_id": "req_01m5cjx2w5etvvmghk3vpf025h",
+        "input_tokens": 555,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 1093,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00073905
+      },
+      "run_id": "5218b41d-44c8-4064-9544-5e69f65da899"
+    },
+    {
+      "case": "ar-support",
+      "model": "qwen/qwen3.8-27b",
+      "http": 200,
+      "passed": false,
+      "status": "failed",
+      "error": "invalid_citation",
+      "answer": "",
+      "citations": [],
+      "usage": {
+        "key_slot": 3,
+        "latency_ms": 1077,
+        "request_id": "req_01m5cjx1ymeq5t7hmxh9hqxhv5",
+        "input_tokens": 333,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 450,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0020664
+      },
+      "run_id": "5f07ab71-e14e-407e-b795-1effc23f5b02"
+    }
+  ],
+  "not_claimed": [
+    "General model accuracy",
+    "Security certification",
+    "Vision/tool-call capability combinations not used by this runtime"
+  ]
+}
