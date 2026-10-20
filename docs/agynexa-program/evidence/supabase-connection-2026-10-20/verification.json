@@ -10,7 +10,7 @@
   },
   "database_writes": false,
   "vercel_mcp": "Project/deployment lookups still return 404 in session scope",
-  "application_connection": "PARTIAL_SECRET_VERIFIED_PUBLISHABLE_REQUEST_REJECTED",
+  "application_connection": "VERIFIED_PRODUCTION_HTTP_200_BOTH_KEYS",
   "secrets_captured": false,
   "implementation_commit": "41e69bd84ba693639762b296909a510dbe0c6ae5",
   "build_typescript": "PASS",
@@ -32,21 +32,21 @@
   "diagnostic_pull_request": "https://github.com/adham-younes/vzero/pull/11",
   "diagnostic_merge_commit": "840f7f94d1140206f0a1c37c432938cf03fa3244",
   "production_probe": {
-    "checked_at": "2026-10-20T07:05:10.437625+00:00",
+    "checked_at": "2026-10-20T07:28:46.185495+00:00",
     "url": "https://vzero-nine-beryl.vercel.app/api/health/supabase",
-    "status": 503,
-    "body": {
-      "status": "unavailable",
+    "status": 200,
+    "response": {
+      "status": "ok",
       "checks": {
         "project": "ok",
-        "publishableKey": "rejected",
+        "publishableKey": "ok",
         "secretKey": "ok"
       }
     },
     "cache_control": "no-store"
   },
   "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/5hwE8ybGDH2KHdQ7yoDo2BxFTJb2",
-  "next_action": "Verify corrected probe after deployment; no user key change required.",
+  "next_action": "Connection verified. No further user key changes required.",
   "diagnosis_correction": {
     "public_key_enabled": true,
     "direct_public_key_checks": [
@@ -63,6 +63,29 @@
     "root_cause": "Public-key probe incorrectly used a secret-only endpoint",
     "key_values_saved": false,
     "database_writes": false,
-    "regression_tests": 6
+    "regression_tests": 6,
+    "build_typescript": "PASS",
+    "build_command": "node node_modules/next/dist/bin/next build",
+    "initial_pnpm_wrapper": "Aborted automatic install before build; used installed Next binary without dependency changes."
+  },
+  "historical_incorrect_endpoint_probe": {
+    "checked_at": "2026-10-20T07:05:10.437625+00:00",
+    "url": "https://vzero-nine-beryl.vercel.app/api/health/supabase",
+    "status": 503,
+    "body": {
+      "status": "unavailable",
+      "checks": {
+        "project": "ok",
+        "publishableKey": "rejected",
+        "secretKey": "ok"
+      }
+    },
+    "cache_control": "no-store"
+  },
+  "corrected_probe_release": {
+    "implementation_commit": "52376cfc00ba974023d64f08b3109b83b130cabe",
+    "merge_commit": "2a7792b434a15e4a69f9727f580e294b85ad828c",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/13",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/5A31B8HEFzXmZkEGfJxta9Z63DzY"
   }
 }
