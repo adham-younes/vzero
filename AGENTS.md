@@ -32,3 +32,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Current owner scope: consolidate actual delivery status
 
 Studio A–E and the chat/API UI fixes have been deployed under D-26/D-27/D-28. The current request is to document all updates, fixes, implemented behavior and remaining work. Start from `docs/agynexa-program/CURRENT-IMPLEMENTATION-2026-10-20.md`. Consolidate current documents without rewriting original plans or historical evidence. This task changes documentation and its inventory validator only; no application, live database or Auth/SMTP changes. Run document/link/inventory checks and diff review only, not application suites. Preserve the distinction between latest product code, documentation commits and the environment/scope of each verification.
+
+## Latest owner direction — visual refinement
+
+The visual upgrade supersedes the prior documentation-only task. Read `docs/agynexa-program/releases/VISUAL-UPGRADE-2026-10-20.md` and D-29. The owner explicitly requires the Hero video to autoplay without play/pause buttons. Preserve the original video and both Hero files. PR #30 is the review candidate; production is not yet merged. Spacemail sender choice is recorded, but no SMTP/Auth change or mail test was performed.

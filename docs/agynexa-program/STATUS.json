@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T15:38:43.408613+00:00",
+  "updated_at": "2026-10-20T19:38:42.159084+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -160,7 +160,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Use the deployed Studio; next commercial scope is account recovery, then billing/external connectors by explicit selection. Investigate recorded intermittent session responses before broader release. Do not repeat A/B or reapply migrations.",
+  "next_action": "Review visual-upgrade PR #30 and Preview; production merge requires final owner decision. Spacemail sender selected, SMTP configuration and recovery policy remain outstanding.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -378,5 +378,20 @@
     "deployment_id": "dpl_2BnzNu3s9P8TA9ELGV8v8sjKj5pR",
     "root_cause_of_previous_404": "NOT_ESTABLISHED",
     "write_permissions_verified": false
+  },
+  "visual_upgrade": {
+    "status": "IMPLEMENTED_PREVIEW_CANDIDATE",
+    "implementation_commit": "5ade5f2cfefff3370721cacd3ab3ec80eec5756d",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/30",
+    "report": "releases/VISUAL-UPGRADE-2026-10-20.md",
+    "evidence": "evidence/visual-upgrade-2026-10-20/verification.json",
+    "production_deployed": false,
+    "owner_video_requirement": "AUTOPLAY_NO_PLAY_PAUSE_CONTROLS",
+    "remaining": [
+      "SMTP-backed safe account recovery",
+      "Full client delivery portal requires separate data contract"
+    ],
+    "preview_url": "https://vzero-acnado0le-adhamlouxors-projects.vercel.app/ar",
+    "preview_browser": "PASS autoplay/no controls"
   }
 }

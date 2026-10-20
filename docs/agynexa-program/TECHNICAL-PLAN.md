@@ -123,3 +123,7 @@ SQL مسودة للمراجعة تنتهي بـ`ROLLBACK` ولم تُشغل. ت�
 slot1/slot2 للإنتاج والمقارنة الاختيارية؛ slot3 Preview داخلي فقط. قدرات السجل تصف المزود، بينما المنتج نصي. الأسعار في السجل تقديرات مؤرخة وليست فوترة. لا queue/outbox أو embeddings أو PDF أو OAuth خارجي. [المتبقي](BACKLOG.md).
 
 الجرد الحالي: 34 عملية في 26 ملف route؛ [حالة APIs](architecture/API-STATUS.md) و[العقد](architecture/current-api.openapi.json). المصادر وحدود التحقق والنشر في [C/D/E](agent-studio/STAGES-CDE.md)، [إصلاح المحادثة](agent-studio/CHAT-FIX.md)، [إزالة قسم API](agent-studio/API-UI-REMOVAL.md). لا تبنِ حكمًا عن الإنتاج من تقارير B المحلية وحدها.
+
+## مرشح الواجهة — PR #30
+
+`breadcrumbs.tsx` يربط تسلسل المسار، و`workflow-example.tsx` يعرض مثالًا موسومًا. Shell يعرض AR/EN ويحفظ query/hash ويغلق القائمة بـEscape. ProjectBrief يستخدم تحققًا محليًا وحقولًا اختيارية بمساعدة صريحة؛ يرسل نفس عقد briefInput الحالي. API وroutes وDB والتبعيات دون تغيير. اسم أكبر ونصوص/حقول موحدة في CSS؛ تعتيم 46%/55% لتوضيح النص، مع الفيديو ومكوني Hero الأصليين والتشغيل التلقائي دون أزرار. [التحقق والحدود](releases/VISUAL-UPGRADE-2026-10-20.md).

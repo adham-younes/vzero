@@ -1,5 +1,7 @@
 # AGYNEXA — تقرير التنفيذ والإصلاحات والمتبقي
 
+تحديث لاحق منفصل: [ترقية الواجهة](releases/VISUAL-UPGRADE-2026-10-20.md) مرشح Preview في PR #30، ولم يغير حالة الإنتاج الموصوفة أدناه.
+
 حالة موحدة في 20 أكتوبر 2026، بمراجعة الكود عند `4799a2e` من `main` في `adham-younes/vzero`. هذا تسليم توثيق فقط: لم يغير التطبيق أو قاعدة البيانات أو إعدادات الحسابات، ولم يعد فحوص المنتج. آخر تغيير منتج منشور هو PR #26: التنفيذ `fc5b08443de4a8ccd9d645299c07726a1305b8cb`، والدمج `4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba`. PR #27 عند `4799a2e` يوثق إيصال ذلك النشر.
 
 [الموقع](https://vzero-nine-beryl.vercel.app) · [استوديو الوكيل](https://vzero-nine-beryl.vercel.app/ar/studio) · [آخر إيصال منتج](agent-studio/evidence/api-ui-removal/production.json).

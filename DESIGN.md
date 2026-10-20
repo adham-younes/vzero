@@ -54,3 +54,7 @@ Kore.ai reference (public homepage and saved Artemis sample): separate outcomes 
 Component families: split architecture illustration; service category tabs and compact catalog rows; industry selector with focused detail and sector icon; integration directory; numbered delivery timeline; expandable technical reading sections; procurement comparison workspace; review-and-share brief. All copy remains available. No page should be a wall of identical rounded text cards.
 
 Spacing: 8/12/16/24/32/48/64/88. Type: body16px/1.7, small14px, h3 22px, h2 clamp(28px,3.5vw,44px), internal h1 clamp(34px,4.8vw,64px). Arabic headings1.5. Visible focus; keyboard-operated selectors; reduced-motion support; no horizontal page scroll at390px.
+
+## Owner-approved refinement — 20 October 2026
+
+Wordmark 34px desktop / 29px mobile, always LTR. Compact AR/EN control 44×36px with extended touch target. Shared English sans and Almarai Arabic; existing foreground/secondary tokens retained. Inputs and primary controls target 48px. Semantic warning #F2C66D is reserved for missing evidence, not a new decorative accent. Readability overlay 46% desktop / 55% mobile. The owner explicitly requires original automatic looping video playback with no play/pause controls. [Release](docs/agynexa-program/releases/VISUAL-UPGRADE-2026-10-20.md).
