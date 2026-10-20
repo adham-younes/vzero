@@ -1,0 +1,13 @@
+{
+  "environment": "isolated_local_real_database",
+  "logic_assertions_passed": 14,
+  "build_typescript": "PASS_BEFORE_LAYOUT_REFINEMENT",
+  "checks": [
+    "Arabic identity response from real authenticated runtime",
+    "Arabic no-evidence refusal retained",
+    "Saved conversation reopened from activity",
+    "Arabic 390px no overflow"
+  ],
+  "test_harness_issue": "Initial browser script stopped at an over-specific select label locator after the above checks passed; remaining settings/English checks run separately.",
+  "live_provider_calls": 0
+}

@@ -324,5 +324,11 @@
     "evidence": "evidence/account-hotfix-2026-10-20/production.json",
     "authenticated_owner_session_verified": false
   },
-  "verification_policy": "OWNER_DIRECTED_PRODUCTION_DELIVERY_ONLY_REUSE_PRIOR_EVIDENCE"
+  "verification_policy": "OWNER_DIRECTED_PRODUCTION_DELIVERY_ONLY_REUSE_PRIOR_EVIDENCE",
+  "chat_hotfix": {
+    "status": "IMPLEMENTED_PENDING_DELIVERY",
+    "report": "agent-studio/CHAT-FIX.md",
+    "scope": "Conversation-first UI, localized social replies and provider-free display labels",
+    "database_changes": false
+  }
 }
