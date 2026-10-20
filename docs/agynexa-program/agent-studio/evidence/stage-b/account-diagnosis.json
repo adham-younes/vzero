@@ -1,0 +1,14 @@
+{
+  "environment": "isolated local Auth/Data API",
+  "revoked_jwt_auth_user_status": 403,
+  "legacy_single_profile_status": 406,
+  "exact_production_cause_proven": false,
+  "missing_profile_regression": {
+    "environment": "isolated local only",
+    "profile_fixture": "temporarily removed then restored",
+    "auth_user_status": 200,
+    "legacy_single_profile_status": 406,
+    "new_account_status": 401,
+    "production_root_cause_proven": false
+  }
+}

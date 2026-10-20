@@ -1,0 +1,17 @@
+{
+  "verified_source_commit": "299919b44464ead9d7ebd96791e41f3ab899c304",
+  "product_implementation_commit": "ea7edc13815d4b7ef9d0d44130c7bc73c13b9c0e",
+  "account_fix_commit": "5dc609b",
+  "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/GLWK9nDXBH8kLRz6NFTCyaBZTGnx",
+  "github_vercel_status": "success",
+  "target": "preview",
+  "anonymous_browser_access": "VERCEL_LOGIN_REQUIRED",
+  "http_redirect_final_host": "vercel.com",
+  "studio_hosted_database": "NOT_CONFIGURED_BY_THIS_TASK",
+  "studio_feature_flag": "DEFAULT_OFF",
+  "interactive_verification": "LOCAL_REAL_BACKEND_ONLY",
+  "protection_changed": false,
+  "main": "d030a60186380b3a106bc8ac0071d74abffea503",
+  "production_deployed": false
+}

@@ -3,7 +3,7 @@
   "info": {
     "title": "AGYNEXA implemented public API",
     "version": "2026-10-20",
-    "description": "Existing catalog and procurement APIs plus a read-only Supabase health probe. No project brief intake, knowledge runtime, authenticated user workflow or database writes. Stage-3 openapi.yaml remains a proposal."
+    "description": "AGYNEXA implemented accounts, briefs and Studio C/D runtime. Deployment/provider evidence: agent-studio/STAGES-CDE.md. Stage-3 proposed APIs remain separate."
   },
   "servers": [
     {
@@ -448,7 +448,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/auth/login": {
@@ -463,7 +464,7 @@
             "description": "Invalid input"
           },
           "401": {
-            "description": "Sign in required"
+            "description": "Invalid email or password; generic response"
           },
           "403": {
             "description": "Wrong origin"
@@ -473,6 +474,12 @@
           },
           "503": {
             "description": "Unavailable"
+          },
+          "413": {
+            "description": "Body exceeds 20KB"
+          },
+          "415": {
+            "description": "JSON required"
           }
         },
         "requestBody": {
@@ -493,19 +500,21 @@
                   },
                   "password": {
                     "type": "string",
-                    "maxLength": 128
+                    "maxLength": 128,
+                    "minLength": 1
                   }
                 }
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/auth/logout": {
       "post": {
         "summary": "logout",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "End the current local session using Supabase signOut. No explicit getUser guard; a missing session is not documented as an authenticated action. Same-origin JSON mutation <=20KB. Private no-store responses. No application login/signup rate limiter is called here.",
         "responses": {
           "200": {
             "description": "Success"
@@ -513,17 +522,17 @@
           "400": {
             "description": "Invalid input"
           },
-          "401": {
-            "description": "Sign in required"
-          },
           "403": {
             "description": "Wrong origin"
           },
-          "429": {
-            "description": "Rate limit"
-          },
           "503": {
             "description": "Unavailable"
+          },
+          "413": {
+            "description": "Body exceeds 20KB"
+          },
+          "415": {
+            "description": "JSON required"
           }
         },
         "requestBody": {
@@ -535,59 +544,57 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {},
+          {
+            "supabaseSession": []
+          }
+        ]
       }
     },
     "/api/account": {
       "get": {
         "summary": "Return own display name, email and account creation date",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response.",
         "responses": {
           "200": {
             "description": "Success"
           },
-          "400": {
-            "description": "Invalid input"
-          },
           "401": {
             "description": "Sign in required"
-          },
-          "403": {
-            "description": "Wrong origin"
-          },
-          "429": {
-            "description": "Rate limit"
           },
           "503": {
             "description": "Unavailable"
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       }
     },
     "/api/v1/project-briefs": {
       "get": {
         "summary": "List latest 100 own briefs",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response.",
         "responses": {
           "200": {
             "description": "Success"
           },
-          "400": {
-            "description": "Invalid input"
-          },
           "401": {
             "description": "Sign in required"
-          },
-          "403": {
-            "description": "Wrong origin"
-          },
-          "429": {
-            "description": "Rate limit"
           },
           "503": {
             "description": "Unavailable"
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       },
       "post": {
         "summary": "Save own brief with explicit consent; same key/body returns original, different body conflicts",
@@ -618,7 +625,7 @@
             "description": "JSON required"
           },
           "429": {
-            "description": "20 brief daily limit"
+            "description": "20 existing briefs created within the last 24 hours; deletion frees capacity. This is not a cumulative create-attempt quota."
           },
           "503": {
             "description": "Unavailable"
@@ -656,7 +663,8 @@
                   "email": {
                     "type": "string",
                     "minLength": 1,
-                    "maxLength": 254
+                    "maxLength": 254,
+                    "format": "email"
                   },
                   "service": {
                     "type": "string",
@@ -682,7 +690,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       },
       "delete": {
         "summary": "Delete own brief; inaccessible IDs return 404",
@@ -705,6 +718,12 @@
           },
           "503": {
             "description": "Unavailable"
+          },
+          "413": {
+            "description": "Body exceeds 20KB"
+          },
+          "415": {
+            "description": "JSON required"
           }
         },
         "requestBody": {
@@ -722,6 +741,2057 @@
                     "format": "uuid"
                   }
                 }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
+      }
+    },
+    "/api/v1/workspace": {
+      "post": {
+        "operationId": "initializeOwnWorkspace",
+        "summary": "Create or return the signed-in owner workspace",
+        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "http://localhost:3016",
+            "description": "Isolated local verification; not enabled on Production"
+          }
+        ],
+        "description": "No caller-supplied owner_id or org_id. Atomic idempotent bootstrap. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "responses": {
+          "200": {
+            "description": "Existing or newly initialized workspace",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "workspace": {
+                      "$ref": "#/components/schemas/Workspace"
+                    }
+                  },
+                  "required": [
+                    "workspace"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sign in required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Studio disabled or backend unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Origin must equal request origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Body exceeds 20,000 bytes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "JSON required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents": {
+      "get": {
+        "operationId": "listOwnAgents",
+        "summary": "List own workspace drafts",
+        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "http://localhost:3016",
+            "description": "Isolated local verification; not enabled on Production"
+          }
+        ],
+        "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "responses": {
+          "200": {
+            "description": "Workspace and drafts; null workspace before initialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "workspace",
+                    "agents"
+                  ],
+                  "properties": {
+                    "workspace": {
+                      "anyOf": [
+                        {
+                          "$ref": "#/components/schemas/Workspace"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "agents": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/AgentDraft"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sign in required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Studio disabled or backend unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createAgentDraft",
+        "summary": "Save an agent from one of two templates",
+        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "http://localhost:3016",
+            "description": "Isolated local verification; not enabled on Production"
+          }
+        ],
+        "description": "org_id and created_by come from verified membership, never from body. requestKey is unique within the workspace. A changed replay conflicts, including a draft edited since initial creation. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "responses": {
+          "201": {
+            "description": "Created draft",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "agent": {
+                      "$ref": "#/components/schemas/AgentDraft"
+                    }
+                  },
+                  "required": [
+                    "agent"
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Same request key and settings replay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "agent": {
+                      "$ref": "#/components/schemas/AgentDraft"
+                    }
+                  },
+                  "required": [
+                    "agent"
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "workspace_required or request_conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sign in required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Studio disabled or backend unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Origin must equal request origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Body exceeds 20,000 bytes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "JSON required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgentCreate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "agentId",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      ],
+      "get": {
+        "operationId": "getOwnAgent",
+        "summary": "Read a workspace draft",
+        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "http://localhost:3016",
+            "description": "Isolated local verification; not enabled on Production"
+          }
+        ],
+        "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "responses": {
+          "200": {
+            "description": "Draft",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "agent": {
+                      "$ref": "#/components/schemas/AgentDraft"
+                    }
+                  },
+                  "required": [
+                    "agent"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing, foreign, or invalid ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sign in required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Studio disabled or backend unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updateOwnAgent",
+        "summary": "Update draft settings with revision checking",
+        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "servers": [
+          {
+            "url": "http://localhost:3016",
+            "description": "Isolated local verification; not enabled on Production"
+          }
+        ],
+        "description": "Supply all four settings and last read revision. Template and organization are immutable in B. This is not a published version. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "responses": {
+          "200": {
+            "description": "Saved draft with incremented revision",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "agent": {
+                      "$ref": "#/components/schemas/AgentDraft"
+                    }
+                  },
+                  "required": [
+                    "agent"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Missing or foreign agent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "revision_conflict; reload current draft",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Sign in required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Studio disabled or backend unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Origin must equal request origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Body exceeds 20,000 bytes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "JSON required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgentUpdate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/sources": {
+      "get": {
+        "summary": "List active knowledge sources",
+        "operationId": "getagentsagentIdsources",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      },
+      "post": {
+        "summary": "Process a private text source",
+        "operationId": "postagentsagentIdsources",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "maxLength": 160
+                  },
+                  "content": {
+                    "type": "string",
+                    "maxLength": 12000
+                  },
+                  "publicApproved": {
+                    "type": "boolean"
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "title",
+                  "content",
+                  "publicApproved",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/sources/{sourceId}": {
+      "get": {
+        "summary": "Read an owned active source",
+        "operationId": "getagentsagentIdsourcessourceId",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Erase source content/chunks and revoke retrieval",
+        "operationId": "deleteagentsagentIdsourcessourceId",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/test-runs": {
+      "post": {
+        "summary": "Execute a saved draft; optional model override for comparison",
+        "operationId": "postagentsagentIdtestruns",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "maxLength": 3000
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "conversationId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "runId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "model": {
+                    "type": "string",
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "message",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/publish": {
+      "post": {
+        "summary": "Publish immutable version and source selection",
+        "operationId": "postagentsagentIdpublish",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "revision": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "widgetEnabled": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "requestKey",
+                  "revision",
+                  "widgetEnabled"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/unpublish": {
+      "post": {
+        "summary": "Disable invocation and invalidate widget sessions",
+        "operationId": "postagentsagentIdunpublish",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/activity": {
+      "get": {
+        "summary": "Latest 50 runs, approvals, keys and 20 versions",
+        "operationId": "getagentsagentIdactivity",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/keys": {
+      "post": {
+        "summary": "Create key; raw token returned exactly once",
+        "operationId": "postagentsagentIdkeys",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxLength": 80
+                  }
+                },
+                "required": [
+                  "label"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Revoke agent key",
+        "operationId": "deleteagentsagentIdkeys",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "keyId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "keyId"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/invoke": {
+      "post": {
+        "summary": "Invoke published snapshot with private server key",
+        "operationId": "postagentsagentIdinvoke",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "agentKey": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "maxLength": 3000
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "conversationId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "message",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/runs/{runId}": {
+      "get": {
+        "summary": "Read owned run state and usage",
+        "operationId": "getrunsrunId",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      }
+    },
+    "/api/v1/runs/{runId}/cancel": {
+      "post": {
+        "summary": "Cancel owned in-progress run",
+        "operationId": "postrunsrunIdcancel",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/approvals/{approvalId}/decision": {
+      "post": {
+        "summary": "Approve or reject the exact support proposal once",
+        "operationId": "postapprovalsapprovalIddecision",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "approvalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "decision": {
+                    "type": "string",
+                    "enum": [
+                      "approved",
+                      "rejected"
+                    ]
+                  }
+                },
+                "required": [
+                  "decision"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/usage": {
+      "get": {
+        "summary": "Usage from latest 100 owned runs, not billing",
+        "operationId": "getusage",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      }
+    },
+    "/api/v1/studio/models": {
+      "get": {
+        "summary": "Configured model slots and documented capabilities",
+        "operationId": "getstudiomodels",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      },
+      "post": {
+        "summary": "Probe model listings once per slot, rate-limited",
+        "operationId": "poststudiomodels",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/widget/{publicId}/session": {
+      "post": {
+        "summary": "Issue short-lived public knowledge session",
+        "operationId": "postwidgetpublicIdsession",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "publicId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/widget/{publicId}/invoke": {
+      "post": {
+        "summary": "Invoke public-only version; path contains agent id",
+        "operationId": "postwidgetpublicIdinvoke",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "widgetSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "publicId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "maxLength": 3000
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "conversationId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "message",
+                  "requestKey"
+                ]
               }
             }
           }
@@ -944,6 +3014,198 @@
           "orderCreated",
           "policy"
         ]
+      },
+      "Workspace": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "AgentCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "instructions",
+          "language",
+          "model",
+          "requestKey",
+          "template"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "instructions": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "ar",
+              "en"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "enum": [
+              "openai/gpt-oss-120b",
+              "qwen/qwen3.8-27b"
+            ]
+          },
+          "requestKey": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "template": {
+            "type": "string",
+            "enum": [
+              "knowledgegrid",
+              "serviceflow"
+            ]
+          }
+        }
+      },
+      "AgentUpdate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "instructions",
+          "language",
+          "model",
+          "revision"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "instructions": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "ar",
+              "en"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "enum": [
+              "openai/gpt-oss-120b",
+              "qwen/qwen3.8-27b"
+            ]
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      },
+      "AgentDraft": {
+        "type": "object",
+        "required": [
+          "name",
+          "instructions",
+          "language",
+          "model",
+          "id",
+          "org_id",
+          "template",
+          "revision",
+          "created_at",
+          "updated_at"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "instructions": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6000
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "ar",
+              "en"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "enum": [
+              "openai/gpt-oss-120b",
+              "qwen/qwen3.8-27b"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "org_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "template": {
+            "type": "string",
+            "enum": [
+              "knowledgegrid",
+              "serviceflow"
+            ]
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "supabaseSession": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "sb-xsyxvswbiptbyxyqhdim-auth-token",
+        "description": "HttpOnly Supabase SSR session cookie; large values may be split into numbered .0/.1 cookies. Send the complete cookie jar issued by register/login. Server getUser validates identity; data RLS also checks the active session. Never fabricate a cookie or treat email confirmation as proof of email ownership."
+      },
+      "agentKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Server-to-server key scoped to one published agent; hash stored, revocable, 90-day expiry."
+      },
+      "widgetSession": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Public-source-only widget token, expires in ten minutes; publication generation checked on every call."
       }
     }
   }

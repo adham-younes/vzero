@@ -1,0 +1,9 @@
+{
+  "environment": "isolated_local",
+  "checks": [
+    "source processed through browser with real backend",
+    "real no-evidence refusal shown in browser",
+    "Arabic publication UI at 390px with RTL and no overflow"
+  ],
+  "page_errors": []
+}

@@ -1,0 +1,1086 @@
+{
+  "environment": "local Chromium",
+  "base_url": "http://127.0.0.1:3014",
+  "phase": "after",
+  "video_seek_seconds": 3,
+  "samples": [
+    {
+      "time": 3,
+      "paused": true,
+      "source": "/videos/background.mp4",
+      "videoWidth": 2560,
+      "videoHeight": 1440,
+      "heroRect": {
+        "x": 0,
+        "y": 81,
+        "width": 1440,
+        "height": 820,
+        "top": 81,
+        "right": 1440,
+        "bottom": 901,
+        "left": 0
+      },
+      "videoRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "top": 0,
+        "right": 1440,
+        "bottom": 900,
+        "left": 0
+      },
+      "objectFit": "cover",
+      "chain": [
+        {
+          "element": "video.architecture-video",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "-1",
+            "position": "fixed",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "relative",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "isolate"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "html.dark",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        }
+      ],
+      "layers": [
+        {
+          "element": "html.dark",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "html.dark",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "html.dark",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "relative",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "isolate"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "-1",
+            "position": "fixed",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "video.architecture-video",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "video.architecture-video",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "video.architecture-video",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.video-tint",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "absolute",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "div.video-tint",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.video-tint",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "section.premium-hero",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "section.premium-hero",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "section.premium-hero",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        }
+      ],
+      "text": [
+        {
+          "text": "ENGINEERED INTELLIGENCE. HUMAN CONTROL.",
+          "rect": {
+            "x": 270,
+            "y": 312.71875,
+            "width": 900,
+            "height": 18.6875,
+            "top": 312.71875,
+            "right": 1170,
+            "bottom": 331.40625,
+            "left": 270
+          },
+          "color": "rgb(16, 185, 129)",
+          "font": "11px / 18.7px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "fontSize": "11px"
+        },
+        {
+          "text": "Intelligence, engineered.\nBuilt for your business.",
+          "rect": {
+            "x": 270,
+            "y": 355.40625,
+            "width": 900,
+            "height": 155.5,
+            "top": 355.40625,
+            "right": 1170,
+            "bottom": 510.90625,
+            "left": 270
+          },
+          "color": "rgb(235, 235, 235)",
+          "font": "500 72px / 77.76px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "fontSize": "72px"
+        },
+        {
+          "text": "Your knowledge. Your workflows. One connected agent system. Designed with clear permissions, human oversight and a purpose.",
+          "rect": {
+            "x": 435,
+            "y": 534.90625,
+            "width": 570,
+            "height": 54.375,
+            "top": 534.90625,
+            "right": 1005,
+            "bottom": 589.28125,
+            "left": 435
+          },
+          "color": "rgb(235, 235, 235)",
+          "font": "16px / 27.2px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "fontSize": "16px"
+        },
+        {
+          "text": "Engineer your next system",
+          "rect": {
+            "x": 480.765625,
+            "y": 621.28125,
+            "width": 247.171875,
+            "height": 48,
+            "top": 621.28125,
+            "right": 727.9375,
+            "bottom": 669.28125,
+            "left": 480.765625
+          },
+          "color": "rgb(5, 5, 5)",
+          "font": "500 14px / 20px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "fontSize": "14px"
+        },
+        {
+          "text": "Explore the architecture",
+          "rect": {
+            "x": 743.9375,
+            "y": 621.28125,
+            "width": 215.28125,
+            "height": 48,
+            "top": 621.28125,
+            "right": 959.21875,
+            "bottom": 669.28125,
+            "left": 743.9375
+          },
+          "color": "rgb(235, 235, 235)",
+          "font": "500 14px / 20px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "fontSize": "14px"
+        }
+      ],
+      "overflow": false,
+      "frame_sha256": "13a99bb690a827d3726a4cc7393efefa1f549d71ad40ffbb80e80ea49c463c72",
+      "label": "desktop-en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "route": "/",
+      "page_errors": []
+    },
+    {
+      "time": 3,
+      "paused": true,
+      "source": "/videos/background.mp4",
+      "videoWidth": 2560,
+      "videoHeight": 1440,
+      "heroRect": {
+        "x": 0,
+        "y": 81,
+        "width": 390,
+        "height": 768,
+        "top": 81,
+        "right": 390,
+        "bottom": 849,
+        "left": 0
+      },
+      "videoRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "objectFit": "cover",
+      "chain": [
+        {
+          "element": "video.architecture-video",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "-1",
+            "position": "fixed",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "relative",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "isolate"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "html.dark",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        }
+      ],
+      "layers": [
+        {
+          "element": "html.dark",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "html.dark",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "html.dark",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "body.almarai_6c675870-module__hmHTwW__variable antialiased",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "relative",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "isolate"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "main.home-page",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "-1",
+            "position": "fixed",
+            "backgroundColor": "rgb(5, 5, 5)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.home-video-background",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "video.architecture-video",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "video.architecture-video",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "video.architecture-video",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.video-tint",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "absolute",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "div.video-tint",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "div.video-tint",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "section.premium-hero",
+          "pseudo": null,
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "normal"
+        },
+        {
+          "element": "section.premium-hero",
+          "pseudo": "::before",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        },
+        {
+          "element": "section.premium-hero",
+          "pseudo": "::after",
+          "styles": {
+            "opacity": "1",
+            "filter": "none",
+            "backdropFilter": "none",
+            "mixBlendMode": "normal",
+            "zIndex": "auto",
+            "position": "static",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "isolation": "auto"
+          },
+          "content": "none"
+        }
+      ],
+      "text": [
+        {
+          "text": "ذكاء مُهندَس. وتحكّم بشري.",
+          "rect": {
+            "x": 20,
+            "y": 275.59375,
+            "width": 350,
+            "height": 18.6875,
+            "top": 275.59375,
+            "right": 370,
+            "bottom": 294.28125,
+            "left": 20
+          },
+          "color": "rgb(16, 185, 129)",
+          "font": "11px / 18.7px Almarai, \"Almarai Fallback\", sans-serif",
+          "fontSize": "11px"
+        },
+        {
+          "text": "ذكاءٌ مُهندَس.\nمصمّم لأعمالك.",
+          "rect": {
+            "x": 20,
+            "y": 318.28125,
+            "width": 350,
+            "height": 101.75,
+            "top": 318.28125,
+            "right": 370,
+            "bottom": 420.03125,
+            "left": 20
+          },
+          "color": "rgb(235, 235, 235)",
+          "font": "500 35.1px / 50.895px Almarai, \"Almarai Fallback\", sans-serif",
+          "fontSize": "35.1px"
+        },
+        {
+          "text": "معرفتك. سير عملك. نظام وكلاء مترابط. نصمّمه بصلاحيات واضحة وإشراف بشري وهدف محدّد.",
+          "rect": {
+            "x": 20,
+            "y": 444.03125,
+            "width": 350,
+            "height": 54.375,
+            "top": 444.03125,
+            "right": 370,
+            "bottom": 498.40625,
+            "left": 20
+          },
+          "color": "rgb(235, 235, 235)",
+          "font": "16px / 27.2px Almarai, \"Almarai Fallback\", sans-serif",
+          "fontSize": "16px"
+        },
+        {
+          "text": "صمّم نظامك القادم",
+          "rect": {
+            "x": 25,
+            "y": 530.40625,
+            "width": 340,
+            "height": 48,
+            "top": 530.40625,
+            "right": 365,
+            "bottom": 578.40625,
+            "left": 25
+          },
+          "color": "rgb(5, 5, 5)",
+          "font": "500 14px / 20px Almarai, \"Almarai Fallback\", sans-serif",
+          "fontSize": "14px"
+        },
+        {
+          "text": "استكشف البنية",
+          "rect": {
+            "x": 25,
+            "y": 590.40625,
+            "width": 340,
+            "height": 48,
+            "top": 590.40625,
+            "right": 365,
+            "bottom": 638.40625,
+            "left": 25
+          },
+          "color": "rgb(235, 235, 235)",
+          "font": "500 14px / 20px Almarai, \"Almarai Fallback\", sans-serif",
+          "fontSize": "14px"
+        }
+      ],
+      "overflow": false,
+      "frame_sha256": "13a99bb690a827d3726a4cc7393efefa1f549d71ad40ffbb80e80ea49c463c72",
+      "label": "mobile-ar",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/ar",
+      "page_errors": []
+    }
+  ]
+}
