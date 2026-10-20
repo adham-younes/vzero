@@ -127,3 +127,7 @@ slot1/slot2 للإنتاج والمقارنة الاختيارية؛ slot3 Previ
 ## مرشح الواجهة — PR #30
 
 `breadcrumbs.tsx` يربط تسلسل المسار، و`workflow-example.tsx` يعرض مثالًا موسومًا. Shell يعرض AR/EN ويحفظ query/hash ويغلق القائمة بـEscape. ProjectBrief يستخدم تحققًا محليًا وحقولًا اختيارية بمساعدة صريحة؛ يرسل نفس عقد briefInput الحالي. API وroutes وDB والتبعيات دون تغيير. اسم أكبر ونصوص/حقول موحدة في CSS؛ تعتيم 46%/55% لتوضيح النص، مع الفيديو ومكوني Hero الأصليين والتشغيل التلقائي دون أزرار. [التحقق والحدود](releases/VISUAL-UPGRADE-2026-10-20.md).
+
+## متابعة النشر والحسابات
+
+`authFailure` في lib/supabase/server.ts يميز 429 و503 عن 401 في signedIn وlogin؛ استجابات عامة no-store، دون retry أو تعديل cookies أو DB. [الدليل](releases/CONTINUATION-2026-10-20.md).

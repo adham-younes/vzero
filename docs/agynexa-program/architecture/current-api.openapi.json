@@ -455,7 +455,7 @@
     "/api/auth/login": {
       "post": {
         "summary": "login",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Rate-limited by server; credentials never returned.",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Rate-limited by server; credentials never returned. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Success"
@@ -514,7 +514,7 @@
     "/api/auth/logout": {
       "post": {
         "summary": "logout",
-        "description": "End the current local session using Supabase signOut. No explicit getUser guard; a missing session is not documented as an authenticated action. Same-origin JSON mutation <=20KB. Private no-store responses. No application login/signup rate limiter is called here.",
+        "description": "End the current local session using Supabase signOut. No explicit getUser guard; a missing session is not documented as an authenticated action. Same-origin JSON mutation <=20KB. Private no-store responses. No application login/signup rate limiter is called here. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Success"
@@ -533,6 +533,9 @@
           },
           "415": {
             "description": "JSON required"
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "requestBody": {
@@ -556,7 +559,7 @@
     "/api/account": {
       "get": {
         "summary": "Return own display name, email and account creation date",
-        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response.",
+        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Success"
@@ -566,6 +569,9 @@
           },
           "503": {
             "description": "Unavailable"
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "security": [
@@ -578,7 +584,7 @@
     "/api/v1/project-briefs": {
       "get": {
         "summary": "List latest 100 own briefs",
-        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response.",
+        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Success"
@@ -588,6 +594,9 @@
           },
           "503": {
             "description": "Unavailable"
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "security": [
@@ -598,7 +607,7 @@
       },
       "post": {
         "summary": "Save own brief with explicit consent; same key/body returns original, different body conflicts",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "201": {
             "description": "Saved"
@@ -699,7 +708,7 @@
       },
       "delete": {
         "summary": "Delete own brief; inaccessible IDs return 404",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Deleted"
@@ -724,6 +733,9 @@
           },
           "415": {
             "description": "JSON required"
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "requestBody": {
@@ -768,7 +780,7 @@
             "description": "Isolated local verification; not enabled on Production"
           }
         ],
-        "description": "No caller-supplied owner_id or org_id. Atomic idempotent bootstrap. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "description": "No caller-supplied owner_id or org_id. Atomic idempotent bootstrap. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Existing or newly initialized workspace",
@@ -895,6 +907,9 @@
                 }
               }
             }
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "requestBody": {
@@ -926,7 +941,7 @@
             "description": "Isolated local verification; not enabled on Production"
           }
         ],
-        "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Workspace and drafts; null workspace before initialization",
@@ -995,6 +1010,9 @@
                 }
               }
             }
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         }
       },
@@ -1013,7 +1031,7 @@
             "description": "Isolated local verification; not enabled on Production"
           }
         ],
-        "description": "org_id and created_by come from verified membership, never from body. requestKey is unique within the workspace. A changed replay conflicts, including a draft edited since initial creation. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "description": "org_id and created_by come from verified membership, never from body. requestKey is unique within the workspace. A changed replay conflicts, including a draft edited since initial creation. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "201": {
             "description": "Created draft",
@@ -1176,6 +1194,9 @@
                 }
               }
             }
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "requestBody": {
@@ -1217,7 +1238,7 @@
             "description": "Isolated local verification; not enabled on Production"
           }
         ],
-        "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Draft",
@@ -1290,6 +1311,9 @@
                 }
               }
             }
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         }
       },
@@ -1308,7 +1332,7 @@
             "description": "Isolated local verification; not enabled on Production"
           }
         ],
-        "description": "Supply all four settings and last read revision. Template and organization are immutable in B. This is not a published version. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability.",
+        "description": "Supply all four settings and last read revision. Template and organization are immutable in B. This is not a published version. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
             "description": "Saved draft with incremented revision",
@@ -1471,6 +1495,9 @@
                 }
               }
             }
+          },
+          "429": {
+            "description": "Authentication provider rate limit; try_later"
           }
         },
         "requestBody": {
@@ -1495,7 +1522,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1549,7 +1576,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1638,7 +1665,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1701,7 +1728,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1778,7 +1805,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1871,7 +1898,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1955,7 +1982,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -2023,7 +2050,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -2079,7 +2106,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -2152,7 +2179,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -2312,7 +2339,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "runId",
@@ -2368,7 +2395,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "runId",
@@ -2436,7 +2463,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "approvalId",
@@ -2514,7 +2541,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [],
         "responses": {
           "200": {
@@ -2560,7 +2587,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [],
         "responses": {
           "200": {
@@ -2604,7 +2631,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [],
         "responses": {
           "200": {
