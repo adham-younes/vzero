@@ -8,12 +8,15 @@ test('authenticates both keys with read-only requests to the selected project', 
  const calls=[]
  const ok=await checkSupabaseConnection(config, async (url, options) => {
   calls.push({url: String(url), options})
-  return new Response('{}', {status:200})
+  // Model the observed provider restriction: public keys cannot read REST's root.
+  const denied = String(url).endsWith('/rest/v1/') && options.headers.apikey === config.publishableKey
+  return new Response('{}', {status:denied ? 401 : 200})
  })
  assert.equal(ok.status,'ok')
  assert.equal(calls.length,2)
  assert.deepEqual(calls.map(c=>c.options.headers.apikey),[config.publishableKey,config.secretKey])
- for(const c of calls){assert.equal(c.url,config.url+'/rest/v1/');assert.equal(c.options.method,'GET');assert.equal(c.options.redirect,'error');assert.equal(c.options.body,undefined)}
+ assert.deepEqual(calls.map(c=>c.url),[config.url+'/auth/v1/settings',config.url+'/rest/v1/'])
+ for(const c of calls){assert.equal(c.options.method,'GET');assert.equal(c.options.redirect,'error');assert.equal(c.options.body,undefined)}
 })
 test('refuses wrong project without a network call', async()=>{
  const network=()=>{throw new Error('Unexpected request')}
