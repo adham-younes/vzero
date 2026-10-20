@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T07:53:02.076710+00:00",
+  "updated_at": "2026-10-20T08:14:57.424646+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -236,7 +236,7 @@
     "supabase_project": "xsyxvswbiptbyxyqhdim",
     "status": "VERIFIED_MCP_AND_VERCEL_BOTH_KEYS",
     "evidence": "evidence/supabase-connection-2026-10-20/verification.json",
-    "model_provider": "NOT_CONFIGURED",
+    "model_provider": "GROQ_DEVELOPER_OWNER_CONFIRMED_NOT_CONNECTED_OR_TESTED",
     "model_budget": "NOT_CONFIRMED",
     "nexa_agent_connection": "NOT_VERIFIED",
     "account_connection_name": "agynexa",
@@ -248,7 +248,8 @@
         "secretKey": "ok"
       }
     },
-    "next_action": "Scoped accounts and lead intake delivered. Shared organizations, password recovery, knowledge/model provider and budget remain separate backlog scope."
+    "next_action": "Scoped accounts and lead intake delivered. Shared organizations, password recovery, knowledge/model provider and budget remain separate backlog scope.",
+    "model_evaluation": "reviews/GROQ-EVALUATION-2026-10-20.md"
   },
   "account_release": {
     "status": "VERIFIED_PRODUCTION",
