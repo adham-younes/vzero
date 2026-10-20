@@ -1,0 +1,5 @@
+import {json,failure} from '@/lib/supabase/server'
+export const runtime='nodejs'
+export const dynamic='force-dynamic'
+import {ownedAgent,dbError,publicRunFields} from '@/lib/studio/runtime'
+export async function GET(_r:Request,c:{params:Promise<{agentId:string}>}){try{const id=(await c.params).agentId;const ctx=await ownedAgent(id);const results=await Promise.all([ctx.client.from('agent_runs').select(publicRunFields).eq('agent_id',id).order('created_at',{ascending:false}).limit(50),ctx.client.from('support_requests').select('*').eq('agent_id',id).order('created_at',{ascending:false}).limit(50),ctx.client.from('agent_versions').select('id,settings,created_at').eq('agent_id',id).order('created_at',{ascending:false}).limit(20),ctx.client.from('agent_publications').select('*').eq('agent_id',id).maybeSingle(),ctx.client.from('agent_api_keys').select('id,label,created_at,revoked_at,expires_at').eq('agent_id',id).order('created_at',{ascending:false}).limit(50)]);results.forEach(x=>dbError(x.error));return json({runs:results[0].data,approvals:results[1].data,versions:results[2].data,publication:results[3].data,keys:results[4].data})}catch(e){return failure(e)}}

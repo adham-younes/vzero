@@ -1,0 +1,30 @@
+{
+  "project": "xsyxvswbiptbyxyqhdim",
+  "account": "agynexa",
+  "applied": true,
+  "migrations": [
+    {
+      "source_file": "supabase/migrations/20261020102401_studio_foundation.sql",
+      "source_sha256": "1b87775ea082bfc3c6ba738606adbbd248862075add2ec92c25a85a7c037d7b9",
+      "hosted_version": "20261020115103"
+    },
+    {
+      "source_file": "supabase/migrations/20261020113246_studio_runtime.sql",
+      "source_sha256": "3254ac441de81a777f5637c04d03c52197e0acddc3142f612712b1544eb5c09d",
+      "hosted_version": "20261020115108"
+    }
+  ],
+  "note": "MCP generated hosted timestamps; match name and SQL hash. Do not blindly reapply local filenames using db push.",
+  "public_tables_rls": 13,
+  "advisors": {
+    "errors": 0,
+    "warnings": [
+      "Existing Auth leaked password protection disabled; no Auth configuration changed."
+    ],
+    "info": [
+      "Three service-only tables intentionally have RLS with no client policies."
+    ]
+  },
+  "auth_changed": false,
+  "emails_sent": false
+}

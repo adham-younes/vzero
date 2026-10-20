@@ -3,7 +3,7 @@
   "info": {
     "title": "AGYNEXA implemented public API",
     "version": "2026-10-20",
-    "description": "Implemented branch APIs: existing production accounts, briefs, health and examples; Studio B workspace and saved-agent APIs verified only locally and gated by AGYNEXA_STUDIO_ENABLED. No model runtime or knowledge API. Stage-3 openapi.yaml remains a proposal."
+    "description": "AGYNEXA implemented accounts, briefs and Studio C/D runtime. Deployment/provider evidence: agent-studio/STAGES-CDE.md. Stage-3 proposed APIs remain separate."
   },
   "servers": [
     {
@@ -1484,6 +1484,1319 @@
           }
         }
       }
+    },
+    "/api/v1/agents/{agentId}/sources": {
+      "get": {
+        "summary": "List active knowledge sources",
+        "operationId": "getagentsagentIdsources",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      },
+      "post": {
+        "summary": "Process a private text source",
+        "operationId": "postagentsagentIdsources",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "maxLength": 160
+                  },
+                  "content": {
+                    "type": "string",
+                    "maxLength": 12000
+                  },
+                  "publicApproved": {
+                    "type": "boolean"
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "title",
+                  "content",
+                  "publicApproved",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/sources/{sourceId}": {
+      "get": {
+        "summary": "Read an owned active source",
+        "operationId": "getagentsagentIdsourcessourceId",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Erase source content/chunks and revoke retrieval",
+        "operationId": "deleteagentsagentIdsourcessourceId",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "sourceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/test-runs": {
+      "post": {
+        "summary": "Execute a saved draft; optional model override for comparison",
+        "operationId": "postagentsagentIdtestruns",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "maxLength": 3000
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "conversationId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "runId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "model": {
+                    "type": "string",
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "message",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/publish": {
+      "post": {
+        "summary": "Publish immutable version and source selection",
+        "operationId": "postagentsagentIdpublish",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "revision": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "widgetEnabled": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "requestKey",
+                  "revision",
+                  "widgetEnabled"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/unpublish": {
+      "post": {
+        "summary": "Disable invocation and invalidate widget sessions",
+        "operationId": "postagentsagentIdunpublish",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/activity": {
+      "get": {
+        "summary": "Latest 50 runs, approvals, keys and 20 versions",
+        "operationId": "getagentsagentIdactivity",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/keys": {
+      "post": {
+        "summary": "Create key; raw token returned exactly once",
+        "operationId": "postagentsagentIdkeys",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxLength": 80
+                  }
+                },
+                "required": [
+                  "label"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Revoke agent key",
+        "operationId": "deleteagentsagentIdkeys",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "keyId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "keyId"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/invoke": {
+      "post": {
+        "summary": "Invoke published snapshot with private server key",
+        "operationId": "postagentsagentIdinvoke",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "agentKey": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "maxLength": 3000
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "conversationId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "message",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/runs/{runId}": {
+      "get": {
+        "summary": "Read owned run state and usage",
+        "operationId": "getrunsrunId",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      }
+    },
+    "/api/v1/runs/{runId}/cancel": {
+      "post": {
+        "summary": "Cancel owned in-progress run",
+        "operationId": "postrunsrunIdcancel",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/approvals/{approvalId}/decision": {
+      "post": {
+        "summary": "Approve or reject the exact support proposal once",
+        "operationId": "postapprovalsapprovalIddecision",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "approvalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "decision": {
+                    "type": "string",
+                    "enum": [
+                      "approved",
+                      "rejected"
+                    ]
+                  }
+                },
+                "required": [
+                  "decision"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/usage": {
+      "get": {
+        "summary": "Usage from latest 100 owned runs, not billing",
+        "operationId": "getusage",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      }
+    },
+    "/api/v1/studio/models": {
+      "get": {
+        "summary": "Configured model slots and documented capabilities",
+        "operationId": "getstudiomodels",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        }
+      },
+      "post": {
+        "summary": "Probe model listings once per slot, rate-limited",
+        "operationId": "poststudiomodels",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/widget/{publicId}/session": {
+      "post": {
+        "summary": "Issue short-lived public knowledge session",
+        "operationId": "postwidgetpublicIdsession",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "publicId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/widget/{publicId}/invoke": {
+      "post": {
+        "summary": "Invoke public-only version; path contains agent id",
+        "operationId": "postwidgetpublicIdinvoke",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "widgetSession": []
+          }
+        ],
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "parameters": [
+          {
+            "name": "publicId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation result; inspect run.status"
+          },
+          "201": {
+            "description": "Resource created when applicable"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Missing or expired credential"
+          },
+          "403": {
+            "description": "Origin or permission denied"
+          },
+          "404": {
+            "description": "Not found or unpublished"
+          },
+          "409": {
+            "description": "Revision/idempotency conflict or prerequisites missing"
+          },
+          "413": {
+            "description": "Body exceeds limit"
+          },
+          "429": {
+            "description": "Rate or concurrency limit"
+          },
+          "503": {
+            "description": "Unavailable dependency"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "maxLength": 3000
+                  },
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "conversationId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "message",
+                  "requestKey"
+                ]
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1883,6 +3196,16 @@
         "in": "cookie",
         "name": "sb-xsyxvswbiptbyxyqhdim-auth-token",
         "description": "HttpOnly Supabase SSR session cookie; large values may be split into numbered .0/.1 cookies. Send the complete cookie jar issued by register/login. Server getUser validates identity; data RLS also checks the active session. Never fabricate a cookie or treat email confirmation as proof of email ownership."
+      },
+      "agentKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Server-to-server key scoped to one published agent; hash stored, revocable, 90-day expiry."
+      },
+      "widgetSession": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Public-source-only widget token, expires in ten minutes; publication generation checked on every call."
       }
     }
   }

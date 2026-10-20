@@ -1,5 +1,5 @@
-// Saved draft configuration only. Availability and capabilities are verified in C.
-export const modelIds = ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b'] as const
+// Models are allowlisted. Preview models require an internal evaluator.
+export const modelIds = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'] as const
 export const templates = {
  knowledgegrid: {
   title: 'KnowledgeGrid',

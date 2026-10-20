@@ -1,0 +1,39 @@
+import 'server-only'
+import {setTimeout as delay} from 'node:timers/promises'
+import {InputError} from '@/lib/account-validation'
+import {modelRegistry,pricingDate,pricingSource,type ModelId} from './models'
+
+const keyNames=['GROQ_API_KEY','GROQ_API_KEY_2','GROQ_API_KEY_3'] as const
+function credential(model:ModelId){const key=process.env[keyNames[modelRegistry[model].slot-1]]?.trim();if(!key)throw new InputError('provider_not_configured',503);return key}
+export function configuredModels(){return Object.entries(modelRegistry).map(([id,info])=>({id,...info,configured:!!process.env[keyNames[info.slot-1]]?.trim(),availability:'not_checked',structuredWithTools:false,structuredWithStreaming:false}))}
+export function numberSetting(name:string,fallback:number,min:number,max:number){const n=Number(process.env[name]);return Number.isFinite(n)&&n>=min&&n<=max?Math.floor(n):fallback}
+export type GroundedAnswer={answer:string;citations:{chunkId:string;quote:string}[];support:{propose:boolean;title:string;details:string}}
+const schema={type:'object',additionalProperties:false,required:['answer','citations','support'],properties:{answer:{type:'string'},citations:{type:'array',items:{type:'object',additionalProperties:false,required:['chunkId','quote'],properties:{chunkId:{type:'string'},quote:{type:'string'}}}},support:{type:'object',additionalProperties:false,required:['propose','title','details'],properties:{propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}}}}}
+export function parseAnswer(content:string):GroundedAnswer{
+ let v:GroundedAnswer
+ try{v=JSON.parse(content)}catch{throw new InputError('invalid_model_output',502)}
+ if(!v||typeof v.answer!=='string'||!v.answer.trim()||v.answer.length>12000||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string'||typeof c.quote!=='string'||!c.quote.trim()||c.quote.length>1400)||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
+ return v
+}
+export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal){
+ const key=credential(model);const started=Date.now();let response:Response|undefined
+ for(let attempt=0;attempt<2;attempt++){
+  response=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',cache:'no-store',signal,headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({model,messages,stream:false,max_completion_tokens:4096,reasoning_effort:model.startsWith('qwen/')?'none':'high',reasoning_format:'hidden',response_format:{type:'json_schema',json_schema:{name:'grounded_answer',strict:true,schema}}})})
+  if(response.status!==429)break
+  const retry=response.headers.get('retry-after');const seconds=retry===null?1:Number(retry)
+  if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5)throw new InputError('provider_rate_limited',429)
+  await delay(Math.ceil(seconds*1000)+100,undefined,{signal})
+ }
+ if(!response?.ok){const status=response?.status;throw new InputError(status===401||status===403?'provider_access_denied':status===402?'provider_billing':status===400||status===404?'provider_model_unsupported':'provider_unavailable',status===400?502:503)}
+ const data=await response.json();const content=data.choices?.[0]?.message?.content
+ if(typeof content!=='string'||data.choices?.[0]?.finish_reason!=='stop')throw new InputError('invalid_model_output',502)
+ const answer=parseAnswer(content);const input=Math.max(0,Number(data.usage?.prompt_tokens)||0),output=Math.max(0,Number(data.usage?.completion_tokens)||0);const prices=modelRegistry[model]
+ return {answer,usage:{input_tokens:input,output_tokens:output,latency_ms:Date.now()-started,request_id:String(data.x_groq?.id||response.headers.get('x-request-id')||data.id||'').slice(0,160),estimated_cost_usd:(input*prices.inputPrice+output*prices.outputPrice)/1000000,pricing_date:pricingDate,pricing_source:pricingSource,key_slot:prices.slot}}
+}
+export async function checkProvider(){
+ return await Promise.all(Object.keys(modelRegistry).map(async id=>{
+  const model=id as ModelId
+  try{const response=await fetch('https://api.groq.com/openai/v1/models',{headers:{Authorization:`Bearer ${credential(model)}`},cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)return {model,status:'rejected',http:response.status};const data=await response.json();return {model,status:data.data?.some((x:{id:string})=>x.id===model)?'listed':'not_listed',http:response.status}}
+  catch{return {model,status:'unavailable'}}
+ }))
+}

@@ -7,7 +7,7 @@
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "STUDIO_B_VERIFIED_LOCAL_ACCOUNT_FIX_NOT_PRODUCTION",
+  "status": "STUDIO_CDE_IMPLEMENTED_RELEASE_VERIFICATION",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
@@ -126,13 +126,13 @@
     "scoped_lead_and_knowledge_implementation": true,
     "active_program": {
       "name": "Agent Studio",
-      "stage": "B",
-      "branch_only": true,
-      "production": false,
-      "merge_main": false,
-      "live_database_changes": false,
+      "stage": "CDE",
+      "branch_only": false,
+      "production": true,
+      "merge_main": true,
+      "live_database_changes": true,
       "live_auth_changes": false,
-      "advance_automatically": false,
+      "advance_automatically": true,
       "source": "DECISIONS.md"
     }
   },
@@ -154,9 +154,9 @@
     "content_baseline": "content-inventory.json",
     "tool_baseline": "tool-inventory.json"
   },
-  "next_stage": "agent-studio/C",
-  "next_stage_authorized": false,
-  "next_action": "Owner reviews locally verified B. C follows acceptance. Production account fix and hosted migration require separate authorization; no main merge.",
+  "next_stage": "agent-studio/E",
+  "next_stage_authorized": true,
+  "next_action": "Complete grouped release checks, apply additive Studio schema on the authorized AGYNEXA project, deploy main, and record real Groq evaluation.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -240,7 +240,7 @@
         "secretKey": "ok"
       }
     },
-    "next_action": "Studio SQL applied to isolated local data only; hosted database/Auth changes remain separately authorized.",
+    "next_action": "Groq keys exist on Vercel per owner; actual inference to be verified on the release.",
     "model_evaluation": "reviews/GROQ-EVALUATION-2026-10-20.md"
   },
   "account_release": {
@@ -250,42 +250,44 @@
     "current_issue": "Production error reported by owner at d030a60. Reproducible error paths repaired locally; exact failing request cause unresolved. See Studio B."
   },
   "agent_studio": {
-    "stage": "B",
-    "status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+    "stage": "CDE",
+    "status": "IMPLEMENTED_PENDING_PRODUCTION_VERIFICATION",
     "plan": "agent-studio/EXECUTION-PLAN.md",
-    "report": "agent-studio/STAGE-B.md",
+    "report": "agent-studio/STAGES-CDE.md",
     "baseline_main": "d030a60186380b3a106bc8ac0071d74abffea503",
-    "owner_acceptance": "CONTINUATION_AFTER_A_AUTHORIZED_B_AWAITING_ACCEPTANCE",
-    "next_stage_authorized": false,
+    "owner_acceptance": "ALL_REMAINING_STAGES_AND_PRODUCTION_AUTHORIZED_D26",
+    "next_stage_authorized": true,
     "production_deployed": false,
-    "runtime_implemented": false,
-    "new_migrations_applied": false,
+    "runtime_implemented": true,
+    "new_migrations_applied": true,
     "implementation_commit": "ea7edc13815d4b7ef9d0d44130c7bc73c13b9c0e",
     "evidence": "agent-studio/evidence/stage-b/verification.json",
     "pull_request": "https://github.com/adham-younes/vzero/pull/18",
     "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
     "local_sql_applied": true,
-    "hosted_migrations_applied": false,
+    "hosted_migrations_applied": true,
     "capabilities": [
-      "single-owner workspace",
-      "saved agents",
-      "KnowledgeGrid/ServiceFlow templates",
-      "draft settings with optimistic concurrency",
-      "RLS membership isolation"
+      "saved agents and isolated workspaces",
+      "private text sources and lexical retrieval",
+      "Groq adapter with three server key slots",
+      "concurrent model comparison",
+      "grounded citations and run/usage history",
+      "support proposals and atomic approvals",
+      "immutable versions, API keys, revocation",
+      "public-source-only widget with short-lived sessions"
     ],
     "migration": "supabase/migrations/20261020102401_studio_foundation.sql",
-    "feature_flag": "AGYNEXA_STUDIO_ENABLED=true",
+    "feature_flag": "Enabled by default; AGYNEXA_STUDIO_ENABLED=false disables",
     "not_implemented": [
-      "Groq runtime",
-      "knowledge retrieval",
-      "immutable published versions",
-      "tools and approvals",
-      "API keys and widget",
-      "account recovery"
+      "account recovery",
+      "billing provider",
+      "external CRM/ERP connectors",
+      "embeddings/PDF/image ingestion"
     ],
     "account_fix_commit": "5dc609b",
     "preview_receipt": "agent-studio/evidence/stage-b/preview.json",
-    "preview_status": "READY_VERIFIED_SOURCE_299919b_PROTECTED_STUDIO_DISABLED"
+    "preview_status": "READY_VERIFIED_SOURCE_299919b_PROTECTED_STUDIO_DISABLED",
+    "hosted_migration_receipt": "agent-studio/evidence/stage-cde/database.json"
   },
   "account_hotfix": {
     "status": "DEPLOYED_PRODUCTION_SCOPED_CHECKS_PASS",

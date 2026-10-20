@@ -25,6 +25,9 @@ export function briefInput(body: Record<string, unknown>) {
 }
 export async function readMutation(request: Request) {
  if (request.headers.get('origin') !== new URL(request.url).origin) throw new InputError('invalid_origin',403)
+ return readJsonBody(request)
+}
+export async function readJsonBody(request:Request) {
  if (!request.headers.get('content-type')?.startsWith('application/json')) throw new InputError('invalid_content_type',415)
  if (Number(request.headers.get('content-length')) > 20000) throw new InputError('body_too_large',413)
  const reader=request.body?.getReader();let size=0;const parts:Uint8Array[]=[]

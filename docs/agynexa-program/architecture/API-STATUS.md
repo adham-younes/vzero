@@ -130,3 +130,7 @@ GET account وGET/POST/DELETE project-briefs تتطلب جلسة صالحة؛ Co
 أضيفت 7 عمليات: POST register/login/logout، GET account، GET/POST/DELETE project-briefs. الجلسات HttpOnly؛ getUser يتحقق خادميًا وRLS يقيّد المستخدم والجلسة. التسجيل وحده يستخدم المفتاح السري لإنشاء مستخدم مؤكد تلقائيًا؛ CRUD الموجز يستخدم جلسة المستخدم. لا إرسال بريد. عقد التفاصيل في current-api.openapi.json. المجموع الحالي 10 عمليات؛ التقارير السابقة تصف إصداراتها التاريخية.
 
 إصلاح الحساب D-25: GET /api/account يرجع 401 إذا لم يكن profile مرئيًا بعد Auth، وتبقى أخطاء قاعدة البيانات الفعلية 503. واجهة الموجزات تعالج فشل التحميل مستقلة عن الحساب؛ لا API جديد. [التسليم](../releases/ACCOUNT-HOTFIX-2026-10-20.md).
+
+## Studio C/D/E
+
+أضيفت مصادر نصية، تشغيل Groq، سجل التشغيل والاستهلاك، نشر وإيقاف الإصدارات، مفاتيح API وجلسات widget وموافقات الدعم. المسارات الفعلية موثقة في current-api.openapi.json. [التنفيذ والحدود](../agent-studio/STAGES-CDE.md). لا CRM/ERP أو فوترة أو استعادة حساب.

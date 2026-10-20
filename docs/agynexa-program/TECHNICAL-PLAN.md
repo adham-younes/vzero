@@ -116,3 +116,7 @@ SQL مسودة للمراجعة تنتهي بـ`ROLLBACK` ولم تُشغل. ت�
 مصادر التنفيذ: `lib/studio/settings.ts` و`validation.ts` و`server.ts`، ومكون `@components/studio.tsx` ومسارا /studio و/ar/studio. خمسة HTTP operations إضافية في ثلاثة handlers؛ عقدها في OpenAPI الحالي مع تمييز NOT_PRODUCTION. طبقة الخادم تتحقق من الجلسة والعضوية قبل queries المساحة، وRLS تعيد الفحص في Data API. إعداد النموذج ليس provider adapter؛ runtime/retrieval/knowledge لم تنفذ.
 
 البيانات: organizations + memberships + agents. Bootstrap محدود بلا org/user معاملات؛ إعدادات المسودة mutable مع revision؛ إصدار النشر immutable مؤجل إلى D. لا أعضاء مدعوين أو أدوار إضافية مفوضة الآن. تفعيل Studio بحاجز خادمي؛ محليًا اتصال loopback منفصل يرفض Vercel ويحفظ تثبيت مشروع الإنتاج. [التفاصيل والاختبارات](agent-studio/STAGE-B.md).
+
+## تسليم Studio الكامل المفوض، 20 أكتوبر 2026
+
+D-26 يجيز إكمال C/D/E والنشر الإنتاجي، ويتقدم على نقاط التوقف التاريخية أعلاه. [تقرير التنفيذ والقيود](agent-studio/STAGES-CDE.md) و[STATUS](STATUS.json) هما المرجع الجاري. تجمّع الفحوص عند التسليم فقط. القالبان فوق محرك واحد؛ الاستعادة والفوترة والتكاملات الخارجية غير مكتملة. لا تغييرات Auth أو بريد.

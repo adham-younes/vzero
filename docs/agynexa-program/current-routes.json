@@ -277,5 +277,107 @@
     "GET /api/v1/agents/{agentId}",
     "PATCH /api/v1/agents/{agentId}"
   ],
-  "updated_at": "2026-10-20"
+  "updated_at": "2026-10-20",
+  "studio_runtime_routes": [
+    {
+      "path": "/api/v1/agents/{agentId}/sources",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/sources/{sourceId}",
+      "methods": [
+        "get",
+        "delete"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/test-runs",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/publish",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/unpublish",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/activity",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/keys",
+      "methods": [
+        "post",
+        "delete"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/invoke",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/runs/{runId}",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "path": "/api/v1/runs/{runId}/cancel",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/approvals/{approvalId}/decision",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/usage",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "path": "/api/v1/studio/models",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/widget/{publicId}/session",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/widget/{publicId}/invoke",
+      "methods": [
+        "post"
+      ]
+    }
+  ],
+  "widget_page": {
+    "path": "/widget/{publicId}",
+    "index": false,
+    "cache": "private, no-store",
+    "sitemap": false
+  }
 }
