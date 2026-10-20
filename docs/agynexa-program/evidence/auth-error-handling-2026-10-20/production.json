@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-20",
+  "environment": "production",
+  "url": "https://vzero-nine-beryl.vercel.app",
+  "product_commit": "94db39ee53a14ab448e84d71df98cd149cee7610",
+  "merge_commit": "5f178acc4353f17e76fbd2a8c019f787ef0d4ed9",
+  "deployment_id": "dpl_7tB1SVC3Nm6QR1V9fBan2kGX1kyz",
+  "deployment_status": "READY",
+  "deployment_target": "production",
+  "http": [
+    {
+      "path": "/api/account",
+      "method": "GET",
+      "status": 401,
+      "error": "sign_in_required",
+      "private_no_store": true
+    },
+    {
+      "path": "/api/v1/agents",
+      "method": "GET",
+      "status": 401,
+      "error": "sign_in_required",
+      "private_no_store": true
+    },
+    {
+      "path": "/api/auth/login",
+      "method": "POST",
+      "status": 400,
+      "error": "invalid_input",
+      "private_no_store": true
+    }
+  ],
+  "regression_tests": {
+    "before": {
+      "passed": 2,
+      "failed": 4
+    },
+    "after": {
+      "passed": 10,
+      "failed": 0
+    }
+  },
+  "build": "PASS",
+  "typescript": "PASS",
+  "historical_transient_root_cause": "NOT_ESTABLISHED",
+  "limits": [
+    "No authenticated chat journey: browser signed out",
+    "No real credentials, new users, DB changes, email or SMTP operations",
+    "Failure classification tested with simulated upstream errors; no production outage injection"
+  ],
+  "email_recovery": "DEFERRED_BY_OWNER"
+}

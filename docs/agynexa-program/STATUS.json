@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T20:02:45.959608+00:00",
+  "updated_at": "2026-10-20T20:05:43.728021+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,16 +14,16 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "fc5b08443de4a8ccd9d645299c07726a1305b8cb",
-    "merge_commit": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/26",
+    "implementation_commit": "94db39ee53a14ab448e84d71df98cd149cee7610",
+    "merge_commit": "5f178acc4353f17e76fbd2a8c019f787ef0d4ed9",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/31",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_DEPLOYED_UI_MODULE_REMOVAL_VERIFIED",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/2iZyyPUzB7vbc6HCt3aJbKpGWVSA",
-    "receipt": "agent-studio/API-UI-REMOVAL.md",
-    "evidence": "agent-studio/evidence/api-ui-removal/production.json"
+    "status_at_verification": "READY_PRODUCTION_SCOPED_HTTP_AND_PRIOR_UI_VERIFIED",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7tB1SVC3Nm6QR1V9fBan2kGX1kyz",
+    "receipt": "releases/CONTINUATION-2026-10-20.md",
+    "evidence": "evidence/auth-error-handling-2026-10-20/production.json"
   },
   "stage_status": [
     {
@@ -160,7 +160,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Email/SMTP/recovery deferred by owner. Finish scoped auth error-classification release; historical transient cause remains unproven. Client delivery portal is not implemented.",
+  "next_action": "UI and auth error-classification releases are deployed and verified within recorded scope. Email/SMTP/recovery deferred by owner. Historical intermittent cause remains unproven; next product scope is client delivery portal definition, not a claim of implementation.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -398,11 +398,15 @@
     "production_url": "https://vzero-nine-beryl.vercel.app/ar"
   },
   "auth_error_handling": {
-    "status": "IMPLEMENTED_BUILD_VERIFIED",
+    "status": "DEPLOYED_VERIFIED_SCOPE",
     "implementation_commit": "94db39e",
     "report": "releases/CONTINUATION-2026-10-20.md",
     "tests": "10 PASS; 4 regression failures reproduced before fix",
     "historical_root_cause": "NOT_ESTABLISHED",
-    "email_recovery": "DEFERRED_BY_OWNER"
+    "email_recovery": "DEFERRED_BY_OWNER",
+    "merge_commit": "5f178acc4353f17e76fbd2a8c019f787ef0d4ed9",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/31",
+    "deployment_id": "dpl_7tB1SVC3Nm6QR1V9fBan2kGX1kyz",
+    "evidence": "evidence/auth-error-handling-2026-10-20/production.json"
   }
 }
