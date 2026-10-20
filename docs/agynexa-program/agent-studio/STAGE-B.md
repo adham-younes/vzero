@@ -90,3 +90,5 @@ python tests/account-profile-regression.py
 - إصلاح الحساب والأصول مستقل: `5dc609b`.
 - أساس Studio واختباراته: `ea7edc13815d4b7ef9d0d44130c7bc73c13b9c0e`.
 - [طلب المراجعة #18](https://github.com/adham-younes/vzero/pull/18) يبقى Draft، دون دمج. رابط المعاينة ونتيجة بنائها في إيصال المعاينة عند صدوره؛ وجود Preview لا يثبت إعداد بيانات Studio المعزولة.
+
+نجح بناء Vercel للمعاينة من `299919b`: [رابط المعاينة](https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app)، [إيصال النشر](evidence/stage-b/preview.json). الدخول غير المصادق يحول إلى Vercel login؛ لم تغيّر الحماية. Studio غير مفعّل افتراضيًا دون قاعدة معزولة، والتحقق التفاعلي المثبت محلي فقط. الالتزام اللاحق بإيصال النشر توثيق فقط.

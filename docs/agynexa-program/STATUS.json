@@ -302,6 +302,8 @@
       "API keys and widget",
       "account recovery"
     ],
-    "account_fix_commit": "5dc609b"
+    "account_fix_commit": "5dc609b",
+    "preview_receipt": "agent-studio/evidence/stage-b/preview.json",
+    "preview_status": "READY_VERIFIED_SOURCE_299919b_PROTECTED_STUDIO_DISABLED"
   }
 }
