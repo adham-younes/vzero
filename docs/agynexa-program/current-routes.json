@@ -260,5 +260,22 @@
     "GET /api/v1/project-briefs",
     "POST /api/v1/project-briefs",
     "DELETE /api/v1/project-briefs"
-  ]
+  ],
+  "studio_pages": [
+    {
+      "en": "/studio",
+      "ar": "/ar/studio",
+      "index": false,
+      "cache": "private, no-store",
+      "deployment": "LOCAL_VERIFIED_NOT_PRODUCTION"
+    }
+  ],
+  "studio_apis": [
+    "POST /api/v1/workspace",
+    "GET /api/v1/agents",
+    "POST /api/v1/agents",
+    "GET /api/v1/agents/{agentId}",
+    "PATCH /api/v1/agents/{agentId}"
+  ],
+  "updated_at": "2026-10-20"
 }

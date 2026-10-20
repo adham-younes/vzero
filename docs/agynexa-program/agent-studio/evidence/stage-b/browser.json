@@ -1,0 +1,17 @@
+{
+  "environment": "local production build and real local Auth/PostgREST",
+  "checks": [
+    "browser creates saved KnowledgeGrid draft",
+    "browser edits settings without overflow at 1440px",
+    "Arabic 390px real logout/login preserves saved settings with RTL and no overflow",
+    "brief outage preserves account and retry restores real brief list; no false empty state",
+    "asset attribution section and footer link removed in both locales",
+    "both Studio pages noindex and private no-store",
+    "64 marketing sitemap URLs preserved; Studio excluded"
+  ],
+  "passed": 7,
+  "page_errors": [],
+  "fault_injection": [
+    "brief API 503 only; actual account login and retry use real local backend"
+  ]
+}

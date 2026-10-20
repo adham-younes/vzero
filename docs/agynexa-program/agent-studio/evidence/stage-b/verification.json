@@ -1,0 +1,62 @@
+{
+  "environment": "isolated local PostgreSQL/GoTrue/PostgREST + Next production build",
+  "implementation_commit": "ea7edc13815d4b7ef9d0d44130c7bc73c13b9c0e",
+  "main": "d030a60186380b3a106bc8ac0071d74abffea503",
+  "build": "PASS",
+  "typescript": "PASS_DURING_BUILD",
+  "unit_tests": 14,
+  "http_data_api_checks": 44,
+  "browser_checks": 7,
+  "hero_sha256": {
+    "public/videos/background.mp4": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+    "@components/landing-5-hero-video.tsx": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+    "@components/landing-5-hero-section.tsx": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1"
+  },
+  "hero_css_changed_in_b": false,
+  "new_tables": [
+    "organizations",
+    "memberships",
+    "agents"
+  ],
+  "rls_enabled_all_new_tables": true,
+  "local_sql_applied": [
+    "20261020074037",
+    "20261020102401"
+  ],
+  "hosted_sql_applied_this_stage": [],
+  "live_auth_changes": false,
+  "production_deployed": false,
+  "model_calls": 0,
+  "new_dependencies": [],
+  "local_dependencies": "PostgreSQL 17.11, GoTrue 2.197.0, PostgREST 16.4, Kong 2.8.1; synthetic JWT keys",
+  "production_diagnosis": {
+    "owner_reported_sha": "d030a60",
+    "health": 200,
+    "anonymous_account": 401,
+    "users_without_profile": 0,
+    "logs_window_utc": [
+      "2026-10-20T08:00:00Z",
+      "2026-10-20T10:35:00Z"
+    ],
+    "profile_brief_auth_user_log_statuses": [
+      200
+    ],
+    "vercel_connector": "404 project/deployment; runtime logs unavailable",
+    "exact_cause": "UNRESOLVED; two reproduced error paths fixed locally"
+  },
+  "limitations": [
+    "not deployed to Production",
+    "Studio disabled in hosted Preview until isolated database and feature flag configured",
+    "recovery blocks commercial launch",
+    "no live model or knowledge functionality",
+    "local stack does not emulate all hosted Supabase services"
+  ],
+  "local_auth_email_checks": {
+    "local_test_users": 4,
+    "confirmation_sent": 0,
+    "recovery_sent": 0,
+    "email_change_sent": 0
+  },
+  "missing_profile_regression": "PASS_LOCAL_FIXTURE_REMOVED_AND_RESTORED",
+  "account_fix_commit": "5dc609b"
+}

@@ -1,6 +1,6 @@
 # الخطة التقنية وخريطة التنفيذ
 
-الحالة الحالية: موقع وحسابات فردية وموجزات دائمة، دون Agent Runtime. التكليف الجاري [Studio A](agent-studio/README.md). مخطط المسار الأصلي أدناه يعود إلى `991deca`، وتسليم الحسابات `e6adf5e` موثق في آخر الملف. راجع [حالة المراحل](STAGE-MATRIX.md) قبل تفسير أي مخطط على أنه نظام منشور.
+الحالة الحالية: موقع وحسابات فردية وموجزات دائمة، دون Agent Runtime. التكليف الجاري [Studio B](agent-studio/README.md). مخطط المسار الأصلي أدناه يعود إلى `991deca`، وتسليم الحسابات `e6adf5e` موثق في آخر الملف. راجع [حالة المراحل](STAGE-MATRIX.md) قبل تفسير أي مخطط على أنه نظام منشور.
 
 ## 1. البنية الموجودة
 
@@ -110,3 +110,9 @@ SQL مسودة للمراجعة تنتهي بـ`ROLLBACK` ولم تُشغل. ت�
 ## استكمال الحسابات والموجزات — 20 أكتوبر 2026
 
 توجيه المالك الأحدث يستكمل المرحلة 5: AUTH-01 حسابات فردية وDATA-01 مخطط محدود وLEAD-01 حفظ موجز فعلي. التسجيل مباشر بلا بريد، والعزل بملكية المستخدم والجلسة النشطة. [تقرير التنفيذ والحدود](releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md) و[حالة التحقق](evidence/accounts-2026-10-20/verification.json) يحدّثان الأوصاف التاريخية أعلاه؛ لا مؤسسات مشتركة أو RAG منفذ.
+
+## Studio B — إضافة معزولة
+
+مصادر التنفيذ: `lib/studio/settings.ts` و`validation.ts` و`server.ts`، ومكون `@components/studio.tsx` ومسارا /studio و/ar/studio. خمسة HTTP operations إضافية في ثلاثة handlers؛ عقدها في OpenAPI الحالي مع تمييز NOT_PRODUCTION. طبقة الخادم تتحقق من الجلسة والعضوية قبل queries المساحة، وRLS تعيد الفحص في Data API. إعداد النموذج ليس provider adapter؛ runtime/retrieval/knowledge لم تنفذ.
+
+البيانات: organizations + memberships + agents. Bootstrap محدود بلا org/user معاملات؛ إعدادات المسودة mutable مع revision؛ إصدار النشر immutable مؤجل إلى D. لا أعضاء مدعوين أو أدوار إضافية مفوضة الآن. تفعيل Studio بحاجز خادمي؛ محليًا اتصال loopback منفصل يرفض Vercel ويحفظ تثبيت مشروع الإنتاج. [التفاصيل والاختبارات](agent-studio/STAGE-B.md).

@@ -7,7 +7,7 @@
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "SITE_ACCOUNTS_VERIFIED_STUDIO_A_AWAITING_ACCEPTANCE",
+  "status": "STUDIO_B_VERIFIED_LOCAL_ACCOUNT_FIX_NOT_PRODUCTION",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
@@ -141,20 +141,20 @@
     "scoped_lead_and_knowledge_implementation": true,
     "active_program": {
       "name": "Agent Studio",
-      "stage": "A",
+      "stage": "B",
       "branch_only": true,
       "production": false,
       "merge_main": false,
       "live_database_changes": false,
       "live_auth_changes": false,
       "advance_automatically": false,
-      "source": "agent-studio/EXECUTION-PLAN.md"
+      "source": "DECISIONS.md"
     }
   },
   "current_documentation_work": {
     "branch": "codex/agynexa-studio-stage-a",
     "product_code_changed": true,
-    "receipt": "agent-studio/STAGE-A.md"
+    "receipt": "agent-studio/STAGE-B.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -169,9 +169,9 @@
     "content_baseline": "content-inventory.json",
     "tool_baseline": "tool-inventory.json"
   },
-  "next_stage": "agent-studio/B",
+  "next_stage": "agent-studio/C",
   "next_stage_authorized": false,
-  "next_action": "Owner reviews Agent Studio stage A fixed-frame before/after evidence. Stop before B; no merge or Production deployment.",
+  "next_action": "Owner reviews locally verified B. C follows acceptance. Production account fix and hosted migration require separate authorization; no main merge.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -200,7 +200,7 @@
     "completion_evidence_required": "Record comparison with current implementation and plan, relevant recommendations, decisions/deferred items and next scoped action",
     "embedded_instructions_are_execution_authorization": false,
     "completion_evidence": "reviews/MARKET-REVIEW-RECONCILIATION-2026-10-19.md",
-    "scope_decision": "Market review already reconciled; no RFQ pivot. New owner Agent Studio program extends site stages 0–6; stage A only is active."
+    "scope_decision": "Reviewed in B: limited scope, isolation and evidence retained; no RFQ pivot; latest Studio instructions govern."
   },
   "current_candidate_delivery": {
     "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
@@ -259,29 +259,49 @@
         "secretKey": "ok"
       }
     },
-    "next_action": "No credential changes in A. Stage B requires isolated data environment; existing production database/Auth changes require separate project/action approval.",
+    "next_action": "Studio SQL applied to isolated local data only; hosted database/Auth changes remain separately authorized.",
     "model_evaluation": "reviews/GROQ-EVALUATION-2026-10-20.md"
   },
   "account_release": {
     "status": "VERIFIED_PRODUCTION",
     "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md",
-    "evidence": "evidence/accounts-2026-10-20/verification.json"
+    "evidence": "evidence/accounts-2026-10-20/verification.json",
+    "current_issue": "Production error reported by owner at d030a60. Reproducible error paths repaired locally; exact failing request cause unresolved. See Studio B."
   },
   "agent_studio": {
-    "stage": "A",
-    "status": "VERIFIED_LOCAL_PENDING_OWNER_ACCEPTANCE",
+    "stage": "B",
+    "status": "VERIFIED_LOCAL_NOT_PRODUCTION",
     "plan": "agent-studio/EXECUTION-PLAN.md",
-    "report": "agent-studio/STAGE-A.md",
+    "report": "agent-studio/STAGE-B.md",
     "baseline_main": "d030a60186380b3a106bc8ac0071d74abffea503",
-    "owner_acceptance": "PENDING",
+    "owner_acceptance": "CONTINUATION_AFTER_A_AUTHORIZED_B_AWAITING_ACCEPTANCE",
     "next_stage_authorized": false,
     "production_deployed": false,
     "runtime_implemented": false,
     "new_migrations_applied": false,
-    "implementation_commit": "a332057",
-    "evidence": "agent-studio/evidence/stage-a/verification.json",
+    "implementation_commit": "ea7edc13815d4b7ef9d0d44130c7bc73c13b9c0e",
+    "evidence": "agent-studio/evidence/stage-b/verification.json",
     "pull_request": "https://github.com/adham-younes/vzero/pull/18",
     "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
-    "preview_receipt": "agent-studio/evidence/stage-a/preview.json"
+    "local_sql_applied": true,
+    "hosted_migrations_applied": false,
+    "capabilities": [
+      "single-owner workspace",
+      "saved agents",
+      "KnowledgeGrid/ServiceFlow templates",
+      "draft settings with optimistic concurrency",
+      "RLS membership isolation"
+    ],
+    "migration": "supabase/migrations/20261020102401_studio_foundation.sql",
+    "feature_flag": "AGYNEXA_STUDIO_ENABLED=true",
+    "not_implemented": [
+      "Groq runtime",
+      "knowledge retrieval",
+      "immutable published versions",
+      "tools and approvals",
+      "API keys and widget",
+      "account recovery"
+    ],
+    "account_fix_commit": "5dc609b"
   }
 }

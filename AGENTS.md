@@ -9,7 +9,7 @@ Documentation is a delivery requirement explicitly requested by the owner. Start
 - Preserve the original video and both Hero component files. A previous scoped CSS color/overlay correction is not permission to redesign the Hero.
 - Preserve the AGYNEXA identity, approved bilingual content, ten services and nine solutions unless the owner requests a change. `DESIGN.md` describes the design contract.
 - Follow actual aliases in `tsconfig.json`: active UI components are under `@components/` and `@ui/`.
-- Distinguish `IMPLEMENTED`, `VERIFIED`, `SPECIFIED`, `REQUIRES_ACCESS`, and `BLOCKED`. The site has ten HTTP operations across eight route handlers, including individual accounts and private project briefs. It is not a connected enterprise agent platform.
+- Distinguish `IMPLEMENTED`, `VERIFIED`, `SPECIFIED`, `REQUIRES_ACCESS`, and `BLOCKED`. The branch has fifteen HTTP operations across eleven route handlers; ten are in the existing production release and five belong to the locally verified Studio foundation. It is not a connected enterprise agent platform.
 - Before UI/design work, read `docs/agynexa-program/CONNECTED-DESIGN-TOOLS.md`: the owner confirms 11 Vercel Connect resources for interface enrichment. Verify the needed capability and resource scope when using a connector; do not conflate connection with tested runtime integration.
 - Use saved public reference research. Re-fetch only a specific missing or outdated item that affects the work.
 - No secrets, customer data, private account output, dependencies or build artifacts in this public repository.
@@ -29,6 +29,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## Active owner scope: Agent Studio stage A
+## Active owner scope: Agent Studio stage B
 
-Read `docs/agynexa-program/agent-studio/EXECUTION-PLAN.md` and `agent-studio/README.md`. This new staged program extends the old site plan. Only A is authorized now: correct current documentation and diagnose/repair Hero dimming with a minimal CSS change, unchanged video/components/content/layout/playback, fixed-frame evidence and a separate reversible commit. Stop for owner acceptance before B. Do not push main, merge, deploy Production, apply new migrations to an existing database, or change live Auth settings. Use an independent branch and isolated preview/local environment. No email confirmation, OTP, magic link, welcome email, SMTP setup or recovery-email test. Groq authorization belongs to later functional work, not stage A. Earlier production authorizations do not apply to this program.
+Read `docs/agynexa-program/agent-studio/EXECUTION-PLAN.md`, `agent-studio/README.md` and `STAGE-B.md`. The owner subsequently requested account repair, removal of visible asset attribution, and continuation after A (D24). B is implemented and locally verified; stop for acceptance before C. Preserve the Hero baseline from A; do not revisit it during Studio work. Do not push main, merge, deploy Production, apply new migrations to an existing database, or change live Auth settings without separate project/action authorization. Use an independent branch and isolated local data. No email confirmation, OTP, magic link, welcome email, SMTP setup or recovery-email test. Groq authorization belongs to C, not B. Earlier production authorizations do not apply to this program.
