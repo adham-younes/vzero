@@ -1,5 +1,6 @@
 'use client'
 
+import Breadcrumbs from './breadcrumbs'
 import Image from 'next/image'
 import pages from '@/lib/program-pages.json'
 import {Action,useLanguage} from './agynexa-shell'
@@ -11,7 +12,7 @@ export default function AgentNexosIntro() {
  return <section className={`container ${styles.intro}`}>
   <Image className={styles.art} src="/images/agentnexos-neural.webp" alt="" fill sizes="(max-width: 1280px) 100vw, 1280px" preload/>
   <div className={styles.copy}>
-   <p className="eyebrow">AGYNEXA / AgentNexOS</p>
+   <Breadcrumbs/>
    <h1>{t(data.title)}</h1>
    <p className={styles.description}>{t(data.intro)}</p>
    <Action href="/architecture">{t(['Explore the architecture','استكشف البنية'])}</Action>
