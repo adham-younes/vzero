@@ -3,7 +3,7 @@
   "info": {
     "title": "AGYNEXA implemented public API",
     "version": "2026-10-20",
-    "description": "Existing catalog and procurement APIs plus a read-only Supabase health probe. No project brief intake, knowledge runtime, authenticated user workflow or database writes. Stage-3 openapi.yaml remains a proposal."
+    "description": "Current site APIs: catalog, illustrative procurement, read-only Supabase health, individual authentication and persistent owner-only project briefs. No agent runtime or knowledge API. Stage-3 openapi.yaml is a separate proposal."
   },
   "servers": [
     {
@@ -448,7 +448,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/auth/login": {
@@ -463,7 +464,7 @@
             "description": "Invalid input"
           },
           "401": {
-            "description": "Sign in required"
+            "description": "Invalid email or password; generic response"
           },
           "403": {
             "description": "Wrong origin"
@@ -473,6 +474,12 @@
           },
           "503": {
             "description": "Unavailable"
+          },
+          "413": {
+            "description": "Body exceeds 20KB"
+          },
+          "415": {
+            "description": "JSON required"
           }
         },
         "requestBody": {
@@ -493,19 +500,21 @@
                   },
                   "password": {
                     "type": "string",
-                    "maxLength": 128
+                    "maxLength": 128,
+                    "minLength": 1
                   }
                 }
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/auth/logout": {
       "post": {
         "summary": "logout",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "End the current local session using Supabase signOut. No explicit getUser guard; a missing session is not documented as an authenticated action. Same-origin JSON mutation <=20KB. Private no-store responses. No application login/signup rate limiter is called here.",
         "responses": {
           "200": {
             "description": "Success"
@@ -513,17 +522,17 @@
           "400": {
             "description": "Invalid input"
           },
-          "401": {
-            "description": "Sign in required"
-          },
           "403": {
             "description": "Wrong origin"
           },
-          "429": {
-            "description": "Rate limit"
-          },
           "503": {
             "description": "Unavailable"
+          },
+          "413": {
+            "description": "Body exceeds 20KB"
+          },
+          "415": {
+            "description": "JSON required"
           }
         },
         "requestBody": {
@@ -535,59 +544,57 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {},
+          {
+            "supabaseSession": []
+          }
+        ]
       }
     },
     "/api/account": {
       "get": {
         "summary": "Return own display name, email and account creation date",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response.",
         "responses": {
           "200": {
             "description": "Success"
           },
-          "400": {
-            "description": "Invalid input"
-          },
           "401": {
             "description": "Sign in required"
-          },
-          "403": {
-            "description": "Wrong origin"
-          },
-          "429": {
-            "description": "Rate limit"
           },
           "503": {
             "description": "Unavailable"
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       }
     },
     "/api/v1/project-briefs": {
       "get": {
         "summary": "List latest 100 own briefs",
-        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "description": "Requires a server-validated session. Owner and active-session RLS apply. Private no-store response.",
         "responses": {
           "200": {
             "description": "Success"
           },
-          "400": {
-            "description": "Invalid input"
-          },
           "401": {
             "description": "Sign in required"
-          },
-          "403": {
-            "description": "Wrong origin"
-          },
-          "429": {
-            "description": "Rate limit"
           },
           "503": {
             "description": "Unavailable"
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       },
       "post": {
         "summary": "Save own brief with explicit consent; same key/body returns original, different body conflicts",
@@ -618,7 +625,7 @@
             "description": "JSON required"
           },
           "429": {
-            "description": "20 brief daily limit"
+            "description": "20 existing briefs created within the last 24 hours; deletion frees capacity. This is not a cumulative create-attempt quota."
           },
           "503": {
             "description": "Unavailable"
@@ -656,7 +663,8 @@
                   "email": {
                     "type": "string",
                     "minLength": 1,
-                    "maxLength": 254
+                    "maxLength": 254,
+                    "format": "email"
                   },
                   "service": {
                     "type": "string",
@@ -682,7 +690,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       },
       "delete": {
         "summary": "Delete own brief; inaccessible IDs return 404",
@@ -705,6 +718,12 @@
           },
           "503": {
             "description": "Unavailable"
+          },
+          "413": {
+            "description": "Body exceeds 20KB"
+          },
+          "415": {
+            "description": "JSON required"
           }
         },
         "requestBody": {
@@ -725,7 +744,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ]
       }
     }
   },
@@ -944,6 +968,14 @@
           "orderCreated",
           "policy"
         ]
+      }
+    },
+    "securitySchemes": {
+      "supabaseSession": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "sb-xsyxvswbiptbyxyqhdim-auth-token",
+        "description": "HttpOnly Supabase SSR session cookie; large values may be split into numbered .0/.1 cookies. Send the complete cookie jar issued by register/login. Server getUser validates identity; data RLS also checks the active session. Never fabricate a cookie or treat email confirmation as proof of email ownership."
       }
     }
   }

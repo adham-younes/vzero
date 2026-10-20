@@ -1,0 +1,62 @@
+{
+  "environment": "local production build",
+  "base_url": "http://127.0.0.1:3015",
+  "checks": [
+    {
+      "route": "/",
+      "viewport": [
+        1440,
+        900
+      ],
+      "video": {
+        "paused": false,
+        "time": 1.454315,
+        "overlay": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "overflow": false,
+        "dir": "ltr"
+      },
+      "hero_dialog": "opened_and_dismissed"
+    },
+    {
+      "route": "/ar",
+      "viewport": [
+        390,
+        844
+      ],
+      "video": {
+        "paused": false,
+        "time": 1.073362,
+        "overlay": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "overflow": false,
+        "dir": "rtl"
+      },
+      "hero_dialog": "opened_and_dismissed"
+    },
+    {
+      "route": "/ar/signup",
+      "status": 200
+    },
+    {
+      "route": "/agentnexos",
+      "status": 200
+    },
+    {
+      "route": "/api/v1/catalog/services?lang=ar",
+      "status": 200
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200
+    }
+  ],
+  "page_errors": [],
+  "result": "PASS",
+  "not_run": [
+    "live signup or database mutations",
+    "Groq",
+    "telemetry validation",
+    "full-site visual audit"
+  ]
+}

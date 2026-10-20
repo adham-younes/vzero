@@ -3,7 +3,7 @@
 ## التشغيل الموجود
 
 - [API-STATUS.md](API-STATUS.md): ما يعمل وحدود السلوك والأمثلة.
-- [current-api.openapi.json](current-api.openapi.json): عقد OpenAPI 3.1 مطابق للواجهتين العامتين في إصدار `991deca`.
+- [current-api.openapi.json](current-api.openapi.json): عقد OpenAPI 3.1 يوثق عشر عمليات HTTP الحالية، بما فيها الحسابات والموجزات والفحص.
 - [الخطة التقنية](../TECHNICAL-PLAN.md): الملفات والمسارات والمكونات.
 
 ## وثائق المرحلة 3 — مقترحات غير مطبقة

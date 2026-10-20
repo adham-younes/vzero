@@ -1,0 +1,85 @@
+{
+  "source_base": "d030a60186380b3a106bc8ac0071d74abffea503",
+  "environment": "local Next.js development server / Chromium",
+  "comparison": [
+    {
+      "sample": "desktop-en",
+      "equal": {
+        "frame_sha256": true,
+        "time": true,
+        "viewport": true,
+        "text": true,
+        "heroRect": true,
+        "videoRect": true,
+        "objectFit": true,
+        "source": true
+      },
+      "before_tint": "rgba(5, 5, 5, 0.05)",
+      "after_tint": "rgba(0, 0, 0, 0)",
+      "image_region_xyxy": [
+        0,
+        100,
+        1440,
+        200
+      ],
+      "mean_grayscale_before_after": [
+        96.698,
+        102.431
+      ],
+      "no_overflow": true,
+      "page_errors": []
+    },
+    {
+      "sample": "mobile-ar",
+      "equal": {
+        "frame_sha256": true,
+        "time": true,
+        "viewport": true,
+        "text": true,
+        "heroRect": true,
+        "videoRect": true,
+        "objectFit": true,
+        "source": true
+      },
+      "before_tint": "rgba(5, 5, 5, 0.05)",
+      "after_tint": "rgba(0, 0, 0, 0)",
+      "image_region_xyxy": [
+        0,
+        100,
+        390,
+        200
+      ],
+      "mean_grayscale_before_after": [
+        76.095,
+        80.759
+      ],
+      "no_overflow": true,
+      "page_errors": []
+    }
+  ],
+  "protected_files": {
+    "public/videos/background.mp4": {
+      "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+      "bytes": 9885990,
+      "matches_entry_commit": true
+    },
+    "@components/landing-5-hero-video.tsx": {
+      "sha256": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+      "bytes": 1556,
+      "matches_entry_commit": true
+    },
+    "@components/landing-5-hero-section.tsx": {
+      "sha256": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1",
+      "bytes": 2339,
+      "matches_entry_commit": true
+    }
+  },
+  "diagnosis": "Only video-tint adds dimming: rgba(5,5,5,0.05). Relevant ancestors have opacity 1, filter/backdrop-filter none and normal blend. No rendered before/after pseudo overlay was found. CSS removes this residual tint; no evidence that heading colors caused it.",
+  "capture_method": "Seek to 3 seconds and pause in the test page. Temporarily stub the video element play method in the test page only because the preserved canplay listener retries autoplay after seeking. Raw video canvas hashes match before/after and across viewports. No application playback code changed. Development overlay hidden only in screenshots.",
+  "acceptance": "PENDING_OWNER_REVIEW_NOT_A_NEW_APPROVED_BASELINE",
+  "production_changed": false,
+  "new_migrations": [],
+  "implementation_commit": "a332057",
+  "build_typescript": "PASS",
+  "runtime_evidence": "runtime.json"
+}
