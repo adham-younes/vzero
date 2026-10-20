@@ -6,14 +6,22 @@ import {createHmac} from 'node:crypto'
 import {InputError} from '@/lib/account-validation'
 
 function config() {
+ if(process.env.AGYNEXA_DATA_ENV==='local'){
+  if(process.env.VERCEL)throw new Error('Local database configuration is not allowed on Vercel')
+  const url=process.env.AGYNEXA_LOCAL_SUPABASE_URL
+  const key=process.env.AGYNEXA_LOCAL_SUPABASE_PUBLISHABLE_KEY
+  if(url!=='http://127.0.0.1:54321'||!key)throw new Error('Invalid isolated database configuration')
+  return {url,key}
+ }
  const url=process.env.NEXT_PUBLIC_SUPABASE_URL?.trim()
  const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim()
  if(url!=='https://xsyxvswbiptbyxyqhdim.supabase.co' && url!=='https://xsyxvswbiptbyxyqhdim.supabase.co/')throw new Error('Invalid project configuration')
  if(!key)throw new Error('Missing public key')
  return {url,key}
 }
+function adminKey(){return (process.env.AGYNEXA_DATA_ENV==='local'?process.env.AGYNEXA_LOCAL_SUPABASE_SECRET_KEY:process.env.SUPABASE_SECRET_KEY)?.trim()}
 export function adminClient(){
- const {url}=config();const key=process.env.SUPABASE_SECRET_KEY?.trim()
+ const {url}=config();const key=adminKey()
  if(!key)throw new Error('Missing secret key')
  return createClient(url,key,{auth:{persistSession:false,autoRefreshToken:false},global:{fetch:(url,options)=>fetch(url,{...options,cache:'no-store',signal:AbortSignal.timeout(10000)})}})
 }
@@ -35,7 +43,7 @@ export async function signedIn(){
 export function json(value:unknown,status=200){return Response.json(value,{status,headers:{'Cache-Control':'private, no-store','Pragma':'no-cache','X-Content-Type-Options':'nosniff'}})}
 export function failure(error:unknown){return error instanceof InputError?json({error:error.code},error.status):json({error:'temporarily_unavailable'},503)}
 export async function rateLimit(request:Request,action:'register'|'login',email:string){
- const secret=process.env.SUPABASE_SECRET_KEY?.trim();if(!secret)throw new Error('Missing secret key')
+ const secret=adminKey();if(!secret)throw new Error('Missing secret key')
  // Vercel overwrites this trusted header. Never trust client x-forwarded-for.
  const ip=process.env.VERCEL==='1'?(request.headers.get('x-vercel-forwarded-for')||'unknown'):'local'
  const hash=(value:string)=>createHmac('sha256',secret).update(value).digest('hex')
