@@ -389,6 +389,344 @@
           }
         }
       }
+    },
+    "/api/auth/register": {
+      "post": {
+        "summary": "Create and sign in without confirmation email",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Rate-limited by server; credentials never returned.",
+        "responses": {
+          "201": {
+            "description": "Created and signed in"
+          },
+          "400": {
+            "description": "Invalid or unavailable registration"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "413": {
+            "description": "Too large"
+          },
+          "415": {
+            "description": "JSON required"
+          },
+          "429": {
+            "description": "Too many attempts"
+          },
+          "503": {
+            "description": "Unavailable or created_sign_in_required"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "email",
+                  "password",
+                  "name"
+                ],
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254
+                  },
+                  "password": {
+                    "type": "string",
+                    "maxLength": 128,
+                    "minLength": 12
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "summary": "login",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Rate-limited by server; credentials never returned.",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Sign in required"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "429": {
+            "description": "Rate limit"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "email",
+                  "password"
+                ],
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254
+                  },
+                  "password": {
+                    "type": "string",
+                    "maxLength": 128
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "summary": "logout",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Sign in required"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "429": {
+            "description": "Rate limit"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/account": {
+      "get": {
+        "summary": "Return own display name, email and account creation date",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Sign in required"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "429": {
+            "description": "Rate limit"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        }
+      }
+    },
+    "/api/v1/project-briefs": {
+      "get": {
+        "summary": "List latest 100 own briefs",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Sign in required"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "429": {
+            "description": "Rate limit"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        }
+      },
+      "post": {
+        "summary": "Save own brief with explicit consent; same key/body returns original, different body conflicts",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "responses": {
+          "201": {
+            "description": "Saved"
+          },
+          "200": {
+            "description": "Idempotent replay"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Sign in required"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "409": {
+            "description": "Key reused for different body"
+          },
+          "413": {
+            "description": "Too large"
+          },
+          "415": {
+            "description": "JSON required"
+          },
+          "429": {
+            "description": "20 brief daily limit"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "requestKey",
+                  "organization",
+                  "email",
+                  "service",
+                  "problem",
+                  "sources",
+                  "acceptance",
+                  "consent"
+                ],
+                "properties": {
+                  "requestKey": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "consent": {
+                    "const": true
+                  },
+                  "organization": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "email": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 254
+                  },
+                  "service": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "problem": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1500
+                  },
+                  "sources": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1500
+                  },
+                  "acceptance": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1500
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete own brief; inaccessible IDs return 404",
+        "description": "Private no-store responses. Mutations require same Origin and JSON <=20KB. Errors contain stable codes only. Requires validated HttpOnly session; owner/session RLS applies.",
+        "responses": {
+          "200": {
+            "description": "Deleted"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Sign in required"
+          },
+          "403": {
+            "description": "Wrong origin"
+          },
+          "404": {
+            "description": "No accessible brief"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {

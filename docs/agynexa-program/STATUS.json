@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T07:28:46.185495+00:00",
+  "updated_at": "2026-10-20T07:45:41.552799+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -77,13 +77,23 @@
     ],
     "api_contract": "architecture/current-api.openapi.json",
     "route_inventory": "current-routes.json",
-    "project_brief": "Browser-only review, consent, TXT download and visitor-controlled email draft",
+    "project_brief": "Authenticated persistent storage with explicit consent, idempotency, owner-only list/delete; TXT and manual email preserved",
     "procurement": "Stateless deterministic fictional comparison, not authenticated approval or purchasing",
-    "database_connected": false,
+    "database_connected": true,
     "authenticated_tenants": false,
     "live_ai_provider": false,
     "server_email_delivery": false,
-    "live_enterprise_connectors": false
+    "live_enterprise_connectors": false,
+    "user_accounts": true,
+    "account_apis": [
+      "POST /api/auth/register",
+      "POST /api/auth/login",
+      "POST /api/auth/logout",
+      "GET /api/account",
+      "GET /api/v1/project-briefs",
+      "POST /api/v1/project-briefs",
+      "DELETE /api/v1/project-briefs"
+    ]
   },
   "last_product_checks": {
     "build_typescript": "PASS",
@@ -245,5 +255,10 @@
       }
     },
     "next_action": "Connection verification complete. Resume separately scoped lead intake and knowledge work; no schema or AI implementation is implied."
+  },
+  "account_release": {
+    "status": "IMPLEMENTED_DATABASE_VERIFIED_PRODUCTION_PENDING",
+    "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md",
+    "evidence": "evidence/accounts-2026-10-20/verification.json"
   }
 }

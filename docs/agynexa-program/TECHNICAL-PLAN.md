@@ -105,4 +105,8 @@ SQL مسودة للمراجعة تنتهي بـ`ROLLBACK` ولم تُشغل. ت�
 
 ## فحص اتصال Supabase — 20 أكتوبر 2026
 
-`lib/supabase-health.ts` و`app/api/health/supabase/route.ts` يفحصان متغيرات Vercel دون تثبيت حزم أو إنشاء جداول. المتغيرات: `NEXT_PUBLIC_SUPABASE_URL` و`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` و`SUPABASE_SECRET_KEY` (الأخير خادمي فقط). المشروع مثبت على المعرّف الذي حدده المالك لمنع الخلط بين حسابين. فحصا GET إلى جذر Data API لا يقرآن بيانات جداول أو يكتبانهما. الاختبارات في `tests/supabase-health.test.mjs`؛ الفشل ينتج unavailable دون تفاصيل حساسة.
+`lib/supabase-health.ts` و`app/api/health/supabase/route.ts` يفحصان متغيرات Vercel دون تثبيت حزم أو إنشاء جداول. المتغيرات: `NEXT_PUBLIC_SUPABASE_URL` و`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` و`SUPABASE_SECRET_KEY` (الأخير خادمي فقط). المشروع مثبت على المعرّف الذي حدده المالك لمنع الخلط بين حسابين. GET للمفتاح العام إلى Auth settings وللسري إلى جذر Data API لا يقرآن بيانات جداول أو يكتبانهما. الاختبارات في `tests/supabase-health.test.mjs`؛ الفشل ينتج unavailable دون تفاصيل حساسة.
+
+## استكمال الحسابات والموجزات — 20 أكتوبر 2026
+
+توجيه المالك الأحدث يستكمل المرحلة 5: AUTH-01 حسابات فردية وDATA-01 مخطط محدود وLEAD-01 حفظ موجز فعلي. التسجيل مباشر بلا بريد، والعزل بملكية المستخدم والجلسة النشطة. [تقرير التنفيذ والحدود](releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md) و[حالة التحقق](evidence/accounts-2026-10-20/verification.json) يحدّثان الأوصاف التاريخية أعلاه؛ لا مؤسسات مشتركة أو RAG منفذ.

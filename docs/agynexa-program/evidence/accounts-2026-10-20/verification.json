@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-20",
+  "project_id": "xsyxvswbiptbyxyqhdim",
+  "account": "agynexa",
+  "status": "IMPLEMENTED_DATABASE_VERIFIED_PRODUCTION_PENDING",
+  "unit_tests": 10,
+  "build_typescript": "PASS",
+  "rls_transaction": "PASS_ROLLED_BACK",
+  "advisors": {
+    "warnings": 0,
+    "errors": 0,
+    "info": "Private rate-limit table intentionally has no client RLS policy"
+  },
+  "no_confirmation_email": "admin.createUser email_confirm=true; production verification pending",
+  "database_migrations_applied": true,
+  "test_accounts_cleanup": "PENDING_PRODUCTION_TEST",
+  "hero_files_modified": false
+}

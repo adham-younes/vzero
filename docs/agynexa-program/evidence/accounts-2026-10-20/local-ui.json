@@ -1,0 +1,23 @@
+{
+  "environment": "local production build, no credentials",
+  "results": [
+    {
+      "width": 390,
+      "language": "ar",
+      "no_overflow": true,
+      "registration_form": true,
+      "noindex": true,
+      "brief_review_and_consent": true,
+      "page_errors": []
+    },
+    {
+      "width": 1440,
+      "language": "en",
+      "no_overflow": true,
+      "registration_form": true,
+      "noindex": true,
+      "brief_review_and_consent": true,
+      "page_errors": []
+    }
+  ]
+}
