@@ -105,5 +105,11 @@
     },
     "image_generation": "OpenAI image generation, original neural brain background",
     "evidence": "evidence/visual-repair-2026-10-19/assets.json"
+  },
+  "vercel_project_access": {
+    "status": "VERIFIED_READ_ACCESS",
+    "date": "2026-10-20",
+    "evidence": "evidence/vercel-access-2026-10-20.json",
+    "design_connector_capabilities_retested": false
   }
 }
