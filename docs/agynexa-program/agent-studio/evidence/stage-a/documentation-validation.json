@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "markdown_files": 1103,
+  "local_file_links": 274,
+  "json_files": 52,
+  "canonical_urls": 64,
+  "current_api_operations": 10,
+  "evidence_hashes": 6,
+  "master_plan_unchanged": true,
+  "scope": "Document structure, local file links, JSON, internal contract references, source-derived inventory and evidence integrity; no app/network/runtime/schema-execution tests.",
+  "capture_note": "An initial attempt redirected output into the scanned JSON directory before validation and created an empty receipt. The receipt was corrected and validation passed; application code was unaffected."
+}
