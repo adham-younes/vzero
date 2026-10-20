@@ -29,3 +29,13 @@
 مراجع التنفيذ: [SSR](https://supabase.com/docs/guides/auth/server-side/creating-a-client)، [إنشاء حساب خادمي](https://supabase.com/docs/reference/javascript/auth-admin-createuser)، [تغييرات Data API](https://supabase.com/changelog/45329-breaking-change-tables-not-exposed-to-data-and-graphql-api-automatically)، [RLS](https://supabase.com/docs/guides/database/postgres/row-level-security).
 
 ملفات migrations أُنشئت عبر CLI ثم طُبقت عبر MCP؛ طابقت أرقام ملفاتها بإصداري السجل الفعلي العائدين من list_migrations: `20261020074037` و`20261020074207`، لتجنب محاولة تطبيقها مجددًا من CLI.
+
+## النشر والفحص الحقيقي
+
+[PR #15](https://github.com/adham-younes/vzero/pull/15) دُمج في `558fef356a5fc1c8419ad0749fabcc6d1df4705f`، كود التنفيذ `e6adf5e` وآخر رأس المنتج `ce195f0`. [فحص نشر Vercel نجح](https://vercel.com/adhamlouxors-projects/vzero/EzwYg2jfyM5dcVHRX2GkD1staHiw).
+
+نجح [22 فحص HTTP على الإنتاج](../evidence/accounts-2026-10-20/production-http.json): تسجيل ودخول تلقائي، منع التكرار/كلمة مرور خاطئة/مصدر مختلف، كوكيز محمية وردود no-store، مراجعة موافقة، حفظ دائم وإعادة طلب آمنة و409 للاختلاف، منع مستخدم آخر، تجديد الجلسة وخروج ودخول جديد وحذف. توقف التشغيل الأول بسبب قراءة اسم ترويسة بحالة أحرف ثابتة في أداة الاختبار؛ صُححت الأداة ونجح التشغيل الكامل، ولم يكن خللًا في التطبيق.
+
+[فحص الجوال العربي الحقيقي](../evidence/accounts-2026-10-20/production-ui.json) أنشأ حسابًا، انتقل تلقائيًا إلى الحساب، حفظ الموجز وعرضه، خرج ثم دخل بكلمة المرور وحذف الموجز. لا overflow أو أخطاء JavaScript. [لقطة الحساب المصطنع](../evidence/accounts-2026-10-20/production-account-ar-390.jpg). أكد استعلام إداري إجمالي أن الحسابات المصطنعة الخمسة تأكدت تلقائيًا وconfirmation_sent_at فارغ لكل منها. أُبطلت جلساتها وحُذفت refresh tokens وحساباتها، ثم تحقق أن العدد المتبقي صفر. لا حساب مالك أو مستخدم حقيقي تغير.
+
+روابط الاستخدام: [إنشاء حساب عربي](https://vzero-nine-beryl.vercel.app/ar/signup)، [الدخول](https://vzero-nine-beryl.vercel.app/ar/login)، [الحساب](https://vzero-nine-beryl.vercel.app/ar/account). التسجيل جاهز للاستخدام؛ لا كلمة مرور مشتركة أو حساب مدير افتراضي.

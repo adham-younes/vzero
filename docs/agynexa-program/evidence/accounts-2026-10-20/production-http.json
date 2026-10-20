@@ -1,0 +1,31 @@
+{
+  "environment": "https://vzero-nine-beryl.vercel.app",
+  "checks": [
+    "unauthenticated account denied",
+    "cross-origin mutation rejected",
+    "short password rejected",
+    "registration and automatic login 1",
+    "registration and automatic login 2",
+    "secure HttpOnly cookies",
+    "private no-store account response",
+    "duplicate registration does not replace existing account",
+    "consent required",
+    "persistent brief created",
+    "idempotent replay",
+    "same key changed body conflicts",
+    "second user cannot list first brief",
+    "second user cannot delete first brief",
+    "expired session metadata refreshes",
+    "logout succeeds",
+    "logged-out session denied",
+    "wrong password rejected",
+    "password login succeeds",
+    "saved brief survives login",
+    "owner can delete brief",
+    "deleted brief absent"
+  ],
+  "passed": 22,
+  "test_users_require_cleanup": false,
+  "credentials_recorded": false,
+  "cleanup": "Five synthetic accounts, sessions and refresh tokens removed; remaining count 0"
+}

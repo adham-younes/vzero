@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T07:45:41.552799+00:00",
+  "updated_at": "2026-10-20T07:53:02.076710+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,16 +14,16 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "52376cfc00ba974023d64f08b3109b83b130cabe",
-    "merge_commit": "2a7792b434a15e4a69f9727f580e294b85ad828c",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/13",
+    "implementation_commit": "e6adf5e",
+    "merge_commit": "558fef356a5fc1c8419ad0749fabcc6d1df4705f",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/15",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
     "target": "production",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERIFIED_PRODUCTION_HTTP_200_BOTH_KEYS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/5A31B8HEFzXmZkEGfJxta9Z63DzY",
-    "receipt": "releases/SUPABASE-CONNECTION-2026-10-20.md"
+    "status_at_verification": "VERIFIED_PRODUCTION_ACCOUNTS_AND_BRIEFS",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/EzwYg2jfyM5dcVHRX2GkD1staHiw",
+    "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md"
   },
   "stage_status": [
     {
@@ -53,8 +53,8 @@
     },
     {
       "stage": 5,
-      "status": "SCOPED_IMPLEMENTATION_ENTERPRISE_EXTENSION_NOT_IMPLEMENTED",
-      "receipt": "releases/STAGE-5.md"
+      "status": "IMPLEMENTED_SITE_ACCOUNTS_AND_BRIEFS_ENTERPRISE_PARTIAL",
+      "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md"
     },
     {
       "stage": 6,
@@ -97,33 +97,27 @@
   },
   "last_product_checks": {
     "build_typescript": "PASS",
-    "unit_tests": 4,
-    "http_checks_local": 28,
-    "http_checks_production": 28,
-    "representative_pages": 15,
+    "unit_tests": 10,
+    "http_checks_production": 22,
+    "database_rls": "PASS_OWN_CROSS_USER_ANON_REVOKED_SESSION",
+    "production_browser": "Arabic 390px registration, auto-login, save/list/delete, logout and login",
+    "local_browser": "Arabic 390px and English 1440px",
     "sitemap_urls": 64,
+    "account_noindex_urls": 6,
     "browser_console_errors_captured": 0,
     "strict_hero_hashes": "MATCH",
-    "video_playing_production": true,
-    "production_interactions": [
-      "Arabic Hero dialog opens and closes with Escape",
-      "Arabic AgentNexOS CTA navigates to /ar/architecture"
-    ],
-    "mobile_local_width": 390,
-    "production_mobile_width_verified": true,
+    "no_confirmation_emails": "5 synthetic accounts confirmed; confirmation_sent_at null for all",
+    "test_users_remaining": 0,
     "lint": "NOT_CONFIGURED",
     "not_run": [
-      "database/RLS execution",
-      "authenticated enterprise operations",
-      "server email delivery",
+      "shared-organization membership/roles",
+      "full database backup restore",
       "load test",
       "full accessibility audit",
-      "all browser/device combinations"
+      "all browsers",
+      "live AI or model provider"
     ],
-    "evidence": "evidence/stage4-production-2026-10-20/verification.json",
-    "production_mobile_width": 390,
-    "note": "Build/unit checks retained from prior source receipts; production browser and HTTP checks refreshed 2026-10-20 for unchanged API logic.",
-    "http_checks_production_note": "28 checks refer to the preceding release. Repeat with Node on 2026-10-20 failed with ECONNREFUSED; Python Chromium production interaction checks passed."
+    "evidence": "evidence/accounts-2026-10-20/verification.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -254,10 +248,10 @@
         "secretKey": "ok"
       }
     },
-    "next_action": "Connection verification complete. Resume separately scoped lead intake and knowledge work; no schema or AI implementation is implied."
+    "next_action": "Scoped accounts and lead intake delivered. Shared organizations, password recovery, knowledge/model provider and budget remain separate backlog scope."
   },
   "account_release": {
-    "status": "IMPLEMENTED_DATABASE_VERIFIED_PRODUCTION_PENDING",
+    "status": "VERIFIED_PRODUCTION",
     "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md",
     "evidence": "evidence/accounts-2026-10-20/verification.json"
   }
