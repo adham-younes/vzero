@@ -279,6 +279,9 @@
     "runtime_implemented": false,
     "new_migrations_applied": false,
     "implementation_commit": "a332057",
-    "evidence": "agent-studio/evidence/stage-a/verification.json"
+    "evidence": "agent-studio/evidence/stage-a/verification.json",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/18",
+    "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
+    "preview_receipt": "agent-studio/evidence/stage-a/preview.json"
   }
 }

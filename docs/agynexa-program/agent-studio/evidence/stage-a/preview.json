@@ -1,0 +1,18 @@
+{
+  "pull_request": "https://github.com/adham-younes/vzero/pull/18",
+  "state": "OPEN_DRAFT",
+  "head_at_verification": "10857ea588f1d3cff77453c7670803fcb4f7ebaa",
+  "implementation_commit": "a332057",
+  "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
+  "deployment_inspector": "https://vercel.com/adhamlouxors-projects/vzero/HCtxE8zMo9EbktP9epJsx5xVrnw4",
+  "vercel_status": "SUCCESS_READY",
+  "evidence_source": "Vercel GitHub commit status and preview bot comment",
+  "production_main_unchanged": "d030a60186380b3a106bc8ac0071d74abffea503",
+  "target": "preview",
+  "browser_interaction_on_preview": "NOT_VERIFIED",
+  "unauthenticated_read": {
+    "status": 200,
+    "final_host": "vercel.com"
+  },
+  "preview_access": "Unauthenticated request redirected to vercel.com; application UI not verified remotely. Protection settings unchanged."
+}
