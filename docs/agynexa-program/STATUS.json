@@ -324,5 +324,10 @@
     "evidence": "agent-studio/evidence/chat-fix/production.json",
     "interactive_verification": "ISOLATED_LOCAL_REAL_DATABASE_AR_EN",
     "production_auth_repeated": false
+  },
+  "api_ui_removal": {
+    "status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+    "report": "agent-studio/API-UI-REMOVAL.md",
+    "backend_changed": false
   }
 }
