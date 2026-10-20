@@ -1,0 +1,34 @@
+{
+  "observed_date": "2026-10-20",
+  "recorded_at": "2026-10-20T15:38:43.408613+00:00",
+  "source": "Read-only Vercel MCP calls in the conversation after owner requested connection recheck; no repeat probe during documentation",
+  "team_id": "team_FWfSZ1vGknqWNQ52Y4bmoHlU",
+  "project": {
+    "id": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+    "name": "vzero",
+    "read": "SUCCESS"
+  },
+  "alias": {
+    "hostname": "vzero-nine-beryl.vercel.app",
+    "read": "SUCCESS",
+    "deployment_id": "dpl_2BnzNu3s9P8TA9ELGV8v8sjKj5pR"
+  },
+  "deployment": {
+    "read": "SUCCESS",
+    "id": "dpl_2BnzNu3s9P8TA9ELGV8v8sjKj5pR",
+    "url": "https://vzero-6plzrmmjd-adhamlouxors-projects.vercel.app",
+    "ready_state": "READY",
+    "target": "production",
+    "git_commit_sha": "0a166b4a890c42b953fd7397a5e61edfd3197144",
+    "git_commit_ref": "main"
+  },
+  "previous_observation": "Project and alias reads returned 404 with both slug and explicit team ID; project listing empty",
+  "root_cause": "NOT_ESTABLISHED; access subsequently succeeded, no claim of a specific permission/configuration fix",
+  "limits": [
+    "Read access only; connector write/deploy permissions not tested",
+    "Does not verify each of the 11 design connector capabilities or NEXA Agent",
+    "No authenticated app flow or database/provider tests",
+    "Observed deployment is a documentation release; latest application change remains PR26 at 4b7b5a2"
+  ],
+  "external_changes_made": false
+}

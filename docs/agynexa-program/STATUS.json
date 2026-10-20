@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T15:01:43.720103+00:00",
+  "updated_at": "2026-10-20T15:38:43.408613+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -138,12 +138,12 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-consolidated-status",
-    "baseline_main": "4799a2e",
+    "branch": "codex/agynexa-vercel-access-receipt",
+    "baseline_main": "0a166b4",
     "product_code_changed": false,
     "database_changed": false,
-    "receipt": "releases/CONSOLIDATED-STATUS-2026-10-20.md",
-    "scope": "Current documentation consolidated against source and dated evidence; no new product verification."
+    "receipt": "releases/VERCEL-ACCESS-2026-10-20.md",
+    "scope": "Record successful direct Vercel project/alias/deployment reads after the consolidated report; no new runtime verification."
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -164,7 +164,7 @@
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
-    "execution_status": "TEAM_INVENTORY_SEEN_PROJECT_SCOPE_UNRESOLVED_MAGICPATH_DESIGN_VERIFIED",
+    "execution_status": "VERCEL_PROJECT_READ_ACCESS_VERIFIED_MAGICPATH_DESIGN_VERIFIED_OTHER_CAPABILITIES_REQUIRE_SPECIFIC_CHECK",
     "documentation": "CONNECTED-DESIGN-TOOLS.md",
     "inventory": "connected-design-tools.json",
     "source": "Owner-provided Vercel Connect list dated 2026-10-19",
@@ -369,5 +369,14 @@
       "TOOL-NEXA"
     ],
     "source": "BACKLOG.md"
+  },
+  "vercel_direct_access": {
+    "status": "VERIFIED_READ_ACCESS",
+    "receipt": "releases/VERCEL-ACCESS-2026-10-20.md",
+    "evidence": "evidence/vercel-access-2026-10-20.json",
+    "observed_production_commit": "0a166b4a890c42b953fd7397a5e61edfd3197144",
+    "deployment_id": "dpl_2BnzNu3s9P8TA9ELGV8v8sjKj5pR",
+    "root_cause_of_previous_404": "NOT_ESTABLISHED",
+    "write_permissions_verified": false
   }
 }
