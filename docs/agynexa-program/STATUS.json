@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-19T05:43:06.723281+00:00",
+  "updated_at": "2026-10-20T06:58:13.404693+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,20 +14,16 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "991deca5805636b090a7098c8f999ed162eb72de",
-    "merge_commit": "f6e92b3169be1dd96e7a9af197baf65c85957c16",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/5",
+    "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
+    "merge_commit": "5d172963abc278a04c4e5ab5784c7edce3947c8c",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/9",
     "pull_request_state": "MERGED",
-    "production_id": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
-    "production_url": "https://vzero-aitmxp0td-adhamlouxors-projects.vercel.app",
     "domain": "https://vzero-nine-beryl.vercel.app",
-    "status_at_verification": "READY",
     "target": "production",
-    "verified_date": "2026-10-19",
-    "preview_id": "dpl_7XcvmYr1Bq41sUhTvqrK4sAL6ir1",
-    "preview_url": "https://vzero-gl3sb5hcu-adhamlouxors-projects.vercel.app",
-    "receipt": "releases/STAGES-4-6-DELIVERY.md",
-    "note": "Latest verified product change. Later documentation commits/deployments may contain the same product source. Inspect live alias before further release work."
+    "verified_date": "2026-10-20",
+    "status_at_verification": "GITHUB_VERCEL_SUCCESS_AND_PUBLIC_BROWSER_VERIFIED",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/tTKePMQfVV9DycMehyet7GKwWQSZ",
+    "receipt": "releases/STAGE-4-PRODUCTION-2026-10-20.md"
   },
   "stage_status": [
     {
@@ -52,7 +48,7 @@
     },
     {
       "stage": 4,
-      "status": "IMPLEMENTED_VISUAL_ACCEPTANCE_OPEN",
+      "status": "IMPLEMENTED_SCOPED_REPAIR_ACCEPTED_PRODUCTION_VERIFIED",
       "receipt": "releases/STAGE-4.md"
     },
     {
@@ -76,7 +72,8 @@
     ],
     "public_apis": [
       "GET /api/v1/catalog/services",
-      "POST /api/v1/procurement/review"
+      "POST /api/v1/procurement/review",
+      "GET /api/health/supabase"
     ],
     "api_contract": "architecture/current-api.openapi.json",
     "route_inventory": "current-routes.json",
@@ -99,11 +96,11 @@
     "strict_hero_hashes": "MATCH",
     "video_playing_production": true,
     "production_interactions": [
-      "insurance selector updates content",
-      "Arabic procurement review returns missing warranty clarification"
+      "Arabic Hero dialog opens and closes with Escape",
+      "Arabic AgentNexOS CTA navigates to /ar/architecture"
     ],
     "mobile_local_width": 390,
-    "production_mobile_width_verified": false,
+    "production_mobile_width_verified": true,
     "lint": "NOT_CONFIGURED",
     "not_run": [
       "database/RLS execution",
@@ -113,7 +110,10 @@
       "full accessibility audit",
       "all browser/device combinations"
     ],
-    "evidence": "evidence/stages-4-6/production-verification.json"
+    "evidence": "evidence/stage4-production-2026-10-20/verification.json",
+    "production_mobile_width": 390,
+    "note": "Build/unit checks retained from prior source receipts; production browser and HTTP checks refreshed 2026-10-20 for unchanged API logic.",
+    "http_checks_production_note": "28 checks refer to the preceding release. Repeat with Node on 2026-10-20 failed with ECONNREFUSED; Python Chromium production interaction checks passed."
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -132,13 +132,14 @@
     "preserve_video_and_hero_files": true,
     "cloud_documentation_update": true,
     "future_unscoped_stages_authorized": false,
-    "scoped_stage4_visual_repairs": true
+    "scoped_stage4_visual_repairs": true,
+    "stage4_merge_and_production_2026_10_20": true,
+    "scoped_lead_and_knowledge_implementation": true
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-stage4-visual-repair",
+    "branch": "codex/agynexa-lead-knowledge-runtime",
     "product_code_changed": true,
-    "manual_production_deployment_required": false,
-    "receipt": "releases/STAGE-4-VISUAL-REPAIR-2026-10-19.md"
+    "receipt": "releases/SUPABASE-CONNECTION-2026-10-20.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -155,7 +156,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Review the stage 4 visual repair candidate and its screenshots/Preview. QA-01 remains open until owner acceptance. Preserve approved stage plan; no RFQ pivot, backend expansion, merge or production rollout in this delivery.",
+  "next_action": "Deploy and call GET /api/health/supabase to verify Vercel credentials against owner-selected project. No lead/knowledge tables or model runs have been implemented.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -188,12 +189,12 @@
   },
   "current_candidate_delivery": {
     "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
-    "status": "LOCAL_PRODUCTION_BUILD_VERIFIED_OWNER_VISUAL_ACCEPTANCE_PENDING",
+    "status": "MERGED_AND_PRODUCTION_VERIFIED",
     "stage": 4,
     "backlog": "QA-01",
     "receipt": "releases/STAGE-4-VISUAL-REPAIR-2026-10-19.md",
     "evidence": "evidence/visual-repair-2026-10-19/verification.json",
-    "deployed_to_production": false,
+    "deployed_to_production": true,
     "build_typescript": "PASS",
     "http_checks": 28,
     "canonical_urls": 64,
@@ -210,5 +211,30 @@
     "preview_status": "READY_FROM_GITHUB_VERCEL_STATUS",
     "preview_browser_access": "VERCEL_LOGIN_REQUIRED",
     "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
+  },
+  "previous_verified_product_release": {
+    "implementation_commit": "991deca5805636b090a7098c8f999ed162eb72de",
+    "merge_commit": "f6e92b3169be1dd96e7a9af197baf65c85957c16",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/5",
+    "pull_request_state": "MERGED",
+    "production_id": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
+    "production_url": "https://vzero-aitmxp0td-adhamlouxors-projects.vercel.app",
+    "domain": "https://vzero-nine-beryl.vercel.app",
+    "status_at_verification": "READY",
+    "target": "production",
+    "verified_date": "2026-10-19",
+    "preview_id": "dpl_7XcvmYr1Bq41sUhTvqrK4sAL6ir1",
+    "preview_url": "https://vzero-gl3sb5hcu-adhamlouxors-projects.vercel.app",
+    "receipt": "releases/STAGES-4-6-DELIVERY.md",
+    "note": "Latest verified product change. Later documentation commits/deployments may contain the same product source. Inspect live alias before further release work."
+  },
+  "runtime_access": {
+    "supabase_project": "xsyxvswbiptbyxyqhdim",
+    "status": "MCP_SQL_READ_VERIFIED_APP_PROBE_PENDING",
+    "evidence": "evidence/supabase-connection-2026-10-20/verification.json",
+    "model_provider": "NOT_CONFIGURED",
+    "model_budget": "NOT_CONFIRMED",
+    "nexa_agent_connection": "NOT_VERIFIED",
+    "account_connection_name": "agynexa"
   }
 }

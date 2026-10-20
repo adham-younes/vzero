@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-20",
+  "environment": "Production · Chromium 390×844",
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "merge_commit": "5d172963abc278a04c4e5ab5784c7edce3947c8c",
+  "product_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
+  "errors": [],
+  "video_playing": true,
+  "overlay": "rgba(5, 5, 5, 0.05)",
+  "homepage_overflow": false,
+  "dialog_escape": "PASS",
+  "agentnexos_overflow": false,
+  "dir": "rtl",
+  "arabic_cta": "PASS",
+  "files": [
+    {
+      "file": "agentnexos-ar-390.jpg",
+      "sha256": "79d9ceb6d94bd222054b3e25c8b891f3b70d0f2f0320ed40f7de34fa7816a9f8"
+    },
+    {
+      "file": "home-ar-390.jpg",
+      "sha256": "b0a0e6671bbf1c4e36fbcf968a7a68c2d493bc6cc1270e91f0606064363b44d8"
+    }
+  ]
+}

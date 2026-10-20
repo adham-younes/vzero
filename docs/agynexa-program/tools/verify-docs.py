@@ -60,7 +60,7 @@ for page in pages:
 require(len(services) == routes["services"] == 10 and len(solutions) == routes["solutions"] == 9, "Catalog count mismatch")
 
 api = read_json(DOCS / "architecture/current-api.openapi.json")
-expected_api = {("get", "/api/v1/catalog/services"), ("post", "/api/v1/procurement/review")}
+expected_api = {("get", "/api/v1/catalog/services"), ("post", "/api/v1/procurement/review"), ("get", "/api/health/supabase")}
 actual_api = {(method, path) for path, operations in api["paths"].items() for method in operations if method in {"get", "post", "put", "patch", "delete"}}
 require(api["openapi"] == "3.1.0" and actual_api == expected_api, "Current API inventory mismatch")
 
