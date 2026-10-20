@@ -1,6 +1,6 @@
 # سجل الإصدارات والأدلة
 
-أحدث متابعة: [نشر الواجهة وإصلاح تصنيف أخطاء الحسابات](releases/CONTINUATION-2026-10-20.md). الواجهة منشورة عبر PR #30؛ البريد وSMTP والاستعادة مؤجلة بطلب المالك. سبب التقطع التاريخي ما زال غير مثبت.
+أحدث متابعة: [نشر الواجهة وإصلاح تصنيف أخطاء الحسابات](releases/CONTINUATION-2026-10-20.md). الواجهة منشورة عبر PR #30 وتصنيف أخطاء الحسابات عبر PR #31؛ البريد وSMTP والاستعادة مؤجلة بطلب المالك. سبب التقطع التاريخي ما زال غير مثبت.
 
 آخر تغيير **منتج** موثق حتى أساس التجميع `main@4799a2e`: [PR #26](https://github.com/adham-younes/vzero/pull/26)، تنفيذ `fc5b08443de4a8ccd9d645299c07726a1305b8cb`، دمج `4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba`. أزال قسم API من واجهة الوكيل. [إيصال الإنتاج](agent-studio/evidence/api-ui-removal/production.json) و[نشر Vercel](https://vercel.com/adhamlouxors-projects/vzero/2iZyyPUzB7vbc6HCt3aJbKpGWVSA). فحص مصدر منشور، وليس جلسة مستخدم مصادقة جديدة.
 
