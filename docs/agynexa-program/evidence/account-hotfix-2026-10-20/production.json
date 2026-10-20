@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-20T11:06:28.413357+00:00",
+  "source_merge": "b207f8b08e1920a336b9a8f6bf51e9444c38ab1b",
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "vercel_commit_status": "success",
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6uuFc5kWoLdGJSLqaq8qPb4QDQDo",
+  "checks": [
+    {
+      "path": "/api/health/supabase",
+      "status": 200,
+      "cache_control": "no-store",
+      "response": {
+        "status": "ok",
+        "checks": {
+          "project": "ok",
+          "publishableKey": "ok",
+          "secretKey": "ok"
+        }
+      }
+    },
+    {
+      "path": "/api/account",
+      "status": 401,
+      "cache_control": "private, no-store",
+      "response": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/resources",
+      "status": 200,
+      "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "asset_sources_anchor_present": false,
+      "pexels_license_present": false
+    },
+    {
+      "path": "/ar/resources",
+      "status": 200,
+      "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "asset_sources_anchor_present": false,
+      "pexels_license_present": false
+    }
+  ],
+  "limits": [
+    "Read-only production checks; no live account creation or authenticated owner session.",
+    "Source deployment succeeded according to GitHub Vercel status; direct Vercel metadata unavailable.",
+    "Prior local account recovery regressions reused; no repeated full suite."
+  ]
+}

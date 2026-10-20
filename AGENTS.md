@@ -14,7 +14,7 @@ Documentation is a delivery requirement explicitly requested by the owner. Start
 - Use saved public reference research. Re-fetch only a specific missing or outdated item that affects the work.
 - No secrets, customer data, private account output, dependencies or build artifacts in this public repository.
 - Do not change external accounts, databases, paid services, protection settings or send messages without applicable authorization.
-- Use proportionate verification. Documentation-only changes require document validation and `git diff --check`, not application build/lint/test. Product changes need checks appropriate to the affected behavior; do not claim checks that were not run.
+- Latest owner instruction: batch tests at production delivery only, not after each edit. Reuse valid prior verification; run the required deployment build and a short check of affected production behavior. Do not repeatedly run full suites or create live test accounts for this hotfix. Review code/docs normally and report limits honestly.
 - Update current status, stage/backlog entries, affected technical/API/route documentation, and a release/evidence record in the same delivery. Keep historical receipts dated, and separate the product release from documentation commits.
 - Store shareable evidence in the repository with relative links and environment/commit labels. Do not leave the only evidence in a local task output folder.
 - Follow `docs/agynexa-program/WORKFLOW.md` for Git, production verification and rollback. A successful build or HTTP 200 does not establish interactive correctness.
@@ -29,6 +29,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## Active owner scope: Agent Studio stage B
+## Active owner scope: complete Studio C–E and production delivery
 
-Read `docs/agynexa-program/agent-studio/EXECUTION-PLAN.md`, `agent-studio/README.md` and `STAGE-B.md`. The owner subsequently requested account repair, removal of visible asset attribution, and continuation after A (D24). B is implemented and locally verified; stop for acceptance before C. Preserve the Hero baseline from A; do not revisit it during Studio work. Do not push main, merge, deploy Production, apply new migrations to an existing database, or change live Auth settings without separate project/action authorization. Use an independent branch and isolated local data. No email confirmation, OTP, magic link, welcome email, SMTP setup or recovery-email test. Groq authorization belongs to C, not B. Earlier production authorizations do not apply to this program.
+The latest owner message authorizes all remaining Studio stages and production deployment on vzero. Preserve implemented A/B, integrate main hotfix, and implement C/D/E. This includes the additive Studio database setup on project xsyxvswbiptbyxyqhdim needed for this release; no destructive changes or live Auth/SMTP changes. Three server-only Groq keys are owner-configured. Batch verification at the production delivery, reuse prior evidence, do not test after each edit. Record actual limitations and deployment evidence.

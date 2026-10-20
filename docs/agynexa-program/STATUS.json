@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20",
+  "updated_at": "2026-10-20T11:06:28.413357+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,16 +14,15 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "e6adf5e",
-    "merge_commit": "558fef356a5fc1c8419ad0749fabcc6d1df4705f",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/15",
+    "implementation_commit": "3e9bd09",
+    "merge_commit": "b207f8b08e1920a336b9a8f6bf51e9444c38ab1b",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/19",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
-    "target": "production",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERIFIED_PRODUCTION_ACCOUNTS_AND_BRIEFS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/EzwYg2jfyM5dcVHRX2GkD1staHiw",
-    "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md"
+    "status_at_verification": "VERCEL_SUCCESS_PRODUCTION_DOMAIN_READ_ONLY_CHECKS_PASS",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6uuFc5kWoLdGJSLqaq8qPb4QDQDo",
+    "receipt": "releases/ACCOUNT-HOTFIX-2026-10-20.md"
   },
   "stage_status": [
     {
@@ -96,28 +95,14 @@
     ]
   },
   "last_product_checks": {
-    "build_typescript": "PASS",
-    "unit_tests": 10,
-    "http_checks_production": 22,
-    "database_rls": "PASS_OWN_CROSS_USER_ANON_REVOKED_SESSION",
-    "production_browser": "Arabic 390px registration, auto-login, save/list/delete, logout and login",
-    "local_browser": "Arabic 390px and English 1440px",
-    "sitemap_urls": 64,
-    "account_noindex_urls": 6,
-    "browser_console_errors_captured": 0,
-    "strict_hero_hashes": "MATCH",
-    "no_confirmation_emails": "5 synthetic accounts confirmed; confirmation_sent_at null for all",
-    "test_users_remaining": 0,
-    "lint": "NOT_CONFIGURED",
-    "not_run": [
-      "shared-organization membership/roles",
-      "full database backup restore",
-      "load test",
-      "full accessibility audit",
-      "all browsers",
-      "live AI or model provider"
-    ],
-    "evidence": "evidence/accounts-2026-10-20/verification.json"
+    "production_read_only_requests": 4,
+    "supabase_health": "PASS",
+    "anonymous_account_401_no_store": "PASS",
+    "resource_attribution_removed_both_locales": "PASS",
+    "prior_local_regressions": "REUSED_FROM_STUDIO_STAGE_B",
+    "authenticated_owner_session": "NOT_TESTED",
+    "full_suite_repeated": false,
+    "evidence": "evidence/account-hotfix-2026-10-20/production.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -228,20 +213,16 @@
     "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
   },
   "previous_verified_product_release": {
-    "implementation_commit": "991deca5805636b090a7098c8f999ed162eb72de",
-    "merge_commit": "f6e92b3169be1dd96e7a9af197baf65c85957c16",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/5",
+    "implementation_commit": "e6adf5e",
+    "merge_commit": "558fef356a5fc1c8419ad0749fabcc6d1df4705f",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/15",
     "pull_request_state": "MERGED",
-    "production_id": "dpl_DDycdDNvYHZp831drKdsFuFsmMYP",
-    "production_url": "https://vzero-aitmxp0td-adhamlouxors-projects.vercel.app",
     "domain": "https://vzero-nine-beryl.vercel.app",
-    "status_at_verification": "READY",
     "target": "production",
-    "verified_date": "2026-10-19",
-    "preview_id": "dpl_7XcvmYr1Bq41sUhTvqrK4sAL6ir1",
-    "preview_url": "https://vzero-gl3sb5hcu-adhamlouxors-projects.vercel.app",
-    "receipt": "releases/STAGES-4-6-DELIVERY.md",
-    "note": "Latest verified product change. Later documentation commits/deployments may contain the same product source. Inspect live alias before further release work."
+    "verified_date": "2026-10-20",
+    "status_at_verification": "VERIFIED_PRODUCTION_ACCOUNTS_AND_BRIEFS",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/EzwYg2jfyM5dcVHRX2GkD1staHiw",
+    "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md"
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
@@ -305,5 +286,18 @@
     "account_fix_commit": "5dc609b",
     "preview_receipt": "agent-studio/evidence/stage-b/preview.json",
     "preview_status": "READY_VERIFIED_SOURCE_299919b_PROTECTED_STUDIO_DISABLED"
-  }
+  },
+  "account_hotfix": {
+    "status": "DEPLOYED_PRODUCTION_SCOPED_CHECKS_PASS",
+    "implementation_commit": "3e9bd09",
+    "source_commit": "5dc609b",
+    "scope": "Account failure handling and remove visible asset attribution only",
+    "receipt": "releases/ACCOUNT-HOTFIX-2026-10-20.md",
+    "studio_included": false,
+    "live_database_changes": false,
+    "merge_commit": "b207f8b08e1920a336b9a8f6bf51e9444c38ab1b",
+    "evidence": "evidence/account-hotfix-2026-10-20/production.json",
+    "authenticated_owner_session_verified": false
+  },
+  "verification_policy": "OWNER_DIRECTED_PRODUCTION_DELIVERY_ONLY_REUSE_PRIOR_EVIDENCE"
 }
