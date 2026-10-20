@@ -61,3 +61,9 @@ ServiceFlow يقترح سجل دعم؛ عند الموافقة على الحقو
 نجح بناء Next وTypeScript. [40 فحصًا محليًا موجهًا](evidence/stage-cde/local.json) تغطي العزل والتكرار والمصادر والنشر والإلغاء والموافقة، مع [عينة متصفح حقيقية](evidence/stage-cde/browser.json) للإنجليزية 1440 والعربية 390 دون overflow أو أخطاء صفحة. أعيد البناء فقط لإصلاح أخطاء اكتشفتها حزمة التسليم؛ لم تعاد الحزم السابقة كاملة. لا مفاتيح Groq محلية، لذلك لا ينسب هذا الفحص استدلالًا حيًا.
 
 طُبقت مهاجرتا Studio على المشروع المعتمد بنجاح. [إيصال قاعدة البيانات](evidence/stage-cde/database.json) يربط timestamps التي ولدها MCP بملفات SQL وبصماتها. RLS مفعل لكل الجداول العامة. تنبيه [كلمات المرور المسربة](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection) باقٍ من إعداد Auth؛ لم يغير. معلومات [RLS بلا policy](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy) تخص ثلاثة جداول خادمية مقصود منع العملاء عنها. لا اختبار استعادة لنسخة إنتاج كاملة، ولا ادعاء بذلك.
+
+## النشر والتحقق من المزود
+
+دُمج PR #18 عند `7008a725ae76b5e3590dca6e6872cead2e60d97a`، ونجح [نشر المصدر](https://vercel.com/adhamlouxors-projects/vzero/3EYkYzZXbQ2TGa6AE9ApVozQDnwC). نطاق الإنتاج: https://vzero-nine-beryl.vercel.app. نجح استدلال فعلي موثق بالمصدر على النماذج الثلاثة باستخدام slots 1/2/3. [فحص قائمة المزود](evidence/stage-cde/provider-listing.json) نجح لكل مفتاح؛ محاولة سابقة أعادت 401 من جلسة التطبيق ثم نجحت بعد دخول جديد، فلا تُنسب تلك الاستجابة إلى رفض Groq.
+
+تقرير التقييم المحدود يسجل 12 حالة عربي/إنجليزي لكل من 120B وQwen، مع فصل الحالات التي امتنع فيها الاسترجاع قبل استدعاء النموذج. لا يُقدّم كدقة عامة أو شهادة أمان. GPT-OSS 20B تحقق فعليًا وفي المقارنة المتزامنة. التشغيل العام يستخدم نماذج الإنتاج فقط؛ Qwen يحتاج evaluator خادميًا ولا يُنشر.

@@ -7,12 +7,12 @@ const keyNames=['GROQ_API_KEY','GROQ_API_KEY_2','GROQ_API_KEY_3'] as const
 function credential(model:ModelId){const key=process.env[keyNames[modelRegistry[model].slot-1]]?.trim();if(!key)throw new InputError('provider_not_configured',503);return key}
 export function configuredModels(){return Object.entries(modelRegistry).map(([id,info])=>({id,...info,configured:!!process.env[keyNames[info.slot-1]]?.trim(),availability:'not_checked',structuredWithTools:false,structuredWithStreaming:false}))}
 export function numberSetting(name:string,fallback:number,min:number,max:number){const n=Number(process.env[name]);return Number.isFinite(n)&&n>=min&&n<=max?Math.floor(n):fallback}
-export type GroundedAnswer={answer:string;citations:{chunkId:string;quote:string}[];support:{propose:boolean;title:string;details:string}}
-const schema={type:'object',additionalProperties:false,required:['answer','citations','support'],properties:{answer:{type:'string'},citations:{type:'array',items:{type:'object',additionalProperties:false,required:['chunkId','quote'],properties:{chunkId:{type:'string'},quote:{type:'string'}}}},support:{type:'object',additionalProperties:false,required:['propose','title','details'],properties:{propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}}}}}
+export type GroundedAnswer={answerable:boolean;answer:string;citations:{chunkId:string}[];support:{propose:boolean;title:string;details:string}}
+const schema={type:'object',additionalProperties:false,required:['answerable','answer','citations','support'],properties:{answerable:{type:'boolean'},answer:{type:'string'},citations:{type:'array',items:{type:'object',additionalProperties:false,required:['chunkId'],properties:{chunkId:{type:'string'}}}},support:{type:'object',additionalProperties:false,required:['propose','title','details'],properties:{propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}}}}}
 export function parseAnswer(content:string):GroundedAnswer{
  let v:GroundedAnswer
  try{v=JSON.parse(content)}catch{throw new InputError('invalid_model_output',502)}
- if(!v||typeof v.answer!=='string'||!v.answer.trim()||v.answer.length>12000||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string'||typeof c.quote!=='string'||!c.quote.trim()||c.quote.length>1400)||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
+ if(!v||typeof v.answerable!=='boolean'||typeof v.answer!=='string'||!v.answer.trim()||v.answer.length>12000||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string')||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
  return v
 }
 export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal){

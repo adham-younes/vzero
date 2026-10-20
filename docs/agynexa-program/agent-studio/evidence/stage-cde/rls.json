@@ -1,0 +1,12 @@
+{
+  "environment": "isolated_local",
+  "method": "authenticated SQL role with real other-user session; select rows from first workspace",
+  "cross_workspace_visible_rows": {
+    "knowledge_sources": 0,
+    "knowledge_chunks": 0,
+    "agent_versions": 0,
+    "agent_publications": 0,
+    "agent_runs": 0,
+    "support_requests": 0
+  }
+}

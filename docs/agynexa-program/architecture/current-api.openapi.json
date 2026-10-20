@@ -1853,7 +1853,8 @@
                 "required": [
                   "message",
                   "requestKey"
-                ]
+                ],
+                "additionalProperties": false
               }
             }
           }
@@ -2293,7 +2294,8 @@
                 "required": [
                   "message",
                   "requestKey"
-                ]
+                ],
+                "additionalProperties": false
               }
             }
           }
@@ -2791,7 +2793,8 @@
                 "required": [
                   "message",
                   "requestKey"
-                ]
+                ],
+                "additionalProperties": false
               }
             }
           }
