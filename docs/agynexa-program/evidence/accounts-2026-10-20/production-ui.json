@@ -1,0 +1,11 @@
+{
+  "environment": "https://vzero-nine-beryl.vercel.app",
+  "locale": "ar",
+  "width": 390,
+  "signup_auto_login": true,
+  "brief_review_save_list_delete": true,
+  "logout_password_login": true,
+  "no_overflow": true,
+  "page_errors": [],
+  "synthetic_users_cleanup": "COMPLETE"
+}

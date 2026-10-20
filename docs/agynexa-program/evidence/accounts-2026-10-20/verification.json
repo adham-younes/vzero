@@ -2,7 +2,7 @@
   "date": "2026-10-20",
   "project_id": "xsyxvswbiptbyxyqhdim",
   "account": "agynexa",
-  "status": "IMPLEMENTED_DATABASE_VERIFIED_PRODUCTION_PENDING",
+  "status": "VERIFIED_PRODUCTION",
   "unit_tests": 10,
   "build_typescript": "PASS",
   "rls_transaction": "PASS_ROLLED_BACK",
@@ -11,8 +11,27 @@
     "errors": 0,
     "info": "Private rate-limit table intentionally has no client RLS policy"
   },
-  "no_confirmation_email": "admin.createUser email_confirm=true; production verification pending",
+  "no_confirmation_email": {
+    "synthetic_accounts": 5,
+    "auto_confirmed": 5,
+    "confirmation_sent_at_null": 5
+  },
   "database_migrations_applied": true,
-  "test_accounts_cleanup": "PENDING_PRODUCTION_TEST",
-  "hero_files_modified": false
+  "test_accounts_cleanup": {
+    "accounts_sessions_refresh_tokens": "REMOVED",
+    "remaining": 0
+  },
+  "hero_files_modified": false,
+  "implementation_commit": "e6adf5e",
+  "product_head": "ce195f0",
+  "merge_commit": "558fef356a5fc1c8419ad0749fabcc6d1df4705f",
+  "pull_request": "https://github.com/adham-younes/vzero/pull/15",
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/EzwYg2jfyM5dcVHRX2GkD1staHiw",
+  "http_checks_production": 22,
+  "production_browser": "Arabic 390px signup, auto-login, brief save/list/delete, logout and password login passed",
+  "runtime_migrations": [
+    "20261020074037",
+    "20261020074207"
+  ],
+  "test_harness_note": "Initial HTTP run stopped on case-sensitive response-header lookup; header normalization fixed; full 22 checks then passed. All five accounts from both runs and UI test removed."
 }

@@ -20,7 +20,7 @@ flowchart TD
     CAT --> JSON[service-catalog.json]
 ```
 
-لا توجد طبقة قاعدة بيانات أو مزود نماذج أو تسجيل دخول في هذا المسار. Analytics وSpeed Insights أدوات قياس؛ ليستا مخزن طلبات المشاريع أو سجل تنفيذ وكلاء.
+هذا الرسم يصف المسار الأصلي قبل تسليم الحسابات. أضيف الآن التسجيل والجلسات وprofiles/project_briefs مع RLS وحفظ الموجز من واجهة المراجعة؛ لا مزود نماذج. Analytics وSpeed Insights أدوات قياس؛ ليستا مخزن طلبات المشاريع أو سجل تنفيذ وكلاء.
 
 ## 2. التقنية والتشغيل
 
@@ -33,7 +33,7 @@ flowchart TD
 | الاستضافة | مشروع `vzero`، فريق `adhamlouxors-projects`، Vercel Git Integration |
 | الإنتاج | `main`؛ النطاق `vzero-nine-beryl.vercel.app` |
 | الأوامر الموجودة | `dev` و`build` و`start`؛ لا مهمة lint معرفة |
-| بيانات المنتج | JSON وTypeScript داخل المستودع؛ لا CMS أو DB متصل |
+| بيانات المنتج | المحتوى JSON/TS؛ الحسابات والموجزات في Supabase مع RLS؛ لا CMS |
 
 ## 3. خريطة الملفات والمسؤوليات
 

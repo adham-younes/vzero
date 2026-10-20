@@ -9,7 +9,7 @@ assert len(sys.argv)==3 and sys.argv[2]=='--create-test-users'
 base=sys.argv[1].rstrip('/')
 suffix=secrets.token_hex(6)
 accounts=[{'email':f'agynexa-check-{suffix}-{n}@example.com','password':secrets.token_urlsafe(24),'name':f'AGYNEXA synthetic {n}'} for n in [1,2]]
-cleanup=Path('/tmp/agynexa-account-cleanup.json');cleanup.write_text(json.dumps({'emails':[a['email'] for a in accounts]}));os.chmod(cleanup,0o600)
+cleanup=Path('/tmp/agynexa-account-cleanup.json');previous=json.loads(cleanup.read_text())['emails'] if cleanup.exists() else [];cleanup.write_text(json.dumps({'emails':previous+[a['email'] for a in accounts]}));os.chmod(cleanup,0o600)
 def client():
  jar=http.cookiejar.CookieJar();return urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar)),jar
 def request(c,path,body=None,method=None,origin=None):
@@ -17,7 +17,7 @@ def request(c,path,body=None,method=None,origin=None):
  req=urllib.request.Request(base+path,data=json.dumps(body).encode() if body is not None else None,headers=headers,method=method)
  try:r=c.open(req,timeout=25)
  except urllib.error.HTTPError as e:r=e
- data=json.loads(r.read());return r.status,data,dict(r.headers)
+ data=json.loads(r.read());return r.status,data,{k.lower():v for k,v in r.headers.items()}
 a,jar=client();b,_=client();checks=[]
 def check(name,condition):
  assert condition,name
@@ -29,7 +29,7 @@ for c,acct in [(a,accounts[0]),(b,accounts[1])]:
  result=request(c,'/api/auth/register',acct)
  check('registration and automatic login '+acct['name'][-1],result[0]==201 and request(c,'/api/account')[0]==200)
 check('secure HttpOnly cookies',all(c.secure and c.has_nonstandard_attr('HttpOnly') for c in jar if 'auth-token' in c.name) and len(list(jar))>0)
-check('private no-store account response','no-store' in request(a,'/api/account')[2].get('Cache-Control',''))
+check('private no-store account response','no-store' in request(a,'/api/account')[2].get('cache-control',''))
 check('duplicate registration does not replace existing account',request(a,'/api/auth/register',{**accounts[0],'password':secrets.token_urlsafe(24)})[0]==400)
 body={'requestKey':str(uuid.uuid4()),'organization':'Synthetic test only','email':accounts[0]['email'],'service':'Knowledge','problem':'Synthetic task','sources':'Public examples','acceptance':'Correct answer','consent':True}
 check('consent required',request(a,'/api/v1/project-briefs',{**body,'consent':False})[0]==400)
