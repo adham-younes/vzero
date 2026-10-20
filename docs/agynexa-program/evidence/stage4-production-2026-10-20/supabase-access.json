@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "requested_project": "xsyxvswbiptbyxyqhdim",
+  "requested_name": "agynexa",
+  "api_url": "https://xsyxvswbiptbyxyqhdim.supabase.co",
+  "project_list_contains_requested_project": false,
+  "direct_get_project": "DENIED: You do not have permission to perform this action",
+  "public_rest_probe": {
+    "status": 401,
+    "message": "No API key found in request"
+  },
+  "database_query_executed": false,
+  "writes_performed": false,
+  "conclusion": "Network endpoint responds. Authenticated MCP/database access is NOT verified. Current connector must be authorized for requested project.",
+  "other_account_metadata_saved": false
+}

@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AGYNEXA implemented public API",
-    "version": "2026-10-19",
-    "description": "Source-derived contract for implementation commit 991deca5805636b090a7098c8f999ed162eb72de, deployed via merge f6e92b3169be1dd96e7a9af197baf65c85957c16. Two public, stateless endpoints only. No database, authenticated approval, live AI, external connector or server email. Stage-3 openapi.yaml is a separate proposal."
+    "version": "2026-10-20",
+    "description": "Existing catalog and procurement APIs plus a read-only Supabase health probe. No project brief intake, knowledge runtime, authenticated user workflow or database writes. Stage-3 openapi.yaml remains a proposal."
   },
   "servers": [
     {
@@ -261,6 +261,53 @@
           },
           "405": {
             "description": "Unsupported method, including GET. Framework-generated; no custom JSON error shape is guaranteed."
+          }
+        }
+      }
+    },
+    "/api/health/supabase": {
+      "get": {
+        "operationId": "checkSupabaseConnection",
+        "summary": "Verify both configured keys against the owner-selected Supabase project",
+        "description": "GETs the API root using the publishable and secret keys separately; no table rows read or written. Pins xsyxvswbiptbyxyqhdim.supabase.co and refuses redirects. Never returns keys or upstream response bodies. Five-second timeout per request, no-store. HTTP 200 only if both keys authenticate; 503 for missing/invalid configuration, wrong project, denied access or network failure. Does not prove schema, RLS or application workflows.",
+        "responses": {
+          "200": {
+            "description": "Both credentials accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "const": "ok"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Connection not established",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "status"
+                  ],
+                  "properties": {
+                    "status": {
+                      "const": "unavailable"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

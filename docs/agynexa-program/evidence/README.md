@@ -55,3 +55,9 @@
 ## إصلاحات المرحلة 4 — مرشح محلي 19 أكتوبر 2026
 
 [الدليل ولقطات الكمبيوتر والجوال](visual-repair-2026-10-19/README.md)، مصدر المنتج `dc62aacae12373d7ce80c4c5f2c9b62510db3a9b`. هذه لقطات بناء محلي وليست الإنتاج.
+
+## إنتاج 20 أكتوبر 2026
+
+[نتائج 390px](stage4-production-2026-10-20/verification.json) و[حالة الوصول إلى Supabase](stage4-production-2026-10-20/supabase-access.json). المنتج نُشر؛ الاتصال بقاعدة المشروع الجديد لم يُثبت.
+
+[اختبار اتصال Supabase](supabase-connection-2026-10-20/verification.json): حساب agynexa والمشروع المحدد فقط؛ لا أسرار أو بيانات عملاء في الدليل.
