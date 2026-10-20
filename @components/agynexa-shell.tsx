@@ -1,17 +1,51 @@
 'use client'
-import {createContext,useContext,useEffect,useState} from 'react'
+import {createContext,useContext,useEffect,useRef,useState} from 'react'
 import Link from './locale-link'
 import {usePathname,useRouter} from 'next/navigation'
 import {Menu,X,ArrowUpRight} from 'lucide-react'
-import {nav, type Copy} from '@/lib/agynexa'
-import {Button,buttonVariants} from '@/components/ui/button'
+import {nav} from '@/lib/agynexa'
+import {buttonVariants} from '@/components/ui/button'
 const LanguageContext=createContext({ar:false,t:(copy:readonly string[])=>copy[0]})
 export const useLanguage=()=>useContext(LanguageContext)
 export function Action({href,children}:{href:string;children:React.ReactNode}){return <Link className={buttonVariants({size:'lg'})} href={href}>{children}<ArrowUpRight size={16}/></Link>}
 export default function Shell({children}:{children:React.ReactNode}){
- const [open,setOpen]=useState(false);const pathname=usePathname();const ar=pathname.split('/')[1]==='ar';const path=pathname.replace(/^\/ar(?=\/|$)/,'')||'/';const router=useRouter();const t=(copy:readonly string[])=>copy[ar?1:0]
+ const [open,setOpen]=useState(false)
+ const menuButton=useRef<HTMLButtonElement>(null)
+ const pathname=usePathname();const ar=pathname.split('/')[1]==='ar'
+ const path=pathname.replace(/^\/ar(?=\/|$)/,'')||'/'
+ const router=useRouter();const t=(copy:readonly string[])=>copy[ar?1:0]
  useEffect(()=>{document.documentElement.lang=ar?'ar':'en';document.documentElement.dir=ar?'rtl':'ltr'},[ar])
- useEffect(()=>setOpen(false),[path])
+ useEffect(()=>setOpen(false),[pathname])
+ useEffect(()=>{
+  if(!open)return
+  const close=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);menuButton.current?.focus()}}
+  document.addEventListener('keydown',close)
+  return ()=>document.removeEventListener('keydown',close)
+ },[open])
+ const groups=[
+  {title:['Explore','استكشف'],slugs:['solutions','services','industries','methodology']},
+  {title:['Learn more','اعرف أكثر'],slugs:['architecture','integrations','security','resources','about']},
+ ]
  if(pathname.startsWith('/widget/'))return <>{children}</>
- return <LanguageContext.Provider value={{ar,t}}><a href="#main" className="skip">{t(['Skip to content','تجاوز إلى المحتوى'])}</a><header className="site-header"><div className="container flex flex-wrap items-center justify-between gap-4 py-4"><Link href="/" aria-label="AGYNEXA home" className="brand">AGYNEXA<span className="text-primary">.</span></Link><nav aria-label={t(['Main navigation','التنقل الرئيسي'])} className="hidden items-center gap-6 xl:flex">{nav.slice(0,5).map(([slug,en,ar])=><Link key={slug} aria-current={path===`/${slug}`?'page':undefined} href={`/${slug}`}>{t([en,ar])}</Link>)}</nav><div className="flex items-center gap-3"><Button variant="outline" size="lg" onClick={()=>router.push(ar?path:`/ar${path==='/'?'':path}`)} lang={ar?'en':'ar'}>{ar?'English':'العربية'}</Button><Link className="text-sm hidden md:inline-flex" href="/account">{t(['Account','حسابي'])}</Link><div className="hidden sm:block"><Action href="/start">{t(['Start a project','ابدأ مشروعًا'])}</Action></div><button className="quiet" aria-expanded={open} aria-controls="site-menu" aria-label={t(['Toggle menu','فتح القائمة'])} onClick={()=>setOpen(!open)}>{open?<X size={20}/>:<Menu size={20}/>}</button></div></div>{open&&<nav id="site-menu" className="container grid gap-2 border-t py-6 sm:grid-cols-3">{nav.map(([slug,en,ar])=><Link className="quiet" key={slug} href={`/${slug}`}>{t([en,ar])}</Link>)}<Link className="quiet" href="/account">{t(['Your account','حسابك'])}</Link><Link className="quiet" href="/agentnexos">AgentNexOS</Link><Link className="quiet" href="/start">{t(['Start a project','ابدأ مشروعًا'])}</Link></nav>}</header>{children}<footer className="border-t"><div className="container grid gap-12 py-16 md:grid-cols-3"><div><Link className="brand" href="/">AGYNEXA<span className="text-primary">.</span></Link><p className="muted mt-6">{t(['Agent systems with a clear purpose and evidence behind their decisions.','أنظمة وكلاء لهدف واضح وقرارات تستند إلى الأدلة.'])}</p><a className="inline-flex min-h-11 items-center mt-4" href="mailto:adham@agynexa.si">adham@agynexa.si</a></div><nav className="grid grid-cols-2 gap-2">{nav.map(([slug,en,ar])=><Link className="min-h-11" key={slug} href={`/${slug}`}>{t([en,ar])}</Link>)}</nav><div><Action href="/agentnexos">AgentNexOS</Action><p className="muted mt-4 text-sm">{t(['Enterprise agent solutions, designed and implemented around your operating requirements.','حلول وكلاء للمؤسسات، نصمّمها وننفّذها بحسب متطلبات عملك.'])}</p></div></div><div className="container border-t py-6 text-sm muted flex flex-wrap justify-between gap-4"><span>© {new Date().getFullYear()} AGYNEXA</span></div></footer></LanguageContext.Provider>
+ return <LanguageContext.Provider value={{ar,t}}>
+  <a href="#main" className="skip">{t(['Skip to content','تجاوز إلى المحتوى'])}</a>
+  <header className="site-header">
+   <div className="container header-row">
+    <Link href="/" aria-label={t(['AGYNEXA home','AGYNEXA الرئيسية'])} className="brand" dir="ltr">AGYNEXA<span className="text-primary">.</span></Link>
+    <nav aria-label={t(['Main navigation','التنقل الرئيسي'])} className="desktop-nav">{nav.slice(0,5).map(([slug,en,arabic])=><Link key={slug} aria-current={path===`/${slug}`?'page':undefined} href={`/${slug}`}>{t([en,arabic])}</Link>)}</nav>
+    <div className="header-actions">
+     <button className="language-switch" type="button" aria-label={ar?'Switch to English':'التبديل إلى العربية'} title={ar?'English':'العربية'} lang={ar?'en':'ar'} onClick={()=>router.push((ar?path:`/ar${path==='/'?'':path}`)+window.location.search+window.location.hash)}><span dir="ltr">{ar?'EN':'AR'}</span></button>
+     <Link className="header-account" href="/account">{t(['Account','حسابي'])}</Link>
+     <div className="header-cta"><Action href="/start">{t(['Start a project','ابدأ مشروعًا'])}</Action></div>
+     <button ref={menuButton} className="quiet menu-toggle" aria-expanded={open} aria-controls="site-menu" aria-label={t(open?['Close menu','إغلاق القائمة']:['Open menu','فتح القائمة'])} onClick={()=>setOpen(!open)}>{open?<X size={20}/>:<Menu size={20}/>}</button>
+    </div>
+   </div>
+   {open&&<nav id="site-menu" aria-label={t(['All pages','كل الصفحات'])} className="site-menu container">
+    <div className="menu-start"><Action href="/start">{t(['Start a project','ابدأ مشروعًا'])}</Action><p className="muted text-sm">{t(['Tell us about the task you want to improve.','احكِ لنا عن المهمة التي تريد تحسينها.'])}</p><Link className="text-link" href="/account">{t(['Your account','حسابك'])}</Link><Link className="text-link" href="/studio">{t(['Agent Studio','استوديو الوكلاء'])}</Link></div>
+    {groups.map(group=><div className="menu-group" key={group.title[0]}><p>{t(group.title)}</p>{group.slugs.map(slug=>{const item=nav.find(n=>n[0]===slug)!;return <Link key={slug} aria-current={path===`/${slug}`?'page':undefined} href={`/${slug}`}>{t(item.slice(1))}</Link>})}{group.slugs.includes('architecture')&&<Link href="/agentnexos">AgentNexOS</Link>}</div>)}
+   </nav>}
+  </header>
+  {children}
+  <footer className="border-t"><div className="container grid gap-12 py-16 md:grid-cols-3"><div><Link className="brand" dir="ltr" href="/">AGYNEXA<span className="text-primary">.</span></Link><p className="muted mt-6">{t(['Agent systems with a clear purpose and evidence behind their decisions.','أنظمة وكلاء لهدف واضح وقرارات تستند إلى الأدلة.'])}</p><a className="inline-flex min-h-11 items-center mt-4" dir="ltr" href="mailto:adham@agynexa.si">adham@agynexa.si</a></div><nav aria-label={t(['Footer navigation','روابط التذييل'])} className="grid grid-cols-2 gap-2">{nav.map(([slug,en,arabic])=><Link className="min-h-11" key={slug} href={`/${slug}`}>{t([en,arabic])}</Link>)}</nav><div><Action href="/agentnexos">AgentNexOS</Action><p className="muted mt-4 text-sm">{t(['Enterprise agent solutions, designed and implemented around your operating requirements.','حلول وكلاء للمؤسسات، نصمّمها وننفّذها بحسب متطلبات عملك.'])}</p></div></div><div className="container border-t py-6 text-sm muted flex flex-wrap justify-between gap-4"><span dir="ltr">© {new Date().getFullYear()} AGYNEXA</span></div></footer>
+ </LanguageContext.Provider>
 }

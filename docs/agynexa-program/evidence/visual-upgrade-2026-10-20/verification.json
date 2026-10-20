@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-20",
+  "baseline_main": "063fc2efef16e627748f4a93fdf921e8f36cd3d2",
+  "product_commit": "5ade5f2cfefff3370721cacd3ab3ec80eec5756d",
+  "environment": "localhost production build",
+  "url": "http://localhost:3017",
+  "pull_request": "https://github.com/adham-younes/vzero/pull/30",
+  "build": "PASS",
+  "typescript": "PASS",
+  "visual_samples": [
+    {
+      "route": "/",
+      "width": 1440
+    },
+    {
+      "route": "/ar",
+      "width": 390
+    },
+    {
+      "route": "/ar/start",
+      "width": 390
+    },
+    {
+      "route": "/start",
+      "width": 1440
+    },
+    {
+      "route": "/ar/services",
+      "width": 768
+    },
+    {
+      "route": "/ar/services/process-automation",
+      "width": 320
+    },
+    {
+      "route": "/solutions/procurement",
+      "width": 1440
+    },
+    {
+      "route": "/ar/login",
+      "width": 1440
+    },
+    {
+      "route": "/ar/agentnexos",
+      "width": 1440
+    }
+  ],
+  "checks": {
+    "header_brand_px": [
+      34,
+      29
+    ],
+    "language_visual_px": [
+      44,
+      36
+    ],
+    "sampled_horizontal_overflow": false,
+    "arabic_font": "Almarai",
+    "secondary_text": "rgb(191, 191, 191)",
+    "navigation_locale_and_hash": "PASS",
+    "menu_escape": "PASS",
+    "brief_empty_validation_first_field_focus": "PASS",
+    "brief_email_validation": "PASS",
+    "brief_discovery_help": "PASS",
+    "brief_review_and_edit_preserve_fields": "PASS",
+    "brief_consent_gates_save_download": "PASS",
+    "procurement_totals": [
+      14400,
+      14160
+    ],
+    "procurement_missing_warranty_warning": "PASS",
+    "password_visibility": "PASS",
+    "final_preview_video": {
+      "autoplay": true,
+      "muted": true,
+      "loop": true,
+      "controls": false,
+      "paused": false,
+      "mobile_time_samples_seconds": [
+        5.568817,
+        9.70229
+      ],
+      "desktop_time_seconds": 5.242311,
+      "custom_play_pause_buttons": 0
+    }
+  },
+  "protected_files": {
+    "public/videos/background.mp4": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+    "@components/landing-5-hero-video.tsx": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+    "@components/landing-5-hero-section.tsx": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1"
+  },
+  "limits": [
+    "No authenticated account/storage journey repeated",
+    "No emails, signup, database or SMTP changes",
+    "No exhaustive performance or accessibility audit"
+  ],
+  "preview": {
+    "status": "READY",
+    "deployment_id": "dpl_4UMNzExRLCbM9AqaWDmXShcybCLh",
+    "browser": "PASS: Arabic mobile and English desktop, original autoplay with no playback controls",
+    "url": "https://vzero-acnado0le-adhamlouxors-projects.vercel.app"
+  },
+  "production_deployed": false,
+  "screenshot_provenance": {
+    "final_preview": [
+      "home-en-desktop.jpg",
+      "home-ar-mobile.jpg",
+      "menu-ar-mobile.jpg"
+    ],
+    "other_screenshots": "Earlier local production build for this change; see release note limitations",
+    "vercel_overlay": "VERCEL-LIVE-FEEDBACK visible at right edge on Preview; not an application video control"
+  }
+}
