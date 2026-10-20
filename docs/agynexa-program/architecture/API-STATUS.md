@@ -5,7 +5,7 @@
 ما يلي يوثق واجهتي الأعمال الأصليتين وحدودهما:
 
 
-الإنتاج الحالي عند `d030a60` بعد تسليم الحسابات `e6adf5e`؛ الفرع يضيف خمس عمليات Studio متحققة محليًا فقط. أدلة الاختبار مؤرخة بحسب الإصدار؛ أمثلة الكتالوج والمشتريات الأصلية من `991deca`. العقد المقروء آليًا: [current-api.openapi.json](current-api.openapi.json). مضيف الإنتاج العام: `https://vzero-nine-beryl.vercel.app`.
+الإنتاج الحالي عند `b3665b8` بعد Studio C/D/E، بإجمالي 34 عملية HTTP. الجرد التالي لعقود المرحلة 3 تاريخي؛ المسارات الفعلية الحالية في OpenAPI وتقرير Studio، ولا تستخدم عدد العمليات القديم لوصف الإصدار الحالي. أدلة الاختبار مؤرخة بحسب الإصدار؛ أمثلة الكتالوج والمشتريات الأصلية من `991deca`. العقد المقروء آليًا: [current-api.openapi.json](current-api.openapi.json). مضيف الإنتاج العام: `https://vzero-nine-beryl.vercel.app`.
 
 ## جرد التنفيذ مقابل خطة المرحلة 3
 
@@ -19,12 +19,12 @@
 | `GET /api/v1/connectors/{provider}/callback` | `SPECIFIED / REQUIRES_ACCESS` | لا callback منشور |
 | `POST /api/v1/knowledge/search` | `SPECIFIED / REQUIRES_ACCESS` | بحث الخدمات المحلي ليس RAG |
 | `POST /api/v1/agents/{id}/runs` | `SPECIFIED / REQUIRES_ACCESS` | لا تنفيذ وكلاء حي |
-| `GET /api/v1/runs/{runId}` | `SPECIFIED` | لا حالة تشغيل دائمة |
-| `POST /api/v1/approvals/{id}/decision` | `SPECIFIED` | إقرار الزائر لا يستدعيه |
+| `GET /api/v1/runs/{runId}` | `IMPLEMENTED_STUDIO` | تشغيل محفوظ مع جلسة وعضوية |
+| `POST /api/v1/approvals/{approvalId}/decision` | `IMPLEMENTED_STUDIO_SCOPED` | موافقة طلب دعم داخلي؛ إقرار الزائر القديم منفصل |
 | `POST /api/v1/webhooks/{provider}` | `SPECIFIED / REQUIRES_ACCESS` | لا اشتراك أحداث خارجي |
 | `GET /api/v1/observability/runs` | `SPECIFIED` | أدوات قياس الموقع ليست observability لتشغيل وكلاء |
 
-يوجد في الإنتاج 10 عمليات HTTP في 8 ملفات route؛ الفرع يحتوي 15 عملية في 11 ملفًا بعد B. نُفذت عمليتان من عقود المرحلة 3: الكتالوج وحفظ الموجز بعقد مختلف عن المقترح. بقية العمليات التسع في عقد المرحلة 3 غير منفذة. لا تستخدم مسارات المعرفة والوكلاء والموافقات باعتبارها متاحة.
+وقت تسليم الحسابات كان العدد 10 عمليات HTTP في 8 ملفات route، ثم 15 عملية في 11 ملفًا بعد B؛ هذا عدد تاريخي. نُفذت عمليتان من عقود المرحلة 3: الكتالوج وحفظ الموجز بعقد مختلف عن المقترح. بقية العمليات التسع في عقد المرحلة 3 غير منفذة. لا تفترض أن مسارات المقترح مطابقة للتنفيذ؛ Studio الحالي ينفذ المعرفة عبر مصادر الوكيل وtest-runs/invoke والموافقة عبر approvals/{approvalId}/decision. راجع OpenAPI.
 
 ## كتالوج الخدمات
 
@@ -111,9 +111,9 @@ GET account وGET/POST/DELETE project-briefs تتطلب جلسة صالحة؛ Co
 
 الموافقة الصريحة مفروضة في API الحفظ. `consent_at` وقت إدراج افتراضي في الجدول، فلا يثبت مرور كل إدراج مباشر عبر واجهة الموافقة. سقف الموجزات يعد السجلات الموجودة التي أنشئت خلال 24 ساعة؛ حذفها يحرر الحصة. هذان حدان مسجلان للتصحيح في نطاق لاحق، دون تعديل سلوك الحسابات في المرحلة A.
 
-## Studio B — محلي فقط
+## Studio B — سجل التحقق المحلي السابق
 
-[التسليم والاختبارات](../agent-studio/STAGE-B.md). مسارات الفرع التالية ليست مفعّلة في الإنتاج. تحتاج AGYNEXA_STUDIO_ENABLED=true وSQL Studio في بيئة بيانات معزولة. RLS والجلسة والعضوية تتحقق مستقلة؛ لا مفتاح إداري لقراءة/كتابة الوكلاء. كل الردود private/no-store.
+[التسليم والاختبارات](../agent-studio/STAGE-B.md). وقت B كانت المسارات التالية محلية فقط. نُشرت لاحقًا ضمن C/D/E؛ Studio الآن مفعّل افتراضيًا ويمكن تعطيله بـAGYNEXA_STUDIO_ENABLED=false. RLS والجلسة والعضوية تتحقق مستقلة؛ لا مفتاح إداري لقراءة/كتابة الوكلاء. كل الردود private/no-store.
 
 | العملية | السلوك |
 |---|---|
@@ -123,7 +123,7 @@ GET account وGET/POST/DELETE project-briefs تتطلب جلسة صالحة؛ Co
 | GET /api/v1/agents/{agentId} | وكيل مساحة المستخدم؛ 404 للغائب أو الأجنبي |
 | PATCH /api/v1/agents/{agentId} | name/instructions/language/model وrevision؛ 409 عند تعديل أحدث |
 
-الحقول والحدود وCSRF والأخطاء موثقة في current-api.openapi.json. إصدار المسودة عدّاد تغيير فقط. لا مصادر أو محادثة أو invoke/publish بعد.
+الحقول والحدود وCSRF والأخطاء موثقة في current-api.openapi.json. إصدار المسودة عدّاد تغيير فقط؛ أضيفت المصادر والمحادثة وinvoke/publish لاحقًا في C/D/E.
 
 إصلاح GET /api/account في المرشح: عدم رؤية profile يرجع 401 بدل خطأ single-row/503. أخطاء قاعدة البيانات الحقيقية تبقى 503. واجهة الحساب تفصل خطأ قائمة الموجزات عن الحساب نفسه، ولا تدعي أن القائمة فارغة عند فشلها.
 
