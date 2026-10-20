@@ -269,7 +269,7 @@
       "get": {
         "operationId": "checkSupabaseConnection",
         "summary": "Verify both configured keys against the owner-selected Supabase project",
-        "description": "GETs the API root using the publishable and secret keys separately; no table rows read or written. Pins xsyxvswbiptbyxyqhdim.supabase.co and refuses redirects. Never returns keys or upstream response bodies. Five-second timeout per request, no-store. HTTP 200 only if both keys authenticate; 503 for missing/invalid configuration, wrong project, denied access or network failure. Does not prove schema, RLS or application workflows. Response includes safe diagnostic enums only: project (ok/missing/invalid); publishableKey and secretKey (ok/missing/invalid_format/rejected/unreachable/not_checked). No variable values or upstream response bodies.",
+        "description": "GETs /auth/v1/settings with the publishable key and /rest/v1/ with the secret key (REST root rejects publishable keys); no table rows read or written. Pins xsyxvswbiptbyxyqhdim.supabase.co and refuses redirects. Never returns keys or upstream response bodies. Five-second timeout per request, no-store. HTTP 200 only if both keys authenticate; 503 for missing/invalid configuration, wrong project, denied access or network failure. Does not prove schema, RLS or application workflows. Response includes safe diagnostic enums only: project (ok/missing/invalid); publishableKey and secretKey (ok/missing/invalid_format/rejected/unreachable/not_checked). No variable values or upstream response bodies.",
         "responses": {
           "200": {
             "description": "Both credentials accepted",

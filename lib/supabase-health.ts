@@ -26,8 +26,11 @@ export async function checkSupabaseConnection(config: SupabaseHealthConfig, requ
    return
   }
   try {
-   const response = await request(new URL('/rest/v1/', url), {
-    method: 'GET', headers: {apikey: key, Accept: 'application/openapi+json'},
+   // REST's OpenAPI root requires a secret key. Check the public key against
+   // Auth's read-only settings endpoint, which accepts publishable credentials.
+   const isPublic = name === 'publishableKey'
+   const response = await request(new URL(isPublic ? '/auth/v1/settings' : '/rest/v1/', url), {
+    method: 'GET', headers: {apikey: key, Accept: isPublic ? 'application/json' : 'application/openapi+json'},
     redirect: 'error', cache: 'no-store', signal: AbortSignal.timeout(5000),
    })
    await response.body?.cancel()
