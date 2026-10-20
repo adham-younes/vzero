@@ -12,6 +12,11 @@
       "source_file": "supabase/migrations/20261020113246_studio_runtime.sql",
       "source_sha256": "3254ac441de81a777f5637c04d03c52197e0acddc3142f612712b1544eb5c09d",
       "hosted_version": "20261020115108"
+    },
+    {
+      "source_file": "supabase/migrations/20261020120653_studio_finalize_approval.sql",
+      "source_sha256": "ff85e5bb50025b5ffb40ba08781d777c305a2814ff349ea6fe5764c1ebe1c876",
+      "hosted_version": "20261020120723"
     }
   ],
   "note": "MCP generated hosted timestamps; match name and SQL hash. Do not blindly reapply local filenames using db push.",

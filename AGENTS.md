@@ -9,7 +9,7 @@ Documentation is a delivery requirement explicitly requested by the owner. Start
 - Preserve the original video and both Hero component files. A previous scoped CSS color/overlay correction is not permission to redesign the Hero.
 - Preserve the AGYNEXA identity, approved bilingual content, ten services and nine solutions unless the owner requests a change. `DESIGN.md` describes the design contract.
 - Follow actual aliases in `tsconfig.json`: active UI components are under `@components/` and `@ui/`.
-- Distinguish `IMPLEMENTED`, `VERIFIED`, `SPECIFIED`, `REQUIRES_ACCESS`, and `BLOCKED`. The branch has fifteen HTTP operations across eleven route handlers; ten are in the existing production release and five belong to the locally verified Studio foundation. It is not a connected enterprise agent platform.
+- Distinguish `IMPLEMENTED`, `VERIFIED`, `SPECIFIED`, `REQUIRES_ACCESS`, and `BLOCKED`. The deployed application has 34 HTTP operations, including Studio knowledge, Groq runtime, approvals, publication/API/widget. It remains a limited two-template runtime; billing, recovery and external enterprise connectors are not implemented. Read the current C/D/E receipt; A/B reports are historical.
 - Before UI/design work, read `docs/agynexa-program/CONNECTED-DESIGN-TOOLS.md`: the owner confirms 11 Vercel Connect resources for interface enrichment. Verify the needed capability and resource scope when using a connector; do not conflate connection with tested runtime integration.
 - Use saved public reference research. Re-fetch only a specific missing or outdated item that affects the work.
 - No secrets, customer data, private account output, dependencies or build artifacts in this public repository.

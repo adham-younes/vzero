@@ -1,0 +1,99 @@
+{
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "source_merge": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6WLPT7tRYWMpaGBAbnE7KZanXd1i",
+  "checked_at": "2026-10-20T12:17:48.135413+00:00",
+  "checks": [
+    "Real Groq inference on all three server key slots",
+    "Concurrent GPT-OSS 120B/20B comparison",
+    "Real model support proposal approved once",
+    "Published API invocation returns grounded answer",
+    "Public-source widget invocation returns grounded answer",
+    "Unpublish stops API access",
+    "Private API key revoked"
+  ],
+  "api": {
+    "run": {
+      "id": "ad90af1e-43db-4716-bf5c-adade278b3c3",
+      "agent_id": "b203e215-2ae6-40ba-80d3-06f8d07e55b2",
+      "conversation_id": "29b3d31f-d568-47c7-8757-8c042cfabf04",
+      "model": "openai/gpt-oss-120b",
+      "status": "succeeded",
+      "question": "What are the sample support hours?",
+      "answer": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday.",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday. The sample refund window is 14 days. Sample contact is help@example.test. ساعات الدعم التجريبية من 09:00 حتى 17:00 بالتوقيت العالمي. مدة الاسترداد التجريبية 14 يومًا. بريد الدعم التجريبي help@example.test.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1418,
+        "request_id": "req_01m5ckxpweebbas5d801q7a8je",
+        "input_tokens": 663,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 592,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.00045464999999999997
+      },
+      "error_code": null,
+      "created_at": "2026-10-20T12:17:33.481184+00:00",
+      "finished_at": "2026-10-20T12:17:36.486377+00:00",
+      "version_id": "147ba674-3065-42c7-ad3a-d8fe58589d43"
+    }
+  },
+  "widget": {
+    "run": {
+      "id": "8a63a16b-7880-4e32-8856-8847a3635f8a",
+      "agent_id": "b203e215-2ae6-40ba-80d3-06f8d07e55b2",
+      "conversation_id": "851d8f48-a074-466c-849e-f529138d4143",
+      "model": "openai/gpt-oss-120b",
+      "status": "succeeded",
+      "question": "What is the sample refund window?",
+      "answer": "14 days",
+      "citations": [
+        {
+          "quote": "Sample support hours are 09:00 to 17:00 UTC, Monday to Friday. The sample refund window is 14 days. Sample contact is help@example.test. ساعات الدعم التجريبية من 09:00 حتى 17:00 بالتوقيت العالمي. مدة الاسترداد التجريبية 14 يومًا. بريد الدعم التجريبي help@example.test.",
+          "title": "Synthetic release handbook",
+          "chunkId": "2040d61c-0acb-48ed-810b-417e439a0c33",
+          "sourceId": "b7e603b9-29fc-4bc0-a5fd-74bddd1d5e50"
+        }
+      ],
+      "usage": {
+        "key_slot": 1,
+        "latency_ms": 1298,
+        "request_id": "req_01m5ckxxf5ek6954n1c8kgb393",
+        "input_tokens": 562,
+        "pricing_date": "2026-10-20",
+        "output_tokens": 503,
+        "pricing_source": "https://console.groq.com/docs/models",
+        "estimated_cost_usd": 0.0003861
+      },
+      "error_code": null,
+      "created_at": "2026-10-20T12:17:40.456104+00:00",
+      "finished_at": "2026-10-20T12:17:43.191355+00:00",
+      "version_id": "147ba674-3065-42c7-ad3a-d8fe58589d43"
+    }
+  },
+  "evaluation_passed": 2,
+  "evaluation_total": 2,
+  "cleanup": {
+    "completed": true,
+    "remaining_fixture_users": 0,
+    "remaining_fixture_workspaces": 0,
+    "remaining_fixture_runs": 0,
+    "api_keys_revoked_before_cleanup": true,
+    "publications_stopped_before_cleanup": true,
+    "confirmation_sent_at": null,
+    "recovery_sent_at": null,
+    "scope": "Only the exact synthetic release user, its sessions, evaluator grant and owned workspace were removed."
+  },
+  "verification_limits": [
+    "Earlier session requests returned 401 and one login returned 503. Fresh login and the final complete flow passed. Root cause of those intermittent responses is not established; preserved in session-interruption.json.",
+    "The 12-case benchmark was not repeated after fixes; only failed cases were rerun.",
+    "Production browser evidence covers navigation/layout, not every UI action."
+  ]
+}

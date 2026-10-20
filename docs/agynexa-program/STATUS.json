@@ -1,28 +1,34 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T11:06:28.413357+00:00",
+  "updated_at": "2026-10-20T12:21:12.114361+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "STUDIO_CDE_IMPLEMENTED_RELEASE_VERIFICATION",
+  "status": "STUDIO_A_TO_E_DEPLOYED_WITH_COMMERCIAL_GAPS",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "3e9bd09",
-    "merge_commit": "b207f8b08e1920a336b9a8f6bf51e9444c38ab1b",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/19",
+    "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
+    "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/22",
     "pull_request_state": "MERGED",
+    "delivery_pull_requests": [
+      18,
+      21,
+      22
+    ],
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_PRODUCTION_DOMAIN_READ_ONLY_CHECKS_PASS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6uuFc5kWoLdGJSLqaq8qPb4QDQDo",
-    "receipt": "releases/ACCOUNT-HOTFIX-2026-10-20.md"
+    "status_at_verification": "VERCEL_SUCCESS_REAL_GROQ_APPROVAL_API_WIDGET_PASS_WITH_RECORDED_LIMITS",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6WLPT7tRYWMpaGBAbnE7KZanXd1i",
+    "receipt": "agent-studio/STAGES-CDE.md",
+    "evidence": "agent-studio/evidence/stage-cde/production.json"
   },
   "stage_status": [
     {
@@ -79,8 +85,8 @@
     "project_brief": "Authenticated persistent storage with explicit consent, idempotency, owner-only list/delete; TXT and manual email preserved",
     "procurement": "Stateless deterministic fictional comparison, not authenticated approval or purchasing",
     "database_connected": true,
-    "authenticated_tenants": false,
-    "live_ai_provider": false,
+    "authenticated_tenants": true,
+    "live_ai_provider": true,
     "server_email_delivery": false,
     "live_enterprise_connectors": false,
     "user_accounts": true,
@@ -92,17 +98,28 @@
       "GET /api/v1/project-briefs",
       "POST /api/v1/project-briefs",
       "DELETE /api/v1/project-briefs"
-    ]
+    ],
+    "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
+    "http_operations": 34
   },
   "last_product_checks": {
-    "production_read_only_requests": 4,
-    "supabase_health": "PASS",
-    "anonymous_account_401_no_store": "PASS",
-    "resource_attribution_removed_both_locales": "PASS",
-    "prior_local_regressions": "REUSED_FROM_STUDIO_STAGE_B",
-    "authenticated_owner_session": "NOT_TESTED",
+    "build_typescript": "PASS",
+    "targeted_local_checks": 40,
+    "direct_data_api_cross_workspace": "PASS",
+    "real_groq_key_slots": [
+      1,
+      2,
+      3
+    ],
+    "concurrent_production_models": "PASS",
+    "support_approval_and_replay": "PASS",
+    "published_api_widget_and_unpublish": "PASS",
+    "production_browser_navigation_rtl_390": "PASS",
     "full_suite_repeated": false,
-    "evidence": "evidence/account-hotfix-2026-10-20/production.json"
+    "synthetic_fixture_removed": true,
+    "original_benchmark": "120B 11/12; Qwen 8/12 before fixes; failed cases only rerun successfully across follow-ups",
+    "intermittent_auth_responses": "Observed 401 and login 503; final fresh session passed. Cause unproven and retained in evidence.",
+    "evidence": "agent-studio/evidence/stage-cde/production.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -126,20 +143,20 @@
     "scoped_lead_and_knowledge_implementation": true,
     "active_program": {
       "name": "Agent Studio",
-      "stage": "CDE",
+      "stage": "E_DELIVERED",
       "branch_only": false,
       "production": true,
       "merge_main": true,
       "live_database_changes": true,
       "live_auth_changes": false,
-      "advance_automatically": true,
+      "advance_automatically": false,
       "source": "DECISIONS.md"
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-studio-stage-a",
-    "product_code_changed": true,
-    "receipt": "agent-studio/STAGE-B.md"
+    "branch": "codex/agynexa-studio-production-receipt",
+    "product_code_changed": false,
+    "receipt": "agent-studio/STAGES-CDE.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -154,9 +171,9 @@
     "content_baseline": "content-inventory.json",
     "tool_baseline": "tool-inventory.json"
   },
-  "next_stage": "agent-studio/E",
-  "next_stage_authorized": true,
-  "next_action": "Complete grouped release checks, apply additive Studio schema on the authorized AGYNEXA project, deploy main, and record real Groq evaluation.",
+  "next_stage": null,
+  "next_stage_authorized": false,
+  "next_action": "Use the deployed Studio; next commercial scope is account recovery, then billing/external connectors by explicit selection. Investigate recorded intermittent session responses before broader release. Do not repeat A/B or reapply migrations.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -185,7 +202,7 @@
     "completion_evidence_required": "Record comparison with current implementation and plan, relevant recommendations, decisions/deferred items and next scoped action",
     "embedded_instructions_are_execution_authorization": false,
     "completion_evidence": "reviews/MARKET-REVIEW-RECONCILIATION-2026-10-19.md",
-    "scope_decision": "Reviewed in B: limited scope, isolation and evidence retained; no RFQ pivot; latest Studio instructions govern."
+    "scope_decision": "Re-read for C–E: limited templates, common runtime, RLS, idempotency, approvals and real evidence. No RFQ pivot or ten standalone products."
   },
   "current_candidate_delivery": {
     "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
@@ -213,23 +230,22 @@
     "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
   },
   "previous_verified_product_release": {
-    "implementation_commit": "e6adf5e",
-    "merge_commit": "558fef356a5fc1c8419ad0749fabcc6d1df4705f",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/15",
+    "implementation_commit": "3e9bd09",
+    "merge_commit": "b207f8b08e1920a336b9a8f6bf51e9444c38ab1b",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/19",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
-    "target": "production",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERIFIED_PRODUCTION_ACCOUNTS_AND_BRIEFS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/EzwYg2jfyM5dcVHRX2GkD1staHiw",
-    "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md"
+    "status_at_verification": "VERCEL_SUCCESS_PRODUCTION_DOMAIN_READ_ONLY_CHECKS_PASS",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6uuFc5kWoLdGJSLqaq8qPb4QDQDo",
+    "receipt": "releases/ACCOUNT-HOTFIX-2026-10-20.md"
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
     "status": "VERIFIED_MCP_AND_VERCEL_BOTH_KEYS",
     "evidence": "evidence/supabase-connection-2026-10-20/verification.json",
-    "model_provider": "GROQ_DEVELOPER_OWNER_CONFIRMED_NOT_CONNECTED_OR_TESTED",
-    "model_budget": "PAID_GROQ_FUNCTIONAL_TESTS_AUTHORIZED_FOR_STUDIO_C_NOT_USED_IN_A",
+    "model_provider": "GROQ_REAL_INFERENCE_VERIFIED_THREE_SERVER_KEY_SLOTS",
+    "model_budget": "SCOPED_PAID_FUNCTIONAL_EVALUATION_COMPLETED",
     "nexa_agent_connection": "NOT_VERIFIED",
     "account_connection_name": "agynexa",
     "production_probe": {
@@ -240,29 +256,29 @@
         "secretKey": "ok"
       }
     },
-    "next_action": "Groq keys exist on Vercel per owner; actual inference to be verified on the release.",
-    "model_evaluation": "reviews/GROQ-EVALUATION-2026-10-20.md"
+    "next_action": "No additional keys needed for the delivered runtime; Qwen remains internal preview evaluator only.",
+    "model_evaluation": "agent-studio/STAGES-CDE.md"
   },
   "account_release": {
     "status": "VERIFIED_PRODUCTION",
     "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md",
     "evidence": "evidence/accounts-2026-10-20/verification.json",
-    "current_issue": "Production error reported by owner at d030a60. Reproducible error paths repaired locally; exact failing request cause unresolved. See Studio B."
+    "current_issue": "Synthetic production login/account/Studio navigation passed. Earlier intermittent session 401/login 503 preserved; exact cause is not established."
   },
   "agent_studio": {
-    "stage": "CDE",
-    "status": "IMPLEMENTED_PENDING_PRODUCTION_VERIFICATION",
+    "stage": "E",
+    "status": "DEPLOYED_WITH_COMMERCIAL_GAPS",
     "plan": "agent-studio/EXECUTION-PLAN.md",
     "report": "agent-studio/STAGES-CDE.md",
     "baseline_main": "d030a60186380b3a106bc8ac0071d74abffea503",
     "owner_acceptance": "ALL_REMAINING_STAGES_AND_PRODUCTION_AUTHORIZED_D26",
-    "next_stage_authorized": true,
-    "production_deployed": false,
+    "next_stage_authorized": false,
+    "production_deployed": true,
     "runtime_implemented": true,
     "new_migrations_applied": true,
-    "implementation_commit": "ea7edc13815d4b7ef9d0d44130c7bc73c13b9c0e",
-    "evidence": "agent-studio/evidence/stage-b/verification.json",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/18",
+    "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
+    "evidence": "agent-studio/evidence/stage-cde/production.json",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/22",
     "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
     "local_sql_applied": true,
     "hosted_migrations_applied": true,
@@ -286,8 +302,15 @@
     ],
     "account_fix_commit": "5dc609b",
     "preview_receipt": "agent-studio/evidence/stage-b/preview.json",
-    "preview_status": "READY_VERIFIED_SOURCE_299919b_PROTECTED_STUDIO_DISABLED",
-    "hosted_migration_receipt": "agent-studio/evidence/stage-cde/database.json"
+    "preview_status": "HISTORICAL_STAGE_B_ONLY",
+    "hosted_migration_receipt": "agent-studio/evidence/stage-cde/database.json",
+    "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+    "production_receipt": "agent-studio/STAGES-CDE.md",
+    "migration_files": [
+      "supabase/migrations/20261020102401_studio_foundation.sql",
+      "supabase/migrations/20261020113246_studio_runtime.sql",
+      "supabase/migrations/20261020120653_studio_finalize_approval.sql"
+    ]
   },
   "account_hotfix": {
     "status": "DEPLOYED_PRODUCTION_SCOPED_CHECKS_PASS",

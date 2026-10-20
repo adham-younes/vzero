@@ -1,0 +1,13 @@
+{
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "source_merge": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+  "viewport": 390,
+  "checks": [
+    "Real synthetic-account login",
+    "Open Studio from account",
+    "Open saved agent activity and usage",
+    "RTL with no horizontal overflow"
+  ],
+  "page_errors": [],
+  "screenshot_limit": "Activity tab layout captured before activity data finished loading. Does not prove run history rendering; live activity data and decisions verified through API."
+}
