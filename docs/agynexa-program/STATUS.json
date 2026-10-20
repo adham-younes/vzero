@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T12:21:12.114361+00:00",
+  "updated_at": "2026-10-20T13:38:04.982594+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,21 +14,16 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
-    "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/22",
+    "implementation_commit": "0d351300b2c619c326f774b0a6c977d7bc68c895",
+    "merge_commit": "f58335441e8898e26e7710e6667cb4255fd7bb7b",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/24",
     "pull_request_state": "MERGED",
-    "delivery_pull_requests": [
-      18,
-      21,
-      22
-    ],
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_REAL_GROQ_APPROVAL_API_WIDGET_PASS_WITH_RECORDED_LIMITS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6WLPT7tRYWMpaGBAbnE7KZanXd1i",
-    "receipt": "agent-studio/STAGES-CDE.md",
-    "evidence": "agent-studio/evidence/stage-cde/production.json"
+    "status_at_verification": "VERCEL_SUCCESS_PUBLIC_PAGES_PASS_INTERACTIVE_CHAT_VERIFIED_LOCALLY",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7z3egyNdjf1KUkz948XuJ1H6wPd1",
+    "receipt": "agent-studio/CHAT-FIX.md",
+    "evidence": "agent-studio/evidence/chat-fix/production.json"
   },
   "stage_status": [
     {
@@ -103,23 +98,13 @@
     "http_operations": 34
   },
   "last_product_checks": {
-    "build_typescript": "PASS",
-    "targeted_local_checks": 40,
-    "direct_data_api_cross_workspace": "PASS",
-    "real_groq_key_slots": [
-      1,
-      2,
-      3
-    ],
-    "concurrent_production_models": "PASS",
-    "support_approval_and_replay": "PASS",
-    "published_api_widget_and_unpublish": "PASS",
-    "production_browser_navigation_rtl_390": "PASS",
+    "vercel_build_typescript": "PASS",
+    "targeted_logic_assertions": 14,
+    "real_local_browser": "AR_390_EN_1440_CHAT_AND_HISTORY_PASS",
+    "production_public_pages": 2,
+    "new_live_test_account": false,
     "full_suite_repeated": false,
-    "synthetic_fixture_removed": true,
-    "original_benchmark": "120B 11/12; Qwen 8/12 before fixes; failed cases only rerun successfully across follow-ups",
-    "intermittent_auth_responses": "Observed 401 and login 503; final fresh session passed. Cause unproven and retained in evidence.",
-    "evidence": "agent-studio/evidence/stage-cde/production.json"
+    "evidence": "agent-studio/evidence/chat-fix/production.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -154,9 +139,9 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-studio-production-receipt",
+    "branch": "codex/agynexa-chat-release-receipt",
     "product_code_changed": false,
-    "receipt": "agent-studio/STAGES-CDE.md"
+    "receipt": "agent-studio/CHAT-FIX.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -230,15 +215,21 @@
     "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
   },
   "previous_verified_product_release": {
-    "implementation_commit": "3e9bd09",
-    "merge_commit": "b207f8b08e1920a336b9a8f6bf51e9444c38ab1b",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/19",
+    "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
+    "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/22",
     "pull_request_state": "MERGED",
+    "delivery_pull_requests": [
+      18,
+      21,
+      22
+    ],
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_PRODUCTION_DOMAIN_READ_ONLY_CHECKS_PASS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6uuFc5kWoLdGJSLqaq8qPb4QDQDo",
-    "receipt": "releases/ACCOUNT-HOTFIX-2026-10-20.md"
+    "status_at_verification": "VERCEL_SUCCESS_REAL_GROQ_APPROVAL_API_WIDGET_PASS_WITH_RECORDED_LIMITS",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6WLPT7tRYWMpaGBAbnE7KZanXd1i",
+    "receipt": "agent-studio/STAGES-CDE.md",
+    "evidence": "agent-studio/evidence/stage-cde/production.json"
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
@@ -326,9 +317,12 @@
   },
   "verification_policy": "OWNER_DIRECTED_PRODUCTION_DELIVERY_ONLY_REUSE_PRIOR_EVIDENCE",
   "chat_hotfix": {
-    "status": "IMPLEMENTED_PENDING_DELIVERY",
+    "status": "DEPLOYED_PRODUCTION",
     "report": "agent-studio/CHAT-FIX.md",
     "scope": "Conversation-first UI, localized social replies and provider-free display labels",
-    "database_changes": false
+    "database_changes": false,
+    "evidence": "agent-studio/evidence/chat-fix/production.json",
+    "interactive_verification": "ISOLATED_LOCAL_REAL_DATABASE_AR_EN",
+    "production_auth_repeated": false
   }
 }
