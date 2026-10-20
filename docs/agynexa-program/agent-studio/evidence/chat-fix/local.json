@@ -6,8 +6,14 @@
     "Arabic identity response from real authenticated runtime",
     "Arabic no-evidence refusal retained",
     "Saved conversation reopened from activity",
-    "Arabic 390px no overflow"
+    "Arabic 390px no overflow",
+    "Settings show localized modes, no provider identifiers",
+    "English real conversation and 1440px layout"
   ],
-  "test_harness_issue": "Initial browser script stopped at an over-specific select label locator after the above checks passed; remaining settings/English checks run separately.",
-  "live_provider_calls": 0
+  "test_harness_issue": "Initial browser script stopped at an over-specific select label locator after the above checks passed; remaining settings/English checks run separately. A cold dev compilation exceeded the initial navigation timeout before continuation; no product assertion failed.",
+  "live_provider_calls": 0,
+  "page_errors": [],
+  "layout_refinement": "Verified on local dev; final deployment build verifies the latest source",
+  "limits": "No new live test account or paid inference; existing grounded-provider evidence reused. Identity replies are product responses, not model calls.",
+  "final_build_typescript": "Vercel success at f58335441e8898e26e7710e6667cb4255fd7bb7b"
 }

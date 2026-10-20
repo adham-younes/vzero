@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-20T13:37:02.758416+00:00",
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "implementation_commit": "0d35130",
+  "merge_commit": "f58335441e8898e26e7710e6667cb4255fd7bb7b",
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7z3egyNdjf1KUkz948XuJ1H6wPd1",
+  "vercel_status": "success",
+  "checks": [
+    {
+      "path": "/ar/studio",
+      "status": 200,
+      "studio_present": true
+    },
+    {
+      "path": "/studio",
+      "status": 200,
+      "studio_present": true
+    }
+  ],
+  "authenticated_production_chat": "Not repeated: no new live account. Interactive checks used existing isolated local account and real database; see local.json.",
+  "provider_evidence": "Previous Stage CDE inference reused; greeting replies do not call Groq.",
+  "database_changes": false
+}
