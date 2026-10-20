@@ -46,5 +46,23 @@
     "cache_control": "no-store"
   },
   "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/5hwE8ybGDH2KHdQ7yoDo2BxFTJb2",
-  "next_action": "Verify NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY belongs to the selected project in Vercel Production, redeploy, rerun probe. A rejected REST request alone does not establish the root cause."
+  "next_action": "Verify corrected probe after deployment; no user key change required.",
+  "diagnosis_correction": {
+    "public_key_enabled": true,
+    "direct_public_key_checks": [
+      {
+        "path": "/rest/v1/",
+        "status": 401,
+        "message": "Secret API key required"
+      },
+      {
+        "path": "/auth/v1/settings",
+        "status": 200
+      }
+    ],
+    "root_cause": "Public-key probe incorrectly used a secret-only endpoint",
+    "key_values_saved": false,
+    "database_writes": false,
+    "regression_tests": 6
+  }
 }
