@@ -14,7 +14,7 @@ Documentation is a delivery requirement explicitly requested by the owner. Start
 - Use saved public reference research. Re-fetch only a specific missing or outdated item that affects the work.
 - No secrets, customer data, private account output, dependencies or build artifacts in this public repository.
 - Do not change external accounts, databases, paid services, protection settings or send messages without applicable authorization.
-- Use proportionate verification. Documentation-only changes require document validation and `git diff --check`, not application build/lint/test. Product changes need checks appropriate to the affected behavior; do not claim checks that were not run.
+- Latest owner instruction: batch tests at production delivery only, not after each edit. Reuse valid prior verification; run the required deployment build and a short check of affected production behavior. Do not repeatedly run full suites or create live test accounts for this hotfix. Review code/docs normally and report limits honestly.
 - Update current status, stage/backlog entries, affected technical/API/route documentation, and a release/evidence record in the same delivery. Keep historical receipts dated, and separate the product release from documentation commits.
 - Store shareable evidence in the repository with relative links and environment/commit labels. Do not leave the only evidence in a local task output folder.
 - Follow `docs/agynexa-program/WORKFLOW.md` for Git, production verification and rollback. A successful build or HTTP 200 does not establish interactive correctness.
