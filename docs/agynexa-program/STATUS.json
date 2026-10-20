@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T06:58:13.404693+00:00",
+  "updated_at": "2026-10-20T07:06:07.297178+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,16 +14,16 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
-    "merge_commit": "5d172963abc278a04c4e5ab5784c7edce3947c8c",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/9",
+    "implementation_commit": "c72deb7",
+    "merge_commit": "840f7f94d1140206f0a1c37c432938cf03fa3244",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/11",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
     "target": "production",
     "verified_date": "2026-10-20",
-    "status_at_verification": "GITHUB_VERCEL_SUCCESS_AND_PUBLIC_BROWSER_VERIFIED",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/tTKePMQfVV9DycMehyet7GKwWQSZ",
-    "receipt": "releases/STAGE-4-PRODUCTION-2026-10-20.md"
+    "status_at_verification": "DEPLOYED_READ_ONLY_PROBE_VERIFIED_503_PARTIAL_CONNECTION",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/5hwE8ybGDH2KHdQ7yoDo2BxFTJb2",
+    "receipt": "releases/SUPABASE-CONNECTION-2026-10-20.md"
   },
   "stage_status": [
     {
@@ -230,11 +230,20 @@
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
-    "status": "MCP_SQL_VERIFIED_VERCEL_PROBE_503",
+    "status": "PARTIAL_MCP_AND_SECRET_VERIFIED_PUBLISHABLE_REQUEST_REJECTED",
     "evidence": "evidence/supabase-connection-2026-10-20/verification.json",
     "model_provider": "NOT_CONFIGURED",
     "model_budget": "NOT_CONFIRMED",
     "nexa_agent_connection": "NOT_VERIFIED",
-    "account_connection_name": "agynexa"
+    "account_connection_name": "agynexa",
+    "production_probe": {
+      "status": "unavailable",
+      "checks": {
+        "project": "ok",
+        "publishableKey": "rejected",
+        "secretKey": "ok"
+      }
+    },
+    "next_action": "Verify Production NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY and redeploy; no schema or AI work during connection verification."
   }
 }

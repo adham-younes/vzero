@@ -10,7 +10,7 @@
   },
   "database_writes": false,
   "vercel_mcp": "Project/deployment lookups still return 404 in session scope",
-  "application_connection": "DEPLOYED_PROBE_RETURNED_503_DIAGNOSIS_IN_PROGRESS",
+  "application_connection": "PARTIAL_SECRET_VERIFIED_PUBLISHABLE_REQUEST_REJECTED",
   "secrets_captured": false,
   "implementation_commit": "41e69bd84ba693639762b296909a510dbe0c6ae5",
   "build_typescript": "PASS",
@@ -27,5 +27,24 @@
   },
   "probe_pull_request": "https://github.com/adham-younes/vzero/pull/10",
   "probe_merge_commit": "bad09004dc593c0a9389308959b976e34476ddc4",
-  "diagnostic_tests": 6
+  "diagnostic_tests": 6,
+  "diagnostic_implementation_commit": "c72deb7",
+  "diagnostic_pull_request": "https://github.com/adham-younes/vzero/pull/11",
+  "diagnostic_merge_commit": "840f7f94d1140206f0a1c37c432938cf03fa3244",
+  "production_probe": {
+    "checked_at": "2026-10-20T07:05:10.437625+00:00",
+    "url": "https://vzero-nine-beryl.vercel.app/api/health/supabase",
+    "status": 503,
+    "body": {
+      "status": "unavailable",
+      "checks": {
+        "project": "ok",
+        "publishableKey": "rejected",
+        "secretKey": "ok"
+      }
+    },
+    "cache_control": "no-store"
+  },
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/5hwE8ybGDH2KHdQ7yoDo2BxFTJb2",
+  "next_action": "Verify NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY belongs to the selected project in Vercel Production, redeploy, rerun probe. A rejected REST request alone does not establish the root cause."
 }
