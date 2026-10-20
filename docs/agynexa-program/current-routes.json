@@ -1,6 +1,6 @@
 {
   "recorded_date": "2026-10-20",
-  "product_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+  "product_commit": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
   "source_files": [
     "lib/site-routes.ts",
     "lib/agynexa.ts",
@@ -267,7 +267,7 @@
       "ar": "/ar/studio",
       "index": false,
       "cache": "private, no-store",
-      "deployment": "LOCAL_VERIFIED_NOT_PRODUCTION"
+      "deployment": "DEPLOYED_PRODUCTION"
     }
   ],
   "studio_apis": [
@@ -379,5 +379,6 @@
     "index": false,
     "cache": "private, no-store",
     "sitemap": false
-  }
+  },
+  "inventory_reviewed_against": "4799a2e"
 }

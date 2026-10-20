@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "AGYNEXA implemented public API",
+    "title": "AGYNEXA implemented HTTP API",
     "version": "2026-10-20",
-    "description": "AGYNEXA implemented accounts, briefs and Studio C/D runtime. Deployment/provider evidence: agent-studio/STAGES-CDE.md. Stage-3 proposed APIs remain separate."
+    "description": "34 implemented HTTP operations: site, accounts, briefs and Studio runtime. Authentication differs by operation. Production and verification limits: agent-studio/STAGES-CDE.md, CHAT-FIX.md and API-UI-REMOVAL.md. Removing private API controls from Studio did not change server endpoints. Stage-3 proposed APIs remain separate."
   },
   "servers": [
     {
@@ -756,7 +756,7 @@
       "post": {
         "operationId": "initializeOwnWorkspace",
         "summary": "Create or return the signed-in owner workspace",
-        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "x-implementation-status": "DEPLOYED_PRODUCTION_SCOPED_VERIFICATION",
         "security": [
           {
             "supabaseSession": []
@@ -914,7 +914,7 @@
       "get": {
         "operationId": "listOwnAgents",
         "summary": "List own workspace drafts",
-        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "x-implementation-status": "DEPLOYED_PRODUCTION_SCOPED_VERIFICATION",
         "security": [
           {
             "supabaseSession": []
@@ -1001,7 +1001,7 @@
       "post": {
         "operationId": "createAgentDraft",
         "summary": "Save an agent from one of two templates",
-        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "x-implementation-status": "DEPLOYED_PRODUCTION_SCOPED_VERIFICATION",
         "security": [
           {
             "supabaseSession": []
@@ -1205,7 +1205,7 @@
       "get": {
         "operationId": "getOwnAgent",
         "summary": "Read a workspace draft",
-        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "x-implementation-status": "DEPLOYED_PRODUCTION_SCOPED_VERIFICATION",
         "security": [
           {
             "supabaseSession": []
@@ -1296,7 +1296,7 @@
       "patch": {
         "operationId": "updateOwnAgent",
         "summary": "Update draft settings with revision checking",
-        "x-implementation-status": "VERIFIED_LOCAL_NOT_PRODUCTION",
+        "x-implementation-status": "DEPLOYED_PRODUCTION_SCOPED_VERIFICATION",
         "security": [
           {
             "supabaseSession": []

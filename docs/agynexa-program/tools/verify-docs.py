@@ -60,14 +60,21 @@ for page in pages:
 require(len(services) == routes["services"] == 10 and len(solutions) == routes["solutions"] == 9, "Catalog count mismatch")
 
 api = read_json(DOCS / "architecture/current-api.openapi.json")
-expected_api = {("get", "/api/v1/catalog/services"), ("post", "/api/v1/procurement/review"), ("get", "/api/health/supabase")}
-expected_api |= {("post", "/api/auth/" + action) for action in ("register", "login", "logout")}
-expected_api |= {("get", "/api/account"), *[(method, "/api/v1/project-briefs") for method in ("get", "post", "delete")]}
-for page in routes.get("account_pages", []):
+expected_api = set()
+route_files = list((ROOT / "app/api").rglob("route.ts"))
+for route_file in route_files:
+    route = "/" + route_file.parent.relative_to(ROOT / "app").as_posix()
+    route = re.sub(r"\[([^\]]+)\]", r"{\1}", route)
+    methods = re.findall(r"export\s+(?:async\s+)?function\s+(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)\b", route_file.read_text())
+    require(methods, f"No recognized HTTP handler in {route_file}; update inventory extraction")
+    expected_api.update((method.lower(), route) for method in methods)
+require(len(route_files) == status["implemented"]["route_files"], "STATUS route-file count mismatch")
+require(len(expected_api) == status["implemented"]["http_operations"], "STATUS HTTP-operation count mismatch")
+for page in routes.get("account_pages", []) + routes.get("studio_pages", []):
     for locale in ("en", "ar"):
-        require((ROOT / "app" / page[locale].lstrip("/") / "page.tsx").is_file(), "Missing account page")
-    require(page["index"] is False, "Account pages must not be indexed")
-actual_api = {(method, path) for path, operations in api["paths"].items() for method in operations if method in {"get", "post", "put", "patch", "delete"}}
+        require((ROOT / "app" / page[locale].lstrip("/") / "page.tsx").is_file(), "Missing private page")
+    require(page["index"] is False, "Private pages must not be indexed")
+actual_api = {(method, path) for path, operations in api["paths"].items() for method in operations if method in {"get", "post", "put", "patch", "delete", "head", "options"}}
 require(api["openapi"] == "3.1.0" and actual_api == expected_api, "Current API inventory mismatch")
 
 
@@ -95,7 +102,7 @@ for asset in manifest["assets"]:
     require(len(data) == asset["bytes"], f"Evidence size mismatch: {asset['file']}")
     require(hashlib.sha256(data).hexdigest() == asset["sha256"], f"Evidence hash mismatch: {asset['file']}")
 
-for relative in [status["documentation_index"], status["current_product_release"]["receipt"], status["implemented"]["api_contract"], status["implemented"]["route_inventory"], status["last_product_checks"]["evidence"], *status["known_limitations"], *status["historical_snapshots"].values()]:
+for relative in [status["documentation_index"], status["consolidated_report"], status["current_documentation_work"]["receipt"], status["current_product_release"]["receipt"], status["implemented"]["api_contract"], status["implemented"]["route_inventory"], status["last_product_checks"]["evidence"], *status["known_limitations"], *status["historical_snapshots"].values()]:
     require((DOCS / relative).is_file(), f"STATUS points to a missing document: {relative}")
 
 print(json.dumps({"result": "PASS", "markdown_files": len(documents), "local_file_links": link_count, "json_files": len(json_files), "canonical_urls": len(canonical), "current_api_operations": len(actual_api), "evidence_hashes": len(manifest["assets"]), "master_plan_unchanged": True, "scope": "Document structure, local file links, JSON, internal contract references, source-derived inventory and evidence integrity; no app/network/runtime/schema-execution tests."}))
