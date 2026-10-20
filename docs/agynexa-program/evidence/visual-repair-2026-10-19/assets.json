@@ -1,0 +1,53 @@
+{
+  "asset": "public/images/agentnexos-neural.webp",
+  "source": "Original OpenAI image generation requested by owner; not copied from AgentFlow reference",
+  "created_date": "2026-10-19",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "format": "WebP",
+  "bytes": 132838,
+  "sha256": "7ee35b338718cf8496973fb747501aa2e44ea1668c2c2feea1bb8b57a2f6a4b9",
+  "usage": "Background in /agentnexos and /ar/agentnexos only; decorative image, existing HTML text remains accessible",
+  "rights": "Generated for this project for requested site use under applicable OpenAI service terms; no third-party stock license or exclusivity claim. User reference used for direction only, not redistributed.",
+  "magicpath": {
+    "project_id": "462645373446537216",
+    "component_id": "462803960353398784",
+    "revision_id": "462803960353398785",
+    "status": "BUILD_AND_RENDER_VERIFIED"
+  },
+  "effects": "Static art; no new continuous animation; CSS flips composition for RTL",
+  "files": [
+    {
+      "file": "agentnexos-ar-1440.jpg",
+      "bytes": 149159,
+      "sha256": "b542ff879a6fcaa52477e7d3c6ac471c4f01c0d08cff2f97c2625d75d986e0f1"
+    },
+    {
+      "file": "agentnexos-ar-390.jpg",
+      "bytes": 48823,
+      "sha256": "238031b745f7f04aabad22a9b30e0a6806cf7cdaa7aefa27a7e1610089959d69"
+    },
+    {
+      "file": "agentnexos-en-1440.jpg",
+      "bytes": 168000,
+      "sha256": "7fc6e97320af0a341f5eef4c35252293cb26585b85bc9c788cfaf3118387e064"
+    },
+    {
+      "file": "home-after-desktop.jpg",
+      "bytes": 154679,
+      "sha256": "820b1772f37a1ad39a1bd0dfff671f1673c371a4f2a077150788cfbdd62002ed"
+    },
+    {
+      "file": "home-ar-390.jpg",
+      "bytes": 46537,
+      "sha256": "b7b774296d28eb444684c5a0cae7f7321efbec994d92a520fbbd5fb21bcd0602"
+    },
+    {
+      "file": "home-before-desktop.jpg",
+      "bytes": 146511,
+      "sha256": "f7d16dffd8c5385f87b8ec808cac4321b7e2c8f00b63fc08965025fc310bbb95"
+    }
+  ]
+}

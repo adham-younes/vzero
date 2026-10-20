@@ -85,7 +85,7 @@ export default function Testimonials() {
                             transition={{ duration: 0.3 }}
                         >
                             <p className="text-muted-foreground mb-20 text-2xl font-medium leading-snug md:text-4xl md:leading-tight">
-                                {activeTestimonial.quote} <span className="rounded bg-emerald-500/10 px-1.5 text-emerald-500">{activeTestimonial.highlight}</span>
+                                {activeTestimonial.quote} <span className="rounded bg-primary/10 px-1.5 text-primary">{activeTestimonial.highlight}</span>
                             </p>
                         </motion.div>
 

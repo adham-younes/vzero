@@ -1,0 +1,201 @@
+{
+  "environment": "Local production build · Chromium",
+  "base_url": "http://localhost:3011",
+  "date": "2026-10-19",
+  "pages": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "dir": "ltr",
+      "h1": "A workspace for tasks and their review.",
+      "image": "http://localhost:3011/_next/image?url=%2Fimages%2Fagentnexos-neural.webp&w=1920&q=75",
+      "transform": "none",
+      "locale": "en",
+      "route": "/agentnexos"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "dir": "rtl",
+      "h1": "مساحة للمهام ومراجعتها.",
+      "image": "http://localhost:3011/_next/image?url=%2Fimages%2Fagentnexos-neural.webp&w=1920&q=75",
+      "transform": "matrix(-1, 0, 0, 1, 0, 0)",
+      "locale": "ar",
+      "route": "/ar/agentnexos"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "dir": "rtl",
+      "h1": "مساحة للمهام ومراجعتها.",
+      "image": "http://localhost:3011/_next/image?url=%2Fimages%2Fagentnexos-neural.webp&w=1920&q=75",
+      "transform": "matrix(-1, 0, 0, 1, 0, 0)",
+      "locale": "ar",
+      "route": "/ar/agentnexos"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "dir": "ltr",
+      "h1": "A workspace for tasks and their review.",
+      "image": "http://localhost:3011/_next/image?url=%2Fimages%2Fagentnexos-neural.webp&w=1920&q=75",
+      "transform": "none",
+      "locale": "en",
+      "route": "/agentnexos"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "dir": "rtl",
+      "h1": "مساحة للمهام ومراجعتها.",
+      "image": "http://localhost:3011/_next/image?url=%2Fimages%2Fagentnexos-neural.webp&w=1920&q=75",
+      "transform": "matrix(-1, 0, 0, 1, 0, 0)",
+      "locale": "ar",
+      "route": "/ar/agentnexos"
+    }
+  ],
+  "console_errors": [
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/speed-insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/speed-insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/speed-insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/speed-insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/speed-insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/speed-insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/speed-insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/speed-insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/speed-insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/speed-insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar/agentnexos"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/speed-insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/speed-insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar"
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:3011/_vercel/insights/script.js"
+    },
+    {
+      "message": "Refused to execute script from 'http://localhost:3011/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
+      "url": "http://localhost:3011/ar"
+    }
+  ],
+  "page_errors": [],
+  "video_playing": true,
+  "hero": {
+    "time": 3,
+    "rect": {
+      "x": 0,
+      "y": 81,
+      "width": 1440,
+      "height": 920,
+      "top": 81,
+      "right": 1440,
+      "bottom": 1001,
+      "left": 0
+    },
+    "text": "ENGINEERED INTELLIGENCE. HUMAN CONTROL.\n\nIntelligence, engineered.\nBuilt for your business.\n\nYour knowledge. Your workflows. One connected agent system. Designed with clear permissions, human oversight and a purpose.\n\nEngineer your next system\nExplore the architecture",
+    "overlay": "rgba(5, 5, 5, 0.05) none repeat scroll 0% 0% / auto padding-box border-box",
+    "filter": "none",
+    "geometry_unchanged": true,
+    "text_unchanged": true
+  },
+  "hero_dialog": "opened and dismissed with Escape",
+  "keyboard_focus_visible": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(16, 185, 129, 0.576) 0px 0px 0px 0.576159px, oklab(0 0 0 / 0.1) 0px 1px 3px 0px, oklab(0 0 0 / 0.1) 0px 1px 2px -1px",
+  "arabic_cta": "PASS /ar/architecture",
+  "mobile_home_overflow": false,
+  "brand_colors": {
+    "token": "#10b981",
+    "heading": "rgb(16, 185, 129)",
+    "button": "rgb(16, 185, 129)"
+  },
+  "reduced_motion": true,
+  "before_sample_brightness": 66.79,
+  "after_sample_brightness": 79.13,
+  "protected_hashes": {
+    "public/videos/background.mp4": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+    "@components/landing-5-hero-video.tsx": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+    "@components/landing-5-hero-section.tsx": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1"
+  },
+  "local_telemetry_errors_expected": true,
+  "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
+  "build_typescript": "PASS",
+  "http_smoke": {
+    "result": "PASS",
+    "checks": 28,
+    "pages": 15,
+    "canonical_urls": 64
+  }
+}

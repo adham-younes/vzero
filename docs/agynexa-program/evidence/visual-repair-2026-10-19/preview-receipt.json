@@ -1,0 +1,16 @@
+{
+  "pull_request": "https://github.com/adham-younes/vzero/pull/9",
+  "state": "OPEN",
+  "commit_checked": "da6d88fc4c2c507b221f07b2e1f79476880d3413",
+  "product_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
+  "checks": {
+    "Vercel": "SUCCESS",
+    "Vercel Preview Comments": "SUCCESS"
+  },
+  "preview_url": "https://vzero-git-codex-agynexa-stage4-vis-125459-adhamlouxors-projects.vercel.app",
+  "vercel_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7csjFCxrFbedJtYF9XGzeh5QdKnR",
+  "source": "GitHub commit status and Vercel bot comment on PR #9",
+  "preview_browser_result": "Redirected to Vercel login; final 200 was login, not application success",
+  "production_changed": false,
+  "project_mcp_lookup": "404 by both vzero name and project ID disclosed by Vercel bot; no access/protection changes"
+}
