@@ -160,7 +160,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Diagnose safe health-check status from Vercel; correct any missing/wrong credential before lead or knowledge implementation.",
+  "next_action": "Deploy authorized account hotfix, verify affected production behavior briefly, then resume Studio work from PR #18.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -255,5 +255,15 @@
     "status": "VERIFIED_PRODUCTION",
     "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md",
     "evidence": "evidence/accounts-2026-10-20/verification.json"
-  }
+  },
+  "account_hotfix": {
+    "status": "AUTHORIZED_PRODUCTION_PENDING_DEPLOYMENT",
+    "implementation_commit": "3e9bd09",
+    "source_commit": "5dc609b",
+    "scope": "Account failure handling and remove visible asset attribution only",
+    "receipt": "releases/ACCOUNT-HOTFIX-2026-10-20.md",
+    "studio_included": false,
+    "live_database_changes": false
+  },
+  "verification_policy": "OWNER_DIRECTED_PRODUCTION_DELIVERY_ONLY_REUSE_PRIOR_EVIDENCE"
 }
