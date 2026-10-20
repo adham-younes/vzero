@@ -1,0 +1,11 @@
+{
+  "environment": "isolated_local",
+  "original_failure": "column reference run_id is ambiguous in finish_agent_run ON CONFLICT",
+  "fix": "ON CONFLICT ON CONSTRAINT support_requests_run_id_key",
+  "verification": {
+    "run_status": "succeeded",
+    "proposal_count": 1,
+    "transaction": "rolled_back"
+  },
+  "full_suite_repeated": false
+}

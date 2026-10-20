@@ -15,10 +15,11 @@ export function parseAnswer(content:string):GroundedAnswer{
  if(!v||typeof v.answerable!=='boolean'||typeof v.answer!=='string'||!v.answer.trim()||v.answer.length>12000||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string')||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
  return v
 }
-export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal){
+export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[]){
+ const responseSchema={...schema,properties:{...schema.properties,citations:{...schema.properties.citations,items:{...schema.properties.citations.items,properties:{chunkId:{type:'string',enum:citationIds}}}}}}
  const key=credential(model);const started=Date.now();let response:Response|undefined
  for(let attempt=0;attempt<2;attempt++){
-  response=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',cache:'no-store',signal,headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({model,messages,stream:false,max_completion_tokens:4096,reasoning_effort:model.startsWith('qwen/')?'none':'high',reasoning_format:'hidden',response_format:{type:'json_schema',json_schema:{name:'grounded_answer',strict:true,schema}}})})
+  response=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',cache:'no-store',signal,headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({model,messages,stream:false,max_completion_tokens:4096,reasoning_effort:model.startsWith('qwen/')?'none':'high',reasoning_format:'hidden',response_format:{type:'json_schema',json_schema:{name:'grounded_answer',strict:true,schema:responseSchema}}})})
   if(response.status!==429)break
   const retry=response.headers.get('retry-after');const seconds=retry===null?1:Number(retry)
   if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5)throw new InputError('provider_rate_limited',429)
