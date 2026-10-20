@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T14:48:33.089724+00:00",
+  "updated_at": "2026-10-20T15:01:43.720103+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -43,7 +43,7 @@
     },
     {
       "stage": 3,
-      "status": "SPECIFIED_NOT_CONNECTED",
+      "status": "ORIGINAL_DRAFT_SPECIFIED_RUNTIME_USES_SEPARATE_MIGRATIONS",
       "receipt": "releases/STAGE-3.md"
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "stage": 5,
-      "status": "IMPLEMENTED_SITE_ACCOUNTS_AND_BRIEFS_ENTERPRISE_PARTIAL",
+      "status": "IMPLEMENTED_SITE_ACCOUNTS_BRIEFS_STUDIO_ENTERPRISE_PARTIAL",
       "receipt": "releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md"
     },
     {
@@ -69,11 +69,6 @@
     "locales": [
       "en",
       "ar"
-    ],
-    "public_apis": [
-      "GET /api/v1/catalog/services",
-      "POST /api/v1/procurement/review",
-      "GET /api/health/supabase"
     ],
     "api_contract": "architecture/current-api.openapi.json",
     "route_inventory": "current-routes.json",
@@ -95,7 +90,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 34
+    "http_operations": 34,
+    "anonymous_site_apis": [
+      "GET /api/v1/catalog/services",
+      "POST /api/v1/procurement/review",
+      "GET /api/health/supabase"
+    ],
+    "route_files": 26
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS",
@@ -137,9 +138,12 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-api-ui-receipt",
+    "branch": "codex/agynexa-consolidated-status",
+    "baseline_main": "4799a2e",
     "product_code_changed": false,
-    "receipt": "agent-studio/API-UI-REMOVAL.md"
+    "database_changed": false,
+    "receipt": "releases/CONSOLIDATED-STATUS-2026-10-20.md",
+    "scope": "Current documentation consolidated against source and dated evidence; no new product verification."
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -187,31 +191,6 @@
     "completion_evidence": "reviews/MARKET-REVIEW-RECONCILIATION-2026-10-19.md",
     "scope_decision": "Re-read for C–E: limited templates, common runtime, RLS, idempotency, approvals and real evidence. No RFQ pivot or ten standalone products."
   },
-  "current_candidate_delivery": {
-    "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
-    "status": "MERGED_AND_PRODUCTION_VERIFIED",
-    "stage": 4,
-    "backlog": "QA-01",
-    "receipt": "releases/STAGE-4-VISUAL-REPAIR-2026-10-19.md",
-    "evidence": "evidence/visual-repair-2026-10-19/verification.json",
-    "deployed_to_production": true,
-    "build_typescript": "PASS",
-    "http_checks": 28,
-    "canonical_urls": 64,
-    "browser_widths": [
-      320,
-      390,
-      768,
-      1440
-    ],
-    "protected_hero_files": "SHA256_MATCH",
-    "local_telemetry": "Vercel analytics scripts unavailable on localhost; documented console errors, no application exceptions",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/9",
-    "preview_url": "https://vzero-git-codex-agynexa-stage4-vis-125459-adhamlouxors-projects.vercel.app",
-    "preview_status": "READY_FROM_GITHUB_VERCEL_STATUS",
-    "preview_browser_access": "VERCEL_LOGIN_REQUIRED",
-    "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
-  },
   "previous_verified_product_release": {
     "implementation_commit": "0d351300b2c619c326f774b0a6c977d7bc68c895",
     "merge_commit": "f58335441e8898e26e7710e6667cb4255fd7bb7b",
@@ -254,16 +233,12 @@
     "status": "DEPLOYED_WITH_COMMERCIAL_GAPS",
     "plan": "agent-studio/EXECUTION-PLAN.md",
     "report": "agent-studio/STAGES-CDE.md",
-    "baseline_main": "d030a60186380b3a106bc8ac0071d74abffea503",
     "owner_acceptance": "ALL_REMAINING_STAGES_AND_PRODUCTION_AUTHORIZED_D26",
     "next_stage_authorized": false,
     "production_deployed": true,
     "runtime_implemented": true,
     "new_migrations_applied": true,
-    "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
     "evidence": "agent-studio/evidence/stage-cde/production.json",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/22",
-    "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
     "local_sql_applied": true,
     "hosted_migrations_applied": true,
     "capabilities": [
@@ -274,7 +249,9 @@
       "grounded citations and run/usage history",
       "support proposals and atomic approvals",
       "immutable versions, API keys, revocation",
-      "public-source-only widget with short-lived sessions"
+      "public-source-only widget with short-lived sessions",
+      "conversation-first UI with localized fixed identity replies",
+      "private API controls removed from Studio UI; backend retained"
     ],
     "migration": "supabase/migrations/20261020102401_studio_foundation.sql",
     "feature_flag": "Enabled by default; AGYNEXA_STUDIO_ENABLED=false disables",
@@ -284,17 +261,25 @@
       "external CRM/ERP connectors",
       "embeddings/PDF/image ingestion"
     ],
-    "account_fix_commit": "5dc609b",
-    "preview_receipt": "agent-studio/evidence/stage-b/preview.json",
-    "preview_status": "HISTORICAL_STAGE_B_ONLY",
     "hosted_migration_receipt": "agent-studio/evidence/stage-cde/database.json",
-    "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
     "production_receipt": "agent-studio/STAGES-CDE.md",
     "migration_files": [
       "supabase/migrations/20261020102401_studio_foundation.sql",
       "supabase/migrations/20261020113246_studio_runtime.sql",
       "supabase/migrations/20261020120653_studio_finalize_approval.sql"
-    ]
+    ],
+    "foundation_delivery": {
+      "baseline_main": "d030a60186380b3a106bc8ac0071d74abffea503",
+      "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
+      "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
+      "pull_request": "https://github.com/adham-younes/vzero/pull/22",
+      "preview_url": "https://vzero-git-codex-agynexa-studio-stage-a-adhamlouxors-projects.vercel.app",
+      "preview_receipt": "agent-studio/evidence/stage-b/preview.json",
+      "preview_status": "HISTORICAL_STAGE_B_ONLY",
+      "account_fix_commit": "5dc609b"
+    },
+    "latest_product_merge_commit": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
+    "latest_report": "CURRENT-IMPLEMENTATION-2026-10-20.md"
   },
   "account_hotfix": {
     "status": "DEPLOYED_PRODUCTION_SCOPED_CHECKS_PASS",
@@ -323,5 +308,66 @@
     "report": "agent-studio/API-UI-REMOVAL.md",
     "backend_changed": false,
     "evidence": "agent-studio/evidence/api-ui-removal/production.json"
+  },
+  "consolidated_report": "CURRENT-IMPLEMENTATION-2026-10-20.md",
+  "stage_numbering": {
+    "original_program": "0–6: seven stages; architecture stage delivered as specification",
+    "agent_studio": "A–E: five scoped stages deployed; commercial gaps remain"
+  },
+  "historical_deliveries": {
+    "stage4_visual_repair": {
+      "implementation_commit": "dc62aacae12373d7ce80c4c5f2c9b62510db3a9b",
+      "status": "MERGED_AND_PRODUCTION_VERIFIED",
+      "stage": 4,
+      "backlog": "QA-01",
+      "receipt": "releases/STAGE-4-VISUAL-REPAIR-2026-10-19.md",
+      "evidence": "evidence/visual-repair-2026-10-19/verification.json",
+      "deployed_to_production": true,
+      "build_typescript": "PASS",
+      "http_checks": 28,
+      "canonical_urls": 64,
+      "browser_widths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "protected_hero_files": "SHA256_MATCH",
+      "local_telemetry": "Vercel analytics scripts unavailable on localhost; documented console errors, no application exceptions",
+      "pull_request": "https://github.com/adham-younes/vzero/pull/9",
+      "preview_url": "https://vzero-git-codex-agynexa-stage4-vis-125459-adhamlouxors-projects.vercel.app",
+      "preview_status": "READY_FROM_GITHUB_VERCEL_STATUS",
+      "preview_browser_access": "VERCEL_LOGIN_REQUIRED",
+      "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
+    }
+  },
+  "remaining_work": {
+    "launch_blockers": [
+      "AUTH-RECOVERY"
+    ],
+    "open_observations": [
+      "AUTH-TRANSIENT",
+      "DATA-CONSENT",
+      "DATA-QUOTA"
+    ],
+    "unimplemented_or_partial": [
+      "AUTH-01",
+      "DATA-01",
+      "BILLING-01",
+      "CONN-01",
+      "RUN-01",
+      "APPROVAL-01",
+      "RAG-01",
+      "PROC-01",
+      "OBS-01"
+    ],
+    "verification_gaps": [
+      "QA-03",
+      "QA-CHAT-PROD",
+      "PERF-01",
+      "AUTH-CONFIG",
+      "TOOL-NEXA"
+    ],
+    "source": "BACKLOG.md"
   }
 }

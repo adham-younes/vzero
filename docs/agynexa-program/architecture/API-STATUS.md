@@ -1,30 +1,45 @@
 # حالة APIs وسلوك الوظائف الفعلي
 
-تحديث 20 أكتوبر 2026: أضيف `GET /api/health/supabase`؛ فحص اتصال خادمي للقراءة فقط، لا وظيفة استقبال أو معرفة. يقرأ متغيرات Vercel الثلاثة ويختبر العام عبر `/auth/v1/settings` والسري عبر `/rest/v1/`. يرد 200 مع `{"status":"ok"}` فقط عند نجاح الاثنين، وإلا 503 مع `{"status":"unavailable"}`. مهلة 5 ثوانٍ ومنع تحويلات URL وتثبيت المشروع المحدد؛ أضيفت checks بحالات تشخيص ثابتة دون قيم المتغيرات؛ لا أسرار أو محتوى مزود في الرد ولا SQL أو بيانات مكتوبة. [إيصال الفحص](../releases/SUPABASE-CONNECTION-2026-10-20.md).
+الجرد الحالي عند كود المنتج `4b7b5a2`: **34 عملية HTTP في 26 ملف route**. [العقد الحالي](current-api.openapi.json) يصف التنفيذ؛ [openapi.yaml](openapi.yaml) مسودة المرحلة 3 التاريخية وليس عقد التشغيل. [تقرير التنفيذ](../CURRENT-IMPLEMENTATION-2026-10-20.md) يحدد بيئات الأدلة وحدودها.
 
-ما يلي يوثق واجهتي الأعمال الأصليتين وحدودهما:
+## الجرد المنشور
 
+| المسار | الطرق |
+|---|---|
+| `/api/v1/catalog/services` | GET |
+| `/api/v1/procurement/review` | POST |
+| `/api/health/supabase` | GET |
+| `/api/auth/register` | POST |
+| `/api/auth/login` | POST |
+| `/api/auth/logout` | POST |
+| `/api/account` | GET |
+| `/api/v1/project-briefs` | GET, POST, DELETE |
+| `/api/v1/workspace` | POST |
+| `/api/v1/agents` | GET, POST |
+| `/api/v1/agents/{agentId}` | GET, PATCH |
+| `/api/v1/agents/{agentId}/sources` | GET, POST |
+| `/api/v1/agents/{agentId}/sources/{sourceId}` | GET, DELETE |
+| `/api/v1/agents/{agentId}/test-runs` | POST |
+| `/api/v1/agents/{agentId}/publish` | POST |
+| `/api/v1/agents/{agentId}/unpublish` | POST |
+| `/api/v1/agents/{agentId}/activity` | GET |
+| `/api/v1/agents/{agentId}/keys` | POST, DELETE |
+| `/api/v1/agents/{agentId}/invoke` | POST |
+| `/api/v1/runs/{runId}` | GET |
+| `/api/v1/runs/{runId}/cancel` | POST |
+| `/api/v1/approvals/{approvalId}/decision` | POST |
+| `/api/v1/usage` | GET |
+| `/api/v1/studio/models` | GET, POST |
+| `/api/v1/widget/{publicId}/session` | POST |
+| `/api/v1/widget/{publicId}/invoke` | POST |
 
-الإنتاج الحالي عند `b3665b8` بعد Studio C/D/E، بإجمالي 34 عملية HTTP. الجرد التالي لعقود المرحلة 3 تاريخي؛ المسارات الفعلية الحالية في OpenAPI وتقرير Studio، ولا تستخدم عدد العمليات القديم لوصف الإصدار الحالي. أدلة الاختبار مؤرخة بحسب الإصدار؛ أمثلة الكتالوج والمشتريات الأصلية من `991deca`. العقد المقروء آليًا: [current-api.openapi.json](current-api.openapi.json). مضيف الإنتاج العام: `https://vzero-nine-beryl.vercel.app`.
+ليست هذه كلها واجهات عامة بلا مصادقة. الحسابات والوكلاء والمصادر والتشغيل والموافقات تعتمد الجلسة وعضوية المساحة؛ invoke الخاص يعتمد مفتاح الوكيل، وwidget يعتمد جلسة قصيرة ومعرفة مصرحًا بنشرها. POST studio/models للتقييم الداخلي المصرح به، وليس اختيارًا عامًا لنموذج Preview. راجع security والحدود لكل عملية في العقد.
 
-## جرد التنفيذ مقابل خطة المرحلة 3
+إزالة قسم مفاتيح API من الواجهة في PR #26 لم تحذف POST/DELETE keys أو invoke ولم تلغِ مفاتيح موجودة. لا توثق إنشاء المفاتيح من واجهة Studio كقدرة متاحة حاليًا. POST widget/{publicId}/invoke يستخدم معرّف الوكيل وفق عقده الحالي؛ اسم placeholder وحده ليس وصفًا كافيًا للمدخل.
 
-| العملية | الحالة | ملاحظة |
-|---|---|---|
-| `GET /api/v1/catalog/services` | `IMPLEMENTED / VERIFIED` | استجابة منشورة تختلف عن اقتراح المرحلة 3 |
-| `POST /api/v1/procurement/review` | `IMPLEMENTED / VERIFIED` | أضيف لاحقًا؛ مثال حسابات عديم الحالة |
-| `POST /api/v1/project-briefs` | `IMPLEMENTED / VERIFIED` | حفظ دائم للمستخدم مع موافقة؛ أضيف في تسليم الحسابات |
-| `GET /api/v1/integrations` | `SPECIFIED` | الدليل المرئي يأتي من محتوى محلي |
-| `POST /api/v1/connectors/{provider}/connect` | `SPECIFIED / REQUIRES_ACCESS` | لا OAuth متصل |
-| `GET /api/v1/connectors/{provider}/callback` | `SPECIFIED / REQUIRES_ACCESS` | لا callback منشور |
-| `POST /api/v1/knowledge/search` | `SPECIFIED / REQUIRES_ACCESS` | بحث الخدمات المحلي ليس RAG |
-| `POST /api/v1/agents/{id}/runs` | `SPECIFIED / REQUIRES_ACCESS` | لا تنفيذ وكلاء حي |
-| `GET /api/v1/runs/{runId}` | `IMPLEMENTED_STUDIO` | تشغيل محفوظ مع جلسة وعضوية |
-| `POST /api/v1/approvals/{approvalId}/decision` | `IMPLEMENTED_STUDIO_SCOPED` | موافقة طلب دعم داخلي؛ إقرار الزائر القديم منفصل |
-| `POST /api/v1/webhooks/{provider}` | `SPECIFIED / REQUIRES_ACCESS` | لا اشتراك أحداث خارجي |
-| `GET /api/v1/observability/runs` | `SPECIFIED` | أدوات قياس الموقع ليست observability لتشغيل وكلاء |
+## العلاقة بالتصميم الأصلي
 
-وقت تسليم الحسابات كان العدد 10 عمليات HTTP في 8 ملفات route، ثم 15 عملية في 11 ملفًا بعد B؛ هذا عدد تاريخي. نُفذت عمليتان من عقود المرحلة 3: الكتالوج وحفظ الموجز بعقد مختلف عن المقترح. بقية العمليات التسع في عقد المرحلة 3 غير منفذة. لا تفترض أن مسارات المقترح مطابقة للتنفيذ؛ Studio الحالي ينفذ المعرفة عبر مصادر الوكيل وtest-runs/invoke والموافقة عبر approvals/{approvalId}/decision. راجع OpenAPI.
+الكتالوج والموجزات وقراءة runs والموافقة لها تنفيذ فعلي، مع فروق عقد موثقة. مسارات connectors/connect/callback وwebhooks والتكاملات العامة وknowledge/search وagents/{id}/runs وobservability/runs المقترحة لم تنفذ بتلك العقود. وظائف المعرفة والتشغيل الحالية عبر sources وtest-runs وinvoke وactivity وusage. غياب endpoint المقترح لا يعني غياب كل وظيفة مشابهة، ووجود وظيفة محدودة لا يعني تنفيذ المنصة المؤسسية كاملة.
 
 ## كتالوج الخدمات
 
@@ -96,45 +111,25 @@
 
 نموذج `@components/project-brief.tsx` يجمع وصفًا عامًا، يعرضه للمراجعة، ويطلب إقرار صلاحية المشاركة قبل التنزيل وإظهار رابط البريد. ملف TXT يُنشأ في المتصفح. `mailto` يفتح مسودة إلى عنوان التواصل الموجود؛ لا يرفق الملف آليًا ولا يثبت إرسال الرسالة. زر الحفظ يستدعي POST /api/v1/project-briefs مع جلسة وموافقة صريحة، ويحفظ الموجز في Supabase. إعادة تحميل الصفحة تفقد المسودة غير المحفوظة؛ الموجز المحفوظ يبقى في الحساب. لا إرسال بريد خادمي.
 
-## أدلة التحقق وحدودها
 
-4 اختبارات وحدات للحساب/المدخلات، و28 فحص HTTP تشمل 15 صفحة ممثلة والواجهتين وأخطاء الإدخال و404 وsitemap/robots. انظر [فهرس الأدلة](../evidence/README.md). وجود 64 عنوانًا في sitemap لا يعني فحص 64 صفحة إنتاجيًا في الإصدار الأخير. كانت هذه فحوص الموقع قبل إضافة الحسابات. لاحقًا اختُبر التسجيل والدخول وRLS والموجزات في [تسليم الحسابات](../releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md). لا إرسال بريد خادمي.
+## الحسابات والموجزات والصحة
 
-## الحسابات والموجزات — 20 أكتوبر 2026
+GET health/supabase قراءة فقط؛ يثبت المشروع والمفتاح العام عبر Auth settings والسري عبر Data API، دون قراءة جداول المستخدم أو إظهار القيم. HTTP200 عند نجاح checks، و503 عند عدم التوفر؛ مهلة 5 ثوانٍ ومنع تحويلات URL وتثبيت المشروع. [الإيصال وتصحيح الفحص](../releases/SUPABASE-CONNECTION-2026-10-20.md).
 
-أضيفت 7 عمليات: POST register/login/logout، GET account، GET/POST/DELETE project-briefs. الجلسات HttpOnly؛ getUser يتحقق خادميًا وRLS يقيّد المستخدم والجلسة. يستخدم التسجيل المفتاح السري لإنشاء الحساب، ويستخدم محدد محاولات التسجيل والدخول عميل الخدمة للعدادات الخاصة. CRUD الموجز يستخدم جلسة المستخدم. لا إرسال بريد. عقد التفاصيل في current-api.openapi.json. المجموع الحالي 10 عمليات؛ التقارير السابقة تصف إصداراتها التاريخية.
+POST register/login/logout وGET account وGET/POST/DELETE project-briefs منفذة. التسجيل ينشئ حسابًا مؤكدًا خادميًا دون بريد؛ لا يثبت ملكية عنوان البريد. الجلسة HttpOnly وRLS يتحققان من المالك والجلسة النشطة. عميل الخدمة يستخدم لإنشاء الحساب وعدادات محاولات Auth الخاصة؛ CRUD المستخدم بجلسة المستخدم. لا صلاحية بحسب بريد أو user_metadata.
 
+GET account والموجزات تتطلب جلسة صالحة. logout ينهي الجلسة الحالية ولا يستدعي getUser قبل signOut؛ لا تفترض له تحقق عضوية أو حصة تسجيل/دخول. طلبات الحسابات المغيرة للحالة تتطلب Origin مطابقًا وJSON بحد 20KB. profile غير المرئي يعيد401؛ أخطاء قاعدة البيانات الفعلية تبقى503. خطأ تحميل الموجزات لا يسقط شاشة الحساب كلها. السبب الأصلي لبلاغ المالك والتقطع اللاحق غير محسومين.
 
-## حدود العقد الحالية
+موافقة حفظ الموجز مفروضة في API؛ consent_at الافتراضي لا يثبت مرور الإدراج المباشر بها. السقف يعد السجلات الموجودة المنشأة خلال24 ساعة، وحذفها يحرر الحصة. [المتبقي](../BACKLOG.md).
 
-GET account وGET/POST/DELETE project-briefs تتطلب جلسة صالحة؛ Cookie موثقة في OpenAPI. logout ينهي الجلسة الحالية ولا يستدعي getUser قبل signOut؛ لا يفترض العقد تحقق عضوية أو حصة محاولات لهذا المسار. طلبات الحسابات المغيرة للحالة تتطلب Origin مطابقًا وJSON بحد 20KB.
+## Studio وضوابطه
 
-الموافقة الصريحة مفروضة في API الحفظ. `consent_at` وقت إدراج افتراضي في الجدول، فلا يثبت مرور كل إدراج مباشر عبر واجهة الموافقة. سقف الموجزات يعد السجلات الموجودة التي أنشئت خلال 24 ساعة؛ حذفها يحرر الحصة. هذان حدان مسجلان للتصحيح في نطاق لاحق، دون تعديل سلوك الحسابات في المرحلة A.
+POST workspace ينشئ/يعيد مساحة المالك دون user_id/org_id من المتصفح؛ الوكلاء بحفظ idempotent وrevision، و404 للغائب أو الأجنبي. الردود الخاصة no-store؛ الجلسة والعضوية وRLS مستقلة. AGYNEXA_STUDIO_ENABLED=false يعطل Studio، وهو مفعّل افتراضيًا.
 
-## Studio B — سجل التحقق المحلي السابق
+المصادر نصية بحد12000 بايت؛ الاسترجاع بالكلمات، وليس embeddings. التشغيل يحفظ snapshot وusage، ويحصر الاستشهادات في المقاطع المسترجعة ويلحق نصها الأصلي؛ لا نقل reasoning خام أو أدوات خارجية. المصادر الخاصة لا تظهر في widget. إصدارات النشر ثابتة، وموافقة الدعم ذرية ومحددة بالفعل والصلاحية، ولا تنشئ تذكرة خارجية.
 
-[التسليم والاختبارات](../agent-studio/STAGE-B.md). وقت B كانت المسارات التالية محلية فقط. نُشرت لاحقًا ضمن C/D/E؛ Studio الآن مفعّل افتراضيًا ويمكن تعطيله بـAGYNEXA_STUDIO_ENABLED=false. RLS والجلسة والعضوية تتحقق مستقلة؛ لا مفتاح إداري لقراءة/كتابة الوكلاء. كل الردود private/no-store.
+إصلاح المحادثة لا يضيف endpoint. الرسائل الكاملة للتعريف/التحية/الشكر تعيد نص منتج ثابتًا بلغة الرسالة داخل run محفوظ، citations=[] وusage.response_kind=conversation وتكلفة صفر دون Groq. بقية الأسئلة تخضع للمعرفة. أسماء الأنماط مرئية؛ معرفات الخادم في العقد ثابتة.
 
-| العملية | السلوك |
-|---|---|
-| POST /api/v1/workspace | body {}، ينشئ/يعيد مساحة المالك idempotently؛ لا user_id/org_id من المتصفح |
-| GET /api/v1/agents | workspace وagents؛ workspace=null قبل الإنشاء |
-| POST /api/v1/agents | requestKey وtemplate وأربعة إعدادات؛ 201 للجديد، 200 للتكرار المطابق، 409 للمختلف |
-| GET /api/v1/agents/{agentId} | وكيل مساحة المستخدم؛ 404 للغائب أو الأجنبي |
-| PATCH /api/v1/agents/{agentId} | name/instructions/language/model وrevision؛ 409 عند تعديل أحدث |
+## أدلة وحدود التحقق
 
-الحقول والحدود وCSRF والأخطاء موثقة في current-api.openapi.json. إصدار المسودة عدّاد تغيير فقط؛ أضيفت المصادر والمحادثة وinvoke/publish لاحقًا في C/D/E.
-
-إصلاح GET /api/account في المرشح: عدم رؤية profile يرجع 401 بدل خطأ single-row/503. أخطاء قاعدة البيانات الحقيقية تبقى 503. واجهة الحساب تفصل خطأ قائمة الموجزات عن الحساب نفسه، ولا تدعي أن القائمة فارغة عند فشلها.
-
-أضيفت 7 عمليات: POST register/login/logout، GET account، GET/POST/DELETE project-briefs. الجلسات HttpOnly؛ getUser يتحقق خادميًا وRLS يقيّد المستخدم والجلسة. التسجيل وحده يستخدم المفتاح السري لإنشاء مستخدم مؤكد تلقائيًا؛ CRUD الموجز يستخدم جلسة المستخدم. لا إرسال بريد. عقد التفاصيل في current-api.openapi.json. المجموع الحالي 10 عمليات؛ التقارير السابقة تصف إصداراتها التاريخية.
-
-إصلاح الحساب D-25: GET /api/account يرجع 401 إذا لم يكن profile مرئيًا بعد Auth، وتبقى أخطاء قاعدة البيانات الفعلية 503. واجهة الموجزات تعالج فشل التحميل مستقلة عن الحساب؛ لا API جديد. [التسليم](../releases/ACCOUNT-HOTFIX-2026-10-20.md).
-
-## Studio C/D/E
-
-أضيفت مصادر نصية، تشغيل Groq، سجل التشغيل والاستهلاك، نشر وإيقاف الإصدارات، مفاتيح API وجلسات widget وموافقات الدعم. المسارات الفعلية موثقة في current-api.openapi.json. [التنفيذ والحدود](../agent-studio/STAGES-CDE.md). لا CRM/ERP أو فوترة أو استعادة حساب.
-
-إصلاح المحادثة: لا endpoints أو حقول إدخال جديدة. رسائل التحية/التعريف الكاملة تعيد جواب منتج ثابتًا داخل run محفوظ، citations=[] وusage.response_kind=conversation وتكلفة صفر. لغة الإجابة تتبع الرسالة ثم إعداد الوكيل. بقية الأسئلة لا تتجاوز استرجاع المعرفة. معرفات النماذج في العقد ثابتة؛ أسماء العرض فقط تتغير. [التقرير](../agent-studio/CHAT-FIX.md).
-
-D-28: قسم إنشاء وعرض وإلغاء مفاتيح الوكيل أزيل من واجهة Studio بطلب المالك. المسارات والصلاحيات الخادمية والعقد دون تغيير؛ لا تصف إدارة المفاتيح داخل الواجهة كقدرة متاحة الآن.
+[إنتاج الحسابات](../releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md)، [C/D/E](../agent-studio/STAGES-CDE.md)، [المحادثة](../agent-studio/CHAT-FIX.md)، [إزالة قسم API](../agent-studio/API-UI-REMOVAL.md). لا تستنتج نجاح كل عملية من HTTP200 لصفحة أو فحص ملف JS. لا فوترة أو استعادة حساب أو CRM/ERP أو OAuth خارجي أو مهام طويلة منفذة. لا إعادة لاختبارات التطبيق في تسليم توثيق.

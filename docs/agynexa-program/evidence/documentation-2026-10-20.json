@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-10-20T15:03:33.774842+00:00",
+  "baseline_main": "4799a2e",
+  "latest_product_merge": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
+  "validation": {
+    "result": "PASS",
+    "markdown_files": 1111,
+    "local_file_links": 333,
+    "json_files": 77,
+    "canonical_urls": 64,
+    "current_api_operations": 34,
+    "evidence_hashes": 6,
+    "master_plan_unchanged": true,
+    "scope": "Document structure, local file links, JSON, internal contract references, source-derived inventory and evidence integrity; no app/network/runtime/schema-execution tests."
+  },
+  "diff_check": "PASS",
+  "scope_check": "Documentation, root guidance and documentation validator only",
+  "protected_files": {
+    "docs/agynexa-program/MASTER-PLAN.md": {
+      "unchanged_from_baseline": true,
+      "sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3"
+    },
+    "docs/agynexa-program/agent-studio/EXECUTION-PLAN.md": {
+      "unchanged_from_baseline": true,
+      "sha256": "dbc08ca6d1132eb25703c53ff0a8c47c04b71c50e9352c7aade74639991e8df0"
+    },
+    "docs/agynexa-program/reviews/AGYNEXA_Market_Review_and_Action_Plan_2026-10-19.md": {
+      "unchanged_from_baseline": true,
+      "sha256": "e221a8fa04bf09fb14b9779804eb65191104ab8158d0953a6831abffd16231ee"
+    },
+    "public/videos/background.mp4": {
+      "unchanged_from_baseline": true,
+      "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85"
+    },
+    "@components/landing-5-hero-video.tsx": {
+      "unchanged_from_baseline": true,
+      "sha256": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca"
+    },
+    "@components/landing-5-hero-section.tsx": {
+      "unchanged_from_baseline": true,
+      "sha256": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1"
+    }
+  },
+  "application_tests_run": false,
+  "application_build_run": false,
+  "live_accounts_created": false,
+  "database_changed": false,
+  "production_reverified": false,
+  "limits": "Reconciles existing code and dated receipts; no new runtime, model, authenticated production browser or external account verification."
+}

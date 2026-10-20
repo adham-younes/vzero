@@ -29,6 +29,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## Active owner scope: complete Studio C–E and production delivery
+## Current owner scope: consolidate actual delivery status
 
-The latest owner message authorizes all remaining Studio stages and production deployment on vzero. Preserve implemented A/B, integrate main hotfix, and implement C/D/E. This includes the additive Studio database setup on project xsyxvswbiptbyxyqhdim needed for this release; no destructive changes or live Auth/SMTP changes. Three server-only Groq keys are owner-configured. Batch verification at the production delivery, reuse prior evidence, do not test after each edit. Record actual limitations and deployment evidence.
+Studio A–E and the chat/API UI fixes have been deployed under D-26/D-27/D-28. The current request is to document all updates, fixes, implemented behavior and remaining work. Start from `docs/agynexa-program/CURRENT-IMPLEMENTATION-2026-10-20.md`. Consolidate current documents without rewriting original plans or historical evidence. This task changes documentation and its inventory validator only; no application, live database or Auth/SMTP changes. Run document/link/inventory checks and diff review only, not application suites. Preserve the distinction between latest product code, documentation commits and the environment/scope of each verification.
