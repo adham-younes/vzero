@@ -61,6 +61,12 @@ require(len(services) == routes["services"] == 10 and len(solutions) == routes["
 
 api = read_json(DOCS / "architecture/current-api.openapi.json")
 expected_api = {("get", "/api/v1/catalog/services"), ("post", "/api/v1/procurement/review"), ("get", "/api/health/supabase")}
+expected_api |= {("post", "/api/auth/" + action) for action in ("register", "login", "logout")}
+expected_api |= {("get", "/api/account"), *[(method, "/api/v1/project-briefs") for method in ("get", "post", "delete")]}
+for page in routes.get("account_pages", []):
+    for locale in ("en", "ar"):
+        require((ROOT / "app" / page[locale].lstrip("/") / "page.tsx").is_file(), "Missing account page")
+    require(page["index"] is False, "Account pages must not be indexed")
 actual_api = {(method, path) for path, operations in api["paths"].items() for method in operations if method in {"get", "post", "put", "patch", "delete"}}
 require(api["openapi"] == "3.1.0" and actual_api == expected_api, "Current API inventory mismatch")
 

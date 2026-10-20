@@ -234,5 +234,31 @@
     "/sitemap.xml",
     "/robots.txt"
   ],
-  "verification_scope": "Inventory is source-derived; final production smoke sampled 15 pages, not every canonical URL."
+  "verification_scope": "Inventory is source-derived; final production smoke sampled 15 pages, not every canonical URL.",
+  "account_pages": [
+    {
+      "en": "/signup",
+      "ar": "/ar/signup",
+      "index": false
+    },
+    {
+      "en": "/login",
+      "ar": "/ar/login",
+      "index": false
+    },
+    {
+      "en": "/account",
+      "ar": "/ar/account",
+      "index": false
+    }
+  ],
+  "account_apis": [
+    "POST /api/auth/register",
+    "POST /api/auth/login",
+    "POST /api/auth/logout",
+    "GET /api/account",
+    "GET /api/v1/project-briefs",
+    "POST /api/v1/project-briefs",
+    "DELETE /api/v1/project-briefs"
+  ]
 }
