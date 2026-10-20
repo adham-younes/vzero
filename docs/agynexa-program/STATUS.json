@@ -156,7 +156,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Deploy and call GET /api/health/supabase to verify Vercel credentials against owner-selected project. No lead/knowledge tables or model runs have been implemented.",
+  "next_action": "Diagnose safe health-check status from Vercel; correct any missing/wrong credential before lead or knowledge implementation.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -230,7 +230,7 @@
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
-    "status": "MCP_SQL_READ_VERIFIED_APP_PROBE_PENDING",
+    "status": "MCP_SQL_VERIFIED_VERCEL_PROBE_503",
     "evidence": "evidence/supabase-connection-2026-10-20/verification.json",
     "model_provider": "NOT_CONFIGURED",
     "model_budget": "NOT_CONFIRMED",

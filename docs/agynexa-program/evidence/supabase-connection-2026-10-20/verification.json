@@ -10,7 +10,7 @@
   },
   "database_writes": false,
   "vercel_mcp": "Project/deployment lookups still return 404 in session scope",
-  "application_connection": "PENDING_DEPLOYED_HEALTH_PROBE",
+  "application_connection": "DEPLOYED_PROBE_RETURNED_503_DIAGNOSIS_IN_PROGRESS",
   "secrets_captured": false,
   "implementation_commit": "41e69bd84ba693639762b296909a510dbe0c6ae5",
   "build_typescript": "PASS",
@@ -20,5 +20,12 @@
     "response": {
       "status": "unavailable"
     }
-  }
+  },
+  "initial_production_probe": {
+    "url": "https://vzero-nine-beryl.vercel.app/api/health/supabase",
+    "status": 503
+  },
+  "probe_pull_request": "https://github.com/adham-younes/vzero/pull/10",
+  "probe_merge_commit": "bad09004dc593c0a9389308959b976e34476ddc4",
+  "diagnostic_tests": 6
 }
