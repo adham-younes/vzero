@@ -1,28 +1,39 @@
-// Server-side, read-only connectivity probe. Never return keys or provider bodies.
-export type SupabaseHealthConfig = {
- url?: string
- publishableKey?: string
- secretKey?: string
-}
+// Server-side, read-only probe. Return diagnostic codes, never keys or provider bodies.
+export type SupabaseHealthConfig = {url?: string; publishableKey?: string; secretKey?: string}
 const projectHost = 'xsyxvswbiptbyxyqhdim.supabase.co'
+type KeyStatus = 'ok' | 'missing' | 'invalid_format' | 'rejected' | 'unreachable' | 'not_checked'
+export type SupabaseHealthResult = {
+ status: 'ok' | 'unavailable'
+ checks: {project: 'ok' | 'missing' | 'invalid'; publishableKey: KeyStatus; secretKey: KeyStatus}
+}
 
-export async function checkSupabaseConnection(config: SupabaseHealthConfig, request: typeof fetch = fetch): Promise<boolean> {
- if (!config.url || !config.publishableKey || !config.secretKey) return false
+export async function checkSupabaseConnection(config: SupabaseHealthConfig, request: typeof fetch = fetch): Promise<SupabaseHealthResult> {
+ const result: SupabaseHealthResult = {status: 'unavailable', checks: {
+  project: config.url?.trim() ? 'invalid' : 'missing',
+  publishableKey: config.publishableKey?.trim() ? 'not_checked' : 'missing',
+  secretKey: config.secretKey?.trim() ? 'not_checked' : 'missing',
+ }}
  let url: URL
- try { url = new URL(config.url) } catch { return false }
+ try { url = new URL(config.url?.trim() || '') } catch { return result }
  // Pin the owner-selected project: never probe a different account by mistake.
- if (url.protocol !== 'https:' || url.hostname !== projectHost || url.port || url.username || url.password || url.search || url.hash || url.pathname !== '/') return false
- if (!config.publishableKey.startsWith('sb_publishable_') || !config.secretKey.startsWith('sb_secret_')) return false
- try {
-  const results = await Promise.all([config.publishableKey, config.secretKey].map(async key => {
+ if (url.protocol !== 'https:' || url.hostname !== projectHost || url.port || url.username || url.password || url.search || url.hash || url.pathname !== '/') return result
+ result.checks.project = 'ok'
+ await Promise.all((['publishableKey', 'secretKey'] as const).map(async name => {
+  const key = config[name]?.trim()
+  if (!key) return
+  if (!key.startsWith(name === 'publishableKey' ? 'sb_publishable_' : 'sb_secret_')) {
+   result.checks[name] = 'invalid_format'
+   return
+  }
+  try {
    const response = await request(new URL('/rest/v1/', url), {
-    method: 'GET', headers: { apikey: key, Accept: 'application/openapi+json' },
+    method: 'GET', headers: {apikey: key, Accept: 'application/openapi+json'},
     redirect: 'error', cache: 'no-store', signal: AbortSignal.timeout(5000),
    })
-   // The API root authenticates the key; no rows are read and no data is written.
    await response.body?.cancel()
-   return response.status === 200
-  }))
-  return results.every(Boolean)
- } catch { return false }
+   result.checks[name] = response.status === 200 ? 'ok' : 'rejected'
+  } catch { result.checks[name] = 'unreachable' }
+ }))
+ if (result.checks.publishableKey === 'ok' && result.checks.secretKey === 'ok') result.status = 'ok'
+ return result
 }
