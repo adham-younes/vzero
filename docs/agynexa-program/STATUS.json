@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T13:38:04.982594+00:00",
+  "updated_at": "2026-10-20T14:48:33.089724+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,16 +14,16 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "0d351300b2c619c326f774b0a6c977d7bc68c895",
-    "merge_commit": "f58335441e8898e26e7710e6667cb4255fd7bb7b",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/24",
+    "implementation_commit": "fc5b08443de4a8ccd9d645299c07726a1305b8cb",
+    "merge_commit": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/26",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_PUBLIC_PAGES_PASS_INTERACTIVE_CHAT_VERIFIED_LOCALLY",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7z3egyNdjf1KUkz948XuJ1H6wPd1",
-    "receipt": "agent-studio/CHAT-FIX.md",
-    "evidence": "agent-studio/evidence/chat-fix/production.json"
+    "status_at_verification": "VERCEL_SUCCESS_DEPLOYED_UI_MODULE_REMOVAL_VERIFIED",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/2iZyyPUzB7vbc6HCt3aJbKpGWVSA",
+    "receipt": "agent-studio/API-UI-REMOVAL.md",
+    "evidence": "agent-studio/evidence/api-ui-removal/production.json"
   },
   "stage_status": [
     {
@@ -99,12 +99,10 @@
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS",
-    "targeted_logic_assertions": 14,
-    "real_local_browser": "AR_390_EN_1440_CHAT_AND_HISTORY_PASS",
-    "production_public_pages": 2,
-    "new_live_test_account": false,
+    "deployed_studio_module": "REMOVED_API_CONTROLS_ABSENT_CHAT_PUBLISH_PRESENT",
+    "authenticated_browser_repeated": false,
     "full_suite_repeated": false,
-    "evidence": "agent-studio/evidence/chat-fix/production.json"
+    "evidence": "agent-studio/evidence/api-ui-removal/production.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -139,9 +137,9 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-chat-release-receipt",
+    "branch": "codex/agynexa-api-ui-receipt",
     "product_code_changed": false,
-    "receipt": "agent-studio/CHAT-FIX.md"
+    "receipt": "agent-studio/API-UI-REMOVAL.md"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -215,21 +213,16 @@
     "preview_receipt": "evidence/visual-repair-2026-10-19/preview-receipt.json"
   },
   "previous_verified_product_release": {
-    "implementation_commit": "11d6173e71249bb9583e9fafc912634016645116",
-    "merge_commit": "b3665b8e91e223fc61883cb8703760b12a8c96ed",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/22",
+    "implementation_commit": "0d351300b2c619c326f774b0a6c977d7bc68c895",
+    "merge_commit": "f58335441e8898e26e7710e6667cb4255fd7bb7b",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/24",
     "pull_request_state": "MERGED",
-    "delivery_pull_requests": [
-      18,
-      21,
-      22
-    ],
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_REAL_GROQ_APPROVAL_API_WIDGET_PASS_WITH_RECORDED_LIMITS",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/6WLPT7tRYWMpaGBAbnE7KZanXd1i",
-    "receipt": "agent-studio/STAGES-CDE.md",
-    "evidence": "agent-studio/evidence/stage-cde/production.json"
+    "status_at_verification": "VERCEL_SUCCESS_PUBLIC_PAGES_PASS_INTERACTIVE_CHAT_VERIFIED_LOCALLY",
+    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7z3egyNdjf1KUkz948XuJ1H6wPd1",
+    "receipt": "agent-studio/CHAT-FIX.md",
+    "evidence": "agent-studio/evidence/chat-fix/production.json"
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
@@ -326,8 +319,9 @@
     "production_auth_repeated": false
   },
   "api_ui_removal": {
-    "status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+    "status": "DEPLOYED_PRODUCTION",
     "report": "agent-studio/API-UI-REMOVAL.md",
-    "backend_changed": false
+    "backend_changed": false,
+    "evidence": "agent-studio/evidence/api-ui-removal/production.json"
   }
 }

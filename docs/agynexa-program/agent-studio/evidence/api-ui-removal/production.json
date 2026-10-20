@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-20T14:47:49.910022+00:00",
+  "domain": "https://vzero-nine-beryl.vercel.app",
+  "page_status": 200,
+  "checks": [
+    "Identified deployed Studio client module",
+    "Private API key headings/actions and example absent in both locales",
+    "Publishing and chat actions retained"
+  ],
+  "chunks": [
+    {
+      "url": "https://vzero-nine-beryl.vercel.app/_next/static/immutable/chunks/25zdu0l85u1c4.js",
+      "sha256": "2d8b30437c2989114376bfa63d3a1fe88e9f7ebbfdedd51c5c729cf4e18c85a6"
+    }
+  ],
+  "limits": "Public deployed-asset inspection, not a new authenticated browser session. Vercel build provides compilation/type checking. No live test user or database changes.",
+  "merge_commit": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
+  "implementation_commit": "fc5b08443de4a8ccd9d645299c07726a1305b8cb",
+  "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/2iZyyPUzB7vbc6HCt3aJbKpGWVSA",
+  "vercel_status": "success"
+}

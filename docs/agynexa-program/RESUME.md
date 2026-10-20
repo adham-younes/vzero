@@ -1,5 +1,7 @@
 # استئناف AGYNEXA
 
+آخر تعديل منشور: إزالة قسم مفاتيح API من واجهة الوكيل عبر PR #26 / `4b7b5a2`، والتبويب أصبح «النشر». [التقرير والإيصال](agent-studio/API-UI-REMOVAL.md).
+
 الإصدار الأحدث: إصلاح تجربة المحادثة منشور عبر PR #24، مصدر `f583354`؛ [التقرير](agent-studio/CHAT-FIX.md) و[إيصال النشر](agent-studio/evidence/chat-fix/production.json). افتح الوكيل لتظهر المحادثة مباشرة، بأسماء أنماط واضحة ورد تعريف بلغة سؤالك.
 
 اكتمل نطاق Agent Studio A–E ونُشر إنتاجيًا بتفويض D-26. مصدر المنتج `b3665b8e91e223fc61883cb8703760b12a8c96ed` عبر PR #18 ثم #21 و#22. [التقرير الجاري](agent-studio/STAGES-CDE.md) و[إيصال الإنتاج](agent-studio/evidence/stage-cde/production.json). الموقع: https://vzero-nine-beryl.vercel.app/ar/studio. لا إعادة لمراحل الموقع 0–6 أو Studio A/B.
