@@ -133,3 +133,7 @@ POST workspace ينشئ/يعيد مساحة المالك دون user_id/org_id �
 ## أدلة وحدود التحقق
 
 [إنتاج الحسابات](../releases/ACCOUNTS-AND-BRIEFS-2026-10-20.md)، [C/D/E](../agent-studio/STAGES-CDE.md)، [المحادثة](../agent-studio/CHAT-FIX.md)، [إزالة قسم API](../agent-studio/API-UI-REMOVAL.md). لا تستنتج نجاح كل عملية من HTTP200 لصفحة أو فحص ملف JS. لا فوترة أو استعادة حساب أو CRM/ERP أو OAuth خارجي أو مهام طويلة منفذة. لا إعادة لاختبارات التطبيق في تسليم توثيق.
+
+## متابعة أخطاء المصادقة
+
+تصحيح scoped: فشل خدمة Auth أو الشبكة يعيد 503، وحد المعدل 429، ورفض الجلسة/بيانات الدخول الحقيقي 401. لا عمليات HTTP جديدة أو تغييرات schema. [الدليل](../releases/CONTINUATION-2026-10-20.md).

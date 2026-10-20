@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T19:38:42.159084+00:00",
+  "updated_at": "2026-10-20T20:02:45.959608+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -160,7 +160,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Review visual-upgrade PR #30 and Preview; production merge requires final owner decision. Spacemail sender selected, SMTP configuration and recovery policy remain outstanding.",
+  "next_action": "Email/SMTP/recovery deferred by owner. Finish scoped auth error-classification release; historical transient cause remains unproven. Client delivery portal is not implemented.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -380,18 +380,29 @@
     "write_permissions_verified": false
   },
   "visual_upgrade": {
-    "status": "IMPLEMENTED_PREVIEW_CANDIDATE",
+    "status": "DEPLOYED_VERIFIED_SCOPE",
     "implementation_commit": "5ade5f2cfefff3370721cacd3ab3ec80eec5756d",
     "pull_request": "https://github.com/adham-younes/vzero/pull/30",
     "report": "releases/VISUAL-UPGRADE-2026-10-20.md",
     "evidence": "evidence/visual-upgrade-2026-10-20/verification.json",
-    "production_deployed": false,
+    "production_deployed": true,
     "owner_video_requirement": "AUTOPLAY_NO_PLAY_PAUSE_CONTROLS",
     "remaining": [
       "SMTP-backed safe account recovery",
       "Full client delivery portal requires separate data contract"
     ],
     "preview_url": "https://vzero-acnado0le-adhamlouxors-projects.vercel.app/ar",
-    "preview_browser": "PASS autoplay/no controls"
+    "preview_browser": "PASS autoplay/no controls",
+    "merge_commit": "2ddd0c9bc846215f892b512308679d6e93b1da81",
+    "production_deployment_id": "dpl_CpJ76M8jnckdXTAGWbtX2cjubRsJ",
+    "production_url": "https://vzero-nine-beryl.vercel.app/ar"
+  },
+  "auth_error_handling": {
+    "status": "IMPLEMENTED_BUILD_VERIFIED",
+    "implementation_commit": "94db39e",
+    "report": "releases/CONTINUATION-2026-10-20.md",
+    "tests": "10 PASS; 4 regression failures reproduced before fix",
+    "historical_root_cause": "NOT_ESTABLISHED",
+    "email_recovery": "DEFERRED_BY_OWNER"
   }
 }
