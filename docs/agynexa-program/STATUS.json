@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T02:22:14.511482+03:00",
+  "updated_at": "2026-10-22T02:31:00.239289+03:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -161,7 +161,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Close narrow live UI source-delete/history-redaction evidence; adversarial acceptance and consenting-reader comprehension; legal/commercial/retention/recovery owner decisions. Permissions-copy correction in current delivery.",
+  "next_action": "Consenting-reader comprehension and focused remaining adversarial/edge acceptance; actual legal/commercial/retention/recovery owner decisions. Representative live private journey/revocation and template permissions correction verified.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -421,7 +421,7 @@
     "production_authorized": true,
     "production_changed": true,
     "retention_policy": "NO_NEW_TIMER_OR_PURGE_APPROVED",
-    "next": "Close narrow live UI source-delete/history-redaction evidence; adversarial acceptance and consenting-reader comprehension; legal/commercial/retention/recovery owner decisions. Permissions-copy correction in current delivery.",
+    "next": "Consenting-reader comprehension and focused remaining adversarial/edge acceptance; actual legal/commercial/retention/recovery owner decisions. Representative live private journey/revocation and template permissions correction verified.",
     "gates": {
       "build": "PASS_LOCAL_CANDIDATE_AND_MERGED_GIT_PRODUCTION",
       "contracts": "PASS11 + provider fault + long-output boundary",
@@ -431,7 +431,7 @@
       "protected_home": "PASS6_EN_AR_WIDTH_COMPARISONS",
       "actual_models": "PASS9_SAMPLES_THREE_SERVER_KEYS",
       "live_production": "PASS8_PUBLIC_3_PRIVATE_GUARDS_HEALTH_6_HOME_COMPARISONS",
-      "production_authenticated_browser": "PARTIAL_LIVE_INTAKE_HISTORY_AND_NEW_KG_CITED_FLOW_PASS_UI_SOURCE_DELETE_REVOCATION_NOT_VERIFIED"
+      "production_authenticated_browser": "PASS_REPRESENTATIVE_INTAKE_HISTORY_NEW_KG_SOURCEFREE_CITED_FOLLOWUP_UI_DELETE_REFRESH_REDACTION"
     },
     "production_deployment": "dpl_CEFfHq2ur8D9HmiHf92iD8vrkzFa",
     "receipt": "../launch/2026-10-22/RELEASE.md",
@@ -439,6 +439,12 @@
       "20261021225511",
       "20261021230003"
     ],
-    "completion_audit": "../launch/2026-10-22/COMPLETION-AUDIT.md"
+    "completion_audit": "../launch/2026-10-22/COMPLETION-AUDIT.md",
+    "permissions_copy_release": {
+      "pull_request": "https://github.com/adham-younes/vzero/pull/35",
+      "merge_commit": "fcd6175efb0f263265d97b5df76774ee268fdac4",
+      "deployment_id": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
+      "status": "READY_AFFECTED_UI_AND_HEALTH_PASS"
+    }
   }
 }

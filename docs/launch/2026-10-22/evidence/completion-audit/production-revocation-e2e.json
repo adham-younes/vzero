@@ -1,0 +1,108 @@
+{
+  "recordedAt": "2026-10-21T23:29:38.004456+00:00",
+  "result": "PASS — actual production UI source deletion and durable history/citation revocation verified on the smallest fresh fixture.",
+  "release": {
+    "source": "fcd6175efb0f263265d97b5df76774ee268fdac4",
+    "deployment": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
+    "basis": "Lead READY release reference; browser audit exercised this current production site."
+  },
+  "surface": {
+    "tabId": "1780152269",
+    "site": "https://vzero-nine-beryl.vercel.app/ar/studio",
+    "signedInAlready": true,
+    "newLogin": false,
+    "ownerAddedTurnsInspectedOrCaptured": false
+  },
+  "scope": {
+    "freshAssistantCount": 1,
+    "name": "AGYNEXA revoke verification 20261022",
+    "template": "knowledgegrid",
+    "modelUiLabel": "سريع / Fast",
+    "knownModel": "openai/gpt-oss-20b",
+    "modelTurnCount": 1,
+    "sourceCountAdded": 1,
+    "privateIdentityFile": "work/production-revocation-fixture-ids.json, mode0600; exact ID/settings URL/conversation omitted here",
+    "noExtraJourneys": "No source-free introduction, follow-up, other model, approval, brief, publication, API key or account creation."
+  },
+  "permissionCopy": {
+    "status": "PASS",
+    "sequence": "KnowledgeGrid → ServiceFlow → KnowledgeGrid, in the same fixture review before creation",
+    "knowledgeGridArabic": "محادثة خاصة ونصوص تضيفها صراحةً ومسودات وإجابات موثقة بالمصادر. لا يقترح KnowledgeGrid طلبات داخلية. الوصول العام متوقف حتى نشر مستقل. التعليمات لا تمنح أدوات أو صلاحيات وصول.",
+    "serviceFlowArabic": "محادثة خاصة ونصوص تضيفها صراحةً ومسودات ومقترحات طلبات داخلية محددة توافق عليها بنفسك. الوصول العام متوقف حتى نشر مستقل. التعليمات لا تمنح أدوات أو صلاحيات وصول.",
+    "screenshots": [
+      "production-revoke-kg-permissions.png",
+      "production-revoke-sf-permissions.png",
+      "production-revoke-review.png"
+    ]
+  },
+  "source": {
+    "title": "SYNTHETIC revocation check 20261022",
+    "content": "SYNTHETIC REVOCATION TEST ONLY. The calibration widget inspection window is 19 days. No external action is provided.",
+    "utf8Bytes": 116,
+    "publicApproved": false,
+    "explicitAdd": "PASS",
+    "privateLabelObserved": true,
+    "screenshot": "production-revoke-private-source.png"
+  },
+  "liveAnswer": {
+    "status": "PASS",
+    "question": "According only to the synthetic revocation test source, what is the calibration widget inspection window? Cite the source. Do not propose or perform any action.",
+    "observedAnswer": "According to the synthetic revocation test source, the calibration widget inspection window is 19 days.",
+    "typedLabel": "إجابة من مصادر معتمدة",
+    "originalCitationOpened": true,
+    "citationTitleAndQuoteMatchSource": true,
+    "screenshot": "production-revoke-cited.png"
+  },
+  "uiDeletion": {
+    "status": "PASS",
+    "clickCount": 1,
+    "target": "The sole newly added source within the fresh named verification assistant.",
+    "confirmation": "The exact app JavaScript confirmation was observed; getJsDialog returned confirm and accept ran once within the same REPL invocation.",
+    "toolDetail": "The expected click interruption was caught and inspected; no repeated delete click or focus recovery was needed.",
+    "outcome": "Saved sources(0) and source-deleted/rechecked notice observed in a fresh UI state.",
+    "screenshot": "production-revoke-source-deleted.png"
+  },
+  "historyRevocation": {
+    "status": "PASS",
+    "method": "Opened the same synthetic conversation, then hard-refreshed the page and inspected the completed saved-history state.",
+    "originalQuestionRetained": true,
+    "knowledgeChangedNoticePresent": true,
+    "oldNineteenDayFactPresent": false,
+    "citationControlPresent": false,
+    "composerEnabled": true,
+    "screenshot": "production-revoke-history-redacted.png",
+    "notice": "تغيرت المعرفة المستخدمة في الإجابة أو حُذفت. أضف دليلًا محدثًا واسأل مجددًا."
+  },
+  "leadIndependentHostedState": {
+    "sourceStatus": "deleted",
+    "publicApproved": false,
+    "chunkCount": 0,
+    "runCount": 1,
+    "template": "knowledgegrid",
+    "chat_profile": "customer_v1",
+    "model": "openai/gpt-oss-20b",
+    "versionCount": 0,
+    "basis": "Lead reported exact-fresh-fixture hosted check; no UUID or account values reproduced."
+  },
+  "cleanup": {
+    "status": "PASS — LEAD GUARDED EXACT-FIXTURE CLEANUP",
+    "sourceDeletedByUi": true,
+    "workerLeftAgentIntactUntilProofAndHandoff": true,
+    "removedAgentCount": 1,
+    "remainingAgentSourceChunkRunProposalDescendants": 0,
+    "basis": "Lead confirmed the guarded exact-new-agent transaction ran only after UI proof and verified zero descendants.",
+    "preexistingObjectsChanged": false,
+    "browserReturnedToDefaultBeforeCleanup": true,
+    "fixtureSelectedAfterReturn": false,
+    "defaultMessageContentNotReadOrCaptured": true,
+    "workerDatabaseMutation": false,
+    "note": "This cleanup is distinct from the independently captured actual UI deletion/history-redaction proof."
+  },
+  "observations": [
+    "Some short locator waits expired while asynchronous page/source/history loading was still in progress; subsequent fresh state established completion without duplicate submissions.",
+    "This is one live production revocation case, not a model-quality, latency or every-route test.",
+    "The earlier interrupted fixture receipt remains historical; this new explicitly authorized case closes the previously unverified UI delete/revocation path.",
+    "No application code, repository, configuration, global UI, cookies, credentials or deployment changed by this worker.",
+    "Public receipts and screenshots exclude org/actor values and object UUIDs; exact cleanup references remain private."
+  ]
+}
