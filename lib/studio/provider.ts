@@ -21,6 +21,14 @@ export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'a
  const key=credential(model);const started=Date.now();let response:Response|undefined
  for(let attempt=0;attempt<2;attempt++){
   response=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',cache:'no-store',signal,headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({model,messages,stream:false,max_completion_tokens:modelRegistry[model].maxOutput,reasoning_effort:model.startsWith('qwen/')?'none':'low',reasoning_format:'hidden',response_format:{type:'json_schema',json_schema:{name:chatV2?'customer_chat_v2':'grounded_answer',strict:true,schema:responseSchema}}})})
+  if(response.status===400){
+   const failure=await response.clone().json().catch(()=>null)
+   if(failure?.error?.code==='json_validate_failed'){
+    // One immediate retry of the SAME strict schema, never an unrestricted fallback.
+    if(!attempt)continue
+    throw new InputError('invalid_model_output',502)
+   }
+  }
   if(response.status!==429)break
   const retry=response.headers.get('retry-after');const seconds=retry===null?1:Number(retry)
   if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5)throw new InputError('provider_rate_limited',429)
