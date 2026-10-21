@@ -445,6 +445,25 @@
       "merge_commit": "fcd6175efb0f263265d97b5df76774ee268fdac4",
       "deployment_id": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
       "status": "READY_AFFECTED_UI_AND_HEALTH_PASS"
+    },
+    "remaining_acceptance_continuation": {
+      "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
+      "status": "BUILD_SOURCE_REVIEW_AND_FOCUSED_LOCAL_GAPS_PASS_AWAIT_PRODUCTION",
+      "findings": [
+        "Mixed business/private-extraction reply preserved secrecy but omitted useful business help",
+        "Optional false model/conversationId/runId treated as absent"
+      ],
+      "human_review": "../launch/2026-10-22/HUMAN-COMPREHENSION-REVIEW.md",
+      "human_review_status": "NOT_YET_REVIEWED_BY_HUMAN",
+      "evidence": "../launch/2026-10-22/evidence/remaining-acceptance/",
+      "local_results": {
+        "pure": 7,
+        "initial_http_pass": 29,
+        "initial_http_failed_resolved": 3,
+        "affected_input_pass": 18,
+        "ui_verified_groups": 11,
+        "broad_green_suites_repeated": false
+      }
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "environment": "actual pure application functions and provider adapter; synthetic local transport faults; no paid call",
+  "status": "PASS",
+  "checks": [
+    "A4 external/scheme-relative/backslash/encoded destinations cannot redirect outside product",
+    "A4 explicit Account/Start/Arabic intent retained and business/unknown query stripped",
+    "A15 provider429 retry-after0 recovers once without unrestricted fallback",
+    "A15 repeated429 stops after bounded second attempt",
+    "A15 excessive retry-after rejected immediately",
+    "A15 cancellation interrupts provider backoff before another fetch",
+    "A15 controlled request timeout aborts in-flight adapter without a generated answer"
+  ]
+}

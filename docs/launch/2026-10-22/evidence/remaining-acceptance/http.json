@@ -1,0 +1,162 @@
+{
+  "environment": "isolated real DB/Auth; deterministic provider transport; no production account or key",
+  "checks": [
+    {
+      "name": "A3 reserved default chat_profile collision fails closed",
+      "result": "PASS"
+    },
+    {
+      "name": "A3 reserved default template collision fails closed",
+      "result": "PASS"
+    },
+    {
+      "name": "A3 invalid locale types rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "A3 existing default locale request preserves exact identity and stored language",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects content type",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects invalid JSON",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects array",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects body byte ceiling",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects unknown field",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects message number",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects message object",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects message length",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects unsupported model",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects model object",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects model false",
+      "result": "PASS_AFTER_FIX",
+      "originalFailure": {
+        "expectedStatus": 400,
+        "actualStatus": 200
+      },
+      "affectedReceipt": "input-after-fix.json"
+    },
+    {
+      "name": "A15 rejects conversation false",
+      "result": "PASS_AFTER_FIX",
+      "originalFailure": {
+        "expectedStatus": 400,
+        "actualStatus": 409
+      },
+      "affectedReceipt": "input-after-fix.json"
+    },
+    {
+      "name": "A15 rejects run ID false",
+      "result": "PASS_AFTER_FIX",
+      "originalFailure": {
+        "expectedStatus": 404,
+        "actualStatus": 200
+      },
+      "affectedReceipt": "input-after-fix.json"
+    },
+    {
+      "name": "A15 rejects bad key UUID",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 exact 12000 UTF8-byte source accepted",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects source 12002 UTF8 bytes",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects source NUL",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects source non-string content",
+      "result": "PASS"
+    },
+    {
+      "name": "A15 rejects source non-boolean public approval",
+      "result": "PASS"
+    },
+    {
+      "name": "A14 same-key other conversation conflict",
+      "result": "PASS"
+    },
+    {
+      "name": "A14 same-key other actor collision returns generic conflict",
+      "result": "PASS"
+    },
+    {
+      "name": "A16 controlled expiry produces expired without approval",
+      "result": "PASS"
+    },
+    {
+      "name": "A16 rejected duplicate is idempotent exact decision",
+      "result": "PASS"
+    },
+    {
+      "name": "A16 rejected conflicting decision rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "A16 approved duplicate is idempotent exact decision",
+      "result": "PASS"
+    },
+    {
+      "name": "A16 approved conflicting decision rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "A24 published invoke strict existing run envelope and immutable version",
+      "result": "PASS"
+    },
+    {
+      "name": "A14 same-key different access kind creates separate bound run",
+      "result": "PASS"
+    }
+  ],
+  "initialExecution": {
+    "total": 32,
+    "passed": 29,
+    "failed": 3,
+    "receipt": "http-before-fix.json",
+    "unchangedPassesNotRepeated": true
+  },
+  "affectedRerun": {
+    "receipt": "input-after-fix.json",
+    "passed": 18,
+    "failed": 0,
+    "source": "rebuilt corrected application"
+  },
+  "status": "PASS_WITH_PRESERVED_BEFORE_FIX_FAILURES"
+}
