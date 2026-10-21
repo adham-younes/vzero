@@ -1,0 +1,25 @@
+{
+  "environment": "isolated local app with real Auth/PostgREST and synthetic accounts; deterministic provider fixture via Node preload",
+  "status": "PASS",
+  "checks": [
+    "Default login opens separate customer-profile private chat; useful typed response without sources at 1440px",
+    "Brief prefill contains only user message; required fields, explicit review/consent/save; truthful private save",
+    "Describe/review/create provisions a distinct persisted agent with saved ID/name/settings URL and a working private test at 768px",
+    "Synthetic sample inspect/editor does not create source; explicit source add remains private; cited answer/history refresh/full-turn follow-up",
+    "Exact stored title/details reviewed; approval HTTP body decision-only; approved state explicitly internal",
+    "Source delete refreshes/redacts cached conversation; API history removes original factual parts/citations",
+    "Arabic 390px RTL/no overflow and explicit keep/confirm conversation deletion",
+    "Candidate homepage at 390/768/1440 captured without horizontal overflow; baseline comparison owned by lead"
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "Comprehension tool is supporting text review, not a consenting-reader usability test.",
+    "Home screenshots require comparison with lead baseline; capture alone is not parity.",
+    "Provider output is deterministic fixture data; this gate verifies UI/storage/authorization contracts, not live model reasoning or semantic quality. Live adapter/schema/model checks are a separate Vercel gate."
+  ],
+  "executionSegments": {
+    "resume": "builder",
+    "earlierReceipt": "browser-model-selector-failure.json",
+    "explanation": "First two journey groups passed before harness-only select-label fix. Remaining groups resumed at builder and passed; no product source change."
+  }
+}

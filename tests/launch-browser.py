@@ -62,6 +62,15 @@ async def main():
   boot_response=await page.request.post(BASE+'/api/v1/workspace/chat',data={'locale':'en'},headers={'Origin':BASE})
   assert boot_response.ok
   default_agent=(await boot_response.json())['agent']
+  if os.getenv('LAUNCH_BROWSER_CAPTURE_ONLY')=='ar':
+   await page.set_viewport_size({'width':390,'height':844})
+   await page.goto(BASE+'/ar/studio?agent='+default_agent['id'])
+   await page.locator('#agent-chat-message').wait_for()
+   await page.wait_for_function("!document.getElementById('agent-chat-message').disabled")
+   await screenshot('studio-ar-390')
+   print('PASS: resolved Arabic390 screenshot refreshed; read-only capture, no inference')
+   await browser.close()
+   return
   assert not (await (await page.request.get(BASE+'/api/v1/agents/'+default_agent['id']+'/sources')).json())['sources'],'Browser new-customer fixture must have no sources'
   if os.getenv('LAUNCH_BROWSER_RESUME')!='builder':
    await page.get_by_role('button',name='New conversation',exact=True).click()
@@ -169,6 +178,7 @@ async def main():
   await page.goto(BASE+'/ar/studio?agent='+created['id']+'&conversation='+conversation)
   await page.locator('#agent-chat-message').wait_for()
   assert await page.evaluate('document.documentElement.dir')=='rtl'
+  await page.get_by_role('log').get_by_text(grounded['question'],exact=True).wait_for()
   await screenshot('studio-ar-390')
   await page.get_by_role('button',name='حذف المحادثة…',exact=True).click()
   assert await page.get_by_role('button',name='تأكيد حذف المحادثة',exact=True).is_visible()
@@ -188,7 +198,7 @@ async def main():
    await screenshot('home-candidate-'+str(width))
   checks.append('Candidate homepage at 390/768/1440 captured without horizontal overflow; baseline comparison owned by lead')
   assert not errors,errors
-  result={'environment':'isolated local app with real Auth/PostgREST and synthetic accounts; deterministic provider fixture via Node preload' ,'status':'PASS','checks':checks,'pageErrors':errors,'limitations':['Comprehension tool is supporting text review, not a consenting-reader usability test.','Home screenshots require comparison with lead baseline; capture alone is not parity.','Provider output is deterministic fixture data; this gate verifies UI/storage/authorization contracts, not live model reasoning or semantic quality. Live adapter/schema/model checks are a separate Vercel gate.']}
+  result={'environment':'isolated local app with real Auth/PostgREST and synthetic accounts; deterministic provider fixture via Node preload' ,'status':'PASS','executionSegments':{'resume':os.getenv('LAUNCH_BROWSER_RESUME'),'earlierReceipt':'browser-model-selector-failure.json' if os.getenv('LAUNCH_BROWSER_RESUME')=='builder' else None},'checks':checks,'pageErrors':errors,'limitations':['Comprehension tool is supporting text review, not a consenting-reader usability test.','Home screenshots require comparison with lead baseline; capture alone is not parity.','Provider output is deterministic fixture data; this gate verifies UI/storage/authorization contracts, not live model reasoning or semantic quality. Live adapter/schema/model checks are a separate Vercel gate.']}
   (OUT/'browser.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
   print(json.dumps(result,ensure_ascii=False))
   await browser.close()

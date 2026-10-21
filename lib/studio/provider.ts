@@ -41,4 +41,7 @@ export async function checkProvider(){
 }
 
 const object=(properties:Record<string,unknown>)=>({type:'object',additionalProperties:false,required:Object.keys(properties),properties})
-const chatSchema=object({parts:{type:'array',items:object({kind:{type:'string',enum:['capability','discovery','draft','grounded','missing_evidence','unavailable_action']},text:{type:'string'},basis:{type:'string',enum:['product_capabilities','user_supplied','suggestion','approved_sources']},citationChunkIds:{type:'array',items:{type:'string'}}})},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})
+const partSchema=(kinds:string[],bases:string[],grounded=false)=>object({kind:{type:'string',enum:kinds},text:{type:'string'},basis:{type:'string',enum:bases},citationChunkIds:{type:'array',items:{type:'string'},maxItems:grounded?6:0,...(grounded?{minItems:1}:{})}})
+// Encode the same combinations the server validates, rather than asking the model
+// to infer citation policy from independent kind/basis enums.
+const chatSchema=object({parts:{type:'array',items:{anyOf:[partSchema(['grounded'],['approved_sources'],true),partSchema(['capability'],['product_capabilities']),partSchema(['discovery','draft'],['user_supplied','suggestion']),partSchema(['missing_evidence','unavailable_action'],['suggestion','product_capabilities'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})
