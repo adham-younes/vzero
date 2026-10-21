@@ -1,29 +1,30 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-20T20:05:43.728021+00:00",
+  "updated_at": "2026-10-21T23:02:18.481462+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "STUDIO_A_TO_E_DEPLOYED_WITH_COMMERCIAL_GAPS",
+  "status": "CUSTOMER_CHAT_BUILDER_DEPLOYED_WITH_OPERATING_GAPS",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "94db39ee53a14ab448e84d71df98cd149cee7610",
-    "merge_commit": "5f178acc4353f17e76fbd2a8c019f787ef0d4ed9",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/31",
+    "implementation_commit": "138382375364232baf688f9bfa23bb1ffeca963b",
+    "reviewed_head": "6b37b01593110c2801787e7b90cc70112c956939",
+    "merge_commit": "e48dc748feeae3511b76bb679ec30b0a1b0c8729",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/33",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
-    "verified_date": "2026-10-20",
-    "status_at_verification": "READY_PRODUCTION_SCOPED_HTTP_AND_PRIOR_UI_VERIFIED",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7tB1SVC3Nm6QR1V9fBan2kGX1kyz",
-    "receipt": "releases/CONTINUATION-2026-10-20.md",
-    "evidence": "evidence/auth-error-handling-2026-10-20/production.json"
+    "verified_date": "2026-10-22",
+    "status_at_verification": "READY_PRODUCTION_SCOPED_LIVE_CHECKS_PASS_AUTHENTICATED_BROWSER_NOT_VERIFIED",
+    "deployment_id": "dpl_CEFfHq2ur8D9HmiHf92iD8vrkzFa",
+    "receipt": "../launch/2026-10-22/RELEASE.md",
+    "evidence": "../launch/2026-10-22/evidence/production.json"
   },
   "stage_status": [
     {
@@ -160,7 +161,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "UI and auth error-classification releases are deployed and verified within recorded scope. Email/SMTP/recovery deferred by owner. Historical intermittent cause remains unproven; next product scope is client delivery portal definition, not a claim of implementation.",
+  "next_action": "Existing authorized owner production session for authenticated customer E2E; legal/commercial/retention operating decisions and recovery remain separate gaps.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -219,7 +220,7 @@
         "secretKey": "ok"
       }
     },
-    "next_action": "No additional keys needed for the delivered runtime; Qwen remains internal preview evaluator only.",
+    "next_action": "No new keys needed. All3 selected owner model paths passed actual Vercel-held-key samples; Qwen remains provider preview, not an SLA.",
     "model_evaluation": "agent-studio/STAGES-CDE.md"
   },
   "account_release": {
@@ -309,7 +310,7 @@
     "backend_changed": false,
     "evidence": "agent-studio/evidence/api-ui-removal/production.json"
   },
-  "consolidated_report": "CURRENT-IMPLEMENTATION-2026-10-20.md",
+  "consolidated_report": "../launch/2026-10-22/RELEASE.md",
   "stage_numbering": {
     "original_program": "0–6: seven stages; architecture stage delivered as specification",
     "agent_studio": "A–E: five scoped stages deployed; commercial gaps remain"
@@ -410,7 +411,7 @@
     "evidence": "evidence/auth-error-handling-2026-10-20/production.json"
   },
   "customer_release_2026_10_22": {
-    "status": "VERIFIED_CANDIDATE_PENDING_PRODUCTION",
+    "status": "DEPLOYED_VERIFIED_WITH_EXPLICIT_LIMITATIONS",
     "baseline": "f4f573a158a66f200e6055cf530afa3faa2eac9f",
     "ledger": "../launch/2026-10-22/EXECUTION.md",
     "full_plan": "../launch/2026-10-22/implementation-plan.md",
@@ -418,17 +419,25 @@
     "workers": 3,
     "models": "gpt-6.1-sol high for all execution workers",
     "production_authorized": true,
-    "production_changed": false,
+    "production_changed": true,
     "retention_policy": "NO_NEW_TIMER_OR_PURGE_APPROVED",
-    "next": "Final capacity candidate build; additive hosted migration; compatible production app; raw-read closure migration; live public/user-entry verification.",
+    "next": "Existing authorized owner production session for authenticated customer E2E; legal/commercial/retention operating decisions and recovery remain separate gaps.",
     "gates": {
-      "build": "PASS_LOCAL_AND_STAGED; affected capacity build finishing",
+      "build": "PASS_LOCAL_CANDIDATE_AND_MERGED_GIT_PRODUCTION",
       "contracts": "PASS11 + provider fault + long-output boundary",
       "isolated_data_auth_security": "PASS38 + scoped legacy/transitive regression",
       "browser": "PASS8_REAL_AUTH_DB_DETERMINISTIC_PROVIDER",
       "public_routes": "PASS68",
       "protected_home": "PASS6_EN_AR_WIDTH_COMPARISONS",
-      "actual_models": "PASS9_SAMPLES_THREE_SERVER_KEYS"
-    }
+      "actual_models": "PASS9_SAMPLES_THREE_SERVER_KEYS",
+      "live_production": "PASS8_PUBLIC_3_PRIVATE_GUARDS_HEALTH_6_HOME_COMPARISONS",
+      "production_authenticated_browser": "NOT_VERIFIED_NO_AUTHORIZED_SESSION"
+    },
+    "production_deployment": "dpl_CEFfHq2ur8D9HmiHf92iD8vrkzFa",
+    "receipt": "../launch/2026-10-22/RELEASE.md",
+    "hosted_migrations": [
+      "20261021225511",
+      "20261021230003"
+    ]
   }
 }

@@ -1,0 +1,10 @@
+{
+  "own_local_app": "STOPPED",
+  "own_containers": 4,
+  "own_container_oom": false,
+  "colima_profile": "agynexa-release",
+  "colima_status": "Stopped",
+  "docker_context": "default",
+  "original_main_checkout": "CLEAN_AT_f4f573a",
+  "unrelated_workloads_modified": false
+}

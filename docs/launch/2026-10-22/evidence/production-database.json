@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-10-21T23:02:18.481462+00:00",
+  "project": "xsyxvswbiptbyxyqhdim",
+  "migrations": [
+    {
+      "name": "customer_chat_profile",
+      "hosted_version": "20261021225511",
+      "source_version": "20261021221316"
+    },
+    {
+      "name": "protected_history_reads",
+      "hosted_version": "20261021230003",
+      "source_version": "20261021222156",
+      "applied_after_compatible_primary_ready": true
+    }
+  ],
+  "total_hosted_migrations": 7,
+  "authenticated_run_read_closed": true,
+  "authenticated_proposal_read_closed": true,
+  "anon_run_read_closed": true,
+  "anon_proposal_read_closed": true,
+  "production_customer_fixtures_created": false,
+  "new_retention_timer_or_purge": false
+}

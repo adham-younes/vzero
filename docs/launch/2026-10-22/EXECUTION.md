@@ -131,3 +131,10 @@ Resource snapshot: 8GiB RAM, 8CPU, 28GiB available disk. No Docker/Colima on PAT
 - Added production Config flags STUDIO_CUSTOMER_CHAT_V2_ENABLED=true and STUDIO_SEARCH_NORMALIZATION_V2_ENABLED=true after schema verification. Old deployment ignores them; compatible build consumes them. Three sensitive provider credentials unchanged.
 - Alias precision: --skip-domain preserved the primary public hostname pending actual release; Vercel reports a generated team/project alias on the staged deployment. Do not equate target=production/READY/project alias with primary public deployment. Primary alias checked independently before promotion/merge.
 - Maintained docs/API inventory check PASS after adding exact locale body/builder property/path/query contracts. Next: push final reviewed source/docs, ready+merge PR33 with required checks, verify actual primary production deployment, then apply protected_history_reads and live guards/public pages. No repeated broad checks.
+
+## Production product increment completed
+
+- PR33 merged head6b37b01 as e48dc748feeae3511b76bb679ec30b0a1b0c8729 after Vercel checks SUCCESS. Primary hostname independently resolves READY dpl_CEFfHq2ur8D9HmiHf92iD8vrkzFa with that main source.
+- Applied protected_history_reads only after compatible primary app READY, hosted20261021230003. Raw authenticated/anon SELECT on agent_runs and support_requests all verified closed. Original5 plus2 additive/security migrations total7; no data cleanup or purge.
+- Live affected verification PASS:8 public/account-entry pages200, health200/all3 project/key checksok,3 unauthenticated private guards401.6 actual production EN/AR390/768/1440 home comparisons equal baseline with zero page errors. Evidence production.json. No authenticated production fixture or actual owner conversation created; that boundary remains NOT VERIFIED.
+- Cleanup: own app/4containers/dedicatedVM stopped, all OOMflagsfalse; Docker default context retained. Full release/remaining/rollback receipt RELEASE.md. Documentation-only closure follows product increment; same application code, no broad repeated suite or inference.
