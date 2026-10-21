@@ -17,7 +17,7 @@ export function parseAnswer(content:string):GroundedAnswer{
  return v
 }
 export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[],chatV2=false){
- const responseSchema=chatV2?chatSchema:schema
+ const responseSchema=chatV2?chatSchema(citationIds):schema
  const key=credential(model);const started=Date.now();let response:Response|undefined
  for(let attempt=0;attempt<2;attempt++){
   response=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',cache:'no-store',signal,headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({model,messages,stream:false,max_completion_tokens:modelRegistry[model].maxOutput,reasoning_effort:model.startsWith('qwen/')?'none':'low',reasoning_format:'hidden',response_format:{type:'json_schema',json_schema:{name:chatV2?'customer_chat_v2':'grounded_answer',strict:true,schema:responseSchema}}})})
@@ -44,8 +44,8 @@ export async function checkProvider(){
 }
 
 const object=(properties:Record<string,unknown>)=>({type:'object',additionalProperties:false,required:Object.keys(properties),properties})
-const partSchema=(kinds:string[],grounded=false)=>object({kind:{type:'string',enum:kinds},text:{type:'string'},...(grounded?{citationChunkIds:{type:'array',items:{type:'string'}}}:{})})
+const partSchema=(kinds:string[],citationIds?:string[])=>object({kind:{type:'string',enum:kinds},text:{type:'string'},...(citationIds?{citationChunkIds:{type:'array',minItems:1,items:{type:'string',enum:citationIds}}}:{})})
 // Only the grounded schema variant can contain citation IDs. The adapter attaches
 // [] to other variants and derives basis from kind. Only kind discriminates the union;
 // Groq rejects a union with multiple enum discriminator candidates. Server validation remains strict.
-const chatSchema=object({parts:{type:'array',items:{anyOf:[partSchema(['grounded'],true),partSchema(['capability']),partSchema(['discovery','draft']),partSchema(['missing_evidence','unavailable_action'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})
+const chatSchema=(citationIds:string[])=>object({parts:{type:'array',items:{anyOf:[...(citationIds.length?[partSchema(['grounded'],citationIds)]:[]),partSchema(['capability']),partSchema(['discovery','draft']),partSchema(['missing_evidence','unavailable_action'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})
