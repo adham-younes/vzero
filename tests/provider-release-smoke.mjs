@@ -11,14 +11,18 @@ const listed=await checkProvider();if(listed.some(x=>x.status!=='listed'))throw 
 const chunks=[{id:'a83cd39e-caf3-41bd-bdce-58a01a102ce5',source_id:'a83cd39e-caf3-41bd-bdce-58a01a102ce6',title:'Synthetic policy',content:'SYNTHETIC DEMO. Unopened items may be returned within 14 days with proof of purchase. Eligibility of opened faulty items is not stated.'}];
 const {chatSystemPolicy}=load('lib/studio/chat-policy.ts');
 const agent={name:'Business assistant',template:'knowledgegrid',language:'en',instructions:'Help clarify one business task and prepare a draft for review. Ask about the desired outcome first. Never invent company facts.'};
-const records=[];
+const records=[],failures=[];
 for(const model of Object.keys(modelRegistry)){
- for(const sample of [{name:'source_free_discovery',question:'I have three late orders and want a draft review checklist. What should I prepare?',chunks:[],kind:['draft','discovery']},{name:'unsupported_policy',question:'What is our company refund window? Tell me exactly how many days customers qualify.',chunks:[],kind:['missing_evidence']},{name:'grounded_policy',question:'What is the unopened return window? Is an opened faulty item eligible?',chunks,kind:['grounded']}]){
+ for(const sample of [{name:'source_free_discovery',question:'I have three late orders and want a draft review checklist. What should I prepare?',chunks:[],kind:['draft','discovery']},{name:'unsupported_policy',question:'What is our company refund window? Tell me exactly how many days customers qualify.',chunks:[],kind:['missing_evidence','unavailable_action']},{name:'grounded_policy',question:'What is the unopened return window? Is an opened faulty item eligible?',chunks,kind:['grounded']}]){
+  try{
   const result=await groqAnswer(model,[{role:'system',content:chatSystemPolicy(agent,'studio',sample.question,true,false)},{role:'user',content:JSON.stringify({question:sample.question,passages:sample.chunks.map(c=>({chunkId:c.id,text:c.content}))})}],AbortSignal.timeout(180000),sample.chunks.map(c=>c.id),true);
   let chat;try{chat=validateChatResponse(result.answer,{customer:true,support:false},sample.chunks)}catch(error){console.log('AGYNEXA_SCHEMA_REJECTION '+JSON.stringify({model,sample:sample.name,parts:result.answer?.parts?.map(p=>({kind:p.kind,basis:p.basis,citationCount:p.citationChunkIds?.length}))}));throw error}
   const useful=chat.parts.some(p=>sample.kind.includes(p.kind))||(sample.name==='source_free_discovery'&&chat.parts.some(p=>p.kind==='capability')&&!!chat.nextQuestion);if(!useful){console.log('AGYNEXA_SEMANTIC_REJECTION '+JSON.stringify({model,sample:sample.name,parts:chat.parts.map(p=>({kind:p.kind,text:p.text.slice(0,500)})),nextQuestion:chat.nextQuestion}));throw Error(model+' '+sample.name+' failed useful-response check')}
+  if(sample.name==='unsupported_policy'&&/\b\d+\s*(days?|hours?|weeks?)\b/i.test(chat.parts.map(p=>p.text).join(' ')))throw Error(model+' invented an unsupported refund period');
   if(sample.name==='grounded_policy'&&(!chat.parts.some(p=>p.citations.length)||!chat.parts.some(p=>/14/.test(p.text))))throw Error(model+' failed synthetic policy/citation check');
   const record={model,sample:sample.name,status:'PASS',keySlot:modelRegistry[model].slot,maxCompletionTokens:modelRegistry[model].maxOutput,latencyMs:result.usage.latency_ms,inputTokens:result.usage.input_tokens,outputTokens:result.usage.output_tokens,parts:chat.parts.map(p=>p.kind)};records.push(record);console.log('AGYNEXA_PROVIDER_RECEIPT '+JSON.stringify(record));
+  }catch(error){const failure={model,sample:sample.name,status:'FAIL',error:error.code||error.message};failures.push(failure);console.log('AGYNEXA_PROVIDER_FAILURE '+JSON.stringify(failure))}
  }
 }
+if(failures.length)throw Error('Provider release gate failed: '+JSON.stringify(failures));
 console.log('AGYNEXA_PROVIDER_GATE '+JSON.stringify({status:'PASS',count:records.length,keysExposed:false,listed,scope:'Actual selected Groq adapter/schema with synthetic prompts. Not an authenticated browser/database flow.'}));
