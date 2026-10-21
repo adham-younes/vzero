@@ -127,3 +127,8 @@ D-30 — طلب المالك «سيب البريد دلوقتي وكمل الش�
 ## D-32 — Customer release, 22 October 2026
 
 Owner authorizes implementation/local preparation/push/production, exactly three Sol High execution workers and continuous repository traceability. Latest instruction: each coherent completed product phase ends in production deployment/documentation; coupled schema/runtime/UI/content ship together, not unfinished internal checkboxes. Existing home/template/video unchanged. Three intended Groq slots with provider-supported maximum output; no artificial response deadline/message count. Preserve current security/abuse/hosting constraints. No domain/DNS, paid upgrades, outreach/email or destructive live cleanup. Full accepted documents and current decisions: [execution ledger](../launch/2026-10-22/EXECUTION.md), [complete plan](../launch/2026-10-22/implementation-plan.md), [newer overrides](../launch/2026-10-22/coordinator-review-addendum.md). No 90-day purge/legal identity/commercial terms invented. Status remains NOT VERIFIED until final integrated evidence.
+
+
+## D-33 — استكمال حالات القبول الناقصة فقط
+
+22 أكتوبر2026: التوجيه الأحدث يجيز تشغيل البيئة المحلية المعزولة مرة للحالات غير المنفذة، والحقن المحدد لأخطاء النقل، وعينة إنتاجية خاصة اصطناعية دون بيانات حقيقية. كشف الفحص رفضًا آمنًا لكنه غير مفيد لسؤال مختلط، وقبولfalse كغياب لثلاثة حقول اختيارية؛ يصلحان جراحيًا ثم بناء النشر وفحص المتأثر فقط. لا تكرار للـ38اختبارًا الناجحة، ولا تغيير للرئيسية أو الخطة الكاملة. [الإيصال](../launch/2026-10-22/REMAINING-ACCEPTANCE.md). تبقى بوابات الفهم والحقائق القانونية والتجارية والاحتفاظ والاستعادة بشرية؛ النطاق لا يشملDNS أوSMTP أو رسائل خارجية.

@@ -1,0 +1,22 @@
+{
+  "pull_request": "https://github.com/adham-younes/vzero/pull/35",
+  "reviewed_head": "2dae3f3ff53b2cc57a2b8940f60559988034657b",
+  "merge": "fcd6175efb0f263265d97b5df76774ee268fdac4",
+  "deployment": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
+  "state": "READY",
+  "change": "Template-specific EN/AR permissions copy only; runtime/public/home code unchanged.",
+  "next_build": "PASS",
+  "live_arabic_knowledgegrid_summary": "PASS_no_internal_requests",
+  "live_arabic_serviceflow_summary": "PASS_exact_request_requires_approval",
+  "english_literals": "SOURCE_REVIEWED_BUILD_PASS",
+  "post_deploy_health": {
+    "status": "ok",
+    "checks": {
+      "project": "ok",
+      "publishableKey": "ok",
+      "secretKey": "ok"
+    }
+  },
+  "source_delete_history_redaction": "PASS_ACTUAL_PRODUCTION_UI_ONE_EXTRA_PROVIDER_TURN",
+  "no_docs_only_followup_deployment": true
+}

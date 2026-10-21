@@ -48,7 +48,7 @@ export function visibleRun(r:Record<string,unknown>){return Object.fromEntries(p
 export async function executeRun(scope:RunScope,body:Record<string,unknown>,request:Request){
  const allowed=scope.kind==='studio'?['message','requestKey','conversationId','runId','model']:['message','requestKey','conversationId']
  if(Object.keys(body).some(key=>!allowed.includes(key)))throw new InputError('invalid_input')
- const question=field(body.message,3000),requestKey=agentId(field(body.requestKey,36)),id=body.runId?agentId(field(body.runId,36)):randomUUID(),conversation=body.conversationId?agentId(field(body.conversationId,36)):requestKey
+ const question=field(body.message,3000),requestKey=agentId(field(body.requestKey,36)),id=body.runId!==undefined?agentId(field(body.runId,36)):randomUUID(),conversation=body.conversationId!==undefined?agentId(field(body.conversationId,36)):requestKey
  const db=adminClient();await scope.assertAccess()
  await abuseLimit('global-runs',numberSetting('AGYNEXA_GLOBAL_RUNS_PER_MINUTE',100,1,100));await abuseLimit(scope.kind+':'+scope.identity,numberSetting('AGYNEXA_RUNS_PER_MINUTE',60,1,100))
  const chatScope:ChatScope={orgId:scope.agent.org_id,agentId:scope.agent.id,actorId:scope.actorId,accessKind:scope.kind,identity:scope.identity,conversationId:conversation,sourceIds:scope.sourceIds,versionId:scope.versionId,generation:scope.generation}

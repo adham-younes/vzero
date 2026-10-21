@@ -1,0 +1,95 @@
+{
+  "environment": "real isolated HTTP/Auth/DB on rebuilt corrected source; invalid optional inputs stop before model generation",
+  "checks": [
+    {
+      "name": "model rejects False",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "model rejects 0",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "model rejects None",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "model rejects ''",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "model rejects {}",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "model rejects []",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "conversationId rejects False",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "conversationId rejects 0",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "conversationId rejects None",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "conversationId rejects ''",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "conversationId rejects {}",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "conversationId rejects []",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "runId rejects False",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "runId rejects 0",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "runId rejects None",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "runId rejects ''",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "runId rejects {}",
+      "result": "PASS",
+      "httpStatus": 400
+    },
+    {
+      "name": "runId rejects []",
+      "result": "PASS",
+      "httpStatus": 400
+    }
+  ]
+}

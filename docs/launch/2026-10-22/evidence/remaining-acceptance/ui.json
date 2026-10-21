@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "environment": "real local Auth/Postgres/application; deterministic isolated provider preload; separate headless browser",
+  "checks": [
+    {
+      "name": "Controlled TimeoutError composer retained and send remains enabled; no accepted answer",
+      "status": "PASS",
+      "savedStatus": "failed",
+      "actualErrorCode": "provider_unavailable",
+      "composerRetained": true,
+      "sendEnabled": true,
+      "noAcceptedAnswer": true,
+      "modelTurns": 1,
+      "limitation": "Synthetic TimeoutError maps to generic provider failure; no real provider deadline claim."
+    }
+  ],
+  "previousExecutions": [
+    {
+      "status": "FAIL",
+      "checks": [],
+      "error": "AssertionError: Login HTTP 403 error=invalid_origin"
+    },
+    {
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "Explicit Account and Start login destinations preserved",
+          "status": "PASS",
+          "destinations": [
+            "/account",
+            "/start"
+          ]
+        }
+      ],
+      "error": "AssertionError: "
+    },
+    {
+      "status": "FAIL",
+      "checks": [],
+      "error": "AssertionError: "
+    },
+    {
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "Downloaded TXT contains reviewed fields and human acceptance criteria",
+          "status": "PASS",
+          "filename": "agynexa-project-brief.txt",
+          "utf8Bytes": 399,
+          "containsAllReviewedValues": true
+        }
+      ],
+      "error": "Error: Locator.fill: Error: strict mode violation: locator(\"input[name=email]\") resolved to 2 elements:\n    1) <input dir=\"ltr\" required=\"\" type=\"email\" name=\"email\" class=\"field\" maxlength=\"150\" id=\"brief-email\" aria-invalid=\"false\" autocomplete=\"email\" placeholder=\"you@company.com\" value=\"acceptance@example.invalid\"/> aka get_by_placeholder(\"you@company.com\")\n    2) <input dir=\"ltr\" required=\"\" type=\"email\" name=\"email\" maxlength=\"254\" data-slot=\"input\" id=\"base-ui-_r_1_\" autocomplete=\"email\" class=\"border-input file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:bg-input/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 …/> aka get_by_role(\"textbox\", name=\"Email\")\n\nCall log:\n  - waiting for locator(\"input[name=email]\")\n"
+    },
+    {
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "Mounted Start draft survives inline auth without autosave; committed-but-aborted save retries same key once",
+          "status": "PASS",
+          "mountedDraftRetained": true,
+          "automaticSaveCount": 0,
+          "explicitSaveAttempts": 2,
+          "sameRequestKey": true,
+          "persistedBriefCount": 1
+        }
+      ],
+      "error": "TimeoutError: Locator.focus: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_label(\"One task and the result you want\", exact=True)\n"
+    },
+    {
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "Builder describe/review keyboard Tab Enter Space and explicit Create",
+          "status": "PASS",
+          "keyboardControls": [
+            "Tab traversal",
+            "Enter describe/review/create",
+            "Space KnowledgeGrid"
+          ],
+          "productionModelOptionCount": 3
+        },
+        {
+          "name": "Distribution inspect/editor requires explicit private ingest; cited supplied delay, unknowns and manual action",
+          "status": "PASS",
+          "sourcePrivate": true,
+          "originalQuoteExact": true,
+          "suppliedDelayDays": 2,
+          "unknowns": [
+            "promised date",
+            "carrier update",
+            "named owner"
+          ],
+          "humanDecision": true,
+          "noContactClaim": true
+        },
+        {
+          "name": "Deliberate Compare sends one question to three distinct models/runs in one conversation; old run envelope intact",
+          "status": "PASS",
+          "requests": 3,
+          "distinctRunIds": 3,
+          "distinctConversationIds": 1,
+          "distinctModels": 3,
+          "oldRunEnvelope": true
+        },
+        {
+          "name": "Controlled provider_rate_limited preserves composer and exposes truthful failure",
+          "status": "PASS",
+          "savedStatus": "failed",
+          "composerRetained": true,
+          "noAcceptedAnswer": true
+        }
+      ],
+      "error": "AssertionError: ('failed', 'provider_unavailable')"
+    },
+    {
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "Controlled TimeoutError produces persisted generic failure without accepted answer (contract clarified)",
+          "status": "PASS",
+          "savedStatus": "failed",
+          "actualErrorCode": "provider_unavailable",
+          "additionalModelCalls": 0,
+          "limitation": "Earlier assertion stopped before checking timeout composer retention; only rate/cancel/uncertain paths verify retained composer. This marker does not exercise a real deadline."
+        },
+        {
+          "name": "Controlled in-flight Stop is requested truthfully and persists cancelled state",
+          "status": "PASS",
+          "savedStatus": "cancelled",
+          "composerRetained": true,
+          "noAcceptedAnswer": true
+        },
+        {
+          "name": "Uncertain committed response retains composer; exact retry returns one persisted run",
+          "status": "PASS",
+          "sameRequestBody": true,
+          "sameRunId": true,
+          "persistedRunCount": 1
+        }
+      ],
+      "error": null
+    }
+  ],
+  "limitations": [
+    "No live model semantic inference is claimed.",
+    "Keyboard scope is builder/review controls only, not a full accessibility audit.",
+    "Controlled transport abort occurs after the real application responds; persistence is checked through the real authenticated API."
+  ],
+  "verifiedUnion": [
+    {
+      "name": "Explicit Account and Start login destinations preserved",
+      "status": "PASS",
+      "destinations": [
+        "/account",
+        "/start"
+      ]
+    },
+    {
+      "name": "Downloaded TXT contains reviewed fields and human acceptance criteria",
+      "status": "PASS",
+      "filename": "agynexa-project-brief.txt",
+      "utf8Bytes": 399,
+      "containsAllReviewedValues": true
+    },
+    {
+      "name": "Mounted Start draft survives inline auth without autosave; committed-but-aborted save retries same key once",
+      "status": "PASS",
+      "mountedDraftRetained": true,
+      "automaticSaveCount": 0,
+      "explicitSaveAttempts": 2,
+      "sameRequestKey": true,
+      "persistedBriefCount": 1
+    },
+    {
+      "name": "Builder describe/review keyboard Tab Enter Space and explicit Create",
+      "status": "PASS",
+      "keyboardControls": [
+        "Tab traversal",
+        "Enter describe/review/create",
+        "Space KnowledgeGrid"
+      ],
+      "productionModelOptionCount": 3
+    },
+    {
+      "name": "Distribution inspect/editor requires explicit private ingest; cited supplied delay, unknowns and manual action",
+      "status": "PASS",
+      "sourcePrivate": true,
+      "originalQuoteExact": true,
+      "suppliedDelayDays": 2,
+      "unknowns": [
+        "promised date",
+        "carrier update",
+        "named owner"
+      ],
+      "humanDecision": true,
+      "noContactClaim": true
+    },
+    {
+      "name": "Deliberate Compare sends one question to three distinct models/runs in one conversation; old run envelope intact",
+      "status": "PASS",
+      "requests": 3,
+      "distinctRunIds": 3,
+      "distinctConversationIds": 1,
+      "distinctModels": 3,
+      "oldRunEnvelope": true
+    },
+    {
+      "name": "Controlled provider_rate_limited preserves composer and exposes truthful failure",
+      "status": "PASS",
+      "savedStatus": "failed",
+      "composerRetained": true,
+      "noAcceptedAnswer": true
+    },
+    {
+      "name": "Controlled TimeoutError produces persisted generic failure without accepted answer (contract clarified)",
+      "status": "PASS",
+      "savedStatus": "failed",
+      "actualErrorCode": "provider_unavailable",
+      "additionalModelCalls": 0,
+      "limitation": "Earlier assertion stopped before checking timeout composer retention; only rate/cancel/uncertain paths verify retained composer. This marker does not exercise a real deadline."
+    },
+    {
+      "name": "Controlled in-flight Stop is requested truthfully and persists cancelled state",
+      "status": "PASS",
+      "savedStatus": "cancelled",
+      "composerRetained": true,
+      "noAcceptedAnswer": true
+    },
+    {
+      "name": "Uncertain committed response retains composer; exact retry returns one persisted run",
+      "status": "PASS",
+      "sameRequestBody": true,
+      "sameRunId": true,
+      "persistedRunCount": 1
+    },
+    {
+      "name": "Controlled TimeoutError composer retained and send remains enabled; no accepted answer",
+      "status": "PASS",
+      "savedStatus": "failed",
+      "actualErrorCode": "provider_unavailable",
+      "composerRetained": true,
+      "sendEnabled": true,
+      "noAcceptedAnswer": true,
+      "modelTurns": 1,
+      "limitation": "Synthetic TimeoutError maps to generic provider failure; no real provider deadline claim."
+    }
+  ],
+  "verifiedGroupCount": 11,
+  "executionScope": "Final affected segment: exactly one controlled TimeoutError turn on the same retained synthetic local assistant; composer and send enabled, no accepted answer. Earlier green groups preserved without rerun.",
+  "resolvedGap": "Timeout-specific composer retention and enabled Send are now verified by the one affected case after rebuild. Earlier NOT VERIFIED limitation is superseded only for this UI behavior."
+}

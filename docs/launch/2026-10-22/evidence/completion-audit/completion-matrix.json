@@ -77,9 +77,9 @@
       "id": "A10",
       "requirement": "Revocation across history/replay/activity/derived output",
       "implementation": "IMPLEMENTED",
-      "coverage": "VERIFIED_LOCAL_PARTIAL_PRODUCTION",
-      "evidence": "security24–28; transitive.json; browser group6",
-      "limit": "Local DB/replay/transitive and UI redaction passed. Live source-delete stopped at JS-confirm browser focus error; source remainedready. Exact-fixture DB cleanup is NOT user-facing delete/history proof. Subsequent same-tab recovery succeeded after cleanup; no retest on a fresh fixture."
+      "coverage": "VERIFIED_LOCAL_AND_LIVE_REPRESENTATIVE",
+      "evidence": "security24–28; transitive.json; browser group6; production-revocation-e2e.json",
+      "limit": "Actual production UI deletion plus refreshed existing-history factual/citation redaction passed on the fresh minimal fixture. Local tests separately cover replay/activity/transitive/race/grant invariants. Initial tool failure remains recorded; later cleanup is not substituted for this UI proof."
     },
     {
       "id": "A11",
@@ -212,10 +212,10 @@
     {
       "id": "B3",
       "requirement": "Review permissions match selected template",
-      "implementation": "FIX_AUTHORED_AND_BUILD_PASS",
-      "coverage": "PENDING_TARGETED_DEPLOY_VERIFICATION",
-      "evidence": "studio.tsx AgentForm permissions section vs runtime.ts101",
-      "limit": "Both EN/AR review paragraphs now depend on selected template. KG explicitly excludes internal requests; SF requires explicit approval. Server authority unchanged. Targeted final deployment artifact/UI checks recorded in follow-up receipt."
+      "implementation": "FIXED_DEPLOYED",
+      "coverage": "VERIFIED_PRODUCTION",
+      "evidence": "PR35/sourcefcd6175; production-revocation-e2e.json copy branches; permissions-fix-release.json",
+      "limit": "Actual Arabic KG summary excludes internal requests; SF requires explicit approval. English literals source-reviewed/buildpassed. Server permissions unchanged."
     },
     {
       "id": "B4",
@@ -302,8 +302,8 @@
       "requirement": "Production phase deploy/documentation/rollback",
       "implementation": "IMPLEMENTED",
       "coverage": "VERIFIED",
-      "evidence": "PR33/34; final-deployment.json; RELEASE-CONTROLS.md",
-      "limit": "Current main4638222 and primaryREADY. Ordered additive migration then compatible app then grant closure. Safe rollback documented; full restore drill not performed."
+      "evidence": "PR33/34/35; permissions-fix-release.json; RELEASE-CONTROLS.md",
+      "limit": "Latest mainfcd6175 and primaryREADY dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc. Ordered migrations preserved; safe rollback documented, restore drill not performed."
     },
     {
       "id": "L1",
@@ -346,13 +346,17 @@
       "limit": "Existing URL unchanged. A domain action is not necessary to close current engineering evidence and was not authorized here."
     }
   ],
-  "recordedAt": "2026-10-22T02:22:14.498450+03:00",
+  "recordedAt": "2026-10-22T02:31:00.239289+03:00",
   "auditBaseCommit": "4638222e242aa48d6294b03bdf5e6bfc37b2f093",
   "overall": "DEPLOYED_IMPLEMENTATION_WITH_EXPLICIT_ACCEPTANCE_GAPS",
-  "newActualModelTurns": 4,
+  "newActualModelTurns": 5,
   "productionFixtureAccountsCreated": 0,
   "localStackRestarted": false,
   "broadSuitesRepeated": false,
   "workerCountTotal": 3,
-  "privilegedCleanupIsNotUserFacingDeleteEvidence": true
+  "privilegedCleanupIsNotUserFacingDeleteEvidence": true,
+  "finalProductionCommit": "fcd6175efb0f263265d97b5df76774ee268fdac4",
+  "finalDeployment": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
+  "productionUiDeleteHistoryRevocation": "PASS",
+  "completionAuditFinalReceiptPublication": "Outputs + local repository ledger + merged PR35 body; no docs-only production redeploy"
 }
