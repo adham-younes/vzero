@@ -31,7 +31,7 @@ export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'a
  if(typeof content!=='string'||data.choices?.[0]?.finish_reason!=='stop')throw new InputError('invalid_model_output',502)
  const answer=chatV2?JSON.parse(content) as RawProviderChatV2:parseAnswer(content);
  // Non-grounded schema variants have no citation field; attach the canonical empty list server-side.
- if(chatV2&&Array.isArray((answer as RawProviderChatV2).parts))for(const part of (answer as RawProviderChatV2).parts){if(part&&part.kind!=='grounded'&&!Object.hasOwn(part,'citationChunkIds'))part.citationChunkIds=[]}
+ if(chatV2&&Array.isArray((answer as RawProviderChatV2).parts))for(const part of (answer as RawProviderChatV2).parts){if(part){part.basis=part.kind==='grounded'?'approved_sources':part.kind==='capability'?'product_capabilities':'suggestion';if(part.kind!=='grounded'&&!Object.hasOwn(part,'citationChunkIds'))part.citationChunkIds=[]}}
 const input=Math.max(0,Number(data.usage?.prompt_tokens)||0),output=Math.max(0,Number(data.usage?.completion_tokens)||0);const prices=modelRegistry[model]
  return {answer,usage:{input_tokens:input,output_tokens:output,latency_ms:Date.now()-started,request_id:String(data.x_groq?.id||response.headers.get('x-request-id')||data.id||'').slice(0,160),estimated_cost_usd:(input*prices.inputPrice+output*prices.outputPrice)/1000000,pricing_date:pricingDate,pricing_source:pricingSource,key_slot:prices.slot}}
 }
@@ -44,7 +44,8 @@ export async function checkProvider(){
 }
 
 const object=(properties:Record<string,unknown>)=>({type:'object',additionalProperties:false,required:Object.keys(properties),properties})
-const partSchema=(kinds:string[],bases:string[],grounded=false)=>object({kind:{type:'string',enum:kinds},text:{type:'string'},basis:{type:'string',enum:bases},...(grounded?{citationChunkIds:{type:'array',items:{type:'string'}}}:{})})
+const partSchema=(kinds:string[],grounded=false)=>object({kind:{type:'string',enum:kinds},text:{type:'string'},...(grounded?{citationChunkIds:{type:'array',items:{type:'string'}}}:{})})
 // Only the grounded schema variant can contain citation IDs. The adapter attaches
-// [] to the other variants; server validation still checks every combination.
-const chatSchema=object({parts:{type:'array',items:{anyOf:[partSchema(['grounded'],['approved_sources'],true),partSchema(['capability'],['product_capabilities']),partSchema(['discovery','draft'],['user_supplied','suggestion']),partSchema(['missing_evidence','unavailable_action'],['suggestion','product_capabilities'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})
+// [] to other variants and derives basis from kind. Only kind discriminates the union;
+// Groq rejects a union with multiple enum discriminator candidates. Server validation remains strict.
+const chatSchema=object({parts:{type:'array',items:{anyOf:[partSchema(['grounded'],true),partSchema(['capability']),partSchema(['discovery','draft']),partSchema(['missing_evidence','unavailable_action'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})

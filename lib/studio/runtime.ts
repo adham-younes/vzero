@@ -53,9 +53,23 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
  const customer=scope.kind==='studio'&&scope.agent.chat_profile==='customer_v1'&&customerChatEnabled()
  const snapshot={...scope.agent,sourceIds:scope.sourceIds,identity:scope.identity,generation:scope.generation,keyId:scope.keyId}
  const fingerprint=hash(JSON.stringify({question,model:scope.agent.model,identity:scope.identity,version:scope.versionId,conversation}))
- const {data:start,error:startError}=await db.rpc('start_agent_run',{run:{id,org_id:scope.agent.org_id,agent_id:scope.agent.id,actor_id:scope.actorId,conversation_id:conversation,access_kind:scope.kind,request_key:requestKey,input_hash:fingerprint,snapshot,model:scope.agent.model,version_id:scope.versionId,question},concurrency_limit:numberSetting('AGYNEXA_RUN_CONCURRENCY',6,1,20)});dbError(startError)
+ let expectedHash=fingerprint
+ const startPayload={run:{id,org_id:scope.agent.org_id,agent_id:scope.agent.id,actor_id:scope.actorId,conversation_id:conversation,access_kind:scope.kind,request_key:requestKey,input_hash:expectedHash,snapshot,model:scope.agent.model,version_id:scope.versionId,question},concurrency_limit:numberSetting('AGYNEXA_RUN_CONCURRENCY',6,1,20)}
+ let started=await db.rpc('start_agent_run',startPayload)
+ // Existing clients may replay an old baseline hash that included source/revision state.
+ // Resolve only a genuine legacy collision, after exact scope/input binding; normal turns add no read.
+ if(started.error?.message?.includes('request_conflict')){
+  let lookup=db.from('agent_runs').select('*').eq('org_id',scope.agent.org_id).eq('agent_id',scope.agent.id).eq('access_kind',scope.kind).eq('request_key',requestKey).eq('conversation_id',conversation)
+  lookup=scope.actorId?lookup.eq('actor_id',scope.actorId):lookup.is('actor_id',null)
+  const {data:old,error:oldError}=await lookup.maybeSingle();dbError(oldError)
+  if(old&&old.question===question&&old.model===scope.agent.model&&old.version_id===scope.versionId&&old.snapshot?.identity===scope.identity){
+   const legacyHash=hash(JSON.stringify({question,model:old.model,identity:scope.identity,version:old.version_id,revision:old.snapshot.revision,sources:old.snapshot.sourceIds,conversation}))
+   if(old.input_hash===legacyHash){expectedHash=legacyHash;startPayload.run.input_hash=legacyHash;started=await db.rpc('start_agent_run',startPayload)}
+  }
+ }
+ dbError(started.error);const start=started.data
  if(start.existing){
-  if(start.run.actor_id!==scope.actorId||start.run.conversation_id!==conversation||start.run.input_hash!==fingerprint||start.run.snapshot?.identity!==scope.identity)throw new InputError('request_conflict',409)
+  if(start.run.actor_id!==scope.actorId||start.run.conversation_id!==conversation||start.run.input_hash!==expectedHash||start.run.snapshot?.identity!==scope.identity)throw new InputError('request_conflict',409)
   return presentRun(chatScope,start.run,scope.kind==='studio')
  }
  // The request/hosting lifecycle and explicit cancellation govern execution. No artificial response delay/deadline.

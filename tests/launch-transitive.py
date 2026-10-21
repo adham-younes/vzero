@@ -1,5 +1,5 @@
 """Affected regression for transitive source influence; real local DB/Auth, deterministic provider."""
-import json,os,http.cookiejar,urllib.request,urllib.error,uuid,subprocess
+import json,hashlib,os,http.cookiejar,urllib.request,urllib.error,uuid,subprocess
 from pathlib import Path
 BASE='http://localhost:3016';config=json.loads(Path('/tmp/agynexa-local-status.json').read_text());assert config['API_URL']=='http://127.0.0.1:54321'
 class Policy(http.cookiejar.DefaultCookiePolicy):
@@ -19,6 +19,10 @@ def run(message,key):return req(root+'/test-runs',{'message':message,'conversati
 a=source('Synthetic A','SYNTHETIC. orchidcustomcode is alpha111.');first=run('What is orchidcustomcode?',uid());assert first['status']=='succeeded'
 b=source('Synthetic B','SYNTHETIC. quartzvendorcode is beta222.');message='Please explain quartzvendorcode for a reviewer who needs the exact supplied value alongside unknown information before making any decisions.';key=uid();second=run(message,key);assert second['status']=='succeeded'
 row=json.loads(sql(f"select snapshot->'chat_v2'->'sourceDependencies' from public.agent_runs where id='{second['id']}'"));deps={x['sourceId'] for x in row};assert a in deps and b in deps,deps
+stored=json.loads(sql(f"select to_jsonb(r) from public.agent_runs r where id='{second['id']}'"))
+legacy=hashlib.sha256(json.dumps({'question':message,'model':stored['model'],'identity':stored['snapshot']['identity'],'version':stored['version_id'],'revision':stored['snapshot']['revision'],'sources':stored['snapshot']['sourceIds'],'conversation':conversation},separators=(',',':')).encode()).hexdigest()
+sql(f"update public.agent_runs set input_hash='{legacy}' where id='{second['id']}'")
+legacy_replay=run(message,key);assert legacy_replay['id']==second['id']
 req(root+'/sources/'+a,{},'DELETE');replay=run(message,key);assert replay['historyState']=='knowledge_changed' and not replay['citations'] and not replay.get('chat'),replay
-out={'status':'PASS','environment':'Real isolated DB/Auth/runtime; deterministic model boundary fixture','checks':['Current B-only lexical retrieval with complete prior A turn persists both source dependencies','Source A removal invalidates the derived B response/replay even without a visible A citation','No generated chat/citations exposed after transitive revocation']}
+out={'status':'PASS','environment':'Real isolated DB/Auth/runtime; deterministic model boundary fixture','checks':['Current B-only lexical retrieval with complete prior A turn persists both source dependencies','Source A removal invalidates the derived B response/replay even without a visible A citation','No generated chat/citations exposed after transitive revocation','Legacy baseline request hash replays under exact actor/conversation/input binding, then reauthorizes revoked content']}
 Path('docs/launch/2026-10-22/evidence/transitive.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out))
