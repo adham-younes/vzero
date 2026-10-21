@@ -2,6 +2,8 @@
 // Uses the actual provider adapter and server-held keys. No secret output or public endpoint.
 import fs from 'node:fs';import path from 'node:path';import Module,{createRequire} from 'node:module';import ts from 'typescript';
 if(process.env.AGYNEXA_RELEASE_VERIFY!=='true'){console.log('Provider release verification not requested for this build.');process.exit(0)}
+const originalFetch=globalThis.fetch;
+globalThis.fetch=async(input,init)=>{const response=await originalFetch(input,init);if(String(input).startsWith('https://api.groq.com/')&&!response.ok){try{const error=(await response.clone().json()).error;console.log('AGYNEXA_PROVIDER_ERROR '+JSON.stringify({http:response.status,type:error?.type,code:error?.code,message:String(error?.message||'').replace(/gsk_[A-Za-z0-9_-]+/g,'[REDACTED_SECRET]').slice(0,1200)}))}catch{}}return response};
 const require=createRequire(import.meta.url),cache=new Map();
 function load(file){file=path.resolve(file);if(cache.has(file))return cache.get(file);const m=new Module(file);m.paths=Module._nodeModulePaths(process.cwd());m.require=name=>{if(name==='server-only')return {};if(name.startsWith('@/'))return load(path.resolve(name.slice(2)+'.ts'));if(name.startsWith('.'))return load(path.resolve(path.dirname(file),name+'.ts'));return require(name)};m._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,file);cache.set(file,m.exports);return m.exports}
 const {groqAnswer,checkProvider}=load('lib/studio/provider.ts'),{modelRegistry}=load('lib/studio/models.ts'),{validateChatResponse}=load('lib/studio/chat-contract.ts');
