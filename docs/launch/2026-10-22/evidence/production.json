@@ -1,0 +1,146 @@
+{
+  "verified_at": "2026-10-21T23:00:37.004990+00:00",
+  "source_commit": "e48dc748feeae3511b76bb679ec30b0a1b0c8729",
+  "deployment": "dpl_CEFfHq2ur8D9HmiHf92iD8vrkzFa",
+  "url": "https://vzero-nine-beryl.vercel.app",
+  "public": [
+    {
+      "path": "/privacy",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/privacy",
+      "title": "Privacy information for the current service | AGYNEXA",
+      "lang": "en"
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/terms",
+      "title": "Current service scope and usage terms | AGYNEXA",
+      "lang": "en"
+    },
+    {
+      "path": "/ar/privacy",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/ar/privacy",
+      "title": "معلومات الخصوصية للخدمة الحالية | AGYNEXA",
+      "lang": "ar"
+    },
+    {
+      "path": "/ar/terms",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/ar/terms",
+      "title": "نطاق الخدمة الحالية وشروط استخدامها | AGYNEXA",
+      "lang": "ar"
+    },
+    {
+      "path": "/services/customer-service",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/services/customer-service",
+      "title": "Answer repeat customer questions with approved guidance | AGYNEXA",
+      "lang": "en"
+    },
+    {
+      "path": "/ar/industries",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/ar/industries",
+      "title": "أمثلة لمساعدة الذكاء الاصطناعي في مهام العمل اليومية | AGYNEXA",
+      "lang": "ar"
+    },
+    {
+      "path": "/studio",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/studio",
+      "title": "AGYNEXA — Agent Studio | AGYNEXA",
+      "lang": "en"
+    },
+    {
+      "path": "/ar/studio",
+      "status": 200,
+      "final_url": "https://vzero-nine-beryl.vercel.app/ar/studio",
+      "title": "AGYNEXA — Agent Studio | AGYNEXA",
+      "lang": "ar"
+    }
+  ],
+  "health": {
+    "path": "/api/health/supabase",
+    "status": 200,
+    "final_url": "https://vzero-nine-beryl.vercel.app/api/health/supabase",
+    "body": {
+      "status": "ok",
+      "checks": {
+        "project": "ok",
+        "publishableKey": "ok",
+        "secretKey": "ok"
+      }
+    }
+  },
+  "unauthenticated_guards": [
+    {
+      "path": "/api/v1/agents",
+      "status": 401,
+      "final_url": "https://vzero-nine-beryl.vercel.app/api/v1/agents",
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/v1/workspace/chat",
+      "status": 401,
+      "final_url": "https://vzero-nine-beryl.vercel.app/api/v1/workspace/chat",
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/v1/agents/00000000-0000-4000-8000-000000000001/conversations",
+      "status": 401,
+      "final_url": "https://vzero-nine-beryl.vercel.app/api/v1/agents/00000000-0000-4000-8000-000000000001/conversations",
+      "body": {
+        "error": "sign_in_required"
+      }
+    }
+  ],
+  "home": {
+    "comparisons": [
+      {
+        "ar": false,
+        "width": 390,
+        "equal": true,
+        "differentFields": []
+      },
+      {
+        "ar": false,
+        "width": 768,
+        "equal": true,
+        "differentFields": []
+      },
+      {
+        "ar": false,
+        "width": 1440,
+        "equal": true,
+        "differentFields": []
+      },
+      {
+        "ar": true,
+        "width": 390,
+        "equal": true,
+        "differentFields": []
+      },
+      {
+        "ar": true,
+        "width": 768,
+        "equal": true,
+        "differentFields": []
+      },
+      {
+        "ar": true,
+        "width": 1440,
+        "equal": true,
+        "differentFields": []
+      }
+    ],
+    "pageErrors": []
+  },
+  "production_authenticated_browser": "NOT_VERIFIED_NO_AUTHORIZED_SESSION",
+  "production_customer_fixtures_created": false
+}
