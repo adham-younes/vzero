@@ -448,7 +448,7 @@
     },
     "remaining_acceptance_continuation": {
       "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
-      "status": "BUILD_SOURCE_REVIEW_AND_FOCUSED_LOCAL_GAPS_PASS_AWAIT_PRODUCTION",
+      "status": "PR36_DEPLOYED_BUSINESS_SAFETY_PASS_SPECIFIC_MISSING_GUIDANCE_REFINEMENT_PENDING",
       "findings": [
         "Mixed business/private-extraction reply preserved secrecy but omitted useful business help",
         "Optional false model/conversationId/runId treated as absent"
@@ -463,6 +463,14 @@
         "affected_input_pass": 18,
         "ui_verified_groups": 11,
         "broad_green_suites_repeated": false
+      },
+      "product_pr": "https://github.com/adham-younes/vzero/pull/36",
+      "merge_commit": "f45c83609f919b25f7d59255c5abb430d96d827a",
+      "production_deployment": "dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS",
+      "next_step_contract": {
+        "scope": "missing_evidence part must explain useful source or human action; nextQuestion remains nullable",
+        "automatic_fallback": "REJECTED_BEFORE_COMMIT_NOT_DEPLOYED",
+        "production": "PENDING_AFFECTED_ONLY_CHECK"
       }
     }
   }

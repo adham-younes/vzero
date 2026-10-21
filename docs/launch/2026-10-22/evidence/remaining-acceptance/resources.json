@@ -1,0 +1,12 @@
+{
+  "environment": "dedicated isolated local acceptance stack",
+  "nextServer": "STOPPED",
+  "allFourComposeContainers": "STOPPED",
+  "colimaProfile": "agynexa-release",
+  "profileStatus": "NOT_RUNNING",
+  "memoryGiB": 2,
+  "cpu": 2,
+  "defaultDockerContext": "retained",
+  "volumes": "retained local synthetic only",
+  "productionUnchangedByLocalCleanup": true
+}

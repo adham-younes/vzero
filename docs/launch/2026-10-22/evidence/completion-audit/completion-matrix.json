@@ -21,17 +21,17 @@
       "id": "A3",
       "requirement": "Concurrent bootstrap, collision and input guards",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "security checks4,6,8; customer-entry.ts",
-      "limit": "Ten concurrent requests and malicious origin/unknown fields passed; reserved-key collision and every locale branch lack a named current execution receipt."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "security4/6/8 + remaining-acceptance/http.json",
+      "limit": "Reserved profile/template collisions and invalid locale types reject; valid Arabic existing-bootstrap preserves identity/language. Representative cases, not all possible race schedules."
     },
     {
       "id": "A4",
       "requirement": "Localized auth intent and safe return URLs",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "account-ui.tsx safeAuthReturn; browser group1",
-      "limit": "Default login/local draft save passed; full external/scheme-relative return and explicit Account/Start auth-intent browser matrix not recorded."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "remaining-acceptance/pure.json and ui.json verifiedUnion",
+      "limit": "Unsafe/external/scheme-relative/backslash/encoded returns reject; actual Account/Start auth intent and mounted draft/no autosave pass. No new production account/recovery claim."
     },
     {
       "id": "A5",
@@ -109,33 +109,33 @@
       "id": "A14",
       "requirement": "Exact replay identity/idempotency",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "security19–21; transitive legacy replay; runtime fingerprint",
-      "limit": "Changed-input409/legacy binding passed. Full same-key actor/access-kind collision execution matrix is not recorded."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "security19–21; legacy replay; remaining-acceptance/http.json and ui.json",
+      "limit": "Same key binds actor/conversation; different access-kind gets distinct run. Ambiguous committed browser response exact retry persists one run."
     },
     {
       "id": "A15",
       "requirement": "Limits, timeout/429/cancel and error preservation",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "security14; provider-contract.cjs; output-capacity.cjs; UI errors",
-      "limit": "UTF8/citation/invalid-generation/auth-fault/long-byte bounds covered. All listed invalid types and actual429/deadline/composer retry interactions lack current combined evidence."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "remaining-acceptance/pure.json,http.json,input-after-fix.json,ui.json; output-capacity.cjs",
+      "limit": "Three optional-input defects fixed;18 affected input cases pass. Controlled429/TimeoutError/cancel/uncertain response preserve text/no accepted failed answer. Synthetic transport; no real outage, wall-clock host deadline or paid maximum-generation claim."
     },
     {
       "id": "A16",
       "requirement": "Exact internal approval and expiry",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "browser group5; security20–25; atomic studio_mutate",
-      "limit": "Exact decision-only approval, substitution/foreign denial and revoked-source expiry passed. Natural15-minute expiry/reject/duplicate-click branches not all recorded."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "security20–25; browser5; remaining-acceptance/http.json",
+      "limit": "Real decision transaction: controlled expiry,rejected/approved same-decision duplicate/conflicting decision. Expiry advanced only on isolated synthetic row; no15-minute wait or external sending."
     },
     {
       "id": "A17",
       "requirement": "Consent/private-save/manual export handoff",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "browser group2; project-brief.tsx; account-ui.tsx downloadBrief",
-      "limit": "Explicit private save/consent verified. Download controls/source exist; no saved-download file-content receipt or complete failure/retry matrix."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "remaining-acceptance/ui.json verifiedUnion",
+      "limit": "Actual UTF8 TXT bytes contain every reviewed field. Mounted inline auth no autosave; response aborted after real brief commit then same key retries to exactly one brief. Manual email not sent."
     },
     {
       "id": "A18",
@@ -149,17 +149,17 @@
       "id": "A19",
       "requirement": "Two synthetic demonstrations",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "demo-examples.ts; browser group4; content ledger",
-      "limit": "Retail source/citations/unknown sample executed locally. Distribution pack is present/within bounds; no equivalent full saved-source walkthrough receipt."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "browser4 retail; remaining-acceptance/ui.json distribution",
+      "limit": "Distribution inspect→explicit private ingestion→original cited D104 two-day supplied delay; promised date/carrier/named owner unknown and manual decision. Deterministic local provider, no business integration."
     },
     {
       "id": "A20",
       "requirement": "Buyer comprehension and EN/AR factual parity",
       "implementation": "IMPLEMENTED_COPY",
-      "coverage": "INCOMPLETE",
-      "evidence": "CONTENT-LEDGER.md comprehension script; copy8 groups; supporting BetterDesign review",
-      "limit": "No owner/recruited consenting reader answered the five questions across representative surfaces. Automated structure/model review cannot close this acceptance gate."
+      "coverage": "INCOMPLETE_HUMAN_REVIEW_PREPARED",
+      "evidence": "CONTENT-LEDGER.md; HUMAN-COMPREHENSION-REVIEW.md",
+      "limit": "Six bilingual real surface groups/30 blank answer fields prepared. NOT_YET_REVIEWED_BY_HUMAN. Automated structure/model review cannot close this gate."
     },
     {
       "id": "A21",
@@ -182,16 +182,16 @@
       "requirement": "Real isolated compatible environment/resources",
       "implementation": "IMPLEMENTED",
       "coverage": "VERIFIED",
-      "evidence": "environment.json; security38; cleanup.json",
-      "limit": "Real PostgreSQL17.11/Auth/PostgREST/Kong,2CPU/2GiB, noOOM; stopped. Deterministic provider boundary was explicit."
+      "evidence": "environment/security38; remaining-acceptance local build/HTTP/UI; resource receipt",
+      "limit": "Minimal real isolated stack restarted once for explicitly authorized missing cases, then all4containers/Next/dedicated VM stopped. Retained volumes are local synthetic fixtures; no running2GiB guest."
     },
     {
       "id": "A24",
       "requirement": "Existing envelope/strict agents/Compare compatibility",
       "implementation": "IMPLEMENTED",
-      "coverage": "PARTIAL",
-      "evidence": "legacy replay regression; parseAnswer/output tests; widget check; source review",
-      "limit": "Legacy {run}/strict policies preserved. Full Compare UI and published API compatibility were not freshly exercised as complete workflows."
+      "coverage": "VERIFIED_FOCUSED_LOCAL",
+      "evidence": "legacy replay; remaining-acceptance/http.json and ui.json",
+      "limit": "Explicit Compare executes3distinctmodels/IDs in one conversation; published strict API keeps existing{run} and immutable version/no customer chat metadata. Local synthetic publication/key revoked/unpublished; no new production key."
     },
     {
       "id": "B1",
@@ -302,8 +302,8 @@
       "requirement": "Production phase deploy/documentation/rollback",
       "implementation": "IMPLEMENTED",
       "coverage": "VERIFIED",
-      "evidence": "PR33/34/35; permissions-fix-release.json; RELEASE-CONTROLS.md",
-      "limit": "Latest mainfcd6175 and primaryREADY dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc. Ordered migrations preserved; safe rollback documented, restore drill not performed."
+      "evidence": "PR33/35/36; remaining-acceptance build and deployment receipt",
+      "limit": "PR36 reviewed5efed4f mergedf45c836; primary production READY dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS and health200/all3ok. Compatible migrations/grants retained; no docs-only deployment."
     },
     {
       "id": "L1",
@@ -358,5 +358,11 @@
   "finalProductionCommit": "fcd6175efb0f263265d97b5df76774ee268fdac4",
   "finalDeployment": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
   "productionUiDeleteHistoryRevocation": "PASS",
-  "completionAuditFinalReceiptPublication": "Outputs + local repository ledger + merged PR35 body; no docs-only production redeploy"
+  "completionAuditFinalReceiptPublication": "Outputs + local repository ledger + merged PR35 body; no docs-only production redeploy",
+  "continuation": {
+    "product_pr": "https://github.com/adham-younes/vzero/pull/36",
+    "merge": "f45c83609f919b25f7d59255c5abb430d96d827a",
+    "production": "dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS",
+    "semantic_affected_rerun": "PENDING"
+  }
 }

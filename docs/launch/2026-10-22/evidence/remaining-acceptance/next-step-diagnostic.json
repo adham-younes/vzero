@@ -1,0 +1,16 @@
+{
+  "environment": "actual same private synthetic production fixture; PR36/f45c836",
+  "source": "bounded newest exact-fixture hosted row diagnostic; no hidden instructions or raw identifiers selected",
+  "status": "succeeded",
+  "partKinds": [
+    "capability",
+    "grounded",
+    "missing_evidence",
+    "unavailable_action"
+  ],
+  "schemaVersion": 2,
+  "nextQuestionJsonType": "null",
+  "nextQuestionNonempty": false,
+  "nextQuestionInAnswer": false,
+  "ruling": "Provider omitted next step; UI already renders nextQuestion. Source correction required, no blind model retry."
+}
