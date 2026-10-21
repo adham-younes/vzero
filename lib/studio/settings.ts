@@ -20,5 +20,5 @@ export type Template = keyof typeof templates
 export type Agent = {
  id:string; org_id:string; name:string; template:Template; instructions:string;
  language:'ar'|'en'; model:typeof modelIds[number]; revision:number;
- created_at:string; updated_at:string;
+ chat_profile?:'grounded_v1'|'customer_v1'; created_at:string; updated_at:string;
 }

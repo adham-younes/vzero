@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "environment": "Real isolated DB/Auth/runtime; deterministic model boundary fixture",
+  "checks": [
+    "Current B-only lexical retrieval with complete prior A turn persists both source dependencies",
+    "Source A removal invalidates the derived B response/replay even without a visible A citation",
+    "No generated chat/citations exposed after transitive revocation",
+    "Legacy baseline request hash replays under exact actor/conversation/input binding, then reauthorizes revoked content"
+  ]
+}

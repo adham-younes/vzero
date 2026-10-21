@@ -1,0 +1,9 @@
+const assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),ts=require('typescript'),Module=require('module');const cache={};function load(file){file=path.resolve(file);if(cache[file])return cache[file];const m=new Module(file);m.paths=module.paths;m.require=name=>name==='server-only'?{}:name.startsWith('@/')?load(name.slice(2)+'.ts'):name.startsWith('.')?load(path.resolve(path.dirname(file),name+'.ts')):require(name);m._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,file);return cache[file]=m.exports}
+const {validateChatResponse}=load('lib/studio/chat-contract.ts'),{parseAnswer}=load('lib/studio/provider.ts'),{outputFits,assertOutputCapacity,fitResponseItems,responseBudgetBytes}=load('lib/studio/output-capacity.ts');
+const long='A'.repeat(100000),support={propose:false,title:'',details:''};
+assert.equal(parseAnswer(JSON.stringify({answerable:true,answer:long,citations:[],support})).answer.length,100000);
+const chat=validateChatResponse({parts:[{kind:'draft',text:long,basis:'suggestion',citationChunkIds:[]}],nextQuestion:null,briefDraft:null,support},{customer:true,support:false},[]);
+assert.equal(chat.parts[0].text.length,100000);assertOutputCapacity({run:{answer:long,chat}});
+assert.equal(outputFits({text:'س'.repeat(responseBudgetBytes)}),false);assert.throws(()=>assertOutputCapacity({text:'A'.repeat(responseBudgetBytes)}),e=>e.code==='response_too_large');
+const items=[{id:1,answer:'A'.repeat(1500000)},{id:2,answer:'B'.repeat(1500000)},{id:3,answer:'C'.repeat(1500000)}],page=fitResponseItems(items,{nextCursor:null},'runs');assert.equal(page.items.length,2);assert.equal(page.truncated,true);assert.deepEqual(page.items.map(x=>x.id),[1,2]);
+console.log('Long legacy/v2 answers beyond 12000 accepted; UTF8 envelope and paginated history transport boundary PASS')

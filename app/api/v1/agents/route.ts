@@ -1,5 +1,6 @@
 import {readMutation,InputError} from '@/lib/account-validation'
 import {json,failure} from '@/lib/supabase/server'
+import {customerChatEnabled} from '@/lib/studio/chat-contract'
 import {agentSettings} from '@/lib/studio/validation'
 import {studioSession,ownerWorkspace,agentFields} from '@/lib/studio/server'
 export const runtime='nodejs'
@@ -13,6 +14,7 @@ export async function GET(){try{
 }catch(error){return failure(error)}}
 export async function POST(request:Request){try{
  const body=agentSettings(await readMutation(request),true)
+ if('chat_profile' in body&&!customerChatEnabled())throw new InputError('customer_chat_unavailable',503)
  const session=await studioSession();const workspace=await ownerWorkspace(session)
  if(!workspace)throw new InputError('workspace_required',409)
  const {data,error}=await session.client.from('agents').insert({...body,org_id:workspace.id,created_by:session.user.id}).select(agentFields).single()

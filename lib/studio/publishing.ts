@@ -16,7 +16,6 @@ export async function publishedScope(id:string,request:Request,widget=false):Pro
  else{const {data,error}=await db.from('agent_api_keys').select('id,agent_id,revoked_at,expires_at').eq('token_hash',token).eq('agent_id',id).maybeSingle();dbError(error);if(!data||data.revoked_at||Date.parse(data.expires_at)<=Date.now())throw new InputError('invalid_credentials',401);keyId=data.id}
  const {data:p,error:pe}=await db.from('agent_publications').select('*').eq('agent_id',id).eq('active',true).maybeSingle();dbError(pe);if(!p||widget&&(!p.widget_enabled||p.generation!==expectedGeneration))throw new InputError('not_published',404)
  const {data:v,error:ve}=await db.from('agent_versions').select('*').eq('id',p.version_id).eq('org_id',p.org_id).eq('agent_id',id).single();dbError(ve)
- if(v.settings.model==='qwen/qwen3.8-27b')throw new InputError('evaluation_model_only',403)
  const assertAccess=async()=>{
   const {data:current,error}=await db.from('agent_publications').select('active,generation,widget_enabled').eq('agent_id',id).single();dbError(error);if(!current||!current.active||current.generation!==p.generation||widget&&!current.widget_enabled)throw new InputError('not_published',404)
   if(keyId){const {data:k,error:e}=await db.from('agent_api_keys').select('revoked_at,expires_at').eq('id',keyId).single();dbError(e);if(!k||k.revoked_at||Date.parse(k.expires_at)<=Date.now())throw new InputError('invalid_credentials',401)}

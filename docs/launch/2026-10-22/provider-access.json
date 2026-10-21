@@ -1,0 +1,153 @@
+{
+  "environment": "Nonaliased production-target Vercel build using actual server-held sensitive keys",
+  "releaseCommit": "ee09a87a9ca22adbecb0f6d770283d6c0dc3b549",
+  "gate": {
+    "status": "PASS",
+    "count": 9,
+    "keysExposed": false,
+    "listed": [
+      {
+        "model": "openai/gpt-oss-120b",
+        "status": "listed",
+        "http": 200
+      },
+      {
+        "model": "openai/gpt-oss-20b",
+        "status": "listed",
+        "http": 200
+      },
+      {
+        "model": "qwen/qwen3.8-27b",
+        "status": "listed",
+        "http": 200
+      }
+    ],
+    "scope": "Actual selected Groq adapter/schema with synthetic prompts. Not an authenticated browser/database flow."
+  },
+  "records": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "sample": "source_free_discovery",
+      "status": "PASS",
+      "keySlot": 1,
+      "maxCompletionTokens": 65536,
+      "latencyMs": 517,
+      "inputTokens": 946,
+      "outputTokens": 190,
+      "parts": [
+        "discovery"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "sample": "unsupported_policy",
+      "status": "PASS",
+      "keySlot": 1,
+      "maxCompletionTokens": 65536,
+      "latencyMs": 380,
+      "inputTokens": 944,
+      "outputTokens": 129,
+      "parts": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "sample": "grounded_policy",
+      "status": "PASS",
+      "keySlot": 1,
+      "maxCompletionTokens": 65536,
+      "latencyMs": 537,
+      "inputTokens": 1092,
+      "outputTokens": 202,
+      "parts": [
+        "grounded",
+        "missing_evidence"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sample": "source_free_discovery",
+      "status": "PASS",
+      "keySlot": 2,
+      "maxCompletionTokens": 65536,
+      "latencyMs": 406,
+      "inputTokens": 946,
+      "outputTokens": 221,
+      "parts": [
+        "draft"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sample": "unsupported_policy",
+      "status": "PASS",
+      "keySlot": 2,
+      "maxCompletionTokens": 65536,
+      "latencyMs": 231,
+      "inputTokens": 944,
+      "outputTokens": 107,
+      "parts": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sample": "grounded_policy",
+      "status": "PASS",
+      "keySlot": 2,
+      "maxCompletionTokens": 65536,
+      "latencyMs": 348,
+      "inputTokens": 1092,
+      "outputTokens": 162,
+      "parts": [
+        "grounded",
+        "missing_evidence"
+      ]
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "sample": "source_free_discovery",
+      "status": "PASS",
+      "keySlot": 3,
+      "maxCompletionTokens": 16384,
+      "latencyMs": 567,
+      "inputTokens": 650,
+      "outputTokens": 105,
+      "parts": [
+        "discovery"
+      ]
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "sample": "unsupported_policy",
+      "status": "PASS",
+      "keySlot": 3,
+      "maxCompletionTokens": 16384,
+      "latencyMs": 413,
+      "inputTokens": 648,
+      "outputTokens": 108,
+      "parts": [
+        "missing_evidence"
+      ]
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "sample": "grounded_policy",
+      "status": "PASS",
+      "keySlot": 3,
+      "maxCompletionTokens": 16384,
+      "latencyMs": 598,
+      "inputTokens": 718,
+      "outputTokens": 202,
+      "parts": [
+        "missing_evidence",
+        "grounded"
+      ]
+    }
+  ],
+  "limitations": [
+    "Tiny synthetic policy samples, not all future semantic cases or a customer browser/database flow.",
+    "Provider latency only; not full request latency, capacity guarantee or SLA."
+  ]
+}

@@ -4,7 +4,7 @@ Synthetic secrets and Docker files are written outside the repository.
 """
 import base64, hashlib, hmac, json, os, secrets, subprocess, time
 from pathlib import Path
-ROOT=Path('/tmp/agynexa-studio-stack');ROOT.mkdir(mode=0o700,exist_ok=True)
+ROOT=Path(os.environ.get('AGYNEXA_LOCAL_STACK_DIR','/tmp/agynexa-studio-stack'));ROOT.mkdir(mode=0o700,exist_ok=True)
 if (ROOT/'compose.yml').exists(): raise SystemExit('Local stack already configured; use docker compose -f /tmp/agynexa-studio-stack/compose.yml up -d')
 secret=secrets.token_hex(32);password=secrets.token_hex(24)
 def enc(value):return base64.urlsafe_b64encode(json.dumps(value,separators=(',',':')).encode()).decode().rstrip('=')

@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AGYNEXA implemented HTTP API",
-    "version": "2026-10-20",
-    "description": "34 implemented HTTP operations: site, accounts, briefs and Studio runtime. Authentication differs by operation. Production and verification limits: agent-studio/STAGES-CDE.md, CHAT-FIX.md and API-UI-REMOVAL.md. Removing private API controls from Studio did not change server endpoints. Stage-3 proposed APIs remain separate."
+    "version": "2026-10-22-candidate",
+    "description": "38 implemented operations including private customer bootstrap and actor-scoped conversations. Candidate evidence and deployment status: docs/launch/2026-10-22/EXECUTION.md. Private save/approval is not external delivery."
   },
   "servers": [
     {
@@ -2827,6 +2827,230 @@
           }
         }
       }
+    },
+    "/api/v1/workspace/chat": {
+      "post": {
+        "operationId": "ensureCustomerAssistant",
+        "summary": "Open a distinct customer assistant",
+        "description": "Only {locale:en|ar}; authenticated same-origin mutation. Atomic workspace bootstrap plus reserved idempotent agent creation. Does not overwrite personal agents or add sources/publication. Returns {workspace,agent}. Feature-off503.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "IMPLEMENTED_PENDING_PRODUCTION_VERIFICATION",
+        "responses": {
+          "200": {
+            "description": "Scoped successful operation; see launch API-CHANGES for envelope"
+          },
+          "400": {
+            "description": "Invalid input/cursor"
+          },
+          "401": {
+            "description": "Active owner session required"
+          },
+          "404": {
+            "description": "Protected resource not found"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locale"
+                ],
+                "properties": {
+                  "locale": {
+                    "type": "string",
+                    "enum": [
+                      "en",
+                      "ar"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/conversations": {
+      "get": {
+        "operationId": "listPrivateConversations",
+        "summary": "List actor-scoped private conversations",
+        "description": "Exact org/actor/agent/studio binding; at most50 summaries with opaque keyset cursor. Title from first user question max80. {conversations,nextCursor}.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "IMPLEMENTED_PENDING_PRODUCTION_VERIFICATION",
+        "responses": {
+          "200": {
+            "description": "Scoped successful operation; see launch API-CHANGES for envelope"
+          },
+          "400": {
+            "description": "Invalid input/cursor"
+          },
+          "401": {
+            "description": "Active owner session required"
+          },
+          "404": {
+            "description": "Protected resource not found"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "agentId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 512
+            },
+            "description": "Opaque bounded keyset cursor from preceding page."
+          }
+        ]
+      }
+    },
+    "/api/v1/agents/{agentId}/conversations/{conversationId}": {
+      "get": {
+        "operationId": "readPrivateConversation",
+        "summary": "Read source-authorized private turns",
+        "description": "At most30 chronological runs/page via before cursor. Entire generated payload redacted when original dependencies revoked/expired. Private optional chat/historyState. No snapshots.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "IMPLEMENTED_PENDING_PRODUCTION_VERIFICATION",
+        "responses": {
+          "200": {
+            "description": "Scoped successful operation; see launch API-CHANGES for envelope"
+          },
+          "400": {
+            "description": "Invalid input/cursor"
+          },
+          "401": {
+            "description": "Active owner session required"
+          },
+          "404": {
+            "description": "Protected resource not found"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "agentId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "conversationId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "query",
+            "name": "before",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 512
+            },
+            "description": "Opaque bounded keyset cursor from preceding page."
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletePrivateConversation",
+        "summary": "Delete one private conversation after review",
+        "description": "Only {}; active authenticated actor/org/agent/studio tuple derived by transaction. Deletes dependent internal proposals, not knowledge/publications/independent briefs. Returns {deleted:boolean}.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "IMPLEMENTED_PENDING_PRODUCTION_VERIFICATION",
+        "responses": {
+          "200": {
+            "description": "Scoped successful operation; see launch API-CHANGES for envelope"
+          },
+          "400": {
+            "description": "Invalid input/cursor"
+          },
+          "401": {
+            "description": "Active owner session required"
+          },
+          "404": {
+            "description": "Protected resource not found"
+          },
+          "503": {
+            "description": "Unavailable"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "agentId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "in": "path",
+            "name": "conversationId",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "maxProperties": 0
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3107,6 +3331,11 @@
               "knowledgegrid",
               "serviceflow"
             ]
+          },
+          "builder": {
+            "type": "boolean",
+            "const": true,
+            "description": "Optional authenticated builder creation; server maps customer_v1 only when feature enabled. No caller profile authority."
           }
         }
       },
@@ -3216,6 +3445,14 @@
           "updated_at": {
             "type": "string",
             "format": "date-time"
+          },
+          "chat_profile": {
+            "type": "string",
+            "enum": [
+              "grounded_v1",
+              "customer_v1"
+            ],
+            "readOnly": true
           }
         }
       }

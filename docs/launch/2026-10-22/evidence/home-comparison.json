@@ -1,0 +1,38 @@
+[
+  {
+    "ar": false,
+    "width": 390,
+    "equal": true,
+    "differentFields": []
+  },
+  {
+    "ar": false,
+    "width": 768,
+    "equal": true,
+    "differentFields": []
+  },
+  {
+    "ar": false,
+    "width": 1440,
+    "equal": true,
+    "differentFields": []
+  },
+  {
+    "ar": true,
+    "width": 390,
+    "equal": true,
+    "differentFields": []
+  },
+  {
+    "ar": true,
+    "width": 768,
+    "equal": true,
+    "differentFields": []
+  },
+  {
+    "ar": true,
+    "width": 1440,
+    "equal": true,
+    "differentFields": []
+  }
+]

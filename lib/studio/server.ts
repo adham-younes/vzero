@@ -1,7 +1,7 @@
 import 'server-only'
 import {signedIn} from '@/lib/supabase/server'
 import {InputError} from '@/lib/account-validation'
-export const agentFields='id,org_id,name,template,instructions,language,model,revision,created_at,updated_at'
+export const agentFields='id,org_id,name,template,instructions,language,model,revision,chat_profile,created_at,updated_at'
 export function studioEnabled(){return process.env.AGYNEXA_STUDIO_ENABLED!=='false'}
 export async function studioSession(){
  if(!studioEnabled())throw new InputError('studio_unavailable',503)

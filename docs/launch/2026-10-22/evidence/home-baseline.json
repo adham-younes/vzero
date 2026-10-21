@@ -1,0 +1,284 @@
+[
+  {
+    "ar": false,
+    "width": 390,
+    "text": "Skip to content\nAGYNEXA\n.\nAR\n\nENGINEERED INTELLIGENCE. HUMAN CONTROL.\n\nIntelligence, engineered.\nBuilt for your business.\n\nYour knowledge. Your workflows. One connected agent system. Designed with clear permissions, human oversight and a purpose.\n\nEngineer your next system\nExplore the architecture\nAI agents\nEnterprise RAG\nWorkflow automation\nHuman oversight\n\nSTART WITH ONE WORKFLOW\n\nLess manual preparation. A clearer review.\n\nFor teams handling documents, repeated questions and business requests: we define the task, connect approved information and prepare an output your team can review. Scope and success criteria are agreed before implementation.\n\nSee a working example\nDiscuss your workflow\nConnect your knowledge, tools and decisions.\n\nAGYNEXA designs and develops enterprise agent systems that connect knowledge, tools and decisions, with explicit permissions and acceptance criteria.\n\nEnterprise RAG\n\nAnswers grounded in approved sources.\n\nWorkflow automation\n\nDefined steps, exceptions and ownership.\n\nPermission-aware agents\n\nHuman approval before consequential actions.\n\nExplore the architecture\nAGYNEXA / System design\nKnowledge\nBusiness tools\nPolicies\nAgent system\nDEFINED PERMISSIONS\nHuman review\nEvidence & output\nArchitecture illustration · Connections are defined for each engagement.\nFrom a business problem to a working system.\nAll services\nCustomer service automation\n\nWe design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.\n\nScope & deliverables\nEmployee assistance\n\nGive employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.\n\nScope & deliverables\nProcurement, invoices & receivables\n\nWe design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.\n\nScope & deliverables\nEnterprise knowledge & search\n\nWe build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.\n\nScope & deliverables\nWhat is missing before a purchase can be reviewed?\n\nCompare supplier quotes, reveal missing warranty terms and check the available budget. The reviewer receives the evidence and the next question to resolve.\n\nExplore a procurement example\nPurchase review\nIllustrative example\nRequested items\n12 workstations\nWarranty term missing\n\nOne supplier quote needs clarification before comparison.\n\nRequest the missing evidence, then pass the comparison to the authorized reviewer.\n\nEvery step has an owner.\nOur delivery methodology\n\nKnowledge\n\nApproved sources and access rules.\n\nReasoning\n\nA task with bounded tools.\n\nHuman review\n\nThe right person reviews the action.\n\nApproved output\n\nA result with supporting evidence.\n\nIllustrative workflow. The controls are implemented within each project’s scope.\n\nWhich task should we work on first?\n\nStart with the task, your systems and the result your team needs.\n\nBuild a project brief\nAGYNEXA\n.\n\nAgent systems with a clear purpose and evidence behind their decisions.\n\nadham@agynexa.si\nSolutions\nServices\nArchitecture\nMethodology\nIntegrations\nIndustries\nResources\nAbout\nSecurity\nAgentNexOS\n\nEnterprise agent solutions, designed and implemented around your operating requirements.\n\n© 2026 AGYNEXA",
+    "lang": "en",
+    "dir": "ltr",
+    "overflow": false,
+    "video": [
+      {
+        "src": "/videos/background.mp4",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": false
+      }
+    ],
+    "styles": [
+      {
+        "tag": "BODY",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "HEADER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "H1",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "35.1px"
+      },
+      {
+        "tag": "FOOTER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "ar": false,
+    "width": 768,
+    "text": "Skip to content\nAGYNEXA\n.\nAR\nAccount\nStart a project\n\nENGINEERED INTELLIGENCE. HUMAN CONTROL.\n\nIntelligence, engineered.\nBuilt for your business.\n\nYour knowledge. Your workflows. One connected agent system. Designed with clear permissions, human oversight and a purpose.\n\nEngineer your next system\nExplore the architecture\nAI agents\nEnterprise RAG\nWorkflow automation\nHuman oversight\n\nSTART WITH ONE WORKFLOW\n\nLess manual preparation. A clearer review.\n\nFor teams handling documents, repeated questions and business requests: we define the task, connect approved information and prepare an output your team can review. Scope and success criteria are agreed before implementation.\n\nSee a working example\nDiscuss your workflow\nConnect your knowledge, tools and decisions.\n\nAGYNEXA designs and develops enterprise agent systems that connect knowledge, tools and decisions, with explicit permissions and acceptance criteria.\n\nEnterprise RAG\n\nAnswers grounded in approved sources.\n\nWorkflow automation\n\nDefined steps, exceptions and ownership.\n\nPermission-aware agents\n\nHuman approval before consequential actions.\n\nExplore the architecture\nAGYNEXA / System design\nKnowledge\nBusiness tools\nPolicies\nAgent system\nDEFINED PERMISSIONS\nHuman review\nEvidence & output\nArchitecture illustration · Connections are defined for each engagement.\nFrom a business problem to a working system.\nAll services\nCustomer service automation\n\nWe design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.\n\nScope & deliverables\nEmployee assistance\n\nGive employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.\n\nScope & deliverables\nProcurement, invoices & receivables\n\nWe design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.\n\nScope & deliverables\nEnterprise knowledge & search\n\nWe build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.\n\nScope & deliverables\nWhat is missing before a purchase can be reviewed?\n\nCompare supplier quotes, reveal missing warranty terms and check the available budget. The reviewer receives the evidence and the next question to resolve.\n\nExplore a procurement example\nPurchase review\nIllustrative example\nRequested items\n12 workstations\nWarranty term missing\n\nOne supplier quote needs clarification before comparison.\n\nRequest the missing evidence, then pass the comparison to the authorized reviewer.\n\nEvery step has an owner.\nOur delivery methodology\n\nKnowledge\n\nApproved sources and access rules.\n\nReasoning\n\nA task with bounded tools.\n\nHuman review\n\nThe right person reviews the action.\n\nApproved output\n\nA result with supporting evidence.\n\nIllustrative workflow. The controls are implemented within each project’s scope.\n\nWhich task should we work on first?\n\nStart with the task, your systems and the result your team needs.\n\nBuild a project brief\nAGYNEXA\n.\n\nAgent systems with a clear purpose and evidence behind their decisions.\n\nadham@agynexa.si\nSolutions\nServices\nArchitecture\nMethodology\nIntegrations\nIndustries\nResources\nAbout\nSecurity\nAgentNexOS\n\nEnterprise agent solutions, designed and implemented around your operating requirements.\n\n© 2026 AGYNEXA",
+    "lang": "en",
+    "dir": "ltr",
+    "overflow": false,
+    "video": [
+      {
+        "src": "/videos/background.mp4",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": false
+      }
+    ],
+    "styles": [
+      {
+        "tag": "BODY",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "HEADER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "H1",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "39.936px"
+      },
+      {
+        "tag": "FOOTER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "ar": false,
+    "width": 1440,
+    "text": "Skip to content\nAGYNEXA\n.\nSolutions\nServices\nArchitecture\nMethodology\nIntegrations\nAR\nAccount\nStart a project\n\nENGINEERED INTELLIGENCE. HUMAN CONTROL.\n\nIntelligence, engineered.\nBuilt for your business.\n\nYour knowledge. Your workflows. One connected agent system. Designed with clear permissions, human oversight and a purpose.\n\nEngineer your next system\nExplore the architecture\nAI agents\nEnterprise RAG\nWorkflow automation\nHuman oversight\n\nSTART WITH ONE WORKFLOW\n\nLess manual preparation. A clearer review.\n\nFor teams handling documents, repeated questions and business requests: we define the task, connect approved information and prepare an output your team can review. Scope and success criteria are agreed before implementation.\n\nSee a working example\nDiscuss your workflow\nConnect your knowledge, tools and decisions.\n\nAGYNEXA designs and develops enterprise agent systems that connect knowledge, tools and decisions, with explicit permissions and acceptance criteria.\n\nEnterprise RAG\n\nAnswers grounded in approved sources.\n\nWorkflow automation\n\nDefined steps, exceptions and ownership.\n\nPermission-aware agents\n\nHuman approval before consequential actions.\n\nExplore the architecture\nAGYNEXA / System design\nKnowledge\nBusiness tools\nPolicies\nAgent system\nDEFINED PERMISSIONS\nHuman review\nEvidence & output\nArchitecture illustration · Connections are defined for each engagement.\nFrom a business problem to a working system.\nAll services\nCustomer service automation\n\nWe design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.\n\nScope & deliverables\nEmployee assistance\n\nGive employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.\n\nScope & deliverables\nProcurement, invoices & receivables\n\nWe design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.\n\nScope & deliverables\nEnterprise knowledge & search\n\nWe build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.\n\nScope & deliverables\nWhat is missing before a purchase can be reviewed?\n\nCompare supplier quotes, reveal missing warranty terms and check the available budget. The reviewer receives the evidence and the next question to resolve.\n\nExplore a procurement example\nPurchase review\nIllustrative example\nRequested items\n12 workstations\nWarranty term missing\n\nOne supplier quote needs clarification before comparison.\n\nRequest the missing evidence, then pass the comparison to the authorized reviewer.\n\nEvery step has an owner.\nOur delivery methodology\n\nKnowledge\n\nApproved sources and access rules.\n\nReasoning\n\nA task with bounded tools.\n\nHuman review\n\nThe right person reviews the action.\n\nApproved output\n\nA result with supporting evidence.\n\nIllustrative workflow. The controls are implemented within each project’s scope.\n\nWhich task should we work on first?\n\nStart with the task, your systems and the result your team needs.\n\nBuild a project brief\nAGYNEXA\n.\n\nAgent systems with a clear purpose and evidence behind their decisions.\n\nadham@agynexa.si\nSolutions\nServices\nArchitecture\nMethodology\nIntegrations\nIndustries\nResources\nAbout\nSecurity\nAgentNexOS\n\nEnterprise agent solutions, designed and implemented around your operating requirements.\n\n© 2026 AGYNEXA",
+    "lang": "en",
+    "dir": "ltr",
+    "overflow": false,
+    "video": [
+      {
+        "src": "/videos/background.mp4",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": false
+      }
+    ],
+    "styles": [
+      {
+        "tag": "BODY",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "HEADER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "H1",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "72px"
+      },
+      {
+        "tag": "FOOTER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Arial, Helvetica, sans-serif",
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "ar": true,
+    "width": 390,
+    "text": "تجاوز إلى المحتوى\nAGYNEXA\n.\nEN\n\nذكاء مُهندَس. وتحكّم بشري.\n\nذكاءٌ مُهندَس.\nمصمّم لأعمالك.\n\nمعرفتك. سير عملك. نظام وكلاء مترابط. نصمّمه بصلاحيات واضحة وإشراف بشري وهدف محدّد.\n\nصمّم نظامك القادم\nاستكشف البنية\nوكلاء الذكاء الاصطناعي\nالمعرفة المؤسسية\nأتمتة سير العمل\nإشراف بشري\n\nابدأ بمسار عمل واحد\n\nتجهيز يدوي أقل. ومراجعة أوضح.\n\nللفرق التي تتعامل مع المستندات والأسئلة المتكررة وطلبات العمل: نحدّد المهمة، ونربط المعلومات المعتمدة، ونجهّز مخرجًا يراجعه فريقك. نتفق على النطاق ومعايير النجاح قبل التنفيذ.\n\nشاهد مثالًا يعمل\nناقش مسار عملك\nاربط معرفتك وأدواتك وقراراتك.\n\nتصمّم AGYNEXA وتطوّر أنظمة وكلاء للمؤسسات تربط المعرفة والأدوات والقرارات بصلاحيات ومعايير قبول واضحة.\n\nاسترجاع معرفي مؤسسي\n\nإجابات تستند إلى مصادر معتمدة.\n\nأتمتة سير العمل\n\nخطوات واستثناءات ومسؤوليات محددة.\n\nوكلاء بصلاحيات محددة\n\nاعتماد بشري قبل الإجراءات المؤثرة.\n\nاكتشف البنية\nAGYNEXA / تصميم النظام\nالمعرفة\nأدوات العمل\nالسياسات\nنظام الوكلاء\nصلاحيات محددة\nمراجعة بشرية\nالدليل والنتيجة\nرسم توضيحي للبنية · تُحدّد الاتصالات بحسب نطاق كل مشروع.\nمن مشكلة عمل إلى نظام يؤدي المهمة.\nكل الخدمات\nأتمتة خدمة العملاء\n\nنصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة.\n\nالنطاق والمخرجات\nمساعدة الموظفين\n\nنطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم.\n\nالنطاق والمخرجات\nالمشتريات والفواتير والتحصيل\n\nنصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل.\n\nالنطاق والمخرجات\nالمعرفة المؤسسية والبحث\n\nنبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها.\n\nالنطاق والمخرجات\nما الذي ينقص طلب الشراء قبل مراجعته؟\n\nقارن عروض الموردين، واكشف شروط الضمان الناقصة، وراجع الميزانية المتاحة. يحصل المسؤول على الأدلة والسؤال المطلوب حسمه.\n\nاستكشف مثال المشتريات\nمراجعة طلب شراء\nمثال توضيحي\nالأصناف المطلوبة\n12 جهاز عمل\nمدة الضمان غير مذكورة\n\nأحد عروض الموردين يحتاج استكمالًا قبل المقارنة.\n\nاطلب الدليل الناقص، ثم أحل المقارنة إلى المسؤول المخوّل.\n\nلكل خطوة مسؤول.\nمنهجية التنفيذ\n\nالمعرفة\n\nمصادر معتمدة وقواعد وصول.\n\nالاستدلال\n\nمهمة بأدوات محددة الصلاحيات.\n\nمراجعة بشرية\n\nالمسؤول المخوّل يراجع الإجراء.\n\nمخرج معتمد\n\nنتيجة بأدلة يمكن الرجوع إليها.\n\nمسار توضيحي؛ تُنفّذ ضوابطه ضمن نطاق كل مشروع.\n\nما المهمة التي نبدأ بها؟\n\nابدأ بالمهمة وأنظمتك والنتيجة التي يحتاجها فريقك.\n\nأنشئ موجز المشروع\nAGYNEXA\n.\n\nأنظمة وكلاء لهدف واضح وقرارات تستند إلى الأدلة.\n\nadham@agynexa.si\nالحلول\nالخدمات\nالهندسة\nالمنهجية\nالتكاملات\nالقطاعات\nالموارد\nمن نحن\nالأمان\nAgentNexOS\n\nحلول وكلاء للمؤسسات، نصمّمها وننفّذها بحسب متطلبات عملك.\n\n© 2026 AGYNEXA",
+    "lang": "ar",
+    "dir": "rtl",
+    "overflow": false,
+    "video": [
+      {
+        "src": "/videos/background.mp4",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": false
+      }
+    ],
+    "styles": [
+      {
+        "tag": "BODY",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "HEADER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "H1",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "35.1px"
+      },
+      {
+        "tag": "FOOTER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "ar": true,
+    "width": 768,
+    "text": "تجاوز إلى المحتوى\nAGYNEXA\n.\nEN\nحسابي\nابدأ مشروعًا\n\nذكاء مُهندَس. وتحكّم بشري.\n\nذكاءٌ مُهندَس.\nمصمّم لأعمالك.\n\nمعرفتك. سير عملك. نظام وكلاء مترابط. نصمّمه بصلاحيات واضحة وإشراف بشري وهدف محدّد.\n\nصمّم نظامك القادم\nاستكشف البنية\nوكلاء الذكاء الاصطناعي\nالمعرفة المؤسسية\nأتمتة سير العمل\nإشراف بشري\n\nابدأ بمسار عمل واحد\n\nتجهيز يدوي أقل. ومراجعة أوضح.\n\nللفرق التي تتعامل مع المستندات والأسئلة المتكررة وطلبات العمل: نحدّد المهمة، ونربط المعلومات المعتمدة، ونجهّز مخرجًا يراجعه فريقك. نتفق على النطاق ومعايير النجاح قبل التنفيذ.\n\nشاهد مثالًا يعمل\nناقش مسار عملك\nاربط معرفتك وأدواتك وقراراتك.\n\nتصمّم AGYNEXA وتطوّر أنظمة وكلاء للمؤسسات تربط المعرفة والأدوات والقرارات بصلاحيات ومعايير قبول واضحة.\n\nاسترجاع معرفي مؤسسي\n\nإجابات تستند إلى مصادر معتمدة.\n\nأتمتة سير العمل\n\nخطوات واستثناءات ومسؤوليات محددة.\n\nوكلاء بصلاحيات محددة\n\nاعتماد بشري قبل الإجراءات المؤثرة.\n\nاكتشف البنية\nAGYNEXA / تصميم النظام\nالمعرفة\nأدوات العمل\nالسياسات\nنظام الوكلاء\nصلاحيات محددة\nمراجعة بشرية\nالدليل والنتيجة\nرسم توضيحي للبنية · تُحدّد الاتصالات بحسب نطاق كل مشروع.\nمن مشكلة عمل إلى نظام يؤدي المهمة.\nكل الخدمات\nأتمتة خدمة العملاء\n\nنصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة.\n\nالنطاق والمخرجات\nمساعدة الموظفين\n\nنطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم.\n\nالنطاق والمخرجات\nالمشتريات والفواتير والتحصيل\n\nنصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل.\n\nالنطاق والمخرجات\nالمعرفة المؤسسية والبحث\n\nنبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها.\n\nالنطاق والمخرجات\nما الذي ينقص طلب الشراء قبل مراجعته؟\n\nقارن عروض الموردين، واكشف شروط الضمان الناقصة، وراجع الميزانية المتاحة. يحصل المسؤول على الأدلة والسؤال المطلوب حسمه.\n\nاستكشف مثال المشتريات\nمراجعة طلب شراء\nمثال توضيحي\nالأصناف المطلوبة\n12 جهاز عمل\nمدة الضمان غير مذكورة\n\nأحد عروض الموردين يحتاج استكمالًا قبل المقارنة.\n\nاطلب الدليل الناقص، ثم أحل المقارنة إلى المسؤول المخوّل.\n\nلكل خطوة مسؤول.\nمنهجية التنفيذ\n\nالمعرفة\n\nمصادر معتمدة وقواعد وصول.\n\nالاستدلال\n\nمهمة بأدوات محددة الصلاحيات.\n\nمراجعة بشرية\n\nالمسؤول المخوّل يراجع الإجراء.\n\nمخرج معتمد\n\nنتيجة بأدلة يمكن الرجوع إليها.\n\nمسار توضيحي؛ تُنفّذ ضوابطه ضمن نطاق كل مشروع.\n\nما المهمة التي نبدأ بها؟\n\nابدأ بالمهمة وأنظمتك والنتيجة التي يحتاجها فريقك.\n\nأنشئ موجز المشروع\nAGYNEXA\n.\n\nأنظمة وكلاء لهدف واضح وقرارات تستند إلى الأدلة.\n\nadham@agynexa.si\nالحلول\nالخدمات\nالهندسة\nالمنهجية\nالتكاملات\nالقطاعات\nالموارد\nمن نحن\nالأمان\nAgentNexOS\n\nحلول وكلاء للمؤسسات، نصمّمها وننفّذها بحسب متطلبات عملك.\n\n© 2026 AGYNEXA",
+    "lang": "ar",
+    "dir": "rtl",
+    "overflow": false,
+    "video": [
+      {
+        "src": "/videos/background.mp4",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": false
+      }
+    ],
+    "styles": [
+      {
+        "tag": "BODY",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "HEADER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "H1",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "39.936px"
+      },
+      {
+        "tag": "FOOTER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "ar": true,
+    "width": 1440,
+    "text": "تجاوز إلى المحتوى\nAGYNEXA\n.\nالحلول\nالخدمات\nالهندسة\nالمنهجية\nالتكاملات\nEN\nحسابي\nابدأ مشروعًا\n\nذكاء مُهندَس. وتحكّم بشري.\n\nذكاءٌ مُهندَس.\nمصمّم لأعمالك.\n\nمعرفتك. سير عملك. نظام وكلاء مترابط. نصمّمه بصلاحيات واضحة وإشراف بشري وهدف محدّد.\n\nصمّم نظامك القادم\nاستكشف البنية\nوكلاء الذكاء الاصطناعي\nالمعرفة المؤسسية\nأتمتة سير العمل\nإشراف بشري\n\nابدأ بمسار عمل واحد\n\nتجهيز يدوي أقل. ومراجعة أوضح.\n\nللفرق التي تتعامل مع المستندات والأسئلة المتكررة وطلبات العمل: نحدّد المهمة، ونربط المعلومات المعتمدة، ونجهّز مخرجًا يراجعه فريقك. نتفق على النطاق ومعايير النجاح قبل التنفيذ.\n\nشاهد مثالًا يعمل\nناقش مسار عملك\nاربط معرفتك وأدواتك وقراراتك.\n\nتصمّم AGYNEXA وتطوّر أنظمة وكلاء للمؤسسات تربط المعرفة والأدوات والقرارات بصلاحيات ومعايير قبول واضحة.\n\nاسترجاع معرفي مؤسسي\n\nإجابات تستند إلى مصادر معتمدة.\n\nأتمتة سير العمل\n\nخطوات واستثناءات ومسؤوليات محددة.\n\nوكلاء بصلاحيات محددة\n\nاعتماد بشري قبل الإجراءات المؤثرة.\n\nاكتشف البنية\nAGYNEXA / تصميم النظام\nالمعرفة\nأدوات العمل\nالسياسات\nنظام الوكلاء\nصلاحيات محددة\nمراجعة بشرية\nالدليل والنتيجة\nرسم توضيحي للبنية · تُحدّد الاتصالات بحسب نطاق كل مشروع.\nمن مشكلة عمل إلى نظام يؤدي المهمة.\nكل الخدمات\nأتمتة خدمة العملاء\n\nنصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة.\n\nالنطاق والمخرجات\nمساعدة الموظفين\n\nنطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم.\n\nالنطاق والمخرجات\nالمشتريات والفواتير والتحصيل\n\nنصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل.\n\nالنطاق والمخرجات\nالمعرفة المؤسسية والبحث\n\nنبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها.\n\nالنطاق والمخرجات\nما الذي ينقص طلب الشراء قبل مراجعته؟\n\nقارن عروض الموردين، واكشف شروط الضمان الناقصة، وراجع الميزانية المتاحة. يحصل المسؤول على الأدلة والسؤال المطلوب حسمه.\n\nاستكشف مثال المشتريات\nمراجعة طلب شراء\nمثال توضيحي\nالأصناف المطلوبة\n12 جهاز عمل\nمدة الضمان غير مذكورة\n\nأحد عروض الموردين يحتاج استكمالًا قبل المقارنة.\n\nاطلب الدليل الناقص، ثم أحل المقارنة إلى المسؤول المخوّل.\n\nلكل خطوة مسؤول.\nمنهجية التنفيذ\n\nالمعرفة\n\nمصادر معتمدة وقواعد وصول.\n\nالاستدلال\n\nمهمة بأدوات محددة الصلاحيات.\n\nمراجعة بشرية\n\nالمسؤول المخوّل يراجع الإجراء.\n\nمخرج معتمد\n\nنتيجة بأدلة يمكن الرجوع إليها.\n\nمسار توضيحي؛ تُنفّذ ضوابطه ضمن نطاق كل مشروع.\n\nما المهمة التي نبدأ بها؟\n\nابدأ بالمهمة وأنظمتك والنتيجة التي يحتاجها فريقك.\n\nأنشئ موجز المشروع\nAGYNEXA\n.\n\nأنظمة وكلاء لهدف واضح وقرارات تستند إلى الأدلة.\n\nadham@agynexa.si\nالحلول\nالخدمات\nالهندسة\nالمنهجية\nالتكاملات\nالقطاعات\nالموارد\nمن نحن\nالأمان\nAgentNexOS\n\nحلول وكلاء للمؤسسات، نصمّمها وننفّذها بحسب متطلبات عملك.\n\n© 2026 AGYNEXA",
+    "lang": "ar",
+    "dir": "rtl",
+    "overflow": false,
+    "video": [
+      {
+        "src": "/videos/background.mp4",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": false
+      }
+    ],
+    "styles": [
+      {
+        "tag": "BODY",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "HEADER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgb(5, 5, 5)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      },
+      {
+        "tag": "H1",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "72px"
+      },
+      {
+        "tag": "FOOTER",
+        "color": "rgb(235, 235, 235)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Almarai, \"Almarai Fallback\", sans-serif",
+        "size": "16px"
+      }
+    ]
+  }
+]

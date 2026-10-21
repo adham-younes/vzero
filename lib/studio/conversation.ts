@@ -22,3 +22,19 @@ export function missingKnowledgeReply(question:string,language:'ar'|'en',hasSour
  if(!hasSources)return ar?(owner?'لم تُضف مصادر معرفة لهذا الوكيل بعد. افتح «المعرفة» وأضف نصًا أو ملفًا، ثم اسألني عنه. يمكنك الآن سؤالي عن نفسي وكيف أساعدك.':'لا توجد معرفة متاحة للإجابة حاليًا. تواصل مع مسؤول هذا المساعد لإضافة المعلومات المطلوبة.'):(owner?'This agent has no knowledge sources yet. Open Knowledge, add text or a file, then ask me about it. You can already ask who I am and how I can help.':'There is no knowledge available to answer this yet. Please contact the assistant owner to add the needed information.')
  return ar?'لم أجد في المصادر المضافة معلومات تكفي للإجابة. جرّب سؤالًا أكثر تحديدًا أو أضف مصدرًا يتناول الموضوع.':'I could not find enough information in the added sources to answer. Try a more specific question or add a source covering this topic.'
 }
+
+export function normalizeSearch(text:string){return text.normalize('NFKC').toLowerCase().replace(/([\p{Script=Arabic}])([a-z0-9])/gu,'$1 $2').replace(/([a-z0-9])([\p{Script=Arabic}])/gu,'$1 $2')}
+function tokens(text:string){return [...new Set(normalizeSearch(text).match(/[\p{L}\p{N}]{2,}/gu)||[])]}
+export type RetrievalQuery={query:string;historyQuery:string;continuation:boolean}
+export function buildRetrievalQuery(message:string,turns:{userText:string}[]):RetrievalQuery{
+ const current=tokens(message).slice(0,16)
+ const continuation=current.length<=12||/previous|earlier|repeat|explain|السابق|السابقة|كرر|وضح|القائمة|ده|دي/i.test(message)
+ const history=continuation?turns.slice(-2).flatMap(t=>tokens(t.userText).slice(0,8)):[]
+ const query=(values:string[])=>[...new Set(values)].map(t=>'"'+t+'"').join(' OR ')
+ return {query:query(current),historyQuery:query(history),continuation}
+}
+export function boundTurns<T extends {userText:string;assistantParts:{text:string}[]}>(turns:T[]):T[]{
+ const result=turns.slice(-6);let size=()=>result.reduce((n,t)=>n+t.userText.length+t.assistantParts.reduce((n,p)=>n+p.text.length,0),0)
+ while(result.length&&size()>18000)result.shift()
+ return result
+}
