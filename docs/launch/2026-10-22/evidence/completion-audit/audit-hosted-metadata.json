@@ -1,0 +1,28 @@
+{
+  "profileVerifiedBeforeCleanup": {
+    "template": "knowledgegrid",
+    "chat_profile": "customer_v1",
+    "model": "openai/gpt-oss-20b",
+    "runCount": 3,
+    "versionCount": 0
+  },
+  "cleanup": {
+    "status": "PASS",
+    "method": "Guarded exact-new-agent transaction; exact ID/name/template/profile/model/creation timestamp and no versions/keys/publication; cascades only that newly created assistant's descendants.",
+    "removedNewAgents": 1,
+    "removedSyntheticSources": 1,
+    "removedSyntheticChunks": 1,
+    "removedSyntheticKnowledgeGridRuns": 3,
+    "removedExactInitialSyntheticIntakeRuns": 1,
+    "remainingNewAgentRows": 0,
+    "remainingOwnSources": 0,
+    "remainingOwnChunks": 0,
+    "remainingOwnRuns": 0,
+    "remainingOwnProposals": 0,
+    "preexistingAgentsDeleted": false,
+    "userFacingSourceDeleteProven": false,
+    "postDeleteHistoryRevocationProven": false,
+    "exactIdentifiersKeptPrivate": true
+  },
+  "scope": "Hosted metadata and cleanup only; not a substitute for a user-facing source-delete/history test."
+}

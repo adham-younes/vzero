@@ -1,0 +1,141 @@
+{
+  "recordedAt": "2026-10-21T23:19:59.291379+00:00",
+  "scope": "One authorized new private production KnowledgeGrid fixture using the existing dedicated signed-in audit tab only.",
+  "environment": "Actual deployed production customer runtime and live Fast response path; no deterministic local fixture.",
+  "result": "PARTIAL PASS — creation, source-free chat, private ingestion, original citations and follow-up verified; source deletion/history revocation blocked by browser control.",
+  "surface": {
+    "tabId": "1780152269",
+    "site": "https://vzero-nine-beryl.vercel.app/ar/studio",
+    "signedInAlready": true,
+    "loginOrCredentialAction": false
+  },
+  "fixture": {
+    "name": "AGYNEXA verification 20261022 KG",
+    "template": "KnowledgeGrid",
+    "creation": "PASS — explicit review then Create; real saved ID and settings destination observed",
+    "privateIdentityFile": "work/production-fixture-ids.json (mode600, raw IDs excluded here)",
+    "profileUiVisibility": "not exposed as a raw profile field in UI",
+    "leadIndependentMetadata": {
+      "template": "knowledgegrid",
+      "chat_profile": "customer_v1",
+      "model": "openai/gpt-oss-20b",
+      "runCount": 3,
+      "versionCount": 0,
+      "basis": "Lead reported an exact-ID hosted metadata read; this is not an additional browser-derived observation."
+    }
+  },
+  "model": {
+    "selectedUiLabel": "سريع / Fast",
+    "knownMapping": "openai/gpt-oss-20b",
+    "compareEnabled": false,
+    "providerTurns": 3,
+    "maximumAuthorizedTurns": 4,
+    "diagnosticExtraTurnUsed": false
+  },
+  "checks": [
+    {
+      "name": "Builder review and private creation",
+      "status": "PASS",
+      "evidence": "production-kg-review.png",
+      "detail": "Reviewed exact requested name, KnowledgeGrid selected, Fast selected, task/instructions/permission summary; submitted Create once; success showed distinct actual saved ID/settings URL, privately recorded."
+    },
+    {
+      "name": "Source-free customer conversation on newly built KnowledgeGrid",
+      "status": "PASS",
+      "evidence": "production-kg-source-free.png",
+      "detail": "Completed typed discovery/suggestion requested retail issue, applicable policy clauses, figures, dates, exceptions and desired outcome. Examples were presented as possible inputs, not asserted company policy. No file/upload prerequisite."
+    },
+    {
+      "name": "Explicit private synthetic text source",
+      "status": "PASS",
+      "evidence": "production-kg-private-source-review.png",
+      "title": "SYNTHETIC AGYNEXA verification policy 20261022",
+      "content": "SYNTHETIC VERIFICATION ONLY. Unopened calibration widgets may be returned within 17 days with proof of purchase. Eligibility for opened items is not stated.",
+      "utf8Bytes": 156,
+      "publicApproval": false,
+      "detail": "Explicit Add source; source count became1 and source row was labeled Private. No publication."
+    },
+    {
+      "name": "Cited answer and original excerpt",
+      "status": "PASS",
+      "evidence": "production-kg-cited-answer.png",
+      "observedAnswer": [
+        "Unopened calibration widgets may be returned within 17 days with proof of purchase.",
+        "Eligibility for opened items is not stated in the policy."
+      ],
+      "detail": "Source-excerpt disclosure opened the exact source title and original156-byte synthetic text."
+    },
+    {
+      "name": "Short contextual follow-up",
+      "status": "PASS",
+      "evidence": "production-kg-followup.png",
+      "question": "Repeat that return window and tell me what remains unknown.",
+      "observedAnswer": [
+        "Unopened calibration widgets may be returned within 17 days with proof of purchase.",
+        "It is unknown whether opened calibration widgets are eligible for return."
+      ],
+      "detail": "Grounded return window retained a source excerpt control; opened-item gap was labeled information still needed."
+    },
+    {
+      "name": "Delete only the disposable verification source",
+      "status": "NOT VERIFIED",
+      "detail": "Clicked the sole source deletion control and reached the exact app JavaScript confirm. Acceptance attempt failed on browser focus infrastructure. Lead exact-fixture database check confirms source still ready, private, with1chunk: deletion did not complete. No repeated delete submitted."
+    },
+    {
+      "name": "Post-delete refresh/history revocation",
+      "status": "NOT VERIFIED",
+      "detail": "Browser unavailable at confirmation/focus layer; no claim of successful source revocation or failed product revocation is supported."
+    },
+    {
+      "name": "Exact fixture cleanup",
+      "status": "PASS — LEAD EXACT DATABASE CLEANUP",
+      "detail": "Lead guarded exact-fixture transaction removed the1new KnowledgeGrid and verified0 agent/source/chunk/run/proposal descendants. No source-delete retry or new fixture by browser worker. This is cleanup evidence only, not UI deletion/revocation proof."
+    }
+  ],
+  "browserBlocker": {
+    "firstFailure": "Timed out after10000ms waiting for CDP command Emulation.setFocusEmulationEnabled during the confirmation/observation call.",
+    "subsequentObservation": "One fresh accessibility check hit the same timeout.",
+    "documentedAlternative": "Read browser troubleshooting guidance, then tried the same-tab documented DOM snapshot once; it hit the same focus command timeout after3000ms.",
+    "ruling": "Stop browser interactions; do not infer delete success, repeat deletion, switch tabs/global UI, restart tools/stack or substitute local evidence.",
+    "lastKnownDialogState": "The app JavaScript confirm was visibly open with the source-delete warning. The acceptance call failed at the browser focus command; dismissal/acceptance was not confirmed. Lead later verified the source remains ready, so the intended delete was not completed. Current native-dialog state is unknown; no further observation or input attempted.",
+    "nonFocusReadAvailability": "No working nonfocus API established: both accessibility observation and documented same-tab DOM snapshot failed on the focus-emulation command. No further retry or native/global fallback was attempted.",
+    "recoveryNote": "The earlier confirmation/focus blockage is historical. A later single authorized same-tab reacquisition succeeded after lead cleanup; no delete was accepted/retried. This recovery does not retrospectively verify UI deletion or source revocation."
+  },
+  "copyIssue": {
+    "status": "CONFIRMED IN REVIEW UI",
+    "issue": "KnowledgeGrid review uses the unconditional generic permissions line including internal request proposals.",
+    "visibleArabic": "محادثة خاصة ونصوص تضيفها صراحةً ومسودات ومقترحات طلبات داخلية. الوصول العام متوقف حتى نشر مستقل. التعليمات لا تمنح أدوات أو صلاحيات وصول.",
+    "serverBoundary": "Lead source analysis confirms internal request proposals are ServiceFlow-only. No privilege bypass demonstrated; no proposal was requested or created in this audit.",
+    "evidence": "production-kg-review.png"
+  },
+  "limits": [
+    "Not a general model-quality or performance benchmark.",
+    "Exactly one new private KnowledgeGrid and one tiny synthetic private source were created; three ordinary live turns only.",
+    "No accounts, API keys, publication, emails, internal proposals or project briefs were created.",
+    "No preexisting customer agents, sources or histories were edited; no personal data inspected.",
+    "No application, repository, configuration or deployment changes made by this worker during this production audit.",
+    "Public receipt excludes org/actor IDs and object UUIDs. Exact fixture IDs/settings URL are private in work/production-fixture-ids.json."
+  ],
+  "leadPostBlockerExactFixtureCheck": {
+    "sourceStatus": "ready",
+    "publicApproved": false,
+    "chunkCount": 1,
+    "succeededRunCount": 3,
+    "basis": "Lead exact-new-agent database check after browser blocker; no UUIDs/account data reproduced.",
+    "conclusion": "The source deletion did not complete. Source-delete and production UI history revocation remain NOT VERIFIED due the confirmation/focus infrastructure blocker, not an established application failure."
+  },
+  "fixtureCleanup": {
+    "status": "PASS — lead exact-fixture database cleanup",
+    "basis": "Lead reported the guarded transaction checked exact new ID/name/template/profile/model/creation time, no versions, keys or publication; removed only the1new KnowledgeGrid and verified0 agent/source/chunk/run/proposal descendants.",
+    "workerDatabaseMutation": false,
+    "importantBoundary": "Database cleanup does not verify UI source deletion or history revocation; both remain NOT VERIFIED in this production trace."
+  },
+  "browserRecovery": {
+    "status": "PASS",
+    "method": "One explicitly authorized supported cua.getTab reacquisition of the same dedicated Chrome tab1780152269.",
+    "observedState": "The existing default Studio conversation and enabled composer were visible. No source-confirm dialog was visible, so no cancellation or navigation was needed.",
+    "actions": "No new chat/model call, fixture, delete, login, credentials, globalUI or stack/tool restart.",
+    "privacy": "No new screenshot or transcript of the current default conversation; owner-added content was not further inspected or recorded.",
+    "next": "Await lead pending-deploy READY signal for one nonpersistent KnowledgeGrid versus ServiceFlow builder permission-copy observation. No Create."
+  }
+}
