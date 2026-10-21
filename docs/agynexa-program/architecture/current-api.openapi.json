@@ -2855,6 +2855,29 @@
           "503": {
             "description": "Unavailable"
           }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locale"
+                ],
+                "properties": {
+                  "locale": {
+                    "type": "string",
+                    "enum": [
+                      "en",
+                      "ar"
+                    ]
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -2895,6 +2918,16 @@
               "type": "string",
               "format": "uuid"
             }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 512
+            },
+            "description": "Opaque bounded keyset cursor from preceding page."
           }
         ]
       }
@@ -2945,6 +2978,16 @@
               "type": "string",
               "format": "uuid"
             }
+          },
+          {
+            "in": "query",
+            "name": "before",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 512
+            },
+            "description": "Opaque bounded keyset cursor from preceding page."
           }
         ]
       },
@@ -2994,7 +3037,19 @@
               "format": "uuid"
             }
           }
-        ]
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "maxProperties": 0
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -3276,6 +3331,11 @@
               "knowledgegrid",
               "serviceflow"
             ]
+          },
+          "builder": {
+            "type": "boolean",
+            "const": true,
+            "description": "Optional authenticated builder creation; server maps customer_v1 only when feature enabled. No caller profile authority."
           }
         }
       },
@@ -3385,6 +3445,14 @@
           "updated_at": {
             "type": "string",
             "format": "date-time"
+          },
+          "chat_profile": {
+            "type": "string",
+            "enum": [
+              "grounded_v1",
+              "customer_v1"
+            ],
+            "readOnly": true
           }
         }
       }

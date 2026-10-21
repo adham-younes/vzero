@@ -410,7 +410,7 @@
     "evidence": "evidence/auth-error-handling-2026-10-20/production.json"
   },
   "customer_release_2026_10_22": {
-    "status": "IMPLEMENTED_PENDING_INTEGRATED_VERIFICATION",
+    "status": "VERIFIED_CANDIDATE_PENDING_PRODUCTION",
     "baseline": "f4f573a158a66f200e6055cf530afa3faa2eac9f",
     "ledger": "../launch/2026-10-22/EXECUTION.md",
     "full_plan": "../launch/2026-10-22/implementation-plan.md",
@@ -420,6 +420,15 @@
     "production_authorized": true,
     "production_changed": false,
     "retention_policy": "NO_NEW_TIMER_OR_PURGE_APPROVED",
-    "next": "Cross-worker review and minimal integrated build/realDB/Auth/security/browser/home checks before coherent product production phase."
+    "next": "Final capacity candidate build; additive hosted migration; compatible production app; raw-read closure migration; live public/user-entry verification.",
+    "gates": {
+      "build": "PASS_LOCAL_AND_STAGED; affected capacity build finishing",
+      "contracts": "PASS11 + provider fault + long-output boundary",
+      "isolated_data_auth_security": "PASS38 + scoped legacy/transitive regression",
+      "browser": "PASS8_REAL_AUTH_DB_DETERMINISTIC_PROVIDER",
+      "public_routes": "PASS68",
+      "protected_home": "PASS6_EN_AR_WIDTH_COMPARISONS",
+      "actual_models": "PASS9_SAMPLES_THREE_SERVER_KEYS"
+    }
   }
 }
