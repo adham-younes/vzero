@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "environment": "real local Auth/PostgREST with deterministic provider fixture",
+  "completed": [
+    "Default login opens separate customer-profile private chat; useful typed response without sources at 1440px",
+    "Brief prefill contains only user message; required fields, explicit review/consent/save; truthful private save"
+  ],
+  "error": "TimeoutError: Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for get_by_label(\"Response model\", exact=True)\n",
+  "pageErrors": []
+}

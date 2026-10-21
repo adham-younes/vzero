@@ -1,0 +1,512 @@
+{
+  "environment": "isolated-local-real-db-auth",
+  "provider": "Deterministic isolated model fixture; actual model access/semantic acceptance separately required in staged Vercel gate.",
+  "checks": [
+    {
+      "name": "local real Auth registration",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "local real Auth registration",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "legacy strict agent saved",
+      "result": "PASS",
+      "detail": {
+        "agent": {
+          "id": "b1ca0263-6d49-47aa-b3d1-092fe3a125e4",
+          "org_id": "a276d703-5dff-40a2-a1fe-a3436f5b8811",
+          "name": "Personal baseline",
+          "template": "knowledgegrid",
+          "instructions": "Private instructions unchanged.",
+          "language": "en",
+          "model": "openai/gpt-oss-20b",
+          "revision": 1,
+          "chat_profile": "grounded_v1",
+          "created_at": "2026-10-21T22:30:51.609066+00:00",
+          "updated_at": "2026-10-21T22:30:51.609066+00:00"
+        }
+      }
+    },
+    {
+      "name": "ten concurrent bootstrap requests one distinct assistant",
+      "result": "PASS",
+      "detail": [
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ],
+        [
+          200,
+          null
+        ]
+      ]
+    },
+    {
+      "name": "personal agent not overwritten/selected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "customer profile server owned",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "foreign owner denied",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "CSRF and unknown bootstrap inputs rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "all three mapped model choices exposed",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source-free useful private draft",
+      "result": "PASS",
+      "detail": {
+        "run": {
+          "id": "d96b42a2-c022-41d9-bb41-4a9a1f8392d8",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "conversation_id": "c5987603-e321-45d4-9638-40760ae5831e",
+          "model": "openai/gpt-oss-20b",
+          "status": "succeeded",
+          "question": "I need to organize a weekly distribution exception review. We have three late orders and no carrier update. Help me prepare a draft and ask what is missing.",
+          "answer": "Draft for review: list the supplied late orders, confirm promised dates and current dispatch information, identify missing facts, then have the operations owner choose next steps.\n\nWhat outcome should the reviewer decide?",
+          "citations": [],
+          "usage": {
+            "key_slot": 2,
+            "latency_ms": 0,
+            "request_id": "isolated-provider-fixture",
+            "input_tokens": 1,
+            "pricing_date": "2026-10-22",
+            "output_tokens": 1,
+            "pricing_source": "https://console.groq.com/docs/models",
+            "estimated_cost_usd": 3.75e-07
+          },
+          "error_code": null,
+          "created_at": "2026-10-21T22:30:51.949034+00:00",
+          "finished_at": "2026-10-21T22:30:51.98351+00:00",
+          "version_id": null,
+          "historyState": "available",
+          "chat": {
+            "parts": [
+              {
+                "kind": "draft",
+                "text": "Draft for review: list the supplied late orders, confirm promised dates and current dispatch information, identify missing facts, then have the operations owner choose next steps.",
+                "basis": "suggestion",
+                "citations": []
+              }
+            ],
+            "briefDraft": null,
+            "nextQuestion": "What outcome should the reviewer decide?",
+            "schemaVersion": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "source-free response has no fake citations",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no-source company facts request missing evidence",
+      "result": "PASS",
+      "detail": {
+        "run": {
+          "id": "875ff9f8-aaa8-42f2-b5fd-97b068230889",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "conversation_id": "c5987603-e321-45d4-9638-40760ae5831e",
+          "model": "openai/gpt-oss-20b",
+          "status": "succeeded",
+          "question": "What is our company refund policy and exactly how many days are customers eligible?",
+          "answer": "The company policy was not supplied. Add approved policy text to check the answer.\n\nWhat outcome should the reviewer decide?",
+          "citations": [],
+          "usage": {
+            "key_slot": 2,
+            "latency_ms": 0,
+            "request_id": "isolated-provider-fixture",
+            "input_tokens": 1,
+            "pricing_date": "2026-10-22",
+            "output_tokens": 1,
+            "pricing_source": "https://console.groq.com/docs/models",
+            "estimated_cost_usd": 3.75e-07
+          },
+          "error_code": null,
+          "created_at": "2026-10-21T22:30:52.050196+00:00",
+          "finished_at": "2026-10-21T22:30:52.085219+00:00",
+          "version_id": null,
+          "historyState": "available",
+          "chat": {
+            "parts": [
+              {
+                "kind": "missing_evidence",
+                "text": "The company policy was not supplied. Add approved policy text to check the answer.",
+                "basis": "suggestion",
+                "citations": []
+              }
+            ],
+            "briefDraft": null,
+            "nextQuestion": "What outcome should the reviewer decide?",
+            "schemaVersion": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "explicit source loaded private",
+      "result": "PASS",
+      "detail": {
+        "source": {
+          "id": "72837205-0f79-4304-8aa5-ca1fc7f2812c",
+          "title": "Synthetic tool policy",
+          "org_id": "a276d703-5dff-40a2-a1fe-a3436f5b8811",
+          "status": "ready",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "created_at": "2026-10-21T22:30:52.125037+00:00",
+          "request_key": "4c0838aa-bee5-46bc-b12a-6bd57b8d9c7e",
+          "public_approved": false
+        }
+      }
+    },
+    {
+      "name": "Arabic UTF8 byte bound",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "mixed Arabic Latin original text retrievable",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "grounded original citations",
+      "result": "PASS",
+      "detail": {
+        "run": {
+          "id": "6d0d5356-4e32-4824-a32d-eb0107b19f5f",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "conversation_id": "c5987603-e321-45d4-9638-40760ae5831e",
+          "model": "openai/gpt-oss-20b",
+          "status": "succeeded",
+          "question": "List the approved tools from the synthetic tool policy.",
+          "answer": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+          "citations": [
+            {
+              "quote": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+              "title": "Synthetic tool policy",
+              "chunkId": "f4d9c46f-80f3-4d26-899b-5b38e3d9e9fd",
+              "sourceId": "72837205-0f79-4304-8aa5-ca1fc7f2812c"
+            }
+          ],
+          "usage": {
+            "key_slot": 2,
+            "latency_ms": 0,
+            "request_id": "isolated-provider-fixture",
+            "input_tokens": 1,
+            "pricing_date": "2026-10-22",
+            "output_tokens": 1,
+            "pricing_source": "https://console.groq.com/docs/models",
+            "estimated_cost_usd": 3.75e-07
+          },
+          "error_code": null,
+          "created_at": "2026-10-21T22:30:52.352132+00:00",
+          "finished_at": "2026-10-21T22:30:52.387386+00:00",
+          "version_id": null,
+          "historyState": "available",
+          "chat": {
+            "parts": [
+              {
+                "kind": "grounded",
+                "text": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+                "basis": "approved_sources",
+                "citations": [
+                  {
+                    "quote": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+                    "title": "Synthetic tool policy",
+                    "chunkId": "f4d9c46f-80f3-4d26-899b-5b38e3d9e9fd",
+                    "sourceId": "72837205-0f79-4304-8aa5-ca1fc7f2812c"
+                  }
+                ]
+              }
+            ],
+            "briefDraft": null,
+            "nextQuestion": null,
+            "schemaVersion": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "Arabic contextual followup grounded",
+      "result": "PASS",
+      "detail": {
+        "run": {
+          "id": "c9b4f221-1d18-4484-a209-c4491b6a731d",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "conversation_id": "c5987603-e321-45d4-9638-40760ae5831e",
+          "model": "openai/gpt-oss-20b",
+          "status": "succeeded",
+          "question": "\u0643\u0631\u0631 \u0627\u0644\u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0633\u0627\u0628\u0642\u0629",
+          "answer": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+          "citations": [
+            {
+              "quote": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+              "title": "Synthetic tool policy",
+              "chunkId": "f4d9c46f-80f3-4d26-899b-5b38e3d9e9fd",
+              "sourceId": "72837205-0f79-4304-8aa5-ca1fc7f2812c"
+            }
+          ],
+          "usage": {
+            "key_slot": 2,
+            "latency_ms": 0,
+            "request_id": "isolated-provider-fixture",
+            "input_tokens": 1,
+            "pricing_date": "2026-10-22",
+            "output_tokens": 1,
+            "pricing_source": "https://console.groq.com/docs/models",
+            "estimated_cost_usd": 3.75e-07
+          },
+          "error_code": null,
+          "created_at": "2026-10-21T22:30:52.450727+00:00",
+          "finished_at": "2026-10-21T22:30:52.492876+00:00",
+          "version_id": null,
+          "historyState": "available",
+          "chat": {
+            "parts": [
+              {
+                "kind": "grounded",
+                "text": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+                "basis": "approved_sources",
+                "citations": [
+                  {
+                    "quote": "SYNTHETIC DEMONSTRATION ONLY. Approved tools are Python \u0648TypeScript and SQL. Unopened items may be returned within 14 days with proof of purchase. This does not define eligibility for opened faulty items.",
+                    "title": "Synthetic tool policy",
+                    "chunkId": "f4d9c46f-80f3-4d26-899b-5b38e3d9e9fd",
+                    "sourceId": "72837205-0f79-4304-8aa5-ca1fc7f2812c"
+                  }
+                ]
+              }
+            ],
+            "briefDraft": null,
+            "nextQuestion": null,
+            "schemaVersion": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "complete conversation persisted",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "replay input mutation denied",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "approval payload substitution rejected",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "foreign approval denied",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "late hash-change completion cancelled with candidate metadata discarded",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "cancelled run never exposes rejected chat",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source deletion succeeds",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "decision transaction rechecks revoked source",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "replay revoked content redacted",
+      "result": "PASS",
+      "detail": {
+        "id": "6d0d5356-4e32-4824-a32d-eb0107b19f5f",
+        "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+        "conversation_id": "c5987603-e321-45d4-9638-40760ae5831e",
+        "model": "openai/gpt-oss-20b",
+        "status": "succeeded",
+        "question": "List the approved tools from the synthetic tool policy.",
+        "answer": "This answer is unavailable because its knowledge changed or was removed. Add current evidence and ask again.",
+        "citations": [],
+        "usage": {},
+        "error_code": null,
+        "created_at": "2026-10-21T22:30:52.352132+00:00",
+        "finished_at": "2026-10-21T22:30:52.387386+00:00",
+        "version_id": null,
+        "historyState": "knowledge_changed"
+      }
+    },
+    {
+      "name": "activity answer and proposal redacted",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "raw snapshot/proposal reads unavailable to authenticated Data API",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "privileged run writer inaccessible",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "foreign authenticated source row RLS hidden",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "explicit immutable public version",
+      "result": "PASS",
+      "detail": {
+        "version": {
+          "id": "d3f69a9e-bf6a-4d0f-91d5-9c0af25fc4e0",
+          "org_id": "a276d703-5dff-40a2-a1fe-a3436f5b8811",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "settings": {
+            "id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+            "name": "Business assistant",
+            "model": "openai/gpt-oss-20b",
+            "org_id": "a276d703-5dff-40a2-a1fe-a3436f5b8811",
+            "language": "en",
+            "revision": 1,
+            "template": "serviceflow",
+            "created_at": "2026-10-21T22:30:51.754292+00:00",
+            "created_by": "33192386-9c72-477a-8a43-160bb131bc26",
+            "updated_at": "2026-10-21T22:30:51.754292+00:00",
+            "request_key": "a6f00344-6e01-4e5f-9e25-cc5e431e0021",
+            "chat_profile": "customer_v1",
+            "instructions": "Help clarify one business task and prepare a draft for review. Ask about the desired outcome first. Never invent company facts."
+          },
+          "created_at": "2026-10-21T22:30:53.152494+00:00",
+          "source_ids": [
+            "6b44cc3c-e269-431b-91d3-f6478920d2e8",
+            "70b20a7b-25e9-482c-b5d5-6341634dd5a8"
+          ],
+          "request_key": "1601b6b5-d09b-40b6-834c-1823ba830482",
+          "public_source_ids": [
+            "6b44cc3c-e269-431b-91d3-f6478920d2e8"
+          ]
+        }
+      }
+    },
+    {
+      "name": "widget session real",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "widget has no private discovery/source data",
+      "result": "PASS",
+      "detail": {
+        "run": {
+          "id": "1a66614b-b79c-4142-ab90-a5217a228f32",
+          "agent_id": "6b36e962-3045-43b8-bcb1-10e730bff18f",
+          "conversation_id": "3db2e094-77e4-4e36-90fc-7a4e8759c052",
+          "model": "openai/gpt-oss-20b",
+          "status": "succeeded",
+          "question": "amber-739",
+          "answer": "I could not find enough information in the added sources to answer. Try a more specific question or add a source covering this topic.",
+          "citations": [],
+          "usage": {
+            "retrieval": "no_match",
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "estimated_cost_usd": 0
+          },
+          "error_code": null,
+          "created_at": "2026-10-21T22:30:53.231221+00:00",
+          "finished_at": "2026-10-21T22:30:53.241944+00:00",
+          "version_id": "d3f69a9e-bf6a-4d0f-91d5-9c0af25fc4e0"
+        }
+      }
+    },
+    {
+      "name": "public caller cannot opt into customer profile",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "explicit conversation delete",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "delete is actor/conversation scoped",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "legacy retention not silently activated",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "no auth mail sent",
+      "result": "PASS",
+      "detail": null
+    }
+  ]
+}

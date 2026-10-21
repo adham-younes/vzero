@@ -2,7 +2,7 @@
 export function modelLabel(id:string,ar:boolean){
  if(id==='openai/gpt-oss-120b')return ar?'متقدم':'Advanced'
  if(id==='openai/gpt-oss-20b')return ar?'سريع':'Fast'
- if(id==='qwen/qwen3.8-27b')return ar?'تقييم داخلي':'Internal evaluation'
+ if(id==='qwen/qwen3.8-27b')return ar?'متعدد اللغات (معاينة)':'Multilingual (preview)'
  return ar?'نمط مخصص':'Custom mode'
 }
 export function runStatusLabel(status:string,ar:boolean){

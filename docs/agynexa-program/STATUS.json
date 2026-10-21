@@ -90,13 +90,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 34,
+    "http_operations": 38,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 26
+    "route_files": 29
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS",
@@ -408,5 +408,18 @@
     "pull_request": "https://github.com/adham-younes/vzero/pull/31",
     "deployment_id": "dpl_7tB1SVC3Nm6QR1V9fBan2kGX1kyz",
     "evidence": "evidence/auth-error-handling-2026-10-20/production.json"
+  },
+  "customer_release_2026_10_22": {
+    "status": "IMPLEMENTED_PENDING_INTEGRATED_VERIFICATION",
+    "baseline": "f4f573a158a66f200e6055cf530afa3faa2eac9f",
+    "ledger": "../launch/2026-10-22/EXECUTION.md",
+    "full_plan": "../launch/2026-10-22/implementation-plan.md",
+    "release_controls": "../launch/2026-10-22/RELEASE-CONTROLS.md",
+    "workers": 3,
+    "models": "gpt-6.1-sol high for all execution workers",
+    "production_authorized": true,
+    "production_changed": false,
+    "retention_policy": "NO_NEW_TIMER_OR_PURGE_APPROVED",
+    "next": "Cross-worker review and minimal integrated build/realDB/Auth/security/browser/home checks before coherent product production phase."
   }
 }

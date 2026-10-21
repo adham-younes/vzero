@@ -1,0 +1,21 @@
+// Runs ONLY during the explicitly requested staged Vercel production build.
+// Uses the actual provider adapter and server-held keys. No secret output or public endpoint.
+import fs from 'node:fs';import path from 'node:path';import Module,{createRequire} from 'node:module';import ts from 'typescript';
+if(process.env.AGYNEXA_RELEASE_VERIFY!=='true'){console.log('Provider release verification not requested for this build.');process.exit(0)}
+const require=createRequire(import.meta.url),cache=new Map();
+function load(file){file=path.resolve(file);if(cache.has(file))return cache.get(file);const m=new Module(file);m.paths=Module._nodeModulePaths(process.cwd());m.require=name=>{if(name==='server-only')return {};if(name.startsWith('@/'))return load(path.resolve(name.slice(2)+'.ts'));if(name.startsWith('.'))return load(path.resolve(path.dirname(file),name+'.ts'));return require(name)};m._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,file);cache.set(file,m.exports);return m.exports}
+const {groqAnswer,checkProvider}=load('lib/studio/provider.ts'),{modelRegistry}=load('lib/studio/models.ts'),{validateChatResponse}=load('lib/studio/chat-contract.ts');
+const listed=await checkProvider();if(listed.some(x=>x.status!=='listed'))throw Error('Release provider model listing failed: '+JSON.stringify(listed));
+const chunks=[{id:'a83cd39e-caf3-41bd-bdce-58a01a102ce5',source_id:'a83cd39e-caf3-41bd-bdce-58a01a102ce6',title:'Synthetic policy',content:'SYNTHETIC DEMO. Unopened items may be returned within 14 days with proof of purchase. Eligibility of opened faulty items is not stated.'}];
+const system='You are an AGYNEXA business assistant. Use the customer_chat_v2 schema. Explain only real capabilities: task discovery, drafts from supplied facts, source-cited answers from approved short text, human-reviewed internal proposals. No business system access, external action or delivery. Company policy, pricing/status/eligibility requires supplied passages; missing evidence must be a missing_evidence part. A draft cannot invent company facts. Non-grounded parts have empty citationChunkIds and basis suggestion, user_supplied or product_capabilities. Grounded parts use approved_sources and supporting chunk IDs only. Keep concise. nextQuestion may be one question or null. briefDraft must be null. support.propose false unless explicitly asked, never external delivery.';
+const records=[];
+for(const model of Object.keys(modelRegistry)){
+ for(const sample of [{name:'source_free_discovery',question:'I have three late orders and want a draft review checklist. What should I prepare?',chunks:[],kind:['draft','discovery']},{name:'unsupported_policy',question:'What is our company refund window? Tell me exactly how many days customers qualify.',chunks:[],kind:['missing_evidence']},{name:'grounded_policy',question:'What is the unopened return window? Is an opened faulty item eligible?',chunks,kind:['grounded']}]){
+  const result=await groqAnswer(model,[{role:'system',content:system},{role:'user',content:JSON.stringify({question:sample.question,passages:sample.chunks.map(c=>({chunkId:c.id,text:c.content}))})}],AbortSignal.timeout(180000),sample.chunks.map(c=>c.id),true);
+  const chat=validateChatResponse(result.answer,{customer:true,support:false},sample.chunks);
+  if(!chat.parts.some(p=>sample.kind.includes(p.kind)))throw Error(model+' '+sample.name+' failed semantic-kind check');
+  if(sample.name==='grounded_policy'&&(!chat.parts.some(p=>p.citations.length)||!chat.parts.some(p=>/14/.test(p.text))))throw Error(model+' failed synthetic policy/citation check');
+  const record={model,sample:sample.name,status:'PASS',keySlot:modelRegistry[model].slot,maxCompletionTokens:modelRegistry[model].maxOutput,latencyMs:result.usage.latency_ms,inputTokens:result.usage.input_tokens,outputTokens:result.usage.output_tokens,parts:chat.parts.map(p=>p.kind)};records.push(record);console.log('AGYNEXA_PROVIDER_RECEIPT '+JSON.stringify(record));
+ }
+}
+console.log('AGYNEXA_PROVIDER_GATE '+JSON.stringify({status:'PASS',count:records.length,keysExposed:false,listed,scope:'Actual selected Groq adapter/schema with synthetic prompts. Not an authenticated browser/database flow.'}));

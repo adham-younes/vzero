@@ -1,13 +1,13 @@
 {
   "recorded_date": "2026-10-20",
-  "product_commit": "4b7b5a205dda10c8e3a2096aa2cfad18a2b0c1ba",
+  "product_commit": "CUSTOMER_RELEASE_CANDIDATE",
   "source_files": [
     "lib/site-routes.ts",
     "lib/agynexa.ts",
     "lib/service-catalog.json",
     "app/sitemap.ts"
   ],
-  "canonical_count": 64,
+  "canonical_count": 68,
   "services": 10,
   "solutions": 9,
   "pages": [
@@ -202,6 +202,18 @@
       "ar": "/ar/services/evaluation-observability",
       "status": "IMPLEMENTED",
       "kind": "service"
+    },
+    {
+      "en": "/privacy",
+      "ar": "/ar/privacy",
+      "status": "IMPLEMENTED_PENDING_RELEASE_VERIFICATION",
+      "kind": "operational_notice"
+    },
+    {
+      "en": "/terms",
+      "ar": "/ar/terms",
+      "status": "IMPLEMENTED_PENDING_RELEASE_VERIFICATION",
+      "kind": "operational_notice"
     }
   ],
   "redirects": [
@@ -234,7 +246,7 @@
     "/sitemap.xml",
     "/robots.txt"
   ],
-  "verification_scope": "Inventory is source-derived; final production smoke sampled 15 pages, not every canonical URL.",
+  "verification_scope": "Source inventory; customer release candidate acceptance recorded in docs/launch/2026-10-22/EXECUTION.md",
   "account_pages": [
     {
       "en": "/signup",
@@ -277,7 +289,7 @@
     "GET /api/v1/agents/{agentId}",
     "PATCH /api/v1/agents/{agentId}"
   ],
-  "updated_at": "2026-10-20",
+  "updated_at": "2026-10-22",
   "studio_runtime_routes": [
     {
       "path": "/api/v1/agents/{agentId}/sources",
@@ -371,6 +383,25 @@
       "path": "/api/v1/widget/{publicId}/invoke",
       "methods": [
         "post"
+      ]
+    },
+    {
+      "path": "/api/v1/workspace/chat",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/conversations",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "path": "/api/v1/agents/{agentId}/conversations/{conversationId}",
+      "methods": [
+        "get",
+        "delete"
       ]
     }
   ],
