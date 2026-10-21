@@ -24,3 +24,9 @@ Owner authorization: implementation and production, with each coherent completed
 ## Truthful operating limits
 
 Private owner workspace, two bounded templates, lexical short text sources. Model output/citations still need a person to check semantic correctness. No regulated customer data readiness, actual inbox/delivery, autonomous tools, paid subscription, recovery email, fixed retention promise or invented legal operator/jurisdiction. Legal routes describe actual operational scope and unresolved contractual facts. Commercial contract/price/support and legal identity still need real owner decisions before those respective commitments.
+
+## Output allowance and actual delivery capacity
+
+Model generation ceilings65536/65536/16384 tokens are set per actual model/key and accepted in live provider checks. They are ceilings, not required verbosity. Both legacy and typed answers accept100000-character synthetic output; the stale12000-character cap is removed. PostgreSQL answer is unconstrained text and snapshots JSONB, with no old answer-character check. UI renders/copies the full answer; brief prefill still uses only user input with its separate reviewed form bounds.
+
+The actual buffered hosting boundary remains: [Vercel documents4.5MB request/response payload maximum](https://vercel.com/docs/functions/limitations). Whole returned JSON stays below4MiB with metadata reserve; over-limit generated output fails honestly with response_too_large, without a completed answer release. Private history uses byte-aware pages/cursors so multiple long replies cannot overflow a response; activity indicates truncation and conversations provide complete paginated access. Context still drops whole turns to fit its stated18000-character evidence/context budget; that is separate from returned answer capacity. No giant paid model generation was needed to test numeric boundaries.

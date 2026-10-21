@@ -9,6 +9,7 @@ import {modelRegistry,type ModelId} from './models'
 import type {Agent} from './settings'
 import {customerChatEnabled,normalizedSearchEnabled,validateChatResponse,type ChatScope,type RawProviderChatV2} from './chat-contract'
 import {loadConversationContext} from './conversation-store'
+import {assertOutputCapacity} from './output-capacity'
 import {chatSystemPolicy} from './chat-policy'
 import {presentRun} from './history-visibility'
 import {conversationalReply,missingKnowledgeReply,replyLanguage,buildRetrievalQuery} from './conversation'
@@ -113,6 +114,7 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
     result={status:'succeeded',answer,citations,usage,support,chat_v2:{schemaVersion:2,profile:'grounded_v1',policyVersion:'2026-10-v1',response:chat,sourceDependencies:dependencies}}
    }
   }
+  if(result.status==='succeeded')assertOutputCapacity({run:{question,model:scope.agent.model,answer:result.answer,citations:result.citations,usage:result.usage,chat:scope.kind==='studio'?(result.chat_v2 as {response?:unknown}|undefined)?.response:undefined}})
   signal.throwIfAborted();await scope.assertAccess()
  }catch(error){result={status:signal.aborted?'cancelled':'failed',error_code:signal.aborted?'execution_cancelled':error instanceof InputError?error.code:'provider_unavailable',usage}}
  finally{clearInterval(timer)}

@@ -2,6 +2,7 @@ import 'server-only'
 import {adminClient} from '../supabase/server'
 import {InputError} from '../account-validation'
 import type {ChatScope,TurnContext} from './chat-contract'
+import {fitResponseItems} from './output-capacity'
 import {boundTurns} from './conversation'
 import {isRunContentVisible,sourceDependencies,storedRunFields,presentRun} from './history-visibility'
 export function cursorDecode(value:string|null){if(!value)return null;try{const c=JSON.parse(Buffer.from(value,'base64url').toString());if(typeof c.time!=='string'||!/^\d{4}-\d{2}-\d{2}T[\d:.]+Z$/.test(c.time)||typeof c.id!=='string'||!/^[0-9a-f-]{36}$/.test(c.id))throw 0;return c as {time:string;id:string}}catch{throw new InputError('invalid_cursor')}}
@@ -19,7 +20,8 @@ export async function readVisibleConversation(scope:ChatScope,before:string|null
  const {data,error}=await q;if(error)throw error
  const rows=(data||[]).slice(0,30).filter(r=>r.snapshot?.identity===scope.identity)
  const runs=await Promise.all(rows.map(r=>presentRun(scope,r,true)))
- return {runs:runs.reverse(),nextCursor:data&&data.length>30?cursor(data[29]):null}
+ const page=fitResponseItems(runs,{nextCursor:null},'runs')
+ return {runs:page.items.reverse(),nextCursor:page.truncated||data&&data.length>30?cursor(rows[page.items.length-1]):null}
 }
 export async function listConversations(scope:Omit<ChatScope,'conversationId'>,after:string|null){
  // Database RPC groups scoped runs before paging; bounded summaries, no generated/private text.

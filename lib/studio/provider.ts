@@ -13,7 +13,7 @@ const schema={type:'object',additionalProperties:false,required:['answerable','a
 export function parseAnswer(content:string):GroundedAnswer{
  let v:GroundedAnswer
  try{v=JSON.parse(content)}catch{throw new InputError('invalid_model_output',502)}
- if(!v||typeof v.answerable!=='boolean'||typeof v.answer!=='string'||!v.answer.trim()||v.answer.length>12000||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string')||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
+ if(!v||typeof v.answerable!=='boolean'||typeof v.answer!=='string'||!v.answer.trim()||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string')||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
  return v
 }
 export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[],chatV2=false){

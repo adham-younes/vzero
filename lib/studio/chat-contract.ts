@@ -19,11 +19,9 @@ function keys(value:unknown,allowed:string[]){if(!value||typeof value!=='object'
 export function validateChatResponse(raw:RawProviderChatV2,policy:{customer:boolean;support:boolean},chunks:AuthorizedChunk[]):ChatResponseV2{
  keys(raw,['parts','nextQuestion','briefDraft','support'])
  if(!Array.isArray(raw.parts)||raw.parts.length<1||raw.parts.length>6)invalid()
- let total=0
  const parts=raw.parts.map(p=>{
   keys(p,['kind','text','basis','citationChunkIds'])
   if(!kinds.includes(p.kind)||!bases.includes(p.basis)||typeof p.text!=='string'||!p.text.trim()||!Array.isArray(p.citationChunkIds)||p.citationChunkIds.length>6||p.citationChunkIds.some(id=>typeof id!=='string'))invalid()
-  total+=p.text.length
   if(p.kind==='grounded'){if(p.basis!=='approved_sources'||!p.citationChunkIds.length)invalid()}
   else if(p.basis==='approved_sources'||p.citationChunkIds.length)invalid()
   if(p.kind==='capability'&&p.basis!=='product_capabilities')invalid()
@@ -32,7 +30,7 @@ export function validateChatResponse(raw:RawProviderChatV2,policy:{customer:bool
   const citations=[...new Set(p.citationChunkIds)].map(id=>{const c=chunks.find(c=>c.id===id);if(!c)invalid();return {chunkId:c.id,sourceId:c.source_id,title:c.title,quote:c.content}})
   return {kind:p.kind,text:p.text.trim(),basis:p.basis,citations}
  })
- if(total>12000||new Set(parts.flatMap(p=>p.citations.map(c=>c.chunkId))).size>6)invalid()
+ if(new Set(parts.flatMap(p=>p.citations.map(c=>c.chunkId))).size>6)invalid()
  if(raw.nextQuestion!==null&&(typeof raw.nextQuestion!=='string'||raw.nextQuestion.length>500))invalid()
  // Brief prefill is deliberately derived from user input in the UI, not model/source text.
  if(raw.briefDraft!==null)invalid()

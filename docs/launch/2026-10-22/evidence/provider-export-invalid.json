@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-21T22:25:36.549Z",
+  "records": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "keySlot": 1,
+      "configured": "NOT_ESTABLISHED_FROM_EXPORT",
+      "http": 401,
+      "latencyMs": 94,
+      "maxCompletionTokens": 65536,
+      "error": {
+        "type": "invalid_request_error",
+        "code": "invalid_api_key"
+      },
+      "listed": "NOT_VERIFIED"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "keySlot": 2,
+      "configured": "NOT_ESTABLISHED_FROM_EXPORT",
+      "http": 401,
+      "latencyMs": 91,
+      "maxCompletionTokens": 65536,
+      "error": {
+        "type": "invalid_request_error",
+        "code": "invalid_api_key"
+      },
+      "listed": "NOT_VERIFIED"
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "keySlot": 3,
+      "configured": "NOT_ESTABLISHED_FROM_EXPORT",
+      "http": 401,
+      "latencyMs": 90,
+      "maxCompletionTokens": 16384,
+      "error": {
+        "type": "invalid_request_error",
+        "code": "invalid_api_key"
+      },
+      "listed": "NOT_VERIFIED"
+    }
+  ],
+  "classification": "NOT_A_VALID_PROVIDER_ACCESS_TEST: Vercel sensitive values are non-exportable; CLI pull yielded redaction markers, not API keys. HTTP401 from marker must not be treated as real key failure."
+}

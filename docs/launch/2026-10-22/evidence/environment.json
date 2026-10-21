@@ -1,0 +1,79 @@
+{
+  "vm": {
+    "name": "agynexa-release",
+    "cpu": 2,
+    "memoryGiB": 2,
+    "diskGiB": 12
+  },
+  "containers": [
+    {
+      "name": "/agynexa-studio-local-db-1",
+      "oomKilled": false,
+      "state": "running"
+    },
+    {
+      "name": "/agynexa-studio-local-auth-1",
+      "oomKilled": false,
+      "state": "running"
+    },
+    {
+      "name": "/agynexa-studio-local-rest-1",
+      "oomKilled": false,
+      "state": "running"
+    },
+    {
+      "name": "/agynexa-studio-local-gateway-1",
+      "oomKilled": false,
+      "state": "running"
+    }
+  ],
+  "stats": [
+    {
+      "BlockIO": "18.7MB / 61.4kB",
+      "CPUPerc": "0.05%",
+      "Container": "ff029b9d70a5efc2691226dcb06dc0c2cc854c0df327ca966997c5fab1f80c17",
+      "ID": "ff029b9d70a5",
+      "MemPerc": "10.65%",
+      "MemUsage": "208.6MiB / 1.913GiB",
+      "Name": "agynexa-studio-local-gateway-1",
+      "NetIO": "252kB / 281kB",
+      "PIDs": "3"
+    },
+    {
+      "BlockIO": "30.3MB / 0B",
+      "CPUPerc": "0.00%",
+      "Container": "889ce3e32949b2d0bd08053fd33d3b4e64c2de976696f8254cd03c638ac49c5a",
+      "ID": "889ce3e32949",
+      "MemPerc": "1.94%",
+      "MemUsage": "38.07MiB / 1.913GiB",
+      "Name": "agynexa-studio-local-auth-1",
+      "NetIO": "217kB / 153kB",
+      "PIDs": "8"
+    },
+    {
+      "BlockIO": "17.6MB / 0B",
+      "CPUPerc": "0.20%",
+      "Container": "431ec8e7bb6b08f5535b0efcbd03c520a592482fdb9c9b9447af43e3f3013e2b",
+      "ID": "431ec8e7bb6b",
+      "MemPerc": "1.52%",
+      "MemUsage": "29.74MiB / 1.913GiB",
+      "Name": "agynexa-studio-local-rest-1",
+      "NetIO": "474kB / 351kB",
+      "PIDs": "9"
+    },
+    {
+      "BlockIO": "38.7MB / 1.24MB",
+      "CPUPerc": "0.00%",
+      "Container": "df9e805f8014a192e61b813b065b94498b8717823c6035de457aac528dcd14e1",
+      "ID": "df9e805f8014",
+      "MemPerc": "3.12%",
+      "MemUsage": "61.07MiB / 1.913GiB",
+      "Name": "agynexa-studio-local-db-1",
+      "NetIO": "406kB / 514kB",
+      "PIDs": "8"
+    }
+  ],
+  "database": "PostgreSQL17.11",
+  "authRestGateway": "Real GoTrue/PostgREST/Kong",
+  "productionFixtures": false
+}

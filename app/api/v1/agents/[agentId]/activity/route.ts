@@ -1,4 +1,5 @@
 import {json,failure,adminClient} from '@/lib/supabase/server'
+import {fitResponseItems,assertOutputCapacity} from '@/lib/studio/output-capacity'
 import {ownedAgent,dbError} from '@/lib/studio/runtime'
 import {storedRunFields,presentRun,runScope,isRunContentVisible} from '@/lib/studio/history-visibility'
 export const runtime='nodejs'
@@ -9,5 +10,5 @@ export async function GET(_r:Request,c:{params:Promise<{agentId:string}>}){try{
  results.forEach(x=>dbError(x.error))
  const runs=await Promise.all((results[0].data||[]).map(r=>presentRun({...runScope(r),identity:ctx.user.id},r,true)))
  const approvals=await Promise.all((results[1].data||[]).map(async p=>{const {data:r,error}=await db.from('agent_runs').select(storedRunFields).eq('org_id',ctx.agent.org_id).eq('agent_id',id).eq('actor_id',ctx.user.id).eq('access_kind','studio').eq('id',p.run_id).maybeSingle();dbError(error);const visibility=r?await isRunContentVisible({...runScope(r),identity:ctx.user.id},r):{visible:false};return visibility.visible?{...p,historyState:'available'}:{...p,title:'[Knowledge changed]',details:'[Knowledge changed]',status:'expired',historyState:'knowledge_changed'}}))
- return json({runs,approvals,versions:results[2].data,publication:results[3].data,keys:results[4].data})
+ const rest={approvals,versions:results[2].data,publication:results[3].data,keys:results[4].data};const page=fitResponseItems(runs,rest,'runs');const response={...rest,runs:page.items,truncated:page.truncated};assertOutputCapacity(response);return json(response)
 }catch(e){return failure(e)}}
