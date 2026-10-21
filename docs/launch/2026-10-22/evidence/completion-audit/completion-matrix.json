@@ -1,0 +1,358 @@
+{
+  "source": "implementation-plan acceptanceA1–A24 plus selected builder/newer overrides/launch decisions",
+  "rows": [
+    {
+      "id": "A1",
+      "requirement": "Source-free customer entry",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security checks10–12; browser group1; live intake chat/history",
+      "limit": "Live intake uses one existing signed-in account; new-account email/recovery is separate."
+    },
+    {
+      "id": "A2",
+      "requirement": "Existing personal assistants preserved",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security checks3–5; source diff/home protections",
+      "limit": "Local original instructions/profile unchanged; no production personal data inspected."
+    },
+    {
+      "id": "A3",
+      "requirement": "Concurrent bootstrap, collision and input guards",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "security checks4,6,8; customer-entry.ts",
+      "limit": "Ten concurrent requests and malicious origin/unknown fields passed; reserved-key collision and every locale branch lack a named current execution receipt."
+    },
+    {
+      "id": "A4",
+      "requirement": "Localized auth intent and safe return URLs",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "account-ui.tsx safeAuthReturn; browser group1",
+      "limit": "Default login/local draft save passed; full external/scheme-relative return and explicit Account/Start auth-intent browser matrix not recorded."
+    },
+    {
+      "id": "A5",
+      "requirement": "Complete private conversation scope and pagination",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security checks7,18,35–36; transitive.json; output-capacity.cjs; live history",
+      "limit": "Real Auth/DB scope checks plus current live persisted turn; long pagination byte bounds covered synthetically, not giant paid output."
+    },
+    {
+      "id": "A6",
+      "requirement": "EN/AR follow-up from full turns/current evidence",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security check17; browser group4; launch-contract.cjs",
+      "limit": "Representative English/Arabic follow-ups passed with deterministic local model; general multilingual understanding is not established."
+    },
+    {
+      "id": "A7",
+      "requirement": "Mixed-script lexical normalization",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security checks15–17; launch-contract.cjs",
+      "limit": "Original وTypeScript preserved and query matches; no semantic/vector/translation claim."
+    },
+    {
+      "id": "A8",
+      "requirement": "Discovery vs unsupported company facts",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "provider-access.json9 samples; live intake; security10–12; actual newKG source-free+cited/unknown trace",
+      "limit": "Nine tiny live samples plus actual intake result; not a general hallucination guarantee."
+    },
+    {
+      "id": "A9",
+      "requirement": "Mixed sourced fact/draft and semantic entailment",
+      "implementation": "IMPLEMENTED",
+      "coverage": "WEAK",
+      "evidence": "chat-policy.ts; launch-contract.cjs; provider-release-smoke.mjs; liveKG exact17-day/proof/unknown representative",
+      "limit": "One actual KG source-entailment example now passes. Still no adversarial valid-citation-ID/unsupported-statement rejection evaluation or current injected-source attack sample."
+    },
+    {
+      "id": "A10",
+      "requirement": "Revocation across history/replay/activity/derived output",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_LOCAL_PARTIAL_PRODUCTION",
+      "evidence": "security24–28; transitive.json; browser group6",
+      "limit": "Local DB/replay/transitive and UI redaction passed. Live source-delete stopped at JS-confirm browser focus error; source remainedready. Exact-fixture DB cleanup is NOT user-facing delete/history proof. Subsequent same-tab recovery succeeded after cleanup; no retest on a fresh fixture."
+    },
+    {
+      "id": "A11",
+      "requirement": "Source/cancel races and safe late completion",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security22–25; SQL finalizer under shared agent lock",
+      "limit": "Real DB transaction/race invariant checked with synthetic completion. Live in-flight provider cancellation was not repeated."
+    },
+    {
+      "id": "A12",
+      "requirement": "Public/private/API profile boundary",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "security31–34; runtime.ts55; production-database.json",
+      "limit": "Real local widget and explicit profile rejection; hosted raw-run/proposal read grants closed. Not a fresh live published-widget suite."
+    },
+    {
+      "id": "A13",
+      "requirement": "Prompt injection/private-prompt extraction",
+      "implementation": "IMPLEMENTED",
+      "coverage": "MISSING_EVIDENCE",
+      "evidence": "chat-policy.ts hierarchy; source treated as data",
+      "limit": "No current release receipt for adversarial injected source or prompt-extraction model sample. Prompt text and absent tools are supporting code evidence only."
+    },
+    {
+      "id": "A14",
+      "requirement": "Exact replay identity/idempotency",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "security19–21; transitive legacy replay; runtime fingerprint",
+      "limit": "Changed-input409/legacy binding passed. Full same-key actor/access-kind collision execution matrix is not recorded."
+    },
+    {
+      "id": "A15",
+      "requirement": "Limits, timeout/429/cancel and error preservation",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "security14; provider-contract.cjs; output-capacity.cjs; UI errors",
+      "limit": "UTF8/citation/invalid-generation/auth-fault/long-byte bounds covered. All listed invalid types and actual429/deadline/composer retry interactions lack current combined evidence."
+    },
+    {
+      "id": "A16",
+      "requirement": "Exact internal approval and expiry",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "browser group5; security20–25; atomic studio_mutate",
+      "limit": "Exact decision-only approval, substitution/foreign denial and revoked-source expiry passed. Natural15-minute expiry/reject/duplicate-click branches not all recorded."
+    },
+    {
+      "id": "A17",
+      "requirement": "Consent/private-save/manual export handoff",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "browser group2; project-brief.tsx; account-ui.tsx downloadBrief",
+      "limit": "Explicit private save/consent verified. Download controls/source exist; no saved-download file-content receipt or complete failure/retry matrix."
+    },
+    {
+      "id": "A18",
+      "requirement": "Scoped deletion and approved retention",
+      "implementation": "PARTIAL_POLICY_DEFERRED",
+      "coverage": "PARTIAL",
+      "evidence": "security35–38; migration nullable expiry; RELEASE-CONTROLS.md",
+      "limit": "Scoped conversation deletion passed. No retention policy approved, therefore no90-day timer/cron/purge. This is a deferred policy, not verified automatic deletion."
+    },
+    {
+      "id": "A19",
+      "requirement": "Two synthetic demonstrations",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "demo-examples.ts; browser group4; content ledger",
+      "limit": "Retail source/citations/unknown sample executed locally. Distribution pack is present/within bounds; no equivalent full saved-source walkthrough receipt."
+    },
+    {
+      "id": "A20",
+      "requirement": "Buyer comprehension and EN/AR factual parity",
+      "implementation": "IMPLEMENTED_COPY",
+      "coverage": "INCOMPLETE",
+      "evidence": "CONTENT-LEDGER.md comprehension script; copy8 groups; supporting BetterDesign review",
+      "limit": "No owner/recruited consenting reader answered the five questions across representative surfaces. Automated structure/model review cannot close this acceptance gate."
+    },
+    {
+      "id": "A21",
+      "requirement": "Four real reviewed legal pages",
+      "implementation": "IMPLEMENTED_OPERATIONAL_NOTICES",
+      "coverage": "PARTIAL_OWNER_DECISION",
+      "evidence": "production.json four200 routes; legal-content.ts; CONTENT-LEDGER.md",
+      "limit": "Functional operational notices avoid invented facts. Legal operator/jurisdiction/processing terms/retention and actual owner legal-text approval are NOT ESTABLISHED; final legal readiness incomplete."
+    },
+    {
+      "id": "A22",
+      "requirement": "Protected whole home/Hero/video",
+      "implementation": "IMPLEMENTED_PROTECTION",
+      "coverage": "VERIFIED",
+      "evidence": "copy8 groups; home-comparison.json; production.json home6",
+      "limit": "Source/dependency protection and6 EN/AR390/768/1440 live matches; no global theme/home change."
+    },
+    {
+      "id": "A23",
+      "requirement": "Real isolated compatible environment/resources",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "environment.json; security38; cleanup.json",
+      "limit": "Real PostgreSQL17.11/Auth/PostgREST/Kong,2CPU/2GiB, noOOM; stopped. Deterministic provider boundary was explicit."
+    },
+    {
+      "id": "A24",
+      "requirement": "Existing envelope/strict agents/Compare compatibility",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "legacy replay regression; parseAnswer/output tests; widget check; source review",
+      "limit": "Legacy {run}/strict policies preserved. Full Compare UI and published API compatibility were not freshly exercised as complete workflows."
+    },
+    {
+      "id": "B1",
+      "requirement": "Builder creates a distinct customer-owned saved instance",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_LOCAL_AND_PRODUCTION",
+      "evidence": "browser group3 + production-builder-e2e.json + audit-hosted-metadata.json",
+      "limit": "Local newServiceFlow and actual newKnowledgeGrid creation/own-chat paths established. Production exact saved-profile independently verified; UI deletion/revocation still separate."
+    },
+    {
+      "id": "B2",
+      "requirement": "New KnowledgeGrid source-free chat then sourced answer",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_PRODUCTION_REPRESENTATIVE",
+      "evidence": "production-builder-e2e.json checks1–5; hosted template/profile/model metadata",
+      "limit": "NewKG/customer_v1/Fast: useful before-file clarification, explicit private156-byte source, exact17-day/proof citation and missing opened-item case, follow-up. Three live turns; no general semantic guarantee."
+    },
+    {
+      "id": "B3",
+      "requirement": "Review permissions match selected template",
+      "implementation": "FIX_AUTHORED_AND_BUILD_PASS",
+      "coverage": "PENDING_TARGETED_DEPLOY_VERIFICATION",
+      "evidence": "studio.tsx AgentForm permissions section vs runtime.ts101",
+      "limit": "Both EN/AR review paragraphs now depend on selected template. KG explicitly excludes internal requests; SF requires explicit approval. Server authority unchanged. Targeted final deployment artifact/UI checks recorded in follow-up receipt."
+    },
+    {
+      "id": "B4",
+      "requirement": "Describe/review/create/test/hosted delivery boundaries",
+      "implementation": "IMPLEMENTED_BOUNDED_VERSION",
+      "coverage": "VERIFIED_LOCAL_AND_PARTIAL_LIVE",
+      "evidence": "studio.tsx AgentForm; browser group3; live review screenshot",
+      "limit": "Deterministic configuration draft, purpose in saved instructions; local sample checklist explicitly not auto-saved/run. No arbitrary code, trained model, self-host export or connector delivery."
+    },
+    {
+      "id": "S1",
+      "requirement": "Three intended server model/key paths/output maxima",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "provider-access.json all3 slots; models.ts; provider-contract",
+      "limit": "65536/65536/16384 accepted as allowances; keys stay Vercel-side. No unlimited account-capacity promise."
+    },
+    {
+      "id": "S2",
+      "requirement": "Practical speed/no artificial delay/no message-count quota",
+      "implementation": "IMPLEMENTED_WITH_MEASUREMENT_LIMIT",
+      "coverage": "PARTIAL",
+      "evidence": "provider.ts low reasoning; maxDuration300; documented per-minute abuse guards",
+      "limit": "Tiny provider latency231–598ms measured. No full before/after perceived latency study or proof of fastest possible configuration. Hosting/provider limits remain."
+    },
+    {
+      "id": "S3",
+      "requirement": "Maximum output can pass the app delivery path",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_BOUNDARY",
+      "evidence": "output-capacity.cjs; output-capacity.ts; runtime response check",
+      "limit": "100000-character synthetic legacy/v2 accepted; whole UTF8 JSON byte budget and history pagination tested. No maximum-length paid generation or UI paste/copy stress run."
+    },
+    {
+      "id": "S4",
+      "requirement": "Real navigable pages and preserved taxonomy",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_WITH_SCOPE_LIMIT",
+      "evidence": "68 route HTTP/canonical gate; copy contracts; source routes",
+      "limit": "10services/9solutions/10sectors remain; separate page destinations retained. Full menu/keyboard interaction across every route is not an existing gate."
+    },
+    {
+      "id": "S5",
+      "requirement": "One approved design system/visual consistency",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_SAMPLE",
+      "evidence": "independent inspected Studio EN1440/builder768/AR390 plus4 new live marketing images",
+      "limit": "Lead independent of UI/content authorship inspected supplied captures. Samples coherent/no page overflow; not every affected page/variant or accessibility conformance."
+    },
+    {
+      "id": "S6",
+      "requirement": "English primary/natural Arabic/Humanizer/jargon",
+      "implementation": "IMPLEMENTED",
+      "coverage": "PARTIAL",
+      "evidence": "CONTENT-LEDGER.md; copy8 groups; inspected EN/AR screenshots",
+      "limit": "Required bilingual fields/limits preserve capability parity; no independent bilingual-human comprehension signoff. Stored message language correctly follows user history."
+    },
+    {
+      "id": "S7",
+      "requirement": "Market research/current-system alternatives/no fabricated demand",
+      "implementation": "IMPLEMENTED_DOCUMENTATION",
+      "coverage": "VERIFIED_SCOPE",
+      "evidence": "research-decisions.md; CONTENT-LEDGER.md; preserved archive",
+      "limit": "Retail/distribution synthetic; construction research only; no search volume, willing-buyer, ROI or regulated-readiness evidence claimed."
+    },
+    {
+      "id": "S8",
+      "requirement": "Selected simple stack, conditional other-project reuse",
+      "implementation": "IMPLEMENTED_SELECTED_SCOPE",
+      "coverage": "VERIFIED_SOURCE",
+      "evidence": "architecture-review.md; agent-builder-options.md; package lock unchanged",
+      "limit": "No framework transplant/new paid platform. Other project reuse was optional feasibility, not a selected external-action runtime."
+    },
+    {
+      "id": "S9",
+      "requirement": "Exactly approved execution workers/one independent source review",
+      "implementation": "IMPLEMENTED_PROCESS",
+      "coverage": "VERIFIED_RECORDED",
+      "evidence": "EXECUTION.md; UI-RECORD.md; CONTENT-LEDGER.md",
+      "limit": "Lead+2helpers GPT-6.1 Sol High; existing UI slot reused for this audit, no new worker. No neutral third-party certification claimed."
+    },
+    {
+      "id": "S10",
+      "requirement": "Production phase deploy/documentation/rollback",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED",
+      "evidence": "PR33/34; final-deployment.json; RELEASE-CONTROLS.md",
+      "limit": "Current main4638222 and primaryREADY. Ordered additive migration then compatible app then grant closure. Safe rollback documented; full restore drill not performed."
+    },
+    {
+      "id": "L1",
+      "requirement": "Commercial offer/price/payment/support/usage responsibility",
+      "implementation": "NOT_DECIDED",
+      "coverage": "OWNER_DECISION",
+      "evidence": "product-spec.md product cards; RELEASE.md remaining limits",
+      "limit": "No paid subscription/tenant budget reservation or commercial contract is delivered. Existing rate limits are not tenant cost budgets."
+    },
+    {
+      "id": "L2",
+      "requirement": "Legal/controller/processor facts and text approval",
+      "implementation": "NOT_ESTABLISHED",
+      "coverage": "OWNER_DECISION",
+      "evidence": "CONTENT-LEDGER.md legal unresolved facts",
+      "limit": "Published operational notices do not establish approved client processing terms or legal identity."
+    },
+    {
+      "id": "L3",
+      "requirement": "Retention/deletion/backups policy",
+      "implementation": "DEFERRED",
+      "coverage": "OWNER_DECISION",
+      "evidence": "nullable expiry + no cron/purge; legal notices",
+      "limit": "Choose truthful retention/backups/account-wide deletion scope; any automatic purge needs separate tested implementation."
+    },
+    {
+      "id": "L4",
+      "requirement": "Recovery/signup/support responsibility or restricted rollout acceptance",
+      "implementation": "RECOVERY_DEFERRED_BY_OWNER",
+      "coverage": "OWNER_DECISION",
+      "evidence": "Auth form notice; BACKLOG.md AUTH-RECOVERY",
+      "limit": "No SMTP/reset delivery established. Production deploy authorization is not evidence that recovery works or broad commercial signup is ready."
+    },
+    {
+      "id": "L5",
+      "requirement": "Final domain/DNS",
+      "implementation": "EXCLUDED_PENDING_REQUEST",
+      "coverage": "OUT_OF_SCOPE",
+      "evidence": "owner overrides; existing siteUrl",
+      "limit": "Existing URL unchanged. A domain action is not necessary to close current engineering evidence and was not authorized here."
+    }
+  ],
+  "recordedAt": "2026-10-22T02:22:14.498450+03:00",
+  "auditBaseCommit": "4638222e242aa48d6294b03bdf5e6bfc37b2f093",
+  "overall": "DEPLOYED_IMPLEMENTATION_WITH_EXPLICIT_ACCEPTANCE_GAPS",
+  "newActualModelTurns": 4,
+  "productionFixtureAccountsCreated": 0,
+  "localStackRestarted": false,
+  "broadSuitesRepeated": false,
+  "workerCountTotal": 3,
+  "privilegedCleanupIsNotUserFacingDeleteEvidence": true
+}

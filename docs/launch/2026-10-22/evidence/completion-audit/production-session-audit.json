@@ -1,0 +1,113 @@
+{
+  "recordedAt": "2026-10-21T23:11:28.603Z",
+  "environment": "current production in dedicated signed-in Chrome surface; public visuals in separate IAB",
+  "leadRecordedSource": "4638222",
+  "historicalAuditTab": {
+    "requestedProviderTabId": "1780151779",
+    "found": false
+  },
+  "currentSurface": {
+    "browser": "Chrome extension browser 1",
+    "tabId": "1780152269",
+    "site": "https://vzero-nine-beryl.vercel.app/ar/studio",
+    "signedIn": true,
+    "evidence": "Private neutral Business assistant conversation, composer and three model choices were visible; no sign-in form.",
+    "loginActionTaken": false,
+    "credentialValuesRead": false,
+    "unrelatedTabsTouched": false
+  },
+  "liveChat": {
+    "status": "PASS",
+    "assistant": "existing default customer intake assistant; not a newly built customer agent",
+    "uiModelLabel": "سريع / Fast",
+    "mappedModel": "openai/gpt-oss-20b",
+    "modelMappingBasis": "known deployed product mapping; browser exposes product label",
+    "question": "Help me outline a synthetic retail service issue brief. I have not supplied a company policy. What facts should I provide? Do not propose an internal request or contact anyone.",
+    "responseSummary": "Asked for product/service category, issue type, timeline, applicable policy if any, and desired outcome; then asked which details can be supplied.",
+    "typedUiLabel": "مهمتك — معلومات قدمتها",
+    "basisUiLabel": "اقتراح، وليس حقيقة مؤكدة عن الشركة.",
+    "inventedCompanyPolicyObserved": false,
+    "citationsObserved": false,
+    "externalActionClaimObserved": false,
+    "onlyPersistentAuditAction": "one ordinary synthetic private conversation turn",
+    "screenshot": "production-live-chat.png"
+  },
+  "history": {
+    "status": "PASS",
+    "method": "Hard refresh of same dedicated tab; asynchronous history loading completed; exact synthetic question, exact response and saved-history summary reappeared.",
+    "sameConversationRestored": true,
+    "observation": "An immediate locator wait during loading timed out; resolved subsequent UI state confirmed persisted full turn.",
+    "screenshot": "production-live-history.png"
+  },
+  "builder": {
+    "describe": "PASS",
+    "review": "PASS",
+    "templateSelected": "ServiceFlow",
+    "templatesVisible": [
+      "KnowledgeGrid",
+      "ServiceFlow"
+    ],
+    "modelChoicesVisible": 3,
+    "fieldsReviewed": [
+      "purpose",
+      "name",
+      "template",
+      "language",
+      "model",
+      "instructions",
+      "local sample test checklist",
+      "permissions"
+    ],
+    "createSubmitted": false,
+    "productionAgentCreation": "NOT TESTED",
+    "newlyBuiltKnowledgeGridPath": "NOT TESTED",
+    "screenshot": "production-builder-review.png"
+  },
+  "publicVisualSample": [
+    {
+      "url": "https://vzero-nine-beryl.vercel.app/services/enterprise-knowledge",
+      "viewport": {
+        "height": 844,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "audit-visual/service-mobile-390.png"
+    },
+    {
+      "url": "https://vzero-nine-beryl.vercel.app/solutions/knowledge",
+      "viewport": {
+        "height": 844,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "audit-visual/solution-mobile-390.png"
+    },
+    {
+      "url": "https://vzero-nine-beryl.vercel.app/industries",
+      "selected": "Retail and commerce",
+      "viewport": {
+        "height": 844,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "audit-visual/industries-retail-mobile-390.png"
+    },
+    {
+      "url": "https://vzero-nine-beryl.vercel.app/industries",
+      "selected": "Retail and commerce",
+      "viewport": {
+        "height": 1000,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "audit-visual/industries-retail-desktop-1440.png"
+    }
+  ],
+  "scopeLimits": [
+    "Not an every-route visual audit or human comprehension test.",
+    "No new source, internal proposal, private brief, agent, publication, fixture account or login created.",
+    "No existing personal assistant or unrelated private history/source content inspected.",
+    "No settings, credentials, permissions, global window geometry, app code, stack or deployment changed.",
+    "Builder creation was locally covered for ServiceFlow previously; newly built KnowledgeGrid exact-template coverage remains limited."
+  ]
+}
