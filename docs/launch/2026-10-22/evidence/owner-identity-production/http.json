@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "environment": "PRODUCTION",
+  "source": "87db497712f99e35381ea90f26e6490574105944",
+  "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+  "recordedAt": "2026-10-22T03:46:39.946163+03:00",
+  "pages": [
+    {
+      "route": "/about",
+      "http": 200,
+      "finalUrl": "https://vzero-nine-beryl.vercel.app/about",
+      "officialIdentityAndContacts": "PASS",
+      "exactBio": "PASS",
+      "manualLinks": "PASS_READ_ONLY_NO_ACTIVATION",
+      "direction": "ltr",
+      "personalIndependentBranding": "ABSENT_IN_MAIN"
+    },
+    {
+      "route": "/ar/about",
+      "http": 200,
+      "finalUrl": "https://vzero-nine-beryl.vercel.app/ar/about",
+      "officialIdentityAndContacts": "PASS",
+      "exactBio": "PASS",
+      "manualLinks": "PASS_READ_ONLY_NO_ACTIVATION",
+      "direction": "rtl",
+      "personalIndependentBranding": "ABSENT_IN_MAIN"
+    },
+    {
+      "route": "/contact",
+      "http": 200,
+      "finalUrl": "https://vzero-nine-beryl.vercel.app/contact",
+      "officialIdentityAndContacts": "PASS",
+      "exactBio": "NOT_APPLICABLE",
+      "manualLinks": "PASS_READ_ONLY_NO_ACTIVATION",
+      "direction": "ltr",
+      "personalIndependentBranding": "ABSENT_IN_MAIN"
+    },
+    {
+      "route": "/ar/contact",
+      "http": 200,
+      "finalUrl": "https://vzero-nine-beryl.vercel.app/ar/contact",
+      "officialIdentityAndContacts": "PASS",
+      "exactBio": "NOT_APPLICABLE",
+      "manualLinks": "PASS_READ_ONLY_NO_ACTIVATION",
+      "direction": "rtl",
+      "personalIndependentBranding": "ABSENT_IN_MAIN"
+    }
+  ],
+  "google": {
+    "url": "https://vzero-nine-beryl.vercel.app/googleca466862db14ea8e.html",
+    "http": 200,
+    "bytes": 53,
+    "sha256": "acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291",
+    "trailingNewline": false
+  },
+  "customDomain": "NOT_ATTACHED_TO_PROJECT_NOT_REQUESTED_OR_CHANGED",
+  "emailDelivery": "NOT_TESTED",
+  "formsOrLinksSubmitted": false,
+  "modelOrDatabaseTestsRepeated": false
+}

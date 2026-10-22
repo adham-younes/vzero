@@ -1,0 +1,29 @@
+{
+  "state": "ASSIGNMENT_LIVE_CANONICAL_FOLLOWUP_PENDING",
+  "source": "87db497712f99e35381ea90f26e6490574105944",
+  "checks": [
+    {
+      "url": "https://agynexa.si/about",
+      "http": 200,
+      "location": null,
+      "tlsValidation": "PASS_DEFAULT_TRUST_NO_BYPASS",
+      "newOfficialIdentityPresent": true
+    },
+    {
+      "url": "https://www.agynexa.si/about",
+      "http": 308,
+      "location": "https://agynexa.si/about",
+      "tlsValidation": "PASS_DEFAULT_TRUST_NO_BYPASS",
+      "newOfficialIdentityPresent": false
+    },
+    {
+      "url": "https://agynexa.si/googleca466862db14ea8e.html",
+      "http": 200,
+      "location": null,
+      "tlsValidation": "PASS_DEFAULT_TRUST_NO_BYPASS",
+      "bytes": 53,
+      "sha256": "acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291",
+      "exact": true
+    }
+  ]
+}

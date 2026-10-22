@@ -1,0 +1,20 @@
+{
+  "status": "READY",
+  "project": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+  "source": "87db497712f99e35381ea90f26e6490574105944",
+  "id": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+  "target": "production",
+  "aliases": [
+    "vzero-nine-beryl.vercel.app",
+    "vzero-adhamlouxors-projects.vercel.app",
+    "vzero-git-main-adhamlouxors-projects.vercel.app"
+  ],
+  "aliasError": null,
+  "sourceType": "git",
+  "url": "vzero-3bfp6owa9-adhamlouxors-projects.vercel.app",
+  "buildSucceeded": true,
+  "rollback": {
+    "source": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "deployment": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb"
+  }
+}

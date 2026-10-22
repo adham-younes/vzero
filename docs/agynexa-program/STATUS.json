@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T03:44:30.007123+03:00",
+  "updated_at": "2026-10-22T04:02:56.929495+03:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,17 +14,18 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
-    "reviewed_head": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
-    "merge_commit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/38",
+    "implementation_commit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
+    "google_only_commit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
+    "reviewed_head": "23dd1517dd44bf7556194b78caba173153bbcd82",
+    "merge_commit": "87db497712f99e35381ea90f26e6490574105944",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/39",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-22",
-    "status_at_verification": "READY_PRODUCTION_PRIMARY_HEALTH_AND_DELIVERED_ASSET_VERIFIED",
-    "deployment_id": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
-    "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
-    "evidence": "../launch/2026-10-22/evidence/remaining-acceptance/final-deployment.json"
+    "status_at_verification": "READY_PRODUCTION_SOURCE_ALIAS_EXACT_GOOGLE_BYTES_AND_FOUR_AFFECTED_BROWSER_SAMPLES_PASS",
+    "deployment_id": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md",
+    "evidence": "../launch/2026-10-22/evidence/owner-identity-production/deployment.json"
   },
   "stage_status": [
     {
@@ -100,11 +101,16 @@
     "route_files": 29
   },
   "last_product_checks": {
-    "vercel_build_typescript": "PASS",
-    "deployed_studio_module": "REMOVED_API_CONTROLS_ABSENT_CHAT_PUBLISH_PRESENT",
-    "authenticated_browser_repeated": false,
+    "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
+    "unchanged_candidate_local_build": "PREVIOUS_PASS_REUSED",
+    "local_affected_samples": "PREVIOUS_8_PASS_REUSED",
+    "production_affected_http_pages": 4,
+    "production_browser_samples": 4,
+    "google_exact_bytes": "PASS_200_53_BYTES_SHA256_NO_NEWLINE",
+    "protected_paths_unchanged": 12,
     "full_suite_repeated": false,
-    "evidence": "agent-studio/evidence/api-ui-removal/production.json"
+    "model_tests_repeated": false,
+    "evidence": "../launch/2026-10-22/evidence/owner-identity-production/browser.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -139,12 +145,12 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-vercel-access-receipt",
-    "baseline_main": "0a166b4",
+    "branch": "codex/agynexa-owner-identity-approval",
+    "baseline_main": "87db497712f99e35381ea90f26e6490574105944",
     "product_code_changed": false,
     "database_changed": false,
-    "receipt": "releases/VERCEL-ACCESS-2026-10-20.md",
-    "scope": "Record successful direct Vercel project/alias/deployment reads after the consolidated report; no new runtime verification."
+    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md",
+    "scope": "Final post-release evidence saved locally in Git and merged PR body; no docs-only production deployment."
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -161,7 +167,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Consenting-reader comprehension and focused remaining adversarial/edge acceptance; actual legal/commercial/retention/recovery owner decisions. Representative live private journey/revocation and template permissions correction verified.",
+  "next_action": "Remaining actual controller/jurisdiction/processing text approval, retention/backups/deletion, commercial offer/cost/support, recovery/restricted rollout and consenting-reader comprehension. Custom domain not attached; no DNS action authorized.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -193,16 +199,17 @@
     "scope_decision": "Re-read for C–E: limited templates, common runtime, RLS, idempotency, approvals and real evidence. No RFQ pivot or ten standalone products."
   },
   "previous_verified_product_release": {
-    "implementation_commit": "0d351300b2c619c326f774b0a6c977d7bc68c895",
-    "merge_commit": "f58335441e8898e26e7710e6667cb4255fd7bb7b",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/24",
+    "implementation_commit": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
+    "reviewed_head": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
+    "merge_commit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/38",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
-    "verified_date": "2026-10-20",
-    "status_at_verification": "VERCEL_SUCCESS_PUBLIC_PAGES_PASS_INTERACTIVE_CHAT_VERIFIED_LOCALLY",
-    "deployment_inspector_url": "https://vercel.com/adhamlouxors-projects/vzero/7z3egyNdjf1KUkz948XuJ1H6wPd1",
-    "receipt": "agent-studio/CHAT-FIX.md",
-    "evidence": "agent-studio/evidence/chat-fix/production.json"
+    "verified_date": "2026-10-22",
+    "status_at_verification": "READY_PRODUCTION_PRIMARY_HEALTH_AND_DELIVERED_ASSET_VERIFIED",
+    "deployment_id": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
+    "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
+    "evidence": "../launch/2026-10-22/evidence/remaining-acceptance/final-deployment.json"
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
@@ -485,7 +492,7 @@
     "candidate_branch": "codex/agynexa-owner-identity-approval",
     "candidate_identity_commit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
     "candidate_google_commit": "cec7f7d",
-    "candidate_status": "APPROVED_UNCHANGED_RELEASE_PENDING",
+    "candidate_status": "PUBLISHED_VERIFIED_PR39",
     "receipt": "../launch/2026-10-22/OWNER-IDENTITY-REVIEW.md",
     "evidence": "../launch/2026-10-22/evidence/owner-identity-local.json",
     "legal_registration": "INCOMPLETE_PER_OWNER_NO_PUBLIC_REGISTRATION_ASSERTION_ADDED",
@@ -499,12 +506,15 @@
       "jurisdiction/controller/legal processing facts"
     ],
     "approval": "Direct human «موافق-نفذ» after final reviewed candidate gate",
-    "release_receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md"
+    "release_receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md",
+    "publication_completed": true,
+    "current_source": "87db497712f99e35381ea90f26e6490574105944",
+    "current_deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg"
   },
   "completion_gap_closure_2026_10_22": {
     "matrix": "../launch/2026-10-22/evidence/completion-audit/completion-matrix.json",
     "production": "PR38/ceeb7af/dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb CURRENT_METADATA_READY",
-    "local_identity_gsc": "LOCAL_VERIFIED_NOT_PUBLISHED",
+    "local_identity_gsc": "NOW_PUBLISHED_VERIFIED_PR39",
     "identity": "Confirmed founder/CEO/name/email/phone; registration incomplete",
     "legal_remaining": "Controller/operator role,jurisdiction/address,processing-text/legal approval unanswered",
     "production_recovery_click": "PASS_ONE_PRODUCTION_CLICK_EXISTING_OPTIONAL_SOURCES_EMPTY_PRIVATE_EDITOR_NO_AUTOWRITE",
@@ -512,12 +522,13 @@
     "new_model_calls": 1,
     "new_fixtures": "1_PRIVATE_ASSISTANT_NO_ACCOUNT_EXACT_CLEANED_ALL8_ZERO",
     "tests_repeated": "NONE",
-    "publishing": "HOLD_FINAL_OWNER_APPROVAL",
+    "publishing": "EXPLICIT_OWNER_APPROVAL_RECEIVED_AND_EXECUTED_PR39",
     "evidence": "../launch/2026-10-22/evidence/remaining-acceptance/recovery-production-click.json",
-    "prior_missing_tab_finding": "PRESERVED_NOT_CONFLATED_WITH_BROWSER_AUTH_UNAVAILABILITY"
+    "prior_missing_tab_finding": "PRESERVED_NOT_CONFLATED_WITH_BROWSER_AUTH_UNAVAILABILITY",
+    "historical_scope": "Pre-PR39 gap closure retained; production and local-only publication fields superseded by current_product_release and owner_identity_release_2026_10_22"
   },
   "owner_identity_release_2026_10_22": {
-    "status": "APPROVED_RELEASE_PENDING",
+    "status": "PUBLISHED_PRODUCTION_VERIFIED",
     "approval": "موافق-نفذ",
     "branch": "codex/agynexa-owner-identity-approval",
     "baseline_main": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
@@ -525,6 +536,41 @@
     "google_only_commit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
     "candidate_unchanged_since_local_checks": true,
     "custom_domain": "NOT_ATTACHED_TO_EXACT_PROJECT_NO_DOMAIN_ACTION",
-    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md"
+    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md",
+    "reviewed_head": "23dd1517dd44bf7556194b78caba173153bbcd82",
+    "source": "87db497712f99e35381ea90f26e6490574105944",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/39",
+    "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+    "google": {
+      "http": 200,
+      "bytes": 53,
+      "sha256": "acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291",
+      "trailing_newline": false
+    },
+    "http_pages": 4,
+    "browser_samples": 4,
+    "browser": "PASS",
+    "protected_source_dependencies": "UNCHANGED",
+    "email_delivery": "NOT_TESTED",
+    "new_model_calls": 0,
+    "new_database_changes": 0,
+    "active_owned_browser_tab": false,
+    "final_receipt_publication": "LOCAL_GIT_COMMIT_AND_MERGED_PR_BODY_NO_DOCS_ONLY_REDEPLOY"
+  },
+  "domain_cutover_2026_10_22": {
+    "status": "ASSIGNMENT_LIVE_CANONICAL_RELEASE_PENDING",
+    "approval": "نفذ",
+    "old_project": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+    "target_project": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+    "domains": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ],
+    "association": "BOTH_MOVED_VERIFIED_PRODUCTION_OLD_DETACHED",
+    "www_redirect": "308_TO_APEX_PRESERVED",
+    "dns": "ALL_QUERIED_RECORDS_UNCHANGED_AUTHORITATIVE",
+    "source_commit": "3f11bbee37662c716abc2fbf58b0e90c9cc67675",
+    "receipt": "../launch/2026-10-22/DOMAIN-CUTOVER.md",
+    "email_infrastructure": "SEPARATE_LOCAL_STAGE_NOT_ACTIVATED"
   }
 }

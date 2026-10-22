@@ -411,5 +411,7 @@
     "cache": "private, no-store",
     "sitemap": false
   },
-  "inventory_reviewed_against": "4799a2e"
+  "inventory_reviewed_against": "4799a2e",
+  "canonical_origin": "https://agynexa.si",
+  "legacy_origin_compatibility": "https://vzero-nine-beryl.vercel.app"
 }

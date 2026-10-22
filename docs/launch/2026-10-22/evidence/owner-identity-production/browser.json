@@ -1,0 +1,229 @@
+{
+  "recordedAt": "2026-10-22T00:50:36.477Z",
+  "status": "PASS",
+  "deployment": {
+    "source": "87db497712f99e35381ea90f26e6490574105944",
+    "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+    "alias": "vzero-nine-beryl.vercel.app",
+    "provenance": "Lead verified READY production deployment and exact alias match before these browser observations."
+  },
+  "scope": "Four affected public browser samples only; one owned IAB tab, no owner Chrome tabs. English desktop1440 and Arabic mobile390. No HTTP suite repeated.",
+  "samples": [
+    {
+      "route": "/about",
+      "url": "https://vzero-nine-beryl.vercel.app/about",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "lang": "en",
+      "dir": "ltr",
+      "documentScrollWidth": 1440,
+      "checks": {
+        "fullOfficialNameVisible": true,
+        "positionVisible": true,
+        "professionalTitleVisible": true,
+        "allManualLinkHrefsExact": true,
+        "emailPhoneLTR": true,
+        "exactApprovedBioVisible": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "visibleManualLinks": [
+        {
+          "dir": "ltr",
+          "href": "mailto:adham@agynexa.si",
+          "text": "adham@agynexa.si"
+        },
+        {
+          "dir": "ltr",
+          "href": "tel:+201110093730",
+          "text": "+201110093730"
+        },
+        {
+          "dir": null,
+          "href": "https://wa.me/201110093730",
+          "text": "Open WhatsApp"
+        }
+      ],
+      "computedDesign": {
+        "bodyBackground": "rgb(5, 5, 5)",
+        "cardBackground": "rgb(11, 11, 11)",
+        "cardBorderRadius": "10px",
+        "positionColor": "rgb(16, 185, 129)"
+      },
+      "screenshot": "about-1440.png",
+      "status": "PASS",
+      "capture": "Full-page public main screenshot",
+      "visualInspection": "PASS — inspected saved screenshot; black/green existing panel/typography; no horizontal truncation in supported capture."
+    },
+    {
+      "route": "/contact",
+      "url": "https://vzero-nine-beryl.vercel.app/contact",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "lang": "en",
+      "dir": "ltr",
+      "documentScrollWidth": 1440,
+      "checks": {
+        "fullOfficialNameVisible": true,
+        "positionVisible": true,
+        "professionalTitleVisible": true,
+        "allManualLinkHrefsExact": true,
+        "emailPhoneLTR": true,
+        "exactApprovedBioVisible": "not applicable on Contact",
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "visibleManualLinks": [
+        {
+          "dir": "ltr",
+          "href": "mailto:adham@agynexa.si",
+          "text": "adham@agynexa.si"
+        },
+        {
+          "dir": "ltr",
+          "href": "tel:+201110093730",
+          "text": "+201110093730"
+        },
+        {
+          "dir": null,
+          "href": "https://wa.me/201110093730",
+          "text": "Open WhatsApp"
+        }
+      ],
+      "computedDesign": {
+        "bodyBackground": "rgb(5, 5, 5)",
+        "cardBackground": "rgb(11, 11, 11)",
+        "cardBorderRadius": "10px",
+        "positionColor": "rgb(16, 185, 129)"
+      },
+      "screenshot": "contact-1440.png",
+      "status": "PASS",
+      "capture": "Full-page public main screenshot",
+      "visualInspection": "PASS — inspected saved screenshot; black/green existing panel/typography; no horizontal truncation in supported capture."
+    },
+    {
+      "route": "/ar/about",
+      "url": "https://vzero-nine-beryl.vercel.app/ar/about",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "lang": "ar",
+      "dir": "rtl",
+      "documentScrollWidth": 390,
+      "checks": {
+        "fullOfficialNameVisible": true,
+        "positionVisible": true,
+        "professionalTitleVisible": true,
+        "allManualLinkHrefsExact": true,
+        "emailPhoneLTR": true,
+        "exactApprovedBioVisible": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "visibleManualLinks": [
+        {
+          "dir": "ltr",
+          "href": "mailto:adham@agynexa.si",
+          "text": "adham@agynexa.si"
+        },
+        {
+          "dir": "ltr",
+          "href": "tel:+201110093730",
+          "text": "+201110093730"
+        },
+        {
+          "dir": null,
+          "href": "https://wa.me/201110093730",
+          "text": "فتح واتساب"
+        }
+      ],
+      "computedDesign": {
+        "bodyBackground": "rgb(5, 5, 5)",
+        "cardBackground": "rgb(11, 11, 11)",
+        "cardBorderRadius": "10px",
+        "positionColor": "rgb(16, 185, 129)"
+      },
+      "screenshot": "ar-about-390.png",
+      "status": "PASS",
+      "capture": "Supported uncropped viewport screenshot via getScreenshot; full-page RTL capture was unusable",
+      "visualInspection": "PASS — inspected saved screenshot; black/green existing panel/typography; no horizontal truncation in supported capture."
+    },
+    {
+      "route": "/ar/contact",
+      "url": "https://vzero-nine-beryl.vercel.app/ar/contact",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "lang": "ar",
+      "dir": "rtl",
+      "documentScrollWidth": 390,
+      "checks": {
+        "fullOfficialNameVisible": true,
+        "positionVisible": true,
+        "professionalTitleVisible": true,
+        "allManualLinkHrefsExact": true,
+        "emailPhoneLTR": true,
+        "exactApprovedBioVisible": "not applicable on Contact",
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "visibleManualLinks": [
+        {
+          "dir": "ltr",
+          "href": "mailto:adham@agynexa.si",
+          "text": "adham@agynexa.si"
+        },
+        {
+          "dir": "ltr",
+          "href": "tel:+201110093730",
+          "text": "+201110093730"
+        },
+        {
+          "dir": null,
+          "href": "https://wa.me/201110093730",
+          "text": "فتح واتساب"
+        }
+      ],
+      "computedDesign": {
+        "bodyBackground": "rgb(5, 5, 5)",
+        "cardBackground": "rgb(11, 11, 11)",
+        "cardBorderRadius": "10px",
+        "positionColor": "rgb(16, 185, 129)"
+      },
+      "screenshot": "ar-contact-390.png",
+      "status": "PASS",
+      "capture": "Supported uncropped viewport screenshot via getScreenshot; full-page RTL capture was unusable",
+      "visualInspection": "PASS — inspected saved screenshot; black/green existing panel/typography; no horizontal truncation in supported capture."
+    }
+  ],
+  "captureLimitation": "IAB fullPage screenshot path horizontally clipped RTL main despite document/card geometry and normal viewport rendering being correct. Failed artifacts retained only in work/owner-identity-capture-diagnostics. Final Arabic artifacts use supported390x844 viewport captures and are visually correct; they show upper page/card, while exact complete biography text was checked in rendered DOM, not claimed fully present within that initial viewport image.",
+  "contactLinksActivated": false,
+  "formsChangedOrSubmitted": false,
+  "loginAuthOrAccountActions": 0,
+  "modelOrDatabaseActions": 0,
+  "ownerTabsInspectedOrTouched": false,
+  "viewportOverrideReset": true,
+  "ownedTabClosed": true,
+  "activeOwnedBrowserTab": false,
+  "browserTabId": "2",
+  "applicationSourceEdits": false,
+  "pushMergeOrDeploymentPerformedByThisWorker": false,
+  "leadIndependentVisualReview": {
+    "status": "PASS_REPRESENTATIVE",
+    "screenshots": [
+      "about-1440.png",
+      "ar-about-390.png"
+    ],
+    "limit": "Arabic viewport image shows upper page/card; complete bio and contact hrefs independently established by rendered DOM and live HTTP. IAB full-page RTL capture limitation retained."
+  }
+}

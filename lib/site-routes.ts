@@ -1,7 +1,7 @@
 import {headings,solutions,summary} from './agynexa'
 import services from './service-catalog.json'
 import pages from './program-pages.json'
-export const siteUrl='https://vzero-nine-beryl.vercel.app'
+export const siteUrl='https://agynexa.si'
 export const sitePaths=['',...Object.keys(headings),...solutions.map(s=>`solutions/${s.slug}`),...services.map(s=>`services/${s.slug}`),'services/solutions','privacy','terms']
 export function parseSitePath(parts:string[]){const ar=parts[0]==='ar';const path=ar?parts.slice(1):parts;return {ar,path,valid:sitePaths.includes(path.join('/'))}}
 const routeCopy:Record<string,{title:readonly string[];description:readonly string[]}>= {
