@@ -386,3 +386,16 @@ A20/S6 closure / إغلاق A20/S6: **OPEN — no human result recorded / مفت
 Exact excerpts were taken from the deployed source snapshot `fcd6175efb0f263265d97b5df76774ee268fdac4` (`fcd6175`), using the existing production URL `https://vzero-nine-beryl.vercel.app`. Source line links are pinned to that commit. Product names, identifiers and capability limits are preserved. Page links and source excerpts are reference material for this review, not evidence that anyone has completed it. No product copy or production state was changed to prepare this form.
 
 نُقلت الاقتباسات حرفيًا من نسخة المصدر المنشورة `fcd6175efb0f263265d97b5df76774ee268fdac4` (`fcd6175`) باستخدام عنوان الإنتاج الحالي. روابط أسطر المصدر مثبتة على هذا الإصدار. حُفظت أسماء المنتجات والمعرّفات وحدود القدرات. روابط الصفحات والاقتباسات مراجع للمراجعة، وليست دليلًا على أن شخصًا أكملها. لم يتغير محتوى المنتج أو حالة الإنتاج لتجهيز النموذج.
+
+
+## Current private-chat recovery addendum — PR38
+
+When a current successful private customer answer flags a missing fact, this additional product guidance now appears once. Include it when answering the existing KnowledgeGrid/ServiceFlow button-result and human-decision fields; the30response fields above remain blank.
+
+**EN:** “The missing point needs current approved text. Ask the source owner for the relevant text, or add text you are authorized to use. Review it in Optional sources before submitting; nothing is added or shared automatically.” Button: “Review an approved source”.
+
+**AR:** «المعلومة الناقصة تحتاج نصًا معتمدًا ومحدّثًا. اطلب النص المتعلق بالمعلومة الناقصة من مسؤول المصدر، أو أضف نصًا مسموحًا لك باستخدامه. راجعه في «مصادر اختيارية» قبل الإضافة؛ لا يُضاف أو يُشارك شيء تلقائيًا.» الزر: «مراجعة مصدر معتمد».
+
+Button outcome: opens the existing Optional sources editor for this private assistant; no source is saved, shared, contacted or published by opening it. Existing explicit Add source submission is separate. Facts/citations and nullable nextQuestion are unchanged. [Exact new source](https://github.com/adham-younes/vzero/blob/ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca/%40components/studio-evidence-recovery.tsx#L10) · [existing-tab callback](https://github.com/adham-younes/vzero/blob/ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca/%40components/studio-agent.tsx#L61).
+
+Status remains **NOT_YET_REVIEWED_BY_HUMAN**.

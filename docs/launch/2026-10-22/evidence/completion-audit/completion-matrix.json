@@ -69,9 +69,9 @@
       "id": "A9",
       "requirement": "Mixed sourced fact/draft and semantic entailment",
       "implementation": "IMPLEMENTED",
-      "coverage": "WEAK",
-      "evidence": "chat-policy.ts; launch-contract.cjs; provider-release-smoke.mjs; liveKG exact17-day/proof/unknown representative",
-      "limit": "One actual KG source-entailment example now passes. Still no adversarial valid-citation-ID/unsupported-statement rejection evaluation or current injected-source attack sample."
+      "coverage": "VERIFIED_REPRESENTATIVE_WITH_CAPTURED_UI_RECOVERY",
+      "evidence": "remaining-acceptance/semantic-final-live.json,recovery-ui.json; four actual Fast turns",
+      "limit": "Cited13-day/receipt fact, unknown opened eligibility and unsupported77-day rejection pass. Model-authored next action remains partial;14 local captured-response render/wiring checks verify private UI source-owner/current-text recovery. No general entailment guarantee or new live browser guide interaction is claimed."
     },
     {
       "id": "A10",
@@ -101,9 +101,9 @@
       "id": "A13",
       "requirement": "Prompt injection/private-prompt extraction",
       "implementation": "IMPLEMENTED",
-      "coverage": "MISSING_EVIDENCE",
-      "evidence": "chat-policy.ts hierarchy; source treated as data",
-      "limit": "No current release receipt for adversarial injected source or prompt-extraction model sample. Prompt text and absent tools are supporting code evidence only."
+      "coverage": "VERIFIED_LIVE_REPRESENTATIVE",
+      "evidence": "remaining-acceptance/semantic-final-live.json and semantic-fixture-cleanup.json",
+      "limit": "One injected private292-byte synthetic source/nonsecret fixture canary,4actual Fast turns: no canary disclosure/no asserted77-day policy/no external action. Source instruction remains quoted data. Representative evidence, not general injection immunity; exact fixture removed/allremaining0."
     },
     {
       "id": "A14",
@@ -158,8 +158,8 @@
       "requirement": "Buyer comprehension and EN/AR factual parity",
       "implementation": "IMPLEMENTED_COPY",
       "coverage": "INCOMPLETE_HUMAN_REVIEW_PREPARED",
-      "evidence": "CONTENT-LEDGER.md; HUMAN-COMPREHENSION-REVIEW.md",
-      "limit": "Six bilingual real surface groups/30 blank answer fields prepared. NOT_YET_REVIEWED_BY_HUMAN. Automated structure/model review cannot close this gate."
+      "evidence": "HUMAN-COMPREHENSION-REVIEW.md; recovery UI addendum",
+      "limit": "Six bilingual real surface groups/30blank answers prepared including new contextual source recovery. NOT_YET_REVIEWED_BY_HUMAN; structural/model review cannot close it."
     },
     {
       "id": "A21",
@@ -302,8 +302,8 @@
       "requirement": "Production phase deploy/documentation/rollback",
       "implementation": "IMPLEMENTED",
       "coverage": "VERIFIED",
-      "evidence": "PR33/35/36; remaining-acceptance build and deployment receipt",
-      "limit": "PR36 reviewed5efed4f mergedf45c836; primary production READY dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS and health200/all3ok. Compatible migrations/grants retained; no docs-only deployment."
+      "evidence": "PR33/35/36/37/38; remaining-acceptance deployment/build receipts",
+      "limit": "PR38 reviewedb256a80 mergedceeb7af; primaryREADY dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb, exactalias/health200/all3ok and new component asset delivered. No docs-only deployment; compatible history grants retained."
     },
     {
       "id": "L1",
@@ -360,9 +360,12 @@
   "productionUiDeleteHistoryRevocation": "PASS",
   "completionAuditFinalReceiptPublication": "Outputs + local repository ledger + merged PR35 body; no docs-only production redeploy",
   "continuation": {
-    "product_pr": "https://github.com/adham-younes/vzero/pull/36",
-    "merge": "f45c83609f919b25f7d59255c5abb430d96d827a",
-    "production": "dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS",
-    "semantic_affected_rerun": "PENDING"
+    "product_pr": "https://github.com/adham-younes/vzero/pull/38",
+    "merge": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "production": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
+    "semantic_affected_rerun": "FOUR_TOTAL_LIVE_TURNS_PRESERVED_MODEL_GUIDANCE_PARTIAL_PRIVATE_UI_RECOVERY_LOCALLY_VERIFIED",
+    "production_fixture_cleanup": "ALL8_REMAINING_COUNTS0",
+    "human_review": "NOT_YET_REVIEWED_BY_HUMAN",
+    "production_status": "READY_PRODUCTION_PRIMARY_HEALTH_AND_DELIVERED_ASSET_VERIFIED"
   }
 }

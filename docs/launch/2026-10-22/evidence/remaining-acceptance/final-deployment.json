@@ -1,11 +1,11 @@
 {
-  "status": "READY_PRODUCTION_PRIMARY_AND_HEALTH_VERIFIED",
-  "pullRequest": "https://github.com/adham-younes/vzero/pull/37",
-  "reviewedHead": "7b8dd042a08fd2d6c15a67da55038e0c0dd43801",
-  "mergeCommit": "cc958165e523a2b825270f1385bdb73297f768ac",
-  "deploymentId": "dpl_2ic1SxeD7egduTM57VDT8Tj5UVPp",
+  "status": "READY_PRODUCTION_PRIMARY_HEALTH_AND_DELIVERED_ASSET_VERIFIED",
+  "pullRequest": "https://github.com/adham-younes/vzero/pull/38",
+  "reviewedHead": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
+  "mergeCommit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+  "deploymentId": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
   "primary": "https://vzero-nine-beryl.vercel.app",
-  "previewBuild": "READY",
+  "candidateBuild": "READY",
   "productionBuild": "READY",
   "primaryAliasMatchesMerge": true,
   "health": {
@@ -17,7 +17,18 @@
       "secretKey": "ok"
     }
   },
-  "scope": "customer policy only; nextQuestion nullable; no automatic canned fallback; model inference still required for usefulness acceptance",
-  "affectedLiveResult": "PENDING",
-  "noDocsOnlyDeployment": true
+  "productionRecoveryAsset": "PASS_component_copy_and_button_in_referenced_current_Studio_JS",
+  "privateRecoveryVerification": "14_captured_response_React_render_and_actual_parent_callback_cases_plus_2_affected_copy_checks_PASS",
+  "privateRecoveryLiveAuthenticatedBrowser": "NOT_RUN_NO_FIXTURE_RECREATED_NO_EXTRA_MODEL_CALL",
+  "actualModelSemanticResult": "CORRECT_SOURCE_AND_NONDISCLOSURE_PASS_MODEL_ACTION_GUIDANCE_PARTIAL_PRESERVED",
+  "productRecovery": "CONTEXTUAL_PRIVATE_UI_EXISTING_APPROVED_SOURCE_CONTROL",
+  "questionNullable": true,
+  "automaticCannedQuestion": false,
+  "newModelsForUIFix": 0,
+  "syntheticProductionFixtureCleanup": "PASS_ALL8_REMAINING_COUNTS0",
+  "localStack": "STOPPED",
+  "humanComprehension": "NOT_YET_REVIEWED_BY_HUMAN",
+  "legalCommercialRetentionRecovery": "OWNER_DECISION",
+  "domainDNS": "EXCLUDED",
+  "noDocsOnlyProductionDeploy": true
 }

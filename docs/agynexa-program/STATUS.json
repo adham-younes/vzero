@@ -14,17 +14,17 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "138382375364232baf688f9bfa23bb1ffeca963b",
-    "reviewed_head": "6b37b01593110c2801787e7b90cc70112c956939",
-    "merge_commit": "e48dc748feeae3511b76bb679ec30b0a1b0c8729",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/33",
+    "implementation_commit": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
+    "reviewed_head": "b256a802d7e1e71b79cab04a1a7a6221f221590d",
+    "merge_commit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/38",
     "pull_request_state": "MERGED",
     "domain": "https://vzero-nine-beryl.vercel.app",
     "verified_date": "2026-10-22",
-    "status_at_verification": "READY_PRODUCTION_SCOPED_LIVE_CHECKS_PASS_AUTHENTICATED_BROWSER_NOT_VERIFIED",
-    "deployment_id": "dpl_CEFfHq2ur8D9HmiHf92iD8vrkzFa",
-    "receipt": "../launch/2026-10-22/RELEASE.md",
-    "evidence": "../launch/2026-10-22/evidence/production.json"
+    "status_at_verification": "READY_PRODUCTION_PRIMARY_HEALTH_AND_DELIVERED_ASSET_VERIFIED",
+    "deployment_id": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
+    "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
+    "evidence": "../launch/2026-10-22/evidence/remaining-acceptance/final-deployment.json"
   },
   "stage_status": [
     {
@@ -421,7 +421,7 @@
     "production_authorized": true,
     "production_changed": true,
     "retention_policy": "NO_NEW_TIMER_OR_PURGE_APPROVED",
-    "next": "Consenting-reader comprehension and focused remaining adversarial/edge acceptance; actual legal/commercial/retention/recovery owner decisions. Representative live private journey/revocation and template permissions correction verified.",
+    "next": "Consenting-reader comprehension/A20/S6 and actual operating/legal/commercial/retention/recovery owner facts. Scoped engineering gaps have recorded local/live evidence plus shipped private source-recovery control; model-authored action guidance stays explicitly partial.",
     "gates": {
       "build": "PASS_LOCAL_CANDIDATE_AND_MERGED_GIT_PRODUCTION",
       "contracts": "PASS11 + provider fault + long-output boundary",
@@ -448,7 +448,7 @@
     },
     "remaining_acceptance_continuation": {
       "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
-      "status": "LOCAL_GAPS_PASS_PRIVATE_UI_RECOVERY_CAPTURED_RENDER_PASS_AWAIT_DEPLOYMENT",
+      "status": "DEPLOYED_SCOPED_LOCAL_GAPS_AND_CAPTURED_UI_RECOVERY_VERIFIED_HUMAN_OPERATING_GAPS_OPEN",
       "findings": [
         "Mixed business/private-extraction reply preserved secrecy but omitted useful business help",
         "Optional false model/conversationId/runId treated as absent"
@@ -464,9 +464,9 @@
         "ui_verified_groups": 11,
         "broad_green_suites_repeated": false
       },
-      "product_pr": "https://github.com/adham-younes/vzero/pull/36",
-      "merge_commit": "f45c83609f919b25f7d59255c5abb430d96d827a",
-      "production_deployment": "dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS",
+      "product_pr": "https://github.com/adham-younes/vzero/pull/38",
+      "merge_commit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+      "production_deployment": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
       "next_step_contract": {
         "scope": "customer missing-evidence private UI source-owner/current-text explanation plus existingknowledgebutton",
         "model_guidance": "PARTIAL_AFTER_FOUR_ACTUAL_TURNS_PRESERVED",
@@ -474,7 +474,7 @@
         "question_nullable": true,
         "automatic_model_question": "NONE",
         "new_model_or_fixture": "NONE",
-        "production": "PENDING_UI_RELEASE"
+        "production": "READY_DELIVERED_JS_CAPTURED_RENDER_CALLBACK_VERIFIED_NO_NEW_LIVE_CLICK"
       }
     }
   }

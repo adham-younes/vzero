@@ -1,0 +1,15 @@
+{
+  "environment": "unauthenticated actual production /studio HTML and referenced public static JS only",
+  "pageHttpStatus": 200,
+  "referencedScriptsChecked": 12,
+  "status": "PASS",
+  "matchedAssets": [
+    {
+      "url": "https://vzero-nine-beryl.vercel.app/_next/static/immutable/chunks/0dcqmf952ko2z.js",
+      "sha256": "7b6e4b5f24b032bc6585c17c56637551de0f75175e01432b0c8953140083f9bb",
+      "currentCopy": true,
+      "buttonCopy": true
+    }
+  ],
+  "limits": "Confirms corrected component copy is delivered in production JS; not a live authenticated interaction or source submission. No account/model/write request."
+}
