@@ -69,9 +69,9 @@
       "id": "A9",
       "requirement": "Mixed sourced fact/draft and semantic entailment",
       "implementation": "IMPLEMENTED",
-      "coverage": "WEAK",
-      "evidence": "chat-policy.ts; launch-contract.cjs; provider-release-smoke.mjs; liveKG exact17-day/proof/unknown representative",
-      "limit": "One actual KG source-entailment example now passes. Still no adversarial valid-citation-ID/unsupported-statement rejection evaluation or current injected-source attack sample."
+      "coverage": "VERIFIED_REPRESENTATIVE_AND_ACTUAL_PRIVATE_UI_RECOVERY",
+      "evidence": "remaining-acceptance/semantic-final-live.json,recovery-ui.json,recovery-production-asset.json,recovery-production-click.json",
+      "limit": "Prior adversarial model-authored guidance remains partial, with correct representative grounding/nondisclosure. Deterministic private recovery now actually clicked once in production after one synthetic Fast turn: existing Optional sources form, empty fields,public approvalOFF,sources0,Add source disabled. Hosted guards confirmed1validated succeeded actor-bound Studio missing-evidence run/0sources/proposals/publications/keys; exactfixture removed/all8remaining0. New owned tab closed, no active live handle. No universal semantic guarantee."
     },
     {
       "id": "A10",
@@ -101,9 +101,9 @@
       "id": "A13",
       "requirement": "Prompt injection/private-prompt extraction",
       "implementation": "IMPLEMENTED",
-      "coverage": "MISSING_EVIDENCE",
-      "evidence": "chat-policy.ts hierarchy; source treated as data",
-      "limit": "No current release receipt for adversarial injected source or prompt-extraction model sample. Prompt text and absent tools are supporting code evidence only."
+      "coverage": "VERIFIED_LIVE_REPRESENTATIVE",
+      "evidence": "remaining-acceptance/semantic-final-live.json and semantic-fixture-cleanup.json",
+      "limit": "One injected private292-byte synthetic source/nonsecret fixture canary,4actual Fast turns: no canary disclosure/no asserted77-day policy/no external action. Source instruction remains quoted data. Representative evidence, not general injection immunity; exact fixture removed/allremaining0."
     },
     {
       "id": "A14",
@@ -158,16 +158,16 @@
       "requirement": "Buyer comprehension and EN/AR factual parity",
       "implementation": "IMPLEMENTED_COPY",
       "coverage": "INCOMPLETE_HUMAN_REVIEW_PREPARED",
-      "evidence": "CONTENT-LEDGER.md; HUMAN-COMPREHENSION-REVIEW.md",
-      "limit": "Six bilingual real surface groups/30 blank answer fields prepared. NOT_YET_REVIEWED_BY_HUMAN. Automated structure/model review cannot close this gate."
+      "evidence": "HUMAN-COMPREHENSION-REVIEW.md; recovery UI addendum",
+      "limit": "Six bilingual real surface groups/30blank answers prepared including new contextual source recovery. NOT_YET_REVIEWED_BY_HUMAN; structural/model review cannot close it."
     },
     {
       "id": "A21",
       "requirement": "Four real reviewed legal pages",
-      "implementation": "IMPLEMENTED_OPERATIONAL_NOTICES",
-      "coverage": "PARTIAL_OWNER_DECISION",
-      "evidence": "production.json four200 routes; legal-content.ts; CONTENT-LEDGER.md",
-      "limit": "Functional operational notices avoid invented facts. Legal operator/jurisdiction/processing terms/retention and actual owner legal-text approval are NOT ESTABLISHED; final legal readiness incomplete."
+      "implementation": "IMPLEMENTED_OPERATIONAL_NOTICES_IDENTITY_CONFIRMED_LOCALLY_STAGED",
+      "coverage": "PARTIAL_LEGAL_REVIEW_OWNER_DECISION",
+      "evidence": "legal-content.ts; OWNER-IDENTITY-REVIEW.md; evidence/owner-identity-local.json; confirmed owner identity",
+      "limit": "Owner confirms Eng. Adham Younes Mohamed, Founder and CEO, official email adham@agynexa.si and phone/WhatsApp+201110093730; registration incomplete. About/Founder/Contact identity is locally verified but unpublished. Controller/jurisdiction/processing text and legal-page approval remain unanswered; official contact display is not tested email delivery."
     },
     {
       "id": "A22",
@@ -302,8 +302,8 @@
       "requirement": "Production phase deploy/documentation/rollback",
       "implementation": "IMPLEMENTED",
       "coverage": "VERIFIED",
-      "evidence": "PR33/35/36; remaining-acceptance build and deployment receipt",
-      "limit": "PR36 reviewed5efed4f mergedf45c836; primary production READY dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS and health200/all3ok. Compatible migrations/grants retained; no docs-only deployment."
+      "evidence": "PR33/35/36/37/38; remaining-acceptance deployment/build receipts",
+      "limit": "PR38 reviewedb256a80 mergedceeb7af; primaryREADY dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb, exactalias/health200/all3ok and new component asset delivered. No docs-only deployment; compatible history grants retained."
     },
     {
       "id": "L1",
@@ -316,10 +316,10 @@
     {
       "id": "L2",
       "requirement": "Legal/controller/processor facts and text approval",
-      "implementation": "NOT_ESTABLISHED",
-      "coverage": "OWNER_DECISION",
-      "evidence": "CONTENT-LEDGER.md legal unresolved facts",
-      "limit": "Published operational notices do not establish approved client processing terms or legal identity."
+      "implementation": "OWNER_IDENTITY_CONFIRMED_LEGAL_ROLE_AND_TERMS_PENDING",
+      "coverage": "PARTIAL_OWNER_DECISION",
+      "evidence": "OWNER-IDENTITY-REVIEW.md; publication_hold_2026_10_22 in STATUS.json; latest owner addendum",
+      "limit": "Named founder/CEO and official email/phone are confirmed; no longer all identity unknown. Registration is incomplete. Legal controller/operator role, jurisdiction/address, processing terms and owner legal-text approval remain unestablished. No public registration-status assertion or badge added."
     },
     {
       "id": "L3",
@@ -344,25 +344,124 @@
       "coverage": "OUT_OF_SCOPE",
       "evidence": "owner overrides; existing siteUrl",
       "limit": "Existing URL unchanged. A domain action is not necessary to close current engineering evidence and was not authorized here."
+    },
+    {
+      "id": "I1",
+      "requirement": "Official nonhome About/Founder/Contact identity and natural bilingual copy",
+      "implementation": "LOCAL_IMPLEMENTED",
+      "coverage": "LOCAL_VERIFIED_NOT_PUBLISHED",
+      "evidence": "OWNER-IDENTITY-REVIEW.md; evidence/owner-identity-local.json; code db92d90",
+      "limit": "Exact English bio/full official facts and natural Arabic verified in8local affected samples with build/TypeScript. Prior passes retained, not repeated. Protected footer/global founder JSON-LD stay unchanged; no legal-registration claim or email-delivery test."
+    },
+    {
+      "id": "I2",
+      "requirement": "Exact owner-supplied Google verification HTML",
+      "implementation": "LOCAL_EXACT_FILE",
+      "coverage": "LOCAL_VERIFIED_NOT_PUBLISHED",
+      "evidence": "public/googleca466862db14ea8e.html; Google-only commit cec7f7d; evidence/owner-identity-local.json",
+      "limit": "53bytes/no newline; SHA256 acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291; local NextHTTP200 byte-identical. No custom-domain request, DNS action or live ownership verification."
+    },
+    {
+      "id": "I3",
+      "requirement": "Final owner approval before any new publication",
+      "implementation": "APPROVAL_RECEIVED_SCOPED_RELEASE",
+      "coverage": "DIRECT_HUMAN_APPROVAL",
+      "evidence": "DECISIONS.md D-35; OWNER-IDENTITY-RELEASE.md",
+      "limit": "Owner approved reviewed identity/contact/GSC publication only. Protected home/global metadata/domain/DNS/account/email/DB and unanswered operational facts remain outside scope."
     }
   ],
-  "recordedAt": "2026-10-22T02:31:00.239289+03:00",
+  "recordedAt": "2026-10-22T03:34:58.456502+03:00",
   "auditBaseCommit": "4638222e242aa48d6294b03bdf5e6bfc37b2f093",
-  "overall": "DEPLOYED_IMPLEMENTATION_WITH_EXPLICIT_ACCEPTANCE_GAPS",
-  "newActualModelTurns": 5,
+  "overall": "PR38_DEPLOYED_RECOVERY_LIVE_CLICK_VERIFIED_LOCAL_IDENTITY_GSC_UNPUBLISHED_OWNER_DECISIONS_OPEN",
+  "newActualModelTurns": 10,
   "productionFixtureAccountsCreated": 0,
-  "localStackRestarted": false,
+  "localStackRestarted": true,
   "broadSuitesRepeated": false,
   "workerCountTotal": 3,
   "privilegedCleanupIsNotUserFacingDeleteEvidence": true,
-  "finalProductionCommit": "fcd6175efb0f263265d97b5df76774ee268fdac4",
-  "finalDeployment": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
+  "finalProductionCommit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+  "finalDeployment": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
   "productionUiDeleteHistoryRevocation": "PASS",
-  "completionAuditFinalReceiptPublication": "Outputs + local repository ledger + merged PR35 body; no docs-only production redeploy",
+  "completionAuditFinalReceiptPublication": "Latest code published by PR38; identity/GSC and subsequent documentation remain local under explicit final approval gate",
   "continuation": {
-    "product_pr": "https://github.com/adham-younes/vzero/pull/36",
-    "merge": "f45c83609f919b25f7d59255c5abb430d96d827a",
-    "production": "dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS",
-    "semantic_affected_rerun": "PENDING"
+    "product_pr": "https://github.com/adham-younes/vzero/pull/38",
+    "merge": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "production": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
+    "semantic_affected_rerun": "FOUR_TOTAL_LIVE_TURNS_PRESERVED_MODEL_GUIDANCE_PARTIAL_PRIVATE_UI_RECOVERY_LOCALLY_VERIFIED",
+    "production_fixture_cleanup": "ALL8_REMAINING_COUNTS0",
+    "human_review": "NOT_YET_REVIEWED_BY_HUMAN",
+    "production_status": "CURRENT_METADATA_READY_PRIMARY_SOURCE_MATCHED",
+    "recovery_live_click": "PASS_ONE_ACTUAL_PRODUCTION_CLICK_EXISTING_PRIVATE_SOURCE_EDITOR_NO_AUTOWRITE",
+    "liveSpecificHandleActive": false,
+    "recoveryClickFixtureCleanup": "PASS_EXACT_GUARDS_ALL8_REMAINING0",
+    "modelAuthoredGuidance": "PRIOR_ADVERSARIAL_PARTIAL_PRESERVED_NEW_ORDINARY_MISSING_POLICY_CASE_GUIDANCE_PRESENT_NOT_GENERALIZED"
+  },
+  "historicalSummarySnapshots": [
+    {
+      "scope": "Original PR35 completion-audit summary; preserved while current top-level production metadata is reconciled",
+      "recordedAt": "2026-10-22T02:31:00.239289+03:00",
+      "newActualModelTurns": 5,
+      "localStackRestarted": false,
+      "finalProductionCommit": "fcd6175efb0f263265d97b5df76774ee268fdac4",
+      "finalDeployment": "dpl_34SMMUzto7t64wK5UswKp6Xp8Gkc",
+      "completionAuditFinalReceiptPublication": "Outputs + local repository ledger + merged PR35 body; no docs-only production redeploy"
+    }
+  ],
+  "auditModelTurnsByPhase": {
+    "initialCompletionAudit": 5,
+    "semanticAdversarial": 4,
+    "currentRecoveryClickCheck": 1,
+    "scope": "Completion-audit turns only, excludes earlier separate provider release smoke samples"
+  },
+  "localStackStatus": "STOPPED",
+  "localStackRestartScope": "One previously authorized missing-case batch; no restart or identity test repetition during this closure",
+  "currentProduction": {
+    "commit": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "deployment": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/38",
+    "primary": "https://vzero-nine-beryl.vercel.app",
+    "state": "READY",
+    "metadataReadAt": "2026-10-22T03:28:57.859888+03:00",
+    "primaryAliasSourceMatched": true,
+    "health": "Prior recorded health200/all3ok; not repeated for documentation closure",
+    "newIdentityOrGoogleIncluded": false,
+    "recoveryClickEvidence": "PASS_ON_EXISTING_PR38_NO_DEPLOYMENT_NEEDED"
+  },
+  "localCandidate": {
+    "branch": "codex/agynexa-owner-identity-approval",
+    "codeCommit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
+    "identityReviewReceiptCommit": "9178a4d85b6d88408925c733e6bb4edcec74a1e3",
+    "googleFileCommit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
+    "status": "APPROVED_RELEASE_PENDING",
+    "approvalGate": "Satisfied: direct human موافق-نفذ for this reviewed candidate only",
+    "identityEvidence": "evidence/owner-identity-local.json",
+    "fullArchitectPlan": "Unchanged; original coordinator addendum prefix preserved with explicitly authorized owner override appended",
+    "customDomainVerification": "NOT_RUN",
+    "newIdentityOrGooglePublished": false
+  },
+  "ownerConfirmedIdentity": {
+    "fullName": "Eng. Adham Younes Mohamed",
+    "position": "Founder and CEO, AGYNEXA",
+    "professionalTitle": "Expert in Enterprise Agentic AI Systems Architecture & Development",
+    "email": "adham@agynexa.si",
+    "phoneWhatsApp": "+201110093730",
+    "registration": "Incomplete per owner; no legal registration assertion added",
+    "doesNotEstablish": [
+      "Legal controller/jurisdiction/address or processing-text approval",
+      "Monitored rights/support desk or tested email delivery",
+      "Retention/backups/commercial/recovery decisions"
+    ]
+  },
+  "publicationHold": {
+    "status": "SUPERSEDED_FOR_REVIEWED_IDENTITY_GSC_RELEASE_ONLY",
+    "approval": "Direct human «موافق-نفذ»",
+    "scope": "Reviewed identity/contact/static Google candidate; publication pending live verification",
+    "unscopedChangesAuthorized": false
+  },
+  "liveSpecificHandles": {
+    "activePrivateFixture": false,
+    "activeOwnedBrowserTab": false,
+    "remainingFixtureObjects": 0,
+    "existingAccountPreserved": true
   }
 }

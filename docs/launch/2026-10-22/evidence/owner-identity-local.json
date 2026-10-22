@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "scope": "LOCAL owner identity/static-file affected batch only; no DB/Auth/model/form submit/email/WhatsApp or publication",
+  "build": "PASS_OPTIMIZED_NEXT_AND_TYPESCRIPT",
+  "publicPages": [
+    {
+      "route": "/about",
+      "width": 390,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "PASS",
+      "direction": "ltr",
+      "noHorizontalOverflow": true,
+      "screenshot": "about-390.png"
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "PASS",
+      "direction": "ltr",
+      "noHorizontalOverflow": true,
+      "screenshot": "about-1440.png"
+    },
+    {
+      "route": "/ar/about",
+      "width": 390,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "notApplicable",
+      "direction": "rtl",
+      "noHorizontalOverflow": true,
+      "screenshot": "ar-about-390.png"
+    },
+    {
+      "route": "/ar/about",
+      "width": 1440,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "notApplicable",
+      "direction": "rtl",
+      "noHorizontalOverflow": true,
+      "screenshot": "ar-about-1440.png"
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "notApplicable",
+      "direction": "ltr",
+      "noHorizontalOverflow": true,
+      "screenshot": "contact-390.png"
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "notApplicable",
+      "direction": "ltr",
+      "noHorizontalOverflow": true,
+      "screenshot": "contact-1440.png"
+    },
+    {
+      "route": "/ar/contact",
+      "width": 390,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "notApplicable",
+      "direction": "rtl",
+      "noHorizontalOverflow": true,
+      "screenshot": "ar-contact-390.png"
+    },
+    {
+      "route": "/ar/contact",
+      "width": 1440,
+      "http": 200,
+      "officialIdentityAndContacts": "PASS",
+      "exactEnglishBio": "notApplicable",
+      "direction": "rtl",
+      "noHorizontalOverflow": true,
+      "screenshot": "ar-contact-1440.png"
+    }
+  ],
+  "pageErrors": [],
+  "browserSetupNote": "Default Python Playwright browser revision1200 was absent; no case executed. Reused the installed Chromium1243 executable without installation.",
+  "googleVerificationLocalHttp": {
+    "http": 200,
+    "bytes": 53,
+    "sha256": "acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291"
+  },
+  "googleByteIdenticalToOwnerAttachment": true,
+  "newGoogleTrailingNewline": false,
+  "protectedFilesUnchangedFromProduction": [
+    "app/page.tsx",
+    "app/[...path]/page.tsx",
+    "app/layout.tsx",
+    "app/globals.css",
+    "@components/agynexa-shell.tsx",
+    "@components/project-brief.tsx",
+    "lib/agynexa.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "@components/landing-5-hero-section.tsx",
+    "@components/landing-5-hero-video.tsx",
+    "public/videos/background.mp4"
+  ],
+  "otherProgramPageObjectsUnchanged": true,
+  "protectedConflicts": [
+    "Shared footer email already correct; founder/phone additions would affect protected home and were not made.",
+    "Global Organization JSON-LD shortened founder name remains unchanged in protected app/layout.tsx."
+  ],
+  "customDomainLiveCheck": "NOT_RUN",
+  "published": "NO_HELD_FOR_OWNER_APPROVAL"
+}
