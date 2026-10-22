@@ -626,5 +626,14 @@
     "inbox_contract_migration": "20261022034859_nexa_inbox_thread_contract.sql; isolated SQL PASS and applied hosted",
     "server_key_inbox_metadata": "verified via production existing-owner readiness action; exact Inbox/address/display/managed target",
     "live_owner_ui": "actual Auth+DB audit/received/sent and Arabic PASS; empty views do not prove transport"
+  },
+  "nexa_manual_reply_candidate": {
+    "status": "VERIFIED_LOCAL_CANDIDATE",
+    "receipt": "../launch/2026-10-22/NEXA-IMMUTABLE-REPLIES.md",
+    "checks": "39 affected real-module/synthetic-HTTP groups PASS; no actual sends",
+    "scope": "human-approved native Inbox replies with exact immutable content and effective Reply-To binding",
+    "standalone_send": "UNSUPPORTED by established immutable Inbox contract; fails before provider access",
+    "existing_mailbox_public_studio_ui_source": "unchanged",
+    "production": "PR43 until corrective source/READY verification"
   }
 }

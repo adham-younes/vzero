@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "environment": "actual modules/signature/parser/provider adapter; synthetic HTTP responses; no real mail",
+  "affected_groups": 39,
+  "checks": [
+    "provider draft edited after approval cannot alter reply POST body",
+    "no mutable provider draft read/create/update/send on dispatch",
+    "fixed Inbox/native thread/email reply path",
+    "original immutable Message-ID and effective Reply-To bound to reviewed To",
+    "wrong Inbox, invalid/foreign thread, parent identity/direction and recipients reject before reply POST",
+    "standalone fails before provider access; dispatch context fails before local claim",
+    "server-derived saved Reply-To recipients appear before human preview and approval",
+    "recipient substitution on edit rejected; context preserved and hashed",
+    "original Auth/session/origin/lease/exact approval/idempotency/error contracts retained",
+    "stable intent idempotency key; ambiguous POST remains unknown; preflight failure is safe conflict/busy"
+  ],
+  "typescript": "final build includes strict types",
+  "actual_provider_send_calls": 0,
+  "database_schema_changes": false,
+  "reused_evidence": "PR43 isolated SQL/role/replay/lease/approval and private owner UI; existing mailbox UI unchanged"
+}

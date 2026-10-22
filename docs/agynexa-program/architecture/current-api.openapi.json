@@ -3104,7 +3104,7 @@
       "post": {
         "operationId": "post_api_admin_nexa_mail_drafts",
         "summary": "POST /api/admin/nexa-mail/drafts",
-        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request. Inbox reply To is server-derived from the stored original Reply-To or sender; returned saved recipients appear in the authoritative preview before approval. The approved hash includes the fixed provider Inbox/thread/email IDs and original Message-ID. Caller-supplied Inbox context is rejected.",
         "security": [
           {
             "supabaseSession": []
@@ -3252,7 +3252,7 @@
       "patch": {
         "operationId": "patch_api_admin_nexa_mail_drafts__id_",
         "summary": "PATCH /api/admin/nexa-mail/drafts/{id}",
-        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request. Preserve server-derived Inbox reply context; changing a reply To recipient is rejected. Other edits invalidate approval through the existing version/hash contract.",
         "security": [
           {
             "supabaseSession": []
@@ -3423,7 +3423,7 @@
       "post": {
         "operationId": "post_api_admin_nexa_mail_outbox__id__send",
         "summary": "POST /api/admin/nexa-mail/outbox/{id}/send",
-        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "description": "Existing live Auth/session and immutable NEXA admin allowlist, same-origin JSON and explicit manual action required. Claim the exact approved local outbox snapshot once. Inbox replies only: fixed Inbox/thread/parent IDs and original Message-ID are hashed in context; read immutable original and bind its actual Reply-To/sender to approved To. Native Inbox reply POST carries the exact approved text/subject/Cc/Bcc and stable intent idempotency key; never sends a mutable provider draft ID. Wrong context/recipient or unsupported standalone send fails before provider POST; standalone fails before claim. Ambiguous POST remains delivery_unknown with no automatic duplicate or fresh intent. Provider acceptance is not delivery. Feature flag separately reports actual production activation.",
         "security": [
           {
             "supabaseSession": []

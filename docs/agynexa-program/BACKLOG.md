@@ -98,3 +98,8 @@ The owner's explicit functional cloud-email instruction supersedes the previous 
 ## NEXA cloud Inbox PR43 published — 22 October 2026
 
 [Cloud increment and remaining limits](../launch/2026-10-22/NEXA-CLOUD-MAIL.md): PR43 source `8bea79dfd3d57efb866f9f11485ad73043bcd549`, READY `dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc`; existing-owner private metadata views and server-key Inbox binding passed. Same webhook ENABLED for `inbox.email.received` only. Sending OFF; no real email test, forwarding/delivery proof or automatic assistant wake. Dedicated upstream NEXA forwarding remains unverified. Original home/Studio/mail UI/master plan unchanged. No personal mailbox/DNS/MX changes.
+
+
+## Immutable native Inbox reply corrective scope — 22 October 2026
+
+The owner directs completion of independently fixable manual reply functionality within existing authorization. Replace mutable provider-draft ID sending with a native Inbox reply POST carrying the exact approved snapshot and immutable-original Reply-To binding. Standalone send has no established immutable Inbox contract and remains unsupported. No new permission request, actual send, wake runtime, DNS/personal forwarding or paid service. [Scope and affected proof](../launch/2026-10-22/NEXA-IMMUTABLE-REPLIES.md).

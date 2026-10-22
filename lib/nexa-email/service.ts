@@ -6,7 +6,7 @@ import {adminClient} from '@/lib/supabase/server'
 import {MailError} from './errors'
 import {readVerifiedInbound,normalizeReceivedEmail,normalizeInboxEmail} from './inbound'
 import {createMailProvider} from './provider'
-import {prepareDraft} from './drafts'
+import {prepareDraft,inboxReplyContext} from './drafts'
 import {mailRpc,threadFields,draftFields,outboxFields,threadDto,draftDto,outboxDto,messageDto,stateResult,cursorIn,cursorOut} from './store'
 import {NEXA_RESEND_INBOX_ID,type InboxReply,type MailOverview,type MailThreadDetail} from './types'
 export async function webhook(request:Request){
@@ -65,7 +65,7 @@ export async function createDraft(request:Request){
   const {data,error}=await db.from('nexa_mail_messages').select('message_id,payload').eq('id',uuid(body.replyToMessageId)).eq('thread_id',thread).eq('inbox',NEXA_IDENTITY.address).maybeSingle()
   if(error)throw new MailError('mail_unavailable',503);if(!data)throw new MailError('mail_not_found',404)
   if(data.message_id){const refs=[...(data.payload.references||[]),data.message_id].slice(-20);headers={'In-Reply-To':data.message_id,References:[...new Set(refs)].join(' ')}}
-  if(data.payload.provider_inbox_id===NEXA_RESEND_INBOX_ID)inboxReply={threadId:uuid(data.payload.provider_thread_id),emailId:uuid(data.payload.provider_email_id)}
+  if(data.payload.provider_inbox_id===NEXA_RESEND_INBOX_ID){inboxReply={inboxId:NEXA_RESEND_INBOX_ID,threadId:uuid(data.payload.provider_thread_id),emailId:uuid(data.payload.provider_email_id),parentMessageId:data.message_id??null};body.to=data.payload.reply_to?.length?data.payload.reply_to:[data.payload.from_address]}
  }
  const prepared=prepareDraft(body,headers,inboxReply),r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:null,p_actor:actor,p_request:requestKey,p_version:0,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:thread}),['saved'])
  return {draft:draftDto(r.draft)}
@@ -73,7 +73,9 @@ export async function createDraft(request:Request){
 export async function editDraft(request:Request,id:string){
  const {db,actor}=await mailAdmin();uuid(id);const body=await mailMutation(request);exactKeys(body,['version','to','cc','bcc','subject','text']);if(!Number.isSafeInteger(body.version)||Number(body.version)<1)throw new MailError('invalid_input',400)
  const {data,error}=await db.from('nexa_mail_drafts').select('payload').eq('id',id).maybeSingle();if(error)throw new MailError('mail_unavailable',503);if(!data)throw new MailError('mail_not_found',404)
- const prepared=prepareDraft(body,data.payload.headers||{},data.payload.inboxReply),r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:id,p_actor:actor,p_request:randomUUID(),p_version:body.version,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:null}),['saved']);return {draft:draftDto(r.draft)}
+ const prepared=prepareDraft(body,data.payload.headers||{},data.payload.inboxReply)
+ if(prepared.payload.inboxReply&&JSON.stringify(prepared.payload.to)!==JSON.stringify(data.payload.to))throw new MailError('invalid_mail_draft',400)
+ const r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:id,p_actor:actor,p_request:randomUUID(),p_version:body.version,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:null}),['saved']);return {draft:draftDto(r.draft)}
 }
 export async function approveDraft(request:Request,id:string){
  const {db,actor}=await mailAdmin();uuid(id);const body=await mailMutation(request);exactKeys(body,['version','snapshotHash']);const v=versionHash(body)
@@ -90,6 +92,7 @@ export async function dispatch(request:Request,id:string){
  if(storedError)throw new MailError('mail_unavailable',503);if(!stored)throw new MailError('mail_not_found',404)
  // Frozen historical intents keep their approved payload; never silently rename/send them.
  if(stored.status==='queued'&&stored.payload?.from!==`${NEXA_IDENTITY.displayName} <${NEXA_IDENTITY.address}>`)throw new MailError('draft_conflict',409)
+ if(stored.status==='queued')inboxReplyContext(stored.payload?.inboxReply)
  const attempt=randomUUID(),claim=await mailRpc(db,'nexa_mail_claim',{p_id:id,p_actor:actor,p_attempt:attempt})
  if(claim.state==='not_found')throw new MailError('mail_not_found',404)
  if(claim.state==='accepted'||claim.state==='rejected'||claim.state==='delivery_unknown')return {outbox:outboxDto(claim.outbox)}
