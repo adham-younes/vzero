@@ -23,3 +23,8 @@
 [WORKFLOW](WORKFLOW.md) يحدد التسليم والتراجع. لم تُختبر استعادة نسخة إنتاج كاملة؛ تعطيل Studio أو إعادة كود متوافق مع حفظ البيانات خيارات تراجع تحتاج تحققًا محددًا عند استخدامها.
 
 تحديث اتصال لاحق: Vercel MCP يقرأ الآن المشروع وalias الإنتاج والنشر بنجاح. [الإيصال](releases/VERCEL-ACCESS-2026-10-20.md) يثبت main عند `0a166b4` بحالة READY/production وقت الفحص؛ لا تعِد التعامل مع 404 السابق كعائق قائم، ولا تعمم نجاح القراءة على صلاحيات الكتابة أو موارد التصميم الأخرى.
+
+
+## 2026-10-22 essential workspace work package
+
+See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.

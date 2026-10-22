@@ -11,6 +11,7 @@ import {customerChatEnabled,normalizedSearchEnabled,validateChatResponse,type Ch
 import {loadConversationContext} from './conversation-store'
 import {assertOutputCapacity} from './output-capacity'
 import {chatSystemPolicy} from './chat-policy'
+import {customerTurn,customerLanguageReply} from './customer-behavior'
 import {presentRun} from './history-visibility'
 import {conversationalReply,missingKnowledgeReply,replyLanguage,buildRetrievalQuery} from './conversation'
 
@@ -80,7 +81,9 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
  let result:Record<string,unknown>,usage:Record<string,unknown>={}
  try{
   const turns=await loadConversationContext(chatScope)
-  const retrieval=buildRetrievalQuery(question,turns)
+  const behavior=customer?customerTurn(question,turns,scope.agent.language,scope.agent.name):null
+  const effectiveQuestion=behavior?.effectiveQuestion||question
+  const retrieval=buildRetrievalQuery(effectiveQuestion,turns)
   const normalized=normalizedSearchEnabled()
   const {data,error}=await db.rpc(normalized?'search_agent_knowledge_v2':'search_agent_knowledge',{workspace:scope.agent.org_id,agent:scope.agent.id,source_ids:scope.sourceIds,query:retrieval.query,...(normalized?{history_query:retrieval.historyQuery}:{})});dbError(error)
   let chunks=(data||[]) as Chunk[]
@@ -93,14 +96,18 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
    }
   }
   const refusal=missingKnowledgeReply(question,scope.agent.language,scope.sourceIds.length>0,scope.kind==='studio')
-  const social=customer?null:conversationalReply(question,scope.agent)
+  const social=customer?behavior!.localReply:conversationalReply(question,scope.agent)
   const dependencies=[...chunks.map(c=>({sourceId:c.source_id,chunkId:c.id,contentHash:hash(c.content)})),...turns.flatMap(t=>t.sourceDependencies)].filter((d,i,all)=>all.findIndex(x=>x.chunkId===d.chunkId&&x.sourceId===d.sourceId&&x.contentHash===d.contentHash)===i)
-  if(social)result={status:'succeeded',answer:social,citations:[],usage:{input_tokens:0,output_tokens:0,estimated_cost_usd:0,response_kind:'conversation'}}
+  if(social){
+   const chat={schemaVersion:2,parts:[{kind:'capability',text:social,basis:'product_capabilities',citations:[]}],nextQuestion:null,briefDraft:null}
+   result={status:'succeeded',answer:social,citations:[],usage:{input_tokens:0,output_tokens:0,estimated_cost_usd:0,response_kind:'conversation'},...(customer?{support:{propose:false,title:'',details:''},chat_v2:{schemaVersion:2,profile:'customer_v1',policyVersion:'2026-10-v1',response:chat,sourceDependencies:[]}}:{})}
+  }
   else if(!customer&&!chunks.length)result={status:'succeeded',answer:refusal,citations:[],usage:{input_tokens:0,output_tokens:0,estimated_cost_usd:0,retrieval:'no_match'}}
   else{
    const canSupport=scope.kind==='studio'&&scope.agent.template==='serviceflow'
-   const messages=[{role:'system' as const,content:chatSystemPolicy(scope.agent,scope.kind,question,customer,canSupport)},...turns.flatMap(t=>[{role:'user' as const,content:t.userText},{role:'assistant' as const,content:t.assistantParts.map(p=>p.text).join('\n\n')}]),{role:'user' as const,content:JSON.stringify({question,passages:chunks.map(c=>({chunkId:c.id,text:c.content}))})}]
-   const provider=await groqAnswer(scope.agent.model,messages,signal,chunks.map(c=>c.id),customer);usage=provider.usage
+   const messages=[{role:'system' as const,content:chatSystemPolicy(scope.agent,scope.kind,effectiveQuestion,customer,canSupport,behavior?.language)},...turns.flatMap(t=>[{role:'user' as const,content:t.userText},...(behavior?.languageOnly?[]:[{role:'assistant' as const,content:t.assistantParts.map(p=>p.text).join('\n\n')}])]),{role:'user' as const,content:JSON.stringify({question:effectiveQuestion,passages:chunks.map(c=>({chunkId:c.id,text:c.content}))})}]
+   const generate=(repair:boolean)=>groqAnswer(scope.agent.model,repair?[...messages,{role:'system' as const,content:`The previous attempt used the wrong language. Regenerate the same response in ${behavior!.language}, using only the current user facts and authorized passages. Do not add a task, sector or fact. Preserve the required JSON schema and citation constraints.`}]:messages,signal,chunks.map(c=>c.id),customer)
+   const provider=customer?await customerLanguageReply(async repair=>{const value=await generate(repair);return {...value,answer:value.answer as RawProviderChatV2}},behavior!.language):await generate(false);usage=provider.usage
    if(customer){
     const raw=provider.answer as RawProviderChatV2,chat=validateChatResponse(raw,{customer:true,support:canSupport},chunks)
     const citations=chat.parts.flatMap(p=>p.citations).filter((c,i,a)=>a.findIndex(x=>x.chunkId===c.chunkId)===i)

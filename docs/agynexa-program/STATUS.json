@@ -92,13 +92,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 38,
+    "http_operations": 52,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 29
+    "route_files": 41
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
@@ -583,5 +583,16 @@
     "browser": "PASS_PUBLIC_NAVIGATION_LOCALE_VIDEO_REPRESENTATIVE_SAMPLES",
     "active_owned_browser_tab": false,
     "auth": "SOURCE_AND_PUBLIC_HREF_REVIEW_NO_LIVE_LOGIN_OR_SESSION_TRANSFER"
+  },
+  "essential_workspace_candidate": {
+    "status": "LOCAL_VERIFICATION_IN_PROGRESS",
+    "receipt": "../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md",
+    "scope": [
+      "customer workspace and Arabic/current task correction",
+      "reviewed saved agents/projects/tasks/status/activity",
+      "private NEXA Inbox/Archive/Drafts/Outbox foundation"
+    ],
+    "mail_transport": "OFF; owner mailbox not delegated; ChatGPT not connected",
+    "deferred": "Autonomous campaigns, personal mailbox migration, ChatGPT connector, enterprise integrations and operating/legal gates remain backlog"
   }
 }

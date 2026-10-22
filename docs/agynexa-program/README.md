@@ -31,3 +31,8 @@
 `IMPLEMENTED` يعني وجود كود؛ `VERIFIED` فحصًا محددًا على بيئة وإصدار معلومين؛ `SPECIFIED` تصميمًا فقط؛ `REQUIRES_ACCESS` حاجة إلى وصول ونطاق؛ `BLOCKED` عائقًا معلومًا؛ `UNKNOWN` غير مثبت. اتصال أكد المالك وجوده لا يعني اختبار قدراته أو دمجه في المنتج.
 
 توجيهات المالك الأحدث تتقدم على الخطة التاريخية. الحالة التشغيلية تستند إلى الكود والإيصالات المؤرخة. ملفات baseline وsource-map وroutes وdependencies وcontent-inventory وtool-inventory تحفظ جرد المرحلة 0؛ لا تستخدمها لوصف الحاضر. التقارير التاريخية تصف وقتها فقط، والخطة الأصلية ومراجعة السوق محفوظتان دون تعديل.
+
+
+## 2026-10-22 essential workspace work package
+
+See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.

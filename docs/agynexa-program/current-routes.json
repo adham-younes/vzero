@@ -413,5 +413,13 @@
   },
   "inventory_reviewed_against": "4799a2e",
   "canonical_origin": "https://agynexa.si",
-  "legacy_origin_compatibility": "https://vzero-nine-beryl.vercel.app"
+  "legacy_origin_compatibility": "https://vzero-nine-beryl.vercel.app",
+  "admin_pages": [
+    {
+      "en": "/admin/nexa-mail",
+      "ar": "/ar/admin/nexa-mail",
+      "index": false,
+      "auth": "verified live session plus immutable admin UUID allowlist"
+    }
+  ]
 }

@@ -7,12 +7,12 @@
   },
   "servers": [
     {
-      "url": "https://vzero-nine-beryl.vercel.app",
-      "description": "Public production domain; may advance to later releases"
+      "url": "https://agynexa.si",
+      "description": "Official production host"
     },
     {
-      "url": "http://localhost:3011",
-      "description": "Local development when started on port 3011"
+      "url": "https://vzero-nine-beryl.vercel.app",
+      "description": "Legacy compatibility alias"
     }
   ],
   "security": [],
@@ -774,12 +774,6 @@
             "supabaseSession": []
           }
         ],
-        "servers": [
-          {
-            "url": "http://localhost:3016",
-            "description": "Isolated local verification; not enabled on Production"
-          }
-        ],
         "description": "No caller-supplied owner_id or org_id. Atomic idempotent bootstrap. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
@@ -935,12 +929,6 @@
             "supabaseSession": []
           }
         ],
-        "servers": [
-          {
-            "url": "http://localhost:3016",
-            "description": "Isolated local verification; not enabled on Production"
-          }
-        ],
         "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
@@ -1023,12 +1011,6 @@
         "security": [
           {
             "supabaseSession": []
-          }
-        ],
-        "servers": [
-          {
-            "url": "http://localhost:3016",
-            "description": "Isolated local verification; not enabled on Production"
           }
         ],
         "description": "org_id and created_by come from verified membership, never from body. requestKey is unique within the workspace. A changed replay conflicts, including a draft edited since initial creation. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
@@ -1232,12 +1214,6 @@
             "supabaseSession": []
           }
         ],
-        "servers": [
-          {
-            "url": "http://localhost:3016",
-            "description": "Isolated local verification; not enabled on Production"
-          }
-        ],
         "description": " Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "responses": {
           "200": {
@@ -1324,12 +1300,6 @@
         "security": [
           {
             "supabaseSession": []
-          }
-        ],
-        "servers": [
-          {
-            "url": "http://localhost:3016",
-            "description": "Isolated local verification; not enabled on Production"
           }
         ],
         "description": "Supply all four settings and last read revision. Template and organization are immutable in B. This is not a published version. Requires AGYNEXA_STUDIO_ENABLED=true, verified user and active-session RLS. No shared cache. Model settings are drafts, not proof of model availability. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
@@ -3046,6 +3016,683 @@
                 "type": "object",
                 "additionalProperties": false,
                 "maxProperties": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/webhooks/resend": {
+      "post": {
+        "operationId": "post_api_webhooks_resend",
+        "summary": "POST /api/webhooks/resend",
+        "description": "Raw UTF-8 body up to 65536 bytes; five second read deadline. Verify signature freshness before fixed provider fetch. Durable event/payload-hash lease and atomic completion; duplicate acknowledged only after completion. Disabled unless receiver, secret and ingress are configured. No HTML/attachment fetch or autonomous actions.",
+        "security": [],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail": {
+      "get": {
+        "operationId": "get_api_admin_nexa_mail",
+        "summary": "GET /api/admin/nexa-mail",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/drafts": {
+      "post": {
+        "operationId": "post_api_admin_nexa_mail_drafts",
+        "summary": "POST /api/admin/nexa-mail/drafts",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/threads/{id}": {
+      "get": {
+        "operationId": "get_api_admin_nexa_mail_threads__id_",
+        "summary": "GET /api/admin/nexa-mail/threads/{id}",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patch_api_admin_nexa_mail_threads__id_",
+        "summary": "PATCH /api/admin/nexa-mail/threads/{id}",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/drafts/{id}": {
+      "patch": {
+        "operationId": "patch_api_admin_nexa_mail_drafts__id_",
+        "summary": "PATCH /api/admin/nexa-mail/drafts/{id}",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/drafts/{id}/approve": {
+      "post": {
+        "operationId": "post_api_admin_nexa_mail_drafts__id__approve",
+        "summary": "POST /api/admin/nexa-mail/drafts/{id}/approve",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/drafts/{id}/queue": {
+      "post": {
+        "operationId": "post_api_admin_nexa_mail_drafts__id__queue",
+        "summary": "POST /api/admin/nexa-mail/drafts/{id}/queue",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/outbox/{id}/send": {
+      "post": {
+        "operationId": "post_api_admin_nexa_mail_outbox__id__send",
+        "summary": "POST /api/admin/nexa-mail/outbox/{id}/send",
+        "description": "Verified Auth getUser and live-session RLS required. Immutable configured admin UUID allowlist required; service-role mail tables have no customer grants. Fixed NEXA sender, plain text only. Exact saved version/hash approval; edits invalidate approval. Queueing never dispatches. Manual send separately disabled by default; uncertain provider outcomes are not retried as new intents. GET overview optionally accepts verifyProvider=true for an authenticated, read-only server-key/domain check. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/projects": {
+      "get": {
+        "operationId": "get_api_v1_projects",
+        "summary": "GET /api/v1/projects",
+        "description": "Verified Auth getUser and live-session RLS required. Server derives immutable owner and organization; exact registered actions only. Proposal does not mutate an entity. Apply atomically binds saved version/hash and expected entity revision, with idempotent result/activity/audit. Offset pages max50; offsets0..10000.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        }
+      }
+    },
+    "/api/v1/projects/{projectId}": {
+      "get": {
+        "operationId": "get_api_v1_projects__projectId_",
+        "summary": "GET /api/v1/projects/{projectId}",
+        "description": "Verified Auth getUser and live-session RLS required. Server derives immutable owner and organization; exact registered actions only. Proposal does not mutate an entity. Apply atomically binds saved version/hash and expected entity revision, with idempotent result/activity/audit. Offset pages max50; offsets0..10000.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/studio/actions": {
+      "get": {
+        "operationId": "get_api_v1_studio_actions",
+        "summary": "GET /api/v1/studio/actions",
+        "description": "Verified Auth getUser and live-session RLS required. Server derives immutable owner and organization; exact registered actions only. Proposal does not mutate an entity. Apply atomically binds saved version/hash and expected entity revision, with idempotent result/activity/audit. Offset pages max50; offsets0..10000.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_api_v1_studio_actions",
+        "summary": "POST /api/v1/studio/actions",
+        "description": "Verified Auth getUser and live-session RLS required. Server derives immutable owner and organization; exact registered actions only. Proposal does not mutate an entity. Apply atomically binds saved version/hash and expected entity revision, with idempotent result/activity/audit. Offset pages max50; offsets0..10000. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          },
+          "201": {
+            "description": "Immutable proposal saved; no entity side effect"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/studio/actions/{actionId}/apply": {
+      "post": {
+        "operationId": "post_api_v1_studio_actions__actionId__apply",
+        "summary": "POST /api/v1/studio/actions/{actionId}/apply",
+        "description": "Verified Auth getUser and live-session RLS required. Server derives immutable owner and organization; exact registered actions only. Proposal does not mutate an entity. Apply atomically binds saved version/hash and expected entity revision, with idempotent result/activity/audit. Offset pages max50; offsets0..10000. Exact same-Origin application/json required; bounded body and deadline. No actor or org permission accepted from request.",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "responses": {
+          "200": {
+            "description": "Scoped result; provider acceptance is not delivery"
+          },
+          "400": {
+            "description": "Invalid bounded input/signature"
+          },
+          "401": {
+            "description": "Verified live sign-in required"
+          },
+          "403": {
+            "description": "Origin/admin permission denied"
+          },
+          "404": {
+            "description": "Scoped item not found"
+          },
+          "409": {
+            "description": "Exact request/review/revision conflict"
+          },
+          "503": {
+            "description": "Disabled or unavailable; no raw upstream errors"
+          }
+        },
+        "parameters": [
+          {
+            "name": "actionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
               }
             }
           }

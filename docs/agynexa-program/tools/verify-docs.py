@@ -70,7 +70,7 @@ for route_file in route_files:
     expected_api.update((method.lower(), route) for method in methods)
 require(len(route_files) == status["implemented"]["route_files"], "STATUS route-file count mismatch")
 require(len(expected_api) == status["implemented"]["http_operations"], "STATUS HTTP-operation count mismatch")
-for page in routes.get("account_pages", []) + routes.get("studio_pages", []):
+for page in routes.get("account_pages", []) + routes.get("studio_pages", []) + routes.get("admin_pages", []):
     for locale in ("en", "ar"):
         require((ROOT / "app" / page[locale].lstrip("/") / "page.tsx").is_file(), "Missing private page")
     require(page["index"] is False, "Private pages must not be indexed")

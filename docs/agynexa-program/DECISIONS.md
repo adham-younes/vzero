@@ -147,3 +147,8 @@ Owner authorizes implementation/local preparation/push/production, exactly three
 ## D-36 — ربط الدومين بالمشروع الحالي مع حفظ البريد
 
 22 أكتوبر 2026: قال المالك «نفذ» بعد شرح نقل agynexa.si وwww من المشروع القديم إلى vzero واستبدال الموقع المعروض، مع إبقاء nameservers وسجلات البريد. يجيز التفويض نقل الارتباط والتحقق من HTTPS والتحويل وGoogle وإعداد host الضروري فقط؛ لا شراء أو نقل تسجيل أو تغيير DNS أو MX/TXT/SMTP أو تصميم الرئيسية. عملية Move الرسمية نقلت الاسمين مع www308 في طلب واحد، وDNS قبل/بعد مطابق. تعديل siteUrl في سطر واحد يلزم لتصحيح canonical وsitemap والروابط البديلة؛ [الإيصال](../launch/2026-10-22/DOMAIN-CUTOVER.md). طلب NEXA email اللاحق مرحلة مستقلة محلية حتى توضيح القيد المبتور؛ لا خلط بين التفويضين.
+
+
+## 2026-10-22 essential workspace work package
+
+See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.
