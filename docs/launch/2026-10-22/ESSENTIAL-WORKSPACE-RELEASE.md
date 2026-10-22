@@ -1,6 +1,6 @@
 # Essential workspace and NEXA foundation — 2026-10-22
 
-Status: CANDIDATE, local integration complete; seven browser checks PASS. Production remains PR40 until the release receipt below is filled. This is an additive work package; the original master plan and historical acceptance limits remain intact.
+Status: DEPLOYED / SCOPED VERIFIED. Local integration and seven browser checks PASS. PR41 is merged and deployed. This is an additive work package; the original master plan and historical acceptance limits remain intact.
 
 The owner prioritized a usable Studio, truthful Arabic/current-task responses, real reviewed saved assistants, private account isolation, and safe NEXA mail essentials. Latest owner direction requires the primary executor to finish alone and conserve quota. Existing helpers checkpointed and are idle; no replacement workers or broad model/research loops.
 
@@ -30,8 +30,21 @@ Preserve the larger program: operational roles/governance and scoped integration
 
 ## Release and rollback
 
-Pending final source/PR/deployment/live receipt. Additive migrations create five Studio tables and six mail tables; explicit RLS/grants and privileged boundaries are verified locally before hosted application. Rollback reverts application exposure and disables mail flags; preserve new tables/audit/data for recovery rather than destructive down migration. Prior production is PR40, source `3cc7f8e1754946233c3d5bae63298ec3c0d32e3a`, deployment `dpl_J62VBt3YpuGrw71tpkLJwepWAnPK` on `https://agynexa.si`.
+Final source and live receipt are recorded below. Additive migrations create five Studio tables and six mail tables; explicit RLS/grants and privileged boundaries are verified locally before hosted application. Rollback reverts application exposure and disables mail flags; preserve new tables/audit/data for recovery rather than destructive down migration. Prior production is PR40, source `3cc7f8e1754946233c3d5bae63298ec3c0d32e3a`, deployment `dpl_J62VBt3YpuGrw71tpkLJwepWAnPK` on `https://agynexa.si`.
 
 Local visual inspection prompted a smaller viewport-relative message region so the bottom composer fits normal desktop height. The final generated CSS is checked in the deployment/browser gate; no global theme changes. A Spacemail alias on a personal main mailbox plus ordinary all-mail forwarding is not a safe exclusive NEXA route; a dedicated mailbox or proven recipient-specific redirect is required before receiving activation.
 
 Hosted schema applied once through the authorized AGYNEXA Supabase connector: `studio_saved_work_actions` and `nexa_email_foundation`. Hosted receipt: all eleven tables have RLS; no anon/authenticated mail table or RPC grants; only authenticated Studio proposal/apply RPCs exposed. Production admin allowlist configured for the exact verified owner UUID, without exposing its value; receiving/sending flags remain absent/OFF. No messages or production fixture accounts created.
+
+## Final production receipt
+
+- PR: https://github.com/adham-younes/vzero/pull/41; implementation/reviewed head `b237421b4096c3cab282038e002dc4f63ff28d3c`; merge `366ca1075809a2d01a0d2fdb643d199740bf43e1`.
+- Deployment `dpl_94pFxJSmfXB98pEu4puYELDjx8ow` READY; exact source matched; `agynexa.si`, `www.agynexa.si` and legacy alias assigned. Preview build passed before merge; production build passed including the final composer height adjustment. No manual duplicate deployment.
+- [Eight affected live HTTP/auth/disabled-ingress checks](evidence/essential-production-http.json) PASS. [Existing-owner live session](evidence/essential-production-session.json) PASS within stated scope: three Arabic saved responses, two real Fast-model provider calls with token usage, reload persistence, real project empty state and exact deployed Resend key/domain match. No keys exported. This does not independently test all three Groq keys.
+- [43 isolated HTTP assertion groups](evidence/essential-local-http.json), [seven actual browser checks](evidence/essential-browser.json), nine affected language/draft unit cases and optimized build PASS. Prior unchanged focused/DB/security evidence reused.
+- No production fixture accounts or emails created/sent. Exact disposable local accounts removed after browser/revocation checks; isolated app and owned Colima profile stopped. Default Docker context preserved.
+- [Production Studio](evidence/studio-production.png) and [NEXA dashboard](evidence/nexa-production.png). Historical incident is retained, not rewritten or deleted.
+- General model comprehension remains PARTIAL: the first live task response asked a clarification; the Arabic-only follow-up then produced the requested three-step document outline. Do not equate this small release probe with universal semantic acceptance.
+- Mail transport remains OFF. Verified DNS + server-key/domain match close sending setup evidence only. Dedicated NEXA mailbox or proven recipient-specific routing and actual signed inbound/delivery evidence are still required; ordinary forwarding of an alias on a personal main mailbox could export unrelated mail and is not authorized. Personal-mail migration, autonomous campaigns and ChatGPT remain deferred.
+
+This final receipt is committed locally and appended to the merged PR description. It will accompany the next necessary product release; no documentation-only redeploy is initiated.

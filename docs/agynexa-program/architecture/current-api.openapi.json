@@ -3028,7 +3028,7 @@
         "summary": "POST /api/webhooks/resend",
         "description": "Raw UTF-8 body up to 65536 bytes; five second read deadline. Verify signature freshness before fixed provider fetch. Durable event/payload-hash lease and atomic completion; duplicate acknowledged only after completion. Disabled unless receiver, secret and ingress are configured. No HTML/attachment fetch or autonomous actions.",
         "security": [],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3074,7 +3074,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3110,7 +3110,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3156,7 +3156,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3201,7 +3201,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3258,7 +3258,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3315,7 +3315,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3372,7 +3372,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3429,7 +3429,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3486,7 +3486,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3522,7 +3522,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3569,7 +3569,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3603,7 +3603,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"
@@ -3652,7 +3652,7 @@
             "supabaseSession": []
           }
         ],
-        "x-implementation-status": "CANDIDATE_LOCAL_VERIFIED",
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
           "200": {
             "description": "Scoped result; provider acceptance is not delivery"

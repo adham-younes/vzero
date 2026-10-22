@@ -1,0 +1,16 @@
+{
+  "environment": "local optimized build, read-only rendered HTML",
+  "status": "PASS",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "marketing_header_footer_video_preserved": true
+    },
+    {
+      "route": "/ar",
+      "status": 200,
+      "marketing_header_footer_video_preserved": true
+    }
+  ]
+}

@@ -368,19 +368,67 @@
       "coverage": "DIRECT_HUMAN_APPROVAL_AND_PUBLICATION_VERIFIED",
       "evidence": "DECISIONS.md D-35; PR39; OWNER-IDENTITY-RELEASE.md",
       "limit": "Direct human موافق-نفذ approved exact reviewed candidate; PR39 merged and READY primary verified. Scope remains limited; no protected home/domain/account/email/DB or unanswered operational policy changes. No repeat approval request."
+    },
+    {
+      "id": "E1",
+      "requirement": "Conversation workspace and reviewed saved agent from explicit chat intent",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_LOCAL_BROWSER_AND_LIVE_LAYOUT",
+      "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
+      "limit": "No broad new model suite"
+    },
+    {
+      "id": "E2",
+      "requirement": "Arabic identity, language-only current-task followup and persisted history",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_SCOPED_LIVE",
+      "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
+      "limit": "Heuristic guard and general semantic acceptance remain limited"
+    },
+    {
+      "id": "E3",
+      "requirement": "Real owner-scoped projects/tasks/status/activity and immutable action approval",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_LOCAL_HTTP_DB_CONCURRENCY_AND_LIVE_READ",
+      "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
+      "limit": "Not full enterprise collaboration or external execution"
+    },
+    {
+      "id": "E4",
+      "requirement": "Private admin NEXA Inbox/Archive/Drafts/Outbox and exact approval",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_LOCAL_AND_LIVE_ADMIN_ACCESS",
+      "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
+      "limit": "Transport OFF; no real mail sent/received"
+    },
+    {
+      "id": "E5",
+      "requirement": "Resend sending DNS and exact deployed key account domain match",
+      "implementation": "IMPLEMENTED",
+      "coverage": "VERIFIED_SCOPED_LIVE",
+      "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
+      "limit": "Does not prove delivery or receiving"
+    },
+    {
+      "id": "E6",
+      "requirement": "Dedicated receiving route, owner mailbox delegation and ChatGPT connection",
+      "implementation": "DEFERRED",
+      "coverage": "NOT_ESTABLISHED_DEFERRED",
+      "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
+      "limit": "Requires scoped routing/owner decisions; personal mailbox forwarding not authorized"
     }
   ],
   "recordedAt": "2026-10-22T04:09:23.500187+03:00",
   "auditBaseCommit": "4638222e242aa48d6294b03bdf5e6bfc37b2f093",
-  "overall": "PR40_OFFICIAL_DOMAIN_AND_PR39_IDENTITY_VERIFIED_OPERATING_EMAIL_ACTIVATION_DECISIONS_OPEN",
+  "overall": "PR41_STUDIO_AND_PRIVATE_MAIL_FOUNDATION_VERIFIED_MAIL_TRANSPORT_AND_OPERATING_GATES_OPEN",
   "newActualModelTurns": 10,
   "productionFixtureAccountsCreated": 0,
   "localStackRestarted": true,
   "broadSuitesRepeated": false,
   "workerCountTotal": 3,
   "privilegedCleanupIsNotUserFacingDeleteEvidence": true,
-  "finalProductionCommit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
-  "finalDeployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+  "finalProductionCommit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+  "finalDeployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
   "productionUiDeleteHistoryRevocation": "PASS",
   "completionAuditFinalReceiptPublication": "PR39 publishes approved identity/GSC and prior local documentation; final post-release evidence is local Git plus merged PR body to avoid docs-only redeploy",
   "continuation": {
@@ -459,6 +507,40 @@
         "domainEvidence": "evidence/domain-cutover/live-http.json; evidence/domain-cutover/browser.json"
       },
       "overall": "PR39_IDENTITY_GSC_PUBLISHED_LIVE_VERIFIED_RECOVERY_EVIDENCE_PRESERVED_OPERATING_DECISIONS_OPEN"
+    },
+    {
+      "phase": "before essential workspace PR41",
+      "currentProduction": {
+        "commit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+        "deployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+        "pullRequest": "https://github.com/adham-younes/vzero/pull/40",
+        "primary": "https://agynexa.si",
+        "state": "READY",
+        "metadataReadAt": "2026-10-22T03:51:12.271561+03:00",
+        "primaryAliasSourceMatched": true,
+        "health": "No new health/DB/model probe; prior PR38 evidence retained, current four affected public routes and exact static file200 verified",
+        "newIdentityOrGoogleIncluded": true,
+        "recoveryClickEvidence": "PASS_ON_PREVIOUS_PR38_RUNTIME_UNCHANGED",
+        "identityGoogleEvidence": "evidence/owner-identity-production/http.json; evidence/owner-identity-production/browser.json",
+        "legacyPrimary": "https://vzero-nine-beryl.vercel.app",
+        "domainEvidence": "evidence/domain-cutover/live-http.json; evidence/domain-cutover/browser.json"
+      },
+      "localCandidate": {
+        "branch": "codex/agynexa-owner-identity-approval",
+        "codeCommit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
+        "identityReviewReceiptCommit": "9178a4d85b6d88408925c733e6bb4edcec74a1e3",
+        "googleFileCommit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
+        "status": "PUBLISHED_VERIFIED_PR39",
+        "approvalGate": "Satisfied: direct human موافق-نفذ for this reviewed candidate only",
+        "identityEvidence": "evidence/owner-identity-local.json",
+        "fullArchitectPlan": "Unchanged; original coordinator addendum prefix preserved with explicitly authorized owner override appended",
+        "customDomainVerification": "PENDING_NOT_ATTACHED_TO_EXACT_PROJECT_NO_DOMAIN_ACTION",
+        "newIdentityOrGooglePublished": true,
+        "reviewedHead": "23dd1517dd44bf7556194b78caba173153bbcd82",
+        "mergeCommit": "87db497712f99e35381ea90f26e6490574105944",
+        "pullRequest": "https://github.com/adham-younes/vzero/pull/39",
+        "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg"
+      }
     }
   ],
   "auditModelTurnsByPhase": {
@@ -470,35 +552,19 @@
   "localStackStatus": "STOPPED",
   "localStackRestartScope": "One previously authorized missing-case batch; no restart or identity test repetition during this closure",
   "currentProduction": {
-    "commit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
-    "deployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
-    "pullRequest": "https://github.com/adham-younes/vzero/pull/40",
+    "commit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+    "deployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/41",
     "primary": "https://agynexa.si",
     "state": "READY",
-    "metadataReadAt": "2026-10-22T03:51:12.271561+03:00",
     "primaryAliasSourceMatched": true,
-    "health": "No new health/DB/model probe; prior PR38 evidence retained, current four affected public routes and exact static file200 verified",
-    "newIdentityOrGoogleIncluded": true,
-    "recoveryClickEvidence": "PASS_ON_PREVIOUS_PR38_RUNTIME_UNCHANGED",
-    "identityGoogleEvidence": "evidence/owner-identity-production/http.json; evidence/owner-identity-production/browser.json",
-    "legacyPrimary": "https://vzero-nine-beryl.vercel.app",
-    "domainEvidence": "evidence/domain-cutover/live-http.json; evidence/domain-cutover/browser.json"
+    "evidence": "evidence/essential-production-session.json"
   },
   "localCandidate": {
-    "branch": "codex/agynexa-owner-identity-approval",
-    "codeCommit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
-    "identityReviewReceiptCommit": "9178a4d85b6d88408925c733e6bb4edcec74a1e3",
-    "googleFileCommit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
-    "status": "PUBLISHED_VERIFIED_PR39",
-    "approvalGate": "Satisfied: direct human موافق-نفذ for this reviewed candidate only",
-    "identityEvidence": "evidence/owner-identity-local.json",
-    "fullArchitectPlan": "Unchanged; original coordinator addendum prefix preserved with explicitly authorized owner override appended",
-    "customDomainVerification": "PENDING_NOT_ATTACHED_TO_EXACT_PROJECT_NO_DOMAIN_ACTION",
-    "newIdentityOrGooglePublished": true,
-    "reviewedHead": "23dd1517dd44bf7556194b78caba173153bbcd82",
-    "mergeCommit": "87db497712f99e35381ea90f26e6490574105944",
-    "pullRequest": "https://github.com/adham-younes/vzero/pull/39",
-    "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg"
+    "status": "PUBLISHED_SCOPED_VERIFIED_PR41",
+    "branch": "codex/agynexa-studio-workspace",
+    "reviewedHead": "b237421b4096c3cab282038e002dc4f63ff28d3c",
+    "mergeCommit": "366ca1075809a2d01a0d2fdb643d199740bf43e1"
   },
   "ownerConfirmedIdentity": {
     "fullName": "Eng. Adham Younes Mohamed",
@@ -537,5 +603,15 @@
     ],
     "dnsMailNs": "UNCHANGED",
     "evidence": "DOMAIN-CUTOVER.md"
+  },
+  "essentialRelease": {
+    "newActualModelTurns": 2,
+    "localHttpGroups": 43,
+    "localBrowserGroups": 7,
+    "productionHttpChecks": 8,
+    "mailServerDomainMatch": true,
+    "mailTransport": "OFF",
+    "helpers": "checkpointed and idle; primary integrated alone",
+    "fixtureCleanup": "exact essential local users zero; no new production fixture accounts"
   }
 }

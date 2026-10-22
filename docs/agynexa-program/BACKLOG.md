@@ -71,3 +71,10 @@ AUTH-CLASSIFICATION: DEPLOYED_VERIFIED_SCOPE؛ إصلاح تحويل أعطال 
 ## 2026-10-22 essential workspace work package
 
 See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.
+
+
+
+
+## Reviewed Studio UI release authorized — 2026-10-22
+
+Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md).

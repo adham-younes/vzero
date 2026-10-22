@@ -26,6 +26,7 @@ export default function Shell({children}:{children:React.ReactNode}){
   {title:['Explore','استكشف'],slugs:['solutions','services','industries','methodology']},
   {title:['Learn more','اعرف أكثر'],slugs:['architecture','integrations','security','resources','about']},
  ]
+ if(path==='/studio')return <LanguageContext.Provider value={{ar,t}}><a href="#main" className="skip">{t(['Skip to conversation','تجاوز إلى المحادثة'])}</a>{children}</LanguageContext.Provider>
  if(pathname.startsWith('/widget/'))return <>{children}</>
  return <LanguageContext.Provider value={{ar,t}}>
   <a href="#main" className="skip">{t(['Skip to content','تجاوز إلى المحتوى'])}</a>

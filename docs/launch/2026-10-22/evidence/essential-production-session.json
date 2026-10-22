@@ -1,0 +1,26 @@
+{
+  "environment": "production",
+  "merge": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+  "deployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
+  "status": "PASS_SCOPED_WITH_MAIL_TRANSPORT_OFF",
+  "verified": [
+    "exact deployed source READY; official and legacy aliases matched",
+    "existing owner live session: Arabic compound identity, real Groq task and Arabic-only follow-up all saved successfully in Arabic",
+    "two real provider calls with recorded token usage; Fast model only, not an individual test of all three keys",
+    "conversation reload retained three scoped turns; Arabic-only follow-up returned same document task, no retail context",
+    "owner-scoped projects screen loaded real empty state",
+    "NEXA existing-owner allowlist admitted; folders empty; no real mail data inspected",
+    "deployed server Resend key read exact verified AGYNEXA domain successfully",
+    "mail receive/send/auto-send remain off; no mailbox delegation or ChatGPT connection"
+  ],
+  "production_fixture_accounts_created": 0,
+  "real_mail_sent": 0,
+  "local_fixture_accounts_remaining": 0,
+  "local_vm": "stopped; own app stopped",
+  "limits": [
+    "individual Groq keys not independently exercised",
+    "live mail reception/delivery not established",
+    "general semantic comprehension remains PARTIAL; first task answer clarified the goal, Arabic-only follow-up supplied three useful steps",
+    "project/task mutation and reviewed agent creation verified with actual isolated Auth/DB/browser, not new production fixture objects"
+  ]
+}
