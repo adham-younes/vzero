@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "environment": "production HTTPS, unauthenticated boundary only",
+  "checks": [
+    {
+      "path": "/admin/nexa-mail/activity",
+      "method": "GET",
+      "status": 200,
+      "noindex": true,
+      "language": "en",
+      "expected_activity_copy": true
+    },
+    {
+      "path": "/ar/admin/nexa-mail/activity",
+      "method": "GET",
+      "status": 200,
+      "noindex": true,
+      "language": "ar",
+      "expected_activity_copy": true
+    },
+    {
+      "path": "/api/admin/nexa-mail/activity",
+      "method": "GET",
+      "status": 401,
+      "safe_error": "sign_in_required",
+      "health": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "path": "/api/webhooks/resend",
+      "method": "POST",
+      "status": 400,
+      "safe_error": "webhook_invalid",
+      "health": null,
+      "cache_control": "private, no-store"
+    },
+    {
+      "path": "/api/health/supabase",
+      "method": "GET",
+      "status": 200,
+      "safe_error": null,
+      "health": "ok",
+      "cache_control": "no-store"
+    }
+  ],
+  "actualMailSent": false,
+  "validSignedInboundOrForwardingProved": false
+}

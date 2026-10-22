@@ -3,7 +3,8 @@ import {MailError} from './errors'
 import type {MailProvider,SendPayload} from './types'
 import {NEXA_RESEND_INBOX_ID} from './types'
 import {NEXA_IDENTITY} from './types'
-import {parseMailbox} from './inbound'
+import {normalizeInboxEmail} from './inbound'
+import {inboxReplyContext} from './drafts'
 const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 const MAX_RESPONSE=2*1024*1024
 /** Bounded REST is used because the pinned SDK has no injectable fetch transport. */
@@ -45,18 +46,15 @@ export function createMailProvider(apiKey:string,fetchImpl:typeof fetch=fetch):M
   async receiveInbox(threadId:string,emailId:string){if(!UUID.test(threadId)||!UUID.test(emailId))throw new MailError('provider_response_invalid',502);return request('/inboxes/'+NEXA_RESEND_INBOX_ID+'/threads/'+threadId+'/emails/'+emailId,false)},
   async send(payload:SendPayload,idempotencyKey:string){
    if(!/^[\x21-\x7e]{1,240}$/.test(idempotencyKey)||payload.from!==`${NEXA_IDENTITY.displayName} <${NEXA_IDENTITY.address}>`)throw new MailError('provider_send_rejected',400)
-   const reply=payload.inboxReply
-   if(reply&&(!UUID.test(reply.threadId)||!UUID.test(reply.emailId))||!reply&&Object.keys(payload.headers).length)throw new MailError('provider_send_rejected',400)
-   const base='/inboxes/'+NEXA_RESEND_INBOX_ID+'/drafts'
-   const body={to:payload.to,cc:payload.cc,bcc:payload.bcc,subject:payload.subject,text:payload.text,...(reply?{thread_id:reply.threadId,reply_to_email_id:reply.emailId}:{})}
-   const created=await request(base,true,body,idempotencyKey+'/draft') as Record<string,unknown>
-   if(!created||typeof created.id!=='string'||!UUID.test(created.id))throw new MailError('provider_send_unknown',503)
-   // A reply draft may already exist. Never send that existing draft without rechecking its full snapshot.
-   const draft=await request(base+'/'+created.id,false) as Record<string,unknown>
-   const addresses=(v:unknown)=>Array.isArray(v)&&v.every(a=>typeof a==='string')?(v as string[]).map(a=>parseMailbox(a).address):null
-   const same=(v:unknown,expected:string[])=>JSON.stringify(addresses(v))===JSON.stringify(expected)
-   if(!draft||draft.id!==created.id||draft.type!==(reply?'reply':'standalone')||draft.thread_id!==(reply?.threadId??null)||draft.reply_to_email_id!==(reply?.emailId??null)||!same(draft.to,payload.to)||!same(draft.cc,payload.cc)||!same(draft.bcc,payload.bcc)||draft.subject!==payload.subject||draft.text!==payload.text||draft.html!==null&&draft.html!==''||!Array.isArray(draft.attachments)||draft.attachments.length)throw new MailError('provider_send_conflict',409)
-   const data=await request(base+'/'+created.id+'/send',true,undefined,idempotencyKey+'/send')
+   const reply=inboxReplyContext(payload.inboxReply),base='/inboxes/'+NEXA_RESEND_INBOX_ID+'/threads/'+reply.threadId+'/emails/'+reply.emailId
+   // The original Inbox message is immutable. Bind the provider's effective recipients to the reviewed To.
+   // A mutable provider draft is never read, edited, created or sent by this dispatch path.
+   let parent
+   try{parent=normalizeInboxEmail(await request(base,false),reply.emailId,'b24184f6@iejioorkau.resend.app')}
+   catch(error){if(error instanceof MailError&&error.code==='provider_busy')throw error;throw new MailError('provider_send_conflict',409)}
+   const recipients=parent.reply_to?.length?parent.reply_to:[parent.from_address]
+   if(parent.message_id!==reply.parentMessageId||JSON.stringify(recipients)!==JSON.stringify(payload.to))throw new MailError('provider_send_conflict',409)
+   const data=await request(base+'/reply',true,{text:payload.text,subject:payload.subject,cc:payload.cc,bcc:payload.bcc},idempotencyKey)
    if(!data||typeof data!=='object'||Array.isArray(data)||typeof (data as Record<string,unknown>).id!=='string'||!UUID.test((data as Record<string,unknown>).id as string))throw new MailError('provider_send_unknown',503)
    return {id:(data as {id:string}).id}
   },

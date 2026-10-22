@@ -78,6 +78,7 @@ export function normalizeInboxEmail(raw:unknown,expectedEmailId:string,ingress:s
   if(!object(raw)||raw.id!==expectedEmailId||raw.direction!=='inbound')throw invalid()
   const to=addresses(raw.to);requireInboxRecipient(to,ingress)
   const message=normalizeReceivedEmail({...raw,object:'email',subject:raw.subject===null?'':raw.subject,created_at:raw.received_at,headers:null,attachments:[]},expectedEmailId,to[0])
+  message.reply_to=addresses(raw.reply_to,true)
   if(!Array.isArray(raw.attachments)||raw.attachments.length>32)throw invalid()
   message.attachments=raw.attachments.map(a=>{
    if(!object(a)||a.size!==null&&(!Number.isSafeInteger(a.size)||Number(a.size)<0))throw invalid()
