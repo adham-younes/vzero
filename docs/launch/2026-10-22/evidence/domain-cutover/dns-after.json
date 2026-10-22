@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-10-22T04:01:59.193188+03:00",
+  "resolver": "launch1.spaceship.net authoritative (TTL ignored for comparison)",
+  "recordSetSha256": "e2b7111412dd08c247a0e41e162ce5111cc20f16add15789c0d1f2fb8cf713a5",
+  "recordCounts": {
+    "agynexa.si:NS": 2,
+    "agynexa.si:MX": 2,
+    "agynexa.si:TXT": 2,
+    "agynexa.si:A": 2,
+    "agynexa.si:AAAA": 0,
+    "agynexa.si:CNAME": 0,
+    "www.agynexa.si:NS": 1,
+    "www.agynexa.si:MX": 1,
+    "www.agynexa.si:TXT": 1,
+    "www.agynexa.si:A": 1,
+    "www.agynexa.si:AAAA": 1,
+    "www.agynexa.si:CNAME": 1
+  },
+  "nameservers": [
+    "launch1.spaceship.net.",
+    "launch2.spaceship.net."
+  ],
+  "mx": [
+    "0 mx1.spacemail.com.",
+    "0 mx2.spacemail.com."
+  ],
+  "apexA": [
+    "216.198.79.1",
+    "64.29.17.1"
+  ],
+  "wwwCname": [
+    "686bd3e2916a5573.vercel-dns-017.com."
+  ],
+  "allQueriedRecordsUnchanged": true
+}

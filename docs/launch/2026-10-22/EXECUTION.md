@@ -170,3 +170,8 @@ Direct human «موافق-نفذ» supersedes the publication hold for the exact
 - Current production all4affected routes200, full identity/title/contact/manualhrefs/ENexactbio/ARparallel PASS; Google200 exact53bytes/no newline/SHA256match. Four actual browser samples EN1440/AR390 PASS; owned public tab closed. Source6fileswithinreviewed scope/12protectedpathsandnonAboutobjects unchanged. No new model/DB/email/form/account action.
 - Scoped human approval satisfied publication gate only; legal/commercial/retention/recovery/human-review decisions remain unanswered. agynexa.si not attached; no domain request/mutation. Full plan preserved. [Release](OWNER-IDENTITY-RELEASE.md), [HTTP](evidence/owner-identity-production/http.json), [browser](evidence/owner-identity-production/browser.json).
 - Final evidence recorded locally in Git and merged PR body to avoid docs-only redeployment; rollback target PR38/ceeb7af/dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb retained, rollback not needed.
+
+
+### Authorized custom-domain cutover
+
+Direct owner «نفذ» authorizes moving both names from the exact old project to vzero while preserving mail/NS records. The supported move endpoint atomically moved apex and www308; connector reads confirmed old detachment and target production assignment. Real HTTPS/Google passed; authoritative DNS before/after is identical. Narrow one-line canonical host follow-up `3f11bbe`; no visual/home/Auth-provider/DNS changes. [Domain receipt](DOMAIN-CUTOVER.md). Email infrastructure remains a separate local stage; activation is held for the pending trailing constraint.

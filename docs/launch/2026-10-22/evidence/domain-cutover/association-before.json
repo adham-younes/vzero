@@ -1,0 +1,110 @@
+{
+  "old": {
+    "domains": [
+      {
+        "name": "www.agynexa.si",
+        "apexName": "agynexa.si",
+        "projectId": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+        "redirect": "agynexa.si",
+        "redirectStatusCode": 308,
+        "gitBranch": null,
+        "customEnvironmentId": null,
+        "updatedAt": 1792114371198,
+        "createdAt": 1792114371198,
+        "verified": true
+      },
+      {
+        "name": "agynexa.si",
+        "apexName": "agynexa.si",
+        "projectId": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+        "redirect": null,
+        "redirectStatusCode": null,
+        "gitBranch": null,
+        "customEnvironmentId": null,
+        "updatedAt": 1792114338832,
+        "createdAt": 1792114338832,
+        "verified": true
+      },
+      {
+        "name": "compute-the-platform-to-build-six-fawn.vercel.app",
+        "apexName": "vercel.app",
+        "projectId": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+        "redirect": null,
+        "gitBranch": null,
+        "customEnvironmentId": null,
+        "updatedAt": 1790525767045,
+        "createdAt": 1790525767045,
+        "verified": true
+      }
+    ],
+    "pagination": {
+      "count": 3,
+      "next": null,
+      "prev": 1792114371198
+    }
+  },
+  "target": {
+    "domains": [
+      {
+        "name": "vzero-nine-beryl.vercel.app",
+        "apexName": "vercel.app",
+        "projectId": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+        "redirect": null,
+        "gitBranch": null,
+        "customEnvironmentId": null,
+        "updatedAt": 1792350516824,
+        "createdAt": 1792350516824,
+        "verified": true
+      }
+    ],
+    "pagination": {
+      "count": 1,
+      "next": null,
+      "prev": 1792350516824
+    }
+  },
+  "domainConfig": {
+    "configuredBy": "A",
+    "nameservers": [
+      "launch2.spaceship.net",
+      "launch1.spaceship.net"
+    ],
+    "serviceType": "external",
+    "cnames": [],
+    "aValues": [
+      "216.198.79.1",
+      "64.29.17.1"
+    ],
+    "conflicts": [],
+    "acceptedChallenges": [
+      "http-01"
+    ],
+    "recommendedIPv4": [
+      {
+        "rank": 1,
+        "value": [
+          "216.198.79.1",
+          "64.29.17.1"
+        ]
+      },
+      {
+        "rank": 2,
+        "value": [
+          "76.76.21.21"
+        ]
+      }
+    ],
+    "recommendedCNAME": [
+      {
+        "rank": 1,
+        "value": "686bd3e2916a5573.vercel-dns-017.com."
+      },
+      {
+        "rank": 2,
+        "value": "cname.vercel-dns.com."
+      }
+    ],
+    "ipStatus": "no-change",
+    "misconfigured": false
+  }
+}

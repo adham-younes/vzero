@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T03:51:12.271561+03:00",
+  "updated_at": "2026-10-22T04:02:56.929495+03:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -556,5 +556,21 @@
     "new_database_changes": 0,
     "active_owned_browser_tab": false,
     "final_receipt_publication": "LOCAL_GIT_COMMIT_AND_MERGED_PR_BODY_NO_DOCS_ONLY_REDEPLOY"
+  },
+  "domain_cutover_2026_10_22": {
+    "status": "ASSIGNMENT_LIVE_CANONICAL_RELEASE_PENDING",
+    "approval": "نفذ",
+    "old_project": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+    "target_project": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+    "domains": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ],
+    "association": "BOTH_MOVED_VERIFIED_PRODUCTION_OLD_DETACHED",
+    "www_redirect": "308_TO_APEX_PRESERVED",
+    "dns": "ALL_QUERIED_RECORDS_UNCHANGED_AUTHORITATIVE",
+    "source_commit": "3f11bbee37662c716abc2fbf58b0e90c9cc67675",
+    "receipt": "../launch/2026-10-22/DOMAIN-CUTOVER.md",
+    "email_infrastructure": "SEPARATE_LOCAL_STAGE_NOT_ACTIVATED"
   }
 }
