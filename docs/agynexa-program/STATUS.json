@@ -594,5 +594,17 @@
     ],
     "mail_transport": "OFF; sending domain and deployed key match verified; receiving/delivery not established",
     "deferred": "Autonomous campaigns, personal mailbox migration, ChatGPT connector, enterprise integrations and operating/legal gates remain backlog"
+  },
+  "studio_visual_correction_candidate": {
+    "status": "OWNER_APPROVED_UI_RELEASE_IN_PROGRESS",
+    "receipt": "../launch/2026-10-22/STUDIO-CHAT-UI-REVIEW.md",
+    "reason": "Owner rejected PR41 nested marketing/dashboard composition; provided exact EchoAI reference",
+    "scope": "dedicated /studio and /ar/studio, one sidebar, anchored composer, compact real management menus, route locale",
+    "build": "PASS",
+    "browser_groups": 15,
+    "fixture_boundary": "synthetic browser HTTP API data; actual local optimized Next UI",
+    "production": "PR41 unchanged",
+    "magicpath": "EXTERNAL_AGENT_API_QUOTA_EXCEEDED 50/50; no project/component/canvas created",
+    "owner_gate": "Explicit نعم-نفذ approves reviewed Studio UI distribution only; NEXA routing/DNS/provider activation remains on hold"
   }
 }

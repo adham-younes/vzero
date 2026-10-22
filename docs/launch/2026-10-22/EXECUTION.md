@@ -185,3 +185,13 @@ PR40 merged `3cc7f8e1754946233c3d5bae63298ec3c0d32e3a`; Git integration deployme
 ## Essential workspace final release
 
 PR41 merged/deployed; see [full receipt](ESSENTIAL-WORKSPACE-RELEASE.md). Primary integrated alone after helper checkpoints. 43 isolated HTTP groups, seven browser checks, eight production HTTP checks, three Arabic existing-owner saved turns/two actual Fast calls, deployed Resend key/domain match. Mail transport OFF; no real mail or new production accounts. Local fixture accounts cleaned and owned stack stopped. Full original plan and open gates retained.
+
+
+## Studio corrective visual candidate — local only
+
+Owner rejected the PR41 nested marketing/dashboard layout. Exact reference images inspected before edits; local dedicated chat implemented and visually checked EN/AR at1440×1000 and390×844. [UI review](STUDIO-CHAT-UI-REVIEW.md). MagicPath returned quota50/50 on one create-project call; no remote design exists. Optimized build/types and15 targeted fixture-based browser groups pass; global CSS, homepage/Hero/video/design hashes unchanged. No commit/push/deploy or external mail/DNS changes; routing checkpoint remains preserved.
+
+
+## Reviewed Studio UI release authorized — 2026-10-22
+
+Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](STUDIO-CHAT-UI-RELEASE.md).

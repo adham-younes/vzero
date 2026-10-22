@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "before_equals_after": true,
+  "files": {
+    "app/globals.css": "976a4edd1c057f1330ac4b18ad3f8d954d4ff1d95d84d4616503d83894fda828",
+    "@components/landing-5-hero-video.tsx": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca",
+    "@components/landing-5-hero-section.tsx": "0e627aca93d1a514f2cc6cbf17db91241ab7c04abdabe8fa5dba490185e043c1",
+    "public/videos/background.mp4": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+    "app/page.tsx": "83064ea46801e889c504e7bb3e5efecb4cb62eb83c2c152005249e3d95fd5205",
+    "DESIGN.md": "ea52d715028adfa55f22595b199bac38041cf543776ec00775f8e7e9cf6d5660"
+  },
+  "shell_change": "one route-scoped branch for normalized /studio only; marketing branch unchanged",
+  "master_plan": "unchanged; validated by documentation checker"
+}

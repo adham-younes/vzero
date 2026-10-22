@@ -1,0 +1,12 @@
+{
+  "status": "BLOCKED_BY_PROVIDER_QUOTA",
+  "operation": "create_project",
+  "error_code": "EXTERNAL_AGENT_API_QUOTA_EXCEEDED",
+  "limit": 50,
+  "used": 50,
+  "project_created": false,
+  "component_created": false,
+  "canvas_opened": false,
+  "attempts": 1,
+  "upgrade_or_workaround": false
+}

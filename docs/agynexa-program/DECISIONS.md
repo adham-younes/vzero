@@ -152,3 +152,13 @@ Owner authorizes implementation/local preparation/push/production, exactly three
 ## 2026-10-22 essential workspace work package
 
 See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.
+
+
+## Latest local review — Studio corrective candidate, 2026-10-22
+
+Owner rejected PR41's marketing wrapper, duplicate navigation and mixed interface labels. [Corrective local UI review](../launch/2026-10-22/STUDIO-CHAT-UI-REVIEW.md) now contains actual desktop/mobile EN/AR screenshots. Dedicated full-height chat uses existing tokens and real compact management entry points. Build/types and 15 targeted browser groups passed with synthetic browser API data. Production remains PR41; no commit/push/deploy. MagicPath project creation was blocked by external-agent quota50/50; no canvas was created. [NEXA routing checkpoint](../launch/2026-10-22/NEXA-INBOUND-ROUTING-REVIEW.md) remains preserved/uncommitted. Owner explicitly requires review before DNS or deployment. Full plans and post-PR41 receipts remain intact.
+
+
+## Reviewed Studio UI release authorized — 2026-10-22
+
+Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md).
