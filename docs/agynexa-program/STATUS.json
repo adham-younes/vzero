@@ -477,5 +477,26 @@
         "production": "READY_DELIVERED_JS_CAPTURED_RENDER_CALLBACK_VERIFIED_NO_NEW_LIVE_CLICK"
       }
     }
+  },
+  "publication_hold_2026_10_22": {
+    "status": "ACTIVE_EXPLICIT_FINAL_OWNER_APPROVAL_REQUIRED",
+    "last_published_source": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "last_published_deployment": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
+    "candidate_branch": "codex/agynexa-owner-identity-approval",
+    "candidate_identity_commit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
+    "candidate_google_commit": "cec7f7d",
+    "candidate_status": "LOCAL_BUILD_AND_8_AFFECTED_PUBLIC_SAMPLES_PASS_NOT_PUBLISHED",
+    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-REVIEW.md",
+    "evidence": "../launch/2026-10-22/evidence/owner-identity-local.json",
+    "legal_registration": "INCOMPLETE_PER_OWNER_NO_PUBLIC_REGISTRATION_ASSERTION_ADDED",
+    "custom_domain_verification": "NOT_TESTED",
+    "email_delivery": "NOT_TESTED",
+    "unanswered": [
+      "retention/backups/deletion",
+      "commercial terms/price/provider costs/support",
+      "recovery or restricted rollout acceptance",
+      "actual human comprehension",
+      "jurisdiction/controller/legal processing facts"
+    ]
   }
 }
