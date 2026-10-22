@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "approved_scope": "reviewed Studio UI only",
+  "previous": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+  "released": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+  "mail_code_blob_hashes_identical": [
+    "lib/nexa-email/config.ts",
+    "lib/nexa-email/inbound.ts",
+    "lib/nexa-email/types.ts",
+    "lib/nexa-email/service.ts"
+  ],
+  "new_api_schema_or_env_changes": false,
+  "routing_candidate_in_release": false,
+  "public_plan_unchanged": true
+}

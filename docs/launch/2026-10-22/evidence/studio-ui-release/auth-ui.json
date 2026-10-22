@@ -1,0 +1,26 @@
+{
+  "environment": "production; actual existing-owner browser session; no API fixtures",
+  "status": "PASS_SCOPED",
+  "source": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+  "deployment": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
+  "checks": [
+    "English dedicated full-height welcome, one sidebar and anchored composer visually inspected",
+    "Actual existing-owner profile and previously saved scoped conversation loaded",
+    "One controlled identity/capability question sent through composer to real Auth/API/persistence path; completed Arabic product-authored reply",
+    "Locale navigation to /ar/studio preserved the same saved conversation",
+    "Arabic interface labels, RTL layout and model options visually inspected",
+    "Hard reload retained the completed saved turn",
+    "Response actions remain compact; no marketing header/footer on Studio"
+  ],
+  "new_production_accounts": 0,
+  "controlled_new_conversations": 1,
+  "new_provider_inference_calls": 0,
+  "provider_limit": "Identity/capability response is product-authored; prior actual Groq evidence retained, not repeated",
+  "new_source_or_agent_or_project_mutations": 0,
+  "mail_or_dns_or_env_mutations": 0,
+  "screenshots": "Actual owner screenshots delivered locally only; profile/history not uploaded to public Git",
+  "limits": [
+    "Production mobile auth flow not newly tested; accepted local390px EN/AR evidence reused",
+    "No universal semantic-quality or new backend-security acceptance claim"
+  ]
+}

@@ -162,3 +162,18 @@ Owner rejected PR41's marketing wrapper, duplicate navigation and mixed interfac
 ## Reviewed Studio UI release authorized — 2026-10-22
 
 Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md).
+
+
+## Studio UI PR42 production receipt — 2026-10-22
+
+[Owner-approved dedicated chat release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md) published: source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, READY `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG`. Existing-owner saved response, locale navigation and reload plus scoped EN/AR layout/HTTP checks passed. This closes the displayed composition release only; larger operating/comprehension and independent email gates remain open. Local NEXA routing candidate is excluded from Git release.
+
+
+## Preserved unpublished NEXA local checkpoint
+
+The separate [email routing candidate](../launch/2026-10-22/NEXA-INBOUND-ROUTING-REVIEW.md) and its code/config/tests remain local and unpublished after Studio PR42. Original shared routing notes are preserved in the verified task-local snapshot; this reapplication retains the new Studio receipt instead of overwriting it. No email/DNS/MX/provider/mailbox/webhook/env mutation or real send is authorized. Latest owner facts identify an already-created Resend NEXA inbox; do not create a duplicate. Dedicated Spacemail NEXA-recipient forwarding still needs isolated local preparation and later review. The full next-task facts are saved privately in work/nexa-email-next-scope.json.
+
+
+## NEXA cloud mail infrastructure authorized — 22 October 2026
+
+The owner's explicit functional cloud-email instruction supersedes the previous local-only email hold for necessary scoped mail infrastructure, provider webhook/server configuration, additive checked database migration and deployment. Reuse the existing inbox/key and exact managed target. Existing human approval/send guards remain. Actual agent identity/transport awaits NEXA's reply; no personal mailbox, MX/DNS, purchase or real send/campaign is authorized. [Current cloud record and limits](../launch/2026-10-22/NEXA-CLOUD-MAIL.md). Historical no-deploy notes above describe their earlier scope only.

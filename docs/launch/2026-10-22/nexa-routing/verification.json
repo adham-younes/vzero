@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-22",
+  "environment": "local candidate only",
+  "base": "859dc64",
+  "production_unchanged": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+  "tests": {
+    "focused_cases": 7,
+    "red": {
+      "pass": 4,
+      "fail": 3
+    },
+    "green": {
+      "pass": 7,
+      "fail": 0
+    },
+    "network": "none; synthetic signed payloads only",
+    "focused_strict_types": "PASS"
+  },
+  "external_mutations": 0,
+  "deployment": false,
+  "committed": false,
+  "broad_suites_run": false,
+  "owner_gate": "routing review before DNS/provider/mailbox/env changes or deployment",
+  "documentation_check": "PASS",
+  "diff_check": "PASS"
+}

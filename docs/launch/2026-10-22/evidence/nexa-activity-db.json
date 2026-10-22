@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "environment": "ISOLATED_LOCAL_POSTGRES",
+  "migration": "20261022033751_nexa_mail_activity_identity.sql",
+  "checks": [
+    "security-invoker view",
+    "anon read and finish denied",
+    "authenticated read and finish denied",
+    "actual service-role view read",
+    "received audit fixed mailbox scope",
+    "historical sender accepted and frozen",
+    "new sender accepted and frozen",
+    "exact frozen display persisted for both identities",
+    "draft and outbox audit visible",
+    "other sender constraint rejected",
+    "cross-mailbox draft hidden",
+    "provider Inbox thread continuity",
+    "Inbox event replay",
+    "provider message dedup",
+    "foreign mailbox cannot join provider thread"
+  ],
+  "count": 15,
+  "realProviderCalls": 0,
+  "fixtures": "transaction rolled back"
+}

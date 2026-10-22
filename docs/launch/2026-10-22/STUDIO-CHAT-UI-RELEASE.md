@@ -1,6 +1,6 @@
 # Reviewed Studio UI release — 22 October 2026
 
-Status: OWNER APPROVED / RELEASE IN PROGRESS. The owner explicitly approved the displayed dedicated chat distribution and said نعم-نفذ. Approval covers that exact UI composition; NEXA routing/DNS/provider/mailbox/webhook/environment changes and real mail sends remain excluded. The independent local routing candidate is snapshotted and held unpublished.
+Status: DEPLOYED / OWNER-APPROVED COMPOSITION / SCOPED LIVE VERIFICATION PASS. The owner explicitly approved the displayed dedicated chat distribution and said نعم-نفذ. Approval covers that exact UI composition; NEXA routing/DNS/provider/mailbox/webhook/environment changes and real mail sends remain excluded. The independent local routing candidate is snapshotted and held unpublished.
 
 ## Result and scope
 
@@ -16,8 +16,19 @@ MagicPath project creation was blocked by provider quota50/50; no remote project
 
 ## Production gate
 
-Pending: UI-only Git diff/PR, hosted build, exact merged source→READY deployment→official alias, EN/AR layout, actual existing-owner chat/history path and bounded homepage/video protection checks. No new production fixture accounts or unrelated owner/tenant data reads.
+Completed: [PR42](https://github.com/adham-younes/vzero/pull/42), reviewed implementation `03ec51b5dfd46421250bbed2c071980b160325cf`, merged source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, deployment `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG` READY. Exact source and official `agynexa.si`/`www.agynexa.si` plus legacy alias matched. Preview and production builds passed. No manual duplicate deployment.
+
+[Live Auth/UI receipt](evidence/studio-ui-release/auth-ui.json): actual existing-owner session loaded the dedicated English screen and prior history; a new controlled identity/capability message completed through real Auth/API/persistence. Switching to Arabic preserved the same conversation; Arabic labels/model options/RTL layout and hard-reload persistence passed. This product-authored identity response did not call a model; no new Groq benchmark was needed for a UI-only release. Actual production screenshots stay in the owner's local output packet to avoid publishing profile/history.
+
+[Public route receipt](evidence/studio-ui-release/public-http.json): four normal-HTTPS route checks passed. Studio EN/AR have no marketing header/footer and remain noindex. English/Arabic home retain header/footer/video autoplay attributes without controls. Protected source hashes unchanged; this is not a newly repeated full playback/browser suite.
+
+[Scope receipt](evidence/studio-ui-release/scope.json): released mail source blobs exactly match PR41. The local routing/config/test/docs candidate was excluded. No new production fixture accounts, real mail, DNS, mailbox/provider/webhook/environment changes, or unrelated tenant/message-body reads. [Deployment receipt](evidence/studio-ui-release/deployment.json).
+
+The existing local optimized-build/types/15 focused browser groups and security evidence were reused at their original scope. Production authenticated mobile was not newly exercised; accepted local390px EN/AR evidence remains valid for unchanged layout CSS.
 
 ## Rollback and remaining boundaries
 
 Prior production: PR41 source `366ca1075809a2d01a0d2fdb643d199740bf43e1`, deployment `dpl_94pFxJSmfXB98pEu4puYELDjx8ow`. Revert this UI commit or roll back to that compatible deployment if the affected flow fails; preserve saved data/audit and additive DB schema. This release performs no migration or environment change. NEXA receive/send/auto-send remain OFF. Separate routing/config/tests/docs stay local and require review; personal Spacemail, aliases/forwarding and apex MX remain unchanged.
+
+
+Final delivery receipt is committed locally and appended to the merged PR description; no documentation-only push/deployment. Pending local NEXA work remains independent. One owned controlled verification conversation is retained; no records were deleted.

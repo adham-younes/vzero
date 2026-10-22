@@ -416,19 +416,27 @@
       "coverage": "NOT_ESTABLISHED_DEFERRED",
       "evidence": "evidence/essential-production-session.json; evidence/essential-local-http.json; evidence/essential-browser.json",
       "limit": "Requires scoped routing/owner decisions; personal mailbox forwarding not authorized"
+    },
+    {
+      "id": "UI1",
+      "requirement": "Owner-approved dedicated Studio composition and route-local interface language",
+      "implementation": "IMPLEMENTED",
+      "coverage": "OWNER_APPROVED_AND_SCOPED_LIVE_VERIFIED",
+      "evidence": "evidence/studio-ui-release/auth-ui.json; evidence/studio-ui-release/public-http.json",
+      "limit": "Real desktop owner path and EN/AR layout only; local mobile evidence reused; no universal semantic or broader operating acceptance"
     }
   ],
   "recordedAt": "2026-10-22T04:09:23.500187+03:00",
   "auditBaseCommit": "4638222e242aa48d6294b03bdf5e6bfc37b2f093",
-  "overall": "PR41_STUDIO_AND_PRIVATE_MAIL_FOUNDATION_VERIFIED_MAIL_TRANSPORT_AND_OPERATING_GATES_OPEN",
+  "overall": "PR42_OWNER_APPROVED_CHAT_COMPOSITION_LIVE_SCOPED_PASS_OPERATING_AND_EMAIL_GATES_OPEN",
   "newActualModelTurns": 10,
   "productionFixtureAccountsCreated": 0,
   "localStackRestarted": true,
   "broadSuitesRepeated": false,
   "workerCountTotal": 3,
   "privilegedCleanupIsNotUserFacingDeleteEvidence": true,
-  "finalProductionCommit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
-  "finalDeployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
+  "finalProductionCommit": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+  "finalDeployment": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
   "productionUiDeleteHistoryRevocation": "PASS",
   "completionAuditFinalReceiptPublication": "PR39 publishes approved identity/GSC and prior local documentation; final post-release evidence is local Git plus merged PR body to avoid docs-only redeploy",
   "continuation": {
@@ -541,6 +549,18 @@
         "pullRequest": "https://github.com/adham-younes/vzero/pull/39",
         "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg"
       }
+    },
+    {
+      "phase": "before approved dedicated Studio PR42",
+      "currentProduction": {
+        "commit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+        "deployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
+        "pullRequest": "https://github.com/adham-younes/vzero/pull/41",
+        "primary": "https://agynexa.si",
+        "state": "READY",
+        "primaryAliasSourceMatched": true,
+        "evidence": "evidence/essential-production-session.json"
+      }
     }
   ],
   "auditModelTurnsByPhase": {
@@ -552,13 +572,13 @@
   "localStackStatus": "STOPPED",
   "localStackRestartScope": "One previously authorized missing-case batch; no restart or identity test repetition during this closure",
   "currentProduction": {
-    "commit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
-    "deployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
-    "pullRequest": "https://github.com/adham-younes/vzero/pull/41",
+    "commit": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+    "deployment": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/42",
     "primary": "https://agynexa.si",
     "state": "READY",
     "primaryAliasSourceMatched": true,
-    "evidence": "evidence/essential-production-session.json"
+    "evidence": "evidence/studio-ui-release/auth-ui.json"
   },
   "localCandidate": {
     "status": "PUBLISHED_SCOPED_VERIFIED_PR41",

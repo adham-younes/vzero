@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AGYNEXA implemented HTTP API",
-    "version": "2026-10-22-candidate",
-    "description": "38 implemented operations including private customer bootstrap and actor-scoped conversations. Candidate evidence and deployment status: docs/launch/2026-10-22/EXECUTION.md. Private save/approval is not external delivery."
+    "version": "2026-10-22-nexa-cloud",
+    "description": "53 implemented HTTP operations. NEXA cloud increment and actual deployment state: docs/launch/2026-10-22/NEXA-CLOUD-MAIL.md. Private approval/provider acceptance is not external delivery."
   },
   "servers": [
     {
@@ -3695,6 +3695,67 @@
                 "type": "object"
               }
             }
+          }
+        }
+      }
+    },
+    "/api/admin/nexa-mail/activity": {
+      "get": {
+        "operationId": "getNexaMailActivity",
+        "summary": "Read dedicated NEXA audit, received or provider-accepted sent metadata",
+        "description": "Verified live Auth session and immutable admin UUID allowlist required before DB access. Read-only fixed mailbox metadata; audit uses service-only security-invoker object-scoped view. Keyset pagination max25; before and after are exclusive. No message body, HTML, attachment content, provider call, model execution or mutation. Visible page polls about every15seconds; this is not a background agent worker.",
+        "x-implementation-status": "IMPLEMENTED",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "kind",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "audit",
+                "received",
+                "sent"
+              ],
+              "default": "audit"
+            }
+          },
+          {
+            "in": "query",
+            "name": "before",
+            "schema": {
+              "type": "string",
+              "maxLength": 500
+            }
+          },
+          {
+            "in": "query",
+            "name": "after",
+            "schema": {
+              "type": "string",
+              "maxLength": 500
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Fixed identity/capabilities, bounded metadata items, hasMore and keyset cursors; no-store"
+          },
+          "400": {
+            "description": "Invalid kind, query or cursor"
+          },
+          "401": {
+            "description": "Live sign-in required"
+          },
+          "403": {
+            "description": "No immutable NEXA admin grant"
+          },
+          "503": {
+            "description": "Sanitized mail unavailable; never raw upstream error"
           }
         }
       }
