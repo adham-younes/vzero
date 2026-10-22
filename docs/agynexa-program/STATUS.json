@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T03:01:32.341751+00:00",
+  "updated_at": "2026-10-22T03:57:47.953114+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,18 +14,18 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "03ec51b5dfd46421250bbed2c071980b160325cf",
-    "reviewed_head": "03ec51b5dfd46421250bbed2c071980b160325cf",
-    "merge_commit": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/42",
+    "implementation_commit": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
+    "reviewed_head": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
+    "merge_commit": "8bea79dfd3d57efb866f9f11485ad73043bcd549",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/43",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
     "legacy_domain": "https://vzero-nine-beryl.vercel.app",
-    "status_at_verification": "READY_OWNER_APPROVED_DEDICATED_STUDIO_SCOPED_LIVE_PASS",
-    "deployment_id": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
+    "status_at_verification": "READY_NEXA_CLOUD_INBOX_PRIVATE_ACTIVITY_SCOPED_PASS",
+    "deployment_id": "dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc",
     "verified_date": "2026-10-22",
-    "receipt": "../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md",
-    "evidence": "../launch/2026-10-22/evidence/studio-ui-release/auth-ui.json"
+    "receipt": "../launch/2026-10-22/NEXA-CLOUD-MAIL.md",
+    "evidence": "../launch/2026-10-22/evidence/nexa-cloud-production-release.json"
   },
   "stage_status": [
     {
@@ -199,18 +199,18 @@
     "scope_decision": "Re-read for C–E: limited templates, common runtime, RLS, idempotency, approvals and real evidence. No RFQ pivot or ten standalone products."
   },
   "previous_verified_product_release": {
-    "implementation_commit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
-    "google_only_commit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
-    "reviewed_head": "23dd1517dd44bf7556194b78caba173153bbcd82",
-    "merge_commit": "87db497712f99e35381ea90f26e6490574105944",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/39",
+    "implementation_commit": "03ec51b5dfd46421250bbed2c071980b160325cf",
+    "reviewed_head": "03ec51b5dfd46421250bbed2c071980b160325cf",
+    "merge_commit": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/42",
     "pull_request_state": "MERGED",
-    "domain": "https://vzero-nine-beryl.vercel.app",
+    "domain": "https://agynexa.si",
+    "legacy_domain": "https://vzero-nine-beryl.vercel.app",
+    "status_at_verification": "READY_OWNER_APPROVED_DEDICATED_STUDIO_SCOPED_LIVE_PASS",
+    "deployment_id": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
     "verified_date": "2026-10-22",
-    "status_at_verification": "READY_PRODUCTION_SOURCE_ALIAS_EXACT_GOOGLE_BYTES_AND_FOUR_AFFECTED_BROWSER_SAMPLES_PASS",
-    "deployment_id": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
-    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md",
-    "evidence": "../launch/2026-10-22/evidence/owner-identity-production/deployment.json"
+    "receipt": "../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md",
+    "evidence": "../launch/2026-10-22/evidence/studio-ui-release/auth-ui.json"
   },
   "runtime_access": {
     "supabase_project": "xsyxvswbiptbyxyqhdim",
@@ -609,20 +609,22 @@
     "live_auth_ui": "Existing-owner controlled saved response + locale navigation/reload PASS; no new inference benchmark"
   },
   "nexa_inbound_routing_candidate": {
-    "status": "CLOUD_RELEASE_PREPARATION",
+    "status": "DEPLOYED_VERIFIED_INDEPENDENT_CLOUD_SCOPE",
     "receipt": "../launch/2026-10-22/NEXA-CLOUD-MAIL.md",
     "public_mailbox": "nexa.agent@agynexa.si",
     "display_name": "NEXA Agent | AGYNEXA AI Assistant",
     "existing_managed_ingress": "b24184f6@iejioorkau.resend.app",
     "upstream_exclusive_route": "NOT_ESTABLISHED",
-    "webhook": "same existing webhook held disabled; corrected to inbox.email.received before activation",
-    "receive_env": "true for next production deployment",
-    "sending": "OFF",
+    "webhook": "ENABLED; inbox.email.received; existing webhook31f5ae0d-94a2-46e7-88b4-873a994e69bb",
+    "receive_env": "true in verified PR43 production",
+    "sending": "OFF; implementation prepared, real sending not verified",
     "auto_send": "OFF",
     "agent_runtime_connection": "NEXA reports manual Resend tools; automatic event wake unsupported and not configured",
     "checks": "21 focused logic/Inbox/routing; 24 affected inbound/provider; 17 draft assertions; 11 SSR; 10 synthetic API browser groups; 15 actual isolated SQL; TypeScript and final optimized build PASS",
     "migration": "20261022033751_nexa_mail_activity_identity.sql; applied to hosted AGYNEXA after 11 isolated SQL checks",
-    "production": "Studio PR42 until verified mail release",
-    "inbox_contract_migration": "20261022034859_nexa_inbox_thread_contract.sql; isolated SQL PASS and applied hosted"
+    "production": "PR43 / 8bea79dfd3d57efb866f9f11485ad73043bcd549 / dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc READY",
+    "inbox_contract_migration": "20261022034859_nexa_inbox_thread_contract.sql; isolated SQL PASS and applied hosted",
+    "server_key_inbox_metadata": "verified via production existing-owner readiness action; exact Inbox/address/display/managed target",
+    "live_owner_ui": "actual Auth+DB audit/received/sent and Arabic PASS; empty views do not prove transport"
   }
 }

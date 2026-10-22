@@ -177,3 +177,8 @@ The separate [email routing candidate](../launch/2026-10-22/NEXA-INBOUND-ROUTING
 ## NEXA cloud mail infrastructure authorized — 22 October 2026
 
 The owner's explicit functional cloud-email instruction supersedes the previous local-only email hold for necessary scoped mail infrastructure, provider webhook/server configuration, additive checked database migration and deployment. Reuse the existing inbox/key and exact managed target. Existing human approval/send guards remain. Actual agent identity/transport awaits NEXA's reply; no personal mailbox, MX/DNS, purchase or real send/campaign is authorized. [Current cloud record and limits](../launch/2026-10-22/NEXA-CLOUD-MAIL.md). Historical no-deploy notes above describe their earlier scope only.
+
+
+## NEXA cloud Inbox PR43 published — 22 October 2026
+
+[Cloud increment and remaining limits](../launch/2026-10-22/NEXA-CLOUD-MAIL.md): PR43 source `8bea79dfd3d57efb866f9f11485ad73043bcd549`, READY `dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc`; existing-owner private metadata views and server-key Inbox binding passed. Same webhook ENABLED for `inbox.email.received` only. Sending OFF; no real email test, forwarding/delivery proof or automatic assistant wake. Dedicated upstream NEXA forwarding remains unverified. Original home/Studio/mail UI/master plan unchanged. No personal mailbox/DNS/MX changes.

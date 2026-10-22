@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-22",
+  "pull_request": "https://github.com/adham-younes/vzero/pull/43",
+  "implementation_commit": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
+  "production_source": "8bea79dfd3d57efb866f9f11485ad73043bcd549",
+  "deployment_id": "dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc",
+  "state": "READY",
+  "official_alias": "https://agynexa.si",
+  "aliases_verified": [
+    "agynexa.si",
+    "www.agynexa.si",
+    "vzero-nine-beryl.vercel.app"
+  ],
+  "webhook": {
+    "id": "31f5ae0d-94a2-46e7-88b4-873a994e69bb",
+    "endpoint": "https://agynexa.si/api/webhooks/resend",
+    "status": "enabled",
+    "events": [
+      "inbox.email.received"
+    ],
+    "same_prepared_webhook": true,
+    "secret_rotated": false
+  },
+  "server_environment": {
+    "RESEND_API_KEY": "existing sensitive production variable reused; never exported",
+    "NEXA_MAIL_ADMIN_USER_IDS": "existing sensitive immutable allowlist preserved",
+    "RESEND_WEBHOOK_SECRET": "sensitive production variable; direct secure connector transfer",
+    "NEXA_MAIL_INGRESS_RECIPIENT": "b24184f6@iejioorkau.resend.app",
+    "NEXA_MAIL_RECEIVE_ENABLED": true,
+    "NEXA_MAIL_SEND_ENABLED": false
+  },
+  "migrations": [
+    "20261022033751_nexa_mail_activity_identity.sql",
+    "20261022034859_nexa_inbox_thread_contract.sql"
+  ],
+  "hosted_schema_checks": {
+    "view_security_invoker": true,
+    "service_role_read": true,
+    "anon_and_authenticated_denied": true,
+    "historical_and_new_sender_supported": true,
+    "complete_rpc_service_only": true,
+    "fixed_inbox_thread_identity_and_serialization": true
+  },
+  "live_existing_owner_checks": [
+    "Private English audit view authorized through actual session and database; empty",
+    "Received metadata view authorized and empty",
+    "Sent metadata view authorized and empty",
+    "Arabic navigation and private audit query successful",
+    "Visible-page periodic refresh advanced the successful checkpoint",
+    "Existing mailbox readiness action verified actual server-held key against domain AND exact fixed Inbox/address/display/managed target"
+  ],
+  "actual_mail_sent": false,
+  "valid_signed_incoming_message_received": false,
+  "upstream_spacemail_forward_verified": false,
+  "provider_delivery_verified": false,
+  "automatic_assistant_wake_supported": false,
+  "automatic_assistant_wake_configured": false,
+  "new_agent_principal_or_schedule": false,
+  "personal_mailbox_dns_mx_changed": false,
+  "cleanup": "Own Next dev server, isolated DB container and dedicated Colima VM stopped; Docker context default retained"
+}
