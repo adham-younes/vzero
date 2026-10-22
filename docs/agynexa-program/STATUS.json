@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T04:09:23.500187+03:00",
+  "updated_at": "2026-10-22T01:59:39.961581+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,18 +14,18 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "3f11bbe",
-    "reviewed_head": "29763cdbb001eb1160fd882e053694b0bb1ffb92",
-    "merge_commit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/40",
+    "implementation_commit": "b237421b4096c3cab282038e002dc4f63ff28d3c",
+    "reviewed_head": "b237421b4096c3cab282038e002dc4f63ff28d3c",
+    "merge_commit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/41",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
     "legacy_domain": "https://vzero-nine-beryl.vercel.app",
-    "status_at_verification": "READY_OFFICIAL_DOMAIN_TLS_REDIRECT_GOOGLE_CANONICAL_AND_BROWSER_PASS",
-    "deployment_id": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+    "status_at_verification": "READY_STUDIO_AND_PRIVATE_MAIL_FOUNDATION_SCOPED_PASS_TRANSPORT_OFF",
+    "deployment_id": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
     "verified_date": "2026-10-22",
-    "receipt": "../launch/2026-10-22/DOMAIN-CUTOVER.md",
-    "evidence": "../launch/2026-10-22/evidence/domain-cutover/live-http.json"
+    "receipt": "../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md",
+    "evidence": "../launch/2026-10-22/evidence/essential-production-session.json"
   },
   "stage_status": [
     {
@@ -585,14 +585,14 @@
     "auth": "SOURCE_AND_PUBLIC_HREF_REVIEW_NO_LIVE_LOGIN_OR_SESSION_TRANSFER"
   },
   "essential_workspace_candidate": {
-    "status": "LOCAL_VERIFICATION_IN_PROGRESS",
+    "status": "DEPLOYED_SCOPED_VERIFIED_WITH_OPERATING_GAPS",
     "receipt": "../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md",
     "scope": [
       "customer workspace and Arabic/current task correction",
       "reviewed saved agents/projects/tasks/status/activity",
       "private NEXA Inbox/Archive/Drafts/Outbox foundation"
     ],
-    "mail_transport": "OFF; owner mailbox not delegated; ChatGPT not connected",
+    "mail_transport": "OFF; sending domain and deployed key match verified; receiving/delivery not established",
     "deferred": "Autonomous campaigns, personal mailbox migration, ChatGPT connector, enterprise integrations and operating/legal gates remain backlog"
   }
 }

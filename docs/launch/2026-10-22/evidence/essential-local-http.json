@@ -42,7 +42,8 @@
     "same signed event replay is idempotent",
     "plain untrusted content stored without HTML/download fields",
     "thread state and audit use transaction",
-    "mail CSRF rejected"
+    "mail CSRF rejected",
+    "real JWT with revoked local session is denied by live-session API/RLS"
   ],
   "status": "PASS"
 }

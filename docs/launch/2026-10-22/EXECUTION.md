@@ -180,3 +180,8 @@ Direct owner «نفذ» authorizes moving both names from the exact old project 
 ### Domain final production receipt
 
 PR40 merged `3cc7f8e1754946233c3d5bae63298ec3c0d32e3a`; Git integration deployment `dpl_J62VBt3YpuGrw71tpkLJwepWAnPK` READY with official apex/www/legacy aliases matched. Six public routes200, exact Google53bytes, www308 path/query preservation,68official sitemap URLs/robots, legacy compatibility and actual public browser navigation/locale/home video PASS. Normal TLS trust; authoritative DNS including mail/NS unchanged. No login/mail/model/DB actions. Owned browser tab closed; no active private handle. [Final domain receipt](DOMAIN-CUTOVER.md). Documentation saved locally/in merged PR body; no docs-only redeploy.
+
+
+## Essential workspace final release
+
+PR41 merged/deployed; see [full receipt](ESSENTIAL-WORKSPACE-RELEASE.md). Primary integrated alone after helper checkpoints. 43 isolated HTTP groups, seven browser checks, eight production HTTP checks, three Arabic existing-owner saved turns/two actual Fast calls, deployed Resend key/domain match. Mail transport OFF; no real mail or new production accounts. Local fixture accounts cleaned and owned stack stopped. Full original plan and open gates retained.

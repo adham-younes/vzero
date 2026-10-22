@@ -1,0 +1,52 @@
+{
+  "environment": "production",
+  "merge": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
+  "deployment": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
+  "status": "PASS",
+  "checks": [
+    {
+      "path": "/studio",
+      "status": 200,
+      "new_ui": true,
+      "private_noindex": true
+    },
+    {
+      "path": "/ar/studio",
+      "status": 200,
+      "new_ui": true,
+      "private_noindex": true
+    },
+    {
+      "path": "/admin/nexa-mail",
+      "status": 200,
+      "new_ui": true,
+      "private_noindex": true
+    },
+    {
+      "path": "/ar/admin/nexa-mail",
+      "status": 200,
+      "new_ui": true,
+      "private_noindex": true
+    },
+    {
+      "path": "/api/v1/projects",
+      "status": 401,
+      "error": "sign_in_required"
+    },
+    {
+      "path": "/api/v1/studio/actions",
+      "status": 401,
+      "error": "sign_in_required"
+    },
+    {
+      "path": "/api/admin/nexa-mail",
+      "status": 401,
+      "error": "sign_in_required"
+    },
+    {
+      "path": "/api/webhooks/resend",
+      "status": 503,
+      "error": "mail_unavailable"
+    }
+  ]
+}
