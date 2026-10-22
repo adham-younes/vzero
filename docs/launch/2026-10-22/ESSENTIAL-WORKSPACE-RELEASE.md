@@ -1,0 +1,37 @@
+# Essential workspace and NEXA foundation — 2026-10-22
+
+Status: CANDIDATE, local integration complete; seven browser checks PASS. Production remains PR40 until the release receipt below is filled. This is an additive work package; the original master plan and historical acceptance limits remain intact.
+
+The owner prioritized a usable Studio, truthful Arabic/current-task responses, real reviewed saved assistants, private account isolation, and safe NEXA mail essentials. Latest owner direction requires the primary executor to finish alone and conserve quota. Existing helpers checkpointed and are idle; no replacement workers or broad model/research loops.
+
+## Scope and market-review implications
+
+The mandatory market review was read in full before implementation. This increment delivers bounded customer outcomes: clarify work, prepare a draft, explicitly review a saved change, reopen the result and inspect actual status. It does not claim market demand, a complete enterprise runtime or external execution. Black/emerald identity and existing primitives are retained. The reference guides layout, not pixel reproduction. Homepage, Hero files, original video, global CSS, public bilingual copy and the full original plan are protected.
+
+Studio now has a conversation sidebar, centered welcome and useful suggestions, bottom composer and simple model selection. Existing sources, settings, publication, strict API/widget behavior, saved history and recovery paths remain accessible. Explicit USER create requests open prefilled missing-field forms. Five registered actions cover assistant creation and project/task creation/status. A saved immutable proposal must be reviewed and explicitly applied using its stored version/hash; server-owned org/actor, row locks, expected revisions and atomic entity/activity/audit changes prevent cross-account or duplicate effects. Projects/tasks are persisted entities, distinct from earlier project briefs. See [contract](studio-workspace/CONTRACT.md).
+
+The authorized incident showed three Arabic questions receiving English and an assistant-invented retail context absent from selected user messages and agent instructions. It did not establish a tenant leak. Product-authored identity/capability responses now answer in the requested language. Arabic-only follow-ups use the actual preceding user task and exclude assistant-invented context. Other customer responses get one bounded language repair, then an explicit error; strict/published response schema remains unchanged. Script detection is heuristic, not proof of universal semantic quality. A failed language repair currently leaves failed-run usage unavailable; successful repairs aggregate usage.
+
+NEXA has a private admin Inbox/Archive/Drafts/Outbox at `/admin/nexa-mail` and Arabic equivalent. Admin access derives verified live Auth identity plus a server UUID allowlist. Fixed sender is NEXA Agent AI Business Assistant AGYNEXA, `nexa.agent@agynexa.si`; plain text only. Edits invalidate exact approval. Queueing does not send. Manual dispatch is separately disabled by default, with durable idempotent intents and conservative uncertain-outcome handling. Raw signed inbound verification precedes bounded provider retrieval; durable leases/deduplication, recipient matching and atomic persistence protect retries. Untrusted mail is rendered as escaped text; HTML/tracking and attachment contents are never fetched. Read/archive state and audit are one transaction. The optional admin sending-domain check runs with the deployed key and returns only domain match/status.
+
+Owner-added Resend DNS was confirmed by the coordinating chat: all three required records verified, domain VERIFIED, sending enabled at provider, receiving DISABLED, Spacemail MX unchanged. This does not prove the deployed key account, public NEXA routing, receiving or actual email delivery. Server receive/send flags remain OFF for release. No campaigns, emails, personal mailbox access/migration, DNS/MX changes or ChatGPT connector activation are part of this increment.
+
+## Verification
+
+- Helper focused tests: language behavior, actual runtime orchestration, registered action parsing/routes and exact review rendering/callback/double-click controls passed. Real isolated PostgreSQL verified RLS/live-session revocation, cross-owner denial, immutable proposal/revision conflicts and concurrent convergence on one result/activity.
+- Optimized Next build passed after fixing a TypeScript control-flow narrowing issue in draft validation.
+- Real isolated HTTP/Auth/Postgres batch: [receipt](evidence/essential-local-http.json). Provider HTTP boundaries are synthetic; no real mail/inference. The initial local REST schema-cache miss was fixed by the standard schema reload notification. A receive fixture omitted its documented `object: email` discriminator; fixture corrected and only the remaining inbound sub-batch rerun.
+- Browser: [receipt](evidence/essential-browser.json), seven checks PASS. Controlled synthetic accounts only, no production fixture accounts. Exact fixture cleanup and live production evidence recorded below.
+- Current OpenAPI inventories include all operations and private admin pages; original master-plan hash must remain unchanged.
+
+## Deferred work and acceptance limits
+
+Preserve the larger program: operational roles/governance and scoped integrations, richer project collaboration and automation, actual owner/reader comprehension, retention/recovery policy, legal/commercial approval, delegated personal mailbox, ChatGPT connection and campaigns remain open. The new saved projects/tasks do not close these broader requirements. NEXA transport activation additionally needs a verified server-key account, exclusive original-recipient routing, actual signed webhook/provider receipt and separately reviewed delivery proof. Sending-domain DNS alone closes none of those receiving/delegation gates. No provider, mailbox or external capability is inferred from displayed configuration.
+
+## Release and rollback
+
+Pending final source/PR/deployment/live receipt. Additive migrations create five Studio tables and six mail tables; explicit RLS/grants and privileged boundaries are verified locally before hosted application. Rollback reverts application exposure and disables mail flags; preserve new tables/audit/data for recovery rather than destructive down migration. Prior production is PR40, source `3cc7f8e1754946233c3d5bae63298ec3c0d32e3a`, deployment `dpl_J62VBt3YpuGrw71tpkLJwepWAnPK` on `https://agynexa.si`.
+
+Local visual inspection prompted a smaller viewport-relative message region so the bottom composer fits normal desktop height. The final generated CSS is checked in the deployment/browser gate; no global theme changes. A Spacemail alias on a personal main mailbox plus ordinary all-mail forwarding is not a safe exclusive NEXA route; a dedicated mailbox or proven recipient-specific redirect is required before receiving activation.
+
+Hosted schema applied once through the authorized AGYNEXA Supabase connector: `studio_saved_work_actions` and `nexa_email_foundation`. Hosted receipt: all eleven tables have RLS; no anon/authenticated mail table or RPC grants; only authenticated Studio proposal/apply RPCs exposed. Production admin allowlist configured for the exact verified owner UUID, without exposing its value; receiving/sending flags remain absent/OFF. No messages or production fixture accounts created.

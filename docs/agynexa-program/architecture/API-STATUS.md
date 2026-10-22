@@ -1,3 +1,5 @@
+Current essential candidate inventory: 41 route files / 52 HTTP operations (derive exact counts from STATUS/OpenAPI). See [release](../../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Earlier counts below are historical.
+
 # حالة APIs وسلوك الوظائف الفعلي
 
 إصدار 22 أكتوبر منشور: [عقود تجربة العميل](../../launch/2026-10-22/API-CHANGES.md) و[إيصال النشر](../../launch/2026-10-22/RELEASE.md). الجرد الحالي38 عملية HTTP في29 ملف route؛ الجدول التاريخي أدناه يحتفظ بسياقه السابق، والعقد JSON الحالي مصدر الجرد الكامل.

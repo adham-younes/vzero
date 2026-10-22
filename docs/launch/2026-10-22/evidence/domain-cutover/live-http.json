@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-22T04:05:39.948372+03:00",
+  "source": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+  "deployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+  "publicRoutes": [
+    {
+      "url": "https://agynexa.si/",
+      "http": 200,
+      "canonical": "https://agynexa.si",
+      "alternates": {
+        "en": "https://agynexa.si",
+        "ar": "https://agynexa.si/ar",
+        "x-default": "https://agynexa.si"
+      },
+      "direction": "ltr",
+      "officialIdentityAndManualLinks": "NOT_APPLICABLE",
+      "homeVideoMarkup": "AUTOPLAY_MUTED_LOOP_PLAYSINLINE_NO_CONTROLS",
+      "legacyAbsoluteMainLinks": false,
+      "tls": "DEFAULT_TRUST_VALIDATED"
+    },
+    {
+      "url": "https://agynexa.si/ar",
+      "http": 200,
+      "canonical": "https://agynexa.si/ar",
+      "alternates": {
+        "en": "https://agynexa.si",
+        "ar": "https://agynexa.si/ar",
+        "x-default": "https://agynexa.si"
+      },
+      "direction": "rtl",
+      "officialIdentityAndManualLinks": "NOT_APPLICABLE",
+      "homeVideoMarkup": "AUTOPLAY_MUTED_LOOP_PLAYSINLINE_NO_CONTROLS",
+      "legacyAbsoluteMainLinks": false,
+      "tls": "DEFAULT_TRUST_VALIDATED"
+    },
+    {
+      "url": "https://agynexa.si/about",
+      "http": 200,
+      "canonical": "https://agynexa.si/about",
+      "alternates": {
+        "en": "https://agynexa.si/about",
+        "ar": "https://agynexa.si/ar/about",
+        "x-default": "https://agynexa.si/about"
+      },
+      "direction": "ltr",
+      "officialIdentityAndManualLinks": "PASS",
+      "homeVideoMarkup": "NOT_APPLICABLE",
+      "legacyAbsoluteMainLinks": false,
+      "tls": "DEFAULT_TRUST_VALIDATED"
+    },
+    {
+      "url": "https://agynexa.si/ar/about",
+      "http": 200,
+      "canonical": "https://agynexa.si/ar/about",
+      "alternates": {
+        "en": "https://agynexa.si/about",
+        "ar": "https://agynexa.si/ar/about",
+        "x-default": "https://agynexa.si/about"
+      },
+      "direction": "rtl",
+      "officialIdentityAndManualLinks": "PASS",
+      "homeVideoMarkup": "NOT_APPLICABLE",
+      "legacyAbsoluteMainLinks": false,
+      "tls": "DEFAULT_TRUST_VALIDATED"
+    },
+    {
+      "url": "https://agynexa.si/contact",
+      "http": 200,
+      "canonical": "https://agynexa.si/contact",
+      "alternates": {
+        "en": "https://agynexa.si/contact",
+        "ar": "https://agynexa.si/ar/contact",
+        "x-default": "https://agynexa.si/contact"
+      },
+      "direction": "ltr",
+      "officialIdentityAndManualLinks": "PASS",
+      "homeVideoMarkup": "NOT_APPLICABLE",
+      "legacyAbsoluteMainLinks": false,
+      "tls": "DEFAULT_TRUST_VALIDATED"
+    },
+    {
+      "url": "https://agynexa.si/ar/contact",
+      "http": 200,
+      "canonical": "https://agynexa.si/ar/contact",
+      "alternates": {
+        "en": "https://agynexa.si/contact",
+        "ar": "https://agynexa.si/ar/contact",
+        "x-default": "https://agynexa.si/contact"
+      },
+      "direction": "rtl",
+      "officialIdentityAndManualLinks": "PASS",
+      "homeVideoMarkup": "NOT_APPLICABLE",
+      "legacyAbsoluteMainLinks": false,
+      "tls": "DEFAULT_TRUST_VALIDATED"
+    }
+  ],
+  "oldHostCompatibility": {
+    "url": "https://vzero-nine-beryl.vercel.app/about",
+    "http": 200,
+    "canonical": "https://agynexa.si/about",
+    "alternates": {
+      "en": "https://agynexa.si/about",
+      "ar": "https://agynexa.si/ar/about",
+      "x-default": "https://agynexa.si/about"
+    },
+    "direction": "ltr",
+    "officialIdentityAndManualLinks": "PASS",
+    "homeVideoMarkup": "NOT_APPLICABLE",
+    "legacyAbsoluteMainLinks": false,
+    "tls": "DEFAULT_TRUST_VALIDATED"
+  },
+  "wwwRedirect": {
+    "url": "https://www.agynexa.si/ar/about?cutover=verify",
+    "http": 308,
+    "location": "https://agynexa.si/ar/about?cutover=verify",
+    "tls": "DEFAULT_TRUST_VALIDATED"
+  },
+  "google": {
+    "url": "https://agynexa.si/googleca466862db14ea8e.html",
+    "http": 200,
+    "bytes": 53,
+    "sha256": "acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291",
+    "trailingNewline": false
+  },
+  "sitemap": "200_68_CANONICAL_URLS_OFFICIAL_HOST",
+  "robots": "200_OFFICIAL_HOST_SITEMAP",
+  "authSourceReview": "RELATIVE_SAME_ORIGIN_ENDPOINTS_ALLOWLISTED_RELATIVE_RETURN_HOST_SCOPED_SECURE_COOKIES_NO_CALLBACK_CONFIG_CHANGE",
+  "liveLoginOrSessionMigrationTest": "NOT_RUN_NO_AUTH_ACTION",
+  "modelDbEmailFormActions": 0
+}

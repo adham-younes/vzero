@@ -1,0 +1,13 @@
+{
+  "environment": "isolated localhost real Auth/DB with synthetic provider boundaries",
+  "status": "PASS",
+  "checks": [
+    "English desktop welcome/sidebar/composer no overflow",
+    "Typed create intent leads to stored exact review without automatic creation",
+    "Explicit UI approval opens actual newly saved assistant",
+    "Saved assistant survives browser reload",
+    "Arabic mobile workspace RTL and no overflow",
+    "Admin inbox renders untrusted plain content without HTML/tracker",
+    "No browser runtime errors"
+  ]
+}

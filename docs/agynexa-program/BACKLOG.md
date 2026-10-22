@@ -66,3 +66,8 @@ QA-01/QA-02 تصحيح الواجهة وعينة الجوال، REVIEW-01 مطا
 UI-REFINE: DEPLOYED_VERIFIED_SCOPE؛ اسم أكبر وAR/EN وخطوط ومحاذاة ونموذج ومثال أوضح. [الدليل](releases/VISUAL-UPGRADE-2026-10-20.md). AUTH-RECOVERY مؤجل بطلب المالك؛ لم يعتمد ربط صندوق بريده، ولم ينفذ SMTP أو الاستعادة. CLIENT-PORTAL: SPECIFIED، مشروع/مراحل/ملفات/موافقات فريق يتطلب نطاق بيانات مستقلًا.
 
 AUTH-CLASSIFICATION: DEPLOYED_VERIFIED_SCOPE؛ إصلاح تحويل أعطال الشبكة/الخادم وحدود المعدل إلى 401؛ اختبارات المعالجات والبناء ناجحة. [التقرير](releases/CONTINUATION-2026-10-20.md). لا يغلق AUTH-TRANSIENT التاريخي.
+
+
+## 2026-10-22 essential workspace work package
+
+See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.

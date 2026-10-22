@@ -1,6 +1,6 @@
 # مركز توثيق AGYNEXA
 
-**نقل الدومين بتفويض جديد:** الاسمان agynexa.si وwww منقولان إلى vzero، وHTTPS وملف Google متاحان، وDNS البريد وNS دون تغيير؛ إصدار canonical المحدود قيد التسليم. [الإيصال](../launch/2026-10-22/DOMAIN-CUTOVER.md).
+**الدومين الرسمي متحقق:** [agynexa.si](https://agynexa.si) وwww على vzero عبر [PR40](https://github.com/adham-younes/vzero/pull/40)، main`3cc7f8e`، إنتاجREADY`dpl_J62VBt3YpuGrw71tpkLJwepWAnPK`. HTTPS وwww308 وGoogle53بايت وcanonical/sitemap والمعاينة العامة نجحت؛ سجلات البريد وNS دون تغيير والرابط القديم متاح. [الإيصال](../launch/2026-10-22/DOMAIN-CUTOVER.md). مرحلة NEXA للبريد مستقلة؛ لا إرسال تلقائي أو ترحيل لصندوق المالك.
 
 **آخر إصدار معتمد ومنشور:** وافق المالك «موافق-نفذ» على مرشح الهوية والتواصل وملف Google؛ نُشر عبر [PR39](https://github.com/adham-younes/vzero/pull/39)، main`87db497`، إنتاجREADY`dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg`. الصفحات الأربع وملف Google53بايت والعينات البصرية EN1440/AR390 متحققة فعليًا. [الإيصال وحدود النطاق](../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md). لا تغيير للدومين أو الرئيسية أو البريد أو قاعدة البيانات. القرارات التشغيلية أدناه ما زالت مفتوحة.
 
@@ -31,3 +31,8 @@
 `IMPLEMENTED` يعني وجود كود؛ `VERIFIED` فحصًا محددًا على بيئة وإصدار معلومين؛ `SPECIFIED` تصميمًا فقط؛ `REQUIRES_ACCESS` حاجة إلى وصول ونطاق؛ `BLOCKED` عائقًا معلومًا؛ `UNKNOWN` غير مثبت. اتصال أكد المالك وجوده لا يعني اختبار قدراته أو دمجه في المنتج.
 
 توجيهات المالك الأحدث تتقدم على الخطة التاريخية. الحالة التشغيلية تستند إلى الكود والإيصالات المؤرخة. ملفات baseline وsource-map وroutes وdependencies وcontent-inventory وtool-inventory تحفظ جرد المرحلة 0؛ لا تستخدمها لوصف الحاضر. التقارير التاريخية تصف وقتها فقط، والخطة الأصلية ومراجعة السوق محفوظتان دون تعديل.
+
+
+## 2026-10-22 essential workspace work package
+
+See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.

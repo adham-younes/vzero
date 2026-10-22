@@ -175,3 +175,8 @@ Direct human «موافق-نفذ» supersedes the publication hold for the exact
 ### Authorized custom-domain cutover
 
 Direct owner «نفذ» authorizes moving both names from the exact old project to vzero while preserving mail/NS records. The supported move endpoint atomically moved apex and www308; connector reads confirmed old detachment and target production assignment. Real HTTPS/Google passed; authoritative DNS before/after is identical. Narrow one-line canonical host follow-up `3f11bbe`; no visual/home/Auth-provider/DNS changes. [Domain receipt](DOMAIN-CUTOVER.md). Email infrastructure remains a separate local stage; activation is held for the pending trailing constraint.
+
+
+### Domain final production receipt
+
+PR40 merged `3cc7f8e1754946233c3d5bae63298ec3c0d32e3a`; Git integration deployment `dpl_J62VBt3YpuGrw71tpkLJwepWAnPK` READY with official apex/www/legacy aliases matched. Six public routes200, exact Google53bytes, www308 path/query preservation,68official sitemap URLs/robots, legacy compatibility and actual public browser navigation/locale/home video PASS. Normal TLS trust; authoritative DNS including mail/NS unchanged. No login/mail/model/DB actions. Owned browser tab closed; no active private handle. [Final domain receipt](DOMAIN-CUTOVER.md). Documentation saved locally/in merged PR body; no docs-only redeploy.
