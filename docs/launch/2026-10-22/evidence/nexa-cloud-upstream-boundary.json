@@ -1,0 +1,8 @@
+{
+  "scope": "bounded authorized provider-manager list inspection only",
+  "dedicated_NEXA_route_verified": false,
+  "personal_mail_contents_options_or_forwarding_rules_opened": false,
+  "configuration_changes": false,
+  "account_specific_details": "Owner-local output packet only; not public Git evidence",
+  "no_inference": "An uninspected alias or forwarding rule is not declared absent or misconfigured"
+}
