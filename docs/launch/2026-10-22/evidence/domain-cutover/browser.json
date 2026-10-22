@@ -1,0 +1,466 @@
+{
+  "recordedAt": "2026-10-22T01:08:42.835Z",
+  "status": "PASS",
+  "deployment": {
+    "pullRequest": 40,
+    "source": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+    "deployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+    "canonicalHost": "agynexa.si",
+    "provenance": "Lead verified READY production deployment and exact apex/www/legacy alias match before this bounded browser audit."
+  },
+  "scope": "Six affected public route views: homepage/About/Contact EN1440 and AR390; four representative viewport screenshots. One newly owned IAB tab. No repeated HTTP suite or identity-copy matrix.",
+  "samples": [
+    {
+      "alternates": [
+        {
+          "href": "https://agynexa.si/",
+          "lang": "en"
+        },
+        {
+          "href": "https://agynexa.si/ar",
+          "lang": "ar"
+        },
+        {
+          "href": "https://agynexa.si/",
+          "lang": "x-default"
+        }
+      ],
+      "canonical": "https://agynexa.si/",
+      "dir": "ltr",
+      "heading": "Intelligence, engineered.\nBuilt for your business.",
+      "internalLinkHosts": [
+        "agynexa.si"
+      ],
+      "lang": "en",
+      "legacyVercelAnchorCount": 0,
+      "publicAccountStartLinks": [
+        {
+          "href": "https://agynexa.si/account",
+          "raw": "/account"
+        },
+        {
+          "href": "https://agynexa.si/start",
+          "raw": "/start"
+        },
+        {
+          "href": "https://agynexa.si/start",
+          "raw": "/start"
+        },
+        {
+          "href": "https://agynexa.si/start",
+          "raw": "/start"
+        },
+        {
+          "href": "https://agynexa.si/start",
+          "raw": "/start"
+        }
+      ],
+      "scrollWidth": 1440,
+      "url": "https://agynexa.si/",
+      "video": {
+        "autoplay": true,
+        "controls": false,
+        "currentSrc": "https://agynexa.si/videos/background.mp4",
+        "currentTime": 2.200827,
+        "loop": true,
+        "muted": true,
+        "paused": false,
+        "readyState": 4,
+        "sourceAttribute": "/videos/background.mp4",
+        "videoControlButtonCount": 0,
+        "playsInline": true,
+        "inlineEvidence": "playsinline HTML attribute; reflected property was not exposed by the read-only DOM scope",
+        "secondObservation": {
+          "paused": false,
+          "playsInlineAttributePresent": true,
+          "videoCurrentTime": 1.083162
+        },
+        "playbackObservedAtTwoNonzeroTimes": true
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "checks": {
+        "actualHostIsCanonical": true,
+        "actualPath": true,
+        "canonicalExact": true,
+        "alternateHostsNewDomain": true,
+        "internalAnchorsNewDomain": true,
+        "noLegacyVercelAnchors": true,
+        "publicAccountStartHrefsSafe": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true,
+        "autoplayMutedInlineLoop": true,
+        "videoPlayingAtObservation": true,
+        "noVideoControlsOrButtons": true
+      },
+      "status": "PASS",
+      "authReturnBehaviorExercised": false,
+      "returnParameterHrefCount": 0,
+      "screenshot": "home-en-1440.png"
+    },
+    {
+      "alternates": [
+        {
+          "href": "https://agynexa.si/about",
+          "lang": "en"
+        },
+        {
+          "href": "https://agynexa.si/ar/about",
+          "lang": "ar"
+        },
+        {
+          "href": "https://agynexa.si/about",
+          "lang": "x-default"
+        }
+      ],
+      "canonical": "https://agynexa.si/about",
+      "dir": "ltr",
+      "heading": "Who we are and how we work with your team",
+      "internalLinkHosts": [
+        "agynexa.si"
+      ],
+      "lang": "en",
+      "legacyVercelAnchorCount": 0,
+      "publicAccountStartLinks": [
+        {
+          "href": "https://agynexa.si/account",
+          "raw": "/account"
+        },
+        {
+          "href": "https://agynexa.si/start",
+          "raw": "/start"
+        }
+      ],
+      "scrollWidth": 1440,
+      "url": "https://agynexa.si/about",
+      "video": null,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "checks": {
+        "actualHostIsCanonical": true,
+        "actualPath": true,
+        "canonicalExact": true,
+        "alternateHostsNewDomain": true,
+        "internalAnchorsNewDomain": true,
+        "noLegacyVercelAnchors": true,
+        "publicAccountStartHrefsSafe": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "status": "PASS",
+      "authReturnBehaviorExercised": false,
+      "returnParameterHrefCount": 0,
+      "screenshot": "about-en-1440.png"
+    },
+    {
+      "alternates": [
+        {
+          "href": "https://agynexa.si/about",
+          "lang": "en"
+        },
+        {
+          "href": "https://agynexa.si/ar/about",
+          "lang": "ar"
+        },
+        {
+          "href": "https://agynexa.si/about",
+          "lang": "x-default"
+        }
+      ],
+      "canonical": "https://agynexa.si/ar/about",
+      "dir": "rtl",
+      "heading": "من نحن وكيف نعمل مع فريقك",
+      "internalLinkHosts": [
+        "agynexa.si"
+      ],
+      "lang": "ar",
+      "legacyVercelAnchorCount": 0,
+      "publicAccountStartLinks": [
+        {
+          "href": "https://agynexa.si/ar/account",
+          "raw": "/ar/account"
+        },
+        {
+          "href": "https://agynexa.si/ar/start",
+          "raw": "/ar/start"
+        }
+      ],
+      "scrollWidth": 390,
+      "url": "https://agynexa.si/ar/about",
+      "video": null,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "actualHostIsCanonical": true,
+        "actualPath": true,
+        "canonicalExact": true,
+        "alternateHostsNewDomain": true,
+        "internalAnchorsNewDomain": true,
+        "noLegacyVercelAnchors": true,
+        "publicAccountStartHrefsSafe": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "status": "PASS",
+      "authReturnBehaviorExercised": false,
+      "returnParameterHrefCount": 0,
+      "screenshot": null
+    },
+    {
+      "alternates": [
+        {
+          "href": "https://agynexa.si/contact",
+          "lang": "en"
+        },
+        {
+          "href": "https://agynexa.si/ar/contact",
+          "lang": "ar"
+        },
+        {
+          "href": "https://agynexa.si/contact",
+          "lang": "x-default"
+        }
+      ],
+      "canonical": "https://agynexa.si/contact",
+      "dir": "ltr",
+      "heading": "Tell us about your workflow.",
+      "internalLinkHosts": [
+        "agynexa.si"
+      ],
+      "lang": "en",
+      "legacyVercelAnchorCount": 0,
+      "publicAccountStartLinks": [
+        {
+          "href": "https://agynexa.si/account",
+          "raw": "/account"
+        },
+        {
+          "href": "https://agynexa.si/start",
+          "raw": "/start"
+        }
+      ],
+      "scrollWidth": 1440,
+      "url": "https://agynexa.si/contact",
+      "video": null,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "checks": {
+        "actualHostIsCanonical": true,
+        "actualPath": true,
+        "canonicalExact": true,
+        "alternateHostsNewDomain": true,
+        "internalAnchorsNewDomain": true,
+        "noLegacyVercelAnchors": true,
+        "publicAccountStartHrefsSafe": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "status": "PASS",
+      "authReturnBehaviorExercised": false,
+      "returnParameterHrefCount": 0,
+      "screenshot": null
+    },
+    {
+      "alternates": [
+        {
+          "href": "https://agynexa.si/contact",
+          "lang": "en"
+        },
+        {
+          "href": "https://agynexa.si/ar/contact",
+          "lang": "ar"
+        },
+        {
+          "href": "https://agynexa.si/contact",
+          "lang": "x-default"
+        }
+      ],
+      "canonical": "https://agynexa.si/ar/contact",
+      "dir": "rtl",
+      "heading": "حدّثنا عن سير عملك.",
+      "internalLinkHosts": [
+        "agynexa.si"
+      ],
+      "lang": "ar",
+      "legacyVercelAnchorCount": 0,
+      "publicAccountStartLinks": [
+        {
+          "href": "https://agynexa.si/ar/account",
+          "raw": "/ar/account"
+        },
+        {
+          "href": "https://agynexa.si/ar/start",
+          "raw": "/ar/start"
+        }
+      ],
+      "scrollWidth": 390,
+      "url": "https://agynexa.si/ar/contact",
+      "video": null,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "actualHostIsCanonical": true,
+        "actualPath": true,
+        "canonicalExact": true,
+        "alternateHostsNewDomain": true,
+        "internalAnchorsNewDomain": true,
+        "noLegacyVercelAnchors": true,
+        "publicAccountStartHrefsSafe": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true
+      },
+      "status": "PASS",
+      "authReturnBehaviorExercised": false,
+      "returnParameterHrefCount": 0,
+      "screenshot": "contact-ar-390.png"
+    },
+    {
+      "alternates": [
+        {
+          "href": "https://agynexa.si/",
+          "lang": "en"
+        },
+        {
+          "href": "https://agynexa.si/ar",
+          "lang": "ar"
+        },
+        {
+          "href": "https://agynexa.si/",
+          "lang": "x-default"
+        }
+      ],
+      "canonical": "https://agynexa.si/ar",
+      "dir": "rtl",
+      "heading": "ذكاءٌ مُهندَس.\nمصمّم لأعمالك.",
+      "internalLinkHosts": [
+        "agynexa.si"
+      ],
+      "lang": "ar",
+      "legacyVercelAnchorCount": 0,
+      "publicAccountStartLinks": [
+        {
+          "href": "https://agynexa.si/ar/account",
+          "raw": "/ar/account"
+        },
+        {
+          "href": "https://agynexa.si/ar/start",
+          "raw": "/ar/start"
+        },
+        {
+          "href": "https://agynexa.si/ar/start",
+          "raw": "/ar/start"
+        },
+        {
+          "href": "https://agynexa.si/ar/start",
+          "raw": "/ar/start"
+        },
+        {
+          "href": "https://agynexa.si/ar/start",
+          "raw": "/ar/start"
+        }
+      ],
+      "scrollWidth": 390,
+      "url": "https://agynexa.si/ar",
+      "video": {
+        "autoplay": true,
+        "controls": false,
+        "currentSrc": "https://agynexa.si/videos/background.mp4",
+        "currentTime": 8.032726,
+        "loop": true,
+        "muted": true,
+        "paused": false,
+        "playsInline": true,
+        "readyState": 4,
+        "sourceAttribute": "/videos/background.mp4",
+        "videoControlButtonCount": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "checks": {
+        "actualHostIsCanonical": true,
+        "actualPath": true,
+        "canonicalExact": true,
+        "alternateHostsNewDomain": true,
+        "internalAnchorsNewDomain": true,
+        "noLegacyVercelAnchors": true,
+        "publicAccountStartHrefsSafe": true,
+        "correctDirection": true,
+        "viewportExact": true,
+        "noHorizontalOverflow": true,
+        "autoplayMutedInlineLoop": true,
+        "videoPlayingAtObservation": true,
+        "noVideoControlsOrButtons": true
+      },
+      "status": "PASS",
+      "authReturnBehaviorExercised": false,
+      "returnParameterHrefCount": 0,
+      "screenshot": "home-ar-390.png"
+    }
+  ],
+  "actualInternalNavigation": [
+    {
+      "action": "Homepage menu → About link",
+      "observedURL": "https://agynexa.si/about"
+    },
+    {
+      "action": "About language toggle EN → AR",
+      "observedURL": "https://agynexa.si/ar/about"
+    },
+    {
+      "action": "Contact language toggle EN → AR",
+      "observedURL": "https://agynexa.si/ar/contact"
+    },
+    {
+      "action": "Arabic header brand → Arabic homepage",
+      "observedURL": "https://agynexa.si/ar"
+    }
+  ],
+  "visualInspection": {
+    "status": "PASS",
+    "screenshots": [
+      "home-en-1440.png",
+      "about-en-1440.png",
+      "contact-ar-390.png",
+      "home-ar-390.png"
+    ],
+    "observation": "All four saved viewport images inspected. Existing black/green styling and homepage/video presentation retained; desktop and Arabic mobile content fits viewport."
+  },
+  "videoObservation": "Both localized homepages showed the original /videos/background.mp4 from agynexa.si, autoplay/muted/loop/playsinline, readyState4, pausedfalse and nonzero playback time, controlsfalse and no background-video control buttons. Inline evidence uses actual HTML attribute because reflected playsInline was not exposed by read-only DOM scope.",
+  "publicAuthHrefObservation": "Public Account/Start links resolve to the same new origin and localized paths. No returnTo/next parameter links were present in these sampled pages; login or authenticated return behavior was not exercised.",
+  "ownedTabClosed": true,
+  "activeOwnedBrowserTab": false,
+  "ownedTabId": "3",
+  "viewportOverrideReset": true,
+  "actions": {
+    "formChangesOrSubmits": 0,
+    "loginAuthAccountActions": 0,
+    "emailPhoneWhatsAppActivations": 0,
+    "modelOrDatabaseActions": 0,
+    "ownerTabContentReads": 0,
+    "applicationSourceEdits": 0,
+    "pushMergeDeploy": 0
+  },
+  "limits": [
+    "Representative viewport images and six route observations do not establish every route or human comprehension.",
+    "No full-page RTL screenshot path was used; supported viewport captures only.",
+    "DNS/NS/mail preservation, www redirects, HTTP status/file/sitemap checks are owned by the separate lead evidence, not inferred from this browser pass.",
+    "No claim is made about authenticated sessions on the new domain; only public href destinations were inspected."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "alias": "agynexa.si",
+  "projectId": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+  "deploymentId": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+  "source": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+  "state": "READY",
+  "target": "production",
+  "pullRequest": "https://github.com/adham-younes/vzero/pull/40",
+  "reviewedHead": "29763cdbb001eb1160fd882e053694b0bb1ffb92",
+  "domainRedirect": "www308_to_apex",
+  "legacyHostRetained": true
+}

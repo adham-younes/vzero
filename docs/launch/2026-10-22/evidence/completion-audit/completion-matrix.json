@@ -302,7 +302,7 @@
       "requirement": "Production phase deploy/documentation/rollback",
       "implementation": "IMPLEMENTED",
       "coverage": "VERIFIED",
-      "evidence": "PR33/35/36/37/38; remaining-acceptance deployment/build receipts; PR39 identity/GSC source87db497 READY production and exact Google/live affected pages",
+      "evidence": "PR33/35/36/37/38; remaining-acceptance deployment/build receipts; PR39 identity/GSC source87db497 READY production and exact Google/live affected pages; PR40 official-domain canonical release3cc7f8e withREADY/TLS/liveaffectedchecks",
       "limit": "Scoped release verified; final evidence local Git and merged PR body, no documentation-only redeploy."
     },
     {
@@ -340,10 +340,10 @@
     {
       "id": "L5",
       "requirement": "Final domain/DNS",
-      "implementation": "EXCLUDED_PENDING_REQUEST",
-      "coverage": "OUT_OF_SCOPE",
-      "evidence": "owner overrides; existing siteUrl",
-      "limit": "Existing URL unchanged. A domain action is not necessary to close current engineering evidence and was not authorized here."
+      "implementation": "AUTHORIZED_PROJECT_REASSIGNMENT_AND_CANONICAL_RELEASE",
+      "coverage": "VERIFIED_LIVE_DOMAIN_SCOPE",
+      "evidence": "DOMAIN-CUTOVER.md; evidence/domain-cutover",
+      "limit": "Owner separately approved moving both names from exact old project to vzero. Atomic supported move preservedwww308; TLS/Google/officialmetadata/publicbrowser PASS; apexMX/NS/TXT/allqueriedDNS unchanged. No registrar/mailbox/SMTP/owner-mail migration. Domain success does not establish commercial or email readiness."
     },
     {
       "id": "I1",
@@ -357,9 +357,9 @@
       "id": "I2",
       "requirement": "Exact owner-supplied Google verification HTML",
       "implementation": "PUBLISHED_EXACT_FILE_PR39",
-      "coverage": "VERIFIED_PRODUCTION_PRIMARY_URL_BYTES",
+      "coverage": "VERIFIED_PRODUCTION_OFFICIAL_AND_LEGACY_URL_BYTES",
       "evidence": "public/googleca466862db14ea8e.html; Google-only cec7f7d; evidence/owner-identity-production/http.json",
-      "limit": "Existing primary production URL returns200 exact53bytes/no newline; SHA256 acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291. agynexa.si not attached to exact project; future-domain verification pending, no DNS/domain action."
+      "limit": "Exact53bytes/no newline/SHA256match now verified on https://agynexa.si/googleca466862db14ea8e.html after separately approved PR40 domain cutover. Legacy host remains compatible; no DNS/email changes."
     },
     {
       "id": "I3",
@@ -370,27 +370,27 @@
       "limit": "Direct human موافق-نفذ approved exact reviewed candidate; PR39 merged and READY primary verified. Scope remains limited; no protected home/domain/account/email/DB or unanswered operational policy changes. No repeat approval request."
     }
   ],
-  "recordedAt": "2026-10-22T03:51:12.271561+03:00",
+  "recordedAt": "2026-10-22T04:09:23.500187+03:00",
   "auditBaseCommit": "4638222e242aa48d6294b03bdf5e6bfc37b2f093",
-  "overall": "PR39_IDENTITY_GSC_PUBLISHED_LIVE_VERIFIED_RECOVERY_EVIDENCE_PRESERVED_OPERATING_DECISIONS_OPEN",
+  "overall": "PR40_OFFICIAL_DOMAIN_AND_PR39_IDENTITY_VERIFIED_OPERATING_EMAIL_ACTIVATION_DECISIONS_OPEN",
   "newActualModelTurns": 10,
   "productionFixtureAccountsCreated": 0,
   "localStackRestarted": true,
   "broadSuitesRepeated": false,
   "workerCountTotal": 3,
   "privilegedCleanupIsNotUserFacingDeleteEvidence": true,
-  "finalProductionCommit": "87db497712f99e35381ea90f26e6490574105944",
-  "finalDeployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+  "finalProductionCommit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+  "finalDeployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
   "productionUiDeleteHistoryRevocation": "PASS",
   "completionAuditFinalReceiptPublication": "PR39 publishes approved identity/GSC and prior local documentation; final post-release evidence is local Git plus merged PR body to avoid docs-only redeploy",
   "continuation": {
-    "product_pr": "https://github.com/adham-younes/vzero/pull/39",
-    "merge": "87db497712f99e35381ea90f26e6490574105944",
-    "production": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
+    "product_pr": "https://github.com/adham-younes/vzero/pull/40",
+    "merge": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+    "production": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
     "semantic_affected_rerun": "FOUR_TOTAL_LIVE_TURNS_PRESERVED_MODEL_GUIDANCE_PARTIAL_PRIVATE_UI_RECOVERY_LOCALLY_VERIFIED",
     "production_fixture_cleanup": "ALL8_REMAINING_COUNTS0",
     "human_review": "NOT_YET_REVIEWED_BY_HUMAN",
-    "production_status": "READY_SOURCE_PRIMARY_ALIAS_MATCHED_IDENTITY_HTTP_AND_BROWSER_GOOGLE_BYTES_PASS",
+    "production_status": "READY_CUSTOM_DOMAIN_TLS_REDIRECT_GOOGLE_CANONICAL_BROWSER_PASS",
     "recovery_live_click": "PASS_ONE_ACTUAL_PRODUCTION_CLICK_EXISTING_PRIVATE_SOURCE_EDITOR_NO_AUTOWRITE",
     "liveSpecificHandleActive": false,
     "recoveryClickFixtureCleanup": "PASS_EXACT_GUARDS_ALL8_REMAINING0",
@@ -440,6 +440,25 @@
         "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg"
       },
       "overall": "PR38_DEPLOYED_RECOVERY_LIVE_CLICK_VERIFIED_LOCAL_IDENTITY_GSC_UNPUBLISHED_OWNER_DECISIONS_OPEN"
+    },
+    {
+      "scope": "PR39 identity release before separately approved domain cutover",
+      "currentProduction": {
+        "commit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+        "deployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+        "pullRequest": "https://github.com/adham-younes/vzero/pull/40",
+        "primary": "https://agynexa.si",
+        "state": "READY",
+        "metadataReadAt": "2026-10-22T03:51:12.271561+03:00",
+        "primaryAliasSourceMatched": true,
+        "health": "No new health/DB/model probe; prior PR38 evidence retained, current four affected public routes and exact static file200 verified",
+        "newIdentityOrGoogleIncluded": true,
+        "recoveryClickEvidence": "PASS_ON_PREVIOUS_PR38_RUNTIME_UNCHANGED",
+        "identityGoogleEvidence": "evidence/owner-identity-production/http.json; evidence/owner-identity-production/browser.json",
+        "legacyPrimary": "https://vzero-nine-beryl.vercel.app",
+        "domainEvidence": "evidence/domain-cutover/live-http.json; evidence/domain-cutover/browser.json"
+      },
+      "overall": "PR39_IDENTITY_GSC_PUBLISHED_LIVE_VERIFIED_RECOVERY_EVIDENCE_PRESERVED_OPERATING_DECISIONS_OPEN"
     }
   ],
   "auditModelTurnsByPhase": {
@@ -451,17 +470,19 @@
   "localStackStatus": "STOPPED",
   "localStackRestartScope": "One previously authorized missing-case batch; no restart or identity test repetition during this closure",
   "currentProduction": {
-    "commit": "87db497712f99e35381ea90f26e6490574105944",
-    "deployment": "dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg",
-    "pullRequest": "https://github.com/adham-younes/vzero/pull/39",
-    "primary": "https://vzero-nine-beryl.vercel.app",
+    "commit": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+    "deployment": "dpl_J62VBt3YpuGrw71tpkLJwepWAnPK",
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/40",
+    "primary": "https://agynexa.si",
     "state": "READY",
     "metadataReadAt": "2026-10-22T03:51:12.271561+03:00",
     "primaryAliasSourceMatched": true,
     "health": "No new health/DB/model probe; prior PR38 evidence retained, current four affected public routes and exact static file200 verified",
     "newIdentityOrGoogleIncluded": true,
     "recoveryClickEvidence": "PASS_ON_PREVIOUS_PR38_RUNTIME_UNCHANGED",
-    "identityGoogleEvidence": "evidence/owner-identity-production/http.json; evidence/owner-identity-production/browser.json"
+    "identityGoogleEvidence": "evidence/owner-identity-production/http.json; evidence/owner-identity-production/browser.json",
+    "legacyPrimary": "https://vzero-nine-beryl.vercel.app",
+    "domainEvidence": "evidence/domain-cutover/live-http.json; evidence/domain-cutover/browser.json"
   },
   "localCandidate": {
     "branch": "codex/agynexa-owner-identity-approval",
@@ -504,5 +525,17 @@
     "activeOwnedBrowserTab": false,
     "remainingFixtureObjects": 0,
     "existingAccountPreserved": true
+  },
+  "domainCutover": {
+    "status": "VERIFIED_LIVE",
+    "approval": "نفذ",
+    "oldProject": "prj_LUbU8bZzcOxnEZf9B9Nq8Xm2OJMf",
+    "targetProject": "prj_cM4DXxmcwoglwozmMBfGzwP751Rm",
+    "names": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ],
+    "dnsMailNs": "UNCHANGED",
+    "evidence": "DOMAIN-CUTOVER.md"
   }
 }
