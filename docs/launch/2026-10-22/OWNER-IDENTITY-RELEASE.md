@@ -1,15 +1,30 @@
-# Official identity/contact and exact Google file — scoped release
+# AGYNEXA — نشر الهوية والتواصل وملف Google، 22 أكتوبر 2026
 
-Status: **APPROVED_RELEASE_PENDING**. The owner directly said «موافق-نفذ» after reviewing the concrete local identity/contact/GSC candidate. This supersedes the earlier publication hold for this release only. No other scope is approved.
+**تم النشر والتحقق الفعلي** وفق موافقة المالك «موافق-نفذ» على المرشح المحدد.
 
-- Repository/branch: `adham-younes/vzero`, `codex/agynexa-owner-identity-approval`; freshly fetched production main `ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca` (PR38).
-- Existing Vercel project/team: `prj_cM4DXxmcwoglwozmMBfGzwP751Rm` / `team_FWfSZ1vGknqWNQ52Y4bmoHlU`. Fresh connector reads match current production source, READY state and primary alias. Previous deployment `dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb` is the rollback target if this content release fails.
-- Reviewed implementation: identity `db92d90f8005ea462341b9ce7076f1e1ab3f073a`; Google-only separately reviewable `cec7f7d3fe3388c299cde3251806248a3e74586d`. Application/static candidate unchanged since successful optimized build/TypeScript and8local EN/AR390/1440samples in [local evidence](evidence/owner-identity-local.json). No repeated broad/model/DB suites.
-- Affected public routes: `/about`, `/ar/about`, `/contact`, `/ar/contact`, plus `/googleca466862db14ea8e.html`. Full official founder/name/title/bio/contact content is in [review](OWNER-IDENTITY-REVIEW.md). No legal registration claim.
-- Google exact bytes:53, no newline, SHA256 `acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291`.
-- Source review: five identity files and one static file only outside documentation. Twelve protected source/dependency paths and all non-About program-page objects match PR38. Home/Hero/video/styles/fonts/footer/global founder JSON-LD remain unchanged. Full original plan remains preserved.
-- Domain read: exact project lists only `vzero-nine-beryl.vercel.app`; `agynexa.si` is not attached. No future-domain request, transfer, verification or DNS action.
+| البند | الدليل |
+|---|---|
+| PR | [PR39](https://github.com/adham-younes/vzero/pull/39)، MERGED |
+| المصدر الذي راجعناه | `23dd1517dd44bf7556194b78caba173153bbcd82` |
+| main والإنتاج | `87db497712f99e35381ea90f26e6490574105944` |
+| Vercel | `dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg`، READY، production، alias الأساسي مطابق |
+| الموقع | https://vzero-nine-beryl.vercel.app |
+| كود الهوية | `db92d90f8005ea462341b9ce7076f1e1ab3f073a` |
+| Google commit المستقل | `cec7f7d3fe3388c299cde3251806248a3e74586d` |
 
-Publication will use GitHub PR/main integration once; no duplicate manual deploy. Final source/PR/deployment/live-byte/public-browser evidence will be recorded after the release, without a documentation-only redeploy. Read-only browser checks activate no mail/tel/WhatsApp links or forms.
+نُشرت بيانات **Eng. Adham Younes Mohamed، Founder and CEO, AGYNEXA**، واللقب المهني والنبذة الإنجليزية المعتمدة ومقابلها العربي والبريد `adham@agynexa.si` والهاتف/WhatsApp `+201110093730` في About/Founder/Contact. لا ادعاء بالتسجيل القانوني.
 
-Still unanswered: controller/operator role, jurisdiction/address, legal processing text approval, retention/backups/deletion, offer/price/provider costs/support, recovery or restricted rollout acceptance, and actual human comprehension. Official contact display does not establish email delivery.
+التحقق الحي:
+
+- `/about` و`/ar/about` و`/contact` و`/ar/contact`: HTTP200؛ الهوية والعناوين وبيانات التواصل وروابط mailto/tel/wa.me صحيحة، النبذة الإنجليزية بالحرف ومقابلها العربي في About، واتجاه EN/AR صحيح، ولا وصف للمشروع كعلامة شخصية أو مستقلة. لم تُفعّل روابط التواصل أو تُرسل نماذج.
+- أربع عينات متصفح فعلية: الإنجليزي1440 والعربي390؛ العرض والالتفاف والهوية والروابط صحيحة ضمن هذه العينات. راجع القائد لقطة About الإنجليزية ولقطة About العربية بشكل مستقل. صور العربي النهائية viewport390x844 سليمة؛ مشكلة قص أداة IAB للـfull-page موثقة، والنبذة الكاملة فُحصت في DOM وHTTP. أُغلق تبويب الاختبار المملوك وحده؛ لا تبويب اختبار نشط.
+- [ملف Google الحي](https://vzero-nine-beryl.vercel.app/googleca466862db14ea8e.html): **HTTP200،53بايت، دون newline**؛ SHA256 `acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291`، مطابق لملف المالك.
+- بناء Vercel للنشر ناجح. أُعيد استخدام build/TypeScript و8عينات محلية ناجحة لأن كود المرشح لم يتغير؛ لا إعادة حزم عامة أو نموذج/DB. ملفات المصدر6فقط ضمن النطاق؛12مسارًا محميًا وكل بيانات الصفحات الأخرى دون تغيير. الخطة الكاملة محفوظة.
+
+الرئيسية وHero والفيديو والتصميم العام والخطوط والتذييل وJSON-LD العام محفوظة. لا تعديل حساب/SMTP/بريد/قاعدة أو DNS. نطاق `agynexa.si` غير مضاف لهذا المشروع بحسب القراءة الحالية؛ تحقق Google عليه **معلّق**، ولا نقل أو ربط أو تحقق ملكية نُفذ. ظهور البريد ليس اختبار تسليمه.
+
+المتبقي الحقيقي: صفة المتحكم/المشغّل والاختصاص والعنوان واعتماد نصوص المعالجة/القانون، والاحتفاظ والنسخ والحذف، والعرض والسعر وتكلفة المزود والدعم، والاستعادة أو قبول طرح محدود، ومراجعة فهم مستخدم حقيقي. موافقة النشر لا تُغلق هذه القرارات.
+
+التراجع عند الحاجة: نشر PR38 السابق `dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb`/المصدر `ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca` عبر Rollback/Promote المدعوم مع تحقق alias والصفحات والملف، ثم Git revert ملائم دون إعادة كتابة main. لا تغييرات قاعدة في هذا الإصدار. لم يلزم تراجع.
+
+الأدلة: [النشر](evidence/owner-identity-production/deployment.json)، [الصفحات والبايتات](evidence/owner-identity-production/http.json)، [المتصفح](evidence/owner-identity-production/browser.json)، [حدود المصدر](evidence/owner-identity-production/source-scope.json)، [مصفوفة القبول](evidence/completion-audit/completion-matrix.json). الإيصال النهائي محفوظ في Git المحلي وجسم PR المدمج؛ لم يُنشأ نشر إضافي لمجرد تحديث الوثائق.

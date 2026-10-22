@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "reviewedHead": "23dd1517dd44bf7556194b78caba173153bbcd82",
+  "baselineMain": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+  "sourceFiles": [
+    "@components/agynexa-pages.tsx",
+    "@components/owner-identity.tsx",
+    "@components/program-layouts.tsx",
+    "lib/owner-identity.ts",
+    "lib/program-pages.json",
+    "public/googleca466862db14ea8e.html"
+  ],
+  "protectedPathsUnchanged": [
+    "app/page.tsx",
+    "app/[...path]/page.tsx",
+    "app/layout.tsx",
+    "app/globals.css",
+    "@components/agynexa-shell.tsx",
+    "@components/project-brief.tsx",
+    "lib/agynexa.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "@components/landing-5-hero-section.tsx",
+    "@components/landing-5-hero-video.tsx",
+    "public/videos/background.mp4"
+  ],
+  "otherProgramPageObjectsUnchanged": true,
+  "candidateUnchangedSinceBuildAnd8LocalSamples": true,
+  "googleBytes": 53,
+  "googleSha256": "acc3fac1c57336f15b8862bf7c636972413078cad3e26e6c68327b97c0b18291",
+  "broadTestsRepeated": false,
+  "customDomainAttached": false,
+  "domainMutation": false
+}

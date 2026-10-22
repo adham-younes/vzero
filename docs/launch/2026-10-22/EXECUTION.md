@@ -162,3 +162,11 @@ See [remaining acceptance](REMAINING-ACCEPTANCE.md) and UI record phases5–7. O
 ### Scoped owner-approved identity/contact/GSC release
 
 Direct human «موافق-نفذ» supersedes the publication hold for the exact reviewed candidate only. Fresh fetch confirms PR38/ceeb7af is still main; source candidate is unchanged since prior optimized build/TypeScript and8local samples. Vercel connector confirms exact project/team/production alias and no attached agynexa.si. Scope, exclusions, rollback and final evidence: [identity release](OWNER-IDENTITY-RELEASE.md). No broad model/DB tests, account/email/DNS action or extra workers.
+
+
+### PR39 — final production receipt
+
+- Owner-approved reviewed head `23dd1517dd44bf7556194b78caba173153bbcd82` merged via [PR39](https://github.com/adham-younes/vzero/pull/39) to `87db497712f99e35381ea90f26e6490574105944`. Git integration deployment `dpl_6VdmnbeS9PVmW2wELztMtQYZUJUg` READY/production, exact primary alias/source matched. No duplicate manual deployment.
+- Current production all4affected routes200, full identity/title/contact/manualhrefs/ENexactbio/ARparallel PASS; Google200 exact53bytes/no newline/SHA256match. Four actual browser samples EN1440/AR390 PASS; owned public tab closed. Source6fileswithinreviewed scope/12protectedpathsandnonAboutobjects unchanged. No new model/DB/email/form/account action.
+- Scoped human approval satisfied publication gate only; legal/commercial/retention/recovery/human-review decisions remain unanswered. agynexa.si not attached; no domain request/mutation. Full plan preserved. [Release](OWNER-IDENTITY-RELEASE.md), [HTTP](evidence/owner-identity-production/http.json), [browser](evidence/owner-identity-production/browser.json).
+- Final evidence recorded locally in Git and merged PR body to avoid docs-only redeployment; rollback target PR38/ceeb7af/dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb retained, rollback not needed.
