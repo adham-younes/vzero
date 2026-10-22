@@ -1,0 +1,23 @@
+{
+  "status": "READY_PRODUCTION_PRIMARY_AND_HEALTH_VERIFIED",
+  "pullRequest": "https://github.com/adham-younes/vzero/pull/37",
+  "reviewedHead": "7b8dd042a08fd2d6c15a67da55038e0c0dd43801",
+  "mergeCommit": "cc958165e523a2b825270f1385bdb73297f768ac",
+  "deploymentId": "dpl_2ic1SxeD7egduTM57VDT8Tj5UVPp",
+  "primary": "https://vzero-nine-beryl.vercel.app",
+  "previewBuild": "READY",
+  "productionBuild": "READY",
+  "primaryAliasMatchesMerge": true,
+  "health": {
+    "http": 200,
+    "status": "ok",
+    "checks": {
+      "project": "ok",
+      "publishableKey": "ok",
+      "secretKey": "ok"
+    }
+  },
+  "scope": "customer policy only; nextQuestion nullable; no automatic canned fallback; model inference still required for usefulness acceptance",
+  "affectedLiveResult": "PENDING",
+  "noDocsOnlyDeployment": true
+}

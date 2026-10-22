@@ -1,0 +1,10 @@
+{
+  "command": "pnpm build",
+  "exitCode": 0,
+  "compile": "PASS",
+  "typescript": "PASS",
+  "logSha256": "97bdbe2803dc799bdc1b26ef7e69864c80ebd2bea404e486c0feeef5cf80cf4a",
+  "scope": "new private recovery component integration",
+  "localStackRunning": false,
+  "modelsCalled": 0
+}

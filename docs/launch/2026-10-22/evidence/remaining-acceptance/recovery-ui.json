@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "environment": "Real React server rendering of recovery component; actual parent JSX callback extracted and executed with observed setTab/fetch. No DB, browser, stack or model.",
+  "fixtureProvenance": "Reconstructed typed parts from safe fourth production rendered text, synthetic IDs/citation excerpt and null nextQuestion as a test input. This is NOT a captured raw fourth server response; its raw nextQuestion was not captured.",
+  "renderedHTML": {
+    "en": "<div class=\"border-t pt-3 grid gap-3\"><p class=\"muted text-sm\">The missing point needs current approved text. Ask the source owner for the relevant text, or add text you are authorized to use. Review it in Optional sources before submitting; nothing is added or shared automatically.</p><button type=\"button\" tabindex=\"0\" data-slot=\"button\" class=\"group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 justify-self-start\">Review an approved source</button></div>",
+    "ar": "<div class=\"border-t pt-3 grid gap-3\"><p class=\"muted text-sm\">المعلومة الناقصة تحتاج نصًا معتمدًا ومحدّثًا. اطلب النص المتعلق بالمعلومة الناقصة من مسؤول المصدر، أو أضف نصًا مسموحًا لك باستخدامه. راجعه في «مصادر اختيارية» قبل الإضافة؛ لا يُضاف أو يُشارك شيء تلقائيًا.</p><button type=\"button\" tabindex=\"0\" data-slot=\"button\" class=\"group/button inline-flex shrink-0 items-center justify-center rounded-lg border bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 justify-self-start\">مراجعة مصدر معتمد</button></div>"
+  },
+  "checks": [
+    "Reconstructed13-day/missing-opened-policy response with test-null question renders one EN source-owner/approved-text recovery, without automatic navigation or writes",
+    "Arabic recovery explains authorized text/source-owner path using existing design",
+    "Multiple missing-evidence parts still produce only one recovery per answer",
+    "No recovery for grounded only",
+    "No recovery for strict assistant",
+    "No recovery for knowledge changed",
+    "No recovery for expired",
+    "No recovery for failed",
+    "No recovery for cancelled",
+    "No recovery for legacy response",
+    "No recovery for non-v2 response",
+    "Actual rendered control invokes exact StudioAgent callback -> existing knowledge tab; zero fetches/writes and no form submit",
+    "Control is disabled by actual parent busy/running wiring",
+    "Original typed facts/citation input and nullable nextQuestion are unchanged"
+  ],
+  "limitations": [
+    "No live production/browser interaction or end-to-end source submission tested in this focused check.",
+    "Existing source editor behavior remains covered by earlier real browser acceptance; this test proves only contextual rendering and direct tab callback.",
+    "The model response usefulness gap remains documented; this UI control provides an explicit human recovery path without changing inference, facts or nullable nextQuestion."
+  ],
+  "copyVerification": {
+    "status": "PASS",
+    "scope": "Only affected EN/AR copy rendered after first-sentence precision edit; earlier14 behavior/exclusion/wiring checks retained without rerun.",
+    "checks": [
+      "EN first sentence scopes missing point, not the valid grounded answer",
+      "AR first sentence scopes missing point, not the valid grounded answer"
+    ]
+  }
+}
