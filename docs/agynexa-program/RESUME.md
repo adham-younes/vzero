@@ -1,3 +1,7 @@
+## Current production — approved Studio UI published, 2026-10-22
+
+PR42 / `25b89709c3a65ef499c998a179ce3f2ef30deaad` / `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG` READY. [Final UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md): exact approved composition, existing-owner real Auth/chat persistence and EN/AR live layout verified. Separate local NEXA routing/config/tests/docs remain unpublished; no mail/DNS/provider/environment changes. Older candidate/approval notes below are historical; this receipt governs current Studio production. Full plans preserved.
+
 ## Latest local review — Studio corrective candidate, 2026-10-22
 
 Owner rejected PR41's marketing wrapper, duplicate navigation and mixed interface labels. [Corrective local UI review](../launch/2026-10-22/STUDIO-CHAT-UI-REVIEW.md) now contains actual desktop/mobile EN/AR screenshots. Dedicated full-height chat uses existing tokens and real compact management entry points. Build/types and 15 targeted browser groups passed with synthetic browser API data. Production remains PR41; no commit/push/deploy. MagicPath project creation was blocked by external-agent quota50/50; no canvas was created. [NEXA routing checkpoint](../launch/2026-10-22/NEXA-INBOUND-ROUTING-REVIEW.md) remains preserved/uncommitted. Owner explicitly requires review before DNS or deployment. Full plans and post-PR41 receipts remain intact.

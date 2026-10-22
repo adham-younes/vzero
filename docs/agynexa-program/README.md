@@ -38,3 +38,8 @@
 See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Latest owner priority is Studio-first, sole primary execution and minimal affected checks. Real reviewed agents/projects/tasks and safe private mail foundation are additive; larger operating, mailbox migration, ChatGPT and campaign requirements remain open. Production status is governed by the dated release receipt, not by candidate code.
 
 Final current production: PR41 / `366ca1075809a2d01a0d2fdb643d199740bf43e1` / `dpl_94pFxJSmfXB98pEu4puYELDjx8ow` READY. Studio and private mail foundation scoped checks passed; receiving/sending remain OFF. Continue from the dated essential release receipt, preserving operating and routing gates.
+
+
+## Studio UI PR42 production receipt — 2026-10-22
+
+[Owner-approved dedicated chat release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md) published: source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, READY `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG`. Existing-owner saved response, locale navigation and reload plus scoped EN/AR layout/HTTP checks passed. This closes the displayed composition release only; larger operating/comprehension and independent email gates remain open. Local NEXA routing candidate is excluded from Git release.

@@ -1,0 +1,32 @@
+{
+  "environment": "production",
+  "source": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+  "deployment": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
+  "status": "PASS",
+  "checks": [
+    {
+      "path": "/studio",
+      "status": 200,
+      "marketing_shell_absent": true,
+      "noindex": true
+    },
+    {
+      "path": "/ar/studio",
+      "status": 200,
+      "marketing_shell_absent": true,
+      "noindex": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "marketing_shell_retained": true,
+      "autoplay_video_no_controls": true
+    },
+    {
+      "path": "/ar",
+      "status": 200,
+      "marketing_shell_retained": true,
+      "autoplay_video_no_controls": true
+    }
+  ]
+}

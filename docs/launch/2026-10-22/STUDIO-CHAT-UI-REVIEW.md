@@ -1,3 +1,5 @@
+> Historical local-review evidence; the reviewed composition is now published via PR42. See [final production receipt](STUDIO-CHAT-UI-RELEASE.md). Candidate-state statements below describe the earlier review snapshot.
+
 # Studio dedicated chat — local corrective candidate, 22 October 2026
 
 **REVIEWED CANDIDATE — OWNER APPROVED FOR STUDIO UI RELEASE.** Production remains PR41 source `366ca1075809a2d01a0d2fdb643d199740bf43e1`. HEAD remains the existing post-release receipt `859dc64`; all routing/UI work is uncommitted and unpushed. The owner rejected the prior nested marketing/dashboard composition. Earlier functional checks did not establish acceptance of that design.

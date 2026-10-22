@@ -195,3 +195,8 @@ Owner rejected the PR41 nested marketing/dashboard layout. Exact reference image
 ## Reviewed Studio UI release authorized — 2026-10-22
 
 Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](STUDIO-CHAT-UI-RELEASE.md).
+
+
+## Approved Studio UI published — PR42
+
+Owner resumed publication after a short stop before any commit/push. Only the reviewed UI scope was staged and released; the separate routing candidate was snapshotted and excluded. Source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, READY `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG`; [receipt](STUDIO-CHAT-UI-RELEASE.md). Actual owner chat/persistence and EN/AR layout verified, zero new model calls/accounts/mail/DNS/provider/env changes. Public routes/home attributes and source hashes passed. Final docs local only, no docs-only redeploy.

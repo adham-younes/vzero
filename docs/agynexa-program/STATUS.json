@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T01:59:39.961581+00:00",
+  "updated_at": "2026-10-22T03:01:32.341751+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,18 +14,18 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "b237421b4096c3cab282038e002dc4f63ff28d3c",
-    "reviewed_head": "b237421b4096c3cab282038e002dc4f63ff28d3c",
-    "merge_commit": "366ca1075809a2d01a0d2fdb643d199740bf43e1",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/41",
+    "implementation_commit": "03ec51b5dfd46421250bbed2c071980b160325cf",
+    "reviewed_head": "03ec51b5dfd46421250bbed2c071980b160325cf",
+    "merge_commit": "25b89709c3a65ef499c998a179ce3f2ef30deaad",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/42",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
     "legacy_domain": "https://vzero-nine-beryl.vercel.app",
-    "status_at_verification": "READY_STUDIO_AND_PRIVATE_MAIL_FOUNDATION_SCOPED_PASS_TRANSPORT_OFF",
-    "deployment_id": "dpl_94pFxJSmfXB98pEu4puYELDjx8ow",
+    "status_at_verification": "READY_OWNER_APPROVED_DEDICATED_STUDIO_SCOPED_LIVE_PASS",
+    "deployment_id": "dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG",
     "verified_date": "2026-10-22",
-    "receipt": "../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md",
-    "evidence": "../launch/2026-10-22/evidence/essential-production-session.json"
+    "receipt": "../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md",
+    "evidence": "../launch/2026-10-22/evidence/studio-ui-release/auth-ui.json"
   },
   "stage_status": [
     {
@@ -596,15 +596,16 @@
     "deferred": "Autonomous campaigns, personal mailbox migration, ChatGPT connector, enterprise integrations and operating/legal gates remain backlog"
   },
   "studio_visual_correction_candidate": {
-    "status": "OWNER_APPROVED_UI_RELEASE_IN_PROGRESS",
-    "receipt": "../launch/2026-10-22/STUDIO-CHAT-UI-REVIEW.md",
+    "status": "DEPLOYED_SCOPED_VERIFIED_PR42",
+    "receipt": "../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md",
     "reason": "Owner rejected PR41 nested marketing/dashboard composition; provided exact EchoAI reference",
     "scope": "dedicated /studio and /ar/studio, one sidebar, anchored composer, compact real management menus, route locale",
     "build": "PASS",
     "browser_groups": 15,
     "fixture_boundary": "synthetic browser HTTP API data; actual local optimized Next UI",
-    "production": "PR41 unchanged",
+    "production": "PR42",
     "magicpath": "EXTERNAL_AGENT_API_QUOTA_EXCEEDED 50/50; no project/component/canvas created",
-    "owner_gate": "Explicit نعم-نفذ approves reviewed Studio UI distribution only; NEXA routing/DNS/provider activation remains on hold"
+    "owner_gate": "Satisfied for reviewed Studio composition only; email routing/DNS/provider/mailbox/env and email deployment remain unauthorized",
+    "live_auth_ui": "Existing-owner controlled saved response + locale navigation/reload PASS; no new inference benchmark"
   }
 }

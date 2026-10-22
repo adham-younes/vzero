@@ -78,3 +78,8 @@ See [essential workspace and NEXA release](../launch/2026-10-22/ESSENTIAL-WORKSP
 ## Reviewed Studio UI release authorized — 2026-10-22
 
 Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md).
+
+
+## Studio UI PR42 production receipt — 2026-10-22
+
+[Owner-approved dedicated chat release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md) published: source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, READY `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG`. Existing-owner saved response, locale navigation and reload plus scoped EN/AR layout/HTTP checks passed. This closes the displayed composition release only; larger operating/comprehension and independent email gates remain open. Local NEXA routing candidate is excluded from Git release.
