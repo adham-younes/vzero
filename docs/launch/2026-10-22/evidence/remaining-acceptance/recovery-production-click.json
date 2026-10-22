@@ -1,0 +1,142 @@
+{
+  "recordedAt": "2026-10-22T00:32:58.188136+00:00",
+  "status": "PASS — actual production recovery click and exact-fixture cleanup verified",
+  "priorInventoryFinding": {
+    "recordedAt": "2026-10-22T00:27:30.113601+00:00",
+    "status": "NOT VERIFIED — authorized dedicated browser tab is currently unavailable",
+    "scope": "One bounded production recovery-control click only; no new identity/Google publication, account/security/SMTP/DNS/home changes.",
+    "browserEvidence": {
+      "tool": "CUA listTabs browser1 with emit:false",
+      "exactAuthorizedTab": "1780152269",
+      "authorizedDedicatedTabPresent": false,
+      "oldJavaScriptBindingExists": true,
+      "interpretation": "An old bound JavaScript object does not establish an existing tab, signed-in session or current browser access.",
+      "otherOwnerTabContentInspected": false,
+      "credentialOrOwnerConversationContentRead": false,
+      "reacquisitionOrFallbackAttempted": false
+    },
+    "actions": {
+      "recoveryControlClicks": 0,
+      "fixtureAgentsCreated": 0,
+      "modelTurns": 0,
+      "sourcesCreated": 0,
+      "briefsCreated": 0,
+      "proposalsCreated": 0,
+      "publicationOrExternalSendActions": 0,
+      "accountOrSecurityChanges": 0
+    },
+    "recoveryResult": {
+      "actualDestination": "NOT VERIFIED — no click performed",
+      "absenceOfUnintendedSaveShareSend": "No UI mutation was attempted; post-click behavior was not tested.",
+      "rawRunMetadata": "NOT CAPTURED — no current run inspected",
+      "privateHandleActive": false,
+      "cleanupRequired": false
+    },
+    "stoppingReason": "Explicit instruction requires stopping when the existing dedicated tab is closed or unavailable, without browser/session invention, retries or a permission loop.",
+    "limits": [
+      "Prior local SSR/callback evidence does not substitute for a production click.",
+      "Prior semantic fixture was already cleaned and was not recreated.",
+      "No claim is made about login state or any other browser tab."
+    ],
+    "clarification": "Historical audit tab1780152269 was absent; that did not establish browser control or authentication unavailability. A later explicit authorization allowed a different operation: one new dedicated audit tab."
+  },
+  "scope": "PR38 contextual private recovery control only. Owner identity and Google-verification work remains local/unpublished; publication hold honored.",
+  "browser": {
+    "control": "Existing Chrome browser1 available",
+    "newDedicatedTabCreated": 1,
+    "newDedicatedTabId": "1780152302",
+    "signedInUsingExistingCookies": true,
+    "loginActionPerformed": false,
+    "credentialValuesRead": false,
+    "ownerConversationContentInspected": false,
+    "newOwnedTabClosed": true,
+    "closeVerifiedByCurrentInventory": true,
+    "activeBrowserHandle": false,
+    "otherOwnerTabsTouched": false
+  },
+  "fixture": {
+    "name": "AGYNEXA recovery click verification 20261022",
+    "templateReviewed": "KnowledgeGrid",
+    "privacyReviewed": "Private; public access requires separate publication",
+    "selectedMode": "سريع / Fast",
+    "selectedModelValueObservedInUI": "openai/gpt-oss-20b",
+    "privateHandleFile": "work/recovery-live-fixture-ids.json (0600); exact IDs omitted",
+    "privateHandleActive": false,
+    "cleanup": "PASS — lead guarded exact-created-time/name/template/customer-profile/Fast fixture; exact agent deleted, all eight remaining object counts zero."
+  },
+  "turn": {
+    "question": "What is our company policy's exact return window for opened verification widgets? No company policy text has been supplied. Please keep unsupported details unknown.",
+    "visibleCompletionStatus": "مكتمل / completed",
+    "visibleTypedLabel": "معلومات ما زالت مطلوبة / missing evidence",
+    "exactSafeRenderedAnswer": "AGYNEXA recovery click verification 20261022 · سريع · مكتمل\n\nمعلومات ما زالت مطلوبة\n\nThe question asks for the exact return window for opened verification widgets. However, no company policy text has been provided that addresses this specific policy. To determine the return window, the user must supply the current approved company policy that references the return period for opened verification widgets. Once that text is provided, we can extract and cite the relevant passage.\n\nاقتراح، وليس حقيقة مؤكدة عن الشركة.\n\nCould you please provide the approved company policy text that specifies the return window for opened verification widgets?\n\nالمعلومة الناقصة تحتاج نصًا معتمدًا ومحدّثًا. اطلب النص المتعلق بالمعلومة الناقصة من مسؤول المصدر، أو أضف نصًا مسموحًا لك باستخدامه. راجعه في «مصادر اختيارية» قبل الإضافة؛ لا يُضاف أو يُشارك شيء تلقائيًا.\n\nمراجعة مصدر معتمد\nنسخ الرد",
+    "visibleTurnCount": 1,
+    "rawRunResponseCaptured": false,
+    "rawRunIdCaptured": false,
+    "rawSchemaVersionCaptured": false,
+    "limitation": "Model selection and typed/completed labels observed in UI; exact server run metadata is not inferred from DOM."
+  },
+  "recovery": {
+    "actualClicks": 1,
+    "control": "مراجعة مصدر معتمد / Review an approved source",
+    "actualDestination": "Existing Optional sources tab and Add an optional source form",
+    "observedDestination": {
+      "addSourceDisabled": true,
+      "optionalSourcesSelected": true,
+      "publicApprovalOff": true,
+      "sourceContentEmpty": true,
+      "sourceCountHeading": "المصادر المحفوظة (0)",
+      "sourceFormHeading": "إضافة مصدر اختياري",
+      "sourceTitleEmpty": true
+    },
+    "noSourceSubmissionAttempted": true,
+    "noShareSendOrPublicationAttempted": true,
+    "noAutomaticWriteEvidence": "UI editor blank/public approval off/sources0/Add source disabled; independent lead hosted DB check confirmed exactly1 succeeded actor-bound Studio run and0 sources/chunks/proposals/versions/publications/keys before cleanup."
+  },
+  "actions": {
+    "newAccounts": 0,
+    "newPrivateAssistants": 1,
+    "modelTurns": 1,
+    "newSources": 0,
+    "newBriefs": 0,
+    "newProposalsAttempted": 0,
+    "newPublicationsOrKeysAttempted": 0,
+    "recoveryClicks": 1,
+    "accountSecuritySMTPDNSChanges": 0
+  },
+  "screenshots": [
+    "recovery-production-answer.png",
+    "recovery-production-destination.png"
+  ],
+  "limits": [
+    "Screenshots cover only the synthetic main content, excluding footer/account email and object UUIDs.",
+    "This closes the actual recovery-control navigation case; it does not repeat or generalize prior semantic-adversarial acceptance.",
+    "No new identity/Google publication, commit, push, merge or deployment was performed."
+  ],
+  "independentLeadDatabaseVerification": {
+    "status": "PASS",
+    "beforeCleanup": {
+      "agents": 1,
+      "successfulActorBoundStudioRuns": 1,
+      "validatedV2MissingEvidence": true,
+      "sources": 0,
+      "chunks": 0,
+      "proposals": 0,
+      "versions": 0,
+      "publications": 0,
+      "keys": 0
+    },
+    "afterCleanup": {
+      "allEightRemainingObjectCountsZero": true
+    },
+    "identityValuesPubliclyDisclosed": false,
+    "provenance": "Lead bounded exact-fixture hosted database verification; this worker did not capture raw run HTTP metadata or perform DB deletion."
+  },
+  "handoff": {
+    "fixtureCleanupComplete": true,
+    "privateHandleActive": false,
+    "newOwnedBrowserTabClosed": true,
+    "activeBrowserHandle": false,
+    "noFurtherBrowserOrModelChecks": true,
+    "finalReceiptFrozen": true
+  }
+}
