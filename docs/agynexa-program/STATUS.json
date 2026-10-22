@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T02:31:00.239289+03:00",
+  "updated_at": "2026-10-22T03:44:30.007123+03:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -479,13 +479,13 @@
     }
   },
   "publication_hold_2026_10_22": {
-    "status": "ACTIVE_EXPLICIT_FINAL_OWNER_APPROVAL_REQUIRED",
+    "status": "SUPERSEDED_FOR_REVIEWED_IDENTITY_GSC_RELEASE_ONLY",
     "last_published_source": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
     "last_published_deployment": "dpl_99qSVUnJQ3V5mQmzHAt9nPZXW5Lb",
     "candidate_branch": "codex/agynexa-owner-identity-approval",
     "candidate_identity_commit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
     "candidate_google_commit": "cec7f7d",
-    "candidate_status": "LOCAL_BUILD_AND_8_AFFECTED_PUBLIC_SAMPLES_PASS_NOT_PUBLISHED",
+    "candidate_status": "APPROVED_UNCHANGED_RELEASE_PENDING",
     "receipt": "../launch/2026-10-22/OWNER-IDENTITY-REVIEW.md",
     "evidence": "../launch/2026-10-22/evidence/owner-identity-local.json",
     "legal_registration": "INCOMPLETE_PER_OWNER_NO_PUBLIC_REGISTRATION_ASSERTION_ADDED",
@@ -497,7 +497,9 @@
       "recovery or restricted rollout acceptance",
       "actual human comprehension",
       "jurisdiction/controller/legal processing facts"
-    ]
+    ],
+    "approval": "Direct human «موافق-نفذ» after final reviewed candidate gate",
+    "release_receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md"
   },
   "completion_gap_closure_2026_10_22": {
     "matrix": "../launch/2026-10-22/evidence/completion-audit/completion-matrix.json",
@@ -513,5 +515,16 @@
     "publishing": "HOLD_FINAL_OWNER_APPROVAL",
     "evidence": "../launch/2026-10-22/evidence/remaining-acceptance/recovery-production-click.json",
     "prior_missing_tab_finding": "PRESERVED_NOT_CONFLATED_WITH_BROWSER_AUTH_UNAVAILABILITY"
+  },
+  "owner_identity_release_2026_10_22": {
+    "status": "APPROVED_RELEASE_PENDING",
+    "approval": "موافق-نفذ",
+    "branch": "codex/agynexa-owner-identity-approval",
+    "baseline_main": "ceeb7afcb0bd8dd115c86d51277aeab658f7e7ca",
+    "identity_code": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
+    "google_only_commit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
+    "candidate_unchanged_since_local_checks": true,
+    "custom_domain": "NOT_ATTACHED_TO_EXACT_PROJECT_NO_DOMAIN_ACTION",
+    "receipt": "../launch/2026-10-22/OWNER-IDENTITY-RELEASE.md"
   }
 }

@@ -364,10 +364,10 @@
     {
       "id": "I3",
       "requirement": "Final owner approval before any new publication",
-      "implementation": "ACTIVE_HOLD",
-      "coverage": "ENFORCED_LOCAL_ONLY",
-      "evidence": "STATUS.json publication_hold_2026_10_22; coordinator-review-addendum.md latest override; local branch",
-      "limit": "No push/merge/deploy/new PR for identity/GSC or current documentation closure. Prior PR38 production preserved. No repeat request for identity or publishing approval during work."
+      "implementation": "APPROVAL_RECEIVED_SCOPED_RELEASE",
+      "coverage": "DIRECT_HUMAN_APPROVAL",
+      "evidence": "DECISIONS.md D-35; OWNER-IDENTITY-RELEASE.md",
+      "limit": "Owner approved reviewed identity/contact/GSC publication only. Protected home/global metadata/domain/DNS/account/email/DB and unanswered operational facts remain outside scope."
     }
   ],
   "recordedAt": "2026-10-22T03:34:58.456502+03:00",
@@ -432,8 +432,8 @@
     "codeCommit": "db92d90f8005ea462341b9ce7076f1e1ab3f073a",
     "identityReviewReceiptCommit": "9178a4d85b6d88408925c733e6bb4edcec74a1e3",
     "googleFileCommit": "cec7f7d3fe3388c299cde3251806248a3e74586d",
-    "status": "LOCAL_VERIFIED_NOT_PUBLISHED",
-    "approvalGate": "Explicit final owner approval before any push/merge/deploy",
+    "status": "APPROVED_RELEASE_PENDING",
+    "approvalGate": "Satisfied: direct human موافق-نفذ for this reviewed candidate only",
     "identityEvidence": "evidence/owner-identity-local.json",
     "fullArchitectPlan": "Unchanged; original coordinator addendum prefix preserved with explicitly authorized owner override appended",
     "customDomainVerification": "NOT_RUN",
@@ -452,7 +452,12 @@
       "Retention/backups/commercial/recovery decisions"
     ]
   },
-  "publicationHold": "ACTIVE_EXPLICIT_FINAL_OWNER_APPROVAL_REQUIRED",
+  "publicationHold": {
+    "status": "SUPERSEDED_FOR_REVIEWED_IDENTITY_GSC_RELEASE_ONLY",
+    "approval": "Direct human «موافق-نفذ»",
+    "scope": "Reviewed identity/contact/static Google candidate; publication pending live verification",
+    "unscopedChangesAuthorized": false
+  },
   "liveSpecificHandles": {
     "activePrivateFixture": false,
     "activeOwnedBrowserTab": false,

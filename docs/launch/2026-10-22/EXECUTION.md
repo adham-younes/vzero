@@ -157,3 +157,8 @@ Resource snapshot: 8GiB RAM, 8CPU, 28GiB available disk. No Docker/Colima on PAT
 ### Focused acceptance and private evidence recovery continuation
 
 See [remaining acceptance](REMAINING-ACCEPTANCE.md) and UI record phases5–7. One explicitly authorized minimal local stack batch covered previously missing HTTP/browser cases;3 optional-input defects were fixed and only18 affected cases repeated. Two narrowly scoped prompt releases preserved original live PARTIAL results rather than claiming full usefulness. Four actual semantic turns total; exact fixture cleaned/all remaining0. The selected private UI recovery uses the existing Knowledge control and captured-response render/callback verification with no extra inference or fixture. Necessary builds and source/doc checks accompany the coherent product releases; final evidence-only closure stays in a local Git receipt/merged PR body to avoid another docs-only production deployment. Human comprehension and actual operating facts remain open.
+
+
+### Scoped owner-approved identity/contact/GSC release
+
+Direct human «موافق-نفذ» supersedes the publication hold for the exact reviewed candidate only. Fresh fetch confirms PR38/ceeb7af is still main; source candidate is unchanged since prior optimized build/TypeScript and8local samples. Vercel connector confirms exact project/team/production alias and no attached agynexa.si. Scope, exclusions, rollback and final evidence: [identity release](OWNER-IDENTITY-RELEASE.md). No broad model/DB tests, account/email/DNS action or extra workers.
