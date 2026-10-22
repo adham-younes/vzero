@@ -200,3 +200,13 @@ Owner explicitly approved the displayed dedicated Studio composition and said ن
 ## Approved Studio UI published — PR42
 
 Owner resumed publication after a short stop before any commit/push. Only the reviewed UI scope was staged and released; the separate routing candidate was snapshotted and excluded. Source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, READY `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG`; [receipt](STUDIO-CHAT-UI-RELEASE.md). Actual owner chat/persistence and EN/AR layout verified, zero new model calls/accounts/mail/DNS/provider/env changes. Public routes/home attributes and source hashes passed. Final docs local only, no docs-only redeploy.
+
+
+## Preserved unpublished NEXA local checkpoint
+
+The separate [email routing candidate](NEXA-INBOUND-ROUTING-REVIEW.md) and its code/config/tests remain local and unpublished after Studio PR42. Original shared routing notes are preserved in the verified task-local snapshot; this reapplication retains the new Studio receipt instead of overwriting it. No email/DNS/MX/provider/mailbox/webhook/env mutation or real send is authorized. Latest owner facts identify an already-created Resend NEXA inbox; do not create a duplicate. Dedicated Spacemail NEXA-recipient forwarding still needs isolated local preparation and later review. The full next-task facts are saved privately in work/nexa-email-next-scope.json.
+
+
+## NEXA cloud mail infrastructure authorized — 22 October 2026
+
+The owner's explicit functional cloud-email instruction supersedes the previous local-only email hold for necessary scoped mail infrastructure, provider webhook/server configuration, additive checked database migration and deployment. Reuse the existing inbox/key and exact managed target. Existing human approval/send guards remain. Actual agent identity/transport awaits NEXA's reply; no personal mailbox, MX/DNS, purchase or real send/campaign is authorized. [Current cloud record and limits](NEXA-CLOUD-MAIL.md). Historical no-deploy notes above describe their earlier scope only.

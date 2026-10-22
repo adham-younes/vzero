@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "environment": "local real modules and isolated PostgreSQL; synthetic HTTP provider responses",
+  "logic_inbox_routing_groups": 21,
+  "affected_inbound_provider_groups": 24,
+  "draft_assertions": 17,
+  "ui_ssr_groups": 11,
+  "browser_synthetic_api_groups": 10,
+  "actual_isolated_sql_checks": 15,
+  "typescript": "PASS",
+  "optimized_build": "PASS",
+  "docs_source_inventory": "53 operations in42 route files",
+  "protected_files": "Studio, existing mail UI, home, Hero, video, global CSS and full master plan unchanged from41b8731",
+  "provider_webhook": "same existing prepared webhook; inbox.email.received; disabled pending exact source deployment",
+  "actual_outbound_mail_calls": 0,
+  "actual_inbound_mail_or_forwarding_proof": false,
+  "automatic_agent_wake": "unsupported in returned environment; no schedule or speculative service principal"
+}

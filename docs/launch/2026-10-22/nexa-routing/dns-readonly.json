@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-22",
+  "authority": "launch1.spaceship.net",
+  "apex_mx": [
+    {
+      "priority": 0,
+      "target": "mx1.spacemail.com."
+    },
+    {
+      "priority": 0,
+      "target": "mx2.spacemail.com."
+    }
+  ],
+  "proposed_receiver": "receive.agynexa.si",
+  "queries": {
+    "MX": "NXDOMAIN",
+    "CNAME": "NXDOMAIN"
+  },
+  "meaning": "No DNS conflict observed; name not reserved; provider-issued receiving records pending",
+  "writes": 0
+}

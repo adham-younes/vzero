@@ -1,3 +1,7 @@
+## Current NEXA mail work package — cloud infrastructure
+
+[Cloud mail record](../launch/2026-10-22/NEXA-CLOUD-MAIL.md): exact existing inbox/managed target and new display name verified; private activity and strict ingress prepared. Provider webhook held disabled until checked application release. Autonomous agent connection and upstream Spacemail forwarding remain unverified. Later explicit cloud authorization supersedes historical local-only email notes below.
+
 ## Current production — approved Studio UI published, 2026-10-22
 
 PR42 / `25b89709c3a65ef499c998a179ce3f2ef30deaad` / `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG` READY. [Final UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md): exact approved composition, existing-owner real Auth/chat persistence and EN/AR live layout verified. Separate local NEXA routing/config/tests/docs remain unpublished; no mail/DNS/provider/environment changes. Older candidate/approval notes below are historical; this receipt governs current Studio production. Full plans preserved.
@@ -45,3 +49,8 @@ Final current production: PR41 / `366ca1075809a2d01a0d2fdb643d199740bf43e1` / `d
 ## Reviewed Studio UI release authorized — 2026-10-22
 
 Owner explicitly approved the displayed dedicated Studio composition and said نعم-نفذ. Release only that reviewed UI; keep the separate local NEXA routing/config/test/docs candidate unpublished. No DNS, mailbox, provider, webhook, environment or mail-send changes. Preserve PR41 receipt and full master plan. See [UI release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md).
+
+
+## Preserved unpublished NEXA local checkpoint
+
+The separate [email routing candidate](../launch/2026-10-22/NEXA-INBOUND-ROUTING-REVIEW.md) and its code/config/tests remain local and unpublished after Studio PR42. Original shared routing notes are preserved in the verified task-local snapshot; this reapplication retains the new Studio receipt instead of overwriting it. No email/DNS/MX/provider/mailbox/webhook/env mutation or real send is authorized. Latest owner facts identify an already-created Resend NEXA inbox; do not create a duplicate. Dedicated Spacemail NEXA-recipient forwarding still needs isolated local preparation and later review. The full next-task facts are saved privately in work/nexa-email-next-scope.json.

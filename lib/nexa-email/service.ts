@@ -4,22 +4,26 @@ import {mailAdmin,mailMutation,exactKeys,uuid,versionHash} from './admin'
 import {inboundConfig,mailConfig,mailCapabilities,NEXA_IDENTITY} from './config'
 import {adminClient} from '@/lib/supabase/server'
 import {MailError} from './errors'
-import {readVerifiedInbound,normalizeReceivedEmail} from './inbound'
+import {readVerifiedInbound,normalizeReceivedEmail,normalizeInboxEmail} from './inbound'
 import {createMailProvider} from './provider'
 import {prepareDraft} from './drafts'
 import {mailRpc,threadFields,draftFields,outboxFields,threadDto,draftDto,outboxDto,messageDto,stateResult,cursorIn,cursorOut} from './store'
-import type {MailOverview,MailThreadDetail} from './types'
+import {NEXA_RESEND_INBOX_ID,type InboxReply,type MailOverview,type MailThreadDetail} from './types'
 export async function webhook(request:Request){
  const c=inboundConfig(),event=await readVerifiedInbound(request,c.secret,c.ingress)
  if(!event)return {ok:true,ignored:true}
+ if(event.transport!=='inbox')return {ok:true,ignored:true}
  const db=adminClient(),lease=randomUUID()
  const reserve=await mailRpc(db,'nexa_mail_reserve',{p_event:event.event_id,p_hash:event.payload_hash,p_email:event.email_id,p_lease:lease})
  if(reserve.state==='completed')return {ok:true,replayed:true}
  if(reserve.state==='conflict')throw new MailError('webhook_conflict',409)
  if(reserve.state!=='acquired')throw new MailError('webhook_busy',503)
  try{
-  const raw=await createMailProvider(c.apiKey).receive(event.email_id)
-  const message=normalizeReceivedEmail(raw,event.email_id,c.ingress)
+  const provider=createMailProvider(c.apiKey)
+  const raw=event.transport==='inbox'?await provider.receiveInbox(event.thread_id!,event.email_id):await provider.receive(event.email_id)
+  const message=event.transport==='inbox'?normalizeInboxEmail(raw,event.email_id,c.ingress):normalizeReceivedEmail(raw,event.email_id,c.ingress)
+  if(message.to.join('\n')!==event.recipients.join('\n'))throw new MailError('recipient_mismatch',400)
+  message.provider_inbox_id=NEXA_RESEND_INBOX_ID;message.provider_thread_id=event.thread_id
   const result=await mailRpc(db,'nexa_mail_complete',{p_event:event.event_id,p_lease:lease,p_inbox:NEXA_IDENTITY.address,p_message:message})
   if(result.state!=='completed')throw new MailError('webhook_busy',503)
   return {ok:true}
@@ -54,20 +58,22 @@ export async function updateThread(request:Request,id:string){
  return {thread:threadDto(r.thread)}
 }
 export async function createDraft(request:Request){
- const {db,actor}=await mailAdmin(),body=await mailMutation(request);exactKeys(body,['requestKey','to','cc','bcc','subject','text','threadId','replyToMessageId']);const requestKey=uuid(body.requestKey),thread=body.threadId===undefined?null:uuid(body.threadId);let headers:Record<string,string>={}
+ const {db,actor}=await mailAdmin(),body=await mailMutation(request);exactKeys(body,['requestKey','to','cc','bcc','subject','text','threadId','replyToMessageId']);const requestKey=uuid(body.requestKey),thread=body.threadId===undefined?null:uuid(body.threadId);let headers:Record<string,string>={},inboxReply:InboxReply|undefined
+ if(thread&&body.replyToMessageId===undefined){const {data,error}=await db.from('nexa_mail_threads').select('id').eq('id',thread).eq('inbox',NEXA_IDENTITY.address).maybeSingle();if(error)throw new MailError('mail_unavailable',503);if(!data)throw new MailError('mail_not_found',404)}
  if(body.replyToMessageId!==undefined){
   if(!thread)throw new MailError('invalid_input',400)
   const {data,error}=await db.from('nexa_mail_messages').select('message_id,payload').eq('id',uuid(body.replyToMessageId)).eq('thread_id',thread).eq('inbox',NEXA_IDENTITY.address).maybeSingle()
   if(error)throw new MailError('mail_unavailable',503);if(!data)throw new MailError('mail_not_found',404)
   if(data.message_id){const refs=[...(data.payload.references||[]),data.message_id].slice(-20);headers={'In-Reply-To':data.message_id,References:[...new Set(refs)].join(' ')}}
+  if(data.payload.provider_inbox_id===NEXA_RESEND_INBOX_ID)inboxReply={threadId:uuid(data.payload.provider_thread_id),emailId:uuid(data.payload.provider_email_id)}
  }
- const prepared=prepareDraft(body,headers),r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:null,p_actor:actor,p_request:requestKey,p_version:0,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:thread}),['saved'])
+ const prepared=prepareDraft(body,headers,inboxReply),r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:null,p_actor:actor,p_request:requestKey,p_version:0,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:thread}),['saved'])
  return {draft:draftDto(r.draft)}
 }
 export async function editDraft(request:Request,id:string){
  const {db,actor}=await mailAdmin();uuid(id);const body=await mailMutation(request);exactKeys(body,['version','to','cc','bcc','subject','text']);if(!Number.isSafeInteger(body.version)||Number(body.version)<1)throw new MailError('invalid_input',400)
  const {data,error}=await db.from('nexa_mail_drafts').select('payload').eq('id',id).maybeSingle();if(error)throw new MailError('mail_unavailable',503);if(!data)throw new MailError('mail_not_found',404)
- const prepared=prepareDraft(body,data.payload.headers||{}),r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:id,p_actor:actor,p_request:randomUUID(),p_version:body.version,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:null}),['saved']);return {draft:draftDto(r.draft)}
+ const prepared=prepareDraft(body,data.payload.headers||{},data.payload.inboxReply),r=stateResult(await mailRpc(db,'nexa_mail_save_draft',{p_id:id,p_actor:actor,p_request:randomUUID(),p_version:body.version,p_hash:prepared.hash,p_payload:prepared.payload,p_thread:null}),['saved']);return {draft:draftDto(r.draft)}
 }
 export async function approveDraft(request:Request,id:string){
  const {db,actor}=await mailAdmin();uuid(id);const body=await mailMutation(request);exactKeys(body,['version','snapshotHash']);const v=versionHash(body)
@@ -80,6 +86,10 @@ export async function queueDraft(request:Request,id:string){
 export async function dispatch(request:Request,id:string){
  const {db,actor}=await mailAdmin();uuid(id);const body=await mailMutation(request);exactKeys(body,[])
  const c=mailConfig();if(!c.sendEnabled||!c.apiKey)throw new MailError('send_disabled',503)
+ const {data:stored,error:storedError}=await db.from('nexa_mail_outbox').select('status,payload').eq('id',id).maybeSingle()
+ if(storedError)throw new MailError('mail_unavailable',503);if(!stored)throw new MailError('mail_not_found',404)
+ // Frozen historical intents keep their approved payload; never silently rename/send them.
+ if(stored.status==='queued'&&stored.payload?.from!==`${NEXA_IDENTITY.displayName} <${NEXA_IDENTITY.address}>`)throw new MailError('draft_conflict',409)
  const attempt=randomUUID(),claim=await mailRpc(db,'nexa_mail_claim',{p_id:id,p_actor:actor,p_attempt:attempt})
  if(claim.state==='not_found')throw new MailError('mail_not_found',404)
  if(claim.state==='accepted'||claim.state==='rejected'||claim.state==='delivery_unknown')return {outbox:outboxDto(claim.outbox)}

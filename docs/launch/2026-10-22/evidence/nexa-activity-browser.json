@@ -1,0 +1,17 @@
+{
+  "environment": "actual local Next app; synthetic browser API responses and browser-local fake clock; no Auth/DB/provider/delivery proof",
+  "status": "PASS",
+  "checks": [
+    "en: initial baseline does not notify historical mail",
+    "en: visible-page 15s inbound notice and replay deduplication",
+    "en: received metadata is escaped; no HTML/attachment retrieval",
+    "en: sent metadata view and no horizontal overflow",
+    "poll failure retains last successful data/checkpoint",
+    "authorization denial clears private metadata and stops polling",
+    "ar: initial baseline does not notify historical mail",
+    "ar: visible-page 15s inbound notice and replay deduplication",
+    "ar: received metadata is escaped; no HTML/attachment retrieval",
+    "ar: sent metadata view and no horizontal overflow"
+  ],
+  "runtime_errors": []
+}

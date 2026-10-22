@@ -420,6 +420,12 @@
       "ar": "/ar/admin/nexa-mail",
       "index": false,
       "auth": "verified live session plus immutable admin UUID allowlist"
+    },
+    {
+      "en": "/admin/nexa-mail/activity",
+      "ar": "/ar/admin/nexa-mail/activity",
+      "index": false,
+      "auth": "verified live session plus immutable admin UUID allowlist"
     }
   ]
 }

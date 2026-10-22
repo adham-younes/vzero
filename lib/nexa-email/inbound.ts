@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto'
 import {Resend} from 'resend'
 import {MailError} from './errors'
 import type {AttachmentMetadata,InboundMessage,VerifiedInbound} from './types'
+import {NEXA_IDENTITY,NEXA_RESEND_INBOX_ID} from './types'
 
 const UUID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 const controls=/[\x00-\x1f\x7f]/
@@ -27,7 +28,8 @@ function addresses(value:unknown,nullable=false){
  if(!Array.isArray(value)||value.length>32)throw invalid()
  return value.map(item=>{try{return parseMailbox(item as string).address}catch{throw invalid()}})
 }
-function requireRecipient(recipients:string[],ingress:string){let target:string;try{target=parseMailbox(ingress).address}catch{throw invalid()}if(!recipients.includes(target))throw new MailError('recipient_mismatch',400)}
+/** One dedicated final recipient only; forwarding trace/header claims never authorize routing. */
+function requireRecipient(recipients:string[],ingress:string){let target:string;try{target=parseMailbox(ingress).address}catch{throw invalid()}if(recipients.length!==1||recipients[0]!==target)throw new MailError('recipient_mismatch',400)}
 
 async function rawBody(request:Request){
  const length=request.headers.get('content-length')
@@ -55,11 +57,34 @@ export async function readVerifiedInbound(request:Request,secret:string,ingressR
  try{
   if(!object(event)||typeof event.type!=='string'||! /^[a-z][a-z0-9_.]{0,79}$/.test(event.type)||!object(event.data))throw invalid()
   const created_at=date(event.created_at)
+  if(event.type==='inbox.email.received'){
+   const d=event.data
+   if(d.source!=='system'||d.inbox_id!==NEXA_RESEND_INBOX_ID||typeof d.thread_id!=='string'||!UUID.test(d.thread_id)||typeof d.email_id!=='string'||!UUID.test(d.email_id)||!object(d.email)||d.email.id!==d.email_id||d.email.direction!=='inbound')throw invalid()
+   if(d.thread!==undefined&&(!object(d.thread)||d.thread.id!==d.thread_id))throw invalid()
+   const recipients=addresses(d.email.to);requireInboxRecipient(recipients,ingressRecipient)
+   return {event_id:id,email_id:d.email_id,payload_hash:createHash('sha256').update(raw.bytes).digest('hex'),recipients,created_at,transport:'inbox',inbox_id:NEXA_RESEND_INBOX_ID,thread_id:d.thread_id}
+  }
   if(event.type!=='email.received')return null
   if(typeof event.data.email_id!=='string'||!UUID.test(event.data.email_id))throw invalid()
   const recipients=addresses(event.data.to);requireRecipient(recipients,ingressRecipient)
   return {event_id:id,email_id:event.data.email_id,payload_hash:createHash('sha256').update(raw.bytes).digest('hex'),recipients,created_at}
  }catch(error){if(error instanceof MailError&&error.code==='recipient_mismatch')throw error;throw new MailError('webhook_invalid',400)}
+}
+// Inbox routing is bound to the signed, fixed provider resource and its scoped fetch path.
+// Its API may report the canonical delivered address instead of the technical forwarding address.
+function requireInboxRecipient(recipients:string[],ingress:string){if(recipients.length!==1||![ingress,NEXA_IDENTITY.address].includes(recipients[0]))throw new MailError('recipient_mismatch',400)}
+export function normalizeInboxEmail(raw:unknown,expectedEmailId:string,ingress:string):InboundMessage{
+ try{
+  if(!object(raw)||raw.id!==expectedEmailId||raw.direction!=='inbound')throw invalid()
+  const to=addresses(raw.to);requireInboxRecipient(to,ingress)
+  const message=normalizeReceivedEmail({...raw,object:'email',subject:raw.subject===null?'':raw.subject,created_at:raw.received_at,headers:null,attachments:[]},expectedEmailId,to[0])
+  if(!Array.isArray(raw.attachments)||raw.attachments.length>32)throw invalid()
+  message.attachments=raw.attachments.map(a=>{
+   if(!object(a)||a.size!==null&&(!Number.isSafeInteger(a.size)||Number(a.size)<0))throw invalid()
+   return {id:bounded(a.id,128),filename:a.filename===null?null:bounded(a.filename,1024),content_type:null,size:a.size===null?null:Number(a.size)}
+  })
+  return message
+ }catch(error){if(error instanceof MailError&&error.code==='recipient_mismatch')throw error;throw invalid()}
 }
 function messageId(value:unknown):string|null{
  if(value===null||value===undefined||value==='')return null
