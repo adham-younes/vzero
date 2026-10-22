@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "environment": "production exact synthetic semantic fixture only",
+  "guards": [
+    "exact agent UUID/name/template/customer profile/Fast model/creation timestamp",
+    "exact resolved source UUID/title/privateREADY/292bytes and onechunk",
+    "exact4succeededstudio runs with matching actor",
+    "0proposals/versions/publications/keys"
+  ],
+  "removed": {
+    "agents": 1,
+    "sources": 1,
+    "chunks": 1,
+    "runs": 4
+  },
+  "remaining": {
+    "agents": 0,
+    "sources": 0,
+    "chunks": 0,
+    "runs": 0,
+    "approvals": 0,
+    "versions": 0,
+    "publications": 0,
+    "keys": 0
+  },
+  "preExistingOwnerContentChanged": false,
+  "privateIds": "private0600 file and bounded connector transaction; omitted",
+  "localGuardNote": "SourceID was null in browser receipt; local guard stopped before SQL. Bounded exact-source lookup established its UUID before the guarded deletion. No rejected transaction was retried."
+}

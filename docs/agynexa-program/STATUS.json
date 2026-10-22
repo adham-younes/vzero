@@ -448,7 +448,7 @@
     },
     "remaining_acceptance_continuation": {
       "receipt": "../launch/2026-10-22/REMAINING-ACCEPTANCE.md",
-      "status": "PR36_DEPLOYED_BUSINESS_SAFETY_PASS_SPECIFIC_MISSING_GUIDANCE_REFINEMENT_PENDING",
+      "status": "LOCAL_GAPS_PASS_PRIVATE_UI_RECOVERY_CAPTURED_RENDER_PASS_AWAIT_DEPLOYMENT",
       "findings": [
         "Mixed business/private-extraction reply preserved secrecy but omitted useful business help",
         "Optional false model/conversationId/runId treated as absent"
@@ -468,9 +468,13 @@
       "merge_commit": "f45c83609f919b25f7d59255c5abb430d96d827a",
       "production_deployment": "dpl_HYc29q4uYUe3FGrdMR18dXYvhXkS",
       "next_step_contract": {
-        "scope": "missing_evidence part must explain useful source or human action; nextQuestion remains nullable",
-        "automatic_fallback": "REJECTED_BEFORE_COMMIT_NOT_DEPLOYED",
-        "production": "PENDING_AFFECTED_ONLY_CHECK"
+        "scope": "customer missing-evidence private UI source-owner/current-text explanation plus existingknowledgebutton",
+        "model_guidance": "PARTIAL_AFTER_FOUR_ACTUAL_TURNS_PRESERVED",
+        "ui_recovery": "14_CAPTURED_RENDER_CALLBACK_CASES_PASS_PLUS_2_COPY_CHECKS",
+        "question_nullable": true,
+        "automatic_model_question": "NONE",
+        "new_model_or_fixture": "NONE",
+        "production": "PENDING_UI_RELEASE"
       }
     }
   }
