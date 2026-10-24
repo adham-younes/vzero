@@ -1,3 +1,5 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
 2026-10-24 content-only preview: page copy/metadata and local rendering updated; existing routes/APIs/data/runtime unchanged. [Receipt](releases/content-preview-2026-10-24/README.md). Wider self-service product generation remains a separate implementation scope.
 
 # الخطة التقنية وخريطة التنفيذ

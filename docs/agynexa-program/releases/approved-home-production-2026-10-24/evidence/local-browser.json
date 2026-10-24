@@ -1,0 +1,64 @@
+{
+  "scope": "Actual optimized local build browser, synthetic Studio API only, no live Auth/DB/model operations",
+  "localArHome": {
+    "closing": 0,
+    "dir": "rtl",
+    "h1": [
+      "ابنِ وكلاء ذكاء اصطناعيلعمليات شركتك"
+    ],
+    "h2": 7,
+    "lang": "ar",
+    "scrollWidth": 390,
+    "steps": 6,
+    "tables": 1,
+    "video": [
+      {
+        "autoplay": true,
+        "controls": false,
+        "currentTime": 9.6129,
+        "paused": false
+      }
+    ],
+    "width": 390
+  },
+  "localEnHome": {
+    "dir": "ltr",
+    "endingStudioLinks": 1,
+    "h1": "Build AI agents for your business operations",
+    "h2": 7,
+    "lang": "en",
+    "mainStudioLinks": 2,
+    "scrollWidth": 1440,
+    "steps": 6,
+    "width": 1440
+  },
+  "studioArCheck": {
+    "composerBottom": 758.40625,
+    "dir": "rtl",
+    "footer": 0,
+    "h1": "ما الدور الذي تحتاجه لوكيلك؟",
+    "header": 0,
+    "height": 844,
+    "lang": "ar",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "studioEnCheck": {
+    "composerBottom": 909,
+    "dir": "ltr",
+    "footer": 0,
+    "h1": "What should your agent help your team do?",
+    "header": 0,
+    "height": 1000,
+    "lang": "en",
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  "localeResult": {
+    "dir": "rtl",
+    "h1": "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك",
+    "lang": "ar",
+    "url": "http://localhost:3011/ar"
+  },
+  "arStudioJourney": "Suggestion fills input; Create agent opens form; role/context survive configuration review; local proposal reaches exact approval screen without applying"
+}

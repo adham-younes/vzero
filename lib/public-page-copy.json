@@ -2,183 +2,445 @@
   "/": {
     "en": {
       "title": "AI Agent Builder for Business Operations | AGYNEXA",
-      "description": "Build company agents around your knowledge and processes. Understand how agent roles, workflow design and human decisions fit together in AGYNEXA Studio.",
-      "h1": "Build AI agents for the way your company works",
+      "description": "Create business AI agents in AGYNEXA Studio. Define responsibilities, add company context and test responses. Explore agent system design, handoffs and human review.",
+      "h1": "Build AI agents for your business operations",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AGYNEXA is an Agent Builder Studio for business operations. Bring your company’s knowledge into the workspace, define what each agent is responsible for, and shape its work around the processes your organization follows."
+          "text": "AGYNEXA is an Agent Builder for companies and enterprises. Use Studio to create agents, define their responsibilities and test their responses with the context your business provides."
+        },
+        {
+          "type": "paragraph",
+          "text": "Start with a role your team needs. Then map its place in the wider process: what it receives, what it should produce and when the work passes to another agent or a member of your team."
         },
         {
           "type": "heading",
-          "text": "Your process gives the agent its purpose"
+          "text": "Give each agent a business responsibility",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A service request may pass from a customer to operations and then to a specialist before it can be resolved. An internal request may wait for supporting information or a manager’s decision. The agent’s role needs to reflect those dependencies and the responsibility it takes at each stage."
+          "text": "Your team might need to prepare a case for review, assess a customer request or make sense of an operational exception. Each task has information it depends on, procedures it follows and someone who needs the result."
         },
         {
           "type": "paragraph",
-          "text": "In Studio, you define the role and provide the relevant business context. The starting point is the work itself: who needs a result, which information matters and what responsibility belongs to the agent."
+          "text": "In AGYNEXA, you describe that work and the outcome you want. You configure the agent’s instructions and try them against situations your team encounters. A role can involve organizing supplied information, answering procedural questions, or preparing analysis and drafts for a responsible person to review."
+        },
+        {
+          "type": "paragraph",
+          "text": "When the process spans several specialties, the relationships between those roles become part of the system design."
         },
         {
           "type": "heading",
-          "text": "From individual roles to a coordinated system"
-        },
-        {
-          "type": "paragraph",
-          "text": "An agentic system connects specialist responsibilities within one process. For a shipment exception, an event role can establish what changed while a planning role examines its effect on the next movement. Orchestration determines their order, the information passed between them and when the operations owner needs to decide."
-        },
-        {
-          "type": "paragraph",
-          "text": "The workflow also needs a clear definition of completion. An answer, a proposed action and a confirmed change in a business system are different results. Each requires the appropriate information and authority."
-        },
-        {
-          "type": "paragraph",
-          "text": "[How agent systems fit together](/architecture)"
+          "text": "From a business process to an agent system",
+          "depth": 2
         },
         {
           "type": "heading",
-          "text": "Company knowledge that has a job to do"
+          "text": "1. Define the starting point and the outcome",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "Instructions and company knowledge give an agent a basis for its work. Policies guide a service response. Product information supports a commercial question. Operating procedures help a team establish the appropriate next step."
+          "text": "Identify what starts the process. It could be a customer request, a document awaiting review or a change in an operating condition. Describe what completion means and who needs the result."
         },
         {
           "type": "paragraph",
-          "text": "Studio lets you work with company information and inspect the references behind knowledge-based answers. This keeps the discussion connected to material your organization supplies, and makes gaps easier to identify before someone relies on the result."
+          "text": "This gives the agent a scope and makes clear which questions it must resolve before work moves on."
         },
         {
           "type": "heading",
-          "text": "A platform shaped by different kinds of work"
+          "text": "2. Assign responsibilities to distinct roles",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "Customer service, internal operations, document handling and cross-team coordination share some building blocks. Their processes are different. The role of a hospital’s administrative agent differs from a logistics agent coordinating a shipment exception, even when both need knowledge and an accountable handoff."
+          "text": "A process may need one agent or several specialized roles. Map what each role handles, the information it needs and any results it depends on from another role."
         },
         {
           "type": "paragraph",
-          "text": "Explore capabilities to understand the components. Explore solutions and industries to see how those components can form a complete process."
-        },
-        {
-          "type": "paragraph",
-          "text": "[Platform capabilities](/services) · [Business solutions](/solutions) · [Industries](/industries)"
+          "text": "Let the work determine that division. Checking whether a file is complete is a different responsibility from interpreting its contents or approving the resulting action."
         },
         {
           "type": "heading",
-          "text": "Keep responsibility clear as the work expands"
+          "text": "3. Create the agents and provide their context",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "Define which information an agent can use, which actions require system access and which decisions belong to your team. Human involvement should have a purpose: resolving an exception, accepting a commitment or approving a consequential action."
+          "text": "In Studio, create an agent, review its instructions and add the information its role needs. That context might include operating procedures, company policies or service details."
         },
         {
           "type": "paragraph",
-          "text": "Evaluate the system against the work your team needs to complete. Check where a step is repeated, where responsibility becomes unclear and how much effort people spend reconstructing context. Those observations show which part of the process needs improvement."
+          "text": "The instructions also establish how to handle missing information, when to ask for clarification and which decisions require a qualified reviewer."
         },
         {
           "type": "heading",
-          "text": "Start in your own workspace"
+          "text": "4. Test each role against real situations",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "Create a private agent, describe its role and work with your company knowledge. Test it with questions your team actually encounters, then inspect the response and its sources. The same platform supports different company contexts through each user’s own agents and information."
+          "text": "Use examples from your business, including incomplete requests and exceptions. Check whether the response addresses the task, what supports it and whether the next person can use the result."
         },
         {
           "type": "paragraph",
-          "text": "[Open Studio](/studio) · [Getting started](/start)"
+          "text": "Use those findings to refine the agent’s instructions and sources, and to identify work that still needs human judgment."
+        },
+        {
+          "type": "heading",
+          "text": "5. Design handoffs and system connections",
+          "depth": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "In a multi-agent system, each handoff needs a definition: what starts the task, what reaches the next role and where the process pauses for review."
+        },
+        {
+          "type": "paragraph",
+          "text": "Running that design requires agent coordination and the integrations and permissions needed for actions in company systems. Configuring and testing agents in Studio is part of that journey. An action in an external application depends on a connection configured for that application and the access it permits."
+        },
+        {
+          "type": "heading",
+          "text": "6. Evaluate the work the system supports",
+          "depth": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose measures that reflect the process you want to improve: time spent preparing a case, completeness at handoff, rework and whether the responsible person can review the result."
+        },
+        {
+          "type": "paragraph",
+          "text": "These measures show where an agent’s role is useful and where the process design needs adjustment."
+        },
+        {
+          "type": "heading",
+          "text": "How agent roles fit together",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "**An illustrative logistics system design**"
+        },
+        {
+          "type": "paragraph",
+          "text": "When a shipment is delayed, an operations manager needs to understand the impact and available options before making a decision."
+        },
+        {
+          "type": "paragraph",
+          "text": "One agent could review the case and identify missing details. Another could assess options against operating rules, while a further role prepares a customer update. Each role uses defined results from the preceding work, and the operations manager retains the consequential decision."
+        },
+        {
+          "type": "paragraph",
+          "text": "The coordination design establishes task order, information handoffs and how to handle conflicting or incomplete information. Making actual updates requires connections to the relevant operating systems and communication channels."
+        },
+        {
+          "type": "paragraph",
+          "text": "[Explore agent orchestration](/architecture)"
+        },
+        {
+          "type": "heading",
+          "text": "Design around the work in your industry",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "The responsibilities change with the business. Start with the operational problem, available information and decision the team needs to make."
+        },
+        {
+          "type": "table",
+          "header": [
+            "Industry",
+            "Starting problem",
+            "Intended outcome"
+          ],
+          "rows": [
+            [
+              "Logistics",
+              "Delay and exception details are scattered across several parties.",
+              "A coherent case that helps an operations manager assess options and coordinate a response."
+            ],
+            [
+              "Energy and industrial operations",
+              "Maintenance and operating notes arrive incomplete between teams or shifts.",
+              "Clearer handover of information and outstanding work, with technical decisions retained by qualified staff."
+            ],
+            [
+              "Distribution",
+              "Details get lost between a customer inquiry, order preparation and delivery exceptions.",
+              "A complete case that helps teams continue the work and identify decisions that need an owner."
+            ],
+            [
+              "Professional services",
+              "Client requirements change without a clear account of the effect on scope and delivery.",
+              "A structured assessment of the change for the project owner to review."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "[Explore industries](/industries) · [Explore business solutions](/solutions)"
+        },
+        {
+          "type": "heading",
+          "text": "Give agents the company context their work requires",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Role instructions establish an agent’s responsibility. Company knowledge supplies the context for carrying it out. An approved procedure explains how to handle a case, service information helps interpret a request, and details supplied by the user establish what applies to the task."
+        },
+        {
+          "type": "paragraph",
+          "text": "Studio supports answers grounded in the information you add, with references you can inspect. When that information is insufficient, the missing material becomes part of the review before the result is used."
+        },
+        {
+          "type": "heading",
+          "text": "Keep human decisions in the workflow",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Your team may need to review a recommendation, resolve an exception or approve a commitment to a customer. Place these decisions within the process and identify what the responsible person must receive to make them."
+        },
+        {
+          "type": "paragraph",
+          "text": "For any action connected to an external system, define the required access and how success will be confirmed. Preparing a proposal, approving it and carrying out the action remain distinct steps."
+        },
+        {
+          "type": "heading",
+          "text": "Build the first role in your agent system",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose a process your team knows and a responsibility that needs support. Create an agent in Studio, provide the business context and test it on cases whose results you can review."
+        },
+        {
+          "type": "paragraph",
+          "text": "Use what you learn to refine that role and establish how it fits with the rest of the system."
         }
       ]
     },
     "ar": {
-      "title": "منصة بناء وكلاء الذكاء الاصطناعي للشركات | AGYNEXA",
-      "description": "ابنِ وكلاء حول معرفة شركتك وإجراءاتها، وافهم كيف تتكامل أدوارهم مع سير العمل والقرارات البشرية داخل استوديو AGYNEXA.",
-      "h1": "ابنِ وكلاء يفهمون طبيعة العمل في شركتك",
+      "title": "منصة بناء وكلاء الذكاء الاصطناعي لعمليات الشركات | AGYNEXA",
+      "description": "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك في استوديو AGYNEXA. حدّد الأدوار، وأضف سياق العمل، واختبر النتائج، وتعرّف على تصميم منظومة الوكلاء والمراجعة البشرية.",
+      "h1": "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AGYNEXA استوديو لبناء وكلاء الذكاء الاصطناعي لعمليات الشركات والمؤسسات. أضف معرفة شركتك، وحدد مسؤولية كل وكيل، وصمّم دوره وفق الإجراءات التي يعتمد عليها فريقك في إنجاز العمل."
+          "text": "AGYNEXA منصة لبناء وكلاء الذكاء الاصطناعي للشركات والمؤسسات. يجمع الاستوديو إعداد الوكلاء وتجربتهم في مساحة عملك، حيث تحدد مسؤولية كل وكيل، وتزوّده بسياق شركتك، وتختبر استجاباته على مهام من واقع العمل."
+        },
+        {
+          "type": "paragraph",
+          "text": "ابدأ بالدور الذي تحتاجه، ثم صمّم علاقته ببقية العملية: المعلومات التي يستقبلها، والنتيجة المطلوبة منه، والمرحلة التي ينتقل فيها العمل إلى وكيل آخر أو إلى أحد أعضاء فريقك."
         },
         {
           "type": "heading",
-          "text": "دور الوكيل يبدأ من فهم العملية"
+          "text": "ما العمل الذي تريد أن يتولاه الوكيل؟",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "طلب العميل قد يمر بخدمة العملاء والعمليات ومختص فني. وطلب الموظف قد يحتاج إلى سياسة معتمدة ومعلومات تكميلية وقرار من مديره. لذلك لا يكفي أن يتلقى الوكيل سؤالًا؛ يجب أن يكون دوره مفهومًا داخل هذا التسلسل."
+          "text": "قد تحتاج إلى تجهيز ملف قبل مراجعته، أو تحليل طلب عميل، أو مساعدة فريق العمليات في فهم حالة استثنائية. لكل مهمة معلومات تعتمد عليها، وإجراءات تحكمها، وشخص يستخدم نتيجتها."
         },
         {
           "type": "paragraph",
-          "text": "في الاستوديو، تضع تعليمات الدور وتزوّده بسياق العمل المناسب. تبدأ بمن يحتاج إلى النتيجة، والمعلومات التي تعتمد عليها، والمسؤولية التي سيتولاها الوكيل."
+          "text": "في AGYNEXA، تبدأ من هذا الاحتياج. تصف طبيعة العمل والنتيجة المطلوبة، ثم تضبط تعليمات الوكيل وتختبر طريقة تعامله مع الحالات التي تواجه فريقك. يمكن أن يشمل دوره تنظيم المعلومات، والإجابة وفق إجراءات الشركة، وإعداد تحليلات أو مسودات يراجعها المسؤول عن العمل."
+        },
+        {
+          "type": "paragraph",
+          "text": "وعندما تمتد العملية إلى أكثر من تخصص، يصبح تصميم العلاقة بين الأدوار جزءًا أساسيًا من بناء المنظومة."
         },
         {
           "type": "heading",
-          "text": "كيف تتحول الأدوار إلى نظام مترابط؟"
-        },
-        {
-          "type": "paragraph",
-          "text": "يجمع نظام الوكلاء مسؤوليات متخصصة داخل سير عمل واحد. ففي تعطل شحنة، قد يحدد دور الأحداث ما تغير، ويفحص دور التخطيط أثره في حركة النقل التالية. ويضبط التنسيق ترتيب العمل والمعلومات التي تنتقل بين الأدوار والنقطة التي تحتاج إلى قرار مسؤول التشغيل."
-        },
-        {
-          "type": "paragraph",
-          "text": "تحتاج العملية أيضًا إلى تعريف واضح لاكتمالها. تقديم إجابة واقتراح إجراء وتأكيد تغيير داخل نظام الشركة نتائج مختلفة، ولكل منها معلومات وصلاحيات لازمة."
-        },
-        {
-          "type": "paragraph",
-          "text": "[تعرّف على بنية أنظمة الوكلاء](/ar/architecture)"
+          "text": "من وصف العملية إلى بناء منظومة الوكلاء",
+          "depth": 2
         },
         {
           "type": "heading",
-          "text": "معرفة الشركة جزء من العمل"
+          "text": "١. وضّح البداية والنتيجة المطلوبة",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "توجّه السياسات طريقة التعامل مع طلب الخدمة، وتساعد بيانات المنتجات على فهم استفسار تجاري، وتوضح إجراءات التشغيل الخطوات التي يعتمد عليها الفريق. بهذه المعرفة يصبح للوكيل أساس يرجع إليه أثناء أداء دوره."
+          "text": "حدّد ما يبدأ العملية: طلب عميل، أو مستند يحتاج إلى مراجعة، أو تغير في حالة تشغيلية. ثم صف ما يجب أن يصل إليه العمل، ومن يستلم النتيجة."
         },
         {
           "type": "paragraph",
-          "text": "يتيح الاستوديو العمل بمعلومات الشركة وفحص المراجع التي تستند إليها الإجابات المعرفية. فيستطيع المستخدم الرجوع إلى أصل المعلومة ومعرفة ما إذا كانت المادة المتاحة تكفي لحسم سؤاله."
+          "text": "يساعد هذا الوصف على تحديد نطاق الوكيل والأسئلة التي يجب أن يجيب عنها قبل الانتقال إلى الخطوة التالية."
         },
         {
           "type": "heading",
-          "text": "قدرات مشتركة وعمليات تختلف باختلاف المؤسسة"
+          "text": "٢. وزّع المسؤوليات على أدوار واضحة",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "تحتاج خدمة العملاء والعمليات الداخلية ومعالجة المستندات والتنسيق بين الأقسام إلى مكونات متقاربة، لكن طريقة استخدامها تختلف. فالعمل الإداري في منشأة صحية له أطراف وإجراءات غير متابعة استثناء في شحنة لوجستية."
+          "text": "قد تتطلب العملية وكيلًا واحدًا، وقد تحتاج إلى أدوار متخصصة. في تصميم المنظومة، تحدد ما يتولاه كل دور والمعلومات التي يعتمد عليها، وما يحتاجه من بقية الأدوار حتى ينجز مهمته."
         },
         {
           "type": "paragraph",
-          "text": "تشرح صفحات القدرات وظيفة المكونات، وتوضح الحلول والقطاعات كيف تجتمع هذه المكونات في عملية متكاملة."
-        },
-        {
-          "type": "paragraph",
-          "text": "[قدرات المنصة](/ar/services) · [حلول الأعمال](/ar/solutions) · [القطاعات](/ar/industries)"
+          "text": "يظل قرار توزيع العمل مرتبطًا بطبيعة العملية. ففحص اكتمال ملف يختلف عن تحليل محتواه، وكلاهما يختلف عن اعتماد الإجراء الناتج عنه."
         },
         {
           "type": "heading",
-          "text": "مسؤوليات واضحة عند كل خطوة"
+          "text": "٣. أنشئ الوكلاء واضبط سياق العمل",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "حدد المعلومات المسموحة للوكيل، والأعمال التي تحتاج إلى وصول لنظام آخر، والقرارات التي يحتفظ بها فريقك. يكون لتدخل الإنسان سبب محدد، مثل حسم استثناء أو قبول التزام أو اعتماد إجراء مؤثر."
+          "text": "داخل الاستوديو، تنشئ الوكيل وتراجع تعليماته، ثم تضيف المعلومات المناسبة لدوره. قد تشمل هذه المعلومات إجراءات التشغيل أو سياسات الشركة أو تفاصيل الخدمة التي يحتاجها أثناء الاستجابة."
         },
         {
           "type": "paragraph",
-          "text": "قيّم النظام على العمل الذي يحتاجه فريقك: أين تكررت الخطوات؟ وأين غابت المسؤولية؟ وكم استغرق جمع المعلومات من جديد؟ تبين هذه الملاحظات ما يحتاج إلى تحسين في العملية."
+          "text": "تحدد التعليمات أيضًا كيفية التعامل مع المعلومات الناقصة، ومتى يطلب الوكيل توضيحًا، وما القرارات التي تحتاج إلى مراجعة مسؤول مختص."
         },
         {
           "type": "heading",
-          "text": "ابدأ من مساحة عملك"
+          "text": "٤. اختبر كل دور قبل الاعتماد على نتائجه",
+          "depth": 3
         },
         {
           "type": "paragraph",
-          "text": "أنشئ وكيلًا خاصًا، واشرح دوره، وأضف المعرفة التي يحتاجها. جرّبه بأسئلة تواجه فريقك، ثم افحص الإجابة ومراجعها. تستخدم الشركات المنصة نفسها، ولكل مستخدم وكلاؤه ومعلوماته وسياق العمل الذي يحدده."
+          "text": "جرّب حالات من واقع شركتك، بما فيها الطلبات غير المكتملة والاستثناءات. راجع ما إذا كانت الاستجابة تعالج المطلوب، وما المعلومات التي استندت إليها، وهل النتيجة مفيدة للشخص الذي سيستخدمها."
         },
         {
           "type": "paragraph",
-          "text": "[افتح الاستوديو](/ar/studio) · [خطوات البدء](/ar/start)"
+          "text": "تساعدك هذه التجارب على تعديل تعليمات الوكيل ومصادره، وعلى اكتشاف الخطوات التي ما زالت تحتاج إلى تدخل بشري."
+        },
+        {
+          "type": "heading",
+          "text": "٥. صمّم انتقال العمل والتكامل مع الأنظمة",
+          "depth": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "في المنظومة متعددة الوكلاء، يحتاج كل انتقال إلى تعريف واضح: من يبدأ المهمة؟ وما الذي يرسله إلى الدور التالي؟ ومتى يتوقف المسار للمراجعة؟"
+        },
+        {
+          "type": "paragraph",
+          "text": "تشغيل هذا التصميم يتطلب آلية لتنسيق الوكلاء، إلى جانب التكاملات والصلاحيات اللازمة لأي إجراء داخل أنظمة الشركة. إعداد الوكلاء واختبارهم في الاستوديو جزء من هذه الرحلة؛ أما تنفيذ إجراء في نظام خارجي فيعتمد على الاتصال المجهّز لذلك النظام ونطاق الوصول المسموح."
+        },
+        {
+          "type": "heading",
+          "text": "٦. قيّم المنظومة على نتائج العمل",
+          "depth": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "اربط التقييم بما تريد تحسينه: الوقت المستغرق لتجهيز الحالة، واكتمال المعلومات عند تسليمها، وعدد مرات إعادتها للتصحيح، وقدرة المسؤول على مراجعة النتيجة."
+        },
+        {
+          "type": "paragraph",
+          "text": "بهذه المعايير، تعرف أين يفيد دور الوكيل وأين يحتاج تصميم العملية إلى تعديل."
+        },
+        {
+          "type": "heading",
+          "text": "كيف تتكامل أدوار الوكلاء؟",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "**مثال توضيحي لتصميم منظومة لوجستية**"
+        },
+        {
+          "type": "paragraph",
+          "text": "عند تأخر شحنة، يحتاج مسؤول العمليات إلى معرفة أثر التأخير والخيارات المتاحة قبل اتخاذ قرار."
+        },
+        {
+          "type": "paragraph",
+          "text": "يمكن توزيع العمل على وكيل يراجع تفاصيل الحالة ويحدد المعلومات الناقصة، ووكيل يدرس الخيارات وفق قواعد التشغيل، ودور يجهز تحديثًا مناسبًا للعميل. يعتمد كل دور على مخرجات محددة من المرحلة السابقة، ويعود القرار المؤثر إلى مسؤول العمليات."
+        },
+        {
+          "type": "paragraph",
+          "text": "يحدد تصميم التنسيق ترتيب هذه المهام، والمعلومات التي تنتقل بينها، وكيفية التعامل مع التعارض أو نقص البيانات. ويتطلب تنفيذ التحديثات الفعلية ربط المنظومة بأنظمة التشغيل وقنوات التواصل المناسبة."
+        },
+        {
+          "type": "paragraph",
+          "text": "[تعرّف على تنسيق الوكلاء](/ar/architecture)"
+        },
+        {
+          "type": "heading",
+          "text": "عمليات مختلفة، وتصميم يناسب كل قطاع",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "تختلف مسؤوليات الوكلاء باختلاف العمل الذي يخدمونه. تتحدد الأدوار وفق المشكلة، والبيانات المتاحة، والقرار الذي يحتاجه الفريق."
+        },
+        {
+          "type": "table",
+          "header": [
+            "القطاع",
+            "المشكلة التي ينطلق منها التصميم",
+            "النتيجة المطلوبة"
+          ],
+          "rows": [
+            [
+              "اللوجستيات",
+              "تشتت معلومات التأخير والاستثناءات بين أطراف متعددة.",
+              "حالة واضحة تساعد مسؤول العمليات على تقييم الخيارات والتنسيق مع الأطراف المعنية."
+            ],
+            [
+              "الطاقة والعمليات الصناعية",
+              "انتقال ملاحظات الصيانة والتشغيل بصورة غير مكتملة بين الفرق والمناوبات.",
+              "تسليم أوضح للمعلومات والأعمال المعلقة، مع إبقاء القرارات الفنية لدى المختصين."
+            ],
+            [
+              "التوزيع",
+              "نقص التفاصيل بين استفسار العميل وتجهيز الطلب ومتابعة استثناءات التسليم.",
+              "ملف متكامل يساعد الفرق على استكمال العمل وتحديد ما يحتاج إلى قرار."
+            ],
+            [
+              "الخدمات المهنية",
+              "تغير متطلبات العميل أثناء المشروع من دون وضوح أثرها في النطاق والتسليم.",
+              "عرض منظم للتغيير وآثاره لمراجعته مع المسؤول عن المشروع."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "[استكشف القطاعات](/ar/industries) · [تعرّف على حلول الأعمال](/ar/solutions)"
+        },
+        {
+          "type": "heading",
+          "text": "معرفة الشركة تدعم عمل الوكيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "تعليمات الدور تحدد مسؤولية الوكيل، ومعرفة الشركة تمنحه السياق الذي يحتاجه لأداء هذه المسؤولية. فالإجراء المعتمد يوضح كيفية التعامل مع الحالة، ومعلومات الخدمة تساعده على تفسير الطلب، وسجل التفاصيل الذي يقدمه المستخدم يحدد ما ينطبق على المهمة."
+        },
+        {
+          "type": "paragraph",
+          "text": "يدعم الاستوديو الإجابات المستندة إلى المعلومات التي تضيفها، مع مراجع تتيح لك مراجعة أساس الإجابة. وعندما تكون المعلومات غير كافية، يصبح استكمالها خطوة واضحة قبل استخدام النتيجة."
+        },
+        {
+          "type": "heading",
+          "text": "حدّد مواضع القرار البشري",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "قد يحتاج فريقك إلى مراجعة توصية، أو حسم استثناء، أو اعتماد التزام تجاه عميل. ضع هذه القرارات في مواضعها داخل تصميم سير العمل، وحدد المعلومات التي يجب أن تصل إلى المسؤول حتى يستطيع اتخاذ القرار."
+        },
+        {
+          "type": "paragraph",
+          "text": "ولأي إجراء متصل بنظام خارجي، يجب تحديد صلاحية الوصول ومعيار التأكد من نجاحه. يظل الفرق واضحًا بين إعداد اقتراح، واعتماده، وتنفيذه بالفعل."
+        },
+        {
+          "type": "heading",
+          "text": "ابدأ ببناء أول دور في منظومتك",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "اختر عملية يعرفها فريقك، وحدد مسؤولية تحتاج إلى دعم. أنشئ الوكيل في الاستوديو، وأضف سياق العمل، ثم جرّبه على حالات تستطيع مراجعة نتائجها."
+        },
+        {
+          "type": "paragraph",
+          "text": "استخدم ما تتعلمه من التجربة لضبط هذا الدور وتحديد علاقته ببقية أدوار المنظومة."
         }
       ]
     }

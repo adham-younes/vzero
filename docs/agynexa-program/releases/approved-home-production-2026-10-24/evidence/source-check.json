@@ -1,0 +1,16 @@
+{
+  "@components/studio.tsx": {
+    "onlyStringLiteralsChanged": true
+  },
+  "@components/studio-agent.tsx": {
+    "onlyStringLiteralsChanged": true
+  },
+  "en": {
+    "h2": 7,
+    "h3": 6
+  },
+  "ar": {
+    "h2": 7,
+    "h3": 6
+  }
+}

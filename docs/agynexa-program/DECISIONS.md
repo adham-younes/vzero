@@ -196,3 +196,8 @@ Direct owner direction supersedes the bespoke implementation positioning: AGYNEX
 ## Global content rebuild and Preview authorization
 
 Owner direction: one reusable global Agent Builder platform, English primary with independently authored Arabic; explain company processes, multi-agent responsibilities and human decisions. The earlier Preview is rejected. Full rewritten pages and ONE Preview are authorized; no production promotion. Ruling: retain meaningful technical mechanisms, remove irrelevant encoding/byte/date/infrastructure dumps and the rejected acquisition phrases. Provider categories and data flow remain disclosed in privacy, following the owner’s explicit request to remove public vendor names. Fresh review found no material blocker; three wording/navigation polish items corrected.
+
+
+## Owner production authorization — 24 October 2026
+
+Owner approved the replacement Arabic homepage and requested production publication plus alignment with the prior dedicated Studio design. Publish the global bilingual content Preview with this homepage and independently authored English equivalent. Preserve Studio behavior and layout; display wording alone changes. No automatic orchestration, enterprise integration, cloud provisioning or billing implementation is implied. [Release scope](releases/approved-home-production-2026-10-24/README.md).

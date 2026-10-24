@@ -1,3 +1,5 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
 Content preview: reviewed copy applied and local checks passed; Preview published and verified; owner review pending. Runtime generation, enterprise connections, team roles and billing are not implemented by this copy change.
 
 # المتبقي الفعلي — 20 أكتوبر 2026

@@ -1,3 +1,5 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
 Current continuation: [Agent Builder content preview](releases/content-preview-2026-10-24/README.md); no main merge or production promotion. Studio runtime and payment work remain separate scopes.
 
 ## NEXA cloud Inbox PR43 published — 22 October 2026

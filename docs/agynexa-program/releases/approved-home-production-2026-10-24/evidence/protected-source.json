@@ -1,0 +1,26 @@
+{
+  "public/videos/background.mp4": {
+    "unchangedFromProductionBaseline": true,
+    "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85"
+  },
+  "@components/landing-5-hero-video.tsx": {
+    "unchangedFromProductionBaseline": true,
+    "sha256": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca"
+  },
+  "@components/studio-chat.module.css": {
+    "unchangedFromProductionBaseline": true,
+    "sha256": "d575d9d79c52ab4cf91e714e012162e609ebbc4413159756d948d569d584d463"
+  },
+  "lib/studio/chat-policy.ts": {
+    "unchangedFromProductionBaseline": true,
+    "sha256": "b7f76fafcf40c88fd876225ba445d2fb2a31dbcda8915024eec444a534904d18"
+  },
+  "lib/studio/projects.ts": {
+    "unchangedFromProductionBaseline": true,
+    "sha256": "77f4437f67365c7e7c4eb78160026185ac13058b9671bb7cbbdd065815fc4836"
+  },
+  "lib/studio/project-contract.ts": {
+    "unchangedFromProductionBaseline": true,
+    "sha256": "20122f9884c5c10c532e3bb0664f6ee891d52425e25d868a61e7a756d4717556"
+  }
+}
