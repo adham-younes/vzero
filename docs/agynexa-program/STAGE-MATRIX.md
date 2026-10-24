@@ -1,3 +1,5 @@
+Latest maintenance scope: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md). Same-line dependency patches and local checks passed; production receipt is pending. Studio/agent planning is explicitly deferred to a new owner discussion.
+
 Latest verified production: [approved Agent Builder content and Studio alignment](releases/approved-home-production-2026-10-24/README.md), PR47 / main `dc9ebe0` / READY deployment `dpl_447stD3JsGD1hZHZsQEmQH8rNFFH` on agynexa.si. Official EN/AR homepage and signed-out Studio entry verified; authenticated Studio checks were local and synthetic. Runtime, data, providers and mail unchanged.
 
 2026-10-24 content phase: VERIFIED_PREVIEW_READY; [receipt](releases/content-preview-2026-10-24/README.md). No change to runtime stage acceptance or production status.

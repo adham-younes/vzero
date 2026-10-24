@@ -1,0 +1,30 @@
+(node:6630) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/adham/agynexa%20new%2023-10/vzero-content-preview/lib/account-validation.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/adham/agynexa new 23-10/vzero-content-preview/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ signup requires a long password and does not trim it (0.656209ms)
+✔ brief requires explicit consent and bounded fields (0.261625ms)
+✔ mutations reject cross-origin requests and oversized streamed bodies (18.68375ms)
+✔ mutation validation rejects arrays and malformed JSON (1.376291ms)
+✔ session: an Auth outage is retryable, not a credential rejection (89.853417ms)
+✔ session: upstream rate limiting remains a 429 (8.873042ms)
+✔ login: an Auth outage is retryable, not a credential rejection (26.312458ms)
+✔ login: upstream rate limiting remains a 429 (7.638042ms)
+✔ missing or revoked sessions still require sign-in (26.205875ms)
+✔ invalid credentials remain generic and a successful login still works (20.111042ms)
+(node:6632) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/adham/agynexa%20new%2023-10/vzero-content-preview/lib/procurement.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/adham/agynexa new 23-10/vzero-content-preview/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ missing warranty prevents readiness despite cheaper price (1.376791ms)
+✔ complete within-budget comparison needs human review, never purchase authorization (0.083292ms)
+✔ budget boundary and zero warranty remain explicit (0.100583ms)
+✔ reject malformed, excessive, fractional and unexpected data (0.184375ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 596.351375

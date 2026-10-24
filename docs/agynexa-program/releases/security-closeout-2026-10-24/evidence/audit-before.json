@@ -1,0 +1,220 @@
+{
+  "advisories": {
+    "1242816": {
+      "findings": [
+        {
+          "version": "16.4.0",
+          "paths": [
+            ".>@vercel/analytics>next",
+            ".>next",
+            ".>@vercel/speed-insights>next"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1242816,
+      "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used",
+      "module_name": "next",
+      "vulnerable_versions": ">=16.0.0 <=16.4.0",
+      "patched_versions": ">=16.4.1",
+      "severity": "critical",
+      "cwe": "CWE-1395",
+      "github_advisory_id": "GHSA-2464-fhr4-w9xw",
+      "url": "https://github.com/advisories/GHSA-2464-fhr4-w9xw"
+    },
+    "1242818": {
+      "findings": [
+        {
+          "version": "16.4.0",
+          "paths": [
+            ".>@vercel/analytics>next",
+            ".>next",
+            ".>@vercel/speed-insights>next"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1242818,
+      "title": "Next.js: Denial of Service in App Router using Server Actions",
+      "module_name": "next",
+      "vulnerable_versions": ">=16.0.0 <=16.4.0",
+      "patched_versions": ">=16.4.1",
+      "severity": "high",
+      "cwe": "CWE-770",
+      "github_advisory_id": "GHSA-p3m5-59mp-jv5r",
+      "url": "https://github.com/advisories/GHSA-p3m5-59mp-jv5r"
+    },
+    "1242859": {
+      "findings": [
+        {
+          "version": "16.4.0",
+          "paths": [
+            ".>@vercel/analytics>next",
+            ".>next",
+            ".>@vercel/speed-insights>next"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1242859,
+      "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays",
+      "module_name": "next",
+      "vulnerable_versions": ">=16.0.0 <=16.4.0",
+      "patched_versions": ">=16.4.1",
+      "severity": "critical",
+      "cwe": "CWE-502",
+      "github_advisory_id": "GHSA-673q-mjm6-r5xr",
+      "url": "https://github.com/advisories/GHSA-673q-mjm6-r5xr"
+    },
+    "1243074": {
+      "findings": [
+        {
+          "version": "2.3.0",
+          "paths": [
+            ".>shadcn>@modelcontextprotocol/sdk>express>body-parser",
+            ".>shadcn>@modelcontextprotocol/sdk>express-rate-limit>express>body-parser"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1243074,
+      "title": "body-parser vulnerable to Denial of Service via trailing bytes after a compressed request body",
+      "module_name": "body-parser",
+      "vulnerable_versions": ">=2.0.0 <2.4.0",
+      "patched_versions": ">=2.4.0",
+      "severity": "high",
+      "cwe": "CWE-248",
+      "github_advisory_id": "GHSA-27r3-jxmh-p828",
+      "url": "https://github.com/advisories/GHSA-27r3-jxmh-p828"
+    },
+    "1243098": {
+      "findings": [
+        {
+          "version": "3.1.8",
+          "paths": [
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1243098,
+      "title": "fast-uri vulnerable to URI scheme spoofing via percent-encoded scheme decoding",
+      "module_name": "fast-uri",
+      "vulnerable_versions": ">=3.0.0 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "severity": "moderate",
+      "cwe": "CWE-172, CWE-180",
+      "github_advisory_id": "GHSA-w74x-v6f9-j3xg",
+      "url": "https://github.com/advisories/GHSA-w74x-v6f9-j3xg"
+    },
+    "1243101": {
+      "findings": [
+        {
+          "version": "3.1.8",
+          "paths": [
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1243101,
+      "title": "fast-uri vulnerable to improper path equivalence in relative reference normalization",
+      "module_name": "fast-uri",
+      "vulnerable_versions": ">=3.0.0 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "severity": "low",
+      "cwe": "CWE-41",
+      "github_advisory_id": "GHSA-xhq7-xmqj-769h",
+      "url": "https://github.com/advisories/GHSA-xhq7-xmqj-769h"
+    },
+    "1243104": {
+      "findings": [
+        {
+          "version": "3.1.8",
+          "paths": [
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1243104,
+      "title": "fast-uri vulnerable to host confusion via unchecked WHATWG host canonicalization",
+      "module_name": "fast-uri",
+      "vulnerable_versions": ">=3.1.3 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "severity": "moderate",
+      "cwe": "CWE-20, CWE-436",
+      "github_advisory_id": "GHSA-wjr9-j795-jxcr",
+      "url": "https://github.com/advisories/GHSA-wjr9-j795-jxcr"
+    },
+    "1243107": {
+      "findings": [
+        {
+          "version": "3.1.8",
+          "paths": [
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@shadcn/registry>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv-formats>ajv>fast-uri",
+            ".>shadcn>@modelcontextprotocol/sdk>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv>fast-uri",
+            ".>shadcn>@dotenvx/dotenvx>conf>ajv-formats>ajv>fast-uri"
+          ],
+          "dev": false,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "id": 1243107,
+      "title": "fast-uri vulnerable to scheme injection via an unescaped first-segment colon in suffix references",
+      "module_name": "fast-uri",
+      "vulnerable_versions": ">=3.0.0 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "severity": "low",
+      "cwe": "CWE-41, CWE-116",
+      "github_advisory_id": "GHSA-333x-w4r6-6crp",
+      "url": "https://github.com/advisories/GHSA-333x-w4r6-6crp"
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 2,
+      "moderate": 2,
+      "high": 2,
+      "critical": 2
+    },
+    "dependencies": 350,
+    "devDependencies": 35,
+    "optionalDependencies": 60,
+    "totalDependencies": 422
+  }
+}

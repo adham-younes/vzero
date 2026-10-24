@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "environment": "local optimized Next app and existing isolated function tests",
+  "baseline_commit": "dc9ebe0f6ccd54f845cf73b859465d5f232b8afc",
+  "package_json_sha256": "0efeb591e2fad348c0a9c303b7580553fdca2031524fce1468a08df620a1bb50",
+  "lockfile_sha256": "29edd834b66de0a774f038a27796c0edd80b5077a19ff75731812c096828c5df",
+  "initial_audit_tool": "pnpm12.4.2 installed global",
+  "package_manager": "pnpm12.3.4 (repository-declared, executed via npx)",
+  "next": "16.4.1",
+  "frozen_install": {
+    "command": "npx --yes pnpm@12.3.4 install --frozen-lockfile --ignore-scripts",
+    "exit_code": 0,
+    "note": "Patch packages were installed by the preceding add/update; final frozen check skipped lifecycle scripts."
+  },
+  "audit": {
+    "command": "npx --yes pnpm@12.3.4 audit --json",
+    "exit_code": 0,
+    "timestamp_utc": "2026-10-24T15:05:03.672719+00:00",
+    "before_count": 8,
+    "after_count": 0,
+    "evidence": "audit-after.json"
+  },
+  "build": {
+    "command": "npx --yes pnpm@12.3.4 build",
+    "exit_code": 0,
+    "security_fatal_warning": false
+  },
+  "node_unit_tests": {
+    "command": "node --experimental-strip-types --test tests/account-validation.test.mjs tests/auth-errors.test.mjs tests/procurement.test.mjs",
+    "exit_code": 0,
+    "passed": 14,
+    "failed": 0
+  },
+  "additional_regressions": [
+    {
+      "command": "node tests/studio-workspace-ui.cjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node tests/output-capacity.cjs",
+      "exit_code": 0
+    },
+    {
+      "command": "node tests/provider-contract.cjs",
+      "exit_code": 0
+    }
+  ],
+  "http": "74 routes plus robots/sitemap/404 passed; see local-public-checks.json",
+  "browser": "See local-browser.json",
+  "protected_first_party_files": 178,
+  "application_changes": false,
+  "live_model_account_database_mail_payment_operations": false
+}

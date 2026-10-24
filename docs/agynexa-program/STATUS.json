@@ -693,5 +693,19 @@
     "verified_date": "2026-10-22",
     "receipt": "../launch/2026-10-22/NEXA-CLOUD-MAIL.md",
     "evidence": "../launch/2026-10-22/evidence/nexa-cloud-production-release.json"
+  },
+  "security_closeout": {
+    "status": "LOCAL_VERIFIED_AWAITING_PRODUCTION",
+    "date": "2026-10-24",
+    "release": "releases/security-closeout-2026-10-24/README.md",
+    "next_before": "16.4.0",
+    "next_after": "16.4.1",
+    "dependency_advisories_before": 8,
+    "dependency_advisories_after": 0,
+    "unit_tests_passed": 14,
+    "readonly_route_locale_checks_passed": 74,
+    "first_party_source_unchanged": true,
+    "studio_planning": "DEFERRED_BY_OWNER_NEW_CONVERSATION",
+    "live_account_model_database_mail_operations": false
   }
 }

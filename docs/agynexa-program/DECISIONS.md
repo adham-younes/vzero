@@ -201,3 +201,8 @@ Owner direction: one reusable global Agent Builder platform, English primary wit
 ## Owner production authorization — 24 October 2026
 
 Owner approved the replacement Arabic homepage and requested production publication plus alignment with the prior dedicated Studio design. Publish the global bilingual content Preview with this homepage and independently authored English equivalent. Preserve Studio behavior and layout; display wording alone changes. No automatic orchestration, enterprise integration, cloud provisioning or billing implementation is implied. [Release scope](releases/approved-home-production-2026-10-24/README.md).
+
+
+## Security closeout and deferred Studio plan — 24 October 2026
+
+Owner requested necessary security updates, bounded tests and complete documentation before starting a fresh Studio discussion. Apply the minimal Next16.4.1/body-parser2.4.0/fast-uri3.1.9 patches; preserve all first-party source, content and saved data. Do not implement Studio redesign/orchestration or resume HeronSignal installation. [Scope and evidence](releases/security-closeout-2026-10-24/README.md).

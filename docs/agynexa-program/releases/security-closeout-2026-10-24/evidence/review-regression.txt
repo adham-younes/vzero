@@ -1,0 +1,2 @@
+PASS: six explicit bilingual intent cases, six ordinary/negated cases, exact apply snapshot, stored review and revision wiring. Scoped source/helper test; integrated browser pending.
+PASS: actual EN/AR review rendering, hostile text escaping, render performs zero writes, explicit Apply exact snapshot, double-click guard, actual result callback; no browser/DB/model.
