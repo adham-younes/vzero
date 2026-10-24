@@ -1,0 +1,1 @@
+Provider invalid-generation retry, unchanged schema/max allowance, canonical fields and non-retried auth failure PASS

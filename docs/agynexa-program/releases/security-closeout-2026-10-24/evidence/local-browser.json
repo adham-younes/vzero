@@ -1,0 +1,31 @@
+{
+  "scope": "Actual updated optimized local app; public pages only; no accounts/model/DB",
+  "securityDesktop": {
+    "h1": "Build AI agents\nfor your business operations",
+    "scrollWidth": 1280,
+    "steps": 6,
+    "url": "http://localhost:3011/",
+    "videoPlaying": true,
+    "width": 1280
+  },
+  "securityMobile": {
+    "dir": "rtl",
+    "h1": "ابنِ وكلاء ذكاء اصطناعي\nلعمليات شركتك",
+    "lang": "ar",
+    "scrollWidth": 390,
+    "url": "http://localhost:3011/ar",
+    "videoPlaying": true,
+    "width": 390
+  },
+  "securityMenu": {
+    "expanded": "false",
+    "focusReturned": true
+  },
+  "securityNotice": {
+    "dir": "rtl",
+    "h1": "صلاحيات مفهومة ومسؤولية محددة قبل التنفيذ",
+    "scrollWidth": 390,
+    "url": "http://localhost:3011/ar/security",
+    "width": 390
+  }
+}

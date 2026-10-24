@@ -1,0 +1,20 @@
+{
+  "id": "dpl_447stD3JsGD1hZHZsQEmQH8rNFFH",
+  "url": "https://vzero-1k20qtd2b-adhamlouxors-projects.vercel.app",
+  "target": "production",
+  "state": "READY",
+  "commit": "dc9ebe0f6ccd54f845cf73b859465d5f232b8afc",
+  "branch": "main",
+  "aliases": [
+    "agynexa.si",
+    "vzero-nine-beryl.vercel.app",
+    "www.agynexa.si",
+    "vzero-adhamlouxors-projects.vercel.app",
+    "vzero-git-main-adhamlouxors-projects.vercel.app"
+  ],
+  "source": "git",
+  "pr": "https://github.com/adham-younes/vzero/pull/47",
+  "reviewedHead": "2d8e18de384c964a18036a978fa755a9627bfa54",
+  "priorDeployment": "dpl_5aS1czntiDqv99dTReWRhc1hLNWy",
+  "scope": "Git-triggered production release; no manual duplicate deployment"
+}

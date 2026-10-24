@@ -1,0 +1,51 @@
+{
+  "environment": "official production domain; public copy and Studio signed-out entry only",
+  "productionAr": {
+    "canonical": "https://agynexa.si/ar",
+    "dir": "rtl",
+    "h1": "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك",
+    "h2": 7,
+    "lang": "ar",
+    "scrollWidth": 1280,
+    "steps": 6,
+    "studioLinks": 2,
+    "title": "منصة بناء وكلاء الذكاء الاصطناعي لعمليات الشركات | AGYNEXA",
+    "url": "https://agynexa.si/ar",
+    "video": [
+      {
+        "autoplay": true,
+        "controls": false,
+        "currentTime": 0.8955,
+        "paused": false
+      }
+    ],
+    "width": 1280
+  },
+  "productionEn": {
+    "canonical": "https://agynexa.si/",
+    "dir": "ltr",
+    "h1": "Build AI agents for your business operations",
+    "lang": "en",
+    "steps": 6,
+    "title": "AI Agent Builder for Business Operations | AGYNEXA",
+    "url": "https://agynexa.si/"
+  },
+  "productionMobile": {
+    "dir": "rtl",
+    "scrollWidth": 390,
+    "steps": 6,
+    "url": "https://agynexa.si/ar",
+    "width": 390
+  },
+  "productionStudio": {
+    "dir": "rtl",
+    "footer": 0,
+    "hasComposer": false,
+    "lang": "ar",
+    "marketingHeader": 0,
+    "noindex": "noindex, nofollow",
+    "signInHeading": true,
+    "url": "https://agynexa.si/ar/studio"
+  },
+  "scope": "No sign-in submission, test account, model call, saved-work write or mail send"
+}

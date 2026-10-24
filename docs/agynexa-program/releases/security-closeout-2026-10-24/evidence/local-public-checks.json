@@ -1,0 +1,462 @@
+{
+  "environment": "http://localhost:3011",
+  "scope": "readonly public/account SSR, security headers, metadata/locale and missing-route checks; no form or model calls",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/methodology",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/methodology",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/architecture",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/architecture",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/integrations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/integrations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/security",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/security",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/resources",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/resources",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/about",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/agentnexos",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/agentnexos",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/start",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/start",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/contact",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/industries",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/privacy",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/terms",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/customer-service",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/customer-service",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/employee-operations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/employee-operations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/process-automation",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/process-automation",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/enterprise-knowledge",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/enterprise-knowledge",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/agent-orchestration",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/agent-orchestration",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/enterprise-integrations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/enterprise-integrations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/voice-agents",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/voice-agents",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/agent-assist",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/agent-assist",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/governance-security",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/governance-security",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/services/evaluation-observability",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/services/evaluation-observability",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/knowledge",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/knowledge",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/documents",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/documents",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/sales",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/sales",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/service",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/service",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/finance",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/finance",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/logistics",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/logistics",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/procurement",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/receivables",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/receivables",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/solutions/customer-operations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/solutions/customer-operations",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/login",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/signup",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/signup",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/account",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    },
+    {
+      "path": "/ar/account",
+      "status": 200,
+      "result": "PASS",
+      "errors": []
+    }
+  ],
+  "extra": [
+    {
+      "path": "/robots.txt",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200
+    }
+  ],
+  "missing_route_404": true,
+  "pass": true
+}

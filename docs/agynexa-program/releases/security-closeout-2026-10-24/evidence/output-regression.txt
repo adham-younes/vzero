@@ -1,0 +1,1 @@
+Long legacy/v2 answers beyond 12000 accepted; UTF8 envelope and paginated history transport boundary PASS

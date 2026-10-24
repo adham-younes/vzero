@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-22T03:57:47.953114+00:00",
+  "updated_at": "2026-10-24T14:36:34.111516+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,18 +14,17 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
-    "reviewed_head": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
-    "merge_commit": "8bea79dfd3d57efb866f9f11485ad73043bcd549",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/43",
+    "implementation_commit": "2d8e18de384c964a18036a978fa755a9627bfa54",
+    "reviewed_head": "2d8e18de384c964a18036a978fa755a9627bfa54",
+    "merge_commit": "dc9ebe0f6ccd54f845cf73b859465d5f232b8afc",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/47",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
-    "legacy_domain": "https://vzero-nine-beryl.vercel.app",
-    "status_at_verification": "READY_NEXA_CLOUD_INBOX_PRIVATE_ACTIVITY_SCOPED_PASS",
-    "deployment_id": "dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc",
-    "verified_date": "2026-10-22",
-    "receipt": "../launch/2026-10-22/NEXA-CLOUD-MAIL.md",
-    "evidence": "../launch/2026-10-22/evidence/nexa-cloud-production-release.json"
+    "status_at_verification": "READY_PUBLIC_CONTENT_AND_SIGNED_OUT_STUDIO_ENTRY_VERIFIED",
+    "deployment_id": "dpl_447stD3JsGD1hZHZsQEmQH8rNFFH",
+    "verified_date": "2026-10-24",
+    "receipt": "releases/approved-home-production-2026-10-24/README.md",
+    "evidence": "releases/approved-home-production-2026-10-24/evidence/production-deployment.json"
   },
   "stage_status": [
     {
@@ -668,13 +667,45 @@
     "production_unchanged": true
   },
   "approved_home_production": {
-    "status": "OWNER_AUTHORIZED_LOCAL_VERIFICATION_PASS_AWAITING_PRODUCTION_RECEIPT",
+    "status": "PRODUCTION_VERIFIED",
     "date": "2026-10-24",
     "baseline_main": "857356acc12b736ee1874cc21fa298690d98164a",
     "release": "releases/approved-home-production-2026-10-24/README.md",
     "scope": "global bilingual public copy, approved homepage and Studio display strings; existing dedicated-chat design",
     "runtime_data_provider_mail_changed": false,
     "local_build": "PASS_AFTER_EXISTING_NEXT_SECURITY_REMINDER_RETRY",
-    "browser": "actual local home EN1440/AR390 and synthetic Studio EN1440/AR390; no live account/model writes"
+    "browser": "actual local home EN1440/AR390 and synthetic Studio EN1440/AR390; no live account/model writes",
+    "deployment_id": "dpl_447stD3JsGD1hZHZsQEmQH8rNFFH",
+    "merge_commit": "dc9ebe0f6ccd54f845cf73b859465d5f232b8afc",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/47",
+    "production_checks": "Official bilingual homepage, locale switch, video and AR390 layout; clicked signed-out Studio entry only. No live account/model/data/mail operation."
+  },
+  "historical_product_release_before_content": {
+    "implementation_commit": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
+    "reviewed_head": "092e466d518a0e63c3ce3b7f654df24bc3134d0c",
+    "merge_commit": "8bea79dfd3d57efb866f9f11485ad73043bcd549",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/43",
+    "pull_request_state": "MERGED",
+    "domain": "https://agynexa.si",
+    "legacy_domain": "https://vzero-nine-beryl.vercel.app",
+    "status_at_verification": "READY_NEXA_CLOUD_INBOX_PRIVATE_ACTIVITY_SCOPED_PASS",
+    "deployment_id": "dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc",
+    "verified_date": "2026-10-22",
+    "receipt": "../launch/2026-10-22/NEXA-CLOUD-MAIL.md",
+    "evidence": "../launch/2026-10-22/evidence/nexa-cloud-production-release.json"
+  },
+  "security_closeout": {
+    "status": "LOCAL_VERIFIED_AWAITING_PRODUCTION",
+    "date": "2026-10-24",
+    "release": "releases/security-closeout-2026-10-24/README.md",
+    "next_before": "16.4.0",
+    "next_after": "16.4.1",
+    "dependency_advisories_before": 8,
+    "dependency_advisories_after": 0,
+    "unit_tests_passed": 14,
+    "readonly_route_locale_checks_passed": 74,
+    "first_party_source_unchanged": true,
+    "studio_planning": "DEFERRED_BY_OWNER_NEW_CONVERSATION",
+    "live_account_model_database_mail_operations": false
   }
 }
