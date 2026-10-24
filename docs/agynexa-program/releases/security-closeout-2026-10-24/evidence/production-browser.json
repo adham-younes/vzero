@@ -1,0 +1,11 @@
+{
+  "scope": "Official production public security page after dependency patch; no account or model call",
+  "securityProductionUi": {
+    "dir": "rtl",
+    "h1": "صلاحيات مفهومة ومسؤولية محددة قبل التنفيذ",
+    "scrollWidth": 715,
+    "title": "أمان الوكلاء والصلاحيات والإشراف | AGYNEXA",
+    "url": "https://agynexa.si/ar/security",
+    "width": 715
+  }
+}

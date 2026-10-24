@@ -14,17 +14,14 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "2d8e18de384c964a18036a978fa755a9627bfa54",
-    "reviewed_head": "2d8e18de384c964a18036a978fa755a9627bfa54",
-    "merge_commit": "dc9ebe0f6ccd54f845cf73b859465d5f232b8afc",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/47",
+    "implementation_commit": "172a195ef3c89d8e3755df382b845d6b3b305ff0",
+    "merge_commit": "445424ffd331d2d8da2673805e3f7cd2f831b742",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/48",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
-    "status_at_verification": "READY_PUBLIC_CONTENT_AND_SIGNED_OUT_STUDIO_ENTRY_VERIFIED",
-    "deployment_id": "dpl_447stD3JsGD1hZHZsQEmQH8rNFFH",
-    "verified_date": "2026-10-24",
-    "receipt": "releases/approved-home-production-2026-10-24/README.md",
-    "evidence": "releases/approved-home-production-2026-10-24/evidence/production-deployment.json"
+    "status_at_verification": "READY_SECURITY_MAINTENANCE_BOUNDED_CHECKS_PASS",
+    "deployment_id": "dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX",
+    "receipt": "releases/security-closeout-2026-10-24/README.md"
   },
   "stage_status": [
     {
@@ -695,7 +692,7 @@
     "evidence": "../launch/2026-10-22/evidence/nexa-cloud-production-release.json"
   },
   "security_closeout": {
-    "status": "LOCAL_VERIFIED_AWAITING_PRODUCTION",
+    "status": "PRODUCTION_VERIFIED",
     "date": "2026-10-24",
     "release": "releases/security-closeout-2026-10-24/README.md",
     "next_before": "16.4.0",
@@ -706,6 +703,22 @@
     "readonly_route_locale_checks_passed": 74,
     "first_party_source_unchanged": true,
     "studio_planning": "DEFERRED_BY_OWNER_NEW_CONVERSATION",
-    "live_account_model_database_mail_operations": false
+    "live_account_model_database_mail_operations": false,
+    "merge_commit": "445424ffd331d2d8da2673805e3f7cd2f831b742",
+    "deployment_id": "dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX",
+    "production_checks": "six public pages/security headers and three anonymous private-route401/no-store checks; public browser sample only"
+  },
+  "historical_product_release_before_security": {
+    "implementation_commit": "2d8e18de384c964a18036a978fa755a9627bfa54",
+    "reviewed_head": "2d8e18de384c964a18036a978fa755a9627bfa54",
+    "merge_commit": "dc9ebe0f6ccd54f845cf73b859465d5f232b8afc",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/47",
+    "pull_request_state": "MERGED",
+    "domain": "https://agynexa.si",
+    "status_at_verification": "READY_PUBLIC_CONTENT_AND_SIGNED_OUT_STUDIO_ENTRY_VERIFIED",
+    "deployment_id": "dpl_447stD3JsGD1hZHZsQEmQH8rNFFH",
+    "verified_date": "2026-10-24",
+    "receipt": "releases/approved-home-production-2026-10-24/README.md",
+    "evidence": "releases/approved-home-production-2026-10-24/evidence/production-deployment.json"
   }
 }
