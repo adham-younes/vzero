@@ -1,6 +1,6 @@
 # HeronSignal site-wide browser installation — 24 October 2026
 
-Status: LOCAL_VERIFIED; production verification pending.
+Status: PRODUCTION_BROWSER_VERIFIED. The exact minimal snippet is installed on the official domain.
 
 ## Authorized scope
 
@@ -20,10 +20,23 @@ The market review and historical implementation positioning remain reference mat
 - [Sanitized local browser evidence](evidence/local-browser.json). It omits visitor/session identifiers and request bodies.
 - Fresh independent read-only review passed: configuration ordering, exact values, deduplication and minimal application scope; production allowlisting/collection remains the parent's separate verification.
 
-HeronSignal MCP tools are not available in this session. Saved MCP configuration is not an active authenticated tool connection; no credential was retrieved or copied. Production browser network responses will be recorded separately from dashboard ingestion status.
+HeronSignal MCP tools are not available in this session. Saved MCP configuration is not an active authenticated tool connection; no credential was retrieved or copied. Production browser network responses are recorded below separately from dashboard ingestion status.
 
 ## Publication and rollback
 
 Use the existing Git integration and one reviewed merge. Verify exact source, READY/production and official aliases, then test the actual official domain for tracker200, config value, errors and collection acceptance. Do not infer dashboard receipt from HTTP200. Reverting the layout-only addition removes the browser integration without rolling back the security patch.
 
 The [security production closeout](../security-closeout-2026-10-24/README.md) is a separate completed release. Its final documentation commit accompanies this branch naturally; no security test was repeated without a new relevant change.
+
+
+## Final production receipt
+
+[PR50](https://github.com/adham-younes/vzero/pull/50) merged reviewed head `60156f8726a752eb820ec1391507836ba2468bea` as main `80abfdc3e2f3a623e8e2e5ca4117b3c9827f6c16`. [Deployment evidence](evidence/production-deployment.json): `dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs`, READY/production/Git, exact source and both official aliases verified. www retains308 to the official apex. No manual duplicate deployment.
+
+[Actual official-browser evidence](evidence/production-browser.json): `/ar` loaded tracker.js200; exact public key, one config, one tracker and async=true. Tracker configuration returned200 with automaticErrorTrackingEnabled=true and replayEnabled=true, with no origin-refusal notice. Natural events requests returned204 and the tracker's replay.js loaded200. These are browser/service-response observations, not an independently queried dashboard record. The service-returned configuration has console/network/log tracking disabled; no claim is made that those optional features were enabled. No configuration was changed beyond the owner's exact snippet.
+
+Actual client navigation to `/ar/resources` retained a single installation and made zero additional tracker.js requests, with zero runtime exceptions and no new console errors/warnings in the sampled interval. The rejected technical paragraph and UTF-8 dump were absent on that actual production page. [Presentation screenshot](evidence/production-ar.png).
+
+HeronSignal MCP is not connected in this session; get_installation_status/add_domain could not be invoked. No add_domain was necessary to resolve a production-origin rejection because none occurred. Dashboard receipt, broader traffic coverage and recording history are NOT ESTABLISHED by this bounded verification.
+
+[Build and source scope](evidence/build-and-scope.json). The only application file changed is `app/layout.tsx`. [Complete file manifest](CHANGED-FILES.md) separates this scope from the preceding security receipt. Final receipt/status/evidence is committed locally and summarized in the merged PR to avoid a documentation-only production rebuild.

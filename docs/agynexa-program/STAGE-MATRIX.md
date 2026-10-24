@@ -46,4 +46,4 @@ The owner rejected the earlier content Preview and approved a complete global En
 
 ## HeronSignal browser integration — separate owner scope
 
-[Minimal root-layout installation](releases/heronsignal-sitewide-2026-10-24/README.md): exact public config plus one Next async afterInteractive tracker, no dependency/API/route/data change. Local verification passed; official-origin publication/collection evidence pending. Studio/agent redesign remains deferred.
+[Minimal root-layout installation](releases/heronsignal-sitewide-2026-10-24/README.md): exact public config plus one Next async afterInteractive tracker, no dependency/API/route/data change. PRODUCTION_BROWSER_VERIFIED at main80abfdc / dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs: tracker200, exact config, events204, no new sampled console errors and no duplicate load on client navigation. MCP/dashboard ingestion not established. Studio/agent redesign remains deferred.

@@ -1,0 +1,25 @@
+{
+  "verified_at": "2026-10-24T15:29:14.372Z",
+  "id": "dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs",
+  "url": "vzero-q88twrzwo-adhamlouxors-projects.vercel.app",
+  "state": "READY",
+  "target": "production",
+  "source": "git",
+  "commit": "80abfdc3e2f3a623e8e2e5ca4117b3c9827f6c16",
+  "aliases": [
+    "agynexa.si",
+    "vzero-nine-beryl.vercel.app",
+    "www.agynexa.si",
+    "vzero-adhamlouxors-projects.vercel.app",
+    "vzero-git-main-adhamlouxors-projects.vercel.app"
+  ],
+  "officialAliasesVerifiedSeparately": [
+    "agynexa.si",
+    "www.agynexa.si"
+  ],
+  "wwwRedirect": {
+    "status": 308,
+    "target": "agynexa.si"
+  },
+  "pull_request": "https://github.com/adham-younes/vzero/pull/50"
+}

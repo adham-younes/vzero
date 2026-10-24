@@ -1,0 +1,53 @@
+{
+  "verifiedAt": "2026-10-24T15:27:57.495Z",
+  "origin": "https://agynexa.si",
+  "mergeCommit": "80abfdc3e2f3a623e8e2e5ca4117b3c9827f6c16",
+  "config": {
+    "url": "https://agynexa.si/ar/resources",
+    "publicKey": "pk_dSrC6lnKvNFN9arrAC5KJ2VOnDzKqK1i",
+    "configCount": 1,
+    "trackerCount": 1,
+    "async": true,
+    "rejectedParagraphPresent": false,
+    "utf8DumpPresent": false
+  },
+  "heronsignalResponses": [
+    {
+      "url": "https://api.heronsignal.com/tracker.js",
+      "status": 200
+    },
+    {
+      "url": "https://api.heronsignal.com/events",
+      "status": 204
+    },
+    {
+      "url": "https://api.heronsignal.com/tracker-config?publicKey=pk_dSrC6lnKvNFN9arrAC5KJ2VOnDzKqK1i&pageUrl=https%3A%2F%2Fagynexa.si%2Far",
+      "status": 200
+    },
+    {
+      "url": "https://api.heronsignal.com/replay.js",
+      "status": 200
+    },
+    {
+      "url": "https://api.heronsignal.com/events",
+      "status": 204
+    }
+  ],
+  "trackerConfig": {
+    "automaticErrorTrackingEnabled": true,
+    "consoleTrackingEnabled": false,
+    "networkTrackingEnabled": false,
+    "logTrackingEnabled": false,
+    "logLevels": [
+      "error"
+    ],
+    "replayEnabled": true,
+    "replaySamplePercent": 5
+  },
+  "additionalTrackerRequestsOnClientNavigation": 0,
+  "runtimeExceptions": 0,
+  "newConsoleErrors": [],
+  "MCP": "NOT_AVAILABLE; dashboard installation status not queried",
+  "collectionProof": "Official-origin tracker configuration accepted; natural browser events requests returned204. Dashboard persistence/display not independently verified.",
+  "sensitiveRequestBodiesStored": false
+}

@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-24T15:26:25.422901+00:00",
+  "build": {
+    "command": "npx --yes pnpm@12.3.4 build",
+    "exit_code": 0,
+    "framework": "Next.js16.4.1",
+    "log_sha256": "9c26af5d2333f1605061646fee7c174860a34ff685bf10d65cc2dcbbffdf329d"
+  },
+  "source_commit": "ca15207d37fa32d18c62b66d4c5b0ee2db967bc3",
+  "reviewed_pr_head": "60156f8726a752eb820ec1391507836ba2468bea",
+  "merge_commit": "80abfdc3e2f3a623e8e2e5ca4117b3c9827f6c16",
+  "pull_request": "https://github.com/adham-younes/vzero/pull/50",
+  "application_files_changed": [
+    "app/layout.tsx"
+  ],
+  "configuration_scope": "public browser key and async tracker only",
+  "new_dependencies": false,
+  "prior_security_receipt_commit": "8d9fb8eafdb47b33cbd7f76d0143bdf634d9570c"
+}
