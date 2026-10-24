@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-24T15:25:19.740516+00:00",
+  "updated_at": "2026-10-24T15:29:14.700294+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,14 +14,15 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "172a195ef3c89d8e3755df382b845d6b3b305ff0",
-    "merge_commit": "445424ffd331d2d8da2673805e3f7cd2f831b742",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/48",
+    "implementation_commit": "ca15207d37fa32d18c62b66d4c5b0ee2db967bc3",
+    "reviewed_head": "60156f8726a752eb820ec1391507836ba2468bea",
+    "merge_commit": "80abfdc3e2f3a623e8e2e5ca4117b3c9827f6c16",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/50",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
-    "status_at_verification": "READY_SECURITY_MAINTENANCE_BOUNDED_CHECKS_PASS",
-    "deployment_id": "dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX",
-    "receipt": "releases/security-closeout-2026-10-24/README.md"
+    "status_at_verification": "READY_HERONSIGNAL_BROWSER_VERIFIED",
+    "deployment_id": "dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs",
+    "receipt": "releases/heronsignal-sitewide-2026-10-24/README.md"
   },
   "stage_status": [
     {
@@ -163,7 +164,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "Complete the separately authorized minimal HeronSignal browser installation and official-origin verification; deliver maintenance handoff. Studio/agent redesign awaits the owner's new conversation.",
+  "next_action": "Maintenance handoff is complete. Await the owner's new Studio/agent plan in a fresh conversation; do not begin runtime redesign automatically.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -722,13 +723,33 @@
     "evidence": "releases/approved-home-production-2026-10-24/evidence/production-deployment.json"
   },
   "heronsignal_browser": {
-    "status": "LOCAL_VERIFIED_PRODUCTION_PENDING",
+    "status": "PRODUCTION_BROWSER_VERIFIED",
     "release": "releases/heronsignal-sitewide-2026-10-24/README.md",
     "source_file": "app/layout.tsx",
     "new_dependencies": false,
     "mcp_tools_available": false,
     "local_tracker_status": 200,
     "local_recording": "DISABLED_ORIGIN_NOT_ALLOWLISTED",
-    "studio_redesign": "DEFERRED_BY_OWNER"
+    "studio_redesign": "DEFERRED_BY_OWNER",
+    "production_tracker_status": 200,
+    "production_config_status": 200,
+    "production_events_status": 204,
+    "public_key_exact": true,
+    "single_installation": true,
+    "new_console_errors": 0,
+    "dashboard_ingestion": "NOT_ESTABLISHED_MCP_UNAVAILABLE",
+    "automatic_error_tracking_enabled": true,
+    "replay_enabled": true,
+    "console_network_log_tracking_enabled": false
+  },
+  "historical_product_release_before_heronsignal": {
+    "implementation_commit": "172a195ef3c89d8e3755df382b845d6b3b305ff0",
+    "merge_commit": "445424ffd331d2d8da2673805e3f7cd2f831b742",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/48",
+    "pull_request_state": "MERGED",
+    "domain": "https://agynexa.si",
+    "status_at_verification": "READY_SECURITY_MAINTENANCE_BOUNDED_CHECKS_PASS",
+    "deployment_id": "dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX",
+    "receipt": "releases/security-closeout-2026-10-24/README.md"
   }
 }

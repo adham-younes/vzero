@@ -54,4 +54,4 @@ Use the existing Git integration and one reviewed production merge. Verify the m
 
 [Readonly production checks](evidence/production-readonly-checks.json) passed: six public EN/AR pages return200 with the existing security headers; anonymous Account/Agents/Projects requests return401 and no-store. [Browser evidence](evidence/production-browser.json) confirms the official Arabic security page and layout. No authenticated or exploit test was run.
 
-Final receipt/evidence is committed locally and summarized in the merged PR to avoid a documentation-only production rebuild. The owner subsequently requested a separate minimal HeronSignal snippet installation; that later scope does not change this security receipt.
+Final receipt/evidence was initially committed locally and summarized in the merged PR. The owner subsequently required complete matching local and repository copies dated24October2026; the full security receipt and evidence accompany that documentation-only publication. The owner subsequently requested a separate minimal HeronSignal snippet installation; that later scope does not change this security receipt.
