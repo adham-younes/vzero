@@ -9,12 +9,12 @@ type Notice = {title:Bilingual;intro:Bilingual;sections:{title:Bilingual;body:Bi
 export const legalContent:Record<'privacy'|'terms',Notice> = {
   "privacy": {
     "title": [
-      "How the current service handles your information",
-      "كيف تتعامل الخدمة الحالية مع معلوماتك"
+      "Privacy notice",
+      "إشعار الخصوصية"
     ],
     "intro": [
-      "This notice describes the website and private Studio as they operate today. Before using information that requires specific safeguards, confirm the legal operator, jurisdiction and processing terms.",
-      "يصف هذا الإشعار الموقع وStudio الخاص في وضعهما الحالي. قبل استخدام معلومات تتطلب ضوابط خاصة، أكّد بيانات المشغّل القانوني والاختصاص وشروط المعالجة."
+      "This notice explains the information used by the AGYNEXA website and Studio. Choose information appropriate to your purpose and the service’s data handling before you add it to a workspace.",
+      "يوضح هذا الإشعار المعلومات التي يستخدمها موقع AGYNEXA والاستوديو. اختر المعلومات المناسبة لغرضك ولطريقة معالجتها قبل إضافتها إلى مساحة العمل."
     ],
     "sections": [
       {
@@ -23,120 +23,140 @@ export const legalContent:Record<'privacy'|'terms',Notice> = {
           "المعلومات التي تقدمها"
         ],
         "body": [
-          "Registration uses a display name, email address and password through the authentication service. Studio stores configured agents, instructions, sources, questions, generated responses, references, usage records and internal decisions. A workflow brief you choose to save includes organization, contact email, selected service, problem, sources, acceptance criteria and its consent record.",
-          "يستخدم التسجيل اسم العرض والبريد وكلمة المرور عبر خدمة المصادقة. يحفظ Studio الوكلاء المضبوطين والتعليمات والمصادر والأسئلة والردود المولدة والمراجع وسجلات الاستخدام والقرارات الداخلية. ويشمل موجز سير العمل الذي تختار حفظه المؤسسة وبريد التواصل والخدمة والمشكلة والمصادر ومعايير القبول وسجل الموافقة."
+          "Account registration uses your display name, email address and password. The workspace can hold agent instructions, knowledge sources, conversations, generated responses, source references and usage records. If you save a planning record, it includes the company and process details you choose to enter.",
+          "يستخدم إنشاء الحساب اسم العرض والبريد الإلكتروني وكلمة المرور. وقد تحتوي المساحة على تعليمات الوكلاء ومصادر المعرفة والمحادثات والإجابات المولدة ومراجعها وسجلات الاستخدام. وإذا حفظت سجل تخطيط، فإنه يتضمن بيانات الشركة والعملية التي تختار إدخالها."
         ]
       },
       {
         "title": [
-          "Providers and technical data",
-          "المزودون والبيانات التقنية"
+          "How information is used",
+          "أغراض الاستخدام"
         ],
         "body": [
-          "Vercel hosts the application. Supabase provides authentication and application storage. Model requests are sent from the server to Groq and may include your question, relevant conversation turns, permitted source excerpts and assistant instructions. Providers process information needed to provide their services. The notice does not promise a processing country, provider retention period or model-training exclusion.\n\nSign-in uses HttpOnly session cookies. Authentication abuse controls use keyed hashes of email and request network identifiers with attempt counters. Vercel Analytics and Speed Insights provide website and performance measurements. Providers may also process technical request and error information. No billing checkout collects payment details in the current application.",
-          "تستضيف Vercel التطبيق. وتوفر Supabase المصادقة وتخزين بياناته. تُرسل طلبات النماذج من الخادم إلى Groq، وقد تشمل السؤال وأجزاء المحادثة المناسبة ومقتطفات المصادر المسموحة وتعليمات الوكيل. يعالج المزودون المعلومات اللازمة لتقديم خدماتهم. ولا يعد الإشعار ببلد معالجة أو مدة احتفاظ لدى المزود أو استثناء من تدريب النماذج.\n\nيستخدم الدخول ملفات جلسة من نوع HttpOnly. وتستخدم ضوابط إساءة المصادقة بصمات محمية بمفتاح للبريد ومعرّفات شبكة الطلب مع عدادات المحاولات. توفر Vercel Analytics وSpeed Insights قياسات الموقع والأداء. وقد يعالج المزودون معلومات تقنية للطلبات والأخطاء. لا توجد صفحة دفع في التطبيق الحالي تجمع بيانات الدفع."
+          "Account information supports sign-in and access to your workspace. Agent instructions, relevant conversation context and source excerpts may be processed by the model service to generate a response. Application records support saving, retrieval and the controls available in the workspace.\n\nService providers perform hosting, authentication, storage, model processing and website measurements. Session cookies support sign-in; technical request information also supports performance and abuse prevention. Processing location, provider retention and any restrictions on further use should be confirmed before introducing information that requires specific contractual safeguards. Questions about those arrangements can be sent to adham@agynexa.si.",
+          "تُستخدم معلومات الحساب لتسجيل الدخول والوصول إلى مساحتك. وقد تعالج خدمة النموذج تعليمات الوكيل وسياق المحادثة المناسب ومقتطفات المصادر لتوليد الإجابة. وتتيح سجلات التطبيق الحفظ والاسترجاع والضوابط المتاحة في المساحة.\n\nيتولى مزودو الخدمات الاستضافة والمصادقة والتخزين ومعالجة النماذج وقياسات الموقع. وتدعم ملفات الجلسة تسجيل الدخول، بينما تساعد معلومات الطلبات التقنية في متابعة الأداء ومنع الإساءة. قبل إضافة بيانات تتطلب ضمانات تعاقدية خاصة، تأكد من بلد المعالجة ومدد الاحتفاظ لدى المزودين وقيود الاستخدام اللاحق. ويمكن الاستفسار عن هذه الترتيبات عبر adham@agynexa.si."
         ]
       },
       {
         "title": [
-          "Private saving and public use",
-          "الحفظ الخاص والاستخدام العام"
+          "Private work and public content",
+          "العمل الخاص والمحتوى العام"
         ],
         "body": [
-          "A saved brief is private to the account; saving does not notify staff or create an inbox receipt. Adding a source, allowing public use and publishing are separate actions. A public widget uses explicitly published public knowledge. Do not publish private or case-specific information.",
-          "الموجز المحفوظ خاص بالحساب؛ ولا يُشعر الحفظ الموظفين أو ينشئ إيصال صندوق بريد. إضافة المصدر والسماح باستخدامه علنًا والنشر إجراءات منفصلة. تستخدم النافذة العامة معرفة عامة منشورة صراحة. لا تنشر معلومات خاصة أو متعلقة بحالة بعينها."
+          "Saving a private record does not send a message to AGYNEXA staff. Adding information to an agent and approving it for public use are separate actions. Review the material included in a published version before making it available to others. Do not publish private company information or personal case records.",
+          "لا يؤدي حفظ سجل خاص إلى إرسال رسالة لفريق AGYNEXA. وإضافة المعلومات للوكيل تختلف عن السماح باستخدامها علنًا. راجع ما تتضمنه النسخة المنشورة قبل إتاحتها للآخرين، ولا تنشر معلومات الشركة الخاصة أو سجلات الحالات الشخصية."
         ]
       },
       {
         "title": [
-          "Deletion and retention",
-          "الحذف والاحتفاظ"
+          "Your choices and deletion",
+          "خيارات الحذف"
         ],
         "body": [
-          "Supported records such as briefs, sources and private conversations can be deleted through their controls. Source removal stops further use through supported retrieval and linked-history paths. Separately published snapshots require their own publication controls. Downloads, shared copies and independently saved records remain separate. There is no promised automatic 90-day deletion, immediate erasure from every provider backup or removal from a recipient's device. Whole-account deletion is not available through the current interface.",
-          "يمكن حذف السجلات المدعومة مثل الموجزات والمصادر والمحادثات الخاصة من ضوابطها. تمنع إزالة المصدر استخدامه لاحقًا عبر مسارات الاسترجاع والسجل المرتبط المدعومة. وتحتاج النسخ المنشورة المستقلة ضوابط النشر الخاصة بها. تبقى التنزيلات والنسخ المشتركة والسجلات المحفوظة بصورة مستقلة منفصلة. لا يوجد وعد بحذف تلقائي بعد 90 يومًا أو محو فوري من كل نسخ المزودين الاحتياطية أو إزالة من جهاز المستلم. حذف الحساب بالكامل غير متاح من الواجهة الحالية."
+          "Use the available controls to delete supported records such as planning records, sources and conversations. Published versions, downloaded files and copies shared outside the workspace require separate attention. Deletion in the interface does not establish immediate removal from every provider backup or from a recipient’s device. Whole-account deletion is not offered through the interface; contact us about a request affecting your account.",
+          "استخدم الضوابط المتاحة لحذف السجلات المدعومة، مثل سجلات التخطيط والمصادر والمحادثات. تحتاج النسخ المنشورة والملفات المنزلة والمعلومات المشتركة خارج المساحة إلى إدارة منفصلة. والحذف من الواجهة لا يثبت المحو الفوري من جميع نسخ المزودين الاحتياطية أو أجهزة المستلمين. لا تتيح الواجهة حذف الحساب بالكامل؛ تواصل معنا بشأن الطلبات المتعلقة بحسابك."
         ]
       },
       {
         "title": [
-          "Account limits and questions",
-          "حدود الحساب والاستفسارات"
+          "Account and information responsibilities",
+          "مسؤوليات الحساب والمعلومات"
         ],
         "body": [
-          "Use authorized, non-sensitive information. Do not add passwords, payment credentials, patient records or sensitive finance, employment or claim files. The workspace has one signed-in owner. Email ownership is not verified during registration and password recovery is unavailable.\n\nThe published contact is adham@agynexa.si. A manually sent email is separate from a saved brief. This notice does not establish a monitored privacy desk or response deadline. Confirm registered operator details, jurisdiction, rights-request handling and provider processing arrangements before relying on the service for regulated or sensitive work.",
-          "استخدم معلومات مسموحة وغير حساسة. لا تضف كلمات مرور أو بيانات دفع أو سجلات مرضى أو ملفات مالية أو وظيفية أو مطالبات حساسة. للمساحة مالك واحد يسجل الدخول. لا يُتحقق من ملكية البريد عند التسجيل واستعادة كلمة المرور غير متاحة.\n\nعنوان التواصل المنشور adham@agynexa.si. الرسالة المرسلة يدويًا منفصلة عن الموجز المحفوظ. ولا يثبت الإشعار وجود مكتب خصوصية يتابع الطلبات أو موعد للرد. أكّد بيانات المشغّل المسجل والاختصاص ومعالجة طلبات الحقوق وترتيبات المزودين قبل الاعتماد على الخدمة في عمل حساس أو خاضع للتنظيم."
+          "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Do not submit passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records.",
+          "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. ولا تضف كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
+        ]
+      },
+      {
+        "title": [
+          "Privacy questions",
+          "الاستفسارات المتعلقة بالخصوصية"
+        ],
+        "body": [
+          "Email adham@agynexa.si with the question or request and enough context to identify the relevant record. Avoid including sensitive material in the initial message. A saved planning record is separate from email contact. Where your organization requires a data-processing agreement or confirmed legal and jurisdictional details, establish those arrangements before using the service for that information. No fixed response deadline is stated in this notice.",
+          "راسل adham@agynexa.si موضحًا السؤال أو الطلب وما يكفي لتحديد السجل المقصود. لا ترسل مادة حساسة في الرسالة الأولى. وحفظ سجل تخطيط مستقل عن التواصل بالبريد. إذا احتاجت مؤسستك إلى اتفاق معالجة بيانات أو معلومات قانونية واختصاص محدد، فأكّد هذه الترتيبات قبل استخدام الخدمة لهذه البيانات. لا يحدد الإشعار مدة ثابتة للرد."
         ]
       }
     ]
   },
   "terms": {
     "title": [
-      "Understand the scope before using Studio",
-      "افهم النطاق قبل استخدام الاستوديو"
+      "Usage terms",
+      "شروط الاستخدام"
     ],
     "intro": [
-      "These operational terms describe the current service and your review responsibilities. They are not a subscription offer, price quote, signed project agreement or statement of legal jurisdiction. Any paid service needs its own commercial and legal terms.",
-      "تصف هذه الشروط التشغيلية الخدمة الحالية ومسؤوليات المراجعة. ليست عرض اشتراك أو سعر أو اتفاق مشروع موقّعًا أو تحديدًا للاختصاص القانوني. تحتاج أي خدمة مدفوعة إلى شروط تجارية وقانونية خاصة بها."
+      "These terms describe use of the AGYNEXA website and Studio, including your responsibilities for the information you provide and the results you use. Any separately agreed paid service requires its own commercial and processing arrangements.",
+      "توضح هذه الشروط استخدام موقع AGYNEXA والاستوديو، ومسؤوليتك عن المعلومات التي تقدمها والنتائج التي تعتمد عليها. وتحتاج أي خدمة مدفوعة يُتفق عليها بصورة مستقلة إلى ترتيباتها التجارية وشروط معالجة بياناتها."
     ],
     "sections": [
       {
         "title": [
-          "What the current workspace does",
-          "ما تفعله المساحة الحالية"
+          "Using the workspace",
+          "استخدام مساحة العمل"
         ],
         "body": [
-          "You can configure a private agent, work with short text and prepare drafts. KnowledgeGrid supports answers with source references. ServiceFlow supports issue preparation; only a confirmed saved request has a stored review state. Agent creation saves configuration, rather than training a model or deploying a standalone software agent. The capability pages explain roles and operating requirements; solution pages describe business tasks. They do not establish that every connection or workflow is installed in the workspace.",
-          "يمكنك ضبط وكيل خاص والعمل بنصوص قصيرة وتجهيز مسودات. يدعم KnowledgeGrid إجابات بمراجع المصادر. ويساعد ServiceFlow في تجهيز المشكلات؛ ولا يحمل حالة مراجعة محفوظة إلا طلب تأكد حفظه. يحفظ إنشاء الوكيل ضبطه، ولا يدرب نموذجًا أو ينشر برنامج وكيل مستقلًا. تشرح صفحات القدرات الأدوار ومتطلبات التشغيل، وتصف صفحات الحلول مهام العمل. ولا يعني ذلك إتاحة كل اتصال أو سير عمل داخل المساحة."
+          "Studio lets you configure private agents, provide supported company knowledge and work with conversations and generated results. Agent creation saves a configuration; it does not train a new model. Capability and solution pages explain system components and workflow designs. A described system action requires its own supported connection and authorization.",
+          "يتيح الاستوديو إعداد وكلاء خاصين وإضافة معرفة الشركة المدعومة والعمل بالمحادثات والنتائج المولدة. يحفظ إنشاء الوكيل إعداداته، ولا يدرب نموذجًا جديدًا. وتشرح صفحات القدرات والحلول مكونات الأنظمة وتصميمات سير العمل؛ أما الإجراءات داخل أنظمة أخرى فتحتاج إلى اتصال مدعوم وتفويض مناسب."
         ]
       },
       {
         "title": [
-          "Information and review",
-          "المعلومات والمراجعة"
+          "Your information and account",
+          "معلوماتك وحسابك"
         ],
         "body": [
-          "Use only information you are authorized to provide. Check generated facts, figures, references and proposed actions before relying on them. A citation supports inspection and does not guarantee correctness. Demonstrations using synthetic data are examples, not client results.",
-          "استخدم فقط معلومات يحق لك تقديمها. افحص الحقائق والأرقام والمراجع والإجراءات المولدة قبل الاعتماد عليها. يساعد الاستشهاد في الفحص ولا يضمن الصحة. الأمثلة التي تستخدم بيانات افتراضية ليست نتائج عملاء."
+          "Provide only information you are permitted to use. Keep credentials private and do not attempt to access another person’s workspace. Email ownership is not verified at registration and password recovery is not available. Keep copies of work you need and contact us about account issues.",
+          "قدّم فقط المعلومات التي يحق لك استخدامها. احمِ بيانات الدخول ولا تحاول الوصول إلى مساحة تخص شخصًا آخر. لا يتحقق التسجيل من ملكية البريد، واستعادة كلمة المرور غير متاحة. احتفظ بنسخ العمل الذي تحتاجه وتواصل معنا بشأن مشكلات الحساب."
         ]
       },
       {
         "title": [
-          "Inputs and external actions",
-          "المدخلات والإجراءات الخارجية"
+          "Reviewing AI-generated work",
+          "مراجعة نتائج الذكاء الاصطناعي"
         ],
         "body": [
-          "Knowledge sources are pasted text or UTF-8 TXT/MD, currently up to 12,000 bytes and 12,000 characters per source. Retrieval matches words. Current Studio has no PDF/OCR, live CRM/ERP/helpdesk connection, external messaging, payments, purchasing, Linux execution or autonomous regulated decisions. A vendor name or written instruction creates neither access nor authorization.",
-          "مصادر المعرفة نص ملصق أو TXT/MD بترميز UTF-8، حاليًا حتى 12,000 بايت و12,000 حرف للمصدر. يطابق الاسترجاع الكلمات. لا يتيح Studio الحالي قراءة PDF أو الصور، أو اتصالًا حيًا بـCRM أو ERP أو الدعم، أو مراسلة خارجية أو دفعًا أو شراءً أو تشغيل Linux أو قرارات آلية في مجالات خاضعة للتنظيم. لا ينشئ اسم مزود أو تعليمة مكتوبة وصولًا أو تفويضًا."
+          "Generated answers and proposed actions can be incomplete or incorrect. Check important facts, figures, source references and business commitments before relying on them. A source reference makes the basis of a response inspectable; it is not a guarantee of correctness. Medical, legal, financial and safety decisions require the appropriate qualified person.",
+          "قد تكون الإجابات والإجراءات المقترحة ناقصة أو غير صحيحة. تحقّق من الحقائق والأرقام والمراجع والالتزامات قبل الاعتماد عليها. يتيح الاستشهاد فحص أساس الإجابة، ولا يضمن صحتها. وتحتاج القرارات الطبية والقانونية والمالية والمتعلقة بالسلامة إلى المختص المؤهل."
         ]
       },
       {
         "title": [
-          "Approval and saving",
-          "الاعتماد والحفظ"
+          "Decisions, actions and saving",
+          "القرارات والإجراءات والحفظ"
         ],
         "body": [
-          "Inspect the exact stored request before approval or rejection. A pending internal request approval expires after 15 minutes. Internal approval does not establish external assignment, delivery or completion. A saved brief does not reach a staff inbox. Copy or download a draft and choose any external handoff yourself; opening an email draft is not sending it.",
-          "افحص الطلب المحفوظ نفسه قبل الاعتماد أو الرفض. تنتهي صلاحية الاعتماد المعلّق للطلب الداخلي بعد 15 دقيقة. لا يثبت الاعتماد الداخلي إسنادًا أو تسليمًا أو إتمامًا خارجيًا. لا يصل الموجز المحفوظ إلى صندوق يتابعه موظفون. انسخ المسودة أو نزّلها واختر الإحالة الخارجية بنفسك؛ فتح مسودة البريد ليس إرسالًا."
+          "Review the exact proposed request before an available approval or rejection action. Internal approval records a decision inside the workspace; external execution needs its own confirmation. Saving a planning record does not send it to a staff inbox, start a contract or place an order. Opening an email draft does not send the message.",
+          "افحص الطلب المقترح نفسه قبل استخدام إجراء الاعتماد أو الرفض المتاح. يسجل الاعتماد الداخلي قرارًا داخل المساحة، ويحتاج التنفيذ الخارجي إلى تأكيد مستقل. ولا يؤدي حفظ سجل تخطيط إلى إرساله لصندوق موظفين أو بدء عقد أو إنشاء طلب شراء. وفتح مسودة بريد لا يرسل الرسالة."
         ]
       },
       {
         "title": [
-          "Accounts and availability",
-          "الحسابات والتوفر"
+          "Publication and access",
+          "النشر والوصول"
         ],
         "body": [
-          "Protect credentials and do not share a private agent URL as if it granted access. Email ownership verification and password recovery are unavailable. Provider availability, request size, concurrency and rate limits can affect use. These terms offer no unlimited capacity, uptime, response-time or support guarantee. Keep copies of work you need.",
-          "احمِ بيانات الدخول ولا تشارك رابط وكيل خاص باعتباره يمنح الوصول. التحقق من ملكية البريد واستعادة كلمة المرور غير متاحين. وقد تتأثر الخدمة بإتاحة المزود وحجم الطلب والتزامن وحدود المعدل. لا تقدم الشروط ضمانًا لسعة غير محدودة أو التوفر أو زمن الرد أو الدعم. احتفظ بنسخ العمل الذي تحتاجه."
+          "Private configuration and public publication are separate. Review the knowledge approved for public use and manage published versions through their own controls. Do not include confidential company information or sensitive personal records in public content. A private agent link does not itself grant another user access.",
+          "الإعداد الخاص والنشر العام إجراءان منفصلان. راجع المعرفة المسموح باستخدامها علنًا، وأدر النسخ المنشورة من ضوابطها. لا تضف معلومات الشركة السرية أو السجلات الشخصية الحساسة إلى المحتوى العام. ورابط الوكيل الخاص لا يمنح شخصًا آخر صلاحية الدخول بمفرده."
         ]
       },
       {
         "title": [
-          "Safe use and operating requirements",
-          "الاستخدام الآمن ومتطلبات التشغيل"
+          "Availability and usage",
+          "الإتاحة والاستخدام"
         ],
         "body": [
-          "Keep personal and sensitive cases out of demonstrations and public knowledge. Publication is explicit and separate; published snapshots need their own management. Do not access another workspace, extract credentials or bypass permission checks. The service does not replace qualified medical, financial, legal or safety review.\n\nBefore any paid or business-critical use, confirm the available functions, authorized data, review responsibilities, operating limits, price and provider costs, support and failure handling. Confirm the legal operator, jurisdiction and processing arrangements separately. Contact: adham@agynexa.si. Saving a brief alone does not start a contract, place an order or establish receipt at that address.",
-          "أبقِ البيانات الشخصية والحالات الحساسة خارج الأمثلة والمعرفة العامة. النشر صريح ومستقل، وتحتاج النسخ المنشورة إدارة خاصة بها. لا تدخل مساحة أخرى أو تستخرج بيانات دخول أو تتجاوز فحص الصلاحيات. لا تغني الخدمة عن مراجعة مؤهلة طبية أو مالية أو قانونية أو متعلقة بالسلامة.\n\nقبل أي استخدام مدفوع أو حرج للعمل، تأكد من الوظائف المتاحة والبيانات المسموحة ومسؤوليات المراجعة وحدود التشغيل والسعر وتكاليف المزود والدعم ومعالجة الإخفاق. وأكّد المشغّل القانوني والاختصاص وترتيبات المعالجة بصورة مستقلة. التواصل: adham@agynexa.si. لا يبدأ حفظ الموجز وحده عقدًا أو طلب شراء أو يثبت استلام ذلك العنوان له."
+          "Service availability and provider limits can affect requests. Use the inputs and actions supported by the interface, and do not bypass access or abuse controls. Usage estimates are not invoices or a guaranteed spending limit. These terms do not offer unlimited capacity, a fixed uptime level or a support response guarantee.",
+          "قد تؤثر إتاحة الخدمة وحدود المزودين في تنفيذ الطلبات. استخدم المدخلات والإجراءات التي تدعمها الواجهة، ولا تتجاوز ضوابط الوصول أو منع الإساءة. تقديرات الاستخدام ليست فواتير أو حدًا مضمونًا للإنفاق. ولا تقدم هذه الشروط سعة غير محدودة أو مستوى ثابتًا للتوفر أو موعدًا مضمونًا للدعم."
+        ]
+      },
+      {
+        "title": [
+          "Questions and specific business requirements",
+          "الاستفسارات ومتطلبات الأعمال"
+        ],
+        "body": [
+          "Contact adham@agynexa.si about the service or a particular requirement. Confirm the available functions, permitted data, responsibility for decisions and any required processing agreement before using a workflow for business-critical work. Pricing, support commitments, legal operator details and governing jurisdiction are not established by saving a record or using a demonstration.",
+          "تواصل عبر adham@agynexa.si بشأن الخدمة أو احتياج محدد. قبل الاعتماد على سير عمل حرج للمؤسسة، أكّد الوظائف المتاحة والبيانات المسموحة ومسؤوليات القرار واتفاق معالجة البيانات عند الحاجة. لا يحدد حفظ السجل أو استخدام المثال سعرًا أو التزام دعم أو بيانات المشغّل القانوني أو القانون الواجب التطبيق."
         ]
       }
     ]
@@ -149,8 +169,7 @@ export function LegalContent({kind,ar}:{kind:'privacy'|'terms';ar:boolean}){
   h('section',{className:'container page-intro'},
    h(Link,{href:local('/security'),className:'text-link'},ar?'الأمان وحدود الاستخدام':'Security and usage boundaries'),
    h('h1',{className:'text-4xl md:text-6xl max-w-4xl tracking-tight mt-6'},data.title[i]),
-   h('p',{className:'muted mt-6 max-w-3xl text-lg'},data.intro[i]),
-   h('p',{className:'text-sm muted mt-4'},ar?'وصف نطاق الخدمة: 24 أكتوبر 2026':'Service scope described: 24 October 2026')),
+   h('p',{className:'muted mt-6 max-w-3xl text-lg'},data.intro[i])),
   h('section',{className:'container pb-24 max-w-4xl'},
    ...data.sections.map(s=>h('article',{key:s.title[0],className:'border-t pt-8 pb-10'},h('h2',{className:'text-2xl'},s.title[i]),h('p',{className:'muted mt-5 whitespace-pre-line'},s.body[i]))),
    h('nav',{className:'related-links mt-8','aria-label':ar?'روابط الخصوصية والاستخدام':'Privacy and usage links'},

@@ -1,62 +1,82 @@
 {
   "architecture": {
     "title": [
-      "Understand the system around the agent",
-      "افهم ما يحيط بالوكيل داخل النظام"
+      "How the parts of an agent system work together",
+      "كيف تعمل مكونات نظام الوكلاء معًا؟"
     ],
     "intro": [
-      "An agent combines a role, relevant information and permitted operations. A business workflow adds the sequence of work, the decisions along the way and evidence that each action reached its intended result.",
-      "يجمع الوكيل دورًا ومعلومات مناسبة وعمليات مسموحة. ويضيف سير العمل ترتيب الخطوات والقرارات والأدلة التي توضح نتيجة كل إجراء."
+      "An agent system combines language understanding with the software and rules a process depends on. The model interprets information. Agent roles divide responsibilities. Orchestration connects the work. Business systems remain the source of authority for their own records.",
+      "يجمع نظام الوكلاء بين فهم اللغة والبرامج والقواعد التي تعتمد عليها العملية. يفسر النموذج المعلومات، وتوزع الأدوار المسؤوليات، ويربط التنسيق بين الأعمال. وتبقى أنظمة الشركة المرجع المعتمد للسجلات التي تديرها."
     ],
     "sections": [
       {
         "title": [
-          "Instructions define the job",
-          "التعليمات تحدّد المهمة"
+          "A role defines what the agent is responsible for",
+          "الدور يحدد مسؤولية الوكيل"
         ],
         "body": [
-          "Describe what the agent helps with, the form of its answer and the boundaries of its role. Instructions guide the model; application controls must enforce access. Naming a system in a prompt does not connect it or grant permission.",
-          "اكتب ما يساعد فيه الوكيل وشكل إجابته وحدود دوره. توجّه التعليمات النموذج، بينما تفرض ضوابط التطبيق حدود الوصول. ذكر نظام في السؤال لا يربطه أو يمنح الوكيل صلاحية استخدامه."
+          "Instructions describe the purpose, permitted work and expected result. Knowledge supplies the business context. A role should be specific enough to evaluate without turning every exception into a new instruction.",
+          "توضح التعليمات غرض الوكيل والعمل المسموح له والنتيجة المنتظرة منه، وتوفر المعرفة سياق المؤسسة. ويساعد تحديد الدور على تقييمه ومعرفة الحالات التي يحيلها إلى شخص أو دور آخر."
         ]
       },
       {
         "title": [
-          "Retrieval supplies the evidence",
-          "الاسترجاع يقدّم الدليل"
+          "Knowledge supplies context; tools supply access",
+          "المعرفة تشرح، والأداة تتيح الوصول"
         ],
         "body": [
-          "Retrieval finds material relevant to a question before the model prepares a response. This is commonly called retrieval-augmented generation, or RAG. In Studio, short text sources use word matching and provide excerpts for inspection. Source references help a reader check an answer; they do not prove that every conclusion is correct.",
-          "يبحث الاسترجاع عن المادة المناسبة للسؤال قبل إعداد الرد؛ ويُعرف هذا الأسلوب باسم التوليد المعزّز بالاسترجاع، أو RAG. يستخدم الاستوديو مطابقة الكلمات في المصادر النصية القصيرة ويعرض مقتطفاتها للفحص. تساعد المراجع على التحقق، لكنها لا تثبت صحة كل استنتاج."
+          "A procedure can explain how an issue should be handled. It cannot establish a shipment’s live location or authorize a refund. Those actions require an appropriate system connection, identity and permission. Separating knowledge from tools makes the system’s authority easier to understand.",
+          "قد توضح السياسة طريقة التعامل مع المشكلة، لكنها لا تكشف وحدها موقع شحنة حيًا ولا تمنح صلاحية رد مبلغ. يحتاج الإجراء إلى اتصال مناسب وهوية وصلاحية. ويساعد الفصل بين المعرفة والأدوات على فهم حدود مسؤولية النظام."
         ]
       },
       {
         "title": [
-          "Rules govern operational steps",
-          "القواعد تضبط الإجراء"
+          "Orchestration connects specialist work",
+          "التنسيق يربط الأعمال المتخصصة"
         ],
         "body": [
-          "Calculations, allowed changes and approval requirements need explicit rules. A tool requires a defined interface, an authorized identity and permitted operations. Authentication verifies identity; authorization determines what that identity may do.",
-          "تحتاج الحسابات والتغييرات والاعتمادات إلى قواعد صريحة. وتحتاج الأداة إلى واجهة محددة وهوية مصرح بها وعمليات مسموحة. تتحقق المصادقة من الهوية، وتحدّد الصلاحيات ما يمكنها فعله."
+          "A process can assign different responsibilities to intake, investigation and follow-up roles. The orchestration design determines which runs next, what information it receives and what dependency must be resolved before work continues. Parallel tasks still need an agreed way to combine their results.",
+          "يمكن توزيع استقبال الحالة وفحصها ومتابعتها على أدوار مختلفة. يحدد تصميم التنسيق ترتيب تشغيلها والمعلومات التي يستلمها كل دور والشرط الذي يجب استيفاؤه قبل استمرار العملية. وحتى الأعمال المتوازية تحتاج طريقة متفقًا عليها لجمع نتائجها."
         ]
       },
       {
         "title": [
-          "The record must show what happened",
-          "السجل يوضّح ما حدث"
+          "Process state belongs to the application",
+          "حالة العملية مسؤولية التطبيق"
         ],
         "body": [
-          "A proposal, its approval and its confirmed execution are different events. A reliable workflow needs to preserve these distinctions, including rejection, missing information and uncertain results. A saved task record is not evidence that another business system completed the task.",
-          "المقترح واعتماده وتأكيد تنفيذه أحداث مختلفة. ويحتاج سير العمل إلى تمييزها، بما فيها الرفض ونقص المعلومات وغموض النتيجة. حفظ سجل مهمة لا يثبت أن نظامًا خارجيًا أنجزها."
+          "A conversation may explain a case, but a reliable workflow also needs an authoritative record of its stage, owner and decisions. A model’s statement that a task is complete is not confirmation that another system accepted an action. Calculations, authorization and state changes belong in controlled software operations.",
+          "تساعد المحادثة على فهم الحالة، لكن سير العمل يحتاج سجلًا معتمدًا لمرحلته وصاحبه وقراراته. قول النموذج إن المهمة انتهت لا يثبت قبول النظام الآخر للإجراء. وتنفذ الحسابات وفحوص الصلاحية وتغييرات الحالة من خلال عمليات برمجية مضبوطة."
         ]
       },
       {
         "title": [
-          "Shared platform, separate customer context",
-          "منصة مشتركة ومعلومات تخص كل حساب"
+          "Human decisions are part of the flow",
+          "القرار البشري خطوة لها متطلبات"
         ],
         "body": [
-          "An Agent Builder can reuse software while storing different agent configurations and information for each account. The workspace, knowledge, retrieval and tool access must all follow the appropriate identity boundary. A separate hostname or login screen alone does not establish complete tenant isolation.\n\nThe AGYNEXA web application uses Next.js and React, Supabase for authentication and application data, server-side Groq model requests and Vercel hosting. These describe the application path, not a dedicated cloud or processing country for every customer.",
-          "يمكن لمنصة بناء الوكلاء استخدام أساس برمجي واحد مع إعدادات ومعلومات مختلفة للحسابات. ويجب أن تتبع المساحة والمعرفة والاسترجاع والأدوات حدود الهوية المناسبة. اسم نطاق مختلف أو شاشة دخول لا يثبتان وحدهما عزلًا كاملًا بين المؤسسات.\n\nيستخدم تطبيق AGYNEXA الحالي Next.js وReact، وSupabase للمصادقة وبيانات التطبيق، وطلبات نماذج Groq من الخادم، واستضافة Vercel. توضح هذه الأسماء مسار التطبيق، ولا تعني وجود سحابة مخصصة أو بلد معالجة محدد لكل عميل."
+          "Identify the exact point that requires judgment or approval, the person responsible and what they must inspect. If the proposed action changes after approval, the system design must determine whether a new decision is needed. “Human in the loop” is meaningful when that responsibility is explicit.",
+          "حدد موضع القرار أو الاعتماد، والشخص المسؤول عنه، والمعلومات التي يفحصها. وإذا تغير الإجراء المقترح بعد اعتماده، فيجب أن يحدد التصميم متى يلزم قرار جديد. هذا ما يجعل الإشراف البشري جزءًا عمليًا من النظام."
+        ]
+      },
+      {
+        "title": [
+          "Design for uncertainty and interruption",
+          "توقّع النقص والتوقف"
+        ],
+        "body": [
+          "Missing data, unavailable systems and conflicting records are ordinary operating conditions. A process needs a defined response: ask for information, pause, retry safely or pass the work to an owner. A failed attempt must not silently become a duplicate action.",
+          "نقص البيانات وتعطل الاتصال وتعارض السجلات حالات معتادة في التشغيل. تحتاج كل منها استجابة معروفة: طلب معلومة، أو انتظار، أو إعادة محاولة آمنة، أو إحالة إلى المسؤول. ولا يجوز أن تتحول المحاولة الفاشلة إلى إجراء مكرر من دون ملاحظة."
+        ]
+      },
+      {
+        "title": [
+          "Apply the architecture to the available scope",
+          "اربط التصميم بالنطاق المتاح"
+        ],
+        "body": [
+          "In Studio, users configure agents, add company knowledge and work with private conversations. The architecture described here explains how those roles fit within a wider workflow. Its connected actions and execution services depend on the support and permissions available for the particular process.\n\n[Agent orchestration](/services/agent-orchestration) · [System integration](/integrations)",
+          "يتيح الاستوديو إعداد الوكلاء وإضافة معرفة الشركة والعمل بالمحادثات الخاصة. وتوضح هذه البنية كيف تدخل الأدوار ضمن سير عمل أوسع. وتتحدد إجراءات الربط وخدمات التنفيذ بحسب ما تدعمه العملية والصلاحيات المتاحة لها.\n\n[تنسيق عمل الوكلاء](/ar/services/agent-orchestration) · [تكامل الأنظمة](/ar/integrations)"
         ]
       }
     ],
@@ -68,52 +88,62 @@
   },
   "security": {
     "title": [
-      "Know what is private and what a decision authorizes",
-      "اعرف ما يبقى خاصًا وما الذي يسمح به قرارك"
+      "Make authority clear before an agent acts",
+      "صلاحيات مفهومة ومسؤولية محددة قبل التنفيذ"
     ],
     "intro": [
-      "Use information you are permitted to provide. An agent's role does not replace access controls, and an approval must refer to the action actually reviewed.",
-      "استخدم المعلومات التي يحق لك تقديمها. دور الوكيل لا يحل محل ضوابط الوصول، ويجب أن يتعلق الاعتماد بالإجراء الذي راجعته فعلًا."
+      "An agent’s responsibility should be matched by the information it may use and the actions it may take. Security begins with those boundaries and the people accountable for them.",
+      "ترتبط مسؤولية الوكيل بالمعلومات المسموح له استخدامها والإجراءات التي يحق له اتخاذها. يبدأ الأمان من تحديد هذه الحدود ومعرفة المسؤول عن كل قرار."
     ],
     "sections": [
       {
         "title": [
-          "Workspace access",
-          "الوصول إلى المساحة"
+          "Decide what belongs in the workspace",
+          "اختر المعلومات المناسبة للمساحة"
         ],
         "body": [
-          "The private workspace belongs to its signed-in owner. It stores agent configurations, sources, conversations and internal work records. It is not a shared employee portal. Team membership, employee permissions and identity-provider access must not be inferred from an individual account.",
-          "المساحة الخاصة لمالكها المسجّل دخوله. وتحفظ إعدادات الوكلاء والمصادر والمحادثات وسجلات العمل الداخلية. ليست بوابة موظفين مشتركة، ولا يعني الحساب الفردي وجود عضويات فرق أو صلاحيات موظفين أو دخول بهوية المؤسسة."
+          "Use company material you are authorized to provide. Choose information appropriate to the task and the service’s processing arrangements. Keep credentials and sensitive case records out of examples and public knowledge. Check the privacy notice before introducing information that needs special safeguards.",
+          "استخدم مواد يحق لك تقديمها، وبالقدر الذي تحتاجه المهمة ويتناسب مع ترتيبات معالجة البيانات. أبقِ بيانات الدخول والحالات الحساسة خارج الأمثلة والمعرفة العامة. وراجع إشعار الخصوصية قبل إضافة معلومات تحتاج إلى حماية خاصة."
         ]
       },
       {
         "title": [
-          "Private sources and public use",
-          "المصدر الخاص والاستخدام العام"
+          "Keep private use and publication separate",
+          "افصل الاستخدام الخاص عن النشر"
         ],
         "body": [
-          "Adding a source, allowing its public use and publishing are separate actions. The public widget uses explicitly published knowledge. Review every source before making it public. Private record changes do not automatically erase downloaded copies or separately published snapshots.",
-          "إضافة المصدر والسماح باستخدامه علنًا ونشره إجراءات منفصلة. تستخدم النافذة العامة معرفة منشورة صراحة؛ لذلك راجع كل مصدر قبل إتاحته. تعديل السجل الخاص لا يمحو تلقائيًا النسخ المنزلة أو المنشورة بصورة مستقلة."
+          "Your signed-in workspace holds private agents and conversations. Public publication is a separate decision about what other people may access. Review the information approved for that use, including any content already included in a published version.",
+          "تحتفظ مساحة الحساب بوكلائك ومحادثاتك الخاصة. أما النشر العام فهو قرار مستقل بشأن ما يمكن للآخرين الوصول إليه. راجع المعلومات المسموح بعرضها، وما قد تتضمنه نسخة سبق نشرها."
         ]
       },
       {
         "title": [
-          "Approval and execution",
-          "الاعتماد والتنفيذ"
+          "Make the approval decision explicit",
+          "وضّح ما الذي يعتمده الشخص"
         ],
         "body": [
-          "Inspect the exact proposal and its saved status. An internal approval records a decision in the workspace. It does not confirm that a helpdesk received a case, a supplier received an order or an external system completed an update.",
-          "افحص المقترح نفسه وحالته المحفوظة. يسجّل الاعتماد الداخلي قرارًا داخل المساحة، ولا يؤكد وصول حالة إلى نظام دعم أو أمر إلى مورد أو اكتمال تحديث خارجي."
+          "An effective review identifies the proposed action, its business impact and the responsible decision maker. A person must be able to understand what they are accepting. Internal approval and an action confirmed by an external system are different events.",
+          "تحتاج المراجعة إلى إجراء مقترح مفهوم وأثر معلوم وصاحب قرار مسؤول. يجب أن يعرف الشخص ما يقبله تحديدًا. والاعتماد داخل المساحة يختلف عن إجراء يؤكد نظام خارجي تنفيذه."
         ]
       },
       {
         "title": [
-          "Account and data boundaries",
-          "حدود الحساب والبيانات"
+          "Examine controls at the level of the process",
+          "افحص الضابط المرتبط بكل عملية"
         ],
         "body": [
-          "Email ownership verification, password recovery and a whole-account deletion interface are unavailable. Start with non-sensitive examples. Keep passwords, payment credentials and sensitive personal, clinical, financial or employment records out of demonstrations.\n\nRead the privacy notice for the application's provider path and deletion limits. A certification, fixed processing location or support SLA requires its own evidence and agreement; none follows from a product label.",
-          "لا تتوفر خطوات التحقق من ملكية البريد أو استعادة كلمة المرور أو واجهة حذف الحساب بالكامل. ابدأ بأمثلة غير حساسة، وأبقِ بيانات الدخول والدفع والسجلات الشخصية والطبية والمالية والوظيفية الحساسة خارج الأمثلة.\n\nيوضح إشعار الخصوصية مسار المزودين وحدود الحذف. وتحتاج الشهادة أو موقع المعالجة المحدد أو مستوى الخدمة إلى دليل واتفاق مستقلين؛ لا يثبتها اسم المنتج."
+          "Signing in controls access to the workspace. A business-system action also needs its own permissions and any approval required by the process. Review access, public knowledge and external actions separately, using the requirements of each operation.",
+          "يضبط تسجيل الدخول الوصول إلى مساحة الحساب. ويحتاج الإجراء في نظام أعمال إلى صلاحياته وأي اعتماد تتطلبه العملية. راجع الوصول والمحتوى العام والإجراءات الخارجية كلًا بحسب متطلباته، حتى يكون الضابط واضحًا عند استخدامه."
+        ]
+      },
+      {
+        "title": [
+          "Preserve accountability when something goes wrong",
+          "احتفظ بسياق يساعد على فهم الإخفاق"
+        ],
+        "body": [
+          "When work fails or stops, the process owner needs the relevant inputs and the last confirmed result. An activity record helps locate the problem; confirmation from the affected system or responsible person establishes whether the task succeeded. Review both when deciding what should happen next.\n\n[Privacy notice](/privacy) · [Usage terms](/terms) · [Governance capability](/services/governance-security)",
+          "عندما يتوقف العمل أو يفشل، يحتاج صاحب العملية إلى المدخلات المرتبطة به وآخر نتيجة مؤكدة. يساعد سجل النشاط على تحديد موضع المشكلة، ويبين تأكيد النظام المعني أو الشخص المسؤول ما إذا كانت المهمة نجحت. يُراجع الاثنان لتحديد التصرف التالي.\n\n[إشعار الخصوصية](/ar/privacy) · [شروط الاستخدام](/ar/terms) · [حوكمة الوكلاء](/ar/services/governance-security)"
         ]
       }
     ],
@@ -124,12 +154,12 @@
   },
   "industries": {
     "title": [
-      "Different industries. Specific work to understand.",
-      "افهم المهمة داخل سياق قطاعك"
+      "Business agent workflows in their industry context",
+      "لكل قطاع عملياته ومتطلبات إنجازها"
     ],
     "intro": [
-      "An industry tells us the context; the task defines what the agent needs. Use these examples to identify information, output and decision ownership. They are workflow illustrations, not claims of installed sector products or regulatory approval.\n\nUse synthetic or non-sensitive examples that you are authorized to provide. Required system access and data formats need their own capability check. Account notices explain the workspace's data boundaries.",
-      "يوضح القطاع طبيعة العمل، وتحدّد المهمة ما يحتاجه الوكيل. تساعدك الأمثلة على معرفة المعلومات والمخرج وصاحب القرار. وهي أمثلة لسير العمل، ولا تعني وجود منتجات قطاعية متصلة أو اعتماد تنظيمي.\n\nاستخدم أمثلة افتراضية أو غير حساسة يحق لك تقديمها. وافحص دعم صيغ البيانات والوصول إلى الأنظمة اللازمة. توضح إشعارات الحساب حدود التعامل مع المعلومات داخل المساحة."
+      "The same agent platform can be applied to different company contexts, but a useful workflow must reflect the industry’s work. Its records, dependencies and decision owners determine the agent roles it needs.",
+      "تخدم المنصة سياقات مختلفة، ويعتمد تصميم كل مسار على طبيعة القطاع. تحدد السجلات وترتيب الخطوات وأصحاب القرار الأدوار التي يحتاجها نظام الوكلاء."
     ],
     "sections": [
       {
@@ -138,20 +168,28 @@
           "البنوك والخدمات المالية"
         ],
         "body": [
-          "",
-          ""
+          "A customer complaint may involve account records, earlier service decisions and a specialist investigation. When each team requests the same information again, the complaint takes longer and the customer receives inconsistent explanations.",
+          "قد تتطلب شكوى العميل مراجعة سجلات الحساب وقرارات خدمة سابقة وتحقيقًا متخصصًا. وعندما يجمع كل فريق المعلومات نفسها من جديد، تطول المعالجة وقد يتلقى العميل تفسيرات متعارضة."
         ],
         "input": [
-          "Supplied complaint notes and an approved handling procedure.",
-          "ملاحظات شكوى وإجراء معتمد للتعامل معها."
+          "The request, relevant procedure, supplied case records and the authority responsible for the decision.",
+          "الطلب والإجراء المعتمد والسجلات المقدمة والجهة المخولة بحسم القرار."
         ],
-        "output": [
-          "A dated brief with policy references and missing evidence; authorized staff decide the response.",
-          "موجز مؤرخ بمراجع السياسة والأدلة الناقصة؛ يقرر الموظف المخوّل الرد."
+        "workflow": [
+          "Intake captures the complaint and the checks required by the bank’s procedure. A knowledge role identifies the applicable service rules, while a case role organizes the relevant records and previous responses. The responsible specialist receives the unresolved issue and its history. Any proposed remedy returns to the authorized decision maker before the customer’s case is updated.",
+          "يسجل دور الاستقبال الشكوى ومتطلبات التحقق الواردة في إجراء البنك. ويحدد دور المعرفة قواعد الخدمة المناسبة، بينما يجمع دور الحالة السجلات والردود السابقة ذات الصلة. يستلم المختص المسألة المفتوحة وتاريخها، ويعود الإجراء المقترح إلى صاحب الصلاحية قبل تحديث موقف الحالة أمام العميل."
+        ],
+        "outcome": [
+          "A complaint with a responsible owner, the information needed for investigation and a confirmed decision or next step.",
+          "شكوى لها مسؤول ومعلومات كافية للتحقيق وقرار مؤكد أو خطوة تالية محددة."
         ],
         "reviewer": [
-          "",
-          ""
+          "Authorized staff decide financial commitments, redress and regulated matters. Reading or changing account records requires the permissions appropriate to the operation.",
+          "يحسم الموظفون المخولون الالتزامات المالية والتعويضات والمسائل الخاضعة للتنظيم. وتتطلب قراءة سجلات الحساب أو تعديلها الصلاحيات المناسبة للإجراء."
+        ],
+        "metrics": [
+          "Measure repeated requests, completeness at handoff and time to the authorized next step.",
+          "قِس تكرار طلب المعلومات واكتمال الإحالة والوقت اللازم للوصول إلى الخطوة المعتمدة."
         ]
       },
       {
@@ -160,20 +198,28 @@
           "التأمين"
         ],
         "body": [
-          "",
-          ""
+          "Claims combine an event history, policy context and documents arriving at different times. Missing information can delay assessment and produce inconsistent status updates.",
+          "تجمع المطالبة بين تسلسل الواقعة وسياق الوثيقة ومستندات تصل في أوقات مختلفة. وقد يؤخر النقص التقييم ويؤدي إلى تحديثات متعارضة عن الحالة."
         ],
         "input": [
-          "Claim-service events and an evidence checklist.",
-          "أحداث متابعة مطالبة وقائمة مستنداتها."
+          "Claim notification, supplied documents, the relevant policy and the insurer’s processing requirements.",
+          "إخطار المطالبة والمستندات المقدمة والوثيقة ذات الصلة ومتطلبات المعالجة لدى شركة التأمين."
         ],
-        "output": [
-          "A chronology and missing documents; coverage and settlement decisions stay with qualified staff.",
-          "تسلسل المتابعة والنواقص، مع بقاء التغطية والتسوية لدى المختصين."
+        "workflow": [
+          "The notification starts a claim case with its policy reference and event history. Document roles associate each submission with the right claim and identify what the assessor still needs. Coordination directs a specific request for missing information and carries the completed material to assessment. The specialist’s confirmed decision then determines the next processing step and the explanation given to the claimant.",
+          "ينشئ الإخطار حالة مرتبطة بوثيقة التأمين وتسلسل الواقعة. تربط أدوار المستندات كل مادة بالمطالبة الصحيحة وتحدد ما ينقص المقيم، ثم يوجه التنسيق طلب استكمال محدد وينقل المادة إلى التقييم. وبعد حسم المختص، يحدد القرار المؤكد خطوة المعالجة التالية والتوضيح المقدم لصاحب المطالبة."
+        ],
+        "outcome": [
+          "A claim that reaches its next processing stage with a known owner, the assessment material and any outstanding condition clearly identified.",
+          "مطالبة تنتقل إلى المرحلة التالية بمسؤول معروف ومادة التقييم، مع بيان أي شرط ما زال مفتوحًا."
         ],
         "reviewer": [
-          "",
-          ""
+          "The authorized insurance specialist decides coverage, settlement or rejection under the applicable policy. Agent preparation supports that assessment.",
+          "يقرر المختص المخول التغطية أو التسوية أو الرفض وفق الوثيقة ذات الصلة، وتساند أعمال الوكلاء هذا التقييم."
+        ],
+        "metrics": [
+          "Measure document-completion loops, assessment readiness and correction effort.",
+          "قِس دورات استكمال المستندات وجاهزية التقييم وجهد تصحيح الحالة."
         ]
       },
       {
@@ -182,42 +228,58 @@
           "إدارة الخدمات الصحية"
         ],
         "body": [
-          "",
-          ""
+          "Registration, scheduling and service teams may need different information before an administrative request can proceed. A missing requirement can leave the request waiting between teams without anyone owning the follow-up.",
+          "قد تحتاج فرق التسجيل والمواعيد والخدمة إلى معلومات مختلفة لاستكمال طلب إداري. وقد يبقى الطلب معلقًا بين الفرق بسبب متطلب ناقص لم يتحدد مسؤول عن متابعته."
         ],
         "input": [
-          "A nonclinical administrative request and completeness rules.",
-          "طلب إداري غير سريري وقواعد اكتماله."
+          "A nonclinical request, approved administrative guidance and the information required for that service.",
+          "طلب غير سريري وإرشادات إدارية معتمدة والمعلومات اللازمة للخدمة المطلوبة."
         ],
-        "output": [
-          "Administrative gaps; no clinical interpretation or patient-specific decision.",
-          "نواقص إدارية دون تفسير طبي أو قرار يخص حالة مريض."
+        "workflow": [
+          "For an appointment-related administrative request, intake identifies the service and the information required by its procedure. A knowledge role explains the applicable administrative steps. Coordination assigns missing-information follow-up and passes the case to scheduling when its requirements are met. Staff confirm the booking or the reason it must wait before an update goes to the requester.",
+          "في طلب إداري مرتبط بموعد، يحدد الاستقبال الخدمة والمعلومات التي يتطلبها إجراؤها. يوضح دور المعرفة الخطوات الإدارية المناسبة، وينظم التنسيق استكمال النقص. وبعد استيفاء المتطلبات، ينتقل الطلب إلى مسؤول المواعيد ليؤكد الحجز أو سبب الانتظار قبل إبلاغ مقدم الطلب."
+        ],
+        "outcome": [
+          "An administrative request with a confirmed booking or a specific outstanding requirement and a person responsible for resolving it.",
+          "طلب إداري له موعد مؤكد، أو متطلب محدد لم يكتمل ومسؤول عن استيفائه."
         ],
         "reviewer": [
-          "",
-          ""
+          "Qualified professionals retain clinical assessment, treatment and clinical urgency decisions. Access to patient records requires supported permissions and suitable data-processing arrangements; the example concerns administrative coordination.",
+          "يبقى التقييم الطبي والعلاج وتحديد الأولوية السريرية للمختصين. ويتطلب الوصول إلى سجلات المرضى صلاحيات مدعومة وترتيبات مناسبة لمعالجة البيانات؛ ويتناول المثال تنسيق الإجراءات الإدارية."
+        ],
+        "metrics": [
+          "Measure routing accuracy, repeat contacts and administrative turnaround.",
+          "قِس دقة التوجيه وتكرار التواصل وزمن استكمال الإجراء الإداري."
         ]
       },
       {
         "title": [
-          "Retail",
-          "التجزئة"
+          "Retail and commerce",
+          "التجزئة والتجارة"
         ],
         "body": [
-          "",
-          ""
+          "A return request may depend on purchase details, the applicable return policy and confirmation from a store or fulfillment team. Separate answers from those teams can leave the customer unsure whether the return has actually been accepted.",
+          "قد يعتمد طلب الإرجاع على بيانات الشراء والسياسة المطبقة وتأكيد المتجر أو فريق تجهيز الطلبات. وإذا انفصلت إجابات هذه الجهات، فقد لا يعرف العميل ما إذا كان الإرجاع قد قُبل فعلًا."
         ],
         "input": [
-          "A customer question and the current returns policy.",
-          "سؤال عميل وسياسة الإرجاع الحالية."
+          "The customer need, relevant order facts and approved product or service policies.",
+          "احتياج العميل وحقائق الطلب المتاحة وسياسات المنتجات أو الخدمة المعتمدة."
         ],
-        "output": [
-          "A source-based response draft and exceptions for the manager.",
-          "مسودة بمصدرها والاستثناء الذي يحتاج إلى مدير."
+        "workflow": [
+          "Intake identifies the order and the reason for the return. A knowledge role checks the relevant policy, while an operations role identifies any inspection or fulfillment task. Routine cases follow the permitted route; exceptions reach the responsible manager with the purchase context. The customer receives the confirmed decision and the instructions for the next step.",
+          "يحدد الاستقبال الطلب وسبب الإرجاع، ويراجع دور المعرفة السياسة المناسبة، بينما يحدد دور العمليات ما يلزم من فحص أو ترتيبات استلام. تسير الحالة المعتادة وفق الإجراء المسموح، ويصل الاستثناء إلى المدير مع سياق الشراء. ثم يتلقى العميل القرار المؤكد وتعليمات الخطوة التالية."
+        ],
+        "outcome": [
+          "An accepted return path or a reasoned decision, with store, fulfillment and customer updates referring to the same case.",
+          "مسار إرجاع مقبول أو قرار مفسر، وتحديثات للمتجر والتنفيذ والعميل تشير إلى الحالة نفسها."
         ],
         "reviewer": [
-          "",
-          ""
+          "Order lookup, inventory and refunds require authorized system access. Commercial exceptions and refunds remain subject to the assigned authority.",
+          "تحتاج بيانات الطلب والمخزون ورد الأموال إلى وصول مصرح به. وتخضع الاستثناءات التجارية والمبالغ المستردة لصلاحيات المسؤول عنها."
+        ],
+        "metrics": [
+          "Measure repeated contacts, policy consistency and time to confirmed resolution.",
+          "قِس تكرار التواصل واتساق تطبيق السياسة وزمن الوصول إلى حل مؤكد."
         ]
       },
       {
@@ -226,20 +288,28 @@
           "الاتصالات"
         ],
         "body": [
-          "",
-          ""
+          "Support, network operations and field teams can each see a different fragment of a service issue. Losing the history forces customers and staff to repeat earlier steps.",
+          "قد يرى الدعم وعمليات الشبكة والفريق الميداني أجزاء مختلفة من المشكلة. وعند ضياع تاريخها، يعيد العميل والموظفون خطوات سبق تنفيذها."
         ],
         "input": [
-          "Fault notes and actions already attempted.",
-          "ملاحظات العطل والخطوات التي جُرّبت."
+          "Reported symptoms, previous attempts, confirmed updates and approved troubleshooting or escalation guidance.",
+          "الأعراض المبلّغ عنها والمحاولات السابقة والتحديثات المؤكدة وإرشادات المعالجة والتصعيد المعتمدة."
         ],
-        "output": [
-          "A handoff that preserves the sequence and unresolved questions.",
-          "إحالة تحفظ التسلسل والأسئلة المفتوحة."
+        "workflow": [
+          "A context role brings together the reported symptoms, previous tests and confirmed service updates. A guidance role identifies the next relevant diagnostic step. If the issue needs network or field investigation, coordination hands over the history and the question that must be resolved. The resulting technical update informs the service response, including any remaining uncertainty about restoration.",
+          "يجمع دور السياق الأعراض والاختبارات السابقة وتحديثات الخدمة المؤكدة. ويحدد دور الإرشاد خطوة الفحص المناسبة. وإذا احتاجت المشكلة إلى فحص الشبكة أو زيارة ميدانية، ينقل التنسيق تاريخها والسؤال المطلوب حسمه. وتستند متابعة العميل إلى النتيجة الفنية وما بقي غير مؤكد بشأن عودة الخدمة."
+        ],
+        "outcome": [
+          "A service issue that reaches its responsible technical owner with its history intact and a customer update based on confirmed progress.",
+          "مشكلة تصل إلى المسؤول الفني بتاريخها الكامل، وتحديث للعميل يستند إلى تقدم مؤكد في المعالجة."
         ],
         "reviewer": [
-          "",
-          ""
+          "Live network status requires an authorized source. Service changes, compensation and field commitments need the responsible authority.",
+          "تحتاج حالة الشبكة الحية إلى مصدر مصرح به. وتتطلب تغييرات الخدمة والتعويضات والالتزامات الميدانية صلاحية المسؤول المختص."
+        ],
+        "metrics": [
+          "Measure repeated diagnostics, handoff completeness and time to a confirmed service update.",
+          "قِس تكرار التشخيص واكتمال انتقال الحالة وزمن الحصول على تحديث مؤكد للخدمة."
         ]
       },
       {
@@ -248,20 +318,28 @@
           "السفر والضيافة"
         ],
         "body": [
-          "",
-          ""
+          "A change to a guest’s arrival can affect the reservation, room preparation and the team covering the next shift. The request remains unresolved when one team’s action depends on a confirmation that has no owner.",
+          "قد يؤثر تغيير موعد وصول النزيل في الحجز وتجهيز الغرفة والفريق الذي يتولى الوردية التالية. ويبقى الطلب معلقًا إذا توقف إجراء فريق على تأكيد لم يتحدد مسؤول عنه."
         ],
         "input": [
-          "Service issues and outstanding commitments.",
-          "مشكلات الخدمة والالتزامات المعلقة."
+          "The guest or travel request, relevant booking context, approved policy and confirmed service information.",
+          "طلب النزيل أو المسافر وسياق الحجز المناسب والسياسة المعتمدة ومعلومات الخدمة المؤكدة."
         ],
-        "output": [
-          "A shift handover with the next owner for each open item.",
-          "تسليم وردية يوضح المسؤول التالي عن كل بند."
+        "workflow": [
+          "Intake captures the requested change and booking context. A knowledge role checks the relevant conditions, and coordination identifies the reservation and service confirmations needed. Staff decide any exception and confirm the available arrangement. Outstanding preparation passes to the next shift with an owner, while the guest update reflects only what has been agreed.",
+          "يسجل الاستقبال التغيير المطلوب وسياق الحجز. ويراجع دور المعرفة الشروط المناسبة، ويحدد التنسيق تأكيدات الحجز والخدمة اللازمة. يحسم الموظفون الاستثناء ويؤكدون الترتيب المتاح، وينتقل التجهيز غير المكتمل إلى الوردية التالية بمسؤول واضح. ويعكس تحديث النزيل ما تم الاتفاق عليه بالفعل."
+        ],
+        "outcome": [
+          "An agreed service arrangement with owned preparation tasks and continuity across shifts.",
+          "ترتيب خدمة متفق عليه ومهام تجهيز لها مسؤولون، مع استمرار المتابعة بين الورديات."
         ],
         "reviewer": [
-          "",
-          ""
+          "Availability and reservations need current authorized records. Rebooking, cancellation and compensation require specific permission and confirmation.",
+          "تحتاج الإتاحة والحجوزات إلى سجلات محدثة ومصرح بها. وتتطلب إعادة الحجز والإلغاء والتعويض تفويضًا وتأكيدًا محددين."
+        ],
+        "metrics": [
+          "Measure unowned requests, repeated guest contacts and incomplete shift handovers.",
+          "قِس الطلبات بلا مسؤول وتكرار تواصل النزيل وحالات تسليم الوردية غير المكتملة."
         ]
       },
       {
@@ -270,20 +348,28 @@
           "الخدمات المهنية"
         ],
         "body": [
-          "",
-          ""
+          "An engagement can lose time when a client changes the requirement and the revised scope is scattered across messages and documents. The specialist needs to know what was agreed, which material applies and what the next deliverable should cover.",
+          "قد يتعطل التكليف المهني عندما يعدل العميل احتياجه وتتفرق تفاصيل النطاق الجديد بين الرسائل والمستندات. ويحتاج المختص إلى معرفة ما اتُّفق عليه والمادة المرتبطة به وما ينبغي أن يشمله المخرج التالي."
         ],
         "input": [
-          "A client enquiry and the firm's intake requirements.",
-          "استفسار عميل ومتطلبات استقبال الأعمال."
+          "The client’s objective, authorized documents, internal knowledge and engagement requirements.",
+          "هدف العميل والمستندات المسموحة والمعرفة الداخلية ومتطلبات التكليف."
         ],
-        "output": [
-          "An intake brief and missing inputs; specialist advice remains with its qualified reviewer.",
-          "موجز بالنواقص؛ تبقى المشورة المتخصصة لدى المؤهل لها."
+        "workflow": [
+          "Intake records the requested work or scope change. Information roles organize the relevant client facts and internal guidance, keeping unanswered questions visible. Coordination obtains clarification from the responsible account owner before preparing material for the specialist. Professional review determines what can be delivered, and the agreed scope carries into the next handover.",
+          "يسجل الاستقبال العمل المطلوب أو تعديل النطاق. وتنظم أدوار المعلومات حقائق العميل والإرشادات الداخلية والأسئلة المفتوحة. يجمع التنسيق التوضيح من مسؤول العلاقة قبل تجهيز المادة للمختص. وتحسم المراجعة المهنية ما يمكن تسليمه، ثم ينتقل النطاق المتفق عليه مع العمل إلى الخطوة التالية."
+        ],
+        "outcome": [
+          "An agreed next deliverable and a working file that lets the specialist proceed with the right scope and source material.",
+          "مخرج تالٍ متفق عليه وملف عمل يتيح للمختص الاستمرار بالنطاق الصحيح والمصادر المناسبة."
         ],
         "reviewer": [
-          "",
-          ""
+          "Professional advice and external commitments remain with the qualified practitioner. Preparation does not constitute a legal, tax or accounting opinion.",
+          "تبقى المشورة المهنية والالتزامات الخارجية للممارس المؤهل. ولا يمثل التجهيز رأيًا قانونيًا أو ضريبيًا أو محاسبيًا."
+        ],
+        "metrics": [
+          "Measure intake rework, preparation time and specialist correction effort.",
+          "قِس إعادة العمل عند الاستقبال وزمن التجهيز وجهد التصحيح لدى المختص."
         ]
       },
       {
@@ -292,20 +378,28 @@
           "اللوجستيات والتجارة الخارجية"
         ],
         "body": [
-          "",
-          ""
+          "A missed shipment milestone can affect receiving, onward transport and the customer’s delivery plan. Updates from carriers, warehouses and service teams need to be reconciled before the company changes its commitment.",
+          "قد يؤثر تعطل مرحلة في الشحن على الاستلام والنقل التالي وخطة تسليم العميل. وتحتاج تحديثات الناقل والمستودع والخدمة إلى مراجعة مشتركة قبل تغيير التزام الشركة."
         ],
         "input": [
-          "Supplied shipment events and documents.",
-          "أحداث شحنة ومستنداتها المقدمة."
+          "Shipment identifiers, confirmed milestones, document references and the procedure for the exception.",
+          "معرّفات الشحنة ومراحلها المؤكدة ومراجع مستنداتها وإجراء معالجة الاستثناء."
         ],
-        "output": [
-          "An exception brief with dates and facts to confirm before promising a delivery outcome.",
-          "موجز استثناء بالتواريخ والحقائق اللازمة قبل تأكيد نتيجة التسليم."
+        "workflow": [
+          "The event role associates the update with the correct shipment and distinguishes the event time from the reporting time. Document and context roles identify the affected movement and any missing requirement. Coordination obtains source confirmation, organizes the available response and presents consequential changes to the operations owner. Warehouse and customer updates then use the same confirmed position.",
+          "يربط دور الأحداث التحديث بالشحنة الصحيحة ويميز وقت الحدث من وقت الإبلاغ. وتحدد أدوار المستندات والسياق الحركة المتأثرة والمتطلبات الناقصة. يطلب التنسيق تأكيد المصدر وينظم الاستجابة المتاحة، ويعرض التغييرات المؤثرة على مسؤول التشغيل. ثم تُبنى تحديثات المستودع والعميل على الموقف المؤكد نفسه."
+        ],
+        "outcome": [
+          "An exception with a consistent history, a responsible next action and a confirmed status.",
+          "استثناء له تاريخ متسق وإجراء تالٍ معلوم المسؤول وحالة مؤكدة."
         ],
         "reviewer": [
-          "",
-          ""
+          "Tracking and operational changes require authorized system access. Customs submissions, rerouting and contractual commitments remain with the people authorized for those actions.",
+          "يتطلب التتبع وتغيير الخطة التشغيلية وصولًا مصرحًا به إلى الأنظمة. وتبقى المعاملات الجمركية وتعديل المسار والالتزامات التعاقدية لدى المخولين بهذه الإجراءات."
+        ],
+        "metrics": [
+          "Measure time to assign an exception, conflicting updates and unresolved follow-up loops.",
+          "قِس زمن إسناد الاستثناء والتحديثات المتعارضة ودورات المتابعة التي لم تُحسم."
         ]
       },
       {
@@ -314,20 +408,28 @@
           "الطاقة والنفط والغاز"
         ],
         "body": [
-          "",
-          ""
+          "Maintenance preparation and shift handovers draw on asset records, technical procedures and notes from several teams. Missing context leaves work unresolved.",
+          "يعتمد تجهيز الصيانة وتسليم الورديات على سجلات الأصول والإجراءات الفنية وملاحظات فرق متعددة. ويؤدي نقص السياق إلى بقاء أعمال دون حسم."
         ],
         "input": [
-          "Authorized noncritical maintenance notes and procedure references.",
-          "ملاحظات صيانة غير حرجة ومراجع إجراءات مصرح بها."
+          "The asset or task, approved procedure version, supplied history and outstanding work requirements.",
+          "الأصل أو المهمة ونسخة الإجراء المعتمدة والسجل المقدم ومتطلبات العمل المتبقية."
         ],
-        "output": [
-          "A maintenance handover; safety-critical decisions remain with qualified personnel.",
-          "إحالة صيانة، مع إبقاء قرارات السلامة لدى المختصين."
+        "workflow": [
+          "A knowledge role locates the approved procedure for the asset or maintenance task. A context role assembles the relevant history and outstanding work. Coordination connects material and preparation requirements to their owners and brings unresolved technical questions to the qualified specialist. The receiving shift accepts the handover with the remaining work and responsibilities understood.",
+          "يصل دور المعرفة إلى الإجراء المعتمد للأصل أو مهمة الصيانة، ويجمع دور السياق تاريخها والأعمال المتبقية. يربط التنسيق متطلبات المواد والتجهيز بمسؤوليها، ويحيل الأسئلة الفنية المفتوحة إلى المختص المؤهل. ويستلم فريق الوردية العمل مع معرفة ما بقي ومسؤولية كل خطوة."
+        ],
+        "outcome": [
+          "A maintenance preparation or shift handover with the applicable procedure, required resources and ownership of unfinished work.",
+          "تجهيز صيانة أو تسليم وردية يوضح الإجراء المطبق والموارد المطلوبة ومسؤولية العمل غير المكتمل."
         ],
         "reviewer": [
-          "",
-          ""
+          "This example concerns coordination and administrative support. Equipment control, permit issuance and safety-critical decisions require their own qualified authority and engineered systems.",
+          "يتناول المثال التنسيق والدعم الإداري. أما التحكم بالمعدات وإصدار التصاريح والقرارات الحرجة للسلامة فتحتاج إلى جهاتها المؤهلة وأنظمتها الهندسية."
+        ],
+        "metrics": [
+          "Measure missing context, preparation effort and unresolved handover actions.",
+          "قِس نقص السياق وجهد التجهيز والإجراءات غير المحسومة عند التسليم."
         ]
       },
       {
@@ -336,20 +438,28 @@
           "التجارة والتوزيع"
         ],
         "body": [
-          "",
-          ""
+          "An order depends on product identifiers, quantities, units, availability and commercial terms. Sales, purchasing, warehousing and finance may hold different parts of the context.",
+          "يعتمد الطلب على الأصناف والكميات والوحدات والإتاحة والشروط التجارية. وقد تتوزع معلوماته بين المبيعات والمشتريات والمستودع والمالية."
         ],
         "input": [
-          "Item requests and approved catalogue information.",
-          "أصناف مطلوبة ومعلومات كتالوج معتمدة."
+          "The inquiry or order, approved product and commercial information, required dates and decision rules.",
+          "الاستفسار أو الطلب وبيانات الأصناف والشروط المعتمدة والمواعيد المطلوبة وقواعد القرار."
         ],
-        "output": [
-          "A quotation-preparation brief; price, availability and commercial terms need confirmation.",
-          "موجز لتجهيز العرض؛ يحتاج السعر والتوافر والشروط إلى تأكيد."
+        "workflow": [
+          "Intake captures the requirement and product references. Matching roles distinguish confirmed items from unresolved units or substitutions. Coordination brings pricing, credit and availability questions to their owners before an offer or order is approved. The agreed terms then guide fulfillment, with partial delivery and payment exceptions routed to the responsible team.",
+          "يسجل الاستقبال الاحتياج ومراجع الأصناف، وتميز أدوار المطابقة البنود المؤكدة من الوحدات أو البدائل غير المحسومة. يجمع التنسيق قرارات السعر والائتمان والإتاحة من أصحابها قبل اعتماد العرض أو الطلب. ثم توجه الشروط المتفق عليها التنفيذ، وتُحال حالات التسليم الجزئي أو تعطل السداد إلى الفريق المسؤول."
+        ],
+        "outcome": [
+          "An order that progresses with consistent product information and named ownership of exceptions.",
+          "طلب يتقدم ببيانات أصناف متسقة ومسؤول معلوم عن استثناءاته."
         ],
         "reviewer": [
-          "",
-          ""
+          "Use approved prices and explicit calculation rules. Substitutions, discounts, credit and order release require the appropriate owner’s decision; system actions also need supported access.",
+          "تُستخدم أسعار معتمدة وقواعد حساب محددة. وتتطلب البدائل والخصومات والائتمان وإجازة الطلب قرار صاحب الصلاحية، كما تحتاج الإجراءات داخل الأنظمة إلى وصول مدعوم."
+        ],
+        "metrics": [
+          "Measure correction cycles, completeness before release and fulfillment follow-up effort.",
+          "قِس دورات التصحيح واكتمال الطلب قبل إجازته وجهد متابعة التنفيذ."
         ]
       }
     ],
@@ -361,72 +471,62 @@
   },
   "integrations": {
     "title": [
-      "Define what the agent needs from each system",
-      "حدّد ما يحتاجه الوكيل من كل نظام"
+      "Connect a process to the information and actions it needs",
+      "اربط العملية بالمعلومة والإجراء اللذين تحتاجهما"
     ],
     "intro": [
-      "A useful connection serves a specific task: reading an approved record, checking a status or making a permitted change. Start with that operation and the person who can authorize it.\n\nThe systems below are examples to assess. They are not an installed connector catalogue.\n\nConnecting involves more than storing a key. The operation needs its access check, input contract and evidence of the destination's response. Authorization must be removable, and retries must respect the effect of the original action.\n\nStudio knowledge sources are added as supported short text. Describing a live connection in an agent instruction does not activate one. Keep credentials out of prompts and conversation content.",
-      "يخدم الاتصال مهمة واضحة، مثل قراءة سجل معتمد أو فحص حالة أو تنفيذ تغيير مسموح. ابدأ بالعملية والشخص الذي يستطيع تفويضها.\n\nالأنظمة التالية أمثلة للتقييم، وليست قائمة موصلات مثبتة داخل المنصة.\n\nلا يكتمل الاتصال بمجرد حفظ مفتاح. تحتاج العملية إلى فحص وصول ومدخلات محددة ودليل على استجابة النظام المستهدف. ويجب أن يكون التفويض قابلًا للسحب، وأن تراعي إعادة المحاولة أثر الإجراء السابق.\n\nتُضاف معرفة الاستوديو كنصوص قصيرة مدعومة. وصف اتصال حي في تعليمات الوكيل لا يفعّله، ولا تُوضع بيانات الدخول في الأسئلة أو المحادثات."
+      "A useful connection has a specific job. It may supply the current case status, retrieve an approved record or submit an authorized change. Define that operation before choosing a connector or asking for access.",
+      "للاتصال المفيد وظيفة محددة: جلب حالة محدثة، أو قراءة سجل معتمد، أو تقديم تغيير مصرح به. حدد العملية المطلوبة قبل اختيار الموصل أو طلب صلاحيات الوصول."
     ],
     "sections": [
       {
         "title": [
-          "Customer and sales records",
-          "العملاء والمبيعات"
+          "Separate knowledge from live records",
+          "ميّز المعرفة عن السجلات الحية"
         ],
         "body": [
-          "Salesforce, HubSpot, Dynamics 365, Zoho\n\nNeeded fields, authoritative record and permission for reads or updates.",
-          "Salesforce وHubSpot وDynamics 365 وZoho\n\nالحقول المطلوبة ومرجعها وصلاحيات القراءة والتحديث."
+          "A company procedure explains how work should happen. A business application holds its current transactions and status. Decide which source answers each question, how recent the information must be and what happens when the sources disagree.",
+          "تشرح إجراءات الشركة كيف ينبغي تنفيذ العمل، بينما يحتفظ نظام الأعمال بمعاملاته وحالته الفعلية. حدد المصدر الذي يجيب عن كل سؤال، ومدى حداثة المعلومة المطلوبة، وما يحدث إذا تعارضت المصادر."
         ]
       },
       {
         "title": [
-          "Support cases",
-          "حالات الدعم"
+          "Read access and action authority are different",
+          "القراءة لا تمنح حق التغيير"
         ],
         "body": [
-          "Zendesk, ServiceNow, Jira, Freshdesk\n\nCase fields, permitted queues, routing rules and an outcome for failed handoffs.",
-          "Zendesk وServiceNow وJira وFreshdesk\n\nحقول الحالة وجهات الإحالة والقواعد وما يحدث عند تعذر التسليم."
+          "Finding a record does not authorize changing it. Define the account or identity used, the records it may access and the operations it may perform. A write action also needs a clear result to inspect and an owner for exceptions.",
+          "الوصول إلى سجل لا يعني السماح بتعديله. عرّف الهوية المستخدمة والسجلات المسموحة والعمليات التي يحق لها تنفيذها. ويحتاج إجراء الكتابة إلى نتيجة يمكن فحصها ومسؤول يتولى الاستثناءات."
         ]
       },
       {
         "title": [
-          "Company knowledge",
-          "معرفة المؤسسة"
+          "Use the interface the operation requires",
+          "اختر الواجهة المناسبة للعملية"
         ],
         "body": [
-          "Microsoft Graph, SharePoint, Teams, Google Workspace, Slack\n\nApproved folders or channels, source restrictions and update/removal behavior.",
-          "Microsoft Graph وSharePoint وTeams وGoogle Workspace وSlack\n\nالمجلدات والقنوات المسموحة وقيود المصادر وتحديثها وحذفها."
+          "APIs let a workflow request information or an action. Webhooks can notify it when an event occurs, while MCP provides a standard interface for exposing tools to agents. Suitability still depends on the product edition, access scopes, supported operations and failure behavior of the actual connection.",
+          "تتيح واجهات API طلب معلومة أو إجراء، وتبلغ إشعارات webhooks سير العمل بوقوع حدث، بينما يوفر بروتوكول MCP واجهة موحدة لإتاحة الأدوات للوكلاء. وتتوقف ملاءمة الاتصال على إصدار المنتج ونطاق الوصول والعمليات المدعومة وطريقة التعامل مع الإخفاق."
         ]
       },
       {
         "title": [
-          "Purchasing and finance",
-          "المشتريات والمالية"
+          "Plan the return path",
+          "تأكد مما حدث بعد الطلب"
         ],
         "body": [
-          "SAP, Odoo, ERPNext\n\nEdition/API availability, identifiers, currencies, units and authorized writes.",
-          "SAP وOdoo وERPNext\n\nالإصدار وإتاحة الواجهة ومعرّفات السجلات والعملات والوحدات والتعديل المصرح به."
+          "A request sent to another system needs a response that confirms what happened. Delays, duplicate events and rejected updates require explicit handling. A workflow should retain the external result rather than relying on the agent’s wording as proof of execution.",
+          "يحتاج الطلب المرسل إلى نظام آخر إلى رد يؤكد النتيجة. ويجب تحديد كيفية التعامل مع التأخير والأحداث المكررة والتحديثات المرفوضة. يحتفظ سير العمل بنتيجة النظام الخارجي بدل اعتبار صياغة الوكيل دليلًا على التنفيذ."
         ]
       },
       {
         "title": [
-          "Voice and messaging",
-          "الصوت والمراسلة"
+          "Check availability for the workflow",
+          "تحقّق من الاتصال المطلوب"
         ],
         "body": [
-          "Twilio, WhatsApp Business\n\nAccount eligibility, language, consent, recording, transfer and provider charges.",
-          "Twilio وWhatsApp Business\n\nأهلية الحساب واللغة والموافقة والتسجيل والتحويل ورسوم المزود."
-        ]
-      },
-      {
-        "title": [
-          "Data and interfaces",
-          "البيانات والواجهات"
-        ],
-        "body": [
-          "PostgreSQL, pgvector, REST, SOAP, MCP\n\nSchema, interface, authentication, permitted operations and error behavior.",
-          "PostgreSQL وpgvector وREST وSOAP وMCP\n\nمخطط البيانات والواجهة والمصادقة والعمليات المسموحة وسلوك الإخفاق."
+          "This page explains the requirements for a connected workflow. Adding company knowledge in Studio and authorizing access to a business system are separate steps. Before including an external action, confirm that the required application, operation and permission are supported.\n\n[Integration capability](/services/enterprise-integrations) · [Permissions and oversight](/security)",
+          "تشرح هذه الصفحة متطلبات سير العمل المتصل بالأنظمة. إضافة معرفة الشركة في الاستوديو وتفويض الوصول إلى نظام أعمال خطوتان منفصلتان. وقبل إدراج إجراء خارجي، تأكد من دعم التطبيق والعملية والصلاحية المطلوبة.\n\n[قدرة تكامل الأنظمة](/ar/services/enterprise-integrations) · [الصلاحيات والإشراف](/ar/security)"
         ]
       }
     ],
@@ -437,62 +537,72 @@
   },
   "methodology": {
     "title": [
-      "Give the agent a job you can evaluate",
-      "حدّد مهمة تستطيع تقييم الوكيل عليها"
+      "Turn the way your team works into a clear agent design",
+      "حوّل طريقة عمل فريقك إلى تصميم واضح للوكلاء"
     ],
     "intro": [
-      "A company description provides context. A useful configuration also needs a task, permitted information and an expected output. Use the following sequence to make those requirements clear.",
-      "يشرح وصف الشركة طبيعة العمل، لكن إعداد الوكيل يحتاج أيضًا إلى مهمة ومعلومات مسموحة ومخرج واضح. يساعدك هذا الترتيب على ضبط المتطلبات."
+      "The most useful starting point is a process your team can explain. Describe what happens today, where the work changes hands and which result matters. That gives the agent a role with a purpose and gives your team a basis for evaluating it.",
+      "ابدأ بعملية يستطيع فريقك شرحها: كيف تصل المهمة، ومن يتولاها، وأين تنتقل المسؤولية، وما النتيجة المطلوبة. يساعد هذا الوصف على تحديد دور مفيد للوكيل وعلى تقييمه وفق احتياج العمل."
     ],
     "sections": [
       {
         "title": [
-          "Define the role",
-          "اكتب دور الوكيل"
+          "Describe the process and its owner",
+          "حدّد العملية والمسؤول عنها"
         ],
         "body": [
-          "Describe who will use the result and the question or task it supports. State the form of the output: an answer with references, a case brief or a comparison. Include decisions the agent must leave to the responsible person.",
-          "وضّح من يستخدم النتيجة والسؤال أو المهمة التي تخدمها. وحدّد شكل المخرج، مثل إجابة بمراجع أو موجز حالة أو مقارنة. واذكر القرارات التي يجب أن يتركها الوكيل للمسؤول عنها."
+          "Choose a recurring event: a customer request, an employee need or an operational exception. Identify who owns the process, where the information comes from and what confirms that the work is complete. Include a real exception as well as the usual path.",
+          "اختر حدثًا متكررًا، مثل طلب عميل أو احتياج موظف أو استثناء تشغيلي. وضّح صاحب العملية ومصادر المعلومات وما يثبت اكتمالها. واذكر حالة غير معتادة إلى جانب المسار المعتاد."
         ]
       },
       {
         "title": [
-          "Prepare the information",
-          "جهّز المعلومات"
+          "Define the responsibilities",
+          "وزّع المسؤوليات"
         ],
         "body": [
-          "Choose approved material and identify its owner. In Studio, add supported text and check that the source contains the facts needed for the question. Record other system or document requirements separately; listing them does not create a connection.",
-          "اختر مادة معتمدة وحدّد المسؤول عنها. أضف النص المدعوم داخل الاستوديو، وافحص وجود الحقائق اللازمة للسؤال في المصدر. أما الأنظمة أو صيغ المستندات الأخرى فدوّن متطلباتها؛ ذكرها لا ينشئ اتصالًا بها."
+          "Decide what each agent should understand, produce or hand over. Keep a responsibility together when it uses the same context. Separate roles when they need different knowledge, permissions or evaluation criteria. A multi-agent design is useful when that separation makes the process clearer.",
+          "حدد ما يفهمه كل وكيل وما ينتجه وما يسلّمه إلى غيره. اجمع الأعمال التي تعتمد على السياق نفسه، وافصل الأدوار عندما تختلف المعرفة أو الصلاحيات أو طريقة التقييم. تكون تعددية الوكلاء مفيدة حين يجعل هذا التقسيم العملية أوضح."
         ]
       },
       {
         "title": [
-          "Try representative cases",
-          "جرّب حالات من العمل"
+          "Prepare company context",
+          "جهّز سياق الشركة"
         ],
         "body": [
-          "Use the conversation to ask questions from the selected task. Include missing information, conflicting facts and requests outside the role. Inspect source excerpts as well as the final wording. These are user-led checks, not a claim of an automated evaluation suite.",
-          "اطرح في المحادثة أسئلة تمثل المهمة، بما فيها نقص المعلومات وتعارض الحقائق والطلب الخارج عن الدور. وافحص مقتطفات المصادر إلى جانب الرد. هذه مراجعة يجريها المستخدم، وليست وصفًا لمنظومة تقييم آلي."
+          "Use procedures and examples relevant to the role, including the terminology your team uses. Identify the source that governs a disputed fact and the information that changes over time. In Studio, configure the agent’s instructions and add the company knowledge it needs for its answers.",
+          "اختر الإجراءات والأمثلة المرتبطة بالدور، مع المصطلحات التي يستخدمها الفريق. وحدد المرجع الذي يحسم التعارض والمعلومات التي تتغير مع الوقت. وفي الاستوديو، اضبط تعليمات الوكيل وأضف معلومات الشركة التي يحتاجها للإجابة."
         ]
       },
       {
         "title": [
-          "Review the proposed result",
-          "راجع المخرج المقترح"
+          "Specify actions and decisions",
+          "وضّح الإجراءات والقرارات"
         ],
         "body": [
-          "Check important facts, calculations and any next step. Where the workspace offers an internal proposal, inspect the exact saved object and its status. Do not infer an external action from an internal approval.",
-          "تحقّق من الحقائق والحسابات والخطوة التالية. وإذا عرضت المساحة مقترحًا داخليًا، فافحص العنصر المحفوظ وحالته. الاعتماد الداخلي لا يثبت تنفيذ إجراء خارج المساحة."
+          "For every proposed system action, establish the required connection and authority. For every human decision, identify the responsible person and the information they need. A written instruction cannot grant access to company software.",
+          "لكل إجراء مقترح داخل نظام آخر اتصال وصلاحية لازمان. ولكل قرار بشري مسؤول ومعلومات يحتاجها قبل الحسم. كتابة التعليمة وحدها لا تمنح الوكيل وصولًا لبرامج الشركة."
         ]
       },
       {
         "title": [
-          "Understand what you share",
-          "افهم ما تشاركه"
+          "Test the ordinary case and the exception",
+          "اختبر الحالات الفعلية"
         ],
         "body": [
-          "Private configuration and public publication are separate. Review any knowledge approved for public use and check the publication settings. A published agent endpoint or widget is different from provisioning a separate cloud application for your company.",
-          "إعداد الوكيل الخاص ونشره للعامة إجراءان منفصلان. راجع المعرفة المسموح باستخدامها علنًا وإعدادات النشر. واجهة الوكيل أو نافذته المنشورة تختلف عن إنشاء تطبيق سحابي مستقل للشركة."
+          "Ask questions from the real process. Try a missing fact, conflicting information and a request outside the agent’s responsibility. Inspect its answers and references. Evaluate whether the work is useful to the next person, including how much correction it requires.",
+          "جرّب أسئلة من العملية نفسها، ثم حالة بمعلومة ناقصة وأخرى بمعلومات متعارضة وطلبًا خارج مسؤولية الوكيل. افحص الإجابات ومراجعها، وقيّم فائدتها لمن يستلم العمل وحجم التصحيح الذي تحتاجه."
+        ]
+      },
+      {
+        "title": [
+          "Expand from evidence",
+          "وسّع النطاق وفق النتيجة"
+        ],
+        "body": [
+          "Use what the tests reveal to improve the configuration. Before adding a responsibility, check its information needs and the effect it has on the rest of the process. External execution and publication each require the supported controls appropriate to that action.\n\n[Begin in Studio](/studio) · [Workflow evaluation](/services/evaluation-observability)",
+          "حسّن الإعدادات بناءً على ما تكشفه التجربة، وافصل مراجعة الإجابات عن ضوابط النشر والإجراءات الخارجية. هكذا يتسع النظام حول عملية مفهومة للفريق، وتبقى لكل إضافة مسؤولية يمكن تقييمها.\n\n[ابدأ في الاستوديو](/ar/studio) · [تقييم سير العمل](/ar/services/evaluation-observability)"
         ]
       }
     ],
@@ -503,32 +613,52 @@
   },
   "about": {
     "title": [
-      "One platform for agents with different jobs",
-      "منصة واحدة لوكلاء تختلف مهامهم"
+      "One Agent Builder platform for different companies",
+      "منصة واحدة تستوعب اختلاف طرق العمل"
     ],
     "intro": [
-      "AGYNEXA is an Agent Builder Studio for business knowledge and workflows. Users bring the context of their work, define the agent's role and review the information it produces.\n\nThe product approach is a shared platform with user-specific configurations and information. The same foundation can support different tasks without treating every company as a separate software project. Each task still needs a clear output, permitted sources and a responsible reviewer.",
-      "AGYNEXA استوديو لبناء وكلاء المعرفة وسير العمل. يقدّم المستخدم تفاصيل عمله، ويحدّد دور الوكيل، ويراجع المعلومات التي ينتجها.\n\nتقوم فكرة المنتج على أساس مشترك، وإعدادات ومعلومات تخص كل مستخدم. يمكن لهذا الأساس أن يخدم مهام مختلفة دون أن تصبح كل شركة مشروع برمجة منفصلًا. وتحتاج كل مهمة إلى مخرج واضح ومصادر مسموحة ومسؤول يراجع النتيجة."
+      "AGYNEXA is a platform for building AI agents around business operations. One Studio brings together agent configuration and company knowledge, while each user works with their own agents and information.",
+      "AGYNEXA منصة لبناء وكلاء الذكاء الاصطناعي حول عمليات الشركات والمؤسسات. يجمع الاستوديو إعداد الوكلاء ومعرفة الشركة، ويعمل كل مستخدم بوكلائه ومعلوماته داخل مساحة حسابه."
     ],
     "sections": [
+      {
+        "title": [
+          "A reusable product foundation",
+          "أساس مشترك يتكيّف مع سياق المؤسسة"
+        ],
+        "body": [
+          "Companies differ in their terminology, procedures and responsibilities. Those differences should inform the configuration of an agent system. The product approach is to provide a common foundation that can be used across those contexts, with roles defined around the work each organization needs.",
+          "تختلف الشركات في المصطلحات والإجراءات وتوزيع المسؤوليات. وينعكس هذا الاختلاف في إعداد نظام الوكلاء. تقوم فكرة المنتج على أساس يمكن استخدامه في سياقات متعددة، مع تحديد الأدوار وفق العمل الذي تحتاجه كل مؤسسة."
+        ]
+      },
+      {
+        "title": [
+          "Engineering that explains the work",
+          "شرح هندسي يفهمه أصحاب العمل"
+        ],
+        "body": [
+          "An agent’s purpose should be understandable to the people who depend on it. We describe knowledge, tools and orchestration through their role in a process: where information comes from, how responsibilities connect and which decisions require a person.",
+          "يجب أن يفهم من يعتمد على الوكيل سبب وجوده ودوره. لذلك نشرح المعرفة والأدوات وتنسيق الوكلاء من خلال العملية نفسها: مصدر المعلومات، وانتقال المسؤوليات، والقرارات التي تحتاج إلى شخص مسؤول."
+        ]
+      },
       {
         "title": [
           "Founder",
           "المؤسس"
         ],
         "body": [
-          "Eng. Adham Younes Mohamed is the Founder and CEO of AGYNEXA. His work focuses on enterprise agent systems, workflow automation and the software needed to connect specialist roles within a business process.",
-          "المهندس أدهم يونس محمد هو المؤسس والرئيس التنفيذي لـAGYNEXA. يركّز عمله على أنظمة الوكلاء للمؤسسات وأتمتة سير العمل، والبرمجيات التي تربط الأدوار المتخصصة داخل عملية عمل."
+          "Eng. Adham Younes Mohamed is the Founder and CEO of AGYNEXA. His work focuses on enterprise agent systems, multi-agent orchestration and intelligent workflow automation.",
+          "المهندس أدهم يونس محمد هو المؤسس والرئيس التنفيذي لـAGYNEXA. يركز عمله على أنظمة الوكلاء للمؤسسات، وتنسيق الأنظمة متعددة الوكلاء، والأتمتة الذكية لسير العمل."
         ]
       },
       {
         "title": [
-          "A practical definition of progress",
-          "فائدة يستطيع الفريق التحقق منها"
+          "What guides the product",
+          "ما الذي يوجّه المنتج؟"
         ],
         "body": [
-          "An agent is useful when its work can be checked against the task. We describe capabilities through the information they need, the output they support and the decisions around them. Account notices explain the handling of data and the scope of the private workspace.",
-          "تظهر قيمة الوكيل عندما يمكن فحص عمله مقابل المهمة. لذلك نشرح كل مجال بالمعلومات التي يحتاجها والمخرج الذي يدعمه والقرارات المرتبطة به. وتوضح إشعارات الحساب طريقة التعامل مع البيانات ونطاق المساحة الخاصة."
+          "We evaluate agent work against a task someone needs to complete. The person using the result should understand its basis, what remains unresolved and who owns the next decision. These questions guide how we explain and assess the product.\n\n[Explore the platform](/services) · [Contact AGYNEXA](/contact)",
+          "نقيّم عمل الوكيل على مهمة يحتاجها شخص في الشركة. وينبغي أن يفهم المستخدم أساس النتيجة وما بقي دون حسم وصاحب القرار التالي. توجّه هذه الأسئلة طريقة شرح المنتج وتقييمه.\n\n[استكشف المنصة](/ar/services) · [تواصل مع AGYNEXA](/ar/contact)"
         ]
       }
     ],
@@ -539,62 +669,62 @@
   },
   "resources": {
     "title": [
-      "Prepare the work before writing the instructions",
-      "وضّح المهمة قبل كتابة التعليمات"
+      "Practical guidance for designing a useful agent system",
+      "إرشادات تساعدك على تصميم نظام مفيد للعمل"
     ],
     "intro": [
-      "A good agent brief names the task, the information and the person who checks the result. You can define these without choosing a model or a cloud provider.",
-      "يحدّد الموجز المفيد المهمة ومعلوماتها ومن يراجع النتيجة. يمكنك ضبط هذه المتطلبات قبل اختيار نموذج أو مزود سحابي."
+      "Use these notes to turn a broad automation idea into decisions your team can work with. The aim is to understand the process well enough to define a useful agent role and judge its result.",
+      "تساعد هذه الملاحظات على تحويل فكرة عامة للأتمتة إلى قرارات يستطيع الفريق العمل بها. الهدف فهم العملية بما يكفي لتحديد دور مفيد للوكيل والحكم على نتيجته."
     ],
     "sections": [
       {
         "title": [
-          "Write a specific output",
-          "صِف مخرجًا محددًا"
+          "What should an agent’s role include?",
+          "ماذا يتضمن دور الوكيل؟"
         ],
         "body": [
-          "“Summarize the supplied shipment events and list what still needs confirmation” gives the agent a task. Identify which dates, references and unresolved items must survive the summary. Avoid asking for a broad improvement without saying what the output should contain.",
-          "«لخّص أحداث الشحنة المقدمة واذكر ما يحتاج إلى تأكيد» مهمة يمكن مراجعتها. حدّد التواريخ والمراجع والبنود المفتوحة التي يجب الحفاظ عليها في الملخص. وصف التحسن المطلوب وحده لا يوضّح شكل المخرج."
+          "Describe its purpose, the information it can use, the work it should produce and what it must leave to someone else. “Help the operations team” is context. “Organize a shipment exception using its confirmed milestones and identify the next responsible team” is a responsibility that can be evaluated.",
+          "وضح غرضه والمعلومات التي يستخدمها والعمل الذي ينتجه وما يتركه لغيره. عبارة «مساعدة فريق العمليات» تشرح السياق، أما «تنظيم استثناء في شحنة اعتمادًا على مراحلها المؤكدة وتحديد الجهة المسؤولة عن الخطوة التالية» فتحدد مسؤولية يمكن تقييمها."
         ]
       },
       {
         "title": [
-          "Use a permitted source",
-          "استخدم مصدرًا مسموحًا"
+          "When is more than one agent useful?",
+          "متى تحتاج إلى أكثر من وكيل؟"
         ],
         "body": [
-          "Choose approved material with an identified owner. Studio supports pasted text or UTF-8 TXT/MD, up to 12,000 bytes and 12,000 characters per source. Arabic may reach the byte limit before the character limit. PDF, images, spreadsheets and live repositories are not supported source inputs in this workspace.",
-          "اختر مادة معتمدة ومسؤولًا معلومًا عنها. يدعم الاستوديو نصًا مباشرًا أو TXT/MD بترميز UTF-8، حتى 12,000 بايت و12,000 حرف للمصدر. وقد تصل العربية إلى حد البايتات قبل عدد الأحرف. لا تدعم المساحة إضافة PDF أو الصور أو جداول البيانات أو المستودعات الحية كمصادر."
+          "Separate roles when their knowledge, access or evaluation differs. Keep them together when splitting them only adds handoffs. A multi-agent design should specify what each role receives, when it acts and which result allows the work to continue.",
+          "افصل الأدوار عندما تختلف المعرفة أو الصلاحيات أو طريقة التقييم، وأبقها معًا إذا كان الفصل سيضيف إحالات دون فائدة. يوضح تصميم التنسيق ما يستلمه كل دور، ومتى يعمل، والنتيجة التي تسمح باستمرار العملية."
         ]
       },
       {
         "title": [
-          "Set the review responsibility",
-          "حدّد مسؤولية المراجعة"
+          "How should company knowledge be prepared?",
+          "كيف تجهز معرفة الشركة؟"
         ],
         "body": [
-          "Name the person who checks important facts or authorizes the next step. For a policy answer, inspect the passage. For a comparison, check the values and units. For a business action, confirm its permission and actual outcome separately.",
-          "عيّن من يتحقق من الحقائق أو يعتمد الخطوة التالية. في إجابة السياسة، افحص المقطع الداعم. وفي المقارنة، راجع القيم والوحدات. أما الإجراء التشغيلي فيحتاج إلى تأكيد الصلاحية والنتيجة الفعلية كلًا على حدة."
+          "Choose the material relevant to the role and identify its owner. Resolve contradictory instructions where possible. Include terminology and examples that reflect how the team works. Test whether an answer cites the correct information rather than merely mentioning a plausible source.",
+          "اختر المادة المرتبطة بالدور وحدد صاحبها، وعالج التعليمات المتعارضة قدر الإمكان. أضف مصطلحات وأمثلة تعكس العمل الفعلي. وعند الاختبار، افحص ارتباط الإجابة بالمعلومة الصحيحة، لا مجرد ظهور مرجع يبدو مناسبًا."
         ]
       },
       {
         "title": [
-          "Test a useful case and a difficult one",
-          "جرّب الحالات المعتادة والصعبة"
+          "What should happen when information is missing?",
+          "ما التصرف المناسب عند نقص المعلومات؟"
         ],
         "body": [
-          "Try an ordinary request, missing evidence and a request outside the role. Keep incorrect and unresolved responses in the review record. A citation can be genuine while the answer misinterprets it.",
-          "اختبر طلبًا عاديًا، وحالة تنقصها الأدلة، وطلبًا خارج الدور. واحتفظ بالإجابات الخاطئة وغير المحسومة ضمن سجل المراجعة. فقد يكون المرجع صحيحًا ويكون تفسير الإجابة له غير دقيق."
+          "Define the fact needed and who can supply it. A useful request for clarification explains why the information matters and lets the process continue once it is provided. Repeated broad questions usually indicate that the role or process needs a clearer definition.",
+          "حدد المعلومة اللازمة ومن يمكنه تقديمها. يوضح سؤال الاستكمال الجيد سبب الحاجة إليها، ويسمح باستمرار العمل بعد الحصول عليها. أما الأسئلة العامة المتكررة فغالبًا تحتاج إلى تحسين تعريف الدور أو العملية."
         ]
       },
       {
         "title": [
-          "Measure accepted results",
-          "قِس النتائج المقبولة"
+          "How do you know the workflow is useful?",
+          "كيف تقيس فائدة سير العمل؟"
         ],
         "body": [
-          "Include the time needed to check and correct the output. Track accepted responses, factual corrections and unresolved cases. Where actual cost data is available, compare cost per accepted result. Displayed usage estimates are not provider bills or a guaranteed spending limit.",
-          "احسب زمن فحص المخرج وتصحيحه. وسجّل الإجابات المقبولة وتصحيحات الحقائق والحالات المعلقة. وعندما تتوفر بيانات تكلفة فعلية، قارن تكلفة النتيجة المقبولة. تقديرات الاستخدام المعروضة ليست فاتورة مزود أو حدًا مضمونًا للإنفاق."
+          "Compare the result with the work people actually need to do next. Include correction effort, failed handoffs and unresolved exceptions alongside time and usage. Keep a few representative acceptance cases separate from the examples used to tune the instructions.\n\n[Design methodology](/methodology) · [Evaluation and monitoring](/services/evaluation-observability)",
+          "قارن النتيجة بما يحتاجه الشخص في الخطوة التالية. احسب جهد التصحيح والإحالات الفاشلة والاستثناءات المفتوحة، إلى جانب الزمن والاستخدام. واحتفظ بحالات قبول ممثلة لا تستخدمها كلها أثناء ضبط التعليمات.\n\n[منهجية التصميم](/ar/methodology) · [التقييم ومتابعة التشغيل](/ar/services/evaluation-observability)"
         ]
       }
     ],
@@ -606,22 +736,52 @@
   },
   "agentnexos": {
     "title": [
-      "Keep the task and its review in context",
-      "اجمع المهمة ومعلومات مراجعتها"
+      "AgentNexOS: the operating model behind coordinated agents",
+      "AgentNexOS: تصور التشغيل الذي يربط أدوار الوكلاء"
     ],
     "intro": [
-      "AgentNexOS describes the context around agent work: the request, the proposed change and the record the owner reviews. It helps explain why a conversation and an operational result need to be distinguished.",
-      "يصف AgentNexOS سياق العمل المرتبط بالوكيل: الطلب والتغيير المقترح والسجل الذي يراجعه المالك. ويوضح أهمية الفصل بين ما قيل في المحادثة وما حدث في التشغيل."
+      "AgentNexOS names the agent-system concept within AGYNEXA. It brings the discussion back to how responsibilities, knowledge and decisions belong to one business process. AGYNEXA is the platform; Studio is the workspace where users configure and work with their agents.",
+      "يشير AgentNexOS إلى تصور نظام الوكلاء داخل AGYNEXA، وعلاقة المسؤوليات والمعرفة والقرارات بعملية العمل. AGYNEXA هي المنصة، والاستوديو مساحة إعداد الوكلاء والعمل معهم."
     ],
     "sections": [
       {
         "title": [
-          "AgentNexOS",
-          "AgentNexOS"
+          "Keep the company process in view",
+          "احتفظ بسياق العملية"
         ],
         "body": [
-          "The private workspace supports bounded agent, project and task records. Creating an agent saves configuration. Creating a task saves a work record. These actions do not by themselves deploy an independent application or assign work to employees.\n\nFor any wider workflow, identify the tool, authorized operation, decision owner and evidence of completion. A diagram can explain those relationships without establishing that every illustrated tool is available.",
-          "تدعم المساحة الخاصة سجلات محددة للوكلاء والمشروعات والمهام. إنشاء الوكيل يحفظ إعداداته، وإنشاء المهمة يحفظ سجلها. لا تنشر هذه الإجراءات تطبيقًا مستقلًا أو تسند العمل إلى الموظفين بمجرد الحفظ.\n\nفي أي سير عمل أوسع، حدّد الأداة والعملية المسموحة وصاحب القرار ودليل الإتمام. ويمكن للرسم شرح هذه العلاقات دون أن يثبت إتاحة كل أداة تظهر فيه."
+          "An individual response is one contribution to a larger sequence. The operating model identifies the case being handled, the information it depends on and the next responsibility. This context matters when work passes between specialist roles or returns to a person.",
+          "تمثل الإجابة مساهمة داخل تسلسل أكبر. يحدد تصور التشغيل الحالة التي يجري التعامل معها والمعلومات التي تعتمد عليها والمسؤولية التالية. ويصبح هذا السياق ضروريًا عندما ينتقل العمل بين أدوار متخصصة أو يعود إلى الشخص المسؤول."
+        ]
+      },
+      {
+        "title": [
+          "Define the relationship between roles",
+          "وضّح العلاقة بين الأدوار"
+        ],
+        "body": [
+          "One role may organize the request while another applies company knowledge. A workflow design determines what passes between them and which result is needed before the next step can begin. The arrangement should make ownership clearer rather than add more agents for its own sake.",
+          "قد ينظم دور الطلب الوارد، ويستخدم آخر معرفة المؤسسة لفحصه. يحدد تصميم سير العمل ما ينتقل بينهما والنتيجة اللازمة لبدء الخطوة التالية. الغرض من توزيع الأدوار أن تصبح المسؤولية أوضح."
+        ]
+      },
+      {
+        "title": [
+          "Keep system state and human authority explicit",
+          "ميّز المقترح والقرار والتنفيذ"
+        ],
+        "body": [
+          "The operating model distinguishes a proposed action from an approved decision and an action accepted by a business system. It also identifies the response to missing information or a blocked dependency. The execution path depends on the connections and controls supported for that process.",
+          "يميز تصور التشغيل الإجراء المقترح من القرار المعتمد ومن الإجراء الذي يؤكد نظام الأعمال قبوله. ويحدد أيضًا كيفية التعامل مع نقص المعلومات أو توقف خطوة يعتمد عليها العمل. ويتوقف مسار التنفيذ على الاتصالات والضوابط التي تدعمها العملية."
+        ]
+      },
+      {
+        "title": [
+          "Use the Studio as the product entry point",
+          "الاستوديو هو مدخل استخدام المنتج"
+        ],
+        "body": [
+          "Create and configure private agents, work with company knowledge and examine their responses in Studio. Use the architecture and capability pages to understand how those roles relate to wider system designs.\n\n[Open Studio](/studio) · [System architecture](/architecture)",
+          "أنشئ وكلاءك الخاصين واضبط أدوارهم واعمل بمعرفة شركتك وافحص إجاباتهم داخل الاستوديو. وتشرح صفحات البنية والقدرات علاقتهم بتصميم الأنظمة الأوسع.\n\n[افتح الاستوديو](/ar/studio) · [بنية النظام](/ar/architecture)"
         ]
       }
     ],
