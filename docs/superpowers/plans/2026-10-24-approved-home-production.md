@@ -31,8 +31,8 @@
 - [x] Update approved homepage AR and equivalent EN copy, metadata, Hero strings and footer wording.
 - [x] Render the journey/diagram/sector table in the existing design; align Studio welcome and generated labels without changing behavior or CSS.
 - [x] Review diff and protected paths; run build/TypeScript, docs validation and affected real-browser samples. Obtain fresh source review.
-- [ ] Commit, push and create/attach PR; merge authorized reviewed head after checks and monitor the one Git production deployment.
-- [ ] Verify production alias/source and public/Studio entry UI, save sanitized evidence and update current documentation with final receipt.
+- [x] Commit, push and create/attach PR; merge authorized reviewed head after checks and monitor the one Git production deployment.
+- [x] Verify production alias/source and public/Studio entry UI, save sanitized evidence and update current documentation with final receipt.
 
 ## Decisions
 
@@ -40,3 +40,8 @@
 - Yesterday's requested design is the owner-approved dedicated-chat composition already present in current production; preserve it and align only entry/welcome/form wording.
 - The historical market review's bespoke RFQ direction is superseded by the owner's explicit reusable global Agent Builder positioning. Its evidence/permission and measurable-outcome principles remain useful.
 - No new design asset or remote generation is needed; existing approved components/styles meet this scope.
+
+
+## Completion
+
+PR47 merged reviewed head 2d8e18d as dc9ebe0. One Git-triggered production deployment dpl_447stD3JsGD1hZHZsQEmQH8rNFFH is READY and official-domain browser checks passed. Final local evidence is retained without a documentation-only production push. Minor saved-agent terminology polish was within the requested UI alignment and changed display literals only.

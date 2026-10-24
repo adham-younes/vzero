@@ -1,6 +1,6 @@
 # Approved homepage and Studio alignment — production release
 
-Status at source merge: OWNER_AUTHORIZED / LOCAL_VERIFICATION_PASS / AWAITING_MATCHING_PRODUCTION_RECEIPT. The owner explicitly requested production publication after approving the homepage draft. Final deployment metadata is recorded separately after release; the earlier global Preview receipt is historical.
+Status: PRODUCTION_VERIFIED. The owner explicitly authorized publication after approving the homepage draft. PR47 merged the reviewed source and the existing Git integration created one matching production deployment. The earlier global Preview receipt remains historical.
 
 ## Scope
 
@@ -27,3 +27,14 @@ Unchanged public-page/route evidence from the accepted global Preview is reused 
 Release through the existing Git integration: reviewed branch, attached PR, authorized merge to main, then verify the matching production build and aliases. Do not create a second manual deployment if the Git build exists. Prior verified production baseline: main `857356acc12b736ee1874cc21fa298690d98164a`, deployment `dpl_5aS1czntiDqv99dTReWRhc1hLNWy`, official alias agynexa.si.
 
 If the affected public/Studio entry presentation fails, restore a compatible deployment or revert this content/UI source. Preserve all saved data and the additive database schema. No domain, protection, environment or provider change is required by this release.
+
+
+## Final production receipt
+
+[PR47](https://github.com/adham-younes/vzero/pull/47) merged reviewed head `2d8e18de384c964a18036a978fa755a9627bfa54` as `dc9ebe0f6ccd54f845cf73b859465d5f232b8afc`. [Deployment receipt](evidence/production-deployment.json): `dpl_447stD3JsGD1hZHZsQEmQH8rNFFH`, READY, production, Git source; official agynexa.si/www and legacy aliases assigned. No manual duplicate deployment or protection/environment/domain change.
+
+[Production browser evidence](evidence/production-browser.json) verifies the official Arabic/English home, exact new heading and metadata/canonical, locale switching, six journey steps, two main Studio links and Arabic390px layout without horizontal overflow. Video was playing with autoplay and no controls. The Arabic Studio link was clicked and its noindex signed-out entry loaded the new sign-in heading without a marketing header/footer. No login form was submitted. Authenticated Studio was not retested on production; its changed UI was tested locally against synthetic API responses, and runtime source/contracts remain unchanged.
+
+[Production Arabic home](evidence/production-home-ar.png) · [Arabic mobile](evidence/production-home-ar-mobile.png) · [Signed-out Studio entry](evidence/production-studio-entry-ar.png).
+
+The final receipt/evidence commit is kept locally and the merged PR description carries the final production metadata. It is not pushed solely to trigger another production build. Main source matches the verified deployed merge.
