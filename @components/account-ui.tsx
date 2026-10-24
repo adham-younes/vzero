@@ -2,6 +2,7 @@
 import Breadcrumbs from './breadcrumbs'
 import {useEffect,useState,useId} from 'react'
 import {Eye,EyeOff} from 'lucide-react'
+import {captureError,event as trackEvent} from '@heronsignal/web'
 import {useRouter} from 'next/navigation'
 import {useLanguage} from './agynexa-shell'
 import Link from './locale-link'
@@ -34,10 +35,10 @@ export function AuthForm({initialMode='login',onSuccess}:{initialMode?:'login'|'
  const {t,ar}=useLanguage();const router=useRouter();const [mode,setMode]=useState(initialMode);const [busy,setBusy]=useState(false);const [error,setError]=useState('');const [showPassword,setShowPassword]=useState(false);const passwordId=useId()
  async function submit(event:React.FormEvent<HTMLFormElement>){
   event.preventDefault();setBusy(true);setError('');const data=new FormData(event.currentTarget)
-  try{const response=await fetch(`/api/auth/${mode}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:data.get('name'),email:data.get('email'),password:data.get('password')})});const result=await response.json()
+  try{trackEvent('auth_submitted',{mode});const response=await fetch(`/api/auth/${mode}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:data.get('name'),email:data.get('email'),password:data.get('password')})});const result=await response.json()
    if(!response.ok){setError(result.error||'temporarily_unavailable');return}
    if(onSuccess)onSuccess();else{const params=new URLSearchParams(window.location.search);router.push(safeAuthReturn(params.get('returnTo')||params.get('next'),ar));router.refresh()}
-  }catch{setError('temporarily_unavailable')}finally{setBusy(false)}
+  }catch(error){captureError(error);setError('temporarily_unavailable')}finally{setBusy(false)}
  }
  return <form className="grid gap-5" onSubmit={submit}>
   {mode==='register'&&<label className="grid gap-2">{t(['Display name','اسم العرض'])}<Input name="name" autoComplete="name" required maxLength={100}/></label>}

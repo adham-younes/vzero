@@ -6,6 +6,7 @@ import { Almarai } from 'next/font/google'
 import Shell from '@/components/agynexa-shell'
 import {headers} from 'next/headers'
 import {siteUrl} from '@/lib/site-routes'
+import {HeronSignalProvider} from './heronsignal-provider'
 const almarai = Almarai({ subsets: ['arabic'], weight: ['400', '700'], variable: '--font-arabic' })
 
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default async function RootLayout({
   return (
     <html lang={ar?'ar':'en'} dir={ar?'rtl':'ltr'} className="dark">
       <body className={`${almarai.variable} antialiased`}>
+        <HeronSignalProvider/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'Organization',name:'AGYNEXA',url:siteUrl,email:'adham@agynexa.si',founder:{'@type':'Person',name:'Adham Younes'}})}}/>
         <Shell>{children}</Shell>
         {process.env.NODE_ENV === 'production' && <Analytics />}
