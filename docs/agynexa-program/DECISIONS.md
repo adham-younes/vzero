@@ -206,3 +206,8 @@ Owner approved the replacement Arabic homepage and requested production publicat
 ## Security closeout and deferred Studio plan — 24 October 2026
 
 Owner requested necessary security updates, bounded tests and complete documentation before starting a fresh Studio discussion. Apply the minimal Next16.4.1/body-parser2.4.0/fast-uri3.1.9 patches; preserve all first-party source, content and saved data. Do not implement Studio redesign/orchestration or resume HeronSignal installation. [Scope and evidence](releases/security-closeout-2026-10-24/README.md).
+
+
+## D-2026-10-24 — Minimal HeronSignal browser installation
+
+The owner explicitly requests the exact public browser snippet site-wide and end-to-end verification. Install only the global layout configuration plus async tracker; no SDK/backend/provider/dependency change. This supersedes the earlier Heron deferral only for this scope. Existing PR45/46 are left unchanged because their scope is broader. Verify official-origin acceptance separately from script loading; MCP is not currently connected. [Receipt](releases/heronsignal-sitewide-2026-10-24/README.md).

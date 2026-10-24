@@ -1,0 +1,29 @@
+{
+  "environment": "local optimized Next.js production build",
+  "origin": "http://localhost:3011",
+  "verifiedAt": "2026-10-24T15:24:20.096Z",
+  "tracker": {
+    "url": "https://api.heronsignal.com/tracker.js",
+    "status": 200,
+    "configPublicKey": "pk_dSrC6lnKvNFN9arrAC5KJ2VOnDzKqK1i",
+    "configInstances": 1,
+    "trackerInstances": 1,
+    "async": true
+  },
+  "navigation": {
+    "from": "/ar",
+    "to": "/ar/resources",
+    "additionalTrackerRequests": 0,
+    "runtimeExceptions": 0
+  },
+  "console": {
+    "applicationErrors": 0,
+    "heronsignalError": "Localhost not on workspace allowed list; recording disabled. Production-origin verification required."
+  },
+  "rejectedPublicParagraph": {
+    "route": "/ar/resources",
+    "byteLimitTextPresent": false,
+    "utf8DumpPresent": false
+  },
+  "scope": "Public pages only. No account, credential, model or mail operation. Verification probe syntax error was corrected; it was not an application exception."
+}

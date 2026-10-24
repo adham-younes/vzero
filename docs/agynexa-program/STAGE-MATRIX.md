@@ -42,3 +42,8 @@ A–E منشورة ضمن النطاق، [إيصال C/D/E](agent-studio/STAGES-
 ## Global Agent Builder content rebuild — Preview scope
 
 The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.
+
+
+## HeronSignal browser integration — separate owner scope
+
+[Minimal root-layout installation](releases/heronsignal-sitewide-2026-10-24/README.md): exact public config plus one Next async afterInteractive tracker, no dependency/API/route/data change. Local verification passed; official-origin publication/collection evidence pending. Studio/agent redesign remains deferred.

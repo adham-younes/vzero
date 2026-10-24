@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-24T14:36:34.111516+00:00",
+  "updated_at": "2026-10-24T15:25:19.740516+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -163,7 +163,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": false,
-  "next_action": "NEXA inbox/outbox implementation is separately authorized with AI autosend off and existing Spacemail MX preserved; external routing/sender readiness/admin delegation remain explicit dependencies. Prior operating decisions unchanged.",
+  "next_action": "Complete the separately authorized minimal HeronSignal browser installation and official-origin verification; deliver maintenance handoff. Studio/agent redesign awaits the owner's new conversation.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -720,5 +720,15 @@
     "verified_date": "2026-10-24",
     "receipt": "releases/approved-home-production-2026-10-24/README.md",
     "evidence": "releases/approved-home-production-2026-10-24/evidence/production-deployment.json"
+  },
+  "heronsignal_browser": {
+    "status": "LOCAL_VERIFIED_PRODUCTION_PENDING",
+    "release": "releases/heronsignal-sitewide-2026-10-24/README.md",
+    "source_file": "app/layout.tsx",
+    "new_dependencies": false,
+    "mcp_tools_available": false,
+    "local_tracker_status": 200,
+    "local_recording": "DISABLED_ORIGIN_NOT_ALLOWLISTED",
+    "studio_redesign": "DEFERRED_BY_OWNER"
   }
 }
