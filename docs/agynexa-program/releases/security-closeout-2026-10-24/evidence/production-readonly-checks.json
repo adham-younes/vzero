@@ -1,0 +1,64 @@
+{
+  "environment": "https://agynexa.si",
+  "scope": "Anonymous readonly public pages and three private route rejections; no session, mutation, model or exploit payload",
+  "status": "PASS",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "AI Agent Builder for Business Operations | AGYNEXA",
+      "security_headers": true
+    },
+    {
+      "path": "/ar",
+      "status": 200,
+      "title": "منصة بناء وكلاء الذكاء الاصطناعي لعمليات الشركات | AGYNEXA",
+      "security_headers": true
+    },
+    {
+      "path": "/security",
+      "status": 200,
+      "title": "AI Agent Security, Permissions and Oversight | AGYNEXA",
+      "security_headers": true
+    },
+    {
+      "path": "/ar/security",
+      "status": 200,
+      "title": "أمان الوكلاء والصلاحيات والإشراف | AGYNEXA",
+      "security_headers": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "title": "Privacy Notice | AGYNEXA",
+      "security_headers": true
+    },
+    {
+      "path": "/ar/terms",
+      "status": 200,
+      "title": "شروط الاستخدام | AGYNEXA",
+      "security_headers": true
+    },
+    {
+      "path": "/api/account",
+      "status": 401,
+      "error": "sign_in_required",
+      "no_store": true,
+      "unauthenticated_rejected": true
+    },
+    {
+      "path": "/api/v1/agents",
+      "status": 401,
+      "error": "sign_in_required",
+      "no_store": true,
+      "unauthenticated_rejected": true
+    },
+    {
+      "path": "/api/v1/projects",
+      "status": 401,
+      "error": "sign_in_required",
+      "no_store": true,
+      "unauthenticated_rejected": true
+    }
+  ]
+}

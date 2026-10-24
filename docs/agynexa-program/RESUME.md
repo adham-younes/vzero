@@ -1,4 +1,6 @@
-Latest maintenance scope: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md). Same-line dependency patches and local checks passed; production receipt is pending. Studio/agent planning is explicitly deferred to a new owner discussion.
+Current scoped work: [minimal HeronSignal browser installation](releases/heronsignal-sitewide-2026-10-24/README.md). Local build/script/config/dedup verified; official-origin publication and collection verification pending. Studio/agent redesign remains deferred.
+
+Latest verified maintenance: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md), main `445424f` / READY production deployment `dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX`. Dependency advisories8→0, local/public checks and bounded anonymous production rejections passed. Studio/agent planning remains deferred.
 
 Latest verified production: [approved Agent Builder content and Studio alignment](releases/approved-home-production-2026-10-24/README.md), PR47 / main `dc9ebe0` / READY deployment `dpl_447stD3JsGD1hZHZsQEmQH8rNFFH` on agynexa.si. Official EN/AR homepage and signed-out Studio entry verified; authenticated Studio checks were local and synthetic. Runtime, data, providers and mail unchanged.
 

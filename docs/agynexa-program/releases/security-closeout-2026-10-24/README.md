@@ -1,6 +1,6 @@
 # Security maintenance and platform handoff — 24 October 2026
 
-Status before release: LOCAL_VERIFIED / OWNER_AUTHORIZED_FOR_MAINTENANCE / AWAITING_PRODUCTION_RECEIPT.
+Status: PRODUCTION_VERIFIED. The authorized maintenance source was merged and its matching Git-triggered production deployment is READY.
 
 ## Owner scope
 
@@ -46,3 +46,12 @@ Use the existing Git integration and one reviewed production merge. Verify the m
 - [Next Server Actions denial-of-service advisory](https://github.com/advisories/GHSA-p3m5-59mp-jv5r)
 - [body-parser advisory](https://github.com/advisories/GHSA-27r3-jxmh-p828)
 - [fast-uri advisory and patched versions](https://github.com/advisories/GHSA-w74x-v6f9-j3xg)
+
+
+## Final production receipt
+
+[Security maintenance PR](https://github.com/adham-younes/vzero/pull/48) merged reviewed head `172a195ef3c89d8e3755df382b845d6b3b305ff0` as `445424ffd331d2d8da2673805e3f7cd2f831b742`. [Deployment](evidence/production-deployment.json): `dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX`, READY/production/Git, official and legacy aliases assigned. No manual duplicate deployment.
+
+[Readonly production checks](evidence/production-readonly-checks.json) passed: six public EN/AR pages return200 with the existing security headers; anonymous Account/Agents/Projects requests return401 and no-store. [Browser evidence](evidence/production-browser.json) confirms the official Arabic security page and layout. No authenticated or exploit test was run.
+
+Final receipt/evidence is committed locally and summarized in the merged PR to avoid a documentation-only production rebuild. The owner subsequently requested a separate minimal HeronSignal snippet installation; that later scope does not change this security receipt.

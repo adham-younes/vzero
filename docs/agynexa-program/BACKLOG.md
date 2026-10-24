@@ -1,4 +1,4 @@
-Latest maintenance scope: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md). Same-line dependency patches and local checks passed; production receipt is pending. Studio/agent planning is explicitly deferred to a new owner discussion.
+Latest verified maintenance: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md), main `445424f` / READY production deployment `dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX`. Dependency advisories8→0, local/public checks and bounded anonymous production rejections passed. Studio/agent planning remains deferred.
 
 Latest verified production: [approved Agent Builder content and Studio alignment](releases/approved-home-production-2026-10-24/README.md), PR47 / main `dc9ebe0` / READY deployment `dpl_447stD3JsGD1hZHZsQEmQH8rNFFH` on agynexa.si. Official EN/AR homepage and signed-out Studio entry verified; authenticated Studio checks were local and synthetic. Runtime, data, providers and mail unchanged.
 
@@ -112,3 +112,8 @@ The owner directs completion of independently fixable manual reply functionality
 ## Global Agent Builder content rebuild — Preview scope
 
 The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.
+
+
+## HeronSignal browser integration — separate owner scope
+
+[Minimal root-layout installation](releases/heronsignal-sitewide-2026-10-24/README.md): exact public config plus one Next async afterInteractive tracker, no dependency/API/route/data change. Local verification passed; official-origin publication/collection evidence pending. Studio/agent redesign remains deferred.
