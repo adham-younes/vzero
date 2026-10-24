@@ -211,3 +211,8 @@ Owner requested necessary security updates, bounded tests and complete documenta
 ## D-2026-10-24 — Minimal HeronSignal browser installation
 
 The owner explicitly requests the exact public browser snippet site-wide and end-to-end verification. Install only the global layout configuration plus async tracker; no SDK/backend/provider/dependency change. This supersedes the earlier Heron deferral only for this scope. Existing PR45/46 are left unchanged because their scope is broader. Verify official-origin acceptance separately from script loading; MCP is not currently connected. [Receipt](releases/heronsignal-sitewide-2026-10-24/README.md).
+
+
+## D-2026-10-24 — Complete local and repository documentation copies
+
+The owner explicitly requires two matching copies dated today: local and in the repository. Publish the complete pending security/HeronSignal production receipts, handoff, status and sanitized evidence to main through a documentation-only PR, then verify local bytes against the fetched remote Git objects. A merged-PR summary alone does not satisfy this direction. No application/source/configuration/data/service change is included. [Dated handoff](HANDOFF-2026-10-24.md).

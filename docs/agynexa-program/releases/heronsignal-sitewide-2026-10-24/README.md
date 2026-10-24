@@ -39,7 +39,7 @@ Actual client navigation to `/ar/resources` retained a single installation and m
 
 HeronSignal MCP is not connected in this session; get_installation_status/add_domain could not be invoked. No add_domain was necessary to resolve a production-origin rejection because none occurred. Dashboard receipt, broader traffic coverage and recording history are NOT ESTABLISHED by this bounded verification.
 
-[Build and source scope](evidence/build-and-scope.json). The only application file changed is `app/layout.tsx`. [Complete file manifest](CHANGED-FILES.md) separates this scope from the preceding security receipt. Final receipt/status/evidence is committed locally and summarized in the merged PR to avoid a documentation-only production rebuild.
+[Build and source scope](evidence/build-and-scope.json). The only application file changed is `app/layout.tsx`. [Complete file manifest](CHANGED-FILES.md) separates this scope from the preceding security receipt. Final receipt/status/evidence was initially committed locally and summarized in the merged PR. The owner subsequently required a complete matching repository copy dated24October2026; this documentation-only publication includes the full receipt, current status and evidence on main.
 
 
 ## Owner-supplied external scan after installation

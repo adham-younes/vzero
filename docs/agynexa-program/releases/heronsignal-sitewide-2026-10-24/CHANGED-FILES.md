@@ -26,4 +26,4 @@ Scope baseline: final security receipt `8d9fb8eafdb47b33cbd7f76d0143bdf634d9570c
 - `docs/agynexa-program/releases/heronsignal-sitewide-2026-10-24/evidence/production-deployment.json`
 - `docs/superpowers/plans/2026-10-24-security-closeout.md`
 
-The production PR also carries the pre-existing security-final-receipt commit8d9fb8e. Its changed files can be inspected separately in Git; those are not additional HeronSignal runtime changes. Final production receipts are a subsequent local documentation commit, with a summary on the merged PR.
+The production PR also carries the pre-existing security-final-receipt commit8d9fb8e. Its changed files can be inspected separately in Git; those are not additional HeronSignal runtime changes. Final production receipts were initially subsequent local documentation commits. The owner later directed complete publication to the repository as well as the matching local copy, dated24October2026. No additional application change is included.
