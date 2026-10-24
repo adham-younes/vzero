@@ -117,3 +117,8 @@ The owner rejected the earlier content Preview and approved a complete global En
 ## HeronSignal browser integration — separate owner scope
 
 [Minimal root-layout installation](releases/heronsignal-sitewide-2026-10-24/README.md): exact public config plus one Next async afterInteractive tracker, no dependency/API/route/data change. PRODUCTION_BROWSER_VERIFIED at main80abfdc / dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs: tracker200, exact config, events204, no new sampled console errors and no duplicate load on client navigation. MCP/dashboard ingestion not established. Studio/agent redesign remains deferred.
+
+
+## Public scan follow-up — owner supplied,24October
+
+[Scan interpretation](releases/heronsignal-sitewide-2026-10-24/README.md): add a suitable social sharing image; assess CSP with report-only observation before enforcement; frame protections must preserve intentional `/widget/*` third-party embedding. These are pending separate bounded changes, not included in the exact HeronSignal snippet request. The94score/363ms scan does not establish field Core Web Vitals or search rankings.

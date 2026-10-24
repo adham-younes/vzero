@@ -40,3 +40,10 @@ Actual client navigation to `/ar/resources` retained a single installation and m
 HeronSignal MCP is not connected in this session; get_installation_status/add_domain could not be invoked. No add_domain was necessary to resolve a production-origin rejection because none occurred. Dashboard receipt, broader traffic coverage and recording history are NOT ESTABLISHED by this bounded verification.
 
 [Build and source scope](evidence/build-and-scope.json). The only application file changed is `app/layout.tsx`. [Complete file manifest](CHANGED-FILES.md) separates this scope from the preceding security receipt. Final receipt/status/evidence is committed locally and summarized in the merged PR to avoid a documentation-only production rebuild.
+
+
+## Owner-supplied external scan after installation
+
+Source: scan pasted by the owner, labelled24October18:27; score94/100, response-time estimate363ms,68 sitemapURLs and8 reachable sampled links. This outside-page scan is separate from measured real-user Core Web Vitals, rankings, dashboard ingestion or comprehensive accessibility testing. These scan counts were not independently rerun here.
+
+Three remaining reported observations agree with current source inspection: Open Graph title/description exist but og:image is absent; no CSP header is configured; no general frame-ancestor restriction is configured. The source includes an intentional third-party iframe widget, so a blanket frame-ancestors self policy would interfere with that published embedding feature. Future hardening should assess ordinary pages and widget routes separately, inventory required Next/Heron/Vercel script/connect origins, observe a report-only policy and verify behavior before enforcement. Report-only is observation, not blocking protection. No such header or social-image modification was bundled into the exact snippet installation. llms.txt was not checked by the pasted scan and is not treated as a proven indexing problem.
