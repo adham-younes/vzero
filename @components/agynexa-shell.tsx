@@ -7,7 +7,7 @@ import {nav} from '@/lib/agynexa'
 import {buttonVariants} from '@/components/ui/button'
 const LanguageContext=createContext({ar:false,t:(copy:readonly string[])=>copy[0]})
 export const useLanguage=()=>useContext(LanguageContext)
-export function Action({href,children}:{href:string;children:React.ReactNode}){return <Link className={buttonVariants({size:'lg'})} href={href}>{children}<ArrowUpRight size={16}/></Link>}
+export function Action({href,children,onClick}:{href:string;children:React.ReactNode;onClick?:React.MouseEventHandler<HTMLAnchorElement>}){return <Link className={buttonVariants({size:'lg'})} href={href} onClick={onClick}>{children}<ArrowUpRight size={16}/></Link>}
 export default function Shell({children}:{children:React.ReactNode}){
  const [open,setOpen]=useState(false)
  const menuButton=useRef<HTMLButtonElement>(null)
