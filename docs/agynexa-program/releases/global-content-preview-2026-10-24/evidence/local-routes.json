@@ -1,0 +1,1197 @@
+{
+  "environment": "local optimized build",
+  "routes": [
+    {
+      "path": "/",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Build AI agents for the way your company works"
+      ]
+    },
+    {
+      "path": "/ar",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "ابنِ وكلاء يفهمون طبيعة العمل في شركتك"
+      ]
+    },
+    {
+      "path": "/services",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "The capabilities behind a business agent system"
+      ]
+    },
+    {
+      "path": "/ar/services",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "المكونات التي يقوم عليها نظام الوكلاء"
+      ]
+    },
+    {
+      "path": "/solutions",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Build around the process your business needs to complete"
+      ]
+    },
+    {
+      "path": "/ar/solutions",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "صمّم النظام حول العملية التي يحتاجها عملك"
+      ]
+    },
+    {
+      "path": "/methodology",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Turn the way your team works into a clear agent design"
+      ]
+    },
+    {
+      "path": "/ar/methodology",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "حوّل طريقة عمل فريقك إلى تصميم واضح للوكلاء"
+      ]
+    },
+    {
+      "path": "/architecture",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "How the parts of an agent system work together"
+      ]
+    },
+    {
+      "path": "/ar/architecture",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "كيف تعمل مكونات نظام الوكلاء معًا؟"
+      ]
+    },
+    {
+      "path": "/integrations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Connect a process to the information and actions it needs"
+      ]
+    },
+    {
+      "path": "/ar/integrations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "اربط العملية بالمعلومة والإجراء اللذين تحتاجهما"
+      ]
+    },
+    {
+      "path": "/security",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Make authority clear before an agent acts"
+      ]
+    },
+    {
+      "path": "/ar/security",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "صلاحيات مفهومة ومسؤولية محددة قبل التنفيذ"
+      ]
+    },
+    {
+      "path": "/resources",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Practical guidance for designing a useful agent system"
+      ]
+    },
+    {
+      "path": "/ar/resources",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "إرشادات تساعدك على تصميم نظام مفيد للعمل"
+      ]
+    },
+    {
+      "path": "/about",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "One Agent Builder platform for different companies"
+      ]
+    },
+    {
+      "path": "/ar/about",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "منصة واحدة تستوعب اختلاف طرق العمل"
+      ]
+    },
+    {
+      "path": "/agentnexos",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "AgentNexOS: the operating model behind coordinated agents"
+      ]
+    },
+    {
+      "path": "/ar/agentnexos",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "AgentNexOS: تصور التشغيل الذي يربط أدوار الوكلاء"
+      ]
+    },
+    {
+      "path": "/start",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Bring one real responsibility into Studio"
+      ]
+    },
+    {
+      "path": "/ar/start",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "ابدأ بمسؤولية فعلية يعرفها فريقك"
+      ]
+    },
+    {
+      "path": "/contact",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Contact AGYNEXA"
+      ]
+    },
+    {
+      "path": "/ar/contact",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "تواصل مع AGYNEXA"
+      ]
+    },
+    {
+      "path": "/industries",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Business agent workflows in their industry context"
+      ]
+    },
+    {
+      "path": "/ar/industries",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "لكل قطاع عملياته ومتطلبات إنجازها"
+      ]
+    },
+    {
+      "path": "/privacy",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Privacy notice"
+      ]
+    },
+    {
+      "path": "/ar/privacy",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "إشعار الخصوصية"
+      ]
+    },
+    {
+      "path": "/terms",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Usage terms"
+      ]
+    },
+    {
+      "path": "/ar/terms",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "شروط الاستخدام"
+      ]
+    },
+    {
+      "path": "/services/customer-service",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Customer service that keeps the whole case in view"
+      ]
+    },
+    {
+      "path": "/ar/services/customer-service",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "خدمة عملاء تحافظ على سياق الحالة"
+      ]
+    },
+    {
+      "path": "/services/employee-operations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Internal requests that keep moving between teams"
+      ]
+    },
+    {
+      "path": "/ar/services/employee-operations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "طلبات داخلية تتكامل خطواتها بين الأقسام"
+      ]
+    },
+    {
+      "path": "/services/process-automation",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "A business process needs more than a sequence of answers"
+      ]
+    },
+    {
+      "path": "/ar/services/process-automation",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "من خطوات متفرقة إلى عملية مترابطة"
+      ]
+    },
+    {
+      "path": "/services/enterprise-knowledge",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Company knowledge that supports the task at hand"
+      ]
+    },
+    {
+      "path": "/ar/services/enterprise-knowledge",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "معرفة الشركة في سياق المهمة"
+      ]
+    },
+    {
+      "path": "/services/agent-orchestration",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Specialist agents need a way to work together"
+      ]
+    },
+    {
+      "path": "/ar/services/agent-orchestration",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "عمل مترابط لوكلاء تختلف مسؤولياتهم"
+      ]
+    },
+    {
+      "path": "/services/enterprise-integrations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "A connection gives an agent a defined way to act"
+      ]
+    },
+    {
+      "path": "/ar/services/enterprise-integrations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "اتصال محدد بين دور الوكيل وأنظمة العمل"
+      ]
+    },
+    {
+      "path": "/services/voice-agents",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "A voice conversation is part of a larger job"
+      ]
+    },
+    {
+      "path": "/ar/services/voice-agents",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "المحادثة الصوتية ضمن مهمة عمل كاملة"
+      ]
+    },
+    {
+      "path": "/services/agent-assist",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Useful context while a person leads the work"
+      ]
+    },
+    {
+      "path": "/ar/services/agent-assist",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "معلومات مناسبة بينما يقود الموظف العمل"
+      ]
+    },
+    {
+      "path": "/services/governance-security",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Authority should be clear before an agent acts"
+      ]
+    },
+    {
+      "path": "/ar/services/governance-security",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "صلاحيات واضحة قبل إجراء الوكيل"
+      ]
+    },
+    {
+      "path": "/services/evaluation-observability",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Know whether the work meets its purpose"
+      ]
+    },
+    {
+      "path": "/ar/services/evaluation-observability",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "اعرف هل تحقق المهمة غرضها"
+      ]
+    },
+    {
+      "path": "/solutions/knowledge",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "AI agents for company knowledge"
+      ]
+    },
+    {
+      "path": "/ar/solutions/knowledge",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "وكلاء يستخدمون معرفة الشركة في سياق العمل"
+      ]
+    },
+    {
+      "path": "/solutions/documents",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Document processing that carries the work forward"
+      ]
+    },
+    {
+      "path": "/ar/solutions/documents",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "معالجة المستندات ضمن سير العمل"
+      ]
+    },
+    {
+      "path": "/solutions/sales",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "AI agents for sales operations"
+      ]
+    },
+    {
+      "path": "/ar/solutions/sales",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "تنسيق عمليات المبيعات بوكلاء الذكاء الاصطناعي"
+      ]
+    },
+    {
+      "path": "/solutions/service",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Customer service agents across the resolution process"
+      ]
+    },
+    {
+      "path": "/ar/solutions/service",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "وكلاء خدمة العملاء من استقبال المشكلة إلى معالجتها"
+      ]
+    },
+    {
+      "path": "/solutions/finance",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "AI agents for finance operations"
+      ]
+    },
+    {
+      "path": "/ar/solutions/finance",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "وكلاء لتنظيم العمل داخل الإدارة المالية"
+      ]
+    },
+    {
+      "path": "/solutions/logistics",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "AI agents for logistics and shipment exceptions"
+      ]
+    },
+    {
+      "path": "/ar/solutions/logistics",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "وكلاء لتنسيق عمليات الشحن ومعالجة التعطل"
+      ]
+    },
+    {
+      "path": "/solutions/procurement",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Procurement workflows from requirement to authorized purchase"
+      ]
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "تنسيق المشتريات من تحديد الاحتياج إلى اعتماد الشراء"
+      ]
+    },
+    {
+      "path": "/solutions/receivables",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Receivables follow-up with the account context intact"
+      ]
+    },
+    {
+      "path": "/ar/solutions/receivables",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "متابعة المستحقات على أساس موقف الحساب"
+      ]
+    },
+    {
+      "path": "/solutions/customer-operations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "Customer operations across the account lifecycle"
+      ]
+    },
+    {
+      "path": "/ar/solutions/customer-operations",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true
+      },
+      "pass": true,
+      "h1": [
+        "تنسيق عمليات العميل عبر أقسام الشركة"
+      ]
+    },
+    {
+      "path": "/login",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true,
+        "noindex": true
+      },
+      "pass": true,
+      "h1": [
+        "Sign in to your workspace"
+      ]
+    },
+    {
+      "path": "/ar/login",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true,
+        "noindex": true
+      },
+      "pass": true,
+      "h1": [
+        "سجّل الدخول إلى مساحتك"
+      ]
+    },
+    {
+      "path": "/signup",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true,
+        "noindex": true
+      },
+      "pass": true,
+      "h1": [
+        "Create your private workspace"
+      ]
+    },
+    {
+      "path": "/ar/signup",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true,
+        "noindex": true
+      },
+      "pass": true,
+      "h1": [
+        "أنشئ مساحة عملك الخاصة"
+      ]
+    },
+    {
+      "path": "/account",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true,
+        "noindex": true
+      },
+      "pass": true,
+      "h1": [
+        "Your account and saved work"
+      ]
+    },
+    {
+      "path": "/ar/account",
+      "checks": {
+        "http": true,
+        "one_h1": true,
+        "h1": true,
+        "title": true,
+        "description": true,
+        "lang": true,
+        "direction": true,
+        "noindex": true
+      },
+      "pass": true,
+      "h1": [
+        "حسابك وأعمالك المحفوظة"
+      ]
+    }
+  ],
+  "passed": 74,
+  "total": 74
+}

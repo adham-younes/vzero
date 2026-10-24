@@ -1,3 +1,7 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
+2026-10-24 content phase: VERIFIED_PREVIEW_READY; [receipt](releases/content-preview-2026-10-24/README.md). No change to runtime stage acceptance or production status.
+
 # مصفوفة المراحل — الحالة الحالية
 
 20 أكتوبر 2026؛ المرجع التفصيلي [تقرير التنفيذ](CURRENT-IMPLEMENTATION-2026-10-20.md). الأصل **7 مراحل، 0–6**؛ إضافة Studio **5 مراحل، A–E**. تسليم مرحلة تصميم لا يعني تنفيذ كل ما صممته.
@@ -31,3 +35,8 @@ A–E منشورة ضمن النطاق، [إيصال C/D/E](agent-studio/STAGES-
 ## متابعة النشر والحسابات
 
 تحسين الواجهة منشور عبر PR #30؛ متابعة تصنيف أخطاء الحسابات محدودة، لا تغير مراحل Studio أو تضيف بوابة عملاء. [الدليل](releases/CONTINUATION-2026-10-20.md).
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

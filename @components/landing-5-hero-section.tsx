@@ -1,9 +1,11 @@
 'use client'
-import { ArrowUpRight, Database, ShieldCheck, Workflow } from 'lucide-react'
-import { Action, useLanguage } from './agynexa-shell'
-import { Button } from '@/components/ui/button'
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog'
-export default function HeroSection() {
- const {t,ar}=useLanguage()
- return <section className="premium-hero"><div className="container"><div className="hero-heading"><p className="eyebrow"><span className="status-dot"/>{t(['ENGINEERED INTELLIGENCE. HUMAN CONTROL.','ذكاء مُهندَس. وتحكّم بشري.'])}</p><h1>{t(['Intelligence, engineered.','ذكاءٌ مُهندَس.'])}<br/><span>{t(['Built for your business.','مصمّم لأعمالك.'])}</span></h1><p className="hero-description">{t(['Your knowledge. Your workflows. One connected agent system. Designed with clear permissions, human oversight and a purpose.','معرفتك. سير عملك. نظام وكلاء مترابط. نصمّمه بصلاحيات واضحة وإشراف بشري وهدف محدّد.'])}</p><div className="hero-actions"><Action href="/start">{t(['Engineer your next system','صمّم نظامك القادم'])}</Action><Dialog><DialogTrigger render={<Button variant="outline" size="lg"/>}>{t(['Explore the architecture','استكشف البنية'])}<ArrowUpRight data-icon="inline-end"/></DialogTrigger><DialogContent className="sm:max-w-3xl max-h-[90dvh] overflow-y-auto p-6 sm:p-8" dir={ar?'rtl':'ltr'}><DialogHeader><DialogTitle>{t(['A system, not an isolated tool.','نظام مترابط، لا أداة معزولة.'])}</DialogTitle><DialogDescription>{t(['An architectural overview. This is not a live agent execution.','نظرة على البنية، وليست تنفيذًا فعليًا للوكيل.'])}</DialogDescription></DialogHeader><div className="grid sm:grid-cols-3 gap-4">{[[Database,'01 / Knowledge','01 / المعرفة'],[Workflow,'02 / Orchestration','02 / التنسيق'],[ShieldCheck,'03 / Human review','03 / مراجعة بشرية']].map(([Icon,en,arabic])=>{const I=Icon as typeof Database;return <div className="panel" key={String(en)}><I className="mb-4 text-primary"/><p>{t([en as string,arabic as string])}</p></div>})}</div></DialogContent></Dialog></div></div></div></section>
+import {Action,useLanguage} from './agynexa-shell'
+import Link from './locale-link'
+import {buttonVariants} from '@/components/ui/button'
+import {ArrowUpRight} from 'lucide-react'
+import {usePageCopy} from './public-copy'
+export default function HeroSection(){
+ const {t}=useLanguage();const copy=usePageCopy('/')
+ const introduction=copy.blocks.slice(0,copy.blocks.findIndex(block=>block.type==='heading'))
+ return <section className="premium-hero"><div className="container"><div className="hero-heading"><p className="eyebrow"><span className="status-dot"/>{t(['AGENT BUILDER STUDIO','استوديو بناء وكلاء الذكاء الاصطناعي'])}</p><h1>{t(['Build AI agents', 'ابنِ وكلاء ذكاء اصطناعي'])}<br/><span>{t(['for your business operations','لعمليات شركتك'])}</span></h1><div className="hero-description space-y-4">{introduction.map((block,i)=><p key={i}>{block.text}</p>)}</div><div className="hero-actions"><Action href="/studio">{t(['Open Studio','افتح الاستوديو'])}</Action><Link href="/services" className={buttonVariants({variant:'outline',size:'lg'})}>{t(['Explore platform capabilities','استكشف قدرات المنصة'])}<ArrowUpRight data-icon="inline-end"/></Link></div></div></div></section>
 }

@@ -635,5 +635,46 @@
     "standalone_send": "UNSUPPORTED by established immutable Inbox contract; fails before provider access",
     "existing_mailbox_public_studio_ui_source": "unchanged",
     "production": "PR43 until corrective source/READY verification"
+  },
+  "content_preview_2026_10_24": {
+    "status": "REJECTED_BY_OWNER_SUPERSEDED_BY_GLOBAL_REBUILD",
+    "production_authorized": false,
+    "main_base": "857356acc12b736ee1874cc21fa298690d98164a",
+    "scope": "bilingual public Agent Builder positioning, truthful notices and metadata; no runtime changes",
+    "receipt": "releases/content-preview-2026-10-24/README.md",
+    "routes_or_api_changed": false,
+    "source_commit": "ba6d85c594937ee50f4e2213a08ebe5ff9625e00",
+    "preview_url": "https://vzero-po4tqbnd8-adhamlouxors-projects.vercel.app",
+    "deployment_id": "dpl_Ecb2rqj4KQjK9SNuBVAYPYAqVbZB",
+    "production_unchanged": true
+  },
+  "global_content_preview_2026_10_24": {
+    "status": "VERIFIED_PREVIEW_READY",
+    "production_authorized": false,
+    "main_base": "857356acc12b736ee1874cc21fa298690d98164a",
+    "receipt": "releases/global-content-preview-2026-10-24/README.md",
+    "public_subjects": 34,
+    "account_subjects_noindex": 3,
+    "language_urls_checked": 74,
+    "capabilities": 10,
+    "solutions": 9,
+    "industry_units": 10,
+    "runtime_changed": false,
+    "provider_names_presentation": "Owner-directed category disclosures in public privacy copy; processing purpose/context retained",
+    "publication": "ONE Preview published; production unchanged",
+    "source_commit": "a1c4658813d3707eef5ea78cdfb105848e63e2d8",
+    "preview_url": "https://vzero-65rbviyuw-adhamlouxors-projects.vercel.app",
+    "deployment_id": "dpl_t1JVv56XvjajrKQV1keWi4WJU4r2",
+    "production_unchanged": true
+  },
+  "approved_home_production": {
+    "status": "OWNER_AUTHORIZED_LOCAL_VERIFICATION_PASS_AWAITING_PRODUCTION_RECEIPT",
+    "date": "2026-10-24",
+    "baseline_main": "857356acc12b736ee1874cc21fa298690d98164a",
+    "release": "releases/approved-home-production-2026-10-24/README.md",
+    "scope": "global bilingual public copy, approved homepage and Studio display strings; existing dedicated-chat design",
+    "runtime_data_provider_mail_changed": false,
+    "local_build": "PASS_AFTER_EXISTING_NEXT_SECURITY_REMINDER_RETRY",
+    "browser": "actual local home EN1440/AR390 and synthetic Studio EN1440/AR390; no live account/model writes"
   }
 }

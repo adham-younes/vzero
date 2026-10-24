@@ -1,3 +1,7 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
+Content preview: reviewed copy applied and local checks passed; Preview published and verified; owner review pending. Runtime generation, enterprise connections, team roles and billing are not implemented by this copy change.
+
 # المتبقي الفعلي — 20 أكتوبر 2026
 
 إصدار العميل منشور عبر PR #33: [الإيصال والأدلة والحدود](../launch/2026-10-22/RELEASE.md). المحادثة والإنشاء والسجل الآمن منفذة ومختبرة محليًا، مع تحقق النماذج الحقيقي منفصلًا. المتبقي المحدد: مراجعة فهم مستخدم، واستكمال الحالات السلبية المحددة المتبقية، والقرارات القانونية والتجارية والاستعادة والاحتفاظ. البنود التاريخية أدناه لا تعني إلغاء الإصلاحات المسلمة.
@@ -103,3 +107,8 @@ The owner's explicit functional cloud-email instruction supersedes the previous 
 ## Immutable native Inbox reply corrective scope — 22 October 2026
 
 The owner directs completion of independently fixable manual reply functionality within existing authorization. Replace mutable provider-draft ID sending with a native Inbox reply POST carrying the exact approved snapshot and immutable-original Reply-To binding. Standalone send has no established immutable Inbox contract and remains unsupported. No new permission request, actual send, wake runtime, DNS/personal forwarding or paid service. [Scope and affected proof](../launch/2026-10-22/NEXA-IMMUTABLE-REPLIES.md).
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

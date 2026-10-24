@@ -1,3 +1,7 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
+2026-10-24 content-only preview: page copy/metadata and local rendering updated; existing routes/APIs/data/runtime unchanged. [Receipt](releases/content-preview-2026-10-24/README.md). Wider self-service product generation remains a separate implementation scope.
+
 # الخطة التقنية وخريطة التنفيذ
 
 الحالة الحالية: موقع ثنائي اللغة وحسابات وموجزات دائمة وAgent Studio A–E منشورة، ثم إصلاح المحادثة وإزالة قسم API المرئي. [التقرير الشامل](CURRENT-IMPLEMENTATION-2026-10-20.md) يربط التنفيذ بالأدلة. آخر تغيير منتج `4b7b5a2`؛ مسودة المرحلة 3 منفصلة عن التشغيل الفعلي.
@@ -131,3 +135,8 @@ slot1/slot2 للإنتاج والمقارنة الاختيارية؛ slot3 Previ
 ## متابعة النشر والحسابات
 
 `authFailure` في lib/supabase/server.ts يميز 429 و503 عن 401 في signedIn وlogin؛ استجابات عامة no-store، دون retry أو تعديل cookies أو DB. [الدليل](releases/CONTINUATION-2026-10-20.md).
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

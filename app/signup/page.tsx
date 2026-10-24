@@ -1,3 +1,4 @@
+import {pageMetadata} from '@/lib/site-routes'
 import {AuthPage} from '@/components/account-ui'
-export const metadata={title:'AGYNEXA — Account',robots:{index:false,follow:false}}
+export const metadata={...pageMetadata(['signup'],false),robots:{index:false,follow:false}}
 export default function Page(){return <AuthPage mode="register"/>}

@@ -1,3 +1,7 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
+Current continuation: [Agent Builder content preview](releases/content-preview-2026-10-24/README.md); no main merge or production promotion. Studio runtime and payment work remain separate scopes.
+
 ## NEXA cloud Inbox PR43 published — 22 October 2026
 
 [Cloud increment and remaining limits](../launch/2026-10-22/NEXA-CLOUD-MAIL.md): PR43 source `8bea79dfd3d57efb866f9f11485ad73043bcd549`, READY `dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc`; existing-owner private metadata views and server-key Inbox binding passed. Same webhook ENABLED for `inbox.email.received` only. Sending OFF; no real email test, forwarding/delivery proof or automatic assistant wake. Dedicated upstream NEXA forwarding remains unverified. Original home/Studio/mail UI/master plan unchanged. No personal mailbox/DNS/MX changes.
@@ -59,3 +63,8 @@ Owner explicitly approved the displayed dedicated Studio composition and said ن
 ## Preserved unpublished NEXA local checkpoint
 
 The separate [email routing candidate](../launch/2026-10-22/NEXA-INBOUND-ROUTING-REVIEW.md) and its code/config/tests remain local and unpublished after Studio PR42. Original shared routing notes are preserved in the verified task-local snapshot; this reapplication retains the new Studio receipt instead of overwriting it. No email/DNS/MX/provider/mailbox/webhook/env mutation or real send is authorized. Latest owner facts identify an already-created Resend NEXA inbox; do not create a duplicate. Dedicated Spacemail NEXA-recipient forwarding still needs isolated local preparation and later review. The full next-task facts are saved privately in work/nexa-email-next-scope.json.
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

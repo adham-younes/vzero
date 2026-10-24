@@ -1,3 +1,7 @@
+Latest owner authorization: publish the reviewed bilingual Agent Builder content, the approved replacement homepage and Studio display-string alignment using the existing dedicated-chat design. Local checks passed; final production evidence is recorded in [releases/approved-home-production-2026-10-24/README.md](releases/approved-home-production-2026-10-24/README.md). No runtime/data/provider/mail scope is added.
+
+Latest owner work: [Agent Builder content preview](releases/content-preview-2026-10-24/README.md). Preview only; existing production receipts below remain historical and unchanged.
+
 # مركز توثيق AGYNEXA
 
 **الدومين الرسمي متحقق:** [agynexa.si](https://agynexa.si) وwww على vzero عبر [PR40](https://github.com/adham-younes/vzero/pull/40)، main`3cc7f8e`، إنتاجREADY`dpl_J62VBt3YpuGrw71tpkLJwepWAnPK`. HTTPS وwww308 وGoogle53بايت وcanonical/sitemap والمعاينة العامة نجحت؛ سجلات البريد وNS دون تغيير والرابط القديم متاح. [الإيصال](../launch/2026-10-22/DOMAIN-CUTOVER.md). مرحلة NEXA للبريد مستقلة؛ لا إرسال تلقائي أو ترحيل لصندوق المالك.
@@ -43,3 +47,8 @@ Final current production: PR41 / `366ca1075809a2d01a0d2fdb643d199740bf43e1` / `d
 ## Studio UI PR42 production receipt — 2026-10-22
 
 [Owner-approved dedicated chat release](../launch/2026-10-22/STUDIO-CHAT-UI-RELEASE.md) published: source `25b89709c3a65ef499c998a179ce3f2ef30deaad`, READY `dpl_9LoGYjBSSzjj3A1Lt14xSeypnPCG`. Existing-owner saved response, locale navigation and reload plus scoped EN/AR layout/HTTP checks passed. This closes the displayed composition release only; larger operating/comprehension and independent email gates remain open. Local NEXA routing candidate is excluded from Git release.
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.
