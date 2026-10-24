@@ -1,3 +1,5 @@
+2026-10-24 content phase: VERIFIED_PREVIEW_READY; [receipt](releases/content-preview-2026-10-24/README.md). No change to runtime stage acceptance or production status.
+
 # مصفوفة المراحل — الحالة الحالية
 
 20 أكتوبر 2026؛ المرجع التفصيلي [تقرير التنفيذ](CURRENT-IMPLEMENTATION-2026-10-20.md). الأصل **7 مراحل، 0–6**؛ إضافة Studio **5 مراحل، A–E**. تسليم مرحلة تصميم لا يعني تنفيذ كل ما صممته.

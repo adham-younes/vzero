@@ -1,0 +1,84 @@
+{
+  "environment": "LOCAL_NEXT_DEV",
+  "routes": 74,
+  "route_checks": "local-routes.json",
+  "build": "PASS after restoring literal solution identifiers; TypeScript PASS",
+  "browser_observations": [
+    {
+      "page": "/",
+      "view": "desktop",
+      "observed": "New Agent Builder heading, Open Studio and capability link visible over unchanged original video"
+    },
+    {
+      "page": "/ar",
+      "view": "390x844",
+      "lang": "ar",
+      "dir": "rtl",
+      "viewport_width": 390,
+      "document_width": 390,
+      "language_switch": "PASS"
+    },
+    {
+      "page": "/ar/services",
+      "view": "390x844",
+      "search_no_match": "0 results and explanatory empty state",
+      "reset": "10 capabilities restored",
+      "brief_suffix_disclosure": "visible after link"
+    },
+    {
+      "page": "/ar/start",
+      "scenario": "synthetic in-page brief review; no save/download/email",
+      "result": "Review content and private-save/manual-sharing explanations visible; save/download disabled until consent"
+    }
+  ],
+  "operations_not_performed": [
+    "account creation",
+    "authenticated saving or deleting",
+    "model invocation",
+    "mail transmission",
+    "database or Auth configuration"
+  ],
+  "protected_files_unchanged": [
+    {
+      "path": "@components/landing-5-hero-video.tsx",
+      "sha256": "e48e61612000df149fadf6e96dc0e03bca1affa9bf40841a2c8f3ff00a61ccca"
+    },
+    {
+      "path": "public/videos/background.mp4",
+      "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85"
+    }
+  ],
+  "phone_dom_checks": [
+    {
+      "path": "/ar/services/voice-agents",
+      "viewport_width": 390,
+      "document_width": 390,
+      "doubled_locale_links": 0
+    },
+    {
+      "path": "/ar/industries",
+      "viewport_width": 390,
+      "document_width": 390,
+      "doubled_locale_links": 0
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "viewport_width": 390,
+      "document_width": 390,
+      "doubled_locale_links": 0
+    },
+    {
+      "path": "/ar/integrations",
+      "viewport_width": 390,
+      "document_width": 390,
+      "doubled_locale_links": 0
+    },
+    {
+      "path": "/ar/signup",
+      "viewport_width": 390,
+      "document_width": 390,
+      "doubled_locale_links": 0
+    }
+  ],
+  "source_commit": "ba6d85c594937ee50f4e2213a08ebe5ff9625e00"
+}

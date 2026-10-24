@@ -1,3 +1,5 @@
+2026-10-24 content-only preview: page copy/metadata and local rendering updated; existing routes/APIs/data/runtime unchanged. [Receipt](releases/content-preview-2026-10-24/README.md). Wider self-service product generation remains a separate implementation scope.
+
 # الخطة التقنية وخريطة التنفيذ
 
 الحالة الحالية: موقع ثنائي اللغة وحسابات وموجزات دائمة وAgent Studio A–E منشورة، ثم إصلاح المحادثة وإزالة قسم API المرئي. [التقرير الشامل](CURRENT-IMPLEMENTATION-2026-10-20.md) يربط التنفيذ بالأدلة. آخر تغيير منتج `4b7b5a2`؛ مسودة المرحلة 3 منفصلة عن التشغيل الفعلي.

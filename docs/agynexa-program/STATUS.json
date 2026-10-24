@@ -635,5 +635,17 @@
     "standalone_send": "UNSUPPORTED by established immutable Inbox contract; fails before provider access",
     "existing_mailbox_public_studio_ui_source": "unchanged",
     "production": "PR43 until corrective source/READY verification"
+  },
+  "content_preview_2026_10_24": {
+    "status": "VERIFIED_PREVIEW_READY",
+    "production_authorized": false,
+    "main_base": "857356acc12b736ee1874cc21fa298690d98164a",
+    "scope": "bilingual public Agent Builder positioning, truthful notices and metadata; no runtime changes",
+    "receipt": "releases/content-preview-2026-10-24/README.md",
+    "routes_or_api_changed": false,
+    "source_commit": "ba6d85c594937ee50f4e2213a08ebe5ff9625e00",
+    "preview_url": "https://vzero-po4tqbnd8-adhamlouxors-projects.vercel.app",
+    "deployment_id": "dpl_Ecb2rqj4KQjK9SNuBVAYPYAqVbZB",
+    "production_unchanged": true
   }
 }

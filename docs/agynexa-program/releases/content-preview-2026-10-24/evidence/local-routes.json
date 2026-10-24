@@ -1,0 +1,594 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/methodology",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/industries",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/start",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/customer-service",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/employee-operations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/process-automation",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/enterprise-knowledge",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/agent-orchestration",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/enterprise-integrations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/voice-agents",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/agent-assist",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/governance-security",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/services/evaluation-observability",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/knowledge",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/documents",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/sales",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/service",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/finance",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/logistics",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/procurement",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/receivables",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/solutions/customer-operations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/architecture",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/integrations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/security",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/resources",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/agentnexos",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/login",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/signup",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/account",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/privacy",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/terms",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/methodology",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/about",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/industries",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/start",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/contact",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/customer-service",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/employee-operations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/process-automation",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/enterprise-knowledge",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/agent-orchestration",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/enterprise-integrations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/voice-agents",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/agent-assist",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/governance-security",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/services/evaluation-observability",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/knowledge",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/documents",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/sales",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/service",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/finance",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/logistics",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/procurement",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/receivables",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/solutions/customer-operations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/architecture",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/integrations",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/security",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/resources",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/agentnexos",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/login",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/signup",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/account",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/privacy",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  },
+  {
+    "path": "/ar/terms",
+    "status": 200,
+    "h1": 1,
+    "titleOk": true,
+    "locale": true,
+    "noForbidden": true
+  }
+]

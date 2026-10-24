@@ -1,3 +1,5 @@
+Latest owner work: [Agent Builder content preview](releases/content-preview-2026-10-24/README.md). Preview only; existing production receipts below remain historical and unchanged.
+
 # مركز توثيق AGYNEXA
 
 **الدومين الرسمي متحقق:** [agynexa.si](https://agynexa.si) وwww على vzero عبر [PR40](https://github.com/adham-younes/vzero/pull/40)، main`3cc7f8e`، إنتاجREADY`dpl_J62VBt3YpuGrw71tpkLJwepWAnPK`. HTTPS وwww308 وGoogle53بايت وcanonical/sitemap والمعاينة العامة نجحت؛ سجلات البريد وNS دون تغيير والرابط القديم متاح. [الإيصال](../launch/2026-10-22/DOMAIN-CUTOVER.md). مرحلة NEXA للبريد مستقلة؛ لا إرسال تلقائي أو ترحيل لصندوق المالك.

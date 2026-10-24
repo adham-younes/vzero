@@ -1,0 +1,31 @@
+{
+  "environment": "VERCEL_PREVIEW",
+  "deployment_id": "dpl_Ecb2rqj4KQjK9SNuBVAYPYAqVbZB",
+  "url": "https://vzero-po4tqbnd8-adhamlouxors-projects.vercel.app",
+  "project": "vzero",
+  "source_commit": "ba6d85c594937ee50f4e2213a08ebe5ff9625e00",
+  "source_mode": "CLI upload from isolated worktree; no remote Git SHA metadata returned",
+  "build": "PASS",
+  "ready_state": "READY",
+  "target_field": null,
+  "target_explanation": "Vercel API uses null for this non-production Preview; CLI explicitly deployed with --target preview. No aliases assigned.",
+  "production_before_and_after": {
+    "id": "dpl_5aS1czntiDqv99dTReWRhc1hLNWy",
+    "commit": "857356acc12b736ee1874cc21fa298690d98164a",
+    "target": "production",
+    "domains": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ],
+    "unchanged": true
+  },
+  "browser": {
+    "english_home": "VERIFIED rendered new Agent Builder content",
+    "arabic_home": "VERIFIED language button, Arabic H1/title, lang=ar and dir=rtl, original video visible",
+    "authentication": "Existing Vercel Preview protection retained; temporary owner-review link issued through Vercel. Access token intentionally omitted from repository."
+  },
+  "main_merge": false,
+  "production_promotion": false,
+  "extra_deployments": 0,
+  "new_runtime_test": false
+}

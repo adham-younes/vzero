@@ -1,3 +1,5 @@
+Current continuation: [Agent Builder content preview](releases/content-preview-2026-10-24/README.md); no main merge or production promotion. Studio runtime and payment work remain separate scopes.
+
 ## NEXA cloud Inbox PR43 published — 22 October 2026
 
 [Cloud increment and remaining limits](../launch/2026-10-22/NEXA-CLOUD-MAIL.md): PR43 source `8bea79dfd3d57efb866f9f11485ad73043bcd549`, READY `dpl_8FawJhwpVkvQd23jwbk4CcYBbQCc`; existing-owner private metadata views and server-key Inbox binding passed. Same webhook ENABLED for `inbox.email.received` only. Sending OFF; no real email test, forwarding/delivery proof or automatic assistant wake. Dedicated upstream NEXA forwarding remains unverified. Original home/Studio/mail UI/master plan unchanged. No personal mailbox/DNS/MX changes.
