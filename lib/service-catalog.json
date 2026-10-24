@@ -3,56 +3,44 @@
     "slug": "customer-service",
     "internalName": "ServiceFlow",
     "title": [
-      "Customer service automation",
-      "أتمتة خدمة العملاء"
+      "Customer Service Agent Workflows",
+      "سير عمل وكلاء خدمة العملاء"
     ],
     "audience": [
       "Support owners who need consistent policy answers and a clear handoff for exceptions.",
-      "لمسؤولي الدعم الذين يحتاجون إجابات متسقة عن السياسات وإحالة واضحة للاستثناءات."
+      "مسؤولو الدعم الذين يحتاجون إجابات متسقة عن السياسات وإحالة واضحة للاستثناءات."
     ],
     "problem": [
-      "A request arrives without enough context to choose the right response.",
-      "يصل الطلب دون سياق كافٍ لاختيار الرد المناسب."
+      "Repeated questions, exceptions and complaints need different handling.",
+      "تحتاج الأسئلة المتكررة والاستثناءات والشكاوى إلى معالجة مختلفة."
     ],
     "offer": [
-      "We design agents that use your approved policies to answer service requests and prepare the next action. Cases that need a person reach your team with the relevant context.",
-      "نصمّم وكلاء يستخدمون سياساتك المعتمدة للإجابة عن طلبات الخدمة وتجهيز الإجراء التالي. وتصل الحالات التي تحتاج موظفًا إلى فريقك ومعها المعلومات اللازمة."
+      "Define the requirements for policy-based customer requests, response preparation and reviewed handoffs, with clear information and decision rules.",
+      "حدّد معلومات طلب الخدمة وقواعد السياسة وتجهيز الرد والإحالة، مع توضيح القرارات التي يتولاها الموظف."
     ],
     "inputs": [
-      "Approved policy text, sample requests, desired response and named reviewer.",
-      "نص سياسة معتمد وطلبات نموذجية والرد المطلوب واسم المراجع."
+      "Define the request categories, approved policies, required facts and the staff decision that applies to each case.",
+      "حدّد أنواع الطلبات والسياسات المعتمدة والحقائق المطلوبة والقرار الذي يتولاه الموظف في كل حالة."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "The request definition needs a route for missing details, relevant guidance and response preparation. Include its categories and stopping rules. Any operational connection needs to preserve those rules and confirm the result of an authorized action.",
+        "يشمل وصف الطلب جمع التفاصيل الناقصة والإرشاد المناسب وتجهيز الرد أو الإحالة، مع تصنيف الحالة وقواعد توقفها. ويحتاج أي اتصال تشغيلي إلى الحفاظ على هذه القواعد وتأكيد نتيجة الإجراء المصرح به."
       ]
     ],
     "outputs": [
       [
-        "A reviewed response flow, missing-information rules and handoff brief template.",
-        "مسار رد للمراجعة وقواعد للمعلومات الناقصة وقالب موجز للإحالة."
-      ],
-      [
-        "A tested private pilot using supplied text; any helpdesk or channel connection is assessed separately.",
-        "تجربة خاصة مختبرة بالنصوص المقدمة؛ ويُقيّم أي ربط بالدعم أو القنوات بصورة مستقلة."
+        "Specify a policy-supported response draft or a case brief as the output, including known facts, unresolved details and the next reviewer.",
+        "اجعل المخرج المطلوب مسودة رد تستند إلى السياسة أو موجز حالة يوضح الحقائق والنواقص والمراجع التالي."
       ]
     ],
     "controls": [
-      "The support owner checks policy, exceptions and customer wording. Internal approval does not send a reply, refund or ticket.",
-      "يراجع مسؤول الدعم السياسة والاستثناءات وصياغة الرد. لا يرسل الاعتماد الداخلي ردًا أو مبلغًا مستردًا أو تذكرة."
+      "The support owner controls exceptions and the rules for external replies.\n\nZendesk, ServiceNow, Freshdesk, WhatsApp Business. Their role and permission scope depend on the task.",
+      "ويتحكم مسؤول الدعم في الاستثناءات وقواعد الرد الخارجي.\n\nZendesk, ServiceNow, Freshdesk, WhatsApp Business. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "use an ordinary question, an ambiguous request and a case that needs staff. Check policy support, correct routing and review time. A prepared response must remain distinct from a confirmed delivery.",
+      "سؤال معتاد وطلب ملتبس وحالة تحتاج إلى موظف. افحص سند السياسة وصحة التوجيه وزمن المراجعة. ويظل تجهيز الرد منفصلًا عن تأكيد تسليمه."
     ],
     "systems": [
       "Zendesk",
@@ -67,92 +55,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Is this already connected to our support system?",
+          "هل توجد صلة بنظام الدعم لدينا بالفعل؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. Zendesk, ServiceNow, Freshdesk and WhatsApp Business are connection requirements to assess. Check the edition, interface, permissions and provider terms before treating any channel as available.",
+          "لا. أسماء أنظمة الدعم والقنوات متطلبات اتصال للفحص. راجع الإصدار والواجهة والصلاحيات وشروط المزود قبل التعامل مع أي قناة باعتبارها متاحة."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "How can we prepare a support workflow?",
+          "كيف نجهّز وصف سير الدعم؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Record a recurring request, its approved policy and the response or handoff needed. You can prepare a private brief through the current form. Saving it does not send a support ticket or notify AGYNEXA.",
+          "وثّق طلبًا متكررًا وسياسة معتمدة والرد أو الإحالة المطلوبة. يمكنك تجهيز موجز خاص من النموذج الحالي. حفظه لا يرسل تذكرة دعم أو إشعارًا إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "A scoped engagement defines a policy-based reply and request-review flow. ServiceFlow in current Studio prepares a brief and an internal request; channel delivery is separate.",
-      "يحدد مشروع التنفيذ مسار رد يستند إلى السياسة ومراجعة للطلب. يجهز ServiceFlow في Studio الحالي موجزًا وطلبًا داخليًا؛ أما التسليم عبر القنوات فنطاق مستقل."
+      "Define the requirements for policy-based customer requests, response preparation and reviewed handoffs, with clear information and decision rules.",
+      "حدّد معلومات طلب الخدمة وقواعد السياسة وتجهيز الرد والإحالة، مع توضيح القرارات التي يتولاها الموظف."
     ],
     "detailTitle": [
-      "Answer repeat customer questions with approved guidance",
-      "أجب عن أسئلة العملاء المتكررة بإرشادات معتمدة"
+      "Give each customer request the right next step",
+      "حدّد الخطوة المناسبة لكل طلب عميل"
     ],
     "detailOffer": [
-      "A scoped engagement defines a policy-based reply and request-review flow. ServiceFlow in current Studio prepares a brief and an internal request; channel delivery is separate.",
-      "يحدد مشروع التنفيذ مسار رد يستند إلى السياسة ومراجعة للطلب. يجهز ServiceFlow في Studio الحالي موجزًا وطلبًا داخليًا؛ أما التسليم عبر القنوات فنطاق مستقل."
+      "Define the requirements for policy-based customer requests, response preparation and reviewed handoffs, with clear information and decision rules.",
+      "حدّد معلومات طلب الخدمة وقواعد السياسة وتجهيز الرد والإحالة، مع توضيح القرارات التي يتولاها الموظف."
     ]
   },
   {
     "slug": "employee-operations",
     "internalName": "WorkOps",
     "title": [
-      "Employee assistance",
-      "مساعدة الموظفين"
+      "Employee Guidance and Request Workflows",
+      "إرشاد الموظفين وسير طلباتهم"
     ],
     "audience": [
       "HR, IT and shared-service owners scoping an employee guidance workflow.",
-      "لمسؤولي الموارد البشرية والتقنية والخدمات المشتركة الذين يحددون مسارًا لإرشاد الموظفين."
+      "مسؤولو الموارد البشرية والتقنية والخدمات المشتركة الذين يحددون مسارًا لإرشاد الموظفين."
     ],
     "problem": [
-      "Employees need to know which rule applies and what information a request requires.",
-      "يحتاج الموظف إلى معرفة القاعدة المناسبة والمعلومات التي يتطلبها طلبه."
+      "Employees may know what they need without knowing the applicable procedure.",
+      "قد يعرف الموظف احتياجه دون أن يعرف الإجراء المناسب."
     ],
     "offer": [
-      "Give employees a way to ask about policy and submit structured requests. We build the assistant around the access allowed for each employee and department.",
-      "نطوّر مساعدًا يتيح للموظفين السؤال عن السياسات وتقديم طلبات منظمة، وفق صلاحيات كل موظف وقسم."
+      "Define employee guidance and internal request requirements, with approved procedures, required fields and review responsibilities.",
+      "حدّد إجراءات إرشاد الموظفين وطلباتهم الداخلية والمعلومات المطلوبة ومسؤوليات المراجعة وفق السياسات المعتمدة."
     ],
     "inputs": [
-      "Approved non-sensitive policy, request categories, access requirements and synthetic employee questions.",
-      "سياسة معتمدة غير حساسة وتصنيفات الطلبات ومتطلبات الوصول وأسئلة موظفين افتراضية."
+      "Define one request type, its approved guidance and the department responsible for the outcome.",
+      "حدّد نوع طلب واحد وإرشاداته المعتمدة والقسم المسؤول عن النتيجة."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "A complete request starts with the information to collect, the applicable policy and the receiving role. Identify who may see each source and which decisions require HR, IT or a manager. A complete workflow definition includes procedure guidance, completeness checks and the permitted handoff.",
+        "يبدأ الطلب المكتمل بالمعلومات اللازمة وخطوات السياسة والجهة المستلمة. حدّد من يرى كل مصدر والقرارات التي تحتاج إلى الموارد البشرية أو التقنية أو المدير. ويشمل وصف سير العمل إرشاد الإجراء وفحص الاكتمال والإحالة المسموحة."
       ]
     ],
     "outputs": [
       [
-        "A source and access plan plus reviewed policy-answer examples.",
-        "خطة مصادر ووصول وأمثلة مراجعة لإجابات السياسات."
-      ],
-      [
-        "Request templates with missing fields and a named handoff owner.",
-        "قوالب طلبات بالحقول الناقصة ومسؤول إحالة محدد."
+        "The requested output should be an answer with its reference or a structured internal request with visible gaps.",
+        "يُحدّد المخرج المطلوب كإجابة بمرجعها أو طلب داخلي منظم بنواقص ظاهرة."
       ]
     ],
     "controls": [
-      "HR or IT validates eligibility, employee-specific facts and any change. The pilot does not read personnel records or provision accounts.",
-      "يتحقق مسؤول الموارد البشرية أو التقنية من الاستحقاق وحقائق الموظف وأي تغيير. لا تقرأ التجربة سجلات العاملين أو تنشئ حسابات."
+      "Eligibility, personal decisions and policy exceptions remain with authorized staff.\n\nMicrosoft Teams, Microsoft Graph, ServiceNow, Jira. Their role and permission scope depend on the task.",
+      "وتبقى قرارات الاستحقاق والقرارات الشخصية واستثناءات السياسة للموظفين المخولين.\n\nMicrosoft Teams, Microsoft Graph, ServiceNow, Jira. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "check a complete request, a missing field and access by an unauthorized role. Measure correct guidance, completeness and the work required by the receiving employee. Document employee identity and access requirements before choosing a shared deployment.",
+      "طلب مكتمل وحقل ناقص ومحاولة وصول من دور غير مخوّل. قِس صحة الإرشاد والاكتمال والجهد المطلوب من الموظف المستلم. ووثّق هوية الموظفين ومتطلبات الوصول قبل اختيار نشر مشترك."
     ],
     "systems": [
       "Microsoft Teams",
@@ -167,92 +143,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Do employees automatically gain access through their work accounts?",
+          "هل يدخل الموظفون تلقائيًا بحسابات العمل؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. Employee identity, permitted records and access removal are requirements to verify. A private owner account does not establish a shared employee portal or an HR-system connection.",
+          "لا. هوية الموظف والسجلات المسموحة وسحب الوصول متطلبات تحتاج إلى تحقق. حساب المالك الخاص لا يثبت بوابة مشتركة أو اتصالًا بنظام الموارد البشرية."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "What information helps define the first employee task?",
+          "ما المعلومات المفيدة لتحديد مهمة الموظف؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Describe one request, its procedure and the responsible department. Identify fields, exceptions and the reviewer. The current brief form records these requirements privately; it does not assign work to employees or send the brief to AGYNEXA.",
+          "صف طلبًا واحدًا وإجراءه والقسم المسؤول، وحدّد الحقول والاستثناءات والمراجع. يوثّق النموذج الحالي هذه المتطلبات بشكل خاص، ولا يسند العمل إلى الموظفين أو يرسل الموجز إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "A scoped engagement designs policy answers and internal request templates. The current owner workspace can test short-text examples; employee roles and HR access need separate implementation.",
-      "يصمم مشروع التنفيذ إجابات السياسات وقوالب الطلبات الداخلية. يمكن لمساحة المالك الحالية اختبار أمثلة نصية قصيرة؛ وتحتاج أدوار الموظفين والوصول للموارد البشرية تنفيذًا مستقلًا."
+      "Define employee guidance and internal request requirements, with approved procedures, required fields and review responsibilities.",
+      "حدّد إجراءات إرشاد الموظفين وطلباتهم الداخلية والمعلومات المطلوبة ومسؤوليات المراجعة وفق السياسات المعتمدة."
     ],
     "detailTitle": [
-      "Help employees find policies and request support",
-      "ساعد الموظفين في العثور على السياسات وطلب الدعم"
+      "Help employees find the procedure and prepare a complete request",
+      "ساعد الموظف على معرفة الإجراء وتجهيز الطلب"
     ],
     "detailOffer": [
-      "A scoped engagement designs policy answers and internal request templates. The current owner workspace can test short-text examples; employee roles and HR access need separate implementation.",
-      "يصمم مشروع التنفيذ إجابات السياسات وقوالب الطلبات الداخلية. يمكن لمساحة المالك الحالية اختبار أمثلة نصية قصيرة؛ وتحتاج أدوار الموظفين والوصول للموارد البشرية تنفيذًا مستقلًا."
+      "Define employee guidance and internal request requirements, with approved procedures, required fields and review responsibilities.",
+      "حدّد إجراءات إرشاد الموظفين وطلباتهم الداخلية والمعلومات المطلوبة ومسؤوليات المراجعة وفق السياسات المعتمدة."
     ]
   },
   {
     "slug": "process-automation",
     "internalName": "ProcessOps",
     "title": [
-      "Procurement, invoices & receivables",
-      "المشتريات والفواتير والتحصيل"
+      "Purchasing and Finance Agent Workflows",
+      "سير وكلاء المشتريات والمالية"
     ],
     "audience": [
       "Purchasing and finance owners reviewing incomplete purchase, invoice or receivables records.",
-      "لمسؤولي المشتريات والمالية الذين يراجعون سجلات شراء أو فواتير أو مستحقات غير مكتملة."
+      "مسؤولو المشتريات والمالية الذين يراجعون سجلات شراء أو فواتير أو مستحقات غير مكتملة."
     ],
     "problem": [
-      "A missing reference, warranty or payment update prevents a reviewer from deciding.",
-      "يمنع مرجع أو ضمان أو تحديث سداد ناقص المراجع من اتخاذ القرار."
+      "A missing order reference or different delivery term can stop a decision.",
+      "قد يوقف القرار مرجع طلب مفقود أو اختلاف في التسليم."
     ],
     "offer": [
-      "We design workflows for purchase requests, invoice matching and receivables follow-up. Your team can trace each step and approve actions that affect the business.",
-      "نصمّم مسارات لطلبات الشراء ومطابقة الفواتير ومتابعة المستحقات. يستطيع فريقك تتبع كل خطوة واعتماد الإجراءات المؤثرة في العمل."
+      "Define requirements for supplier comparisons, invoice checks and receivables preparation, using explicit fields, calculation rules and human decisions.",
+      "نظّم متطلبات مقارنة الموردين والفواتير والمستحقات، وحدّد حقولها وحساباتها والقرارات البشرية اللازمة."
     ],
     "inputs": [
-      "Synthetic record text, required fields, comparison rules and reviewer responsibilities.",
-      "نصوص سجلات افتراضية والحقول المطلوبة وقواعد المقارنة ومسؤوليات المراجع."
+      "Select the process, records, fields, units, currencies and calculation rules that define a useful comparison.",
+      "اختر العملية والسجلات والحقول والوحدات والعملات وقواعد الحساب التي تحدد المقارنة المفيدة."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "The comparison needs record-matching rules, checks and visible exceptions. Its configuration should explain conflicting values and the point at which an authorized person decides. Any operational step after the comparison needs an available connection, a permitted action and a recorded result.",
+        "تحتاج المقارنة إلى قواعد لمطابقة السجلات وفحوص واستثناءات ظاهرة، مع تفسير تعارض القيم ونقطة القرار البشري. وتحتاج أي خطوة تشغيلية بعد المقارنة إلى اتصال متاح وإجراء مسموح ونتيجة مسجلة."
       ]
     ],
     "outputs": [
       [
-        "A field checklist and traceable list of differences or missing evidence.",
-        "قائمة حقول وفروق أو أدلة ناقصة يمكن تتبعها."
-      ],
-      [
-        "A reviewed exception workflow and agreed cases for testing.",
-        "مسار مراجعة للاستثناءات وحالات متفق عليها للاختبار."
+        "A supplier comparison, invoice exception brief or receivables worklist should retain source references and unknown values.",
+        "تحتاج مقارنة الموردين أو موجز استثناءات الفاتورة أو قائمة المستحقات إلى مراجع المصادر والقيم المجهولة."
       ]
     ],
     "controls": [
-      "Finance or purchasing staff verify calculations and approve commitments. No purchase, payment, write-off or collection message is executed.",
-      "يتحقق موظفو المالية أو المشتريات من الحسابات ويعتمدون الالتزامات. لا يُنفذ شراء أو دفع أو شطب أو رسالة تحصيل."
+      "Finance and purchasing owners control commitments and changes to business records.\n\nSAP, Odoo, ERPNext, Microsoft Dynamics 365. Their role and permission scope depend on the task.",
+      "ويتولى مسؤولو المالية والمشتريات الالتزامات وتغييرات السجلات.\n\nSAP, Odoo, ERPNext, Microsoft Dynamics 365. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "check correct transcription, calculations, missed exceptions and duplicate effects. Measure total review effort on comparable cases. Record updates and orders require an available authorized connection; a generated explanation does not constitute execution.",
+      "صحة نقل القيم والحسابات والاستثناءات والتكرار. قِس جهد المراجعة كاملًا على حالات متكافئة. يحتاج تحديث السجلات أو إصدار الأوامر إلى اتصال متاح ومصرح به، ولا يمثل الشرح المولد تنفيذًا."
     ],
     "systems": [
       "SAP",
@@ -267,92 +231,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Does an operations brief grant financial-system access?",
+          "هل يمنح موجز العمليات وصولًا للنظام المالي؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. SAP, Odoo, ERPNext and Dynamics 365 require edition, API and permission checks. Reading a record and changing it are separate operations; neither is authorized by describing it.",
+          "لا. تحتاج الأنظمة المرشحة إلى فحص الإصدار والواجهة والصلاحيات. قراءة السجل وتغييره عمليتان منفصلتان، ولا يُفوض أي منهما بمجرد وصفه."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "How should we start a purchasing or finance definition?",
+          "كيف نبدأ وصف مهمة مشتريات أو مالية؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Select one comparison, supply safe sample values and identify the rules and reviewer. Save or download the brief if useful. That record is not a purchase, payment, ledger update or message to AGYNEXA.",
+          "اختر مقارنة واحدة وقدّم قيمًا آمنة وحدّد القواعد والمراجع. احفظ الموجز أو نزّله عند الحاجة. السجل ليس شراءً أو دفعًا أو تحديثًا محاسبيًا أو رسالة إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "A scoped engagement designs an exception brief from supplied records. The procurement example uses fictional values; live matching and finance-system connections require separate implementation.",
-      "يصمم مشروع التنفيذ موجز استثناءات من السجلات المقدمة. يستخدم مثال المشتريات قيمًا افتراضية؛ وتحتاج المطابقة الحية وربط الأنظمة المالية تنفيذًا مستقلًا."
+      "Define requirements for supplier comparisons, invoice checks and receivables preparation, using explicit fields, calculation rules and human decisions.",
+      "نظّم متطلبات مقارنة الموردين والفواتير والمستحقات، وحدّد حقولها وحساباتها والقرارات البشرية اللازمة."
     ],
     "detailTitle": [
-      "Find missing details in purchase and invoice reviews",
-      "اكتشف البيانات الناقصة في مراجعة الشراء والفواتير"
+      "Turn operational records into a result the owner can review",
+      "حوّل سجلات التشغيل إلى نتيجة يراجعها المسؤول"
     ],
     "detailOffer": [
-      "A scoped engagement designs an exception brief from supplied records. The procurement example uses fictional values; live matching and finance-system connections require separate implementation.",
-      "يصمم مشروع التنفيذ موجز استثناءات من السجلات المقدمة. يستخدم مثال المشتريات قيمًا افتراضية؛ وتحتاج المطابقة الحية وربط الأنظمة المالية تنفيذًا مستقلًا."
+      "Define requirements for supplier comparisons, invoice checks and receivables preparation, using explicit fields, calculation rules and human decisions.",
+      "نظّم متطلبات مقارنة الموردين والفواتير والمستحقات، وحدّد حقولها وحساباتها والقرارات البشرية اللازمة."
     ]
   },
   {
     "slug": "enterprise-knowledge",
     "internalName": "KnowledgeGrid",
     "title": [
-      "Enterprise knowledge & search",
-      "المعرفة المؤسسية والبحث"
+      "Company Knowledge and Source-Based Answers",
+      "معرفة الشركة وإجابات بمصادرها"
     ],
     "audience": [
       "Business, operations and knowledge owners with a defined set of policy questions.",
-      "لمسؤولي الأعمال والعمليات والمعرفة الذين لديهم مجموعة محددة من أسئلة السياسات."
+      "مسؤولو الأعمال والعمليات والمعرفة الذين لديهم مجموعة محددة من أسئلة السياسات."
     ],
     "problem": [
-      "The reader needs an answer tied to the current instruction and a clear gap when it is missing.",
-      "يحتاج القارئ إجابة مرتبطة بالتعليمات الحالية، وتوضيحًا عندما تنقص المعلومة."
+      "Finding a document does not always reveal the instruction a person needs.",
+      "العثور على مستند لا يكشف دائمًا التعليمات المطلوبة."
     ],
     "offer": [
-      "We build search that respects document permissions and cites its sources. The design also covers content updates and questions that the available evidence cannot answer.",
-      "نبني بحثًا يحترم صلاحيات المستندات ويوثّق مصادر الإجابة. ويشمل التصميم تحديث المحتوى والتعامل مع الأسئلة التي لا تكفي الأدلة المتاحة للإجابة عنها."
+      "Configure approved knowledge, source references and unanswered-question behavior. Define the knowledge an agent needs for its task.",
+      "اضبط المعرفة المعتمدة ومراجعها والتعامل مع الأسئلة غير المجاب عنها، وتعرّف على طبقة المعرفة اللازمة لوكلاء الأعمال."
     ],
     "inputs": [
-      "Your task first; optional pasted text or UTF-8 TXT/MD, up to 12,000 bytes and 12,000 characters per source.",
-      "المهمة أولًا؛ ويمكن إضافة نص ملصق أو TXT/MD بترميز UTF-8، بحد 12,000 بايت و12,000 حرف للمصدر."
+      "Identify the questions, approved material, source owners and access rules for the knowledge task.",
+      "حدّد الأسئلة والمواد المعتمدة ومسؤولي المصادر وقواعد الوصول للمهمة المعرفية."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "The source structure should make the basis of an answer easy to inspect. Check its supporting passages and when the agent must say the evidence is insufficient. With the current text-based assistant, inspect the original passages alongside the answer.",
+        "يُفترض أن يجعل تنظيم المصادر سند الإجابة واضحًا. افحص مقاطعها الداعمة ومتى يجب إعلان نقص الدليل. ومع المساعد النصي الحالي، راجع المقاطع الأصلية إلى جانب الإجابة."
       ]
     ],
     "outputs": [
       [
-        "A configured private template, cited sample answers and a missing-evidence checklist.",
-        "قالب خاص مضبوط وإجابات نموذجية بمراجعها وقائمة بالأدلة الناقصة."
-      ],
-      [
-        "An agreed question set and handover notes within the pilot scope.",
-        "مجموعة أسئلة متفق عليها وملاحظات تسليم ضمن نطاق التجربة."
+        "The expected result is an answer with sources and visible unresolved points.",
+        "النتيجة المتوقعة إجابة بمصادرها والنقاط غير المحسومة."
       ]
     ],
     "controls": [
-      "The knowledge owner approves sources and checks answers before use. Current search matches words; no PDF/OCR, semantic search or repository sync.",
-      "يعتمد مسؤول المعرفة المصادر ويفحص الإجابات قبل استخدامها. يطابق البحث الحالي الكلمات؛ ولا يقرأ PDF أو الصور ولا يبحث بالمعنى أو يزامن المستودعات."
+      "The knowledge owner approves material and checks important interpretations. Current source input is pasted text or UTF-8 TXT/MD, up to 12,000 bytes and 12,000 characters per source; search matches words. Record repository, format and permission requirements separately before selecting an integration.\n\nSharePoint, Google Drive, Confluence, PostgreSQL / pgvector. Their role and permission scope depend on the task.",
+      "يعتمد مسؤول المعرفة المواد ويفحص التفسيرات المؤثرة. المدخل الحالي نص ملصق أو TXT/MD بترميز UTF-8، بحد 12,000 بايت و12,000 حرف للمصدر، ويطابق البحث الكلمات. وثّق متطلبات المستودعات والصيغ والصلاحيات بصورة مستقلة قبل اختيار الاتصال.\n\nSharePoint, Google Drive, Confluence, PostgreSQL / pgvector. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "evaluate answer correctness and citation support separately. Include missing instructions, outdated text and restricted sources. Track relevant passages missed, unsupported statements and the time needed to verify an answer.",
+      "صحة الإجابة ودعم الاستشهاد كلًا على حدة. استخدم تعليمات ناقصة ونصًا قديمًا ومصدرًا مقيدًا، وسجّل المقاطع التي لم تُسترجع والعبارات غير المدعومة ووقت التحقق."
     ],
     "systems": [
       "SharePoint",
@@ -367,92 +319,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Does naming a repository connect its documents?",
+          "هل يتصل المستودع عند ذكر اسمه؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. Source access, updates and restrictions must be checked for that repository. SharePoint, Drive, Confluence and data components listed here do not constitute installed Studio connectors.",
+          "لا. يحتاج الوصول وتحديث المصادر وقيودها إلى فحص للمستودع المعني. أسماء المستودعات ومكونات البيانات هنا لا تعني موصلات مثبتة في الاستوديو."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "What can we use in the current workspace?",
+          "ما الذي نستخدمه في المساحة الحالية؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "You can add pasted text or a UTF-8 TXT/MD source, up to 12,000 bytes and 12,000 characters, and inspect supported answers and original passages. Search matches words. A separate workflow brief can record broader source requirements; its private save does not notify AGYNEXA.",
+          "يمكن إضافة نص مباشر أو TXT/MD بترميز UTF-8، حتى 12,000 بايت و12,000 حرف، وفحص الإجابات المدعومة والمقاطع الأصلية. يطابق البحث الكلمات. ويمكن توثيق متطلبات المصادر الأوسع في موجز مستقل؛ حفظه الخاص لا يُشعر AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "A scoped KnowledgeGrid pilot configures a private assistant around one knowledge task. It answers from short approved text with original source excerpts for your review.",
-      "تضبط تجربة KnowledgeGrid المحددة مساعدًا خاصًا لمهمة معرفية واحدة. يجيب من نصوص قصيرة معتمدة ويعرض مقتطفات المصدر الأصلية للمراجعة."
+      "Configure approved knowledge, source references and unanswered-question behavior. Define the knowledge an agent needs for its task.",
+      "اضبط المعرفة المعتمدة ومراجعها والتعامل مع الأسئلة غير المجاب عنها، وتعرّف على طبقة المعرفة اللازمة لوكلاء الأعمال."
     ],
     "detailTitle": [
-      "Find answers in approved company text",
-      "اعثر على إجابات في نصوص الشركة المعتمدة"
+      "Give the agent knowledge it can use and you can inspect",
+      "زوّد الوكيل بمعرفة يستخدمها ويمكنك فحصها"
     ],
     "detailOffer": [
-      "A scoped KnowledgeGrid pilot configures a private assistant around one knowledge task. It answers from short approved text with original source excerpts for your review.",
-      "تضبط تجربة KnowledgeGrid المحددة مساعدًا خاصًا لمهمة معرفية واحدة. يجيب من نصوص قصيرة معتمدة ويعرض مقتطفات المصدر الأصلية للمراجعة."
+      "Configure approved knowledge, source references and unanswered-question behavior. Define the knowledge an agent needs for its task.",
+      "اضبط المعرفة المعتمدة ومراجعها والتعامل مع الأسئلة غير المجاب عنها، وتعرّف على طبقة المعرفة اللازمة لوكلاء الأعمال."
     ]
   },
   {
     "slug": "agent-orchestration",
     "internalName": "AgentFabric",
     "title": [
-      "Agent orchestration",
-      "تنسيق الوكلاء"
+      "Agent Workflow Coordination",
+      "تنسيق سير عمل الوكلاء"
     ],
     "audience": [
       "Operations and product owners planning a task with several specialist review steps.",
-      "لمسؤولي العمليات والمنتج الذين يخططون لمهمة ذات خطوات مراجعة متخصصة."
+      "مسؤولو العمليات والمنتج الذين يخططون لمهمة ذات خطوات مراجعة متخصصة."
     ],
     "problem": [
-      "A draft moves between people without clear inputs or a stopping rule.",
-      "تنتقل المسودة بين أشخاص دون مدخلات واضحة أو قاعدة للتوقف."
+      "A process may need retrieval, checking and preparation before the output is useful.",
+      "قد تحتاج العملية إلى استرجاع وفحص وتجهيز قبل أن تصبح النتيجة مفيدة."
     ],
     "offer": [
-      "We define what each agent does and how it hands work to other agents, fixed workflow steps or a reviewer. Each handoff has a clear responsibility.",
-      "نحدد مهمة كل وكيل وكيف يسلّم العمل إلى وكيل آخر أو خطوة محددة في المسار أو مراجع. ولكل انتقال مسؤولية واضحة."
+      "Define workflow requirements for agent roles, step transitions, tool use, review points and recovery when work cannot continue.",
+      "حدّد أدوار الوكلاء وانتقالات الخطوات والأدوات ونقاط المراجعة وسلوك استعادة العمل عند تعذر المتابعة."
     ],
     "inputs": [
-      "A task example, step owners, allowed information and failure cases.",
-      "مثال مهمة ومسؤولو الخطوات والمعلومات المسموحة وحالات الفشل."
+      "Describe the complete task and the responsibilities that must stay separate.",
+      "صف المهمة كاملة والمسؤوليات التي يجب فصلها."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "For each step, record its role, incoming information, permitted tools and conditions for continuing. Handoffs and approval points need an identified owner. A fixed calculation can use explicit rules; several agents are useful only when distinct responsibilities justify them.",
+        "لكل خطوة دور ومعلومات واردة وأدوات مسموحة وشروط للاستمرار. وتحتاج الإحالات ونقاط الاعتماد إلى مسؤول معلوم. يمكن تنفيذ الحساب الثابت بقواعد واضحة، وتفيد عدة وكلاء عندما يبرر اختلاف المسؤوليات ذلك."
       ]
     ],
     "outputs": [
       [
-        "A responsibility map and versioned workflow design.",
-        "خريطة مسؤوليات وتصميم مؤرخ الإصدارات لسير العمل."
-      ],
-      [
-        "Defined approval, retry and stopping rules; implementation is limited to the agreed steps.",
-        "قواعد محددة للاعتماد وإعادة المحاولة والتوقف؛ ويقتصر التنفيذ على الخطوات المتفق عليها."
+        "The operating requirements should state how progress is tracked, where work pauses and how a retry avoids duplicating an action.",
+        "توضح متطلبات التشغيل طريقة تتبع التقدم ونقاط التوقف وكيف تتجنب إعادة المحاولة تكرار الإجراء."
       ]
     ],
     "controls": [
-      "The process owner approves transitions and exceptions. External tools, durable jobs and team access require separate tested scope.",
-      "يعتمد مسؤول العملية الانتقالات والاستثناءات. تحتاج الأدوات الخارجية والمهام المستمرة ووصول الفرق نطاقًا مستقلًا مختبرًا."
+      "Include the business result and the evidence needed to distinguish completed, stopped and failed steps. The workflow owner decides changes to the process.\n\nREST APIs, MCP servers, Job queues. Their role and permission scope depend on the task.",
+      "وتشمل نتيجة العمل والأدلة التي تميز الخطوات المكتملة والمتوقفة والفاشلة. ويقرر مسؤول سير العمل تغييرات العملية.\n\nREST APIs, MCP servers, Job queues. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "normal completion, missing input, unavailable tools and a repeated event. Confirm that resumed work preserves the approved state. A retry must not create a second commitment or bypass review.",
+      "اكتمال عادي ومدخل ناقص وأداة غير متاحة وحدث متكرر. تأكد من حفظ الحالة المعتمدة عند الاستئناف. ويجب ألا تنشئ إعادة المحاولة التزامًا ثانيًا أو تتجاوز المراجعة."
     ],
     "systems": [
       "REST APIs",
@@ -466,92 +406,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Does an API or MCP name make an agent able to act?",
+          "هل يتيح اسم API أو MCP للوكيل تنفيذ إجراء؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. The interface, identity, permitted operation and result contract need verification. Queues also need rules for retries and duplicate effects. Treat these as workflow requirements, not tools enabled by a written instruction.",
+          "لا. تحتاج الواجهة والهوية والعملية المسموحة وعقد النتيجة إلى تحقق. وتحتاج قوائم الانتظار إلى قواعد لإعادة المحاولة ومنع التكرار. هذه متطلبات للعمل وليست أدوات تفعّلها تعليمة مكتوبة."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "What should a workflow outline contain?",
+          "ماذا يشمل وصف سير العمل؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Record the input, step responsibilities, handoffs, reviewer and expected result. A current private brief preserves that description; it does not run a multi-agent process or send it to AGYNEXA.",
+          "المدخل ومسؤولية كل خطوة والإحالات والمراجع والنتيجة المتوقعة. يحفظ الموجز الخاص الحالي هذا الوصف، ولا يشغّل عملية متعددة الوكلاء أو يرسلها إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "This engagement maps the steps, owners and review points of one task. Multi-agent orchestration means coordinating specialist steps; current Studio is not a general orchestration or long-job platform.",
-      "يرسم هذا المشروع خطوات مهمة واحدة ومسؤوليها ونقاط المراجعة. يعني تنسيق عدة وكلاء تنظيم خطوات متخصصة؛ وStudio الحالي ليس منصة تنسيق عامة أو تشغيل مهام طويلة."
+      "Define workflow requirements for agent roles, step transitions, tool use, review points and recovery when work cannot continue.",
+      "حدّد أدوار الوكلاء وانتقالات الخطوات والأدوات ونقاط المراجعة وسلوك استعادة العمل عند تعذر المتابعة."
     ],
     "detailTitle": [
-      "Coordinate the steps in a business task",
-      "نسّق خطوات مهمة عمل"
+      "Coordinate the steps that make the whole task work",
+      "نسّق الخطوات اللازمة لإنجاز المهمة كاملة"
     ],
     "detailOffer": [
-      "This engagement maps the steps, owners and review points of one task. Multi-agent orchestration means coordinating specialist steps; current Studio is not a general orchestration or long-job platform.",
-      "يرسم هذا المشروع خطوات مهمة واحدة ومسؤوليها ونقاط المراجعة. يعني تنسيق عدة وكلاء تنظيم خطوات متخصصة؛ وStudio الحالي ليس منصة تنسيق عامة أو تشغيل مهام طويلة."
+      "Define workflow requirements for agent roles, step transitions, tool use, review points and recovery when work cannot continue.",
+      "حدّد أدوار الوكلاء وانتقالات الخطوات والأدوات ونقاط المراجعة وسلوك استعادة العمل عند تعذر المتابعة."
     ]
   },
   {
     "slug": "enterprise-integrations",
     "internalName": "ConnectLayer",
     "title": [
-      "Enterprise integrations",
-      "تكامل الأنظمة المؤسسية"
+      "Authorized Connections for Agent Workflows",
+      "اتصالات مصرح بها لسير عمل الوكلاء"
     ],
     "audience": [
       "Application and IT owners considering one permitted exchange between systems.",
-      "لمسؤولي التطبيقات والتقنية الذين يدرسون تبادلًا واحدًا مسموحًا بين الأنظمة."
+      "مسؤولو التطبيقات والتقنية الذين يدرسون تبادلًا واحدًا مسموحًا بين الأنظمة."
     ],
     "problem": [
-      "The desired workflow depends on fields or actions that may not be available in the current edition.",
-      "يعتمد المسار المطلوب على حقول أو إجراءات قد لا يتيحها الإصدار الحالي."
+      "An account brief and an invoice check need different fields and permissions.",
+      "يحتاج موجز العميل حقولًا وصلاحيات تختلف عن مراجعة الفاتورة."
     ],
     "offer": [
-      "We connect approved systems within defined permissions. The work covers synchronization, ownership of each data source and an audit trail for changes.",
-      "نربط الأنظمة المعتمدة بصلاحيات محددة. يشمل العمل مزامنة البيانات وتحديد مصدرها المسؤول وتسجيل التغييرات للمراجعة."
+      "Define connection requirements for business agents, including authorized records, allowed reads and writes, testing, revocation and failure handling.",
+      "متطلبات اتصال لوكلاء الأعمال، تشمل السجلات المسموحة والقراءة والكتابة والاختبار وسحب الوصول ومعالجة الإخفاق."
     ],
     "inputs": [
-      "System name and edition, API documentation, safe sample fields and permitted read/write needs.",
-      "اسم النظام وإصداره وتوثيق الواجهة وعينة حقول آمنة ومتطلبات القراءة والكتابة المسموحة."
+      "Identify the source, destination, required operations and owner authorized to grant access.",
+      "حدّد المصدر والوجهة والعمليات المطلوبة ومن يفوّض الوصول."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "The access requirement starts with the fields and operations the task needs and the person who can authorize them. System edition, interface availability and licensing determine whether a connection is feasible. Review read and write permissions separately.",
+        "يبدأ احتياج الوصول بالحقول والعمليات اللازمة والشخص الذي يفوّضها. يتوقف إمكان الاتصال على إصدار النظام والواجهة والترخيص. وراجع صلاحيات القراءة والكتابة بصورة مستقلة."
       ]
     ],
     "outputs": [
       [
-        "A feasibility finding, field map and permission contract.",
-        "نتيجة فحص جدوى وخريطة حقول وعقد صلاحيات."
-      ],
-      [
-        "If commissioned and feasible, a tested connection with failure handling and operating notes.",
-        "إذا شمله التكليف وثبتت الجدوى، اتصال مختبر بمعالجة للإخفاق وملاحظات تشغيل."
+        "A connection requirement includes authorized operations, field mapping and evidence of a successful or failed exchange.",
+        "يشمل احتياج الاتصال العمليات المسموحة وخريطة الحقول ودليل نجاح التبادل أو إخفاقه."
       ]
     ],
     "controls": [
-      "The system owner grants and reviews access. Production writes require explicit authorization and acceptance; feasibility may rule out a connection.",
-      "يمنح مسؤول النظام الوصول ويراجعه. تتطلب الكتابة في الإنتاج تفويضًا وقبولًا صريحين؛ وقد يخلص فحص الجدوى إلى عدم ملاءمة الاتصال."
+      "Define how access status is checked and how the system owner can remove permission. An uncertain write must remain unresolved until the destination is checked.\n\nSalesforce, HubSpot, Dynamics 365, Zoho, REST / SOAP / MCP. Their role and permission scope depend on the task.",
+      "حدّد فحص حالة الوصول وطريقة سحب مسؤول النظام للصلاحية. وتبقى الكتابة غير المؤكدة معلقة حتى فحص الوجهة.\n\nSalesforce, HubSpot, Dynamics 365, Zoho, REST / SOAP / MCP. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "missing fields, stale data, revoked access and an uncertain update. Check the business record, not just the API status. Named vendors are systems to assess; a vendor name does not establish an active application connection.",
+      "حقل ناقص وبيانات قديمة ووصول مسحوب وتحديث غامض. افحص سجل العمل إلى جانب حالة الواجهة. وأسماء المزودين أنظمة للفحص؛ فذكر المزود لا يثبت اتصال التطبيق به."
     ],
     "systems": [
       "Salesforce",
@@ -567,92 +495,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Are the named platforms available connectors?",
+          "هل المنصات المذكورة موصلات متاحة؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "They are systems to assess. Confirm the actual edition, interface, licensing and permission scope. A successful login or API response alone does not establish that the intended business exchange works.",
+          "هي أنظمة للفحص. أكّد الإصدار والواجهة والترخيص ونطاق الصلاحية. نجاح الدخول أو استجابة الواجهة وحده لا يثبت عمل التبادل المقصود."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "How can we document a connection requirement?",
+          "كيف نوثّق احتياج الاتصال؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Identify source and destination, required fields, reads or writes and the system owner. The brief form can save that requirement privately. It does not create credentials, authorize access or submit a message to AGYNEXA.",
+          "حدّد المصدر والوجهة والحقول والقراءة أو الكتابة ومسؤول النظام. يحفظ النموذج المتطلب بشكل خاص، ولا ينشئ بيانات اعتماد أو يفوّض وصولًا أو يرسل رسالة إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "A scoped engagement checks API access, licensing and permissions, then defines a connection for the selected task. No named vendor is an active Studio connector.",
-      "يفحص مشروع التنفيذ الواجهات والترخيص والصلاحيات، ثم يحدد اتصالًا للمهمة المختارة. لا يمثل أي اسم مزود موصلًا يعمل حاليًا في Studio."
+      "Define connection requirements for business agents, including authorized records, allowed reads and writes, testing, revocation and failure handling.",
+      "متطلبات اتصال لوكلاء الأعمال، تشمل السجلات المسموحة والقراءة والكتابة والاختبار وسحب الوصول ومعالجة الإخفاق."
     ],
     "detailTitle": [
-      "Check access before connecting business systems",
-      "تحقق من الوصول قبل ربط أنظمة العمل"
+      "Give the workflow the access its task requires",
+      "امنح سير العمل الوصول الذي تتطلبه مهمته"
     ],
     "detailOffer": [
-      "A scoped engagement checks API access, licensing and permissions, then defines a connection for the selected task. No named vendor is an active Studio connector.",
-      "يفحص مشروع التنفيذ الواجهات والترخيص والصلاحيات، ثم يحدد اتصالًا للمهمة المختارة. لا يمثل أي اسم مزود موصلًا يعمل حاليًا في Studio."
+      "Define connection requirements for business agents, including authorized records, allowed reads and writes, testing, revocation and failure handling.",
+      "متطلبات اتصال لوكلاء الأعمال، تشمل السجلات المسموحة والقراءة والكتابة والاختبار وسحب الوصول ومعالجة الإخفاق."
     ]
   },
   {
     "slug": "voice-agents",
     "internalName": "VoiceBridge",
     "title": [
-      "Voice agents & handoff",
-      "وكلاء الصوت والتحويل"
+      "Voice Agent Workflow Requirements",
+      "متطلبات سير الوكيل الصوتي"
     ],
     "audience": [
       "Customer operations owners evaluating a defined inbound call journey.",
-      "لمسؤولي خدمة العملاء الذين يقيّمون رحلة مكالمة واردة محددة."
+      "مسؤولو خدمة العملاء الذين يقيّمون رحلة مكالمة واردة محددة."
     ],
     "problem": [
-      "A caller needs a bounded answer and a clear route to a person when the case goes beyond it.",
-      "يحتاج المتصل إجابة محددة وطريقًا واضحًا إلى موظف عندما تتجاوز الحالة حدودها."
+      "A caller may be unclear, miss a required detail or need a person.",
+      "قد يكون كلام المتصل غير واضح أو تنقصه معلومة أو يحتاج إلى شخص."
     ],
     "offer": [
-      "We design calls over licensed voice channels, including how the agent handles interruptions and confirms critical details. Callers can transfer to staff with their context.",
-      "نصمّم المكالمات عبر قنوات صوتية مرخصة، بما يشمل التعامل مع المقاطعة وتأكيد التفاصيل المهمة. ويمكن تحويل المتصل إلى موظف مع معلومات المحادثة."
+      "Define voice-agent requirements for a defined call task, required information, language checks and handoff to an authorized employee.",
+      "حدّد مهمة الوكيل الصوتي والمعلومات المطلوبة واختبار اللغة وشروط التحويل إلى موظف مخوّل."
     ],
     "inputs": [
-      "Call purpose, approved scripts, language samples, consent rules and transfer destination.",
-      "هدف المكالمة والنصوص المعتمدة وعينات اللغة وقواعد الموافقة وجهة التحويل."
+      "Define the call's purpose, information to collect and the conditions for transferring the conversation.",
+      "حدّد غرض المكالمة والمعلومات المطلوبة وشروط تحويل الحوار."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "Write the call flow using approved wording and task rules. Specify language, recording and consent requirements, how important details are confirmed and when a person must take over. A voice connection requires its own authorized channel and transfer tests.",
+        "اكتب مسار المكالمة من الصياغة المعتمدة وقواعد المهمة. حدّد اللغة والتسجيل والموافقة وطريقة تأكيد التفاصيل المؤثرة ومتى يتولى الموظف الحوار. ويحتاج الاتصال الصوتي إلى قناة مصرح بها واختبارات للتحويل."
       ]
     ],
     "outputs": [
       [
-        "A call journey, provider feasibility assessment and language test plan.",
-        "رحلة مكالمة وتقييم جدوى المزود وخطة اختبار اللغة."
-      ],
-      [
-        "An agreed prototype only after provider access, recording requirements and usage costs are confirmed.",
-        "نموذج أولي متفق عليه بعد تأكيد وصول المزود ومتطلبات التسجيل وتكاليف الاستخدام."
+        "The call definition should identify the outcome to record and the context needed at handoff.",
+        "يوضح وصف المكالمة النتيجة المطلوب تسجيلها والمعلومات اللازمة للإحالة."
       ]
     ],
     "controls": [
-      "The operations owner approves scripts, recording and handoff. Dialect support and transfer behavior need actual tests; no universal Arabic coverage promise.",
-      "يعتمد مسؤول العمليات النصوص والتسجيل والتحويل. تحتاج اللهجات وسلوك التحويل إلى اختبار فعلي؛ ولا يوجد وعد بدعم كل اللهجات العربية."
+      "The service owner decides what the agent may promise or change; sensitive cases remain with qualified staff. A call design does not establish a working phone connection.\n\nTwilio, SIP / telephony provider, Contact center platform. Their role and permission scope depend on the task.",
+      "يقرر مسؤول الخدمة ما يستطيع الوكيل الوعد به أو تغييره، وتبقى الحالات الحساسة لدى المختصين. ولا يثبت تصميم المكالمة وجود اتصال هاتفي يعمل.\n\nTwilio, SIP / telephony provider, Contact center platform. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "representative speech, poor audio, interrupted answers and transfer failure. Measure captured-field accuracy, completed tasks and abandoned calls. Track provider usage separately from the quality of the call outcome.",
+      "عينات كلام تمثل الاستخدام وصوت ضعيف وإجابات مقطوعة وإخفاق التحويل. قِس دقة الحقول واكتمال المهام والمكالمات المنقطعة. وسجّل استخدام المزود منفصلًا عن جودة نتيجة المكالمة."
     ],
     "systems": [
       "Twilio",
@@ -666,92 +582,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Does a voice workflow description place calls?",
+          "هل يجري وصف المسار الصوتي مكالمات؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. Phone access, provider eligibility, consent, recording and transfer behavior need their own verification. Twilio, SIP and contact-center systems are connection requirements; the current Studio does not call or process audio.",
+          "لا. يحتاج وصول الهاتف وأهلية المزود والموافقة والتسجيل والتحويل إلى تحقق مستقل. الأسماء متطلبات اتصال، ولا يجري الاستوديو الحالي مكالمات أو يعالج صوتًا."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "What can we prepare without a phone connection?",
+          "ما الذي نجهّزه دون اتصال هاتفي؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Write the call purpose, approved wording, required details and staff handoff conditions. The current brief can record that design privately. Saving it does not start a call, send the brief or reserve a phone service.",
+          "غرض المكالمة والصياغة المعتمدة والتفاصيل المطلوبة وشروط التحويل. يمكن تسجيل التصميم في موجز خاص. حفظه لا يبدأ مكالمة أو يرسل الموجز أو يحجز خدمة هاتف."
         ]
       }
     ],
     "seo": [
-      "This is a separate voice implementation engagement, starting with a reviewed call design. Current Studio does not place calls, record audio or transfer callers.",
-      "هذا مشروع مستقل للتنفيذ الصوتي يبدأ بتصميم مكالمة للمراجعة. لا يجري Studio الحالي مكالمات أو يسجل الصوت أو يحوّل المتصلين."
+      "Define voice-agent requirements for a defined call task, required information, language checks and handoff to an authorized employee.",
+      "حدّد مهمة الوكيل الصوتي والمعلومات المطلوبة واختبار اللغة وشروط التحويل إلى موظف مخوّل."
     ],
     "detailTitle": [
-      "Scope one phone task and a staff handoff",
-      "حدّد مهمة هاتفية واحدة وتحويلها للموظف"
+      "A clear task and handoff for a voice agent",
+      "مهمة واضحة ومسار تحويل للوكيل الصوتي"
     ],
     "detailOffer": [
-      "This is a separate voice implementation engagement, starting with a reviewed call design. Current Studio does not place calls, record audio or transfer callers.",
-      "هذا مشروع مستقل للتنفيذ الصوتي يبدأ بتصميم مكالمة للمراجعة. لا يجري Studio الحالي مكالمات أو يسجل الصوت أو يحوّل المتصلين."
+      "Define voice-agent requirements for a defined call task, required information, language checks and handoff to an authorized employee.",
+      "حدّد مهمة الوكيل الصوتي والمعلومات المطلوبة واختبار اللغة وشروط التحويل إلى موظف مخوّل."
     ]
   },
   {
     "slug": "agent-assist",
     "internalName": "AgentAssist",
     "title": [
-      "Assistance for support teams",
-      "مساعدة موظفي الدعم"
+      "Employee Assistance Within Customer Workflows",
+      "مساندة الموظف داخل سير خدمة العملاء"
     ],
     "audience": [
       "Frontline support and quality owners preparing guidance while staff handle a case.",
-      "لموظفي الدعم ومسؤولي الجودة الذين يجهزون الإرشادات أثناء معالجة الحالة."
+      "موظفو الدعم ومسؤولو الجودة الذين يجهزون الإرشادات أثناء معالجة الحالة."
     ],
     "problem": [
-      "Staff need to separate the applicable policy from unverified conversation notes.",
-      "يحتاج الموظف إلى تمييز السياسة المناسبة عن ملاحظات محادثة غير متحقق منها."
+      "An employee may need the case history, relevant policy and a draft before replying.",
+      "قد يحتاج الموظف إلى تاريخ الحالة والسياسة المناسبة ومسودة قبل الرد."
     ],
     "offer": [
-      "We bring relevant guidance and response drafts into the support workflow. Staff review the suggestions and case summaries before using them.",
-      "نوفر الإرشادات المناسبة ومسودات الرد داخل مسار الدعم. يراجع الموظف الاقتراحات وملخصات الحالات قبل استخدامها."
+      "Define case summaries, source-based guidance and response drafts that support an employee while the employee controls the customer interaction.",
+      "حدّد ملخص الحالة والإرشاد ومصادره ومسودة الرد التي يحتاجها الموظف أثناء التفاعل مع العميل."
     ],
     "inputs": [
-      "Approved guidance, synthetic case notes, desired fields and permitted access.",
-      "إرشادات معتمدة وملاحظات حالات افتراضية والحقول المطلوبة والوصول المسموح."
+      "Define what the employee should receive at that point in the work.",
+      "حدّد ما يجب أن يستلمه عند هذه النقطة من العمل."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "A useful summary separates customer statements, recorded facts and unresolved information. Its structure needs permitted case context and approved guidance sources. Describe when the employee needs that preparation and how it should relate to the current case.",
+        "يفصل الملخص المفيد كلام العميل عن الحقائق المسجلة والمعلومات غير المحسومة. وتحتاج بنيته إلى سياق حالة مسموح ومصادر إرشاد معتمدة. صِف متى يحتاج الموظف إلى هذا التجهيز وعلاقته بالحالة الحالية."
       ]
     ],
     "outputs": [
       [
-        "Reviewed guidance examples with source excerpts and missing facts.",
-        "أمثلة إرشادات للمراجعة بمقتطفات المصدر والحقائق الناقصة."
-      ],
-      [
-        "A summary and response template; any live support interface needs its own implementation.",
-        "قالب ملخص ورد؛ وأي واجهة دعم حية تحتاج تنفيذًا خاصًا بها."
+        "Ask for a case summary, relevant references and optional response wording as the reviewable output.",
+        "اجعل المخرج القابل للمراجعة ملخص حالة ومراجع مناسبة وصياغة رد اختيارية."
       ]
     ],
     "controls": [
-      "The support employee checks facts and sends any message. No live transcript, customer lookup or automatic response exists in current Studio.",
-      "يفحص موظف الدعم الحقائق ويرسل أي رسالة. لا يتيح Studio الحالي نص محادثة حيًا أو استعلام عميل أو ردًا تلقائيًا."
+      "The employee checks the interpretation and controls the reply or next action. This staff-side assistance complements ServiceFlow's wider request-handling process.\n\nZendesk, ServiceNow, Contact center platform. Their role and permission scope depend on the task.",
+      "يفحص الموظف التفسير ويتحكم في الرد والإجراء التالي. وتكمل هذه المساندة عملية معالجة الطلبات الأوسع في ServiceFlow.\n\nZendesk, ServiceNow, Contact center platform. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "retain material details, cite the right guidance and identify urgent exceptions. Measure editing and verification time. List the support panel, transcript source and staff permissions as connection requirements.",
+      "حفظ التفاصيل المؤثرة والاستشهاد بالإرشاد الصحيح واكتشاف الاستثناء العاجل. قِس وقت التعديل والتحقق. ووثّق لوحة الدعم ومصدر النص وصلاحيات الموظفين كمتطلبات اتصال."
     ],
     "systems": [
       "Zendesk",
@@ -765,92 +669,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Will guidance appear inside our support application?",
+          "هل تظهر الإرشادات داخل تطبيق الدعم؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "That depends on an available authorized integration and the selected interface. A transcript feed or customer lookup needs explicit access. The current private workspace is not an installed employee panel in a support system.",
+          "يتوقف ذلك على اتصال متاح ومصرح به والواجهة المختارة. يحتاج النص الحي أو استعلام العميل إلى وصول صريح. المساحة الخاصة الحالية ليست لوحة موظف مثبتة في نظام دعم."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "What makes a useful staff-assistance definition?",
+          "ما الوصف المفيد لمساندة الموظف؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Name the employee task, case facts, approved guidance and summary needed before replying. You can record this in a private brief or work with permitted text in Studio. Saving the brief does not send it to an employee or AGYNEXA.",
+          "مهمة الموظف وحقائق الحالة والإرشاد المعتمد والملخص المطلوب قبل الرد. يمكن توثيق ذلك في موجز خاص أو العمل بنص مسموح في الاستوديو. حفظ الموجز لا يرسله إلى موظف أو إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "A scoped engagement designs cited guidance, case summaries and response drafts for staff. A support-system panel or transcript feed is separately assessed.",
-      "يصمم مشروع التنفيذ إرشادات بمراجعها وملخصات حالات ومسودات رد للموظفين. ويُقيّم لوح داخل نظام الدعم أو مصدر نص المحادثة بصورة مستقلة."
+      "Define case summaries, source-based guidance and response drafts that support an employee while the employee controls the customer interaction.",
+      "حدّد ملخص الحالة والإرشاد ومصادره ومسودة الرد التي يحتاجها الموظف أثناء التفاعل مع العميل."
     ],
     "detailTitle": [
-      "Give support staff approved guidance",
-      "وفّر لموظفي الدعم إرشادات معتمدة"
+      "Give the employee useful context during the task",
+      "وفّر للموظف سياقًا مفيدًا أثناء المهمة"
     ],
     "detailOffer": [
-      "A scoped engagement designs cited guidance, case summaries and response drafts for staff. A support-system panel or transcript feed is separately assessed.",
-      "يصمم مشروع التنفيذ إرشادات بمراجعها وملخصات حالات ومسودات رد للموظفين. ويُقيّم لوح داخل نظام الدعم أو مصدر نص المحادثة بصورة مستقلة."
+      "Define case summaries, source-based guidance and response drafts that support an employee while the employee controls the customer interaction.",
+      "حدّد ملخص الحالة والإرشاد ومصادره ومسودة الرد التي يحتاجها الموظف أثناء التفاعل مع العميل."
     ]
   },
   {
     "slug": "governance-security",
     "internalName": "ControlPlane",
     "title": [
-      "Governance & approval controls",
-      "الحوكمة وضوابط الاعتماد"
+      "Agent Access and Approval Controls",
+      "ضوابط وصول الوكلاء واعتمادهم"
     ],
     "audience": [
       "Security, risk and workflow owners scoping access and approval rules.",
-      "لمسؤولي الأمان والمخاطر وسير العمل الذين يحددون قواعد الوصول والاعتماد."
+      "مسؤولو الأمان والمخاطر وسير العمل الذين يحددون قواعد الوصول والاعتماد."
     ],
     "problem": [
-      "A proposed workflow leaves unclear who may read a source or approve a change.",
-      "لا يوضح المسار المقترح من يقرأ المصدر أو يعتمد التغيير."
+      "A business description does not grant permission to read records or make changes.",
+      "وصف العمل لا يمنح إذنًا بقراءة السجلات أو تغييرها."
     ],
     "offer": [
-      "We define which actions an agent may take, who must approve them and what evidence the audit record needs. The rules follow your organization’s permissions.",
-      "نحدد الإجراءات المسموحة للوكيل ومن يعتمدها والأدلة المطلوبة في سجل التدقيق، وفق صلاحيات مؤسستك."
+      "Define controls for company workspaces, authorized tools and exact human approvals, with records that distinguish proposals from confirmed actions.",
+      "حدّد ضوابط مساحة الشركة والأدوات والاعتماد البشري، والأدلة التي تميز المقترح عن الإجراء المؤكد."
     ],
     "inputs": [
-      "Data types, allowed readers, exact proposed changes, reviewers and risk cases.",
-      "أنواع البيانات والقراء المسموحون والتغييرات المقترحة نفسها والمراجعون وحالات المخاطر."
+      "Define the people, information and operations involved in the workflow.",
+      "حدّد الأشخاص والمعلومات والعمليات التي يشملها سير العمل."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "The reviewer needs the permission boundary and the exact proposal in front of them. Approval must refer to that exact version, with a clear consequence. A company workspace requirement must cover separation of data, configuration, secrets and execution access, with tests for each boundary.",
+        "يحتاج المراجع إلى حدود صلاحية واضحة والمقترح نفسه أمامه. يجب أن يرتبط الاعتماد بالنسخة نفسها وأن تكون نتيجته واضحة. وتشمل متطلبات مساحة الشركة فصل البيانات والإعدادات والأسرار والوصول إلى التشغيل، مع اختبار كل حد."
       ]
     ],
     "outputs": [
       [
-        "A permission plan and rules for the exact request a person approves.",
-        "خطة صلاحيات وقواعد للطلب المحدد الذي يعتمده الشخص."
-      ],
-      [
-        "A test checklist and record fields linking proposal, decision and result.",
-        "قائمة اختبارات وحقول سجل تربط المقترح والقرار والنتيجة."
+        "The review requirements should identify an inspectable permission and decision record, including blocked, rejected and uncertain actions.",
+        "تحدد متطلبات المراجعة سجل صلاحيات وقرارات يمكن فحصه، بما فيه الإجراءات المحظورة والمرفوضة وغير المؤكدة."
       ]
     ],
     "controls": [
-      "The responsible security and process owners approve scope. Regulatory opinions and formal certifications need independent qualified review.",
-      "يعتمد مسؤولو الأمان والعملية النطاق. تحتاج الآراء التنظيمية والشهادات الرسمية مراجعة مستقلة من مختص مؤهل."
+      "The authorized person decides on consequential changes; a later edit invalidates an approval that no longer matches the action.\n\nIdentity provider, PostgreSQL, Audit / SIEM destination. Their role and permission scope depend on the task.",
+      "يقرر الشخص المخوّل التغييرات المؤثرة، ويُبطل التعديل اللاحق اعتمادًا لم يعد يطابق الإجراء.\n\nIdentity provider, PostgreSQL, Audit / SIEM destination. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "cross-workspace access, removed permission, changed proposals and duplicate approvals. Keep identity, role and workspace-isolation tests separate. No certification, local processing or security guarantee is implied by this page.",
+      "وصول بين المساحات وصلاحية مسحوبة ومقترح متغير واعتماد مكرر. وافصل اختبارات الهوية والأدوار وعزل المساحات. ولا تعني الصفحة شهادة أو معالجة محلية أو ضمانًا أمنيًا."
     ],
     "systems": [
       "Identity provider",
@@ -864,92 +756,80 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Does a private account establish enterprise roles or compliance?",
+          "هل يثبت الحساب الخاص أدوارًا مؤسسية أو امتثالًا؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No. A sole-owner login is different from employee roles, company workspace isolation and certification. Identity, records, approval rules and audit destinations are requirements that need evidence for the selected use.",
+          "لا. دخول المالك يختلف عن أدوار الموظفين وعزل مساحة الشركة والشهادات. الهوية والسجلات والاعتماد ووجهات التدقيق متطلبات تحتاج إلى دليل للاستخدام المعني."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "What belongs in an access and approval brief?",
+          "ما الذي يشمله موجز الوصول والاعتماد؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "List permitted data, operations, reviewers and the consequence of approval. Record what must stop after a permission change. A private saved brief does not enforce these rules, activate a connection or notify AGYNEXA.",
+          "البيانات والعمليات المسموحة والمراجعون ونتيجة الاعتماد وما يتوقف عند تغير الصلاحية. حفظ الموجز بشكل خاص لا يفرض القواعد أو يفعّل اتصالًا أو يُشعر AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "This engagement defines permissions and review rules for a named task. The current internal request approval is a starting example, not certification or enterprise governance coverage.",
-      "يحدد هذا المشروع الصلاحيات وقواعد المراجعة لمهمة محددة. اعتماد الطلب الداخلي الحالي مثال للبداية؛ ولا يثبت شهادة أو تغطية للحوكمة المؤسسية."
+      "Define controls for company workspaces, authorized tools and exact human approvals, with records that distinguish proposals from confirmed actions.",
+      "حدّد ضوابط مساحة الشركة والأدوات والاعتماد البشري، والأدلة التي تميز المقترح عن الإجراء المؤكد."
     ],
     "detailTitle": [
-      "Set who can view information and approve actions",
-      "حدّد من يطّلع على المعلومات ويعتمد الإجراءات"
+      "Know what the system may access and who can approve an action",
+      "اعرف ما يصل إليه النظام ومن يعتمد الإجراء"
     ],
     "detailOffer": [
-      "This engagement defines permissions and review rules for a named task. The current internal request approval is a starting example, not certification or enterprise governance coverage.",
-      "يحدد هذا المشروع الصلاحيات وقواعد المراجعة لمهمة محددة. اعتماد الطلب الداخلي الحالي مثال للبداية؛ ولا يثبت شهادة أو تغطية للحوكمة المؤسسية."
+      "Define controls for company workspaces, authorized tools and exact human approvals, with records that distinguish proposals from confirmed actions.",
+      "حدّد ضوابط مساحة الشركة والأدوات والاعتماد البشري، والأدلة التي تميز المقترح عن الإجراء المؤكد."
     ]
   },
   {
     "slug": "evaluation-observability",
     "internalName": "InsightLoop",
     "title": [
-      "Evaluation & operational visibility",
-      "التقييم ومتابعة التشغيل"
+      "Agent Testing and Runtime Evaluation",
+      "اختبار الوكلاء وتقييم التشغيل"
     ],
     "audience": [
       "Service and product owners who need an inspectable quality and failure record.",
-      "لمسؤولي الخدمة والمنتج الذين يحتاجون سجلًا قابلًا للفحص للجودة والإخفاق."
+      "مسؤولو الخدمة والمنتج الذين يحتاجون سجلًا قابلًا للفحص للجودة والإخفاق."
     ],
     "problem": [
-      "A plausible answer can still use the wrong source or omit a material fact.",
-      "قد تبدو الإجابة مقنعة رغم استخدامها مصدرًا غير مناسب أو إغفال حقيقة مؤثرة."
+      "A fluent answer can contain an unsupported detail or create extra work for its reviewer.",
+      "قد تحمل الإجابة السلسة تفصيلًا بلا سند أو تزيد عمل المراجع."
     ],
     "offer": [
-      "We build test cases and execution records to check results against your acceptance criteria. Regular reviews show where the workflow needs changes.",
-      "نبني حالات اختبار وسجلات تنفيذ لفحص النتائج مقابل معايير القبول. وتوضح المراجعة الدورية المواضع التي تحتاج تعديلًا في سير العمل."
+      "Define testing and monitoring requirements for agent workflows, covering output quality, review effort, operating failures and cost evidence.",
+      "جهّز فحوص سير عمل الوكلاء من جودة المخرجات وجهد المراجعة إلى الإخفاقات وأدلة التكلفة."
     ],
     "inputs": [
-      "Expected outputs, approved source excerpts, rejected examples and measured baseline where available.",
-      "المخرجات المتوقعة ومقتطفات المصادر المعتمدة وأمثلة مرفوضة وخط أساس مقاس عند توفره."
+      "Define the expected result and the cases that should stop or remain unresolved.",
+      "حدّد النتيجة المتوقعة والحالات التي يجب إيقافها أو تركها غير محسومة."
     ],
     "steps": [
       [
-        "Review the task, safe sample and missing requirements.",
-        "مراجعة المهمة والعينة الآمنة والمتطلبات الناقصة."
-      ],
-      [
-        "Design and test the agreed output within its permitted scope.",
-        "تصميم المخرج المتفق عليه واختباره ضمن النطاق المسموح."
-      ],
-      [
-        "Have the named owner review the result and decide the next step.",
-        "مراجعة المسؤول المحدد للنتيجة واتخاذ قرار الخطوة التالية."
+        "Start the evaluation with the result the workflow must produce. Use representative cases and keep acceptance cases separate from examples used to tune instructions. Specify the records needed to inspect completed steps, errors, corrections and usage.",
+        "ابدأ التقييم بالنتيجة التي يجب أن تحققها المهمة. استخدم حالات تمثل العمل وافصل اختبارات القبول عن أمثلة ضبط التعليمات. وعيّن السجلات اللازمة لفحص الخطوات المكتملة والأخطاء والتصحيحات والاستخدام."
       ]
     ],
     "outputs": [
       [
-        "A reviewed test set covering correct answers, missing facts, denied access and provider failure.",
-        "مجموعة اختبارات مراجعة للإجابة الصحيحة ونقص الحقائق ورفض الوصول وإخفاق المزود."
-      ],
-      [
-        "A results record with corrections, residual limits and a release recommendation.",
-        "سجل نتائج بالتصحيحات والحدود المتبقية وتوصية بشأن الإطلاق."
+        "The evaluation brief identifies the workflow version, expected outcomes and evidence to collect.",
+        "يوضح موجز التقييم إصدار سير العمل والنتائج المتوقعة والأدلة المطلوبة."
       ]
     ],
     "controls": [
-      "The workflow owner accepts results with a subject specialist. Tests cover chosen cases; they do not guarantee every future generated answer.",
-      "يقبل مسؤول المسار النتائج بمشاركة مختص بالمجال. تغطي الاختبارات الحالات المختارة؛ ولا تضمن كل إجابة مولدة مستقبلًا."
+      "The responsible user decides whether an observed result is acceptable. Keep the sample and metric definition visible so that later comparisons describe the same work.\n\nApplication logs, PostgreSQL, Observability destination. Their role and permission scope depend on the task.",
+      "ويقرر المستخدم المسؤول قبول النتيجة المرصودة. أبقِ العينة وتعريف المقياس ظاهرين حتى تصف المقارنات اللاحقة العمل نفسه.\n\nApplication logs, PostgreSQL, Observability destination. تتحدد وظيفتها وصلاحياتها بحسب المهمة."
     ],
     "metrics": [
-      "Agree representative cases and a baseline with the reviewer. Record factual corrections, missing inputs and denied actions; report any measured result only after testing.",
-      "الاتفاق مع المراجع على حالات ممثلة وخط أساس. تسجيل تصحيحات الحقائق والمدخلات الناقصة والإجراءات المرفوضة؛ ولا تُعلن نتيجة مقاسة قبل الاختبار."
+      "known factual errors, missing inputs, denied access and provider failures. Compare equivalent cases against a baseline and include human correction time. Visible current usage estimates are not invoices or guaranteed spending limits.",
+      "أخطاء حقائق معروفة ومدخل ناقص ووصول مرفوض وإخفاق مزود. قارن حالات متكافئة بخط أساس واحتسب وقت التصحيح البشري. وتقديرات الاستخدام الحالية ليست فواتير أو حدود إنفاق مضمونة."
     ],
     "systems": [
       "Application logs",
@@ -963,36 +843,36 @@
     "faq": [
       {
         "question": [
-          "Is this already connected to our systems?",
-          "هل هذا متصل بأنظمتنا بالفعل؟"
+          "Is a monitoring destination already connected?",
+          "هل توجد صلة بأداة المتابعة بالفعل؟"
         ],
         "answer": [
-          "No. Vendor names are assessment candidates. A connection needs edition, API, permission and cost checks plus an explicitly agreed implementation.",
-          "لا. أسماء المزودين مرشحة للتقييم. يحتاج الاتصال إلى فحص الإصدار والواجهة والصلاحيات والتكلفة، ثم تنفيذ متفق عليه صراحة."
+          "No connection is implied. Define permitted logs, fields, retention and destination access. Existing usage estimates and private history do not constitute a complete monitoring dashboard or a provider invoice.",
+          "لا يفترض ذكر الأداة اتصالًا. حدّد السجلات والحقول والاحتفاظ ووصول الوجهة. تقديرات الاستخدام والسجل الخاص ليست لوحة متابعة متكاملة أو فاتورة مزود."
         ]
       },
       {
         "question": [
-          "What does the first conversation do?",
-          "ما وظيفة المحادثة الأولى؟"
+          "How can we define a useful evaluation?",
+          "كيف نحدد تقييمًا مفيدًا؟"
         ],
         "answer": [
-          "Describe the task in private Studio. It can help clarify the scope and prepare a draft. Saving a brief keeps it in your account; it does not send it to AGYNEXA. Price, delivery and support need a separate agreement.",
-          "اشرح المهمة في Studio الخاص. يمكنه توضيح النطاق وتجهيز مسودة. يحفظ الموجز في حسابك إذا اخترت حفظه؛ ولا يرسله إلى AGYNEXA. تحتاج الأسعار والتسليم والدعم اتفاقًا مستقلًا."
+          "Prepare representative inputs, expected answers, known failures and the review effort to measure. The current brief can preserve these requirements privately; it does not launch a test suite or send a report to AGYNEXA.",
+          "جهّز مدخلات تمثل العمل وإجابات متوقعة وإخفاقات معروفة وجهد المراجعة المطلوب قياسه. يحفظ الموجز هذه المتطلبات بشكل خاص، ولا يبدأ حزمة اختبارات أو يرسل تقريرًا إلى AGYNEXA."
         ]
       }
     ],
     "seo": [
-      "This engagement prepares representative tests and a failure-review process for one workflow. A monitoring dashboard is specified or built only when included in the agreed scope.",
-      "يجهز هذا المشروع اختبارات ممثلة وطريقة لمراجعة الإخفاق لمسار واحد. لا يُحدد لوح متابعة أو يُنفذ إلا إذا شمله النطاق المتفق عليه."
+      "Define testing and monitoring requirements for agent workflows, covering output quality, review effort, operating failures and cost evidence.",
+      "جهّز فحوص سير عمل الوكلاء من جودة المخرجات وجهد المراجعة إلى الإخفاقات وأدلة التكلفة."
     ],
     "detailTitle": [
-      "Test whether an AI workflow meets your requirements",
-      "اختبر التزام مسار الذكاء الاصطناعي بمتطلباتك"
+      "Test the result before you rely on the workflow",
+      "اختبر النتيجة قبل الاعتماد على سير العمل"
     ],
     "detailOffer": [
-      "This engagement prepares representative tests and a failure-review process for one workflow. A monitoring dashboard is specified or built only when included in the agreed scope.",
-      "يجهز هذا المشروع اختبارات ممثلة وطريقة لمراجعة الإخفاق لمسار واحد. لا يُحدد لوح متابعة أو يُنفذ إلا إذا شمله النطاق المتفق عليه."
+      "Define testing and monitoring requirements for agent workflows, covering output quality, review effort, operating failures and cost evidence.",
+      "جهّز فحوص سير عمل الوكلاء من جودة المخرجات وجهد المراجعة إلى الإخفاقات وأدلة التكلفة."
     ]
   }
 ]

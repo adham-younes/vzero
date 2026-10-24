@@ -10,8 +10,8 @@ const almarai = Almarai({ subsets: ['arabic'], weight: ['400', '700'], variable:
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: 'AGYNEXA — Enterprise agent systems', template: '%s | AGYNEXA' },
-  description: 'Enterprise AI agents, RAG and workflow automation with explicit permissions and acceptance criteria.',
+  title: { default: 'AGYNEXA — Business Agent Builder Studio', template: '%s | AGYNEXA' },
+  description: 'Configure AI agents around company knowledge and business workflows, with approved information and human review.',
   generator: 'v0.app',
   icons: {
     icon: [

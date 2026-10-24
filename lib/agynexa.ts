@@ -1,286 +1,335 @@
 export type Copy = [string, string]
-export const nav: [string,string,string][] = [['solutions','Solutions','الحلول'],['services','Services','الخدمات'],['architecture','Architecture','الهندسة'],['methodology','Methodology','المنهجية'],['integrations','Integrations','التكاملات'],['industries','Industries','القطاعات'],['resources','Resources','الموارد'],['about','About','من نحن'],['security','Security','الأمان']]
+export const nav: [string,string,string][] = [['solutions','Solutions','الحلول'],['services','Capabilities','قدرات المنصة'],['architecture','Architecture','البنية التقنية'],['methodology','Working with agents','العمل مع الوكلاء'],['integrations','Integrations','التكاملات'],['industries','Industries','القطاعات'],['resources','Resources','الموارد'],['about','About','من نحن'],['security','Security','الأمان']]
 export const solutions = [
   {
     "slug": "knowledge",
     "name": [
-      "Enterprise knowledge",
-      "المعرفة المؤسسية"
+      "Find the instruction that answers the question",
+      "اعثر على التعليمات التي تجيب عن السؤال"
     ],
     "audience": [
-      "Knowledge and operations owners",
-      "مسؤولو المعرفة والعمليات"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "Staff need an answer tied to the approved version of a company instruction. This is a proposed knowledge task to scope.",
-      "يحتاج الموظف إجابة مرتبطة بالنسخة المعتمدة من تعليمات الشركة. هذه مهمة معرفية مقترحة لتحديد نطاقها."
+      "Employees may find a related document without finding the approved instruction. Define the question set, source owner and information that should govern the answer.",
+      "قد يجد الموظف مستندًا ذا صلة دون الوصول إلى التعليمات المعتمدة. حدّد الأسئلة ومسؤول المصدر والمعلومات التي يجب أن تحكم الإجابة."
     ],
     "input": [
-      "Approved short policy text, the question and the responsible knowledge owner. Current Studio accepts pasted text or UTF-8 TXT/MD up to 12,000 bytes and 12,000 characters.",
-      "نص سياسة قصير معتمد والسؤال ومسؤول المعرفة. يقبل Studio الحالي نصًا ملصقًا أو TXT/MD بترميز UTF-8 حتى 12,000 بايت و12,000 حرف."
+      "The approved sources need to contain the passages that support an answer. With the text-based assistant, inspect the response against the approved material. Record access and update requirements separately when the task depends on a repository or shared information.",
+      "تحتاج المصادر المعتمدة إلى المقاطع التي تدعم الإجابة. ومع المساعد النصي، افحص الرد مقابل المادة المعتمدة. ووثّق متطلبات الوصول والتحديث بصورة مستقلة إذا اعتمدت المهمة على مستودع أو معلومات مشتركة."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "The approved sources need to contain the passages that support an answer. With the text-based assistant, inspect the response against the approved material. Record access and update requirements separately when the task depends on a repository or shared information.",
+      "تحتاج المصادر المعتمدة إلى المقاطع التي تدعم الإجابة. ومع المساعد النصي، افحص الرد مقابل المادة المعتمدة. ووثّق متطلبات الوصول والتحديث بصورة مستقلة إذا اعتمدت المهمة على مستودع أو معلومات مشتركة."
     ],
     "output": [
-      "An answer with original source excerpts, or a clear statement of the missing evidence. KnowledgeGrid is the bounded starting template.",
-      "إجابة بمقتطفات المصدر الأصلية أو توضيح صريح للدليل الناقص. KnowledgeGrid هو قالب البداية المحدد."
+      "A useful response includes supporting excerpts and unresolved points. The knowledge owner approves source use and important interpretations. A source reference helps inspection; it does not guarantee correct reasoning.",
+      "يتضمن الرد المفيد مقتطفاته الداعمة ونقاطه غير المحسومة. ويعتمد مسؤول المعرفة استخدام المصدر والتفسيرات المؤثرة. يتيح المرجع الفحص، لكنه لا يضمن صحة الاستنتاج."
     ],
     "accept": [
-      "The knowledge owner checks the answer and source version. Word matching can miss relevant material; no semantic search or repository connection is included.",
-      "يفحص مسؤول المعرفة الإجابة وإصدار المصدر. قد تفوت مطابقة الكلمات مادة ذات صلة؛ ولا يشمل النطاق بحثًا بالمعنى أو اتصالًا بمستودع."
+      "Acceptance: compare answers against approved examples, check citations and include an unanswered question. Measure factual corrections and verification time. For a repository-based design, also specify tests for outdated guidance and unauthorized sources. Current inputs are pasted text or UTF-8 TXT/MD, up to 12,000 bytes and 12,000 characters per source; retrieval matches words.",
+      "القبول: قارن الإجابات بأمثلة معتمدة وافحص الاستشهادات، واستخدم سؤالًا بلا إجابة. قِس التصحيحات ووقت التحقق. وأضف للتصميم المعتمد على مستودع اختبارات النص القديم والمصدر غير المسموح. المدخل الحالي نص ملصق أو TXT/MD بترميز UTF-8، بحد 12,000 بايت و12,000 حرف للمصدر، ويطابق الاسترجاع الكلمات."
     ]
   },
   {
     "slug": "documents",
     "name": [
-      "Document operations",
-      "عمليات المستندات"
+      "Prepare a document record without hiding the missing detail",
+      "جهّز سجل المستند مع إبقاء التفاصيل الناقصة ظاهرة"
     ],
     "audience": [
-      "Operations staff reviewing forms and records",
-      "موظفو العمليات الذين يراجعون النماذج والسجلات"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "A document reaches a reviewer with missing or ambiguous fields. This proposed task prepares the questions that must be resolved.",
-      "يصل المستند إلى المراجع بحقول ناقصة أو ملتبسة. تجهز المهمة المقترحة الأسئلة التي يجب حسمها."
+      "A form can look complete while a reference is missing or a value is ambiguous. Specify the document type, required fields and evidence needed for each value.",
+      "قد يبدو النموذج مكتملًا رغم غياب مرجع أو التباس قيمة. حدّد نوع المستند والحقول المطلوبة والدليل اللازم لكل قيمة."
     ],
     "input": [
-      "Manually supplied document text and an approved field checklist. PDF/OCR, image and spreadsheet extraction need separate implementation.",
-      "نص مستند يقدمه المستخدم وقائمة حقول معتمدة. يحتاج استخراج PDF أو الصور أو جداول البيانات تنفيذًا مستقلًا."
+      "The field map needs validation rules and a clear treatment of unknown or conflicting values. A review record needs each value's source context. Start with document text you can supply directly, and list any extraction format as a requirement rather than assuming support.",
+      "تحتاج خريطة الحقول إلى قواعد تحقق وطريقة واضحة للقيم المجهولة أو المتعارضة. يحتاج سجل المراجعة إلى سياق مصدر كل قيمة. ابدأ بنص مستند تستطيع تقديمه مباشرةً، ووثّق أي صيغة استخراج كمتطلب دون افتراض دعمها."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "The field map needs validation rules and a clear treatment of unknown or conflicting values. A review record needs each value's source context. Start with document text you can supply directly, and list any extraction format as a requirement rather than assuming support.",
+      "تحتاج خريطة الحقول إلى قواعد تحقق وطريقة واضحة للقيم المجهولة أو المتعارضة. يحتاج سجل المراجعة إلى سياق مصدر كل قيمة. ابدأ بنص مستند تستطيع تقديمه مباشرةً، ووثّق أي صيغة استخراج كمتطلب دون افتراض دعمها."
     ],
     "output": [
-      "A structured field draft and a list of missing details linked to the supplied text.",
-      "مسودة حقول منظمة وقائمة تفاصيل ناقصة مرتبطة بالنص المقدم."
+      "Specify a field draft and exception list for the operations reviewer. A permitted downstream record update requires separate configured authorization. Authenticity and specialist interpretation remain with qualified people.",
+      "حدّد مسودة حقول وقائمة استثناءات لمراجع العمليات كمخرج مطلوب. ويحتاج التحديث في نظام تالٍ إلى تفويض مستقل ضمن الإعداد. وتبقى أصالة المستند وتفسيره المتخصص للمؤهلين."
     ],
     "accept": [
-      "The operations reviewer checks every value before use. No document authenticity check or automatic record creation is implied.",
-      "يفحص مراجع العمليات كل قيمة قبل استخدامها. لا يشمل المثال التحقق من أصالة المستند أو إنشاء سجل تلقائيًا."
+      "Acceptance: check representative text, missing fields and conflicting values. Measure field correctness, missed gaps and correction time. A complete-looking record containing an invented value fails the test. Current Studio accepts short text and TXT/MD; it does not extract PDF, images or spreadsheets.",
+      "القبول: نصوص تمثل العمل وحقول ناقصة وقيم متعارضة. قِس صحة الحقول والنواقص التي لم تُكتشف ووقت التصحيح. يفشل السجل المكتمل ظاهريًا إذا احتوى قيمة مختلقة. يقبل الاستوديو الحالي نصوصًا قصيرة وTXT/MD، ولا يستخرج PDF أو الصور أو الجداول."
     ]
   },
   {
     "slug": "sales",
     "name": [
-      "Sales enablement",
-      "تمكين المبيعات"
+      "Understand what you can offer before preparing the proposal",
+      "اعرف ما تستطيع تقديمه قبل تجهيز العرض"
     ],
     "audience": [
-      "Sales owners preparing for an account conversation",
-      "مسؤولو المبيعات الذين يستعدون لمحادثة مع عميل"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "Sales notes and product guidance need a clear brief that separates recorded facts from questions. This is a proposed preparation task.",
-      "تحتاج ملاحظات المبيعات وإرشادات المنتجات موجزًا يميز الحقائق المسجلة عن الأسئلة. هذه مهمة مقترحة للتحضير."
+      "Sales notes and product guidance can be scattered. Identify the customer facts you are authorized to use, approved capabilities and the questions the meeting should resolve.",
+      "قد تتفرق ملاحظات المبيعات وإرشادات المنتجات. حدّد حقائق العميل المسموح باستخدامها والقدرات المعتمدة والأسئلة التي يحتاج الاجتماع إلى حسمها."
     ],
     "input": [
-      "Approved product text and non-sensitive account facts supplied manually. No live CRM access or external research is available in Studio.",
-      "نص منتجات معتمد وحقائق حساب غير حساسة يقدمها المستخدم يدويًا. لا يتيح Studio وصولًا حيًا إلى CRM أو بحثًا خارجيًا."
+      "A preparation flow should organize recorded facts, relevant capabilities and gaps. A requirement matrix should distinguish supported needs, configuration dependencies, unknowns and unavailable capabilities. Check the evidence and assessment rules against representative requirements.",
+      "ينبغي أن ينظم مسار التحضير الحقائق والقدرات المناسبة والفجوات. وينبغي أن تميز مصفوفة المتطلبات الاحتياج المدعوم ومتطلبات الإعداد والمجهول والقدرات غير المتاحة. افحص الأدلة وقواعد التقييم على متطلبات تمثل الاستخدام."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "A preparation flow should organize recorded facts, relevant capabilities and gaps. A requirement matrix should distinguish supported needs, configuration dependencies, unknowns and unavailable capabilities. Check the evidence and assessment rules against representative requirements.",
+      "ينبغي أن ينظم مسار التحضير الحقائق والقدرات المناسبة والفجوات. وينبغي أن تميز مصفوفة المتطلبات الاحتياج المدعوم ومتطلبات الإعداد والمجهول والقدرات غير المتاحة. افحص الأدلة وقواعد التقييم على متطلبات تمثل الاستخدام."
     ],
     "output": [
-      "A draft account brief with supplied facts, source references where available and questions to verify.",
-      "مسودة موجز عميل بالحقائق المقدمة والمراجع عند توفرها والأسئلة المطلوب التحقق منها."
+      "The output should include an account brief, meeting questions and a requirement assessment. The sales owner verifies prices, dates and commercial promises. The workflow must not invent purchase intent or claim a product can meet a requirement without support.",
+      "المخرج المطلوب موجز عميل وأسئلة اجتماع وتقييم متطلبات. يتحقق مسؤول المبيعات من الأسعار والمواعيد والوعود التجارية. ولا يجوز اختلاق نية شراء أو قدرة منتج على تلبية متطلب دون سند."
     ],
     "accept": [
-      "The sales owner validates account facts, pricing and any message. The assistant does not infer purchase intent or contact a prospect.",
-      "يتحقق مسؤول المبيعات من حقائق الحساب والأسعار وأي رسالة. لا يستنتج المساعد نية شراء أو يتواصل مع عميل محتمل."
+      "Acceptance: check unsupported matches, factual corrections and the usefulness of the questions. A numeric score requires a visible rubric. Preparation time can be measured; improved conversion or contract wins cannot be inferred from a generated brief.",
+      "القبول: المطابقات غير المدعومة وتصحيحات الحقائق وفائدة الأسئلة. تحتاج الدرجة الرقمية إلى معيار ظاهر. يمكن قياس وقت التحضير، ولا يثبت الموجز المولد تحسن التحويل أو الفوز بالعقود."
     ]
   },
   {
     "slug": "service",
     "name": [
-      "Customer service",
-      "خدمة العملاء"
+      "Give a service request a useful next step",
+      "حدّد خطوة مفيدة لطلب الخدمة"
     ],
     "audience": [
-      "Support leads and staff handling repeat questions",
-      "مسؤولو الدعم والموظفون الذين يعالجون أسئلة متكررة"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "A recurring service request needs a policy-based reply and a clear handoff when the case is unclear. This is a proposed support task.",
-      "يحتاج طلب الخدمة المتكرر ردًا يستند إلى السياسة وإحالة واضحة عندما تكون الحالة غير محسومة. هذه مهمة دعم مقترحة."
+      "A written policy question and an exception need different handling. Define the approved guidance, request types and facts needed before staff decide.",
+      "يحتاج السؤال عن قاعدة مكتوبة إلى معالجة تختلف عن الاستثناء. حدّد الإرشادات المعتمدة وأنواع الطلبات والحقائق اللازمة قبل قرار الموظف."
     ],
     "input": [
-      "Approved service policy and a synthetic or non-sensitive request description.",
-      "سياسة خدمة معتمدة ووصف طلب افتراضي أو غير حساس."
+      "Answer conditions, clarification steps and handoff rules give the request a usable path. Separate a supported reply from a case that needs human judgment. For a text-based draft, provide the approved policy and the case facts so that the reviewer can inspect the response's basis.",
+      "تمنح شروط الإجابة وخطوات الاستيضاح وقواعد الإحالة الطلب مسارًا مفهومًا. افصل الرد المدعوم عن الحالة التي تحتاج إلى حكم بشري. وللمسودة النصية، قدّم السياسة المعتمدة وحقائق الحالة حتى يفحص المراجع سند الرد."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "Answer conditions, clarification steps and handoff rules give the request a usable path. Separate a supported reply from a case that needs human judgment. For a text-based draft, provide the approved policy and the case facts so that the reviewer can inspect the response's basis.",
+      "تمنح شروط الإجابة وخطوات الاستيضاح وقواعد الإحالة الطلب مسارًا مفهومًا. افصل الرد المدعوم عن الحالة التي تحتاج إلى حكم بشري. وللمسودة النصية، قدّم السياسة المعتمدة وحقائق الحالة حتى يفحص المراجع سند الرد."
     ],
     "output": [
-      "A cited response draft and a handoff brief with missing facts. ServiceFlow can prepare an exact internal request for owner review.",
-      "مسودة رد بمراجعها وموجز إحالة بالحقائق الناقصة. يمكن لـServiceFlow تجهيز طلب داخلي محدد يراجعه المالك."
+      "The requested output should be a referenced response draft or a handoff showing known facts, missing details and the next decision. Staff control exceptions and customer commitments. Sending through an authorized communication channel remains distinct from saving or approving an internal item.",
+      "يُحدّد المخرج المطلوب كمسودة رد بمراجعها أو إحالة تبين الحقائق والنواقص والقرار التالي. يتحكم الموظفون في الاستثناءات والالتزامات للعميل. ويظل الإرسال عبر قناة متاحة ومصرح بها منفصلًا عن حفظ عنصر داخلي أو اعتماده."
     ],
     "accept": [
-      "The support owner checks policy and sends any customer reply manually. Internal approval is not external delivery or a completed service.",
-      "يفحص مسؤول الدعم السياسة ويرسل أي رد للعميل يدويًا. الاعتماد الداخلي ليس تسليمًا خارجيًا أو خدمة مكتملة."
+      "Acceptance: test an ordinary question, an ambiguous case and a request the workflow must leave to staff. Check policy interpretation, repeated questions and routing. Only a confirmed saved record can be described as stored or approved.",
+      "القبول: سؤال معتاد وحالة ملتبسة وطلب يجب تركه للموظف. افحص تفسير السياسة وتكرار الأسئلة والتوجيه. ولا يوصف الطلب بالمحفوظ أو المعتمد دون سجل مؤكد."
     ]
   },
   {
     "slug": "finance",
     "name": [
-      "Finance operations",
-      "العمليات المالية"
+      "Show the invoice difference and the evidence behind it",
+      "أظهر فرق الفاتورة والدليل الذي يوضحه"
     ],
     "audience": [
-      "Accounts-payable and finance reviewers",
-      "مراجعو الحسابات الدائنة والمالية"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "An invoice and purchase record show different dates, values or references. This proposed task explains the visible differences for review.",
-      "تختلف تواريخ أو قيم أو مراجع فاتورة وسجل شراء. تشرح المهمة المقترحة الفروق الظاهرة للمراجعة."
+      "An invoice can disagree with its order in quantity, date or reference. Specify the records, units, currency, matching fields and tolerance rules needed for the review.",
+      "قد تختلف الفاتورة عن طلبها في كمية أو تاريخ أو مرجع. حدّد السجلات والوحدات والعملة وحقول المطابقة وحدود الفروق المقبولة."
     ],
     "input": [
-      "Synthetic invoice and order text, field definitions, currency and approved comparison rules. No finance-system connection.",
-      "نص فاتورة وطلب افتراضي وتعريفات الحقول والعملة وقواعد مقارنة معتمدة. لا اتصال بنظام مالي."
+      "The review needs alignment, calculation and exception rules, including a clear treatment of ambiguous matches. The comparison requirements should retain supplied values and their references and leave unsupported figures unresolved. A language draft must not stand in for a verified calculation.",
+      "تحتاج المراجعة إلى قواعد مطابقة وحساب واستثناءات، مع معالجة واضحة للمطابقات الملتبسة. وتحفظ متطلبات المقارنة القيم المقدمة ومراجعها وتترك الرقم غير المدعوم غير محسوم. ولا تحل المسودة اللغوية محل حساب جرى التحقق منه."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "The review needs alignment, calculation and exception rules, including a clear treatment of ambiguous matches. The comparison requirements should retain supplied values and their references and leave unsupported figures unresolved. A language draft must not stand in for a verified calculation.",
+      "تحتاج المراجعة إلى قواعد مطابقة وحساب واستثناءات، مع معالجة واضحة للمطابقات الملتبسة. وتحفظ متطلبات المقارنة القيم المقدمة ومراجعها وتترك الرقم غير المدعوم غير محسوم. ولا تحل المسودة اللغوية محل حساب جرى التحقق منه."
     ],
     "output": [
-      "A review brief listing each difference and its supplied record reference, with unknowns left visible.",
-      "موجز مراجعة بكل فرق ومرجع سجله المقدم، مع إظهار المعلومات المجهولة."
+      "Specify a comparison and exception brief for review. Finance staff verify accounting treatment and authorize any record change. A summary does not authorize payment, tax filing or ledger updates; those require an available permitted action.",
+      "حدّد مقارنة وموجز استثناءات للمراجعة. يتحقق موظف المالية من المعالجة المحاسبية ويفوّض أي تغيير. لا يعتمد الملخص دفعًا أو تقديمًا ضريبيًا أو تحديثًا لدفتر الأستاذ؛ فهذه تحتاج إلى إجراء متاح ومسموح."
     ],
     "accept": [
-      "Finance staff verify figures and accounting treatment. This is not a payment, tax calculation or approval to change financial records.",
-      "يتحقق موظفو المالية من الأرقام والمعالجة المحاسبية. ليس هذا دفعًا أو حساب ضريبة أو اعتمادًا لتغيير سجلات مالية."
+      "Acceptance: test calculations independently of the language summary. Measure missed differences, false alarms, correction time and retained source evidence. A general explanation of a financial trend is not its proven cause.",
+      "القبول: افحص الحسابات بصورة مستقلة عن الملخص اللغوي. قِس الفروق التي لم تُكتشف والإنذارات الخاطئة ووقت التصحيح وحفظ الأدلة. والتفسير العام للاتجاه المالي ليس سببًا مثبتًا له."
     ]
   },
   {
     "slug": "logistics",
     "name": [
-      "Logistics coordination",
-      "تنسيق اللوجستيات"
+      "Bring shipment updates into a clear operational account",
+      "اجمع تحديثات الشحنة في وصف تشغيلي واضح"
     ],
     "audience": [
-      "Dispatch and shipment operations owners",
-      "مسؤولو الإرسال وعمليات الشحن"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "A shipment note lacks the update needed for a customer commitment. This proposed task prepares an exception chronology.",
-      "تخلو ملاحظة الشحنة من تحديث يلزم قبل الالتزام للعميل. تجهز المهمة المقترحة تسلسلًا زمنيًا للاستثناء."
+      "Scattered or contradictory updates make a delivery commitment difficult to assess. Define the shipment identifiers, milestones, timestamps and information needed by operations.",
+      "يصعب تقييم التزام التسليم عندما تتفرق التحديثات أو تتعارض. حدّد معرفات الشحنة ومراحلها وتوقيتها والمعلومات التي يحتاجها التشغيل."
     ],
     "input": [
-      "Manually supplied shipment milestones, dates and an approved service checklist. Current Studio has no live carrier or customs access.",
-      "مراحل شحن وتواريخ يقدمها المستخدم وقائمة خدمة معتمدة. لا يتيح Studio الحالي وصولًا حيًا إلى ناقل أو جمارك."
+      "The event record needs collection, chronology and exception rules. Distinguish recorded events from expectations, retain the source of each update and identify contradictions. The review brief should ask for the specific missing update before a commitment is made.",
+      "يحتاج سجل الأحداث إلى قواعد للجمع والترتيب والاستثناء. ميّز الحدث المسجل عن المتوقع واحتفظ بمصدر كل تحديث وأظهر التعارض. ويحدد موجز المراجعة التحديث الناقص المطلوب قبل تقديم التزام."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "The event record needs collection, chronology and exception rules. Distinguish recorded events from expectations, retain the source of each update and identify contradictions. The review brief should ask for the specific missing update before a commitment is made.",
+      "يحتاج سجل الأحداث إلى قواعد للجمع والترتيب والاستثناء. ميّز الحدث المسجل عن المتوقع واحتفظ بمصدر كل تحديث وأظهر التعارض. ويحدد موجز المراجعة التحديث الناقص المطلوب قبل تقديم التزام."
     ],
     "output": [
-      "A dated exception brief with known updates, missing information and questions for the operations owner.",
-      "موجز استثناء مؤرخ بالتحديثات المتاحة والمعلومات الناقصة والأسئلة لمسؤول العمليات."
+      "The reviewer needs a dated exception brief and proposed handoff. The operations owner confirms current status and any customer commitment. A carrier lookup, customs submission or message requires an available authorized connection and explicit authority.",
+      "يحتاج المراجع إلى موجز استثناء مؤرخ وإحالة مقترحة. يؤكد مسؤول العمليات الحالة الفعلية وأي التزام للعميل. ويحتاج استعلام الناقل أو التقديم الجمركي أو الرسالة إلى اتصال متاح ومصرح به."
     ],
     "accept": [
-      "The operations owner verifies current status and approves commitments. No tracking lookup, filing, delivery promise or carrier message is executed.",
-      "يتحقق مسؤول العمليات من الحالة الحالية ويعتمد الالتزامات. لا يُنفذ استعلام تتبع أو تقديم رسمي أو وعد تسليم أو رسالة للناقل."
+      "Acceptance: delayed events, conflicting updates and an unavailable source. Measure chronology accuracy, missed exceptions and preparation time. An estimated arrival must remain an estimate until a responsible source confirms the commitment.",
+      "القبول: أحداث متأخرة وتحديثات متعارضة ومصدر غير متاح. قِس صحة التسلسل والاستثناءات المفقودة وزمن التجهيز. ويظل الوصول التقديري تقديرًا حتى يؤكد مصدر مسؤول الالتزام."
     ]
   },
   {
     "slug": "procurement",
     "name": [
-      "Procurement operations",
-      "عمليات المشتريات"
+      "Compare the terms that matter to the purchase",
+      "قارن الشروط المؤثرة في قرار الشراء"
     ],
     "audience": [
-      "Purchasing owners comparing a proposed purchase",
-      "مسؤولو المشتريات الذين يقارنون شراءً مقترحًا"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "A quote can appear cheaper while its warranty or budget fit is unresolved. This proposed purchase-review task keeps those gaps visible.",
-      "قد يبدو العرض أقل سعرًا مع بقاء الضمان أو ملاءمة الميزانية غير محسومين. تُظهر مهمة مراجعة الشراء المقترحة هذه النواقص."
+      "The lowest price may come with different units, delivery terms or warranty. Define the required items, offers, comparison fields and rules for comparable totals.",
+      "قد يصاحب السعر الأقل اختلاف في الوحدات أو التسليم أو الضمان. حدّد الأصناف والعروض وحقول المقارنة وقواعد الإجماليات المتكافئة."
     ],
     "input": [
-      "A purchase request, supplied quote terms and approved budget rules. The interactive example below uses fictional supplier values, not live quotes.",
-      "طلب شراء وشروط عروض يقدمها المستخدم وقواعد ميزانية معتمدة. يستخدم المثال التفاعلي التالي قيم موردين افتراضية لا عروضًا حية."
+      "A useful comparison starts with extraction, normalization and comparison requirements. Check units, calculations and the fields essential to a decision. The comparison should retain useful known values when a term is missing and identify the specific evidence needed to complete it.",
+      "تبدأ المقارنة المفيدة بمتطلبات الاستخراج وتوحيد القيم والمطابقة. افحص الوحدات والحسابات والحقول الأساسية للقرار. وينبغي أن تحتفظ المقارنة بالقيم المفيدة المعروفة عند غياب شرط وتحدد الدليل اللازم لاستكمالها."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "A useful comparison starts with extraction, normalization and comparison requirements. Check units, calculations and the fields essential to a decision. The comparison should retain useful known values when a term is missing and identify the specific evidence needed to complete it.",
+      "تبدأ المقارنة المفيدة بمتطلبات الاستخراج وتوحيد القيم والمطابقة. افحص الوحدات والحسابات والحقول الأساسية للقرار. وينبغي أن تحتفظ المقارنة بالقيم المفيدة المعروفة عند غياب شرط وتحدد الدليل اللازم لاستكمالها."
     ],
     "output": [
-      "A comparison and missing-information checklist for an authorized buyer. The example calculates its entered assumptions without creating an order.",
-      "مقارنة وقائمة معلومات ناقصة لمشترٍ مخوّل. يحسب المثال الافتراضات المدخلة دون إنشاء أمر شراء."
+      "A reviewable comparison needs references, unresolved terms and questions for the buyer. Purchasing staff approve commercial commitments; technical suitability stays with an authorized specialist. Contacting suppliers or issuing an order requires a configured permitted action.",
+      "تحتاج المقارنة القابلة للمراجعة إلى مراجعها والشروط غير المحسومة وأسئلة المشتري. يعتمد مسؤول المشتريات الالتزامات التجارية، وتبقى الملاءمة الفنية للمختص المخوّل. ويحتاج التواصل مع المورد أو إصدار أمر إلى إجراء مضبوط ومسموح."
     ],
     "accept": [
-      "The buyer verifies supplier evidence, warranty and totals and decides separately. A downloaded review is not authorization or a purchase receipt.",
-      "يتحقق المشتري من أدلة المورد والضمان والإجماليات ويتخذ القرار بصورة مستقلة. المراجعة المنزلة ليست تفويضًا أو إيصال شراء."
+      "Acceptance: check transcription, consistent units and missing-term detection. Add the missing evidence and reassess the same comparison. Do not label an offer best while an essential decision field remains unknown. Measure total review time, including corrections.",
+      "القبول: صحة نقل القيم واتساق الوحدات وكشف الشروط الناقصة. أضف الدليل الناقص وأعد تقييم المقارنة نفسها. لا تُسمّ عرضًا الأفضل إذا بقي حقل أساسي مجهولًا. وقِس زمن المراجعة شاملًا التصحيحات."
     ]
   },
   {
     "slug": "receivables",
     "name": [
-      "Receivables and collection follow-up",
-      "المستحقات ومتابعة التحصيل"
+      "Check the balance before preparing the follow-up",
+      "راجع الرصيد قبل تجهيز المتابعة"
     ],
     "audience": [
-      "Finance owners reviewing overdue balances",
-      "مسؤولو المالية الذين يراجعون الأرصدة المتأخرة"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "A balance needs checking against recorded payments and disputes before follow-up. This is a proposed review task.",
-      "يحتاج الرصيد مراجعة السداد والمنازعات المسجلة قبل المتابعة. هذه مهمة مراجعة مقترحة."
+      "An overdue invoice may be unpaid, disputed or awaiting a recorded payment update. Identify the source records, aging rules and evidence needed to distinguish those states.",
+      "قد تكون الفاتورة المتأخرة غير مدفوعة أو محل نزاع أو تنتظر تسجيل تحديث للسداد. حدّد السجلات وقواعد أعمار المستحقات والأدلة اللازمة لتمييز هذه الحالات."
     ],
     "input": [
-      "Synthetic invoice, payment and dispute notes with an approved follow-up policy. No live ledger or payment lookup.",
-      "ملاحظات فواتير وسداد ومنازعات افتراضية وسياسة متابعة معتمدة. لا استعلام حي عن دفتر أستاذ أو دفع."
+      "The balance review needs record-matching, classification and follow-up rules. Specify the handling of disputed and unknown items. An aging summary or worklist must not treat missing payment evidence as proof of nonpayment.",
+      "تحتاج مراجعة الرصيد إلى مطابقة السجلات وتصنيف الأرصدة وقواعد للمتابعة والتعامل مع البنود المتنازع عليها والمجهولة. ويجب ألا يعتبر ملخص الأعمار أو قائمة العمل غياب دليل السداد إثباتًا لعدم الدفع."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "The balance review needs record-matching, classification and follow-up rules. Specify the handling of disputed and unknown items. An aging summary or worklist must not treat missing payment evidence as proof of nonpayment.",
+      "تحتاج مراجعة الرصيد إلى مطابقة السجلات وتصنيف الأرصدة وقواعد للمتابعة والتعامل مع البنود المتنازع عليها والمجهولة. ويجب ألا يعتبر ملخص الأعمار أو قائمة العمل غياب دليل السداد إثباتًا لعدم الدفع."
     ],
     "output": [
-      "A draft aging and dispute brief with source references and questions to resolve before contact.",
-      "مسودة موجز لأعمار المستحقات والمنازعات بمراجعها وأسئلة تُحسم قبل التواصل."
+      "Specify a referenced balance-review list and any communication drafts the reviewer needs. Finance staff verify amounts and decide whether to contact the customer. Live payment lookup, ledger synchronization and delivery need available authorized connections.",
+      "حدّد قائمة مراجعة أرصدة بمراجعها وما يحتاجه الموظف من مسودات تواصل. يتحقق موظف المالية من المبلغ ويقرر التواصل. ويحتاج الاستعلام الحي والمزامنة والتسليم إلى اتصالات متاحة ومصرح بها."
     ],
     "accept": [
-      "Finance staff verify balances and approve any message, write-off or collection step. No communication or financial change occurs in Studio.",
-      "يتحقق موظفو المالية من الأرصدة ويعتمدون أي رسالة أو شطب أو خطوة تحصيل. لا يحدث تواصل أو تغيير مالي داخل Studio."
+      "Acceptance: incorrect classifications, stale records and conflicting payment evidence. Measure evidence coverage and review time. Administrative preparation does not guarantee collection or establish improved cash flow.",
+      "القبول: تصنيف خاطئ وسجل قديم وأدلة سداد متعارضة. قِس تغطية الأدلة ووقت المراجعة. ولا يضمن التجهيز الإداري تحصيلًا أو يثبت تحسن التدفق النقدي."
     ]
   },
   {
     "slug": "customer-operations",
     "name": [
-      "Customer operations",
-      "عمليات العملاء"
+      "Route the request with the context its owner needs",
+      "وجّه الطلب بالسياق الذي يحتاجه المسؤول عنه"
     ],
     "audience": [
-      "Customer operations owners triaging an issue",
-      "مسؤولو عمليات العملاء الذين يفرزون مشكلة"
+      "Process owner and authorized reviewer",
+      "مسؤول العمل والمراجع المخوّل"
     ],
     "problem": [
-      "An enquiry, change request and complaint need different next steps. This proposed task prepares the context for a responsible person.",
-      "يحتاج الاستفسار وطلب التغيير والشكوى خطوات تالية مختلفة. تجهز المهمة المقترحة السياق لشخص مسؤول."
+      "A question, account change and complaint have different requirements. Define categories, required facts, urgency rules and the person responsible for each decision.",
+      "للسؤال وتغيير الحساب والشكوى متطلبات مختلفة. حدّد التصنيفات والحقائق المطلوبة وقواعد الاستعجال وصاحب كل قرار."
     ],
     "input": [
-      "A non-sensitive request, manually supplied order reference and approved routing procedure.",
-      "طلب غير حساس ومرجع طلب يقدمه المستخدم يدويًا وإجراء توجيه معتمد."
+      "Classification and handoff rules should explain ambiguous cases and the actions allowed for each route. A useful case brief records the stated need, relevant context and the proposed route. The responsible person checks that route before any operational assignment.",
+      "توضح قواعد التصنيف والإحالة الحالات الملتبسة والإجراءات المسموحة لكل مسار. يسجل موجز الحالة المفيد الاحتياج المذكور والسياق المناسب وجهة الإحالة المقترحة. ويفحص المسؤول المسار قبل أي إسناد تشغيلي."
     ],
     "flow": [
-      "Review supplied facts → identify missing evidence → prepare a draft → owner decides",
-      "مراجعة الحقائق المقدمة ← تحديد الأدلة الناقصة ← تجهيز مسودة ← قرار المسؤول"
+      "Classification and handoff rules should explain ambiguous cases and the actions allowed for each route. A useful case brief records the stated need, relevant context and the proposed route. The responsible person checks that route before any operational assignment.",
+      "توضح قواعد التصنيف والإحالة الحالات الملتبسة والإجراءات المسموحة لكل مسار. يسجل موجز الحالة المفيد الاحتياج المذكور والسياق المناسب وجهة الإحالة المقترحة. ويفحص المسؤول المسار قبل أي إسناد تشغيلي."
     ],
     "output": [
-      "A request summary, missing-information question and proposed handoff owner. An internal request can be reviewed in ServiceFlow.",
-      "ملخص طلب وسؤال عن المعلومة الناقصة ومسؤول إحالة مقترح. يمكن مراجعة طلب داخلي في ServiceFlow."
+      "A useful review output identifies the case category and includes a response or handoff draft. The receiving employee confirms the route and any consequential action. A recommendation alone cannot authorize a refund or account change. Record queue, notification and business-system needs as connection requirements.",
+      "يوضح المخرج المفيد للمراجعة تصنيف الحالة ويشمل مسودة رد أو إحالة. يؤكد الموظف المستلم المسار وأي إجراء مؤثر. ولا تفوّض التوصية وحدها رد مال أو تعديل حساب. ووثّق القوائم والإشعارات وتحديث أنظمة العمل كمتطلبات اتصال."
     ],
     "accept": [
-      "The operations owner checks facts, identity needs and any commitment. No account lookup, refund, schedule change or external notification is performed.",
-      "يفحص مسؤول العمليات الحقائق ومتطلبات الهوية وأي التزام. لا يُنفذ استعلام حساب أو رد أموال أو تغيير موعد أو إشعار خارجي."
+      "Acceptance: correct categories, missed urgent cases and complete handoffs. Record why a reviewer changes the route. Measure whether the receiving person can act without repeating intake, alongside the time spent correcting the result.",
+      "القبول: صحة التصنيف والحالات العاجلة التي لم تُكتشف واكتمال الإحالة. سجّل سبب تغيير المراجع للمسار، وقِس قدرة المستلم على التصرف دون إعادة استقبال الطلب، مع وقت تصحيح النتيجة."
     ]
   }
 ] as const
+
 export const headings: Record<string, Copy> = {
- security:['Control access. Explain every action.','اضبط الوصول. ووثّق كل إجراء.'],contact:['Tell us about your workflow.','حدّثنا عن سير عملك.'],services:['Build an agent system around your business problem.','نصمّم نظام الوكلاء حول مشكلة عملك.'], architecture:['Knowledge. Tools. Decisions. Bound together.','المعرفة والأدوات والقرارات، ضمن نظام واحد.'],methodology:['Clear scope. Evidence at every step.','نطاق واضح. وأدلة في كل خطوة.'],integrations:['Connect deliberately. Control every permission.','اربط بعناية. واضبط كل صلاحية.'],industries:['Built around how your organization works.','أنظمة تنطلق من طريقة عمل مؤسستك.'],resources:['Practical notes for better system decisions.','أدلة عملية لقرارات تقنية أفضل.'],about:['Engineering agents with clear boundaries.','هندسة الوكلاء بحدود واضحة.'],solutions:['Real problems. Defined outputs.','مشكلات حقيقية. ومخرجات محددة.'],start:['Start with the problem worth solving.','ابدأ بالمشكلة التي تستحق الحل.'],agentnexos:['A workspace for accountable agent tasks.','مساحة لمهام وكلاء قابلة للمراجعة.']}
-export const summary: Copy = ['AGYNEXA designs and develops enterprise agent systems that connect knowledge, tools and decisions, with explicit permissions and acceptance criteria.','تصمّم AGYNEXA وتطوّر أنظمة وكلاء للمؤسسات تربط المعرفة والأدوات والقرارات بصلاحيات ومعايير قبول واضحة.']
+  methodology:[
+    "Give the agent a job you can evaluate",
+    "حدّد مهمة تستطيع تقييم الوكيل عليها"
+  ],
+  about:[
+    "One platform for agents with different jobs",
+    "منصة واحدة لوكلاء تختلف مهامهم"
+  ],
+  industries:[
+    "Different industries. Specific work to understand.",
+    "افهم المهمة داخل سياق قطاعك"
+  ],
+  start:[
+    "Put the workflow requirements in writing",
+    "اكتب متطلبات سير العمل"
+  ],
+  contact:[
+    "Questions about AGYNEXA?",
+    "لديك سؤال عن AGYNEXA؟"
+  ],
+  services:[
+    "The capabilities behind a business workflow",
+    "القدرات التي يتكوّن منها سير عملك"
+  ],
+  solutions:[
+    "Start with the work your company needs to complete",
+    "ابدأ بالعمل الذي تحتاج شركتك إلى إنجازه"
+  ],
+  architecture:[
+    "Understand the system around the agent",
+    "افهم ما يحيط بالوكيل داخل النظام"
+  ],
+  integrations:[
+    "Define what the agent needs from each system",
+    "حدّد ما يحتاجه الوكيل من كل نظام"
+  ],
+  security:[
+    "Know what is private and what a decision authorizes",
+    "اعرف ما يبقى خاصًا وما الذي يسمح به قرارك"
+  ],
+  resources:[
+    "Prepare the work before writing the instructions",
+    "وضّح المهمة قبل كتابة التعليمات"
+  ],
+  agentnexos:[
+    "Keep the task and its review in context",
+    "اجمع المهمة ومعلومات مراجعتها"
+  ]
+}
+export const summary: Copy = ["AGYNEXA is an Agent Builder Studio for company knowledge and business workflows. Define an agent's role, add approved information and work with its responses in your private workspace.", "AGYNEXA استوديو لبناء الوكلاء حول معرفة المؤسسة وسير العمل. حدّد دور الوكيل، وأضف المعلومات المعتمدة، وتابع إجاباته في مساحة عملك الخاصة."]

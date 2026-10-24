@@ -1,62 +1,62 @@
 {
   "architecture": {
     "title": [
-      "How an assistant uses your business information",
-      "كيف يستخدم المساعد معلومات عملك"
+      "Understand the system around the agent",
+      "افهم ما يحيط بالوكيل داخل النظام"
     ],
     "intro": [
-      "For business and IT owners planning one task: start with a question or issue, add approved text when facts are needed, and review the answer or request before using it.",
-      "لمسؤولي العمل والتقنية الذين يخططون لمهمة محددة: ابدأ بسؤال أو مشكلة، وأضف نصًا معتمدًا عند الحاجة إلى حقائق، ثم راجع الإجابة أو الطلب قبل استخدامه."
+      "An agent combines a role, relevant information and permitted operations. A business workflow adds the sequence of work, the decisions along the way and evidence that each action reached its intended result.",
+      "يجمع الوكيل دورًا ومعلومات مناسبة وعمليات مسموحة. ويضيف سير العمل ترتيب الخطوات والقرارات والأدلة التي توضح نتيجة كل إجراء."
     ],
     "sections": [
       {
         "title": [
-          "01 / Describe the task",
-          "01 / اشرح المهمة"
+          "Instructions define the job",
+          "التعليمات تحدّد المهمة"
         ],
         "body": [
-          "Tell the private assistant what you need to prepare and who will review it. You can start without a file. It can organize your supplied facts into a draft and ask about missing details.",
-          "اشرح للمساعد الخاص ما تريد إعداده ومن سيراجعه. يمكنك البدء دون ملف؛ يساعدك في تنظيم المعلومات التي تقدمها في مسودة ويسأل عن التفاصيل الناقصة."
+          "Describe what the agent helps with, the form of its answer and the boundaries of its role. Instructions guide the model; application controls must enforce access. Naming a system in a prompt does not connect it or grant permission.",
+          "اكتب ما يساعد فيه الوكيل وشكل إجابته وحدود دوره. توجّه التعليمات النموذج، بينما تفرض ضوابط التطبيق حدود الوصول. ذكر نظام في السؤال لا يربطه أو يمنح الوكيل صلاحية استخدامه."
         ]
       },
       {
         "title": [
-          "02 / Find a source-backed answer",
-          "02 / اعثر على إجابة تستند إلى مصدر"
+          "Retrieval supplies the evidence",
+          "الاسترجاع يقدّم الدليل"
         ],
         "body": [
-          "KnowledgeGrid searches the short text you explicitly add and attaches original excerpts to its answers. This approach is often called RAG: finding relevant source material before drafting an answer. Current search matches words; it is not semantic search, PDF reading or a connection to your company systems.",
-          "يبحث KnowledgeGrid في النصوص القصيرة التي تضيفها بنفسك ويربط الإجابات بمقتطفاتها الأصلية. يُسمّى البحث عن مادة مرجعية قبل صياغة الإجابة RAG. البحث الحالي يطابق الكلمات؛ ولا يقرأ PDF أو يبحث بالمعنى أو يتصل بأنظمة شركتك."
+          "Retrieval finds material relevant to a question before the model prepares a response. This is commonly called retrieval-augmented generation, or RAG. In Studio, short text sources use word matching and provide excerpts for inspection. Source references help a reader check an answer; they do not prove that every conclusion is correct.",
+          "يبحث الاسترجاع عن المادة المناسبة للسؤال قبل إعداد الرد؛ ويُعرف هذا الأسلوب باسم التوليد المعزّز بالاسترجاع، أو RAG. يستخدم الاستوديو مطابقة الكلمات في المصادر النصية القصيرة ويعرض مقتطفاتها للفحص. تساعد المراجع على التحقق، لكنها لا تثبت صحة كل استنتاج."
         ]
       },
       {
         "title": [
-          "03 / Prepare a request for review",
-          "03 / جهّز طلبًا للمراجعة"
+          "Rules govern operational steps",
+          "القواعد تضبط الإجراء"
         ],
         "body": [
-          "ServiceFlow helps an operations or support owner turn an issue into a brief with known facts, gaps and a proposed next step. You review the exact internal request before approving it. Approval records a decision in your workspace; you handle any external handoff.",
-          "يساعد ServiceFlow مسؤول العمليات أو الدعم في تحويل المشكلة إلى موجز يوضح المعلومات المتاحة والنواقص والخطوة المقترحة. تراجع الطلب الداخلي نفسه قبل اعتماده. يُسجّل الاعتماد قرارًا داخل مساحتك، وتتولى أنت أي إحالة خارجية."
+          "Calculations, allowed changes and approval requirements need explicit rules. A tool requires a defined interface, an authorized identity and permitted operations. Authentication verifies identity; authorization determines what that identity may do.",
+          "تحتاج الحسابات والتغييرات والاعتمادات إلى قواعد صريحة. وتحتاج الأداة إلى واجهة محددة وهوية مصرح بها وعمليات مسموحة. تتحقق المصادقة من الهوية، وتحدّد الصلاحيات ما يمكنها فعله."
         ]
       },
       {
         "title": [
-          "04 / Understand agents and memory",
-          "04 / افهم دور المساعد وسجل المحادثة"
+          "The record must show what happened",
+          "السجل يوضّح ما حدث"
         ],
         "body": [
-          "An agent is a configured assistant with a defined job and allowed capabilities. Its saved private conversation provides context for follow-up questions. This memory is a bounded conversation record, not model training or unrestricted access to earlier work. Review factual answers against their current sources.",
-          "الوكيل هنا مساعد مضبوط لمهمة وقدرات محددة. يوفّر سجل المحادثة الخاصة سياقًا للأسئلة التالية. هذه الذاكرة سجل محدود للمحادثة، وليست تدريبًا للنموذج أو وصولًا مفتوحًا إلى أعمالك السابقة. راجع الإجابات الواقعية على ضوء مصادرها الحالية."
+          "A proposal, its approval and its confirmed execution are different events. A reliable workflow needs to preserve these distinctions, including rejection, missing information and uncertain results. A saved task record is not evidence that another business system completed the task.",
+          "المقترح واعتماده وتأكيد تنفيذه أحداث مختلفة. ويحتاج سير العمل إلى تمييزها، بما فيها الرفض ونقص المعلومات وغموض النتيجة. حفظ سجل مهمة لا يثبت أن نظامًا خارجيًا أنجزها."
         ]
       },
       {
         "title": [
-          "05 / Scope additional steps separately",
-          "05 / حدّد نطاق الخطوات الإضافية"
+          "Shared platform, separate customer context",
+          "منصة مشتركة ومعلومات تخص كل حساب"
         ],
         "body": [
-          "Multi-agent orchestration means coordinating several specialist steps and their handoffs. An SDK is a software toolkit used to build that behavior. Neither is a ready business integration. External tools, team roles and long-running operations need a separate implementation, permissions and tests.",
-          "تنسيق عدة وكلاء يعني تنظيم خطوات متخصصة ونقاط التسليم بينها. وSDK حزمة برمجية يستخدمها المطوّر لبناء هذا السلوك. لا يوفّر أي منهما تكاملًا جاهزًا مع العمل. الأدوات الخارجية وأدوار الفرق والعمليات الطويلة تحتاج تنفيذًا وصلاحيات واختبارات مستقلة."
+          "An Agent Builder can reuse software while storing different agent configurations and information for each account. The workspace, knowledge, retrieval and tool access must all follow the appropriate identity boundary. A separate hostname or login screen alone does not establish complete tenant isolation.\n\nThe AGYNEXA web application uses Next.js and React, Supabase for authentication and application data, server-side Groq model requests and Vercel hosting. These describe the application path, not a dedicated cloud or processing country for every customer.",
+          "يمكن لمنصة بناء الوكلاء استخدام أساس برمجي واحد مع إعدادات ومعلومات مختلفة للحسابات. ويجب أن تتبع المساحة والمعرفة والاسترجاع والأدوات حدود الهوية المناسبة. اسم نطاق مختلف أو شاشة دخول لا يثبتان وحدهما عزلًا كاملًا بين المؤسسات.\n\nيستخدم تطبيق AGYNEXA الحالي Next.js وReact، وSupabase للمصادقة وبيانات التطبيق، وطلبات نماذج Groq من الخادم، واستضافة Vercel. توضح هذه الأسماء مسار التطبيق، ولا تعني وجود سحابة مخصصة أو بلد معالجة محدد لكل عميل."
         ]
       }
     ],
@@ -68,72 +68,52 @@
   },
   "security": {
     "title": [
-      "Who can read information and approve requests?",
-      "من يستطيع قراءة المعلومات واعتماد الطلبات؟"
+      "Know what is private and what a decision authorizes",
+      "اعرف ما يبقى خاصًا وما الذي يسمح به قرارك"
     ],
     "intro": [
-      "For data owners and security reviewers: use this checklist to define what an assistant may read, what it may prepare and which decisions stay with your staff.",
-      "لمالكي البيانات ومراجعي الأمان: استخدم هذه القائمة لتحديد ما يقرأه المساعد وما يجهزه والقرارات التي تبقى لدى الموظفين."
+      "Use information you are permitted to provide. An agent's role does not replace access controls, and an approval must refer to the action actually reviewed.",
+      "استخدم المعلومات التي يحق لك تقديمها. دور الوكيل لا يحل محل ضوابط الوصول، ويجب أن يتعلق الاعتماد بالإجراء الذي راجعته فعلًا."
     ],
     "sections": [
       {
         "title": [
-          "Current private workspace",
-          "المساحة الخاصة الحالية"
+          "Workspace access",
+          "الوصول إلى المساحة"
         ],
         "body": [
-          "The current app uses a signed-in owner workspace for agents, text sources, runs and privately saved briefs. It is not a shared employee portal. A deployment with invitations, employee roles or client-system access needs separate design and validation.",
-          "يستخدم التطبيق الحالي مساحة خاصة بمالك مسجّل الدخول لحفظ المساعدين والمصادر النصية ونتائج التشغيل والموجزات الخاصة. ليست بوابة مشتركة للموظفين. الدعوات وأدوار الموظفين والوصول إلى أنظمة العميل تحتاج تصميمًا وتحققًا مستقلين."
+          "The private workspace belongs to its signed-in owner. It stores agent configurations, sources, conversations and internal work records. It is not a shared employee portal. Team membership, employee permissions and identity-provider access must not be inferred from an individual account.",
+          "المساحة الخاصة لمالكها المسجّل دخوله. وتحفظ إعدادات الوكلاء والمصادر والمحادثات وسجلات العمل الداخلية. ليست بوابة موظفين مشتركة، ولا يعني الحساب الفردي وجود عضويات فرق أو صلاحيات موظفين أو دخول بهوية المؤسسة."
         ]
       },
       {
         "title": [
-          "Choose what you share",
-          "اختر ما تشاركه"
+          "Private sources and public use",
+          "المصدر الخاص والاستخدام العام"
         ],
         "body": [
-          "Start with a task description and synthetic or non-sensitive facts. Add only text you are allowed to use. Supported knowledge is pasted text or UTF-8 TXT/MD, up to 12,000 bytes and 12,000 characters. Arabic may reach the byte limit sooner. Keep passwords, payment credentials and sensitive case records out of the workspace.",
-          "ابدأ بوصف المهمة ومعلومات افتراضية أو غير حساسة. أضف النصوص التي يحق لك استخدامها فقط. المعرفة المدعومة نص ملصق أو TXT/MD بترميز UTF-8، بحد 12,000 بايت و12,000 حرف. قد تصل العربية إلى حد البايتات أسرع. لا تضف كلمات مرور أو بيانات دفع أو سجلات حالات حساسة."
+          "Adding a source, allowing its public use and publishing are separate actions. The public widget uses explicitly published knowledge. Review every source before making it public. Private record changes do not automatically erase downloaded copies or separately published snapshots.",
+          "إضافة المصدر والسماح باستخدامه علنًا ونشره إجراءات منفصلة. تستخدم النافذة العامة معرفة منشورة صراحة؛ لذلك راجع كل مصدر قبل إتاحته. تعديل السجل الخاص لا يمحو تلقائيًا النسخ المنزلة أو المنشورة بصورة مستقلة."
         ]
       },
       {
         "title": [
-          "Private and public information",
-          "المعلومات الخاصة والعامة"
+          "Approval and execution",
+          "الاعتماد والتنفيذ"
         ],
         "body": [
-          "Adding a source is separate from allowing public use and publishing. A public widget uses an explicitly published snapshot of approved public knowledge. Private instructions, conversation history and saved briefs do not belong in that public surface. Check every source before allowing public use.",
-          "إضافة مصدر خطوة منفصلة عن السماح باستخدامه علنًا وعن النشر. تستخدم النافذة العامة نسخة منشورة صراحة من المعرفة المسموح بعرضها. التعليمات الخاصة وسجل المحادثة والموجزات المحفوظة ليست ضمن هذه الواجهة العامة. راجع كل مصدر قبل السماح بعرضه."
+          "Inspect the exact proposal and its saved status. An internal approval records a decision in the workspace. It does not confirm that a helpdesk received a case, a supplier received an order or an external system completed an update.",
+          "افحص المقترح نفسه وحالته المحفوظة. يسجّل الاعتماد الداخلي قرارًا داخل المساحة، ولا يؤكد وصول حالة إلى نظام دعم أو أمر إلى مورد أو اكتمال تحديث خارجي."
         ]
       },
       {
         "title": [
-          "Review the exact request",
-          "راجع الطلب نفسه"
+          "Account and data boundaries",
+          "حدود الحساب والبيانات"
         ],
         "body": [
-          "An authorized owner reviews the stored title and details of an internal request. Pending approval expires after 15 minutes. Approved means approved in the workspace; it does not mean sent to a helpdesk, acted on or received by AGYNEXA.",
-          "يراجع المالك المخوّل عنوان الطلب الداخلي وتفاصيله المحفوظة. تنتهي صلاحية الاعتماد المعلّق بعد 15 دقيقة. «معتمد» تعني اعتماده داخل المساحة؛ ولا تعني إرساله إلى الدعم أو تنفيذه أو استلام AGYNEXA له."
-        ]
-      },
-      {
-        "title": [
-          "Define the project security review",
-          "حدّد مراجعة أمان المشروع"
-        ],
-        "body": [
-          "For a separate implementation, supply the permitted data types, system owner, reading and writing permissions, reviewer and failure cases. The proposed deliverable is a permissions plan and test evidence for that scope. Certifications, regulatory suitability and provider data-location guarantees require their own evidence.",
-          "للتنفيذ المستقل، حدّد أنواع البيانات المسموحة ومسؤول النظام وصلاحيات القراءة والكتابة والمراجع وحالات الفشل. المخرج المقترح خطة صلاحيات وأدلة اختبار لهذا النطاق. الشهادات والملاءمة التنظيمية وضمانات مكان معالجة البيانات تحتاج أدلة مستقلة."
-        ]
-      },
-      {
-        "title": [
-          "Data handling and account limits",
-          "التعامل مع البيانات وحدود الحساب"
-        ],
-        "body": [
-          "Read the Privacy notice and Usage terms before adding information. Automatic deletion after a fixed number of days is not promised. Email ownership verification and account recovery are not available in the current account flow. Confirm the handling and support you need before relying on it for business-critical work.",
-          "اقرأ إشعار الخصوصية وشروط الاستخدام قبل إضافة معلومات. لا نعد بحذف تلقائي بعد عدد محدد من الأيام. التحقق من ملكية البريد واستعادة الحساب غير متاحين في مسار الحساب الحالي. تأكد من إجراءات البيانات والدعم التي تحتاجها قبل الاعتماد عليه في عمل حرج."
+          "Email ownership verification, password recovery and a whole-account deletion interface are unavailable. Start with non-sensitive examples. Keep passwords, payment credentials and sensitive personal, clinical, financial or employment records out of demonstrations.\n\nRead the privacy notice for the application's provider path and deletion limits. A certification, fixed processing location or support SLA requires its own evidence and agreement; none follows from a product label.",
+          "لا تتوفر خطوات التحقق من ملكية البريد أو استعادة كلمة المرور أو واجهة حذف الحساب بالكامل. ابدأ بأمثلة غير حساسة، وأبقِ بيانات الدخول والدفع والسجلات الشخصية والطبية والمالية والوظيفية الحساسة خارج الأمثلة.\n\nيوضح إشعار الخصوصية مسار المزودين وحدود الحذف. وتحتاج الشهادة أو موقع المعالجة المحدد أو مستوى الخدمة إلى دليل واتفاق مستقلين؛ لا يثبتها اسم المنتج."
         ]
       }
     ],
@@ -144,12 +124,12 @@
   },
   "industries": {
     "title": [
-      "Examples of assistance for everyday business tasks",
-      "أمثلة لمساعدة الذكاء الاصطناعي في مهام العمل اليومية"
+      "Different industries. Specific work to understand.",
+      "افهم المهمة داخل سياق قطاعك"
     ],
     "intro": [
-      "For business owners assessing fit: each example starts with supplied text and ends with a draft for a named reviewer. These are proposed scopes, not customer deployments. Begin with synthetic or non-sensitive material; regulated case data needs a separate security and legal assessment.",
-      "لمسؤولي الأعمال الذين يقيّمون الملاءمة: يبدأ كل مثال بنص تقدمه وينتهي بمسودة يراجعها مسؤول محدد. هذه نطاقات مقترحة وليست مشروعات لعملاء. ابدأ بمواد افتراضية أو غير حساسة؛ وبيانات الحالات الخاضعة للتنظيم تحتاج تقييمًا أمنيًا وقانونيًا مستقلًا."
+      "An industry tells us the context; the task defines what the agent needs. Use these examples to identify information, output and decision ownership. They are workflow illustrations, not claims of installed sector products or regulatory approval.\n\nUse synthetic or non-sensitive examples that you are authorized to provide. Required system access and data formats need their own capability check. Account notices explain the workspace's data boundaries.",
+      "يوضح القطاع طبيعة العمل، وتحدّد المهمة ما يحتاجه الوكيل. تساعدك الأمثلة على معرفة المعلومات والمخرج وصاحب القرار. وهي أمثلة لسير العمل، ولا تعني وجود منتجات قطاعية متصلة أو اعتماد تنظيمي.\n\nاستخدم أمثلة افتراضية أو غير حساسة يحق لك تقديمها. وافحص دعم صيغ البيانات والوصول إلى الأنظمة اللازمة. توضح إشعارات الحساب حدود التعامل مع المعلومات داخل المساحة."
     ],
     "sections": [
       {
@@ -158,20 +138,20 @@
           "البنوك والخدمات المالية"
         ],
         "body": [
-          "Complaint notes can omit facts needed by the reviewer. A proposed staff-side prototype prepares a case summary and missing-information checklist.",
-          "قد تغفل ملاحظات الشكاوى معلومات يحتاجها المراجع. النموذج المقترح للموظفين يجهز ملخص الحالة وقائمة المعلومات الناقصة."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic complaint narrative and approved complaint procedure",
-          "وصف شكوى افتراضي وإجراء شكاوى معتمد"
+          "Supplied complaint notes and an approved handling procedure.",
+          "ملاحظات شكوى وإجراء معتمد للتعامل معها."
         ],
         "output": [
-          "Draft case summary, cited procedure and missing fields",
-          "مسودة ملخص الحالة والإجراء بمراجعه والحقول الناقصة"
+          "A dated brief with policy references and missing evidence; authorized staff decide the response.",
+          "موجز مؤرخ بمراجع السياسة والأدلة الناقصة؛ يقرر الموظف المخوّل الرد."
         ],
         "reviewer": [
-          "Complaint lead validates facts, deadlines, redress and any customer response. No bank-system access or financial decision.",
-          "يراجع مسؤول الشكاوى الحقائق والمواعيد والتعويضات وأي رد للعميل. لا وصول إلى أنظمة البنك أو اتخاذ قرار مالي."
+          "",
+          ""
         ]
       },
       {
@@ -180,20 +160,20 @@
           "التأمين"
         ],
         "body": [
-          "A scattered claim timeline makes a clear status explanation harder to prepare. A proposed prototype organizes supplied events and shows missing evidence.",
-          "يصعب إعداد شرح واضح للحالة عندما تتفرق أحداث المطالبة. ينظم النموذج المقترح الأحداث المقدمة ويبيّن الأدلة الناقصة."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic event notes and approved claims-service steps",
-          "ملاحظات أحداث افتراضية وخطوات معتمدة لخدمة المطالبات"
+          "Claim-service events and an evidence checklist.",
+          "أحداث متابعة مطالبة وقائمة مستنداتها."
         ],
         "output": [
-          "Chronology, document checklist and draft status note",
-          "تسلسل زمني وقائمة مستندات ومسودة بيان حالة"
+          "A chronology and missing documents; coverage and settlement decisions stay with qualified staff.",
+          "تسلسل المتابعة والنواقص، مع بقاء التغطية والتسوية لدى المختصين."
         ],
         "reviewer": [
-          "Claims handler checks status and wording; coverage, settlement and rejection remain with authorized specialists. No live claim lookup.",
-          "يراجع موظف المطالبات الحالة والصياغة؛ وتبقى التغطية والتسوية والرفض للمتخصصين المخولين. لا استعلام حي عن المطالبة."
+          "",
+          ""
         ]
       },
       {
@@ -202,42 +182,42 @@
           "إدارة الخدمات الصحية"
         ],
         "body": [
-          "An administrative request may arrive without required fields. This research example checks nonclinical completeness before staff review.",
-          "قد يصل الطلب الإداري دون الحقول المطلوبة. يفحص هذا المثال البحثي اكتمال البيانات غير السريرية قبل مراجعة الموظف."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic nonclinical request and an approved administrative checklist; no patient records",
-          "طلب غير سريري افتراضي وقائمة إدارية معتمدة، دون سجلات مرضى"
+          "A nonclinical administrative request and completeness rules.",
+          "طلب إداري غير سريري وقواعد اكتماله."
         ],
         "output": [
-          "Missing-field checklist and draft administrative cover note",
-          "قائمة الحقول الناقصة ومسودة خطاب إداري"
+          "Administrative gaps; no clinical interpretation or patient-specific decision.",
+          "نواقص إدارية دون تفسير طبي أو قرار يخص حالة مريض."
         ],
         "reviewer": [
-          "Authorized staff checks requirements; a clinician owns every clinical statement. No diagnosis, treatment, authorization prediction or patient data in the demo.",
-          "يتحقق الموظف المخوّل من المتطلبات، ويتولى الطبيب كل بيان سريري. لا تشخيص أو علاج أو توقع للموافقة أو بيانات مرضى في المثال."
+          "",
+          ""
         ]
       },
       {
         "title": [
-          "Retail and commerce",
-          "التجزئة والتجارة"
+          "Retail",
+          "التجزئة"
         ],
         "body": [
-          "Staff need to explain a return rule without guessing how an unclear case should be handled. The synthetic retail example separates the written rule from the manager’s decision.",
-          "يحتاج الموظف إلى شرح قاعدة الإرجاع دون تخمين حكم الحالة غير الواضحة. يفصل مثال التجزئة الافتراضي القاعدة المكتوبة عن قرار المدير."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic returns policy and a short customer-question example",
-          "سياسة إرجاع افتراضية ومثال قصير لسؤال عميل"
+          "A customer question and the current returns policy.",
+          "سؤال عميل وسياسة الإرجاع الحالية."
         ],
         "output": [
-          "Source-cited answer, unclear cases and a response draft",
-          "إجابة بمراجع المصدر وحالات غير محسومة ومسودة رد"
+          "A source-based response draft and exceptions for the manager.",
+          "مسودة بمصدرها والاستثناء الذي يحتاج إلى مدير."
         ],
         "reviewer": [
-          "Store manager confirms exceptions and any refund. No order lookup, refund or customer message is performed.",
-          "يؤكد مدير المتجر الاستثناءات وأي مبلغ مسترد. لا يجري استعلام عن طلب أو رد أموال أو إرسال رسالة للعميل."
+          "",
+          ""
         ]
       },
       {
@@ -246,20 +226,20 @@
           "الاتصالات"
         ],
         "body": [
-          "Order and fault notes can leave the next support agent without a clear sequence of events. A proposed prototype prepares a handoff from supplied notes.",
-          "قد لا توضح ملاحظات الطلبات والأعطال تسلسل الأحداث للموظف التالي. يجهز النموذج المقترح إحالة اعتمادًا على الملاحظات المقدمة."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic provisioning or fault timeline and approved escalation guidance",
-          "تسلسل افتراضي لتفعيل خدمة أو عطل وإرشادات تصعيد معتمدة"
+          "Fault notes and actions already attempted.",
+          "ملاحظات العطل والخطوات التي جُرّبت."
         ],
         "output": [
-          "Handoff summary, missing updates and draft status explanation",
-          "ملخص إحالة وتحديثات ناقصة ومسودة شرح للحالة"
+          "A handoff that preserves the sequence and unresolved questions.",
+          "إحالة تحفظ التسلسل والأسئلة المفتوحة."
         ],
         "reviewer": [
-          "Support supervisor verifies live service state, compensation and promised dates. No network, billing or account changes.",
-          "يتحقق مشرف الدعم من حالة الخدمة الفعلية والتعويضات والمواعيد الموعودة. لا تغييرات على الشبكة أو الفواتير أو الحساب."
+          "",
+          ""
         ]
       },
       {
@@ -268,20 +248,20 @@
           "السفر والضيافة"
         ],
         "body": [
-          "A shift handoff may mix booking-policy questions with operational issues. A proposed brief groups supplied issues and leaves uncertain commitments visible.",
-          "قد تجمع إحالة الوردية أسئلة سياسة الحجز والمشكلات التشغيلية. يجمع الموجز المقترح المشكلات المقدمة ويبيّن الالتزامات غير المحسومة."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic shift notes and approved booking or service rules",
-          "ملاحظات وردية افتراضية وقواعد حجز أو خدمة معتمدة"
+          "Service issues and outstanding commitments.",
+          "مشكلات الخدمة والالتزامات المعلقة."
         ],
         "output": [
-          "Shift handoff brief, policy references and questions for the manager",
-          "موجز تسليم وردية ومراجع السياسات وأسئلة للمدير"
+          "A shift handover with the next owner for each open item.",
+          "تسليم وردية يوضح المسؤول التالي عن كل بند."
         ],
         "reviewer": [
-          "Duty manager checks staffing and booking facts and approves changes. No reservation access, cancellation or guest contact.",
-          "يتحقق مدير الوردية من معلومات العاملين والحجوزات ويعتمد التغييرات. لا وصول للحجوزات أو إلغاء أو تواصل مع النزلاء."
+          "",
+          ""
         ]
       },
       {
@@ -290,20 +270,20 @@
           "الخدمات المهنية"
         ],
         "body": [
-          "An incomplete client brief creates questions before a specialist can start. A proposed intake workflow organizes supplied facts against an approved checklist.",
-          "يثير موجز العميل غير المكتمل أسئلة قبل أن يبدأ المختص. ينظم مسار الاستقبال المقترح المعلومات المقدمة وفق قائمة معتمدة."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic client request and the firm’s approved intake guidance",
-          "طلب عميل افتراضي وإرشادات استقبال معتمدة لدى المكتب"
+          "A client enquiry and the firm's intake requirements.",
+          "استفسار عميل ومتطلبات استقبال الأعمال."
         ],
         "output": [
-          "Draft intake brief, source references and missing-document questions",
-          "مسودة موجز استقبال ومراجع المصادر وأسئلة عن المستندات الناقصة"
+          "An intake brief and missing inputs; specialist advice remains with its qualified reviewer.",
+          "موجز بالنواقص؛ تبقى المشورة المتخصصة لدى المؤهل لها."
         ],
         "reviewer": [
-          "Qualified professional verifies advice, figures and client communication. No tax filing, legal opinion or accounting-system access.",
-          "يراجع المختص المؤهل المشورة والأرقام والتواصل مع العميل. لا إقرارات ضريبية أو رأي قانوني أو وصول لنظام محاسبي."
+          "",
+          ""
         ]
       },
       {
@@ -312,20 +292,20 @@
           "اللوجستيات والتجارة الخارجية"
         ],
         "body": [
-          "Shipment notes may omit dates or document references. A proposed workflow prepares a chronology and the questions an operator needs to resolve.",
-          "قد تخلو ملاحظات الشحن من تواريخ أو مراجع مستندات. يجهز المسار المقترح تسلسلًا زمنيًا والأسئلة التي يحتاج المسؤول إلى حسمها."
+          "",
+          ""
         ],
         "input": [
-          "Manually supplied shipment milestones and relevant approved checklist text",
-          "مراحل شحن يقدمها المستخدم ونص قائمة تحقق معتمدة ذات صلة"
+          "Supplied shipment events and documents.",
+          "أحداث شحنة ومستنداتها المقدمة."
         ],
         "output": [
-          "Dated exception chronology and missing-field checklist",
-          "تسلسل مؤرخ للاستثناءات وقائمة الحقول الناقصة"
+          "An exception brief with dates and facts to confirm before promising a delivery outcome.",
+          "موجز استثناء بالتواريخ والحقائق اللازمة قبل تأكيد نتيجة التسليم."
         ],
         "reviewer": [
-          "Operations lead or broker verifies shipment state, classifications and any filing. No live tracking, customs clearance or claim that paperwork caused a delay.",
-          "يتحقق مسؤول العمليات أو المخلّص من حالة الشحنة والتصنيف وأي تقديم رسمي. لا تتبع حي أو تخليص جمركي أو افتراض أن المستندات سببت التأخير."
+          "",
+          ""
         ]
       },
       {
@@ -334,20 +314,20 @@
           "الطاقة والنفط والغاز"
         ],
         "body": [
-          "Reporting instructions can be difficult to compare with a small set of entered values. This research example prepares a checklist for a reporting officer.",
-          "قد تصعب مقارنة تعليمات التقرير بمجموعة قيم مدخلة. يجهز هذا المثال البحثي قائمة تحقق لمسؤول التقارير."
+          "",
+          ""
         ],
         "input": [
-          "Approved form instructions, reporting period, units and synthetic values",
-          "تعليمات نموذج معتمدة وفترة التقرير والوحدات وقيم افتراضية"
+          "Authorized noncritical maintenance notes and procedure references.",
+          "ملاحظات صيانة غير حرجة ومراجع إجراءات مصرح بها."
         ],
         "output": [
-          "Source-linked field checklist and ambiguous or missing entries",
-          "قائمة حقول مرتبطة بالمصدر والقيم الملتبسة أو الناقصة"
+          "A maintenance handover; safety-critical decisions remain with qualified personnel.",
+          "إحالة صيانة، مع إبقاء قرارات السلامة لدى المختصين."
         ],
         "reviewer": [
-          "Reporting officer validates measurements and submissions. No equipment control, safety guidance or operational decision.",
-          "يتحقق مسؤول التقارير من القياسات والتقديمات. لا تحكم بالمعدات أو إرشادات سلامة أو قرار تشغيلي."
+          "",
+          ""
         ]
       },
       {
@@ -356,20 +336,20 @@
           "التجارة والتوزيع"
         ],
         "body": [
-          "Late orders and missing receipt updates need a clear review list. The synthetic distribution example groups supplied exceptions and asks for the most useful missing facts.",
-          "تحتاج الطلبات المتأخرة وتحديثات الاستلام الناقصة إلى قائمة مراجعة واضحة. يجمع مثال التوزيع الافتراضي الاستثناءات المقدمة ويسأل عن أهم المعلومات الناقصة."
+          "",
+          ""
         ],
         "input": [
-          "Synthetic weekly order exceptions pasted as short text",
-          "استثناءات طلبات أسبوعية افتراضية ملصقة كنص قصير"
+          "Item requests and approved catalogue information.",
+          "أصناف مطلوبة ومعلومات كتالوج معتمدة."
         ],
         "output": [
-          "Exception brief with recorded dates, unknowns and proposed owners",
-          "موجز استثناءات بالتواريخ المسجلة والنواقص والمسؤولين المقترحين"
+          "A quotation-preparation brief; price, availability and commercial terms need confirmation.",
+          "موجز لتجهيز العرض؛ يحتاج السعر والتوافر والشروط إلى تأكيد."
         ],
         "reviewer": [
-          "Operations manager verifies stock and dispatch updates, assigns owners and approves commitments. No ERP/WMS access or supplier message.",
-          "يتحقق مدير العمليات من المخزون وتحديثات الإرسال ويحدد المسؤولين ويعتمد الالتزامات. لا وصول إلى ERP/WMS أو مراسلة للمورد."
+          "",
+          ""
         ]
       }
     ],
@@ -381,52 +361,52 @@
   },
   "integrations": {
     "title": [
-      "Check whether your systems can connect",
-      "تحقق من إمكانية ربط أنظمتك"
+      "Define what the agent needs from each system",
+      "حدّد ما يحتاجه الوكيل من كل نظام"
     ],
     "intro": [
-      "For application owners planning an integration engagement: bring the system name, edition, task and permitted records. The deliverable starts with a feasibility and permission plan. The vendors below are candidates for assessment, not active AGYNEXA connectors.",
-      "لمسؤولي التطبيقات الذين يخططون لمشروع تكامل: جهّز اسم النظام وإصداره والمهمة والسجلات المسموحة. يبدأ التسليم بخطة جدوى وصلاحيات. الأسماء التالية مرشحة للتقييم وليست موصلات تعمل حاليًا داخل AGYNEXA."
+      "A useful connection serves a specific task: reading an approved record, checking a status or making a permitted change. Start with that operation and the person who can authorize it.\n\nThe systems below are examples to assess. They are not an installed connector catalogue.\n\nConnecting involves more than storing a key. The operation needs its access check, input contract and evidence of the destination's response. Authorization must be removable, and retries must respect the effect of the original action.\n\nStudio knowledge sources are added as supported short text. Describing a live connection in an agent instruction does not activate one. Keep credentials out of prompts and conversation content.",
+      "يخدم الاتصال مهمة واضحة، مثل قراءة سجل معتمد أو فحص حالة أو تنفيذ تغيير مسموح. ابدأ بالعملية والشخص الذي يستطيع تفويضها.\n\nالأنظمة التالية أمثلة للتقييم، وليست قائمة موصلات مثبتة داخل المنصة.\n\nلا يكتمل الاتصال بمجرد حفظ مفتاح. تحتاج العملية إلى فحص وصول ومدخلات محددة ودليل على استجابة النظام المستهدف. ويجب أن يكون التفويض قابلًا للسحب، وأن تراعي إعادة المحاولة أثر الإجراء السابق.\n\nتُضاف معرفة الاستوديو كنصوص قصيرة مدعومة. وصف اتصال حي في تعليمات الوكيل لا يفعّله، ولا تُوضع بيانات الدخول في الأسئلة أو المحادثات."
     ],
     "sections": [
       {
         "title": [
-          "CRM and sales records",
-          "أنظمة العملاء والمبيعات"
+          "Customer and sales records",
+          "العملاء والمبيعات"
         ],
         "body": [
-          "Candidates: Salesforce, HubSpot, Microsoft Dynamics 365 and Zoho. A proposed assessment checks which account fields can be read and how a brief would cite them. The application owner approves access; any update or outreach is a separately reviewed action.",
-          "مرشحون للتقييم: Salesforce وHubSpot وMicrosoft Dynamics 365 وZoho. يفحص التقييم المقترح حقول الحساب المسموح بقراءتها وطريقة الاستناد إليها في الموجز. يعتمد مسؤول التطبيق الوصول؛ وأي تحديث أو تواصل إجراء مستقل للمراجعة."
+          "Salesforce, HubSpot, Dynamics 365, Zoho\n\nNeeded fields, authoritative record and permission for reads or updates.",
+          "Salesforce وHubSpot وDynamics 365 وZoho\n\nالحقول المطلوبة ومرجعها وصلاحيات القراءة والتحديث."
         ]
       },
       {
         "title": [
-          "Support and case records",
-          "سجلات الدعم والحالات"
+          "Support cases",
+          "حالات الدعم"
         ],
         "body": [
-          "Candidates: Zendesk, ServiceNow, Jira and Freshdesk. Supply the permitted case fields, routing rules and test environment. The proposed output is a field map and handoff design; your support owner confirms recipients and failure handling before a live connection.",
-          "مرشحون للتقييم: Zendesk وServiceNow وJira وFreshdesk. حدّد حقول الحالة المسموحة وقواعد التوجيه وبيئة الاختبار. المخرج المقترح خريطة حقول وتصميم إحالة؛ ويؤكد مسؤول الدعم المستلمين ومعالجة الإخفاق قبل الربط الفعلي."
+          "Zendesk, ServiceNow, Jira, Freshdesk\n\nCase fields, permitted queues, routing rules and an outcome for failed handoffs.",
+          "Zendesk وServiceNow وJira وFreshdesk\n\nحقول الحالة وجهات الإحالة والقواعد وما يحدث عند تعذر التسليم."
         ]
       },
       {
         "title": [
-          "Workplace knowledge",
+          "Company knowledge",
           "معرفة المؤسسة"
         ],
         "body": [
-          "Candidates: Microsoft Graph, Teams, SharePoint, Google Workspace and Slack. A knowledge owner identifies permitted folders or channels and deletion rules. A proposed connection must preserve source permissions and stop using removed material. Current Studio accepts short text added manually.",
-          "مرشحون للتقييم: Microsoft Graph وTeams وSharePoint وGoogle Workspace وSlack. يحدد مسؤول المعرفة المجلدات أو القنوات المسموحة وقواعد الحذف. يجب أن يحفظ الربط المقترح صلاحيات المصدر ويتوقف عن استخدام المواد المحذوفة. يقبل Studio الحالي نصوصًا قصيرة تضيفها يدويًا."
+          "Microsoft Graph, SharePoint, Teams, Google Workspace, Slack\n\nApproved folders or channels, source restrictions and update/removal behavior.",
+          "Microsoft Graph وSharePoint وTeams وGoogle Workspace وSlack\n\nالمجلدات والقنوات المسموحة وقيود المصادر وتحديثها وحذفها."
         ]
       },
       {
         "title": [
-          "Purchasing and finance records",
-          "سجلات المشتريات والمالية"
+          "Purchasing and finance",
+          "المشتريات والمالية"
         ],
         "body": [
-          "Candidates: SAP, Odoo and ERPNext. Provide the product version, API availability and a synthetic order/invoice sample. The proposed output is a read/write scope and mapping for review. A finance or purchasing owner approves each permitted change; no live ERP access exists in the current app.",
-          "مرشحون للتقييم: SAP وOdoo وERPNext. قدّم الإصدار وإتاحة الواجهة وعينة طلب أو فاتورة افتراضية. المخرج المقترح نطاق قراءة وكتابة وخريطة بيانات للمراجعة. يعتمد مسؤول المالية أو المشتريات كل تغيير مسموح؛ ولا يتيح التطبيق الحالي وصولًا حيًا إلى ERP."
+          "SAP, Odoo, ERPNext\n\nEdition/API availability, identifiers, currencies, units and authorized writes.",
+          "SAP وOdoo وERPNext\n\nالإصدار وإتاحة الواجهة ومعرّفات السجلات والعملات والوحدات والتعديل المصرح به."
         ]
       },
       {
@@ -435,18 +415,18 @@
           "الصوت والمراسلة"
         ],
         "body": [
-          "Candidates: WhatsApp Business and Twilio. A separate project must confirm account eligibility, consent, language, recording rules, transfer destination and provider charges. Its output starts with a reviewed call or message journey. Studio does not place calls or send messages.",
-          "مرشحون للتقييم: WhatsApp Business وTwilio. يجب أن يؤكد المشروع المستقل أهلية الحساب والموافقة واللغة وقواعد التسجيل وجهة التحويل ورسوم المزود. يبدأ المخرج برحلة مكالمة أو رسالة للمراجعة. لا يجري Studio مكالمات أو يرسل رسائل."
+          "Twilio, WhatsApp Business\n\nAccount eligibility, language, consent, recording, transfer and provider charges.",
+          "Twilio وWhatsApp Business\n\nأهلية الحساب واللغة والموافقة والتسجيل والتحويل ورسوم المزود."
         ]
       },
       {
         "title": [
-          "Data services and developer interfaces",
-          "خدمات البيانات وواجهات المطورين"
+          "Data and interfaces",
+          "البيانات والواجهات"
         ],
         "body": [
-          "PostgreSQL, pgvector, REST, SOAP and MCP may be assessed when the task calls for them. Bring a sample schema and allowed destinations. The output is a tested connection contract if commissioned. Current Studio uses word matching, not vector search; an API or MCP server name alone grants no access.",
-          "يمكن تقييم PostgreSQL وpgvector وREST وSOAP وMCP عندما تحتاجها المهمة. قدّم مخطط بيانات نموذجيًا والوجهات المسموحة. يكون المخرج عقد اتصال مختبرًا إذا شمله التكليف. يستخدم Studio الحالي مطابقة الكلمات لا البحث بالمتجهات؛ ولا يمنح اسم واجهة أو خادم MCP صلاحية وصول."
+          "PostgreSQL, pgvector, REST, SOAP, MCP\n\nSchema, interface, authentication, permitted operations and error behavior.",
+          "PostgreSQL وpgvector وREST وSOAP وMCP\n\nمخطط البيانات والواجهة والمصادقة والعمليات المسموحة وسلوك الإخفاق."
         ]
       }
     ],
@@ -457,62 +437,62 @@
   },
   "methodology": {
     "title": [
-      "Take one business task from scope to handover",
-      "من تحديد نطاق مهمة عمل إلى تسليمها"
+      "Give the agent a job you can evaluate",
+      "حدّد مهمة تستطيع تقييم الوكيل عليها"
     ],
     "intro": [
-      "For a buyer commissioning a focused implementation: explain one recurring task and show a safe example. We agree the output, reviewer and acceptance checks before implementation. Pricing, timing and support belong in the project agreement.",
-      "لمن يكلّف بتنفيذ محدد: اشرح مهمة متكررة وقدّم مثالًا آمنًا. نتفق على المخرج والمراجع واختبارات القبول قبل التنفيذ. تُحدد الأسعار والمواعيد والدعم في اتفاق المشروع."
+      "A company description provides context. A useful configuration also needs a task, permitted information and an expected output. Use the following sequence to make those requirements clear.",
+      "يشرح وصف الشركة طبيعة العمل، لكن إعداد الوكيل يحتاج أيضًا إلى مهمة ومعلومات مسموحة ومخرج واضح. يساعدك هذا الترتيب على ضبط المتطلبات."
     ],
     "sections": [
       {
         "title": [
-          "01 / Define the task",
-          "01 / حدّد المهمة"
+          "Define the role",
+          "اكتب دور الوكيل"
         ],
         "body": [
-          "Supply the current steps, task owner, an example input and a useful output. The deliverable is a scope brief with exclusions and open questions. Your process owner checks that it describes the actual work.",
-          "قدّم الخطوات الحالية ومسؤول المهمة ومثالًا للمدخلات ومخرجًا مفيدًا. الناتج موجز نطاق يوضح الاستثناءات والأسئلة المفتوحة. يراجعه مسؤول العملية للتأكد من مطابقته للعمل الفعلي."
+          "Describe who will use the result and the question or task it supports. State the form of the output: an answer with references, a case brief or a comparison. Include decisions the agent must leave to the responsible person.",
+          "وضّح من يستخدم النتيجة والسؤال أو المهمة التي تخدمها. وحدّد شكل المخرج، مثل إجابة بمراجع أو موجز حالة أو مقارنة. واذكر القرارات التي يجب أن يتركها الوكيل للمسؤول عنها."
         ]
       },
       {
         "title": [
-          "02 / Agree information and permissions",
-          "02 / اتفق على المعلومات والصلاحيات"
+          "Prepare the information",
+          "جهّز المعلومات"
         ],
         "body": [
-          "Identify approved sources, permitted readers and decisions that require a person. The deliverable is a source and permission plan. System owners confirm access, provider requirements and handling of sensitive information.",
-          "حدّد المصادر المعتمدة ومن يقرأها والقرارات التي تحتاج شخصًا. الناتج خطة مصادر وصلاحيات. يؤكد مسؤولو الأنظمة الوصول ومتطلبات المزود وطريقة التعامل مع المعلومات الحساسة."
+          "Choose approved material and identify its owner. In Studio, add supported text and check that the source contains the facts needed for the question. Record other system or document requirements separately; listing them does not create a connection.",
+          "اختر مادة معتمدة وحدّد المسؤول عنها. أضف النص المدعوم داخل الاستوديو، وافحص وجود الحقائق اللازمة للسؤال في المصدر. أما الأنظمة أو صيغ المستندات الأخرى فدوّن متطلباتها؛ ذكرها لا ينشئ اتصالًا بها."
         ]
       },
       {
         "title": [
-          "03 / Build the agreed journey",
-          "03 / نفّذ الرحلة المتفق عليها"
+          "Try representative cases",
+          "جرّب حالات من العمل"
         ],
         "body": [
-          "Use synthetic or authorized non-sensitive samples to implement the selected task. The deliverable is a working test journey and a list of unsupported cases. A connector or new file format enters scope only after feasibility is established.",
-          "نستخدم عينات افتراضية أو غير حساسة ومصرحًا بها لتنفيذ المهمة المختارة. الناتج رحلة اختبار تعمل وقائمة حالات غير مدعومة. لا يدخل موصل أو تنسيق ملفات جديد في النطاق قبل إثبات جدواه."
+          "Use the conversation to ask questions from the selected task. Include missing information, conflicting facts and requests outside the role. Inspect source excerpts as well as the final wording. These are user-led checks, not a claim of an automated evaluation suite.",
+          "اطرح في المحادثة أسئلة تمثل المهمة، بما فيها نقص المعلومات وتعارض الحقائق والطلب الخارج عن الدور. وافحص مقتطفات المصادر إلى جانب الرد. هذه مراجعة يجريها المستخدم، وليست وصفًا لمنظومة تقييم آلي."
         ]
       },
       {
         "title": [
-          "04 / Review results and failures",
-          "04 / راجع النتائج والإخفاقات"
+          "Review the proposed result",
+          "راجع المخرج المقترح"
         ],
         "body": [
-          "Your reviewer checks useful answers, missing facts, denied access and provider failures against agreed examples. The deliverable is a test record with corrections and remaining limits. Any time or cost benefit needs a measured baseline.",
-          "يفحص المراجع الإجابات المفيدة ونقص الحقائق ورفض الوصول وإخفاق المزود وفق أمثلة متفق عليها. الناتج سجل اختبار بالتصحيحات والحدود المتبقية. يحتاج أي تحسن في الوقت أو التكلفة إلى خط أساس مقاس."
+          "Check important facts, calculations and any next step. Where the workspace offers an internal proposal, inspect the exact saved object and its status. Do not infer an external action from an internal approval.",
+          "تحقّق من الحقائق والحسابات والخطوة التالية. وإذا عرضت المساحة مقترحًا داخليًا، فافحص العنصر المحفوظ وحالته. الاعتماد الداخلي لا يثبت تنفيذ إجراء خارج المساحة."
         ]
       },
       {
         "title": [
-          "05 / Accept and hand over",
-          "05 / اقبل النتيجة وتسلّمها"
+          "Understand what you share",
+          "افهم ما تشاركه"
         ],
         "body": [
-          "The responsible owner decides whether the tested scope is ready. Handover defines operating instructions, support responsibility and how to stop or undo a faulty release. Further integrations and usage costs are agreed explicitly.",
-          "يقرر المسؤول ما إذا كان النطاق المختبر جاهزًا. يحدد التسليم تعليمات التشغيل ومسؤولية الدعم وطريقة إيقاف إصدار معيب أو التراجع عنه. نتفق صراحة على التكاملات الإضافية وتكاليف الاستخدام."
+          "Private configuration and public publication are separate. Review any knowledge approved for public use and check the publication settings. A published agent endpoint or widget is different from provisioning a separate cloud application for your company.",
+          "إعداد الوكيل الخاص ونشره للعامة إجراءان منفصلان. راجع المعرفة المسموح باستخدامها علنًا وإعدادات النشر. واجهة الوكيل أو نافذته المنشورة تختلف عن إنشاء تطبيق سحابي مستقل للشركة."
         ]
       }
     ],
@@ -523,52 +503,32 @@
   },
   "about": {
     "title": [
-      "Who we are and how we work with your team",
-      "من نحن وكيف نعمل مع فريقك"
+      "One platform for agents with different jobs",
+      "منصة واحدة لوكلاء تختلف مهامهم"
     ],
     "intro": [
-      "AGYNEXA designs and builds enterprise Agentic AI systems for defined business tasks.",
-      "تصمّم AGYNEXA وتبني أنظمة ذكاء اصطناعي قائمة على الوكلاء للمؤسسات، وفق مهام عمل محددة."
+      "AGYNEXA is an Agent Builder Studio for business knowledge and workflows. Users bring the context of their work, define the agent's role and review the information it produces.\n\nThe product approach is a shared platform with user-specific configurations and information. The same foundation can support different tasks without treating every company as a separate software project. Each task still needs a clear output, permitted sources and a responsible reviewer.",
+      "AGYNEXA استوديو لبناء وكلاء المعرفة وسير العمل. يقدّم المستخدم تفاصيل عمله، ويحدّد دور الوكيل، ويراجع المعلومات التي ينتجها.\n\nتقوم فكرة المنتج على أساس مشترك، وإعدادات ومعلومات تخص كل مستخدم. يمكن لهذا الأساس أن يخدم مهام مختلفة دون أن تصبح كل شركة مشروع برمجة منفصلًا. وتحتاج كل مهمة إلى مخرج واضح ومصادر مسموحة ومسؤول يراجع النتيجة."
     ],
     "sections": [
       {
         "title": [
-          "Eng. Adham Younes Mohamed",
-          "المهندس أدهم يونس محمد"
+          "Founder",
+          "المؤسس"
         ],
         "body": [
-          "Eng. Adham Younes Mohamed is the Founder and CEO of AGYNEXA, specializing in designing and building enterprise-grade Agentic AI systems, multi-agent orchestration, intelligent workflow automation, and enterprise AI solutions.",
-          "المهندس أدهم يونس محمد هو المؤسس والرئيس التنفيذي لـAGYNEXA، ويتخصص في تصميم وبناء أنظمة ذكاء اصطناعي قائمة على الوكلاء بمستوى مؤسسي، وتنسيق العمل بين عدة وكلاء، وأتمتة مسارات العمل الذكية، وتطوير حلول الذكاء الاصطناعي للمؤسسات."
+          "Eng. Adham Younes Mohamed is the Founder and CEO of AGYNEXA. His work focuses on enterprise agent systems, workflow automation and the software needed to connect specialist roles within a business process.",
+          "المهندس أدهم يونس محمد هو المؤسس والرئيس التنفيذي لـAGYNEXA. يركّز عمله على أنظمة الوكلاء للمؤسسات وأتمتة سير العمل، والبرمجيات التي تربط الأدوار المتخصصة داخل عملية عمل."
         ]
       },
       {
         "title": [
-          "Start with what your team needs",
-          "ابدأ باحتياج فريقك"
+          "A practical definition of progress",
+          "فائدة يستطيع الفريق التحقق منها"
         ],
         "body": [
-          "Bring one question, document-review step or recurring request and describe the result you need. We scope sources, permissions, outputs and exclusions with the process owner. We also assess whether a tool you already use can do the job.",
-          "قدّم سؤالًا واحدًا أو خطوة مراجعة مستند أو طلبًا متكررًا، واشرح النتيجة المطلوبة. نحدد مع مسؤول العملية المصادر والصلاحيات والمخرجات والاستثناءات. ونقيّم أيضًا ما إذا كانت أداة تستخدمها بالفعل تؤدي المهمة."
-        ]
-      },
-      {
-        "title": [
-          "Two bounded starting templates",
-          "قالبان محددان للبداية"
-        ],
-        "body": [
-          "KnowledgeGrid prepares answers from approved short text with source references. ServiceFlow prepares issue briefs and internal requests for owner review. These templates use the current private Studio; the ten service entries describe broader implementation engagements, not ten finished software products.",
-          "يجهز KnowledgeGrid إجابات من نصوص قصيرة معتمدة بمراجعها. ويجهز ServiceFlow موجزات مشكلات وطلبات داخلية يراجعها المالك. يعمل القالبان في Studio الخاص الحالي؛ أما الخدمات العشر فتصف مشروعات تنفيذ أوسع، وليست عشرة منتجات برمجية مكتملة."
-        ]
-      },
-      {
-        "title": [
-          "Agree the delivery before work starts",
-          "اتفق على التسليم قبل البدء"
-        ],
-        "body": [
-          "Each separate project needs deliverables, data responsibilities, acceptance checks, commercial terms and support ownership. No client results, certification, fixed price or response-time guarantee is implied by this catalogue. A discovery conversation does not submit an enquiry to a staffed inbox.",
-          "يحتاج كل مشروع مستقل إلى مخرجات ومسؤوليات بيانات واختبارات قبول وشروط تجارية ومسؤول دعم. لا يعني هذا الكتالوج وجود نتائج عملاء أو شهادة أو سعر ثابت أو ضمان لزمن الرد. ولا ترسل محادثة الاكتشاف استفسارًا إلى صندوق يتابعه فريق."
+          "An agent is useful when its work can be checked against the task. We describe capabilities through the information they need, the output they support and the decisions around them. Account notices explain the handling of data and the scope of the private workspace.",
+          "تظهر قيمة الوكيل عندما يمكن فحص عمله مقابل المهمة. لذلك نشرح كل مجال بالمعلومات التي يحتاجها والمخرج الذي يدعمه والقرارات المرتبطة به. وتوضح إشعارات الحساب طريقة التعامل مع البيانات ونطاق المساحة الخاصة."
         ]
       }
     ],
@@ -579,72 +539,62 @@
   },
   "resources": {
     "title": [
-      "What to prepare before automating a business task",
-      "ما الذي تجهزه قبل أتمتة مهمة عمل"
+      "Prepare the work before writing the instructions",
+      "وضّح المهمة قبل كتابة التعليمات"
     ],
     "intro": [
-      "For an owner choosing a first task: use these checks to prepare a brief. You can discuss the task in private chat before adding any company source. Your process owner reviews the brief before implementation.",
-      "لمسؤول يختار المهمة الأولى: استخدم هذه الأسئلة لتجهيز موجز. يمكنك مناقشة المهمة في محادثة خاصة قبل إضافة أي مصدر للشركة. يراجع مسؤول العملية الموجز قبل التنفيذ."
+      "A good agent brief names the task, the information and the person who checks the result. You can define these without choosing a model or a cloud provider.",
+      "يحدّد الموجز المفيد المهمة ومعلوماتها ومن يراجع النتيجة. يمكنك ضبط هذه المتطلبات قبل اختيار نموذج أو مزود سحابي."
     ],
     "sections": [
       {
         "title": [
-          "Describe a useful result",
-          "صِف نتيجة مفيدة"
+          "Write a specific output",
+          "صِف مخرجًا محددًا"
         ],
         "body": [
-          "Write the task, who does it now and what the reviewer should receive. Example: a return-policy answer with the source excerpt and an unresolved-case question. Avoid beginning with a list of AI tools.",
-          "اكتب المهمة ومن يؤديها حاليًا وما يجب أن يستلمه المراجع. مثال: إجابة عن سياسة الإرجاع مع مقتطف المصدر وسؤال عن الحالة غير المحسومة. ابدأ بالمهمة قبل اختيار أدوات الذكاء الاصطناعي."
+          "“Summarize the supplied shipment events and list what still needs confirmation” gives the agent a task. Identify which dates, references and unresolved items must survive the summary. Avoid asking for a broad improvement without saying what the output should contain.",
+          "«لخّص أحداث الشحنة المقدمة واذكر ما يحتاج إلى تأكيد» مهمة يمكن مراجعتها. حدّد التواريخ والمراجع والبنود المفتوحة التي يجب الحفاظ عليها في الملخص. وصف التحسن المطلوب وحده لا يوضّح شكل المخرج."
         ]
       },
       {
         "title": [
-          "Prepare a safe input",
-          "جهّز مدخلًا آمنًا"
+          "Use a permitted source",
+          "استخدم مصدرًا مسموحًا"
         ],
         "body": [
-          "Use a synthetic example first. If the answer needs company facts, identify their approved owner and current text. Studio supports pasted text or UTF-8 TXT/MD up to 12,000 bytes and 12,000 characters; it does not ingest PDF, images or spreadsheets.",
-          "استخدم مثالًا افتراضيًا أولًا. إذا احتاجت الإجابة إلى حقائق الشركة، فحدّد مسؤولها المعتمد ونصها الحالي. يدعم Studio نصًا ملصقًا أو TXT/MD بترميز UTF-8 حتى 12,000 بايت و12,000 حرف؛ ولا يستورد PDF أو صورًا أو جداول بيانات."
+          "Choose approved material with an identified owner. Studio supports pasted text or UTF-8 TXT/MD, up to 12,000 bytes and 12,000 characters per source. Arabic may reach the byte limit before the character limit. PDF, images, spreadsheets and live repositories are not supported source inputs in this workspace.",
+          "اختر مادة معتمدة ومسؤولًا معلومًا عنها. يدعم الاستوديو نصًا مباشرًا أو TXT/MD بترميز UTF-8، حتى 12,000 بايت و12,000 حرف للمصدر. وقد تصل العربية إلى حد البايتات قبل عدد الأحرف. لا تدعم المساحة إضافة PDF أو الصور أو جداول البيانات أو المستودعات الحية كمصادر."
         ]
       },
       {
         "title": [
-          "Choose the reviewer and stopping point",
-          "حدّد المراجع ونقطة التوقف"
+          "Set the review responsibility",
+          "حدّد مسؤولية المراجعة"
         ],
         "body": [
-          "Name the person who checks facts and decides what happens next. List actions that require approval, including messages, refunds, purchasing and account changes. Current Studio prepares drafts and internal requests; external steps stay manual.",
-          "حدّد الشخص الذي يتحقق من الحقائق ويقرر الخطوة التالية. اذكر الإجراءات التي تحتاج اعتمادًا، ومنها الرسائل ورد الأموال والشراء وتغيير الحساب. يجهز Studio الحالي مسودات وطلبات داخلية؛ وتبقى الخطوات الخارجية يدوية."
+          "Name the person who checks important facts or authorizes the next step. For a policy answer, inspect the passage. For a comparison, check the values and units. For a business action, confirm its permission and actual outcome separately.",
+          "عيّن من يتحقق من الحقائق أو يعتمد الخطوة التالية. في إجابة السياسة، افحص المقطع الداعم. وفي المقارنة، راجع القيم والوحدات. أما الإجراء التشغيلي فيحتاج إلى تأكيد الصلاحية والنتيجة الفعلية كلًا على حدة."
         ]
       },
       {
         "title": [
-          "Test an answer that should fail",
-          "اختبر إجابة يجب رفضها"
+          "Test a useful case and a difficult one",
+          "جرّب الحالات المعتادة والصعبة"
         ],
         "body": [
-          "Bring an ordinary case, a missing fact and a request the assistant must refuse. Check source references and corrections with your reviewer. A valid citation is useful evidence to inspect; it does not guarantee that the generated answer is correct.",
-          "جهّز حالة معتادة وحقيقة ناقصة وطلبًا يجب أن يرفضه المساعد. افحص المراجع والتصحيحات مع المسؤول. الاستشهاد الصحيح دليل يمكن فحصه، لكنه لا يضمن صحة الإجابة المولدة."
+          "Try an ordinary request, missing evidence and a request outside the role. Keep incorrect and unresolved responses in the review record. A citation can be genuine while the answer misinterprets it.",
+          "اختبر طلبًا عاديًا، وحالة تنقصها الأدلة، وطلبًا خارج الدور. واحتفظ بالإجابات الخاطئة وغير المحسومة ضمن سجل المراجعة. فقد يكون المرجع صحيحًا ويكون تفسير الإجابة له غير دقيق."
         ]
       },
       {
         "title": [
-          "Check existing tools and future connections",
-          "راجع الأدوات الحالية والاتصالات المطلوبة"
+          "Measure accepted results",
+          "قِس النتائج المقبولة"
         ],
         "body": [
-          "List your systems, editions, permitted records and necessary handoffs. Compare a proposed project with tools already available in your business. Any live connection, shared queue or delivery receipt needs its own scope and test; naming a vendor does not make it available.",
-          "اذكر الأنظمة وإصداراتها والسجلات المسموحة ونقاط التسليم المطلوبة. قارن المشروع المقترح بالأدوات المتاحة لديك. أي اتصال حي أو قائمة عمل مشتركة أو إيصال تسليم يحتاج نطاقًا واختبارًا مستقلين؛ ولا يعني ذكر مزود أن الربط متاح."
-        ]
-      },
-      {
-        "title": [
-          "Consider the tools you already use",
-          "راجع الأدوات التي تستخدمها بالفعل"
-        ],
-        "body": [
-          "For a Microsoft-centered workflow, assess whether Copilot Studio already meets the task. If your support team works in Intercom, assess Fin within that inbox. A conventional public knowledge chatbot may fit a product such as Chatbase. Check each product’s current edition, permissions and scope before choosing a custom implementation; these are alternatives to assess, not AGYNEXA integrations or performance comparisons.",
-          "في مسار يعتمد على Microsoft، قيّم ما إذا كان Copilot Studio يفي بالمهمة. وإذا كان فريق الدعم يعمل في Intercom، فقيّم Fin داخل صندوقه. قد يناسب المساعد العام التقليدي للمعلومات منتجًا مثل Chatbase. افحص الإصدار والصلاحيات والنطاق الحالي لكل منتج قبل اختيار تنفيذ مخصص؛ هذه بدائل للتقييم وليست تكاملات AGYNEXA أو مقارنات أداء."
+          "Include the time needed to check and correct the output. Track accepted responses, factual corrections and unresolved cases. Where actual cost data is available, compare cost per accepted result. Displayed usage estimates are not provider bills or a guaranteed spending limit.",
+          "احسب زمن فحص المخرج وتصحيحه. وسجّل الإجابات المقبولة وتصحيحات الحقائق والحالات المعلقة. وعندما تتوفر بيانات تكلفة فعلية، قارن تكلفة النتيجة المقبولة. تقديرات الاستخدام المعروضة ليست فاتورة مزود أو حدًا مضمونًا للإنفاق."
         ]
       }
     ],
@@ -656,42 +606,22 @@
   },
   "agentnexos": {
     "title": [
-      "A workspace to review tasks and their results",
-      "مساحة لمراجعة المهام ونتائجها"
+      "Keep the task and its review in context",
+      "اجمع المهمة ومعلومات مراجعتها"
     ],
     "intro": [
-      "AgentNexOS is a design direction for operations and IT owners scoping a task-review workspace. The current Studio offers two bounded assistant templates. A wider tool-connected operations platform requires a separate implementation.",
-      "AgentNexOS توجه تصميمي لمسؤولي العمليات والتقنية الذين يحددون نطاق مساحة لمراجعة المهام. يوفّر Studio الحالي قالبين محددين للمساعدة. أما منصة العمليات الأوسع المتصلة بالأدوات فتحتاج تنفيذًا مستقلًا."
+      "AgentNexOS describes the context around agent work: the request, the proposed change and the record the owner reviews. It helps explain why a conversation and an operational result need to be distinguished.",
+      "يصف AgentNexOS سياق العمل المرتبط بالوكيل: الطلب والتغيير المقترح والسجل الذي يراجعه المالك. ويوضح أهمية الفصل بين ما قيل في المحادثة وما حدث في التشغيل."
     ],
     "sections": [
       {
         "title": [
-          "Define a task someone can check",
-          "حدّد مهمة يمكن مراجعتها"
+          "AgentNexOS",
+          "AgentNexOS"
         ],
         "body": [
-          "Supply a synthetic request, the expected output and the person who decides. The proposed deliverable is a task-review design with clear inputs, stopping conditions and evidence requirements.",
-          "قدّم طلبًا افتراضيًا والمخرج المتوقع والشخص صاحب القرار. المخرج المقترح تصميم لمراجعة المهمة يوضح المدخلات وشروط التوقف والأدلة المطلوبة."
-        ]
-      },
-      {
-        "title": [
-          "Separate current templates from planned tools",
-          "ميّز القوالب الحالية عن الأدوات المخططة"
-        ],
-        "body": [
-          "KnowledgeGrid uses approved short text for cited answers. ServiceFlow prepares issue briefs and internal requests. The illustration shows a possible broader workflow; it does not establish live email, Linux, CRM, ERP or purchasing tools.",
-          "يستخدم KnowledgeGrid نصوصًا قصيرة معتمدة لإجابات موثقة. ويجهز ServiceFlow موجزات مشكلات وطلبات داخلية. يوضح الرسم مسارًا أوسع محتملًا؛ ولا يثبت وجود أدوات بريد أو Linux أو CRM أو ERP أو شراء تعمل حاليًا."
-        ]
-      },
-      {
-        "title": [
-          "Review before any external step",
-          "راجع قبل أي خطوة خارجية"
-        ],
-        "body": [
-          "The owner reviews an internal proposal and sees its actual status. A future external action would need exact permissions, an authorized reviewer and a confirmed delivery result. In current Studio, copy or download the draft and handle any external handoff yourself.",
-          "يراجع المالك المقترح الداخلي ويرى حالته الفعلية. يحتاج أي إجراء خارجي مستقبلي إلى صلاحيات محددة ومراجع مخوّل ونتيجة تسليم مؤكدة. في Studio الحالي، انسخ المسودة أو نزّلها وتولّ أنت أي إحالة خارجية."
+          "The private workspace supports bounded agent, project and task records. Creating an agent saves configuration. Creating a task saves a work record. These actions do not by themselves deploy an independent application or assign work to employees.\n\nFor any wider workflow, identify the tool, authorized operation, decision owner and evidence of completion. A diagram can explain those relationships without establishing that every illustrated tool is available.",
+          "تدعم المساحة الخاصة سجلات محددة للوكلاء والمشروعات والمهام. إنشاء الوكيل يحفظ إعداداته، وإنشاء المهمة يحفظ سجلها. لا تنشر هذه الإجراءات تطبيقًا مستقلًا أو تسند العمل إلى الموظفين بمجرد الحفظ.\n\nفي أي سير عمل أوسع، حدّد الأداة والعملية المسموحة وصاحب القرار ودليل الإتمام. ويمكن للرسم شرح هذه العلاقات دون أن يثبت إتاحة كل أداة تظهر فيه."
         ]
       }
     ],
