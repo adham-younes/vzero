@@ -33,3 +33,8 @@ A–E منشورة ضمن النطاق، [إيصال C/D/E](agent-studio/STAGES-
 ## متابعة النشر والحسابات
 
 تحسين الواجهة منشور عبر PR #30؛ متابعة تصنيف أخطاء الحسابات محدودة، لا تغير مراحل Studio أو تضيف بوابة عملاء. [الدليل](releases/CONTINUATION-2026-10-20.md).
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

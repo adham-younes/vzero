@@ -105,3 +105,8 @@ The owner's explicit functional cloud-email instruction supersedes the previous 
 ## Immutable native Inbox reply corrective scope — 22 October 2026
 
 The owner directs completion of independently fixable manual reply functionality within existing authorization. Replace mutable provider-draft ID sending with a native Inbox reply POST carrying the exact approved snapshot and immutable-original Reply-To binding. Standalone send has no established immutable Inbox contract and remains unsupported. No new permission request, actual send, wake runtime, DNS/personal forwarding or paid service. [Scope and affected proof](../launch/2026-10-22/NEXA-IMMUTABLE-REPLIES.md).
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

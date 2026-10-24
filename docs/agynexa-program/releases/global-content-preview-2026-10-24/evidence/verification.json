@@ -1,0 +1,29 @@
+{
+  "scope": "content Preview only",
+  "local_build": "PASS after Next.js upgrade reminder; unchanged dependency emitted security warning",
+  "typescript": "PASS",
+  "route_locale_checks": 74,
+  "route_locale_passed": 74,
+  "copy_subjects": 37,
+  "public_subjects": 34,
+  "account_subjects_noindex": 3,
+  "capabilities": 10,
+  "solutions": 9,
+  "industry_units": 10,
+  "humanizer": "native language drafts plus independent core/sector review and final assembled review",
+  "fresh_review_findings": "No material blockers; duplicate links, spatial wording and Arabic agreement corrected",
+  "protected_runtime_files_changed": false,
+  "video_files_changed": false,
+  "account_created": false,
+  "model_calls": 0,
+  "database_mutations": 0,
+  "mail_sent": 0,
+  "browser_observations": [
+    "English home visual",
+    "Arabic home at 390px, RTL and no horizontal overflow",
+    "language switch EN to AR",
+    "industry selection: logistics then energy, distinct workflow data",
+    "English orchestration page rendered full catalogue and FAQ controls"
+  ],
+  "limits": "Public content and bounded navigation checks; no runtime acceptance, legal approval, measured search demand or ranking guarantee"
+}

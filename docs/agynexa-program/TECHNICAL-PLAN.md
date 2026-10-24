@@ -133,3 +133,8 @@ slot1/slot2 للإنتاج والمقارنة الاختيارية؛ slot3 Previ
 ## متابعة النشر والحسابات
 
 `authFailure` في lib/supabase/server.ts يميز 429 و503 عن 401 في signedIn وlogin؛ استجابات عامة no-store، دون retry أو تعديل cookies أو DB. [الدليل](releases/CONTINUATION-2026-10-20.md).
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.

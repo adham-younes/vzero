@@ -191,3 +191,8 @@ The owner directs completion of independently fixable manual reply functionality
 ## D-2026-10-24 — Agent Builder positioning and preview-only content
 
 Direct owner direction supersedes the bespoke implementation positioning: AGYNEXA is a shared Agent Builder Studio with user-specific configurations and private work. Apply the reviewed bilingual copy to all public pages and truthful account notices. Keep ten capability families and nine workflow routes; do not add runtime functions, connectors or billing. Hero wording and destination labels may change as part of the explicit complete-copy request; its layout and original video remain protected. Publish a preview only, with no main merge or production promotion. The historical market review remains intact; its bespoke RFQ-first offer is not the current product brief. Retain its evidence, reviewer and permission requirements. See the [preview implementation plan](../superpowers/plans/2026-10-24-agent-builder-content-preview.md).
+
+
+## Global content rebuild and Preview authorization
+
+Owner direction: one reusable global Agent Builder platform, English primary with independently authored Arabic; explain company processes, multi-agent responsibilities and human decisions. The earlier Preview is rejected. Full rewritten pages and ONE Preview are authorized; no production promotion. Ruling: retain meaningful technical mechanisms, remove irrelevant encoding/byte/date/infrastructure dumps and the rejected acquisition phrases. Provider categories and data flow remain disclosed in privacy, following the owner’s explicit request to remove public vendor names. Fresh review found no material blocker; three wording/navigation polish items corrected.

@@ -1,0 +1,38 @@
+{
+  "preview": {
+    "label": "preview",
+    "id": "dpl_t1JVv56XvjajrKQV1keWi4WJU4r2",
+    "url": "vzero-65rbviyuw-adhamlouxors-projects.vercel.app",
+    "state": "READY",
+    "target": null,
+    "alias": []
+  },
+  "production_after": {
+    "label": "production",
+    "id": "dpl_5aS1czntiDqv99dTReWRhc1hLNWy",
+    "url": "vzero-q74frd5tt-adhamlouxors-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "alias": [
+      "agynexa.si",
+      "vzero-nine-beryl.vercel.app",
+      "www.agynexa.si",
+      "vzero-adhamlouxors-projects.vercel.app",
+      "vzero-git-main-adhamlouxors-projects.vercel.app"
+    ],
+    "source": "857356acc12b736ee1874cc21fa298690d98164a",
+    "branch": "main"
+  },
+  "source_commit": "a1c4658813d3707eef5ea78cdfb105848e63e2d8",
+  "deployment_method": "one CLI Preview upload; no production promotion",
+  "published_browser": {
+    "english_home": true,
+    "arabic_language_switch": true,
+    "arabic_mobile_width": 390,
+    "no_horizontal_overflow": true,
+    "desktop_width": 1440,
+    "industry_terminal_link_count": 1,
+    "video_present": true
+  },
+  "protection_changed": false
+}

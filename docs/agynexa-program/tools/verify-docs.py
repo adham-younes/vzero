@@ -50,7 +50,7 @@ pages = routes["pages"]
 canonical = [page[lang] for page in pages for lang in ("en", "ar")]
 require(len(canonical) == len(set(canonical)) == routes["canonical_count"] == 68, "Canonical route inventory mismatch")
 source = (ROOT / "lib/agynexa.ts").read_text()
-headings = re.findall(r"(\w+):\[", source.split("export const headings:")[1].split("export const summary:")[0])
+headings = re.findall(r"[\"']?([A-Za-z][\w-]*)[\"']?\s*:\s*\[", source.split("export const headings:")[1].split("export const summary:")[0])
 solutions = re.findall(r"""["']?slug["']?\s*:\s*["']([^"']+)["']""", source.split("export const solutions = [")[1].split("export const headings:")[0])
 services = read_json(ROOT / "lib/service-catalog.json")
 expected = {"/", "/privacy", "/terms", *["/" + name for name in headings], *["/solutions/" + slug for slug in solutions], *["/services/" + service["slug"] for service in services]}

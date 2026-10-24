@@ -61,3 +61,8 @@ Owner explicitly approved the displayed dedicated Studio composition and said ن
 ## Preserved unpublished NEXA local checkpoint
 
 The separate [email routing candidate](../launch/2026-10-22/NEXA-INBOUND-ROUTING-REVIEW.md) and its code/config/tests remain local and unpublished after Studio PR42. Original shared routing notes are preserved in the verified task-local snapshot; this reapplication retains the new Studio receipt instead of overwriting it. No email/DNS/MX/provider/mailbox/webhook/env mutation or real send is authorized. Latest owner facts identify an already-created Resend NEXA inbox; do not create a duplicate. Dedicated Spacemail NEXA-recipient forwarding still needs isolated local preparation and later review. The full next-task facts are saved privately in work/nexa-email-next-scope.json.
+
+
+## Global Agent Builder content rebuild — Preview scope
+
+The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.
