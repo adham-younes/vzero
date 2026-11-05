@@ -1,3 +1,7 @@
+## Latest mail automation verification
+
+[Production automation receipt](releases/private-mail-2026-11-05/AUTOMATION-VERIFICATION.md): both responders enabled, webhook deliveries successful, retry scheduler active, and no pending jobs at the check. HeronSignal local OAuth is verified; its cloud runtime authentication is not verified.
+
 ## Cloud environment update — 5 November 2026
 
 See [cloud configuration and capability boundaries](cloud/README.md) and the versioned [start skill](cloud/START-SKILL.md). PR78 is merged and its production deployment is READY.
