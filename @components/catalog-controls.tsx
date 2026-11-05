@@ -33,7 +33,7 @@ export function CatalogToolbar({count,children}:{count?:number;children:ReactNod
  const resultCount=count===undefined?null:new Intl.NumberFormat(ar?'ar-EG':'en-US').format(count)
  return <div className="catalog-controls-block">
   <div className="catalog-toolbar">{children}</div>
-  {resultCount!==null&&<p className="catalog-result-total" role="status" aria-live="polite">{t([`${resultCount} results`,`النتائج: ${resultCount}`])}</p>}
+  {resultCount!==null&&<p className="catalog-result-total" role="status" aria-live="polite">{t([`Results: ${resultCount}`,`النتائج: ${resultCount}`])}</p>}
  </div>
 }
 
