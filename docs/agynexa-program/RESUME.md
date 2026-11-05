@@ -1,3 +1,7 @@
+## Direct ChatGPT activation in progress
+
+PR74 OAuth is production READY. [OAuth receipt](releases/private-mail-2026-11-05/OAUTH.md). ChatGPT discovered its authorization metadata and all scopes; the custom connection form is prepared with public client `nexa-mail-chatgpt`, method `none`, and exact stable callback. Await the owner action-time consent request before creating/granting this new mailbox connection. Do not repeat production discovery checks or replace the existing Resend grants. Direct activation and Full access are not yet verified.
+
 # Resume private owner mail — 5 November 2026
 
 Current state: **DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING**. PR72 is merged at `2ea5449e56438c1e6dc77ab248f2000e772ee6ff`; production `dpl_553QgPHhZnWtzjJ8ciQGCx5fDpAN` is READY on `mail.agynexa.si`. [Release and checks](releases/private-mail-2026-11-05/README.md), [one-time login receipt](releases/private-mail-2026-11-05/login-receipt.json), [migration preservation limits](OWNER-MAIL-2026-11-05.md).

@@ -1019,12 +1019,16 @@
     },
     "final_receipt": "releases/private-mail-2026-11-05/login-receipt.json",
     "direct_chatgpt_oauth": {
-      "status": "IMPLEMENTED_PENDING_PRODUCTION_ACCEPTANCE",
+      "status": "DEPLOYED_DISCOVERY_VERIFIED_OWNER_CONSENT_PENDING",
       "receipt": "releases/private-mail-2026-11-05/OAUTH.md",
       "client_id": "nexa-mail-chatgpt",
       "auth_method": "none",
       "pkce": "S256_REQUIRED",
-      "refresh_tokens": false
+      "refresh_tokens": false,
+      "production_commit": "f0046208a265d48cbbf62e514b0bc9f29986166c",
+      "deployment_id": "dpl_BRZyZ9NQ4XzXeSVuJ8R4X5gDCKuz",
+      "production_checks_passed": 7,
+      "chatgpt_discovery": "VERIFIED_ENDPOINTS_CALLBACK_AND_THREE_SCOPES"
     }
   }
 }

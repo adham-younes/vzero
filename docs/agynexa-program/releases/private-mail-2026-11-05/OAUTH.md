@@ -1,6 +1,8 @@
 # Direct ChatGPT connection — 5 November 2026
 
-Status: IMPLEMENTED_PENDING_PRODUCTION_ACCEPTANCE.
+Status: DEPLOYED_DISCOVERY_VERIFIED_OWNER_CONSENT_PENDING.
+
+Production: PR74 merged at `f0046208a265d48cbbf62e514b0bc9f29986166c`; deployment `dpl_BRZyZ9NQ4XzXeSVuJ8R4X5gDCKuz` is READY. Cloud build passed. Seven production checks passed: authorization metadata, resource metadata, public-host isolation, authenticated MCP challenge, foreign redirect rejection, plain PKCE rejection and unknown-code rejection. ChatGPT custom MCP UI discovered the exact endpoints, stable callback and all three scopes. The provided public client is entered. Creating the connection and granting owner access await action-time confirmation. No OAuth token has been issued at this checkpoint.
 
 The private plugin archive contains API-key MCP configuration, but ChatGPT custom MCP setup offers OAuth and no-authentication, not an API-key prompt. The standalone archive is not evidence of a connected app. The existing Resend ChatGPT OAuth grants have full_access independently. Both backend mailbox auto_reply settings and the minute retry scheduler are enabled; two automatic sends and the guarded manual test are recorded.
 
@@ -11,3 +13,5 @@ The additive OAuth-code table is service-only with RLS and no anonymous/authenti
 Final activation requires creating the private ChatGPT MCP connection with provided public client ID, approving the concrete owner consent, selecting full access for the resulting actual app, and a harmless tools/read check. Do not call archive installation or Resend access proof of this direct connection.
 
 Reference: https://developers.openai.com/plugins/build/auth
+
+During actual ChatGPT initiation, the authorization request reached the POST consent guard with URL parameters and returned invalid_origin. Initiation POSTs with valid OAuth URL parameters now normalize to GET without issuing a code. The consent form posts to a query-free explicit same-origin action and retains its Origin, signature, expiry and owner checks. Final connection remains pending acceptance.
