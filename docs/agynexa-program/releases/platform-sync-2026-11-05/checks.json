@@ -153,6 +153,42 @@
       "pass": true
     }
   ],
+  "publicationVerification": {
+    "observedAtUtc": "2026-11-05T07:22:52Z",
+    "ownerConfirmedUrl": "https://vzero-9joetsjw0-adhamlouxors-projects.vercel.app",
+    "deploymentId": "dpl_9QYGzUTGvFnZj18CtdZJhSpUDcse",
+    "state": "READY",
+    "target": "production",
+    "source": "git",
+    "project": "vzero",
+    "repository": "adham-younes/vzero",
+    "branch": "main",
+    "commit": "e91734bb3fe62151fb833444674f352e0f7d849d",
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/57",
+    "readyAtUtc": "2026-11-05T07:09:26.795Z",
+    "buildDurationMs": 18301,
+    "aliasesConfirmed": [
+      "agynexa.si",
+      "www.agynexa.si",
+      "vzero-git-main-adhamlouxors-projects.vercel.app"
+    ],
+    "productCommit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+    "productTreeMatches": true,
+    "publicChecks": [
+      {
+        "path": "/ar/services",
+        "http": 200,
+        "catalogToolbar": true
+      },
+      {
+        "path": "/api/health/supabase",
+        "http": 200,
+        "project": "ok",
+        "auth": "ok",
+        "rest": "ok"
+      }
+    ]
+  },
   "limits": [
     "Migration comparison covers names and recorded version identifiers. SQL statements were not diffed.",
     "RLS checks cover table settings and the selected raw-history grants. No authenticated tenant journey, provider call, or email transaction was run.",
