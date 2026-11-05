@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-05",
+  "production_commit": "2ea5449e56438c1e6dc77ab248f2000e772ee6ff",
+  "deployment_id": "dpl_553QgPHhZnWtzjJ8ciQGCx5fDpAN",
+  "state": "READY",
+  "host": "mail.agynexa.si",
+  "pull_request": 72,
+  "email_link_delivery": "PASS_OWNER_GMAIL_INBOX",
+  "single_use_login": "PASS_AUTHENTICATED_SIDE_BROWSER",
+  "password_changed": false,
+  "browser_message_list": "PASS_PERSONAL_AND_NEXA_MAILBOXES",
+  "historical_messages": "414_DISTINCT_PREVIOUS_MCP_PAGINATION_AND_ARCHIVE_LABELS_VISIBLE",
+  "both_automatic_reply_settings": "ENABLED_VISIBLE",
+  "temporary_qa_token": "REVOKED_AND_401_VERIFIED",
+  "remaining": [
+    "Private ChatGPT plugin installation and secure authentication",
+    "Durable Gmail ingestion connection and acceptance",
+    "Attachment download acceptance through new owner UI"
+  ],
+  "preservation": "No mail or attachment deletion; legacy post-snapshot gap remains documented",
+  "evidence_privacy": "No message bodies, screenshots, tokens or personal login identifier committed"
+}

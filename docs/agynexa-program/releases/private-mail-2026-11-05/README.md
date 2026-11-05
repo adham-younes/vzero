@@ -1,12 +1,12 @@
 # Private owner mail — 5 November 2026
 
-Status: **DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING**. PR #71 is merged and production is READY: source `00e3caa619b69c3fe53439ea3a1cb93ff83c2c40`, deployment `dpl_5LoePoQsD2nZZrhM9YnrU4C74y95`. Build and TypeScript checks passed after corrective commit `fb20016` fixed the initial PostalMime Buffer union failure. Bounded production HTTP/MCP and guarded-send acceptance passed. Owner-interface login/download acceptance and ChatGPT/Gmail activation remain separate pending gates.
+Status: **DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING**. PR #72 is merged and production is READY: source `2ea5449e56438c1e6dc77ab248f2000e772ee6ff`, deployment `dpl_553QgPHhZnWtzjJ8ciQGCx5fDpAN`. Cloud build and TypeScript passed. Bounded HTTP/MCP and guarded-send acceptance passed in PR71; the additional one-time email login passed against PR72 production. Authenticated mailbox lists and both enabled automatic-reply settings were observed in the side browser. Private ChatGPT authentication, durable Gmail ingestion and downloads through the new UI remain separate pending checks. [Final login receipt](login-receipt.json).
 
 ## Scope and architecture
 
 This is the owner's private operational mailbox, not a new public product. The existing Vercel project and Supabase archive serve `mail.agynexa.si`. Exact-host routing, the configured owner allowlist and a live authenticated owner profile protect access. The source returns 404 for private-mail routes on public hosts and excludes the public site wrapper on the mail host. There is no separate Vercel project, copied secret, new subscription or automatic message deletion.
 
-The release operator verified the `mail.agynexa.si` CNAME to `ac841f8fbdec6782.vercel-dns-017.com`; Vercel reported `misconfigured: false`. DNS and a valid domain binding do not prove that the new HTTP routes are deployed. Production host isolation passed. The signed-out login screen passed visual inspection; authenticated owner-interface login and downloads remain unverified. [Thirteen bounded HTTP/MCP checks](http-receipt.json) passed. The existing allowlisted account must be used; a mailbox address is not evidence that a corresponding login account exists.
+The release operator verified the `mail.agynexa.si` CNAME to `ac841f8fbdec6782.vercel-dns-017.com`; Vercel reported `misconfigured: false`. DNS and a valid domain binding do not prove that the new HTTP routes are deployed. Production host isolation passed. The signed-out login and authenticated owner mailbox passed visual inspection; downloads through the new UI remain unverified. [Thirteen bounded HTTP/MCP checks](http-receipt.json) passed. The existing allowlisted account must be used; a mailbox address is not evidence that a corresponding login account exists.
 
 ## Database and preservation
 
@@ -27,6 +27,8 @@ All paths below are under `/api/private-mail` on the dedicated host. Browser mut
 | Method | Suffix | Operation |
 |---|---|---|
 | POST | `/login` | Sign in to the existing allowed owner account |
+| POST | `/login-link` | Send a one-time sign-in link only to an existing confirmed allowlisted owner |
+| POST | `/login-link/verify` | Consume the one-time link and establish the owner session |
 | GET | `/session` | Report authenticated-owner state |
 | POST | `/logout` | End the local session |
 | GET | `/messages` | Search and cursor-page archive metadata |
@@ -69,7 +71,7 @@ Gmail is **REQUIRES_CONNECTION_AND_VERIFIED_INGESTION**. Prior Gmail test messag
 
 The complete market review was reread. Its bounded-workflow, explicit-access, sourced-facts and immutable-action requirements apply here. Public offering expansion, pricing, sales automation and general multi-tenant integration remain outside this private operational increment. Existing public identity, content and prior receipts are preserved.
 
-Deployment, the corrective build and the bounded acceptance below are verified. Pending: authenticated owner-interface login and attachment downloads, ChatGPT installation/authentication, and durable Gmail ingestion. No application tests or deployment were performed by this documentation update.
+Deployment, the corrective build and the bounded acceptance below are verified. Pending: attachment downloads through the new UI, ChatGPT installation/authentication, and durable Gmail ingestion. Owner login by one-time email link passed. No application tests or deployment were performed by this documentation update.
 
 
 ## Bounded production acceptance and activation handoff
@@ -79,7 +81,7 @@ Deployment, the corrective build and the bounded acceptance below are verified. 
 - A routine reply sent through MCP reached the owner-controlled Gmail inbox at **14:18:46 UTC**. Gmail reported **SPF, DKIM and DMARC pass** for that controlled message. This is message-specific authentication evidence, not a blanket deliverability guarantee.
 - Replaying the identical send request returned `mail_claim_conflict`; no second send was observed.
 - A synthetic financial message entered `review` with `sensitive_financial_review`. A manual MCP attempt was also blocked with `mail_owner_review_required`, with no sent identifier. Manual invocation did not override the sensitive hold.
-- Both mailbox automatic-reply settings are enabled. The temporary test toggle for the personal mailbox was restored. The temporary QA credential still requires revocation confirmation; no credential value is recorded here.
-- The signed-out login screen passed visual inspection. Authenticated owner-interface use and attachment downloads are not yet verified; the existing owner login is required for those checks.
+- Both mailbox automatic-reply settings are enabled. The temporary test toggle for the personal mailbox was restored. The temporary QA credential was revoked at 14:22:17 UTC; a subsequent request returned 401. No credential value is recorded here.
+- The one-time email link reached the existing owner Gmail inbox and authenticated the side browser. Both mailbox lists, historical archive labels and enabled automatic-reply settings were visible. The password was unchanged. Downloads through this new interface remain unverified.
 
 The private personal-account plugin was created through Plugin Creator as **NEXA Mail 0.1.0**, identifier `plugins_6aec905359688191b39ffabc59232b22`: [open the private plugin](https://chatgpt.com/plugins/plugins_6aec905359688191b39ffabc59232b22). Creation is verified; installation and authenticated use inside ChatGPT are not. Server API acceptance with a QA token is separate evidence and must not be described as an installed ChatGPT connection. The submitted 0.1.0 archive predates this README receipt update; no duplicate upload is required for that documentation-only difference.
