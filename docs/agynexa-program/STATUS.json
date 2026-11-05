@@ -965,7 +965,7 @@
     "corrective_commit": "fb20016",
     "deployment_status": "READY",
     "production_verified": true,
-    "plugin_status": "CREATED_PERSONAL_0.1.0_INSTALL_AUTH_PENDING",
+    "plugin_status": "PRIVATE_0.1.1_CONNECTED_APP_BINDING_VERIFIED",
     "mcp_protocol": "2025-03-26",
     "gmail_status": "REQUIRES_CONNECTION_AND_VERIFIED_INGESTION",
     "chatgpt_memory_connected": false,
@@ -1019,16 +1019,21 @@
     },
     "final_receipt": "releases/private-mail-2026-11-05/login-receipt.json",
     "direct_chatgpt_oauth": {
-      "status": "DEPLOYED_DISCOVERY_VERIFIED_OWNER_CONSENT_PENDING",
+      "status": "CONNECTED_ALLOW_ALL_READ_VERIFIED",
       "receipt": "releases/private-mail-2026-11-05/OAUTH.md",
       "client_id": "nexa-mail-chatgpt",
       "auth_method": "none",
       "pkce": "S256_REQUIRED",
       "refresh_tokens": false,
-      "production_commit": "f0046208a265d48cbbf62e514b0bc9f29986166c",
-      "deployment_id": "dpl_BRZyZ9NQ4XzXeSVuJ8R4X5gDCKuz",
+      "production_commit": "a25c8c815d2f82c26aa96a810b788c175bf0df81",
+      "deployment_id": "dpl_8ogX3jmQpPaesA9Ma2eTfLDYfRbq",
       "production_checks_passed": 7,
-      "chatgpt_discovery": "VERIFIED_ENDPOINTS_CALLBACK_AND_THREE_SCOPES"
+      "chatgpt_discovery": "VERIFIED_ENDPOINTS_CALLBACK_AND_THREE_SCOPES",
+      "app_id": "asdk_app_6aeca1bd36408191a8583da02a0c31ac",
+      "app_permission": "Allow all actions",
+      "read_acceptance": "PASS_ORDINARY_CHATGPT_SEARCH_AND_READ_NO_SEND",
+      "token_expires_at": "2026-12-05T15:45:15.028Z",
+      "password_setup": "AUTHENTICATED_FORM_READY_USER_SAVE_NOT_CONFIRMED"
     }
   }
 }

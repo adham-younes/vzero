@@ -1,3 +1,19 @@
+# Direct ChatGPT connection — verified 5 November 2026
+
+Status: **CONNECTED_ALLOW_ALL_READ_VERIFIED**.
+
+- Product PR77 merged at `a25c8c815d2f82c26aa96a810b788c175bf0df81`; Vercel `dpl_8ogX3jmQpPaesA9Ma2eTfLDYfRbq` verified READY.
+- Actual app `asdk_app_6aeca1bd36408191a8583da02a0c31ac` connected through OAuth. Both ChatGPT settings and the permissions API confirm **Allow all actions**.
+- OAuth code consumed at 15:45:14 UTC. The revocable 30-day token expires 2026-12-05T15:45:15.028Z. No token or code is included in this receipt.
+- Ordinary ChatGPT searched and read only the acceptance message and reported its existing sent reply state. No mail was sent and no setting changed during this check.
+- Private NEXA Mail plugin 0.1.1, release `pluginrel_6aeca5801a9c8191872656638466d6b7`, now references the actual app through `.app.json`. Readback verified the binding and removal of obsolete MCP key configuration; the owner-mail skill is preserved.
+- Password setup is deployed under authenticated Settings. User entry/submission is still pending confirmation. Login uses the existing owner account, not the managed mailbox address.
+- Gmail background ingestion remains unconnected. ChatGPT memory is not synchronized automatically. Sensitive holds, duplicate prevention, owner checks and token expiry remain enforced.
+
+## Earlier implementation checkpoints
+
+The following dated development notes are historical; pending-activation statements are superseded by the verified status above.
+
 # Direct ChatGPT connection — 5 November 2026
 
 Status: DEPLOYED_DISCOVERY_VERIFIED_OWNER_CONSENT_PENDING.
