@@ -74,6 +74,10 @@ for(let offset=0;offset<paths.length;offset+=4){
    const destinations=['solutions','services','industries','architecture','methodology','integrations']
    assert.deepEqual(hrefs,destinations.map(slug=>`${ar?'/ar':''}/${slug}`),`${path} primary navigation`)
   }
+  if(['/solutions','/ar/solutions','/services','/ar/services'].includes(path)){
+   assert.equal((html.match(/class="catalog-detail"/g)||[]).length,1,`${path} selected detail area`)
+   assert.doesNotMatch(html,/<details[^>]*name="(?:solution|capability)-directory"/,`${path} no catalogue-sized disclosures`)
+  }
   const ids=[...html.matchAll(/\sid="([^"<>]+)"/g)].map(match=>match[1])
   assert.equal(new Set(ids).size,ids.length,`${path} unique DOM identifiers`)
   const parsed=routes.parseSitePath(path.split('/').filter(Boolean))
@@ -83,6 +87,7 @@ for(let offset=0;offset<paths.length;offset+=4){
 }
 checks.push(`${pages.size} English/Arabic public URLs return 200 with language, direction, main, h1, unique identifiers and canonical`)
 checks.push('Both homepages expose all six primary navigation destinations in their locale')
+checks.push('Solutions and Capabilities render one selected reading area in each locale')
 let links=0,anchors=0
 for(const [path,html] of pages){
  for(const match of html.matchAll(/\shref="([^"<>]+)"/g)){
@@ -103,8 +108,8 @@ for(const path of ['/services/solutions','/ar/services/solutions']){
  assert.equal(new URL(response.headers.get('location'),base).pathname,path.replace('/solutions',''),`${path} redirect`)
 }
 checks.push('Both legacy capability redirects remain 308 to their localized catalogues')
-const out=resolve(root,'docs/agynexa-program/releases/public-navigation-2026-10-27/evidence')
-mkdirSync(out,{recursive:true})
-const report={date:process.argv[3]||new Date().toISOString().slice(0,10),environment:'local production build; no live credentials',baseline,source:'uncommitted isolated local candidate',base:base.origin,status:'PASS',checks,publicUrls:pages.size,publicLinks:links,sectionAnchors:anchors,productionVerified:false}
-writeFileSync(resolve(out,'public-contract.json'),JSON.stringify(report,null,2)+'\n')
+const output=resolve(root,process.argv[4]||'docs/agynexa-program/releases/public-navigation-2026-10-27/evidence/public-contract.json')
+mkdirSync(dirname(output),{recursive:true})
+const report={date:process.argv[3]||new Date().toISOString().slice(0,10),environment:'local production build; no live credentials',baseline,source:git('rev-parse','HEAD').toString().trim(),base:base.origin,status:'PASS',checks,publicUrls:pages.size,publicLinks:links,sectionAnchors:anchors,productionVerified:false}
+writeFileSync(output,JSON.stringify(report,null,2)+'\n')
 console.log(JSON.stringify(report,null,2))

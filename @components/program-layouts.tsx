@@ -13,8 +13,47 @@ const sectorServices=industryCapabilities
 const sectorSolutions=industrySolutions
 function Body({text}:{text:string}){return <CopyBlocks blocks={text.split('\n\n').filter(Boolean).map(text=>({type:'paragraph',text}))}/>}
 export function IndustryExplorer(){
- const {t}=useLanguage();const [state,update]=useCatalogState({industry:'banking'});const active=Math.max(0,sectorKeys.indexOf(state.industry));const item=pages.industries.sections[active];const Icon=sectorIcons[active]
- return <div className="industry-layout public-industry"><fieldset className="industry-nav public-industry-nav"><legend>{t(['Choose your industry','اختر قطاعك'])}</legend>{pages.industries.sections.map((section,i)=>{const I=sectorIcons[i];return <label key={sectorKeys[i]}><input type="radio" name="industry" value={sectorKeys[i]} checked={active===i} onChange={()=>update({industry:sectorKeys[i]})} aria-controls="industry-detail"/><span><I aria-hidden="true"/>{t(section.title)}</span></label>})}</fieldset><section className="industry-detail" id="industry-detail" aria-labelledby="industry-title"><p className="public-kicker">{t(['Workflow design example','مثال لتصميم سير العمل'])}</p><h2 id="industry-title" aria-live="polite">{t(item.title)}</h2><div className="industry-art" aria-hidden="true"><Icon/><span className="art-line"/><Workflow/><span className="art-line"/><FileCheck2/></div><IndustryFacts index={active}/><section className="inline-related-content"><h3>{t(['Explore the process here','استكشف العملية هنا'])}</h3><ReferencePanels prefix={`industry-${sectorKeys[active]}`} headingLevel={3} links={[{label:t(['Workflow for this industry','مسار العمل في هذا القطاع']),href:`/solutions/${sectorSolutions[active]}`},{label:t(['Supporting capability and requirements','القدرة الداعمة ومتطلبات التشغيل']),href:`/services/${sectorServices[active]}`}]}/></section></section></div>
+ const {t}=useLanguage()
+ const [state,update]=useCatalogState({industry:'banking'})
+ const sectors=pages.industries.sections
+ const active=Math.max(0,sectorKeys.indexOf(state.industry))
+ const item=sectors[active]
+ const Icon=sectorIcons[active]
+ const pickerLabel=t(['Choose your industry','اختر قطاعك'])
+
+ return <div className="industry-layout public-industry">
+  <fieldset className="industry-nav public-industry-nav catalog-sector-index">
+   <legend>{pickerLabel}</legend>
+   {sectors.map((section,i)=>{
+    const SectorIcon=sectorIcons[i]
+    return <label key={sectorKeys[i]}>
+     <input type="radio" name="industry" value={sectorKeys[i]} checked={active===i}
+      onChange={()=>update({industry:sectorKeys[i]})} aria-controls="industry-detail"/>
+     <span><SectorIcon aria-hidden="true"/>{t(section.title)}</span>
+    </label>
+   })}
+  </fieldset>
+  <label className="catalog-mobile-picker">
+   <span>{pickerLabel}</span>
+   <select className="field" value={sectorKeys[active]} aria-controls="industry-detail"
+    onChange={event=>update({industry:event.target.value})}>
+    {sectors.map((section,i)=><option key={sectorKeys[i]} value={sectorKeys[i]}>{t(section.title)}</option>)}
+   </select>
+  </label>
+  <section className="industry-detail" id="industry-detail" aria-labelledby="industry-title">
+   <p className="public-kicker">{t(['Workflow design example','مثال لتصميم سير العمل'])}</p>
+   <h2 id="industry-title" aria-live="polite">{t(item.title)}</h2>
+   <div className="industry-art" aria-hidden="true"><Icon/><span className="art-line"/><Workflow/><span className="art-line"/><FileCheck2/></div>
+   <IndustryFacts index={active}/>
+   <section className="inline-related-content">
+    <h3>{t(['Explore the process here','استكشف العملية هنا'])}</h3>
+    <ReferencePanels prefix={`industry-${sectorKeys[active]}`} headingLevel={3} links={[
+     {label:t(['Workflow for this industry','مسار العمل في هذا القطاع']),href:`/solutions/${sectorSolutions[active]}`},
+     {label:t(['Supporting capability and requirements','القدرة الداعمة ومتطلبات التشغيل']),href:`/services/${sectorServices[active]}`},
+    ]}/>
+   </section>
+  </section>
+ </div>
 }
 export function ProgramBody({page}:{page:keyof typeof pages}){
  const {t}=useLanguage();const data=pages[page]
