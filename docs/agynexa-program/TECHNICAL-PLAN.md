@@ -147,3 +147,19 @@ The owner rejected the earlier content Preview and approved a complete global En
 ## HeronSignal browser integration — separate owner scope
 
 [Minimal root-layout installation](releases/heronsignal-sitewide-2026-10-24/README.md): exact public config plus one Next async afterInteractive tracker, no dependency/API/route/data change. PRODUCTION_BROWSER_VERIFIED at main80abfdc / dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs: tracker200, exact config, events204, no new sampled console errors and no duplicate load on client navigation. MCP/dashboard ingestion not established. Studio/agent redesign remains deferred.
+
+
+## Public navigation local candidate — 27 October 2026
+
+[Scope, plan and design rationale](releases/public-navigation-2026-10-27/README.md). `@components/public-layout.tsx` supplies compact headers, purpose-specific catalog lenses, native section indexes, context return links and editorial/supporting-reading structures. `@components/catalog-state.ts` reads URL state after hydration and uses a shared, cleaned-up subscription to native history updates/popstate, including same-path Next Link changes. Static catalog content remains available without a client-only Suspense fallback.
+
+Capabilities use `category=customer-experience|internal-operations|integration-control` (default all) and `q`; Solutions uses `q`; Industries uses stable `industry` keys, including `logistics`, across both locales. Detail links carry a validated public-catalog-only `from` context. Invalid categories/sectors fall back to default selections. Existing `/services/solutions` redirects and `#main`, `#industry-detail`, `#review-workspace` anchors remain.
+
+Public component composition and `.public-page` CSS are scoped to the public surfaces, including legal presentation; legal text is unchanged. Global navigation prioritizes Solutions, Industries, Capabilities and How to build, keeping technical reading in the full menu/footer. No runtime/API/route contract, Auth, schema, provider, dependency or original Hero/video change. This is implemented local source pending the coordinating agent's final verification; no production status is implied.
+
+
+### In-place exploration revision — 28 October 2026
+
+`@components/inline-details.tsx` extracts reusable `WorkflowBody`/`CapabilityBody`, native exclusive `InlinePanels`, bounded related `ReferencePanels` and sector facts. The modules import content data rather than the page assemblies, avoiding recursive/circular composition. Dynamic heading levels and prefixed section IDs support embedding without extra h1/main elements. Procurement presentation takes optional id/heading-level props with the original standalone defaults; comparison behavior is unchanged.
+
+Catalog panels use `solution` and `capability`. Related reading uses `reading`. Selecting a sector inside Solutions clears `q` and exposes its mapped workflow. Query restoration and `from` allowlisting include panel state. Native close events check the open sibling before clearing selection. The repeated catalog navigation has been removed and deep links retain their existing paths and metadata. The local revision passed build, route and bilingual browser checks. [Release evidence](releases/public-navigation-2026-10-27/README.md).

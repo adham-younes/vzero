@@ -216,3 +216,19 @@ The owner explicitly requests the exact public browser snippet site-wide and end
 ## D-2026-10-24 — Complete local and repository documentation copies
 
 The owner explicitly requires two matching copies dated today: local and in the repository. Publish the complete pending security/HeronSignal production receipts, handoff, status and sanitized evidence to main through a documentation-only PR, then verify local bytes against the fetched remote Git objects. A merged-PR summary alone does not satisfy this direction. No application/source/configuration/data/service change is included. [Dated handoff](HANDOFF-2026-10-24.md).
+
+
+## D-2026-10-27 — Public navigation and consistent page structure, local preparation
+
+The owner requests a coherent public design/navigation solution for the maze between Solutions, Industries, Capabilities and their detail pages. Preparation is local in an isolated worktree from `c61cc36`; no commit, push, merge, deployment, production traffic, provider, Auth or database changes. Studio remains unfinished, explicitly paused and excluded. The original video and both Hero files are byte-protected, with the accepted black/green identity, ten capabilities, nine solutions, current product meaning and existing routes retained.
+
+[Candidate receipt](releases/public-navigation-2026-10-27/README.md) records the complete market-review reconciliation and design lock. Solutions chooses the business workflow, Industries supplies sector context and Capabilities explains components. Catalog selection/search lives in URL state; detail return links preserve that context. Extended explanations remain in supporting disclosures. Shared compact public headers and purposeful detail/reference layouts replace repeated oversized introductions; account and Studio interfaces are outside this design scope. Existing production receipts do not verify this local candidate.
+
+
+## D-2026-10-28 — Replace remaining page-hop maze with in-place exploration
+
+The owner's direct correction requires related information in the current context. This supersedes the first local candidate's three-way catalog navigation. Implement native exclusive workflow/capability panels, optional industry context within Solutions, and bounded inline related reading on catalog, industry and standalone detail pages. Preserve separate deep pages as small sharing/reference links. Global exploration starts at Solutions; technical/reference destinations are subordinate in the full menu/footer. The current source is local and pending revised verification. Earlier local evidence remains dated and historical. The original Hero/video, identity, accepted substantive content, 10 capabilities/9 workflows/10 sectors and paused Studio boundary remain protected. [Revised receipt](releases/public-navigation-2026-10-27/README.md).
+
+## D-2026-11-05 — Publish the verified public navigation candidate
+
+The owner authorized publication via the existing GitHub and Vercel workflow and requested bilingual checks on the official domain. The release covers public navigation and presentation. The protected assets are the existing Hero components, homepage video and visual identity. Studio remains paused and outside the release scope. [Release and evidence](releases/public-navigation-2026-10-27/README.md).

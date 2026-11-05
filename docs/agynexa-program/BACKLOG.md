@@ -1,3 +1,7 @@
+## Public information architecture — local candidate, 27 October 2026
+
+PUBLIC-NAV-2026-10-27 — Local build, route and browser checks passed. Production publication is authorized for the public navigation candidate. Studio remains paused. [Release scope and evidence](releases/public-navigation-2026-10-27/README.md).
+
 Latest verified maintenance: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md), main `445424f` / READY production deployment `dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX`. Dependency advisories8→0, local/public checks and bounded anonymous production rejections passed. Studio/agent planning remains deferred.
 
 Latest verified production: [approved Agent Builder content and Studio alignment](releases/approved-home-production-2026-10-24/README.md), PR47 / main `dc9ebe0` / READY deployment `dpl_447stD3JsGD1hZHZsQEmQH8rNFFH` on agynexa.si. Official EN/AR homepage and signed-out Studio entry verified; authenticated Studio checks were local and synthetic. Runtime, data, providers and mail unchanged.

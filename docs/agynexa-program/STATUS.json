@@ -751,5 +751,23 @@
     "status_at_verification": "READY_SECURITY_MAINTENANCE_BOUNDED_CHECKS_PASS",
     "deployment_id": "dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX",
     "receipt": "releases/security-closeout-2026-10-24/README.md"
+  },
+  "local_public_navigation_candidate": {
+    "date": "2026-10-27",
+    "status": "PRODUCTION_AUTHORIZED_LOCAL_VERIFIED",
+    "baseline": "c61cc369bfa9f678ed794d71b0f0266423948b8f",
+    "branch": "codex/public-navigation-consistency",
+    "receipt": "releases/public-navigation-2026-10-27/README.md",
+    "scope": "Single Solutions exploration entry; native in-place workflow/capability/requirements panels, optional industry context, bounded inline related reading, preserved standalone reference routes and URL state.",
+    "studio": "PAUSED_EXCLUDED",
+    "production_changed": false,
+    "committed": true,
+    "pushed": false,
+    "deployed": false,
+    "auth_database_provider_changed": false,
+    "verification": "Final build and typecheck, 68 localized URLs and protected-file contract, and in-app desktop/390px checks passed. Covered same-page workflow/capability/requirements, keyboard and reload, bilingual industry state, and capability search, standalone link and browser Back. Production baseline evidence is separate.",
+    "verified_date": "2026-11-05",
+    "production_authorized_date": "2026-11-05",
+    "revision_date": "2026-10-28"
   }
 }

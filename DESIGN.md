@@ -58,3 +58,17 @@ Spacing: 8/12/16/24/32/48/64/88. Type: body16px/1.7, small14px, h3 22px, h2 clam
 ## Owner-approved refinement — 20 October 2026
 
 Wordmark 34px desktop / 29px mobile, always LTR. Compact AR/EN control 44×36px with extended touch target. Shared English sans and Almarai Arabic; existing foreground/secondary tokens retained. Inputs and primary controls target 48px. Semantic warning #F2C66D is reserved for missing evidence, not a new decorative accent. Readability overlay 46% desktop / 55% mobile. The owner explicitly requires original automatic looping video playback with no play/pause controls. [Release](docs/agynexa-program/releases/VISUAL-UPGRADE-2026-10-20.md).
+
+
+## Public navigation composition — local candidate, 27 October 2026
+
+This candidate applies the existing identity to a clearer information architecture. Solutions answers which business workflow to complete; Industries supplies sector context; Capabilities explains the underlying abilities. Compact public headers pair a 32–44px h1 with a short lead. Catalog search, result count and exclusive native radio filters form one responsive unit, with URL state for return/bookmark/language behavior. Catalog cards use the existing 8px radius and measured palette; editorial detail sections use side-by-side labels and reading columns rather than repeated text cards.
+
+Detail pages offer an optional native page index, an overview/workflow, operating boundaries and supporting reading, then one primary Studio action. Contextual returns retain catalog state. All ten capabilities, nine solutions and approved meaning remain. Industry facts become one column on narrow screens in both languages. Public styles are under `.public-page`; the original Hero files, video and their CSS rules are unchanged. [Local scope and reference ledger](docs/agynexa-program/releases/public-navigation-2026-10-27/README.md). Final local visual/interaction checks and owner review remain; this addition does not claim a production release.
+
+
+### Owner correction — 28 October: read related information in place
+
+The first local candidate's repeated catalog lenses are superseded. Solutions is the exploration starting point; each workflow opens in a native exclusive panel with its related capabilities/requirements available inline. Capabilities and industry examples use the same principle. Optional sector context is selected inside Solutions; users do not need to traverse three catalogs to understand a process. Separate pages remain small explicit share/reference links. Reference navigation is subordinate in the full menu and collapsed footer library.
+
+Use large, named, keyboard-operable summaries with a visible chevron, one open panel per directory, prefixed embedded IDs, appropriate heading levels and URL-backed open selection. Reuse complete approved detail content with bounded related depth; avoid reciprocal panels and repeated page CTAs. The source revision remains local pending final verification; identity and Hero/video protection continue unchanged.
