@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T09:51:18.281298+00:00",
+  "updated_at": "2026-11-05T10:02:41.377063+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -790,12 +790,19 @@
     "revision_date": "2026-10-28"
   },
   "owner_mail_migration": {
-    "state": "DEPLOYED_IMPORTING_DNS_PENDING",
+    "state": "ARCHIVE_VERIFIED_AUTOMATION_ENABLED_DNS_PENDING",
     "receipt": "OWNER-MAIL-2026-11-05.md",
     "source_backup_messages": 414,
-    "automatic_replies_enabled": false,
+    "automatic_replies_enabled": true,
     "dns_cutover": false,
-    "deployment": "dpl_GXG9nzikyb35M6oE7Lf7EmpbUNWu",
-    "merge_commit": "45a37cde3423c582eba159359ba2a0d9845cb352"
+    "deployment": "dpl_BA2moCg5SaaDXEbvbans4ze7LFMp",
+    "merge_commit": "cac030371d5e0c20b938d79a3af8ad1084de40fb",
+    "archived_historical_messages": 414,
+    "archived_historical_bytes": 11065933,
+    "attachment_parts": 4,
+    "scheduled_recovery_verified": true,
+    "live_model_diagnostic": true,
+    "external_auto_reply_delivery_verified": false,
+    "next_step": "Owner must update Spaceship MX; then verify public routing and final read-only SpaceMail delta sync."
   }
 }

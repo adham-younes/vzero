@@ -127,6 +127,6 @@ The owner rejected the earlier content Preview and approved a complete global En
 
 [Scan interpretation](releases/heronsignal-sitewide-2026-10-24/README.md): add a suitable social sharing image; assess CSP with report-only observation before enforcement; frame protections must preserve intentional `/widget/*` third-party embedding. These are pending separate bounded changes, not included in the exact HeronSignal snippet request. The94score/363ms scan does not establish field Core Web Vitals or search rankings.
 
-## Owner mailbox migration — active
+## Owner mail — 5 November 2026
 
-[Receipt](OWNER-MAIL-2026-11-05.md). Implemented private archive and reply queue; remaining: production deployment, import/verification of 414 historical messages, live diagnostic, worker activation, DNS cutover and final SpaceMail delta backup. No paid upgrade.
+[Verified state and remaining cutover](OWNER-MAIL-2026-11-05.md): 414 historical messages archived and hash verified; both mailboxes have active reply settings, signed ingress and scheduled recovery. Live model diagnostic and internal incoming/outgoing attachment checks passed. Public DNS still routes to SpaceMail. Remaining: owner MX change, external reply acceptance test and final read-only legacy delta sync. No new subscription or deletion.

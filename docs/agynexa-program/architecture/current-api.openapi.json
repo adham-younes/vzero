@@ -3764,7 +3764,7 @@
       "post": {
         "summary": "import post",
         "description": "Dedicated server bearer token; import token also expires. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "x-implementation-status": "DEPLOYED",
         "responses": {
           "200": {
             "description": "Authorized operation completed"
@@ -3780,7 +3780,7 @@
       "get": {
         "summary": "import get",
         "description": "Dedicated server bearer token; import token also expires. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "x-implementation-status": "DEPLOYED",
         "responses": {
           "200": {
             "description": "Authorized operation completed"
@@ -3798,7 +3798,7 @@
       "post": {
         "summary": "worker post",
         "description": "Dedicated server bearer token; import token also expires. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "x-implementation-status": "DEPLOYED",
         "responses": {
           "200": {
             "description": "Authorized operation completed"
@@ -3824,14 +3824,15 @@
           "503": {
             "description": "Model unavailable"
           }
-        }
+        },
+        "x-implementation-status": "DEPLOYED"
       }
     },
     "/api/owner-mail/archive": {
       "get": {
         "summary": "archive get",
         "description": "Existing live owner session and immutable admin allowlist. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "x-implementation-status": "DEPLOYED",
         "responses": {
           "200": {
             "description": "Authorized operation completed"
@@ -3847,7 +3848,7 @@
       "patch": {
         "summary": "archive patch",
         "description": "Existing live owner session and immutable admin allowlist. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "x-implementation-status": "DEPLOYED",
         "responses": {
           "200": {
             "description": "Authorized operation completed"

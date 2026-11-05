@@ -75,6 +75,6 @@ The separate [email routing candidate](../launch/2026-10-22/NEXA-INBOUND-ROUTING
 
 The owner rejected the earlier content Preview and approved a complete global English/Arabic rewrite plus one new Preview. [Rebuild receipt](releases/global-content-preview-2026-10-24/README.md) records 34 public subjects, three noindex account surfaces, ten capabilities, nine solutions and ten sector workflows. This is copy and public presentation only; main/production, Studio runtime, Auth, data, APIs, provider access and video are unchanged. Publication status is governed by the new receipt, not the earlier Preview.
 
-## Current owner mail work — 5 November
+## Owner mail — 5 November 2026
 
-Continue from [owner mailbox migration](OWNER-MAIL-2026-11-05.md). Local mail backup is verified. New code is under review; database archive/scheduler migrations applied with no public read grants. Production import and DNS remain pending.
+[Verified state and remaining cutover](OWNER-MAIL-2026-11-05.md): 414 historical messages archived and hash verified; both mailboxes have active reply settings, signed ingress and scheduled recovery. Live model diagnostic and internal incoming/outgoing attachment checks passed. Public DNS still routes to SpaceMail. Remaining: owner MX change, external reply acceptance test and final read-only legacy delta sync. No new subscription or deletion.

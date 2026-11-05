@@ -168,6 +168,6 @@ Catalog panels use `solution` and `capability`. Related reading uses `reading`. 
 
 The live release combines search, filter and item selection in one control row using `@components/catalog-controls.tsx`, the existing shadcn/ui inputs and labels, and native selects. The controls stack on phones. Solutions, Capabilities and Industries render a single selected reading area. Six localized destinations are visible in the desktop header. The public URL state and canonical detail routes retain their documented behavior. [Production verification and screenshots](releases/public-navigation-2026-10-27/README.md#shared-catalogue-controls-in-production).
 
-## Owner mail, 5 November 2026
+## Owner mail — 5 November 2026
 
-[Current mailbox scope](OWNER-MAIL-2026-11-05.md): private service-only archive/storage, signed Resend Inbox webhooks, durable leased jobs, immutable native replies, trusted sender authentication, bounded Groq inference, owner-only dashboard and temporary historical import. Local RLS/concurrency tests passed. DNS and activation remain pending.
+[Verified state and remaining cutover](OWNER-MAIL-2026-11-05.md): 414 historical messages archived and hash verified; both mailboxes have active reply settings, signed ingress and scheduled recovery. Live model diagnostic and internal incoming/outgoing attachment checks passed. Public DNS still routes to SpaceMail. Remaining: owner MX change, external reply acceptance test and final read-only legacy delta sync. No new subscription or deletion.
