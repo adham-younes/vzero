@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T06:59:12Z",
+  "updated_at": "2026-11-05T09:51:18.281298+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -89,13 +89,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 53,
+    "http_operations": 58,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 42
+    "route_files": 45
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
@@ -788,5 +788,12 @@
     "verified_date": "2026-11-05",
     "production_authorized_date": "2026-11-05",
     "revision_date": "2026-10-28"
+  },
+  "owner_mail_migration": {
+    "state": "IMPLEMENTED_PENDING_DEPLOYMENT_IMPORT_AND_DNS",
+    "receipt": "OWNER-MAIL-2026-11-05.md",
+    "source_backup_messages": 414,
+    "automatic_replies_enabled": false,
+    "dns_cutover": false
   }
 }

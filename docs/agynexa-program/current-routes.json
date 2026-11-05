@@ -426,6 +426,34 @@
       "ar": "/ar/admin/nexa-mail/activity",
       "index": false,
       "auth": "verified live session plus immutable admin UUID allowlist"
+    },
+    {
+      "en": "/admin/mail",
+      "ar": "/ar/admin/mail",
+      "index": false,
+      "auth": "verified live session plus existing immutable owner UUID allowlist"
+    }
+  ],
+  "owner_mail_operations": [
+    {
+      "path": "/api/owner-mail/import",
+      "method": "post"
+    },
+    {
+      "path": "/api/owner-mail/import",
+      "method": "get"
+    },
+    {
+      "path": "/api/owner-mail/worker",
+      "method": "post"
+    },
+    {
+      "path": "/api/owner-mail/archive",
+      "method": "get"
+    },
+    {
+      "path": "/api/owner-mail/archive",
+      "method": "patch"
     }
   ]
 }
