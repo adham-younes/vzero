@@ -1,5 +1,5 @@
 'use client'
-import {useRef,useState} from 'react'
+import {useEffect,useRef,useState} from 'react'
 import {ArrowRight,Check,Code2,FileText,Globe2,LockKeyhole,Settings2,ShieldCheck,Sparkles} from 'lucide-react'
 import {useLanguage} from './agynexa-shell'
 import {Button} from '@/components/ui/button'
@@ -9,20 +9,21 @@ import type {StudioAction} from '@/lib/studio/project-contract'
 import {workApi} from './studio-work'
 import {studioPresets,studioPreset} from './studio-presets'
 import styles from './studio-chat.module.css'
+import {saveStudioDraft,studioLocaleHandoffEvent,type StudioBuilderDraft} from '@/lib/studio/authoring-draft'
 
 export type StudioModel={id:string;configured:boolean;stage:string;label?:string;maxOutputTokens?:number}
 type ConfigAgent=Agent & {sector?:string;tools?:{webSearch:boolean;codeInterpreter:boolean}}
 
-export function AgentForm({agent,models,onSaved,onCancel,onProposed,initialTask='',initialSector='general'}:{agent:ConfigAgent|null;models:StudioModel[];onSaved:(agent:Agent)=>void;onCancel:()=>void;onProposed?:(action:StudioAction)=>void;initialTask?:string;initialSector?:string}){
+export function AgentForm({agent,models,onSaved,onCancel,onProposed,initialTask='',initialSector='general',initialDraft,contextKey='custom'}:{agent:ConfigAgent|null;models:StudioModel[];onSaved:(agent:Agent)=>void;onCancel:()=>void;onProposed?:(action:StudioAction)=>void;initialTask?:string;initialSector?:string;initialDraft?:StudioBuilderDraft;contextKey?:string}){
  const {t,ar}=useLanguage()
- const [step,setStep]=useState(agent?'configure':'describe')
+ const [step,setStep]=useState(initialDraft?.step||(agent?'configure':'describe'))
  const [task,setTask]=useState(initialTask.slice(0,1500))
  const [sector,setSector]=useState(agent?.sector||initialSector)
- const [template,setTemplate]=useState<Template>(agent?.template||'serviceflow')
- const [language,setLanguage]=useState<'en'|'ar'>(agent?.language||(ar?'ar':'en'))
- const [name,setName]=useState(agent?.name||'')
- const [instructions,setInstructions]=useState(agent?.instructions||'')
- const [tools,setTools]=useState(agent?.tools||{webSearch:false,codeInterpreter:false})
+ const [template,setTemplate]=useState<Template>(initialDraft?.template||agent?.template||'serviceflow')
+ const [language,setLanguage]=useState<'en'|'ar'>(initialDraft?.language||agent?.language||(ar?'ar':'en'))
+ const [name,setName]=useState(initialDraft?.name||agent?.name||'')
+ const [instructions,setInstructions]=useState(initialDraft?.instructions||agent?.instructions||'')
+ const [tools,setTools]=useState(initialDraft?.tools||agent?.tools||{webSearch:false,codeInterpreter:false})
  const [model]=useState<string>(agent?.model||models.find(m=>m.configured&&m.stage==='production')?.id||'gpt-6.1-terra')
  const [busy,setBusy]=useState(false)
  const [error,setError]=useState('')
@@ -31,6 +32,7 @@ export function AgentForm({agent,models,onSaved,onCancel,onProposed,initialTask=
  const guard=useRef(false)
  const available=models.some(m=>m.id===model&&m.configured&&m.stage==='production')
  const preset=studioPreset(sector)
+ useEffect(()=>{if(agent)return;const preserve=()=>saveStudioDraft(contextKey,task,sector,{step:step==='configure'?'configure':'describe',name,instructions,language,template,tools});window.addEventListener(studioLocaleHandoffEvent,preserve);return()=>window.removeEventListener(studioLocaleHandoffEvent,preserve)},[agent,contextKey,task,sector,step,name,instructions,language,template,tools])
  function chooseSector(value:string){setSector(value);const next=studioPreset(value);if(!task.trim()||studioPresets.some(p=>p.task.some(value=>value===task)))setTask(t(next.task));if(!name.trim()||studioPresets.some(p=>p.name.some(value=>value===name)))setName(t(next.name))}
  function changed(){if(attempted){setRequestKey(crypto.randomUUID());setAttempted(false)}setError('')}
  function configure(event:React.FormEvent){event.preventDefault();setName(name.trim()||t(preset.name));setInstructions(`${(template==='knowledgegrid'?templates.knowledgegrid.instructions[language]:language==='ar'?'أنت وكيل أعمال مخصص. ساعد المستخدم في المهمة المحددة، وميّز بين حقائق الشركة الموثقة والمعلومات العامة والافتراضات.':'You are a custom business agent. Help with the defined task and distinguish supported company facts, public information and assumptions.')}\n\n${language==='ar'?'الدور والنتيجة المطلوبة':'Role and intended outcome'}\n${task.trim()}\n\n${language==='ar'?'طريقة العمل\nاذكر المصادر عند تقديم حقائق، ووضّح ما ينقصك. استخدم الأدوات المسموح بها فقط. افصل المسودات عن الإجراءات المنفّذة. اختم بنتيجة قابلة للمراجعة وخطوة تالية.':'Working approach\nCite sources for factual claims and explain missing information. Use only enabled tools. Distinguish drafts from completed actions. Finish with a reviewable result and a next step.'}`.slice(0,6000));setStep('configure')}

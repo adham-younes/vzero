@@ -1,0 +1,5189 @@
+[
+  {
+    "elements": [
+      {
+        "clientHeight": 76,
+        "clientWidth": 390,
+        "id": "el-0",
+        "interactive": false,
+        "label": "AGYNEXA.الحلولالقدراتالقطاعاتالبنيةطريقة البناءالتكاملاتENحسابيافتح الاستود",
+        "rect": {
+          "height": 77,
+          "width": 390,
+          "x": 0,
+          "y": 0
+        },
+        "scrollHeight": 76,
+        "scrollWidth": 390,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "relative",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "header"
+      },
+      {
+        "clientHeight": 2545,
+        "clientWidth": 390,
+        "id": "el-1",
+        "interactive": false,
+        "label": "الرئيسية/البنيةبنية المنصةكيف تعمل مساحة الوكيل؟يجمع AGYNEXA إعداد الوكيل و",
+        "rect": {
+          "height": 2544.6484375,
+          "width": 390,
+          "x": 0,
+          "y": 77
+        },
+        "scrollHeight": 2545,
+        "scrollWidth": 390,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "main"
+      },
+      {
+        "clientHeight": 377,
+        "clientWidth": 390,
+        "id": "el-2",
+        "interactive": false,
+        "label": "الرئيسية/البنيةبنية المنصةكيف تعمل مساحة الوكيل؟يجمع AGYNEXA إعداد الوكيل و",
+        "parentId": "el-1",
+        "rect": {
+          "height": 377.5,
+          "width": 390,
+          "x": 0,
+          "y": 77
+        },
+        "scrollHeight": 377,
+        "scrollWidth": 390,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 30,
+            "left": 20,
+            "right": 20,
+            "top": 24
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "header"
+      },
+      {
+        "clientHeight": 36,
+        "clientWidth": 47,
+        "id": "el-3",
+        "interactive": true,
+        "label": "الرئيسية",
+        "parentId": "el-2",
+        "rect": {
+          "height": 36,
+          "width": 47.03125,
+          "x": 322.96875,
+          "y": 101
+        },
+        "scrollHeight": 36,
+        "scrollWidth": 47,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 17,
+        "clientWidth": 350,
+        "id": "el-4",
+        "interactive": false,
+        "label": "بنية المنصة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 16.5,
+          "width": 350,
+          "x": 20,
+          "y": 153
+        },
+        "scrollHeight": 17,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 12,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 48,
+        "clientWidth": 350,
+        "id": "el-5",
+        "interactive": false,
+        "label": "كيف تعمل مساحة الوكيل؟",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 181.5
+        },
+        "scrollHeight": 48,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h1"
+      },
+      {
+        "clientHeight": 105,
+        "clientWidth": 350,
+        "id": "el-6",
+        "interactive": false,
+        "label": "يجمع AGYNEXA إعداد الوكيل والمعرفة الخاصة ومحادثات التجربة في مساحة واحدة. ",
+        "parentId": "el-2",
+        "rect": {
+          "height": 105,
+          "width": 350,
+          "x": 20,
+          "y": 249.5
+        },
+        "scrollHeight": 105,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 350,
+        "id": "el-7",
+        "interactive": true,
+        "label": "مساحة خاصة لأعمالك",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 423.5
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 350,
+        "id": "el-8",
+        "interactive": true,
+        "label": "التعليمات تحدد المسؤولية",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 471.5
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 350,
+        "id": "el-9",
+        "interactive": true,
+        "label": "المعرفة توفر سياق الشركة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 519.5
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 350,
+        "id": "el-10",
+        "interactive": true,
+        "label": "الاستدلال يستخدم الأدوات المفعّلة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 567.5
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 350,
+        "id": "el-11",
+        "interactive": true,
+        "label": "للإجراء المقترح نتيجة مؤكدة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 615.5
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 350,
+        "id": "el-12",
+        "interactive": true,
+        "label": "التفعيل بعد مراجعة التجربة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 663.5
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 22,
+        "clientWidth": 278,
+        "id": "el-13",
+        "interactive": false,
+        "label": "استدلال OpenAI بالأدوات التي تفعّلها",
+        "parentId": "el-1",
+        "rect": {
+          "height": 21.59375,
+          "width": 278,
+          "x": 56,
+          "y": 769.9921875
+        },
+        "scrollHeight": 22,
+        "scrollWidth": 278,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "center"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 22,
+        "clientWidth": 211,
+        "id": "el-14",
+        "interactive": false,
+        "label": "إجابة وأدلة ونشاط الأدوات والملفات المتاحة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 21.59375,
+          "width": 211.1640625,
+          "x": 82.8359375,
+          "y": 957.578125
+        },
+        "scrollHeight": 22,
+        "scrollWidth": 211,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 4
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 29,
+        "clientWidth": 188,
+        "id": "el-15",
+        "interactive": false,
+        "label": "مساحة خاصة لأعمالك",
+        "parentId": "el-1",
+        "rect": {
+          "height": 29.3984375,
+          "width": 187.828125,
+          "x": 182.171875,
+          "y": 1174.25
+        },
+        "scrollHeight": 29,
+        "scrollWidth": 188,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 130,
+        "clientWidth": 350,
+        "id": "el-16",
+        "interactive": false,
+        "label": "يرتبط إعداد الوكلاء والمصادر والمحادثات المحفوظة بمساحة حسابك. يُفحص الطلب ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 130,
+          "width": 350,
+          "x": 20,
+          "y": 1232.953125
+        },
+        "scrollHeight": 130,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 29,
+        "clientWidth": 221,
+        "id": "el-17",
+        "interactive": false,
+        "label": "التعليمات تحدد المسؤولية",
+        "parentId": "el-1",
+        "rect": {
+          "height": 29.3984375,
+          "width": 220.7109375,
+          "x": 149.2890625,
+          "y": 1421.25
+        },
+        "scrollHeight": 29,
+        "scrollWidth": 221,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 104,
+        "clientWidth": 350,
+        "id": "el-18",
+        "interactive": false,
+        "label": "حدّد ما يفعله الوكيل والأدلة التي يستخدمها وشكل المخرج. أضف حدود الدور والم",
+        "parentId": "el-1",
+        "rect": {
+          "height": 104,
+          "width": 350,
+          "x": 20,
+          "y": 1479.953125
+        },
+        "scrollHeight": 104,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 29,
+        "clientWidth": 230,
+        "id": "el-19",
+        "interactive": false,
+        "label": "المعرفة توفر سياق الشركة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 29.3984375,
+          "width": 230.4140625,
+          "x": 139.5859375,
+          "y": 1518.25
+        },
+        "scrollHeight": 29,
+        "scrollWidth": 230,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 104,
+        "clientWidth": 350,
+        "id": "el-20",
+        "interactive": false,
+        "label": "توفر المصادر النصية وMarkdown سياقًا معتمدًا للوكيل، وتتيح المراجع فحص أساس",
+        "parentId": "el-1",
+        "rect": {
+          "height": 104,
+          "width": 350,
+          "x": 20,
+          "y": 1576.953125
+        },
+        "scrollHeight": 104,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 29,
+        "clientWidth": 301,
+        "id": "el-21",
+        "interactive": false,
+        "label": "الاستدلال يستخدم الأدوات المفعّلة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 29.3984375,
+          "width": 301.125,
+          "x": 68.875,
+          "y": 1615.25
+        },
+        "scrollHeight": 29,
+        "scrollWidth": 301,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 130,
+        "clientWidth": 350,
+        "id": "el-22",
+        "interactive": false,
+        "label": "يستخدم الاستوديو GPT-6.1 Terra بمستوى استدلال مرتفع. يجمع البحث مصادر عامة ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 130,
+          "width": 350,
+          "x": 20,
+          "y": 1673.953125
+        },
+        "scrollHeight": 130,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 29,
+        "clientWidth": 231,
+        "id": "el-23",
+        "interactive": false,
+        "label": "للإجراء المقترح نتيجة مؤكدة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 29.3984375,
+          "width": 230.796875,
+          "x": 139.203125,
+          "y": 1712.25
+        },
+        "scrollHeight": 29,
+        "scrollWidth": 231,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 130,
+        "clientWidth": 350,
+        "id": "el-24",
+        "interactive": false,
+        "label": "التوصية واعتماد الشخص والإجراء المكتمل في النظام سجلات مختلفة. يحتاج سير ال",
+        "parentId": "el-1",
+        "rect": {
+          "height": 130,
+          "width": 350,
+          "x": 20,
+          "y": 1770.953125
+        },
+        "scrollHeight": 130,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 29,
+        "clientWidth": 227,
+        "id": "el-25",
+        "interactive": false,
+        "label": "التفعيل بعد مراجعة التجربة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 29.3984375,
+          "width": 226.96875,
+          "x": 143.03125,
+          "y": 1809.25
+        },
+        "scrollHeight": 29,
+        "scrollWidth": 227,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 140,
+        "clientWidth": 350,
+        "id": "el-26",
+        "interactive": false,
+        "label": "ابنِ الوكيل وقيّمه داخل الاستوديو أولًا. يعتمد نشره للإنتاج على قرار تفعيل ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 140,
+          "width": 350,
+          "x": 20,
+          "y": 1867.953125
+        },
+        "scrollHeight": 140,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 115,
+        "id": "el-27",
+        "interactive": true,
+        "label": "راجع خطوات البناء",
+        "parentId": "el-26",
+        "rect": {
+          "height": 44,
+          "width": 115.140625,
+          "x": 72.953125,
+          "y": 1919.953125
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 115,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "inline-flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 97,
+        "id": "el-28",
+        "interactive": true,
+        "label": "متطلبات الربط",
+        "parentId": "el-26",
+        "rect": {
+          "height": 44,
+          "width": 96.5,
+          "x": 273.5,
+          "y": 1963.953125
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 97,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "inline-flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 225,
+        "clientWidth": 350,
+        "id": "el-29",
+        "interactive": false,
+        "label": "قدرات مرتبطة — اقرأها هنامعرفة الشركة للوكلاءتنسيق عمل الوكلاءصلاحيات الوكل",
+        "parentId": "el-1",
+        "rect": {
+          "height": 225.796875,
+          "width": 350,
+          "x": 20,
+          "y": 1903.953125
+        },
+        "scrollHeight": 225,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 32
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 28
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "section"
+      },
+      {
+        "clientHeight": 31,
+        "clientWidth": 350,
+        "id": "el-30",
+        "interactive": false,
+        "label": "قدرات مرتبطة — اقرأها هنا",
+        "parentId": "el-29",
+        "rect": {
+          "height": 30.796875,
+          "width": 350,
+          "x": 20,
+          "y": 1932.953125
+        },
+        "scrollHeight": 31,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 18,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 66,
+        "clientWidth": 167,
+        "id": "el-31",
+        "interactive": true,
+        "label": "معرفة الشركة للوكلاء",
+        "parentId": "el-29",
+        "rect": {
+          "height": 68,
+          "width": 169,
+          "x": 201,
+          "y": 1981.75
+        },
+        "scrollHeight": 66,
+        "scrollWidth": 167,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 66,
+        "clientWidth": 167,
+        "id": "el-32",
+        "interactive": true,
+        "label": "تنسيق عمل الوكلاء",
+        "parentId": "el-29",
+        "rect": {
+          "height": 68,
+          "width": 169,
+          "x": 20,
+          "y": 1981.75
+        },
+        "scrollHeight": 66,
+        "scrollWidth": 167,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 66,
+        "clientWidth": 167,
+        "id": "el-33",
+        "interactive": true,
+        "label": "صلاحيات الوكلاء والإشراف البشري",
+        "parentId": "el-29",
+        "rect": {
+          "height": 68,
+          "width": 169,
+          "x": 201,
+          "y": 2061.75
+        },
+        "scrollHeight": 66,
+        "scrollWidth": 167,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 444,
+        "clientWidth": 390,
+        "id": "el-34",
+        "interactive": false,
+        "label": "من تجربة ناجحة إلى عملك اليوميابنِ الوكيل واختبره، ثم اتفق على تشغيله.راجع ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 443.8984375,
+          "width": 390,
+          "x": 0,
+          "y": 2177.75
+        },
+        "scrollHeight": 444,
+        "scrollWidth": 390,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 40,
+            "left": 0,
+            "right": 0,
+            "top": 40
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "section"
+      },
+      {
+        "clientHeight": 17,
+        "clientWidth": 350,
+        "id": "el-35",
+        "interactive": false,
+        "label": "من تجربة ناجحة إلى عملك اليومي",
+        "parentId": "el-34",
+        "rect": {
+          "height": 16.5,
+          "width": 350,
+          "x": 20,
+          "y": 2217.75
+        },
+        "scrollHeight": 17,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 18,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 350,
+        "id": "el-36",
+        "interactive": false,
+        "label": "ابنِ الوكيل واختبره، ثم اتفق على تشغيله.",
+        "parentId": "el-34",
+        "rect": {
+          "height": 78,
+          "width": 350,
+          "x": 20,
+          "y": 2252.25
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 51,
+        "clientWidth": 350,
+        "id": "el-37",
+        "interactive": false,
+        "label": "راجع وكيلك في الاستوديو، ثم راسلنا للاتفاق على السعر والشروط والتفعيل الإنت",
+        "parentId": "el-34",
+        "rect": {
+          "height": 51,
+          "width": 350,
+          "x": 20,
+          "y": 2350.25
+        },
+        "scrollHeight": 51,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 48,
+        "clientWidth": 350,
+        "id": "el-38",
+        "interactive": true,
+        "label": "افتح الاستوديو",
+        "parentId": "el-34",
+        "rect": {
+          "height": 48,
+          "width": 350,
+          "x": 20,
+          "y": 2433.25
+        },
+        "scrollHeight": 48,
+        "scrollWidth": 350,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "center",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 24,
+            "right": 24,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 108,
+        "id": "el-39",
+        "interactive": true,
+        "label": "ناقش التفعيل",
+        "parentId": "el-34",
+        "rect": {
+          "height": 44,
+          "width": 108.296875,
+          "x": 261.703125,
+          "y": 2499.25
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 108,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 846,
+        "clientWidth": 390,
+        "id": "el-40",
+        "interactive": false,
+        "label": "AGYNEXA.ابنِ وكلاء ذكاء اصطناعي لأعمالك واختبرهم. حدّد الدور وأضف معرفة الش",
+        "rect": {
+          "height": 847.28125,
+          "width": 390,
+          "x": 0,
+          "y": 2621.6484375
+        },
+        "scrollHeight": 846,
+        "scrollWidth": 390,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "footer"
+      }
+    ],
+    "name": "architecture-ar-390",
+    "viewport": {
+      "devicePixelRatio": 1,
+      "height": 1000,
+      "width": 390
+    }
+  },
+  {
+    "elements": [
+      {
+        "clientHeight": 88,
+        "clientWidth": 1440,
+        "id": "el-0",
+        "interactive": false,
+        "label": "AGYNEXA.الحلولالقدراتالقطاعاتالبنيةطريقة البناءالتكاملاتENحسابيافتح الاستود",
+        "rect": {
+          "height": 89,
+          "width": 1440,
+          "x": 0,
+          "y": 0
+        },
+        "scrollHeight": 88,
+        "scrollWidth": 1440,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "relative",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "header"
+      },
+      {
+        "clientHeight": 1544,
+        "clientWidth": 1440,
+        "id": "el-1",
+        "interactive": false,
+        "label": "الرئيسية/البنيةبنية المنصةكيف تعمل مساحة الوكيل؟يجمع AGYNEXA إعداد الوكيل و",
+        "rect": {
+          "height": 1543.9921875,
+          "width": 1440,
+          "x": 0,
+          "y": 89
+        },
+        "scrollHeight": 1544,
+        "scrollWidth": 1440,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "main"
+      },
+      {
+        "clientHeight": 323,
+        "clientWidth": 1280,
+        "id": "el-2",
+        "interactive": false,
+        "label": "الرئيسية/البنيةبنية المنصةكيف تعمل مساحة الوكيل؟يجمع AGYNEXA إعداد الوكيل و",
+        "parentId": "el-1",
+        "rect": {
+          "height": 324,
+          "width": 1280,
+          "x": 80,
+          "y": 89
+        },
+        "scrollHeight": 323,
+        "scrollWidth": 1280,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 80,
+            "right": 80,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 44,
+            "left": 24,
+            "right": 24,
+            "top": 36
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "header"
+      },
+      {
+        "clientHeight": 36,
+        "clientWidth": 47,
+        "id": "el-3",
+        "interactive": true,
+        "label": "الرئيسية",
+        "parentId": "el-2",
+        "rect": {
+          "height": 36,
+          "width": 47.03125,
+          "x": 1288.96875,
+          "y": 125
+        },
+        "scrollHeight": 36,
+        "scrollWidth": 47,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 18,
+        "clientWidth": 1232,
+        "id": "el-4",
+        "interactive": false,
+        "label": "بنية المنصة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 18,
+          "width": 1232,
+          "x": 104,
+          "y": 183
+        },
+        "scrollHeight": 18,
+        "scrollWidth": 1232,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 14,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 66,
+        "clientWidth": 626,
+        "id": "el-5",
+        "interactive": false,
+        "label": "كيف تعمل مساحة الوكيل؟",
+        "parentId": "el-2",
+        "rect": {
+          "height": 66,
+          "width": 625.5078125,
+          "x": 710.4921875,
+          "y": 215
+        },
+        "scrollHeight": 66,
+        "scrollWidth": 626,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h1"
+      },
+      {
+        "clientHeight": 84,
+        "clientWidth": 524,
+        "id": "el-6",
+        "interactive": false,
+        "label": "يجمع AGYNEXA إعداد الوكيل والمعرفة الخاصة ومحادثات التجربة في مساحة واحدة. ",
+        "parentId": "el-2",
+        "rect": {
+          "height": 84,
+          "width": 523.7734375,
+          "x": 138.71875,
+          "y": 215
+        },
+        "scrollHeight": 84,
+        "scrollWidth": 524,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 116,
+        "id": "el-7",
+        "interactive": true,
+        "label": "مساحة خاصة لأعمالك",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 116.2734375,
+          "x": 1219.7265625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 116,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 137,
+        "id": "el-8",
+        "interactive": true,
+        "label": "التعليمات تحدد المسؤولية",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 136.6328125,
+          "x": 1063.09375,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 137,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 143,
+        "id": "el-9",
+        "interactive": true,
+        "label": "المعرفة توفر سياق الشركة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 142.640625,
+          "x": 900.453125,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 143,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 186,
+        "id": "el-10",
+        "interactive": true,
+        "label": "الاستدلال يستخدم الأدوات المفعّلة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 186.4140625,
+          "x": 694.0390625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 186,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 143,
+        "id": "el-11",
+        "interactive": true,
+        "label": "للإجراء المقترح نتيجة مؤكدة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 142.875,
+          "x": 531.1640625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 143,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 141,
+        "id": "el-12",
+        "interactive": true,
+        "label": "التفعيل بعد مراجعة التجربة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 140.5078125,
+          "x": 370.65625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 141,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 22,
+        "clientWidth": 325,
+        "id": "el-13",
+        "interactive": false,
+        "label": "استدلال OpenAI بالأدوات التي تفعّلها",
+        "parentId": "el-1",
+        "rect": {
+          "height": 21.59375,
+          "width": 324.7265625,
+          "x": 961.2734375,
+          "y": 739.1953125
+        },
+        "scrollHeight": 22,
+        "scrollWidth": 325,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "center"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 22,
+        "clientWidth": 211,
+        "id": "el-14",
+        "interactive": false,
+        "label": "إجابة وأدلة ونشاط الأدوات والملفات المتاحة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 21.59375,
+          "width": 211.1640625,
+          "x": 1040.8359375,
+          "y": 930.78125
+        },
+        "scrollHeight": 22,
+        "scrollWidth": 211,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 4
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 206,
+        "id": "el-15",
+        "interactive": false,
+        "label": "مساحة خاصة لأعمالك",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 205.71875,
+          "x": 641.5546875,
+          "y": 484.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 206,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 591,
+        "id": "el-16",
+        "interactive": false,
+        "label": "يرتبط إعداد الوكلاء والمصادر والمحادثات المحفوظة بمساحة حسابك. يُفحص الطلب ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 78,
+          "width": 591.359375,
+          "x": 255.9140625,
+          "y": 545
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 242,
+        "id": "el-17",
+        "interactive": false,
+        "label": "التعليمات تحدد المسؤولية",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 241.734375,
+          "x": 605.5390625,
+          "y": 679.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 242,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 52,
+        "clientWidth": 591,
+        "id": "el-18",
+        "interactive": false,
+        "label": "حدّد ما يفعله الوكيل والأدلة التي يستخدمها وشكل المخرج. أضف حدود الدور والم",
+        "parentId": "el-1",
+        "rect": {
+          "height": 52,
+          "width": 591.359375,
+          "x": 255.9140625,
+          "y": 740
+        },
+        "scrollHeight": 52,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 252,
+        "id": "el-19",
+        "interactive": false,
+        "label": "المعرفة توفر سياق الشركة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 252.359375,
+          "x": 594.9140625,
+          "y": 776.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 252,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 52,
+        "clientWidth": 591,
+        "id": "el-20",
+        "interactive": false,
+        "label": "توفر المصادر النصية وMarkdown سياقًا معتمدًا للوكيل، وتتيح المراجع فحص أساس",
+        "parentId": "el-1",
+        "rect": {
+          "height": 52,
+          "width": 591.359375,
+          "x": 255.9140625,
+          "y": 837
+        },
+        "scrollHeight": 52,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 330,
+        "id": "el-21",
+        "interactive": false,
+        "label": "الاستدلال يستخدم الأدوات المفعّلة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 329.8046875,
+          "x": 517.46875,
+          "y": 873.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 330,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 591,
+        "id": "el-22",
+        "interactive": false,
+        "label": "يستخدم الاستوديو GPT-6.1 Terra بمستوى استدلال مرتفع. يجمع البحث مصادر عامة ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 78,
+          "width": 591.359375,
+          "x": 255.9140625,
+          "y": 934
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 253,
+        "id": "el-23",
+        "interactive": false,
+        "label": "للإجراء المقترح نتيجة مؤكدة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 252.7734375,
+          "x": 594.5,
+          "y": 970.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 253,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 591,
+        "id": "el-24",
+        "interactive": false,
+        "label": "التوصية واعتماد الشخص والإجراء المكتمل في النظام سجلات مختلفة. يحتاج سير ال",
+        "parentId": "el-1",
+        "rect": {
+          "height": 78,
+          "width": 591.359375,
+          "x": 255.9140625,
+          "y": 1031
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 249,
+        "id": "el-25",
+        "interactive": false,
+        "label": "التفعيل بعد مراجعة التجربة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 248.5859375,
+          "x": 598.6875,
+          "y": 1067.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 249,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 70,
+        "clientWidth": 591,
+        "id": "el-26",
+        "interactive": false,
+        "label": "ابنِ الوكيل وقيّمه داخل الاستوديو أولًا. يعتمد نشره للإنتاج على قرار تفعيل ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 70,
+          "width": 591.359375,
+          "x": 255.9140625,
+          "y": 1128
+        },
+        "scrollHeight": 70,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 115,
+        "id": "el-27",
+        "interactive": true,
+        "label": "راجع خطوات البناء",
+        "parentId": "el-26",
+        "rect": {
+          "height": 44,
+          "width": 115.140625,
+          "x": 451.953125,
+          "y": 1154
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 115,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "inline-flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 97,
+        "id": "el-28",
+        "interactive": true,
+        "label": "متطلبات الربط",
+        "parentId": "el-26",
+        "rect": {
+          "height": 44,
+          "width": 96.5,
+          "x": 337.484375,
+          "y": 1154
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 97,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "inline-flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 136,
+        "clientWidth": 1232,
+        "id": "el-29",
+        "interactive": false,
+        "label": "قدرات مرتبطة — اقرأها هنامعرفة الشركة للوكلاءتنسيق عمل الوكلاءصلاحيات الوكل",
+        "parentId": "el-1",
+        "rect": {
+          "height": 136.59375,
+          "width": 1232,
+          "x": 104,
+          "y": 1164
+        },
+        "scrollHeight": 136,
+        "scrollWidth": 1232,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 32
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 28
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "section"
+      },
+      {
+        "clientHeight": 34,
+        "clientWidth": 1232,
+        "id": "el-30",
+        "interactive": false,
+        "label": "قدرات مرتبطة — اقرأها هنا",
+        "parentId": "el-29",
+        "rect": {
+          "height": 33.59375,
+          "width": 1232,
+          "x": 104,
+          "y": 1193
+        },
+        "scrollHeight": 34,
+        "scrollWidth": 1232,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 18,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 401,
+        "id": "el-31",
+        "interactive": true,
+        "label": "معرفة الشركة للوكلاء",
+        "parentId": "el-29",
+        "rect": {
+          "height": 56,
+          "width": 402.6640625,
+          "x": 933.3359375,
+          "y": 1244.59375
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 401,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 401,
+        "id": "el-32",
+        "interactive": true,
+        "label": "تنسيق عمل الوكلاء",
+        "parentId": "el-29",
+        "rect": {
+          "height": 56,
+          "width": 402.6640625,
+          "x": 518.671875,
+          "y": 1244.59375
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 401,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 401,
+        "id": "el-33",
+        "interactive": true,
+        "label": "صلاحيات الوكلاء والإشراف البشري",
+        "parentId": "el-29",
+        "rect": {
+          "height": 56,
+          "width": 402.6640625,
+          "x": 104.0078125,
+          "y": 1244.59375
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 401,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 260,
+        "clientWidth": 1440,
+        "id": "el-34",
+        "interactive": false,
+        "label": "من تجربة ناجحة إلى عملك اليوميابنِ الوكيل واختبره، ثم اتفق على تشغيله.راجع ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 260.3984375,
+          "width": 1440,
+          "x": 0,
+          "y": 1372.59375
+        },
+        "scrollHeight": 260,
+        "scrollWidth": 1440,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 56,
+            "left": 0,
+            "right": 0,
+            "top": 56
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "section"
+      },
+      {
+        "clientHeight": 18,
+        "clientWidth": 760,
+        "id": "el-35",
+        "interactive": false,
+        "label": "من تجربة ناجحة إلى عملك اليومي",
+        "parentId": "el-34",
+        "rect": {
+          "height": 18,
+          "width": 760,
+          "x": 576,
+          "y": 1435.0390625
+        },
+        "scrollHeight": 18,
+        "scrollWidth": 760,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 18,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 720,
+        "id": "el-36",
+        "interactive": false,
+        "label": "ابنِ الوكيل واختبره، ثم اتفق على تشغيله.",
+        "parentId": "el-34",
+        "rect": {
+          "height": 54,
+          "width": 720,
+          "x": 616,
+          "y": 1471.0390625
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 720,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 26,
+        "clientWidth": 760,
+        "id": "el-37",
+        "interactive": false,
+        "label": "راجع وكيلك في الاستوديو، ثم راسلنا للاتفاق على السعر والشروط والتفعيل الإنت",
+        "parentId": "el-34",
+        "rect": {
+          "height": 25.5,
+          "width": 760,
+          "x": 576,
+          "y": 1545.0390625
+        },
+        "scrollHeight": 26,
+        "scrollWidth": 760,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 48,
+        "clientWidth": 157,
+        "id": "el-38",
+        "interactive": true,
+        "label": "افتح الاستوديو",
+        "parentId": "el-34",
+        "rect": {
+          "height": 48,
+          "width": 156.5625,
+          "x": 104,
+          "y": 1428.59375
+        },
+        "scrollHeight": 48,
+        "scrollWidth": 157,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "center",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 24,
+            "right": 24,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 108,
+        "id": "el-39",
+        "interactive": true,
+        "label": "ناقش التفعيل",
+        "parentId": "el-34",
+        "rect": {
+          "height": 44,
+          "width": 108.296875,
+          "x": 152.265625,
+          "y": 1494.59375
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 108,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 445,
+        "clientWidth": 1440,
+        "id": "el-40",
+        "interactive": false,
+        "label": "AGYNEXA.ابنِ وكلاء ذكاء اصطناعي لأعمالك واختبرهم. حدّد الدور وأضف معرفة الش",
+        "rect": {
+          "height": 446,
+          "width": 1440,
+          "x": 0,
+          "y": 1632.9921875
+        },
+        "scrollHeight": 445,
+        "scrollWidth": 1440,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "footer"
+      }
+    ],
+    "name": "architecture-ar-1440",
+    "viewport": {
+      "devicePixelRatio": 1,
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  {
+    "elements": [
+      {
+        "clientHeight": 88,
+        "clientWidth": 1728,
+        "id": "el-0",
+        "interactive": false,
+        "label": "AGYNEXA.الحلولالقدراتالقطاعاتالبنيةطريقة البناءالتكاملاتENحسابيافتح الاستود",
+        "rect": {
+          "height": 89,
+          "width": 1728,
+          "x": 0,
+          "y": 0
+        },
+        "scrollHeight": 88,
+        "scrollWidth": 1728,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "relative",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "header"
+      },
+      {
+        "clientHeight": 1544,
+        "clientWidth": 1728,
+        "id": "el-1",
+        "interactive": false,
+        "label": "الرئيسية/البنيةبنية المنصةكيف تعمل مساحة الوكيل؟يجمع AGYNEXA إعداد الوكيل و",
+        "rect": {
+          "height": 1543.9921875,
+          "width": 1728,
+          "x": 0,
+          "y": 89
+        },
+        "scrollHeight": 1544,
+        "scrollWidth": 1728,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "main"
+      },
+      {
+        "clientHeight": 323,
+        "clientWidth": 1280,
+        "id": "el-2",
+        "interactive": false,
+        "label": "الرئيسية/البنيةبنية المنصةكيف تعمل مساحة الوكيل؟يجمع AGYNEXA إعداد الوكيل و",
+        "parentId": "el-1",
+        "rect": {
+          "height": 324,
+          "width": 1280,
+          "x": 224,
+          "y": 89
+        },
+        "scrollHeight": 323,
+        "scrollWidth": 1280,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 224,
+            "right": 224,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 44,
+            "left": 24,
+            "right": 24,
+            "top": 36
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "header"
+      },
+      {
+        "clientHeight": 36,
+        "clientWidth": 47,
+        "id": "el-3",
+        "interactive": true,
+        "label": "الرئيسية",
+        "parentId": "el-2",
+        "rect": {
+          "height": 36,
+          "width": 47.03125,
+          "x": 1432.96875,
+          "y": 125
+        },
+        "scrollHeight": 36,
+        "scrollWidth": 47,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 18,
+        "clientWidth": 1232,
+        "id": "el-4",
+        "interactive": false,
+        "label": "بنية المنصة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 18,
+          "width": 1232,
+          "x": 248,
+          "y": 183
+        },
+        "scrollHeight": 18,
+        "scrollWidth": 1232,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 14,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 66,
+        "clientWidth": 626,
+        "id": "el-5",
+        "interactive": false,
+        "label": "كيف تعمل مساحة الوكيل؟",
+        "parentId": "el-2",
+        "rect": {
+          "height": 66,
+          "width": 625.5078125,
+          "x": 854.4921875,
+          "y": 215
+        },
+        "scrollHeight": 66,
+        "scrollWidth": 626,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h1"
+      },
+      {
+        "clientHeight": 84,
+        "clientWidth": 524,
+        "id": "el-6",
+        "interactive": false,
+        "label": "يجمع AGYNEXA إعداد الوكيل والمعرفة الخاصة ومحادثات التجربة في مساحة واحدة. ",
+        "parentId": "el-2",
+        "rect": {
+          "height": 84,
+          "width": 523.7734375,
+          "x": 282.71875,
+          "y": 215
+        },
+        "scrollHeight": 84,
+        "scrollWidth": 524,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 116,
+        "id": "el-7",
+        "interactive": true,
+        "label": "مساحة خاصة لأعمالك",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 116.2734375,
+          "x": 1363.7265625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 116,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 137,
+        "id": "el-8",
+        "interactive": true,
+        "label": "التعليمات تحدد المسؤولية",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 136.6328125,
+          "x": 1207.09375,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 137,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 143,
+        "id": "el-9",
+        "interactive": true,
+        "label": "المعرفة توفر سياق الشركة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 142.640625,
+          "x": 1044.453125,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 143,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 186,
+        "id": "el-10",
+        "interactive": true,
+        "label": "الاستدلال يستخدم الأدوات المفعّلة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 186.4140625,
+          "x": 838.0390625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 186,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 143,
+        "id": "el-11",
+        "interactive": true,
+        "label": "للإجراء المقترح نتيجة مؤكدة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 142.875,
+          "x": 675.1640625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 143,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 47,
+        "clientWidth": 141,
+        "id": "el-12",
+        "interactive": true,
+        "label": "التفعيل بعد مراجعة التجربة",
+        "parentId": "el-2",
+        "rect": {
+          "height": 48,
+          "width": 140.5078125,
+          "x": 514.65625,
+          "y": 368
+        },
+        "scrollHeight": 47,
+        "scrollWidth": 141,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 8,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 22,
+        "clientWidth": 325,
+        "id": "el-13",
+        "interactive": false,
+        "label": "استدلال OpenAI بالأدوات التي تفعّلها",
+        "parentId": "el-1",
+        "rect": {
+          "height": 21.59375,
+          "width": 324.7265625,
+          "x": 1105.2734375,
+          "y": 739.1953125
+        },
+        "scrollHeight": 22,
+        "scrollWidth": 325,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 8
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "center"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 22,
+        "clientWidth": 211,
+        "id": "el-14",
+        "interactive": false,
+        "label": "إجابة وأدلة ونشاط الأدوات والملفات المتاحة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 21.59375,
+          "width": 211.1640625,
+          "x": 1184.8359375,
+          "y": 930.78125
+        },
+        "scrollHeight": 22,
+        "scrollWidth": 211,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 4
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 206,
+        "id": "el-15",
+        "interactive": false,
+        "label": "مساحة خاصة لأعمالك",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 205.71875,
+          "x": 785.5546875,
+          "y": 484.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 206,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 591,
+        "id": "el-16",
+        "interactive": false,
+        "label": "يرتبط إعداد الوكلاء والمصادر والمحادثات المحفوظة بمساحة حسابك. يُفحص الطلب ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 78,
+          "width": 591.359375,
+          "x": 399.9140625,
+          "y": 545
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 242,
+        "id": "el-17",
+        "interactive": false,
+        "label": "التعليمات تحدد المسؤولية",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 241.734375,
+          "x": 749.5390625,
+          "y": 679.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 242,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 52,
+        "clientWidth": 591,
+        "id": "el-18",
+        "interactive": false,
+        "label": "حدّد ما يفعله الوكيل والأدلة التي يستخدمها وشكل المخرج. أضف حدود الدور والم",
+        "parentId": "el-1",
+        "rect": {
+          "height": 52,
+          "width": 591.359375,
+          "x": 399.9140625,
+          "y": 740
+        },
+        "scrollHeight": 52,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 252,
+        "id": "el-19",
+        "interactive": false,
+        "label": "المعرفة توفر سياق الشركة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 252.359375,
+          "x": 738.9140625,
+          "y": 776.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 252,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 52,
+        "clientWidth": 591,
+        "id": "el-20",
+        "interactive": false,
+        "label": "توفر المصادر النصية وMarkdown سياقًا معتمدًا للوكيل، وتتيح المراجع فحص أساس",
+        "parentId": "el-1",
+        "rect": {
+          "height": 52,
+          "width": 591.359375,
+          "x": 399.9140625,
+          "y": 837
+        },
+        "scrollHeight": 52,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 330,
+        "id": "el-21",
+        "interactive": false,
+        "label": "الاستدلال يستخدم الأدوات المفعّلة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 329.8046875,
+          "x": 661.46875,
+          "y": 873.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 330,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 591,
+        "id": "el-22",
+        "interactive": false,
+        "label": "يستخدم الاستوديو GPT-6.1 Terra بمستوى استدلال مرتفع. يجمع البحث مصادر عامة ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 78,
+          "width": 591.359375,
+          "x": 399.9140625,
+          "y": 934
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 253,
+        "id": "el-23",
+        "interactive": false,
+        "label": "للإجراء المقترح نتيجة مؤكدة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 252.7734375,
+          "x": 738.5,
+          "y": 970.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 253,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 78,
+        "clientWidth": 591,
+        "id": "el-24",
+        "interactive": false,
+        "label": "التوصية واعتماد الشخص والإجراء المكتمل في النظام سجلات مختلفة. يحتاج سير ال",
+        "parentId": "el-1",
+        "rect": {
+          "height": 78,
+          "width": 591.359375,
+          "x": 399.9140625,
+          "y": 1031
+        },
+        "scrollHeight": 78,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 32,
+        "clientWidth": 249,
+        "id": "el-25",
+        "interactive": false,
+        "label": "التفعيل بعد مراجعة التجربة",
+        "parentId": "el-1",
+        "rect": {
+          "height": 32.1953125,
+          "width": 248.5859375,
+          "x": 742.6875,
+          "y": 1067.8984375
+        },
+        "scrollHeight": 32,
+        "scrollWidth": 249,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 70,
+        "clientWidth": 591,
+        "id": "el-26",
+        "interactive": false,
+        "label": "ابنِ الوكيل وقيّمه داخل الاستوديو أولًا. يعتمد نشره للإنتاج على قرار تفعيل ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 70,
+          "width": 591.359375,
+          "x": 399.9140625,
+          "y": 1128
+        },
+        "scrollHeight": 70,
+        "scrollWidth": 591,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 115,
+        "id": "el-27",
+        "interactive": true,
+        "label": "راجع خطوات البناء",
+        "parentId": "el-26",
+        "rect": {
+          "height": 44,
+          "width": 115.140625,
+          "x": 595.953125,
+          "y": 1154
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 115,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "inline-flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 97,
+        "id": "el-28",
+        "interactive": true,
+        "label": "متطلبات الربط",
+        "parentId": "el-26",
+        "rect": {
+          "height": 44,
+          "width": 96.5,
+          "x": 481.484375,
+          "y": 1154
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 97,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "inline-flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 136,
+        "clientWidth": 1232,
+        "id": "el-29",
+        "interactive": false,
+        "label": "قدرات مرتبطة — اقرأها هنامعرفة الشركة للوكلاءتنسيق عمل الوكلاءصلاحيات الوكل",
+        "parentId": "el-1",
+        "rect": {
+          "height": 136.59375,
+          "width": 1232,
+          "x": 248,
+          "y": 1164
+        },
+        "scrollHeight": 136,
+        "scrollWidth": 1232,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 32
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 28
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "section"
+      },
+      {
+        "clientHeight": 34,
+        "clientWidth": 1232,
+        "id": "el-30",
+        "interactive": false,
+        "label": "قدرات مرتبطة — اقرأها هنا",
+        "parentId": "el-29",
+        "rect": {
+          "height": 33.59375,
+          "width": 1232,
+          "x": 248,
+          "y": 1193
+        },
+        "scrollHeight": 34,
+        "scrollWidth": 1232,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 18,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 401,
+        "id": "el-31",
+        "interactive": true,
+        "label": "معرفة الشركة للوكلاء",
+        "parentId": "el-29",
+        "rect": {
+          "height": 56,
+          "width": 402.6640625,
+          "x": 1077.3359375,
+          "y": 1244.59375
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 401,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 401,
+        "id": "el-32",
+        "interactive": true,
+        "label": "تنسيق عمل الوكلاء",
+        "parentId": "el-29",
+        "rect": {
+          "height": 56,
+          "width": 402.6640625,
+          "x": 662.671875,
+          "y": 1244.59375
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 401,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 401,
+        "id": "el-33",
+        "interactive": true,
+        "label": "صلاحيات الوكلاء والإشراف البشري",
+        "parentId": "el-29",
+        "rect": {
+          "height": 56,
+          "width": 402.6640625,
+          "x": 248.0078125,
+          "y": 1244.59375
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 401,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "flex-start",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 12,
+            "left": 14,
+            "right": 14,
+            "top": 12
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "button"
+      },
+      {
+        "clientHeight": 260,
+        "clientWidth": 1728,
+        "id": "el-34",
+        "interactive": false,
+        "label": "من تجربة ناجحة إلى عملك اليوميابنِ الوكيل واختبره، ثم اتفق على تشغيله.راجع ",
+        "parentId": "el-1",
+        "rect": {
+          "height": 260.3984375,
+          "width": 1728,
+          "x": 0,
+          "y": 1372.59375
+        },
+        "scrollHeight": 260,
+        "scrollWidth": 1728,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 56,
+            "left": 0,
+            "right": 0,
+            "top": 56
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "section"
+      },
+      {
+        "clientHeight": 18,
+        "clientWidth": 760,
+        "id": "el-35",
+        "interactive": false,
+        "label": "من تجربة ناجحة إلى عملك اليومي",
+        "parentId": "el-34",
+        "rect": {
+          "height": 18,
+          "width": 760,
+          "x": 720,
+          "y": 1435.0390625
+        },
+        "scrollHeight": 18,
+        "scrollWidth": 760,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 18,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 54,
+        "clientWidth": 720,
+        "id": "el-36",
+        "interactive": false,
+        "label": "ابنِ الوكيل واختبره، ثم اتفق على تشغيله.",
+        "parentId": "el-34",
+        "rect": {
+          "height": 54,
+          "width": 720,
+          "x": 760,
+          "y": 1471.0390625
+        },
+        "scrollHeight": 54,
+        "scrollWidth": 720,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "h2"
+      },
+      {
+        "clientHeight": 26,
+        "clientWidth": 760,
+        "id": "el-37",
+        "interactive": false,
+        "label": "راجع وكيلك في الاستوديو، ثم راسلنا للاتفاق على السعر والشروط والتفعيل الإنت",
+        "parentId": "el-34",
+        "rect": {
+          "height": 25.5,
+          "width": 760,
+          "x": 720,
+          "y": 1545.0390625
+        },
+        "scrollHeight": 26,
+        "scrollWidth": 760,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "p"
+      },
+      {
+        "clientHeight": 48,
+        "clientWidth": 157,
+        "id": "el-38",
+        "interactive": true,
+        "label": "افتح الاستوديو",
+        "parentId": "el-34",
+        "rect": {
+          "height": 48,
+          "width": 156.5625,
+          "x": 248,
+          "y": 1428.59375
+        },
+        "scrollHeight": 48,
+        "scrollWidth": 157,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 8,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "center",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 24,
+            "right": 24,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 8,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 44,
+        "clientWidth": 108,
+        "id": "el-39",
+        "interactive": true,
+        "label": "ناقش التفعيل",
+        "parentId": "el-34",
+        "rect": {
+          "height": 44,
+          "width": 108.296875,
+          "x": 296.265625,
+          "y": 1494.59375
+        },
+        "scrollHeight": 44,
+        "scrollWidth": 108,
+        "style": {
+          "alignItems": "center",
+          "columnGap": 10,
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 10,
+          "textAlign": "start"
+        },
+        "tag": "a"
+      },
+      {
+        "clientHeight": 445,
+        "clientWidth": 1728,
+        "id": "el-40",
+        "interactive": false,
+        "label": "AGYNEXA.ابنِ وكلاء ذكاء اصطناعي لأعمالك واختبرهم. حدّد الدور وأضف معرفة الش",
+        "rect": {
+          "height": 446,
+          "width": 1728,
+          "x": 0,
+          "y": 1632.9921875
+        },
+        "scrollHeight": 445,
+        "scrollWidth": 1728,
+        "style": {
+          "alignItems": "normal",
+          "columnGap": 0,
+          "display": "block",
+          "flexDirection": "row",
+          "flexWrap": "nowrap",
+          "justifyContent": "normal",
+          "margin": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "padding": {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0
+          },
+          "position": "static",
+          "rowGap": 0,
+          "textAlign": "start"
+        },
+        "tag": "footer"
+      }
+    ],
+    "name": "architecture-ar-1728",
+    "viewport": {
+      "devicePixelRatio": 1,
+      "height": 1000,
+      "width": 1728
+    }
+  }
+]

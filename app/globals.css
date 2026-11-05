@@ -243,7 +243,7 @@ button:disabled { cursor:not-allowed; opacity:.5; }
 .menu-group>a { display:flex; align-items:center; min-height:44px; border-bottom:1px solid var(--border); }
 .breadcrumbs { font-size:14px; color:var(--muted-foreground); margin-bottom:24px; }
 .breadcrumbs ol,.breadcrumbs li { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
-.breadcrumbs a { display:inline-flex; align-items:center; min-height:36px; }
+.breadcrumbs a { display:inline-flex; align-items:center; min-height:44px; }
 .breadcrumbs [aria-current=page] { color:var(--foreground); }
 .breadcrumbs a:hover { color:var(--primary); }
 .home-page .premium-hero { min-height:calc(100svh - 88px); }

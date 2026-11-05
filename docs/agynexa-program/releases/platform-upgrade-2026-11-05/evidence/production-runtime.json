@@ -1,0 +1,69 @@
+{
+  "environment": "production",
+  "agentId": "ceaaf62e-b1cd-4439-9ee0-564a7fb101ae",
+  "conversationId": "97cc658b-80a0-43fa-bf4a-3c2cb99c800c",
+  "runs": [
+    {
+      "id": "88660038-cbe4-44af-8355-b94594e15280",
+      "revision": 1,
+      "language": "en",
+      "status": "succeeded",
+      "model": "gpt-6.1-terra",
+      "reasoning": "high",
+      "provider": "openai",
+      "webSearch": "completed",
+      "python": "completed",
+      "sources": 13,
+      "artifacts": 1,
+      "latencyMs": 10652,
+      "total": 540,
+      "mean": 180,
+      "downloadVerified": true
+    },
+    {
+      "id": "8bea6c03-5e42-4aa5-ab5b-9277026ed4d8",
+      "revision": 2,
+      "language": "ar",
+      "status": "succeeded",
+      "model": "gpt-6.1-terra",
+      "reasoning": "high",
+      "provider": "openai",
+      "toolsEnabled": false,
+      "toolCalls": 0,
+      "latencyMs": 6471,
+      "privateSourceCited": true,
+      "expectedThreshold": 200,
+      "expectedCutoff": "14:00 UTC",
+      "externalExecutionClaim": false
+    }
+  ],
+  "activation": {
+    "requestSaved": true,
+    "emailTarget": "adham@agynexa.si",
+    "emailSent": false,
+    "commercialActivation": false,
+    "paymentMade": false
+  },
+  "artifact": {
+    "filename": "shipment-verification.csv",
+    "sha256": "8e3760a6007b675883523a751fe4929bed11e375af04fdae9b0fe7b68111bc09",
+    "expectedRows": [
+      [
+        "A",
+        120
+      ],
+      [
+        "B",
+        180
+      ],
+      [
+        "C",
+        240
+      ],
+      [
+        "total",
+        540
+      ]
+    ]
+  }
+}

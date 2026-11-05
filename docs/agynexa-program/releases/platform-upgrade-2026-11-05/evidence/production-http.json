@@ -1,0 +1,880 @@
+{
+  "environment": "production",
+  "origin": "https://agynexa.si",
+  "recorded_utc": "2026-11-05T11:19:25Z",
+  "scope": "Anonymous HTTP/SEO and access rejection; authenticated tool execution and visual review separate. No new account or external message.",
+  "page_count": 68,
+  "page_failures": [],
+  "pages": [
+    {
+      "url": "https://agynexa.si/",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si",
+      "lang": "en",
+      "title": "AI Agent Builder for Business | AGYNEXA Studio",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.505,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar",
+      "lang": "ar",
+      "title": "منصة بناء وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.487,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services",
+      "lang": "en",
+      "title": "Business AI agent capabilities | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.436,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services",
+      "lang": "ar",
+      "title": "قدرات وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.498,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions",
+      "lang": "en",
+      "title": "AI agents for business workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.418,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions",
+      "lang": "ar",
+      "title": "وكلاء ذكاء اصطناعي لمسارات الأعمال | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.49,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/methodology",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/methodology",
+      "lang": "en",
+      "title": "Build, test and activate your agent | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.413,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/methodology",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/methodology",
+      "lang": "ar",
+      "title": "ابنِ الوكيل واختبره ثم فعّله | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.37,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/architecture",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/architecture",
+      "lang": "en",
+      "title": "How your agent’s workspace works | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.469,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/architecture",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/architecture",
+      "lang": "ar",
+      "title": "كيف تعمل مساحة الوكيل؟ | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.495,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/integrations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/integrations",
+      "lang": "en",
+      "title": "Give each connection a clear job | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.385,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/integrations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/integrations",
+      "lang": "ar",
+      "title": "حدّد مهمة كل اتصال | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.478,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/security",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/security",
+      "lang": "en",
+      "title": "Keep control of data and decisions | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.39,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/security",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/security",
+      "lang": "ar",
+      "title": "احتفظ بالسيطرة على البيانات والقرارات | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.395,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/resources",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/resources",
+      "lang": "en",
+      "title": "Practical guides for your first agent | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.376,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/resources",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/resources",
+      "lang": "ar",
+      "title": "إرشادات عملية لوكيلك الأول | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.379,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/about",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/about",
+      "lang": "en",
+      "title": "One platform. Built around your work. | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.39,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/about",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/about",
+      "lang": "ar",
+      "title": "منصة واحدة تتشكل حول عملك. | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.373,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/agentnexos",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/agentnexos",
+      "lang": "en",
+      "title": "AgentNexOS: a shared model for agent work | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.405,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/agentnexos",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/agentnexos",
+      "lang": "ar",
+      "title": "AgentNexOS: تصور مشترك لعمل الوكلاء | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.444,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/start",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/start",
+      "lang": "en",
+      "title": "Start building a business agent | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.416,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/start",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/start",
+      "lang": "ar",
+      "title": "ابدأ بناء وكيل للأعمال | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.435,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/contact",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/contact",
+      "lang": "en",
+      "title": "Agent activation and contact | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.432,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/contact",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/contact",
+      "lang": "ar",
+      "title": "تفعيل الوكلاء والتواصل | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.448,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/industries",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/industries",
+      "lang": "en",
+      "title": "Build agents for the way your industry works | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.434,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/industries",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/industries",
+      "lang": "ar",
+      "title": "ابنِ وكلاء يفهمون طريقة العمل في قطاعك | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.389,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/knowledge",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/knowledge",
+      "lang": "en",
+      "title": "AI agents for company knowledge | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.414,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/knowledge",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/knowledge",
+      "lang": "ar",
+      "title": "وكلاء المعرفة المؤسسية | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.381,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/documents",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/documents",
+      "lang": "en",
+      "title": "Agentic document processing for business | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.4,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/documents",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/documents",
+      "lang": "ar",
+      "title": "معالجة مستندات الأعمال بالوكلاء | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.377,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/sales",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/sales",
+      "lang": "en",
+      "title": "AI agents for sales operations | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.388,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/sales",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/sales",
+      "lang": "ar",
+      "title": "وكلاء لعمليات المبيعات | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.393,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/service",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/service",
+      "lang": "en",
+      "title": "Customer service agent workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.463,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/service",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/service",
+      "lang": "ar",
+      "title": "مسارات وكلاء خدمة العملاء | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.457,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/finance",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/finance",
+      "lang": "en",
+      "title": "AI agents for finance operations | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.403,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/finance",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/finance",
+      "lang": "ar",
+      "title": "وكلاء للعمليات المالية | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.399,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/logistics",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/logistics",
+      "lang": "en",
+      "title": "AI agents for logistics workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.451,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/logistics",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/logistics",
+      "lang": "ar",
+      "title": "وكلاء لعمليات الشحن والخدمات اللوجستية | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.375,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/procurement",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/procurement",
+      "lang": "en",
+      "title": "AI agents for procurement workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.393,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/procurement",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/procurement",
+      "lang": "ar",
+      "title": "وكلاء لمسارات المشتريات | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.385,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/receivables",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/receivables",
+      "lang": "en",
+      "title": "Accounts receivable agent workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.369,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/receivables",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/receivables",
+      "lang": "ar",
+      "title": "وكلاء لمتابعة المستحقات | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.444,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/customer-operations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/solutions/customer-operations",
+      "lang": "en",
+      "title": "AI agents for customer operations | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.378,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/customer-operations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/solutions/customer-operations",
+      "lang": "ar",
+      "title": "وكلاء لتنسيق عمليات العملاء | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.381,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/customer-service",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/customer-service",
+      "lang": "en",
+      "title": "AI agents for customer service | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.405,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/customer-service",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/customer-service",
+      "lang": "ar",
+      "title": "وكلاء ذكاء اصطناعي لخدمة العملاء | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.386,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/employee-operations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/employee-operations",
+      "lang": "en",
+      "title": "AI agents for employee operations | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.47,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/employee-operations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/employee-operations",
+      "lang": "ar",
+      "title": "وكلاء لإجراءات الموظفين | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.399,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/process-automation",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/process-automation",
+      "lang": "en",
+      "title": "Agent-assisted business workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.501,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/process-automation",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/process-automation",
+      "lang": "ar",
+      "title": "سير عمل بمساعدة الوكلاء | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.436,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/enterprise-knowledge",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/enterprise-knowledge",
+      "lang": "en",
+      "title": "Company knowledge for AI agents | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.481,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/enterprise-knowledge",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/enterprise-knowledge",
+      "lang": "ar",
+      "title": "معرفة الشركة لوكلاء الذكاء الاصطناعي | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.395,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/agent-orchestration",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/agent-orchestration",
+      "lang": "en",
+      "title": "Design roles that work together | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.413,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/agent-orchestration",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/agent-orchestration",
+      "lang": "ar",
+      "title": "صمّم أدوارًا تعمل معًا | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.395,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/enterprise-integrations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/enterprise-integrations",
+      "lang": "en",
+      "title": "Connect agents to business operations | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.479,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/enterprise-integrations",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/enterprise-integrations",
+      "lang": "ar",
+      "title": "اربط الوكلاء بعمليات الأعمال | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.5,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/voice-agents",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/voice-agents",
+      "lang": "en",
+      "title": "Design voice agent workflows | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.424,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/voice-agents",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/voice-agents",
+      "lang": "ar",
+      "title": "صمّم مسارات الوكلاء الصوتيين | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.429,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/agent-assist",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/agent-assist",
+      "lang": "en",
+      "title": "AI assistance for your team | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.497,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/agent-assist",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/agent-assist",
+      "lang": "ar",
+      "title": "مساعدة ذكية لفريقك | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.394,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/governance-security",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/governance-security",
+      "lang": "en",
+      "title": "Agent permissions and review | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.483,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/governance-security",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/governance-security",
+      "lang": "ar",
+      "title": "صلاحيات الوكلاء ومراجعتهم | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.486,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/evaluation-observability",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/services/evaluation-observability",
+      "lang": "en",
+      "title": "Evaluate agent work and activity | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.387,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/evaluation-observability",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/services/evaluation-observability",
+      "lang": "ar",
+      "title": "قيّم عمل الوكيل ونشاطه | AGYNEXA",
+      "structured_data_blocks": 2,
+      "response_seconds": 0.41,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/privacy",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/privacy",
+      "lang": "en",
+      "title": "Privacy Notice | AGYNEXA",
+      "structured_data_blocks": 1,
+      "response_seconds": 0.406,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/privacy",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/privacy",
+      "lang": "ar",
+      "title": "إشعار الخصوصية | AGYNEXA",
+      "structured_data_blocks": 1,
+      "response_seconds": 0.378,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/terms",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/terms",
+      "lang": "en",
+      "title": "Usage Terms | AGYNEXA",
+      "structured_data_blocks": 1,
+      "response_seconds": 0.404,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/terms",
+      "http": 200,
+      "h1": 1,
+      "canonical": "https://agynexa.si/ar/terms",
+      "lang": "ar",
+      "title": "شروط الاستخدام | AGYNEXA",
+      "structured_data_blocks": 1,
+      "response_seconds": 0.388,
+      "errors": []
+    }
+  ],
+  "checks": [
+    {
+      "path": "/api/auth/providers",
+      "method": "GET",
+      "http": 200,
+      "expected": 200,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 0.361,
+      "body": {
+        "chatgpt": {
+          "configured": false,
+          "href": "/api/auth/chatgpt/start",
+          "planUsage": false
+        }
+      }
+    },
+    {
+      "path": "/api/v1/workspace/provider",
+      "method": "GET",
+      "http": 401,
+      "expected": 401,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 1.235,
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/v1/workspace/provider",
+      "method": "PUT",
+      "http": 401,
+      "expected": 401,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 0.345,
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/v1/agents/00000000-0000-4000-8000-000000000000/activation",
+      "method": "POST",
+      "http": 401,
+      "expected": 401,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 0.358,
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/admin/agents/00000000-0000-4000-8000-000000000000/activation",
+      "method": "POST",
+      "http": 401,
+      "expected": 401,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 0.355,
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/v1/runs/00000000-0000-4000-8000-000000000000/artifacts/cfile_synthetic",
+      "method": "GET",
+      "http": 401,
+      "expected": 401,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 0.352,
+      "body": {
+        "error": "sign_in_required"
+      }
+    },
+    {
+      "path": "/api/health/supabase",
+      "method": "GET",
+      "http": 200,
+      "expected": 200,
+      "pass": true,
+      "content_type": "application/json",
+      "response_seconds": 1.283,
+      "body": {
+        "status": "ok",
+        "checks": {
+          "project": "ok",
+          "publishableKey": "ok",
+          "secretKey": "ok"
+        }
+      }
+    },
+    {
+      "path": "/opengraph-image",
+      "method": "GET",
+      "http": 200,
+      "expected": 200,
+      "pass": true,
+      "content_type": "image/png",
+      "response_seconds": 0.262
+    },
+    {
+      "path": "/admin/mail",
+      "method": "GET",
+      "http": 404,
+      "expected": 404,
+      "pass": true,
+      "content_type": "text/html; charset=utf-8",
+      "response_seconds": 0.434
+    },
+    {
+      "path": "/ar/admin/mail",
+      "method": "GET",
+      "http": 404,
+      "expected": 404,
+      "pass": true,
+      "content_type": "text/html; charset=utf-8",
+      "response_seconds": 0.362
+    }
+  ]
+}
