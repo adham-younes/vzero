@@ -41,3 +41,17 @@ The installed Next.js CSS and metadata guides were read. No application tests or
 ## Production checks for this scope
 
 Inspect English and Arabic home at desktop and narrow mobile widths; switch workflow choices and follow their Studio links. Check Solutions, Capabilities and Industries selection/readability; inspect one detail of each. Confirm email links, payment language and provider limitations on Contact, Integrations, Privacy and Terms. Verify `/opengraph-image`, production canonical/alternates and the visible FAQ/structured-data match. A build or HTTP status alone does not establish these outcomes.
+
+## Follow-through across all public pages
+
+The resumed source review covered 34 public page subjects in English and Arabic (68 language URLs): home; the Capabilities and Solutions catalogues; all ten capability details; all nine workflow details; Methodology, Architecture, Integrations, Security, Resources, About, AgentNexOS, Getting started, Contact, Industries, Privacy and Terms. Account and private Studio screens are owned by the Studio workstream. This is source coverage, not a claim that every rendered route has passed production verification.
+
+- Reviewed bilingual headings, catalogue selection, related-page links, activation continuity and heading hierarchy. Fixed the Getting started breadcrumb and the untranslated orchestration catalogue fallback.
+- Added readable, semantic input → agent responsibility → reviewable output diagrams for all ten capabilities and nine workflows. They share responsive CSS, become vertical on narrow screens and reverse horizontal arrows for RTL. Voice, orchestration and integration diagrams describe text testing, coordination design and connection requirements rather than claiming unimplemented execution.
+- Replaced the former small-label abstract architecture SVG with an accessible HTML diagram of the actual private Studio path: instructions and company knowledge, configured OpenAI agent, enabled research/Python tools, then answer/evidence/tool activity/available files. Existing Architecture, Integrations and AgentNexOS placements all receive it.
+- Added a workflow diagram to every industry selection, rewrote all ten industry outcomes as reviewable work, and added direct industry-specific Studio entry. The Studio workstream supplies bilingual task briefs for all ten industry keys.
+- Rewrote all nine solution headings, leads and metadata around concrete inputs, work and review. Detailed context, reviewer, authority and activation content remains available underneath.
+- Synchronized the Privacy and Terms copy mirror with the actual policy component so inline reference views describe the same processing and commercial terms.
+- Kept the Hero components, original video and black/emerald identity. The new diagram styles are in an isolated CSS module. The separate home visual is root-owned; no Tripo asset or Tripo approval is claimed by this workstream.
+
+No local application tests, local visual checks, build, commit or deployment were performed by this workstream. Final production checks should cover diagram wrapping/RTL, the nine workflow selections, ten capability selections, ten industry selections and their corresponding `/studio?industry=` presets, alongside the earlier page and metadata checks.

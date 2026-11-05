@@ -1,3 +1,13 @@
+# Current release boundaries — 5 November 2026
+
+See [platform upgrade](releases/platform-upgrade-2026-11-05/README.md). Remaining external prerequisites: issued ChatGPT commercial client/registered redirect; separately eligible ChatGPT plan inference; a customer API key and actual agreement before production activation. These cannot be inferred from an existing developer account. Production verification of this candidate is pending.
+
+Retained product gaps: single owner per workspace, no general ERP/CRM/voice/browser execution, no payment settlement, no arbitrary PDF/Excel ingestion, no permanent provider artifact storage, and no independently measured search-ranking or business-outcome guarantee. Supabase leaked-password protection was reported disabled at baseline; no unrelated auth setting was changed. Public session replay is removed, and private routes/query strings are excluded from aggregate telemetry.
+
+Earlier entries below are historical; they do not supersede this explicitly authorized release.
+
+---
+
 ## Public catalogue release — 5 November 2026
 
 PUBLIC-NAV-2026-10-27 — The correction for the Arabic Capabilities sidebar is in production. One row groups search, filters and selection in the public catalogues, with one detail area underneath. The scoped checks passed. [Release scope and evidence](releases/public-navigation-2026-10-27/README.md).

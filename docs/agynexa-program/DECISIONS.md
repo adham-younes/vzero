@@ -1,3 +1,11 @@
+# Decision — comprehensive platform upgrade, 5 November 2026
+
+The owner explicitly requested latest-main verification, parallel implementation of a comprehensive public/Studio upgrade, preservation of brand colours/video, OpenAI GPT-6.1 Terra with high reasoning, retirement of active Groq/Grok transport, email-only negotiation with adham@agynexa.si before real customer activation, compatible database work, one production release and final behavior tests on production. This supersedes earlier Studio-deferral/preview-only restrictions for this work package. Required build/type checks remain release prerequisites.
+
+Implementation keeps existing workspace isolation and historical data, introduces encrypted customer API connections and gates external execution on a recorded agreement. ChatGPT identity integration is conditional on an issued commercial client configuration; plan entitlement is not simulated. The original Hero components and video remain unchanged. Shared session replay is removed to prevent private credential capture after SPA navigation. Mailbox UI removals from concurrent main PR64 are retained; no mail DNS/forwarding change or real message send is part of these tests. Final evidence is captured in the merged release PR and local receipt without a second docs-only production release.
+
+---
+
 # القرارات والتفويضات والملاحظات
 
 هذه خلاصة توجيهات المالك وقرارات التنفيذ المسجلة حتى 19 أكتوبر 2026. [الخطة الأصلية](MASTER-PLAN.md) محفوظة كما وردت؛ لم يُعد تحريرها لتبدو كأنها قالت شيئًا مختلفًا.

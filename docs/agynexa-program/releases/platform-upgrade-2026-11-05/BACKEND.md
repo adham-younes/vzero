@@ -68,7 +68,7 @@ ChatGPT subscription usage is a separate authorization contract. This implementa
 
 ## Database and release sequence
 
-Apply `20261105110000_studio_openai_runtime.sql` and `20261105110500_chatgpt_identity.sql` to the existing AGYNEXA Supabase project immediately before the coordinated release. Both are additive except replacement of compatible function bodies and expansion of a model allowlist. They do not erase agent history, customer work, sources, old proposals or owner mail. New secrets/OAuth tables have RLS enabled and no anonymous/authenticated grants. They are accessed only through scoped server code.
+Apply `20261105110459_studio_openai_runtime.sql` and `20261105110509_chatgpt_identity.sql` to the existing AGYNEXA Supabase project immediately before the coordinated release. Both are additive except replacement of compatible function bodies and expansion of a model allowlist. They do not erase agent history, customer work, sources, old proposals or owner mail. New secrets/OAuth tables have RLS enabled and no anonymous/authenticated grants. They are accessed only through scoped server code.
 
 The first migration adds agent tool/sector columns, encrypted provider credentials, operator-controlled activation, publication/revocation enforcement and backward-compatible reviewed-action support. The second adds OIDC transactions and identity mappings. Legacy model identifiers remain accepted in storage to support source rollback, but never appear in the active model selector or provider transport.
 

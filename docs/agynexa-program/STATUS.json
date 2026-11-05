@@ -1,28 +1,25 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T09:51:18.281298+00:00",
+  "updated_at": "2026-11-05T10:16:40.859944+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "CUSTOMER_CHAT_BUILDER_DEPLOYED_WITH_OPERATING_GAPS",
+  "status": "PLATFORM_UPGRADE_IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "ffa354f180babbae60ded85516630ca75a038d0b",
-    "reviewed_head": "18b2ebc90d6db7b79b30107fe39963ffec6616d3",
-    "merge_commit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/55",
-    "pull_request_state": "MERGED",
+    "merge_commit": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/64",
     "domain": "https://agynexa.si",
-    "status_at_verification": "PRODUCTION_SHARED_CATALOGUE_CONTROLS_VERIFIED",
-    "deployment_id": "dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V",
-    "receipt": "releases/public-navigation-2026-10-27/README.md"
+    "status_at_verification": "READY_BASELINE_BEFORE_UPGRADE",
+    "deployment_id": "dpl_jKvCTBheATAHLi9Rm3oHpvPaVAhG",
+    "receipt": "OWNER-MAIL-2026-11-05.md"
   },
   "stage_status": [
     {
@@ -89,13 +86,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 57,
+    "http_operations": 67,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 44
+    "route_files": 51
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
@@ -130,15 +127,13 @@
     "stage4_merge_and_production_2026_10_20": true,
     "scoped_lead_and_knowledge_implementation": true,
     "active_program": {
-      "name": "Agent Studio",
-      "stage": "E_DELIVERED",
-      "branch_only": false,
+      "name": "Platform and OpenAI Studio upgrade",
       "production": true,
       "merge_main": true,
       "live_database_changes": true,
-      "live_auth_changes": false,
-      "advance_automatically": false,
-      "source": "DECISIONS.md"
+      "live_auth_changes": true,
+      "advance_automatically": true,
+      "source": "Direct owner instruction 5 November 2026; DECISIONS.md"
     }
   },
   "current_documentation_work": {
@@ -163,8 +158,8 @@
     "tool_baseline": "tool-inventory.json"
   },
   "next_stage": null,
-  "next_stage_authorized": false,
-  "next_action": "Maintenance handoff is complete. Await the owner's new Studio/agent plan in a fresh conversation; do not begin runtime redesign automatically.",
+  "next_stage_authorized": true,
+  "next_action": "Complete the authorized production release and final checks; record actual results and remaining OpenAI commercial prerequisites.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -299,7 +294,7 @@
     "evidence": "evidence/account-hotfix-2026-10-20/production.json",
     "authenticated_owner_session_verified": false
   },
-  "verification_policy": "OWNER_DIRECTED_PRODUCTION_DELIVERY_ONLY_REUSE_PRIOR_EVIDENCE",
+  "verification_policy": "Required build/type checks before publication; functional/visual acceptance on production only for this upgrade per owner request. Historical check scopes remain in dated receipts.",
   "chat_hotfix": {
     "status": "DEPLOYED_PRODUCTION",
     "report": "agent-studio/CHAT-FIX.md",
@@ -740,7 +735,8 @@
     "dashboard_ingestion": "NOT_ESTABLISHED_MCP_UNAVAILABLE",
     "automatic_error_tracking_enabled": true,
     "replay_enabled": true,
-    "console_network_log_tracking_enabled": false
+    "console_network_log_tracking_enabled": false,
+    "current_status": "REMOVED_IN_UPGRADE_TO_PROTECT_PRIVATE_CREDENTIAL_FORMS"
   },
   "historical_product_release_before_heronsignal": {
     "implementation_commit": "172a195ef3c89d8e3755df382b845d6b3b305ff0",
@@ -800,5 +796,31 @@
     "archived_historical_messages": 414,
     "public_mailbox_interface": false,
     "next_step": "Remove public-site mailbox interface at owner request; native Resend inboxes remain the mailbox UI. DNS cutover still pending."
+  },
+  "historical_product_release_before_platform_upgrade": {
+    "implementation_commit": "ffa354f180babbae60ded85516630ca75a038d0b",
+    "reviewed_head": "18b2ebc90d6db7b79b30107fe39963ffec6616d3",
+    "merge_commit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/55",
+    "pull_request_state": "MERGED",
+    "domain": "https://agynexa.si",
+    "status_at_verification": "PRODUCTION_SHARED_CATALOGUE_CONTROLS_VERIFIED",
+    "deployment_id": "dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V",
+    "receipt": "releases/public-navigation-2026-10-27/README.md"
+  },
+  "platform_upgrade": {
+    "status": "IMPLEMENTED_AWAITING_RELEASE",
+    "branch": "codex/platform-upgrade-2026-11-05",
+    "baseline_main": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
+    "receipt": "releases/platform-upgrade-2026-11-05/README.md",
+    "model": "gpt-6.1-terra",
+    "reasoning_effort": "high",
+    "chatgpt_identity": "CONDITIONAL_CLIENT_NOT_CONFIGURED",
+    "chatgpt_plan_inference": false,
+    "customer_api_credentials": "ENCRYPTED_SERVER_ONLY",
+    "commercial_activation": "TEST_THEN_EMAIL_NEGOTIATION_AND_OPERATOR_ACTIVATION",
+    "final_evidence": "Merged release PR and task-local production receipt; no docs-only production redeploy",
+    "database_status": "APPLIED_AND_CATALOG_PERMISSIONS_VERIFIED",
+    "database_receipt": "releases/platform-upgrade-2026-11-05/DATABASE.md"
   }
 }
