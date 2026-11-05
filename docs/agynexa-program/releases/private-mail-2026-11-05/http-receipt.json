@@ -1,0 +1,119 @@
+{
+  "checked_at": "2026-11-05T14:17:54.893195+00:00",
+  "origin": "https://mail.agynexa.si",
+  "public_origin": "https://agynexa.si",
+  "deployment_id": "dpl_5LoePoQsD2nZZrhM9YnrU4C74y95",
+  "source_commit": "00e3caa619b69c3fe53439ea3a1cb93ff83c2c40",
+  "scope": "Read-only HTTP acceptance; no mail sent and no tokens created. No subjects, message bodies, attachment names, email identifiers or credentials saved.",
+  "checks": [
+    {
+      "name": "private_root_redirect",
+      "passed": true,
+      "status": 307,
+      "expected_status": 307,
+      "location": "/private-mail",
+      "resolved_location": "https://mail.agynexa.si/private-mail"
+    },
+    {
+      "name": "private_login_page",
+      "passed": true,
+      "status": 200,
+      "expected_status": 200,
+      "no_store": true,
+      "noindex": true,
+      "frame_denied": true
+    },
+    {
+      "name": "public_private_route_blocked",
+      "passed": true,
+      "status": 404,
+      "expected_status": 404
+    },
+    {
+      "name": "public_private_api_blocked",
+      "passed": true,
+      "status": 404,
+      "expected_status": 404
+    },
+    {
+      "name": "private_public_route_blocked",
+      "passed": true,
+      "status": 404,
+      "expected_status": 404
+    },
+    {
+      "name": "anonymous_messages_blocked",
+      "passed": true,
+      "status": 401,
+      "expected_status": 401
+    },
+    {
+      "name": "anonymous_session",
+      "passed": true,
+      "status": 200,
+      "expected_status": 200,
+      "authenticated": false,
+      "owner": false
+    },
+    {
+      "name": "anonymous_mcp_blocked",
+      "passed": true,
+      "status": 401,
+      "expected_status": 401
+    },
+    {
+      "name": "mcp_initialize",
+      "passed": true,
+      "protocol": "2025-03-26"
+    },
+    {
+      "name": "mcp_tool_discovery",
+      "passed": true,
+      "tool_names": [
+        "list_knowledge",
+        "list_mail",
+        "read_mail",
+        "reply_to_mail"
+      ]
+    },
+    {
+      "name": "historical_mail_pagination",
+      "passed": true,
+      "count": 414,
+      "unique_count": 414,
+      "expected_count": 414,
+      "page_counts": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        14
+      ],
+      "pagination_completed": true,
+      "all_spacemail": true,
+      "all_historical": true,
+      "attachment_count": 4
+    },
+    {
+      "name": "approved_knowledge_only",
+      "passed": true,
+      "count": 3,
+      "expected_count": 3,
+      "public_active_approved_only": true
+    },
+    {
+      "name": "read_historical_mail",
+      "passed": true,
+      "text_body_present": true,
+      "storage_paths_excluded": true,
+      "attachments_metadata_count": 0,
+      "history_array": true
+    }
+  ],
+  "passed": true,
+  "completed_at": "2026-11-05T14:18:15.757586+00:00"
+}

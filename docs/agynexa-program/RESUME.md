@@ -1,4 +1,18 @@
-# Current work — platform content, shared design and Studio correction
+# Resume private owner mail — 5 November 2026
+
+Current state: **DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING**. Continue from the [private-owner release](releases/private-mail-2026-11-05/README.md) and [preserved migration receipt](OWNER-MAIL-2026-11-05.md). The source adds the private console, approved knowledge, guarded shared replies and MCP connection. Production is READY at the PR71 merge revision. Scoped HTTP/MCP acceptance and guarded live sending passed; owner-interface login/downloads and a working ChatGPT/Gmail connection remain unverified.
+
+1. The three additive owner-mail migrations and service-only permissions are verified. Do not repeat them; preserve the release receipt.
+2. DNS and the existing Vercel project binding are verified for `mail.agynexa.si`, using `NEXA_MAIL_CONSOLE_HOST=mail.agynexa.si`. Confirm deployed HTTP isolation next. Preserve the existing secrets, website records, sole Resend MX and domain renewal. Do not copy credentials into a new project.
+3. PR71 is deployed READY at `00e3caa619b69c3fe53439ea3a1cb93ff83c2c40` / `dpl_5LoePoQsD2nZZrhM9YnrU4C74y95`; build and TypeScript checks passed. HTTP/MCP isolation, historical reads, approved knowledge, real delivery, duplicate blocking and sensitive holds passed. Complete owner-interface login and attachment-download acceptance without repeating the completed checks.
+4. The private plugin is already created at version 0.1.0; do not create it again. Install it and authenticate through ChatGPT’s secure connection flow, then verify discovery/read access inside ChatGPT. Revoke the temporary production-QA credential and record completion; revocation was still pending at this checkpoint.
+5. Establish Gmail ingestion separately. The interactive Gmail connector and earlier round-trip tests do not provide a durable backend grant. Keep Gmail marked as requiring connection until the original sender, recipient, authentication and received-message path are verified.
+
+Pre-acceptance archive snapshot: 414 historical messages plus 13 newer records. Subsequent test traffic may increase this count. The ZIP delivery is verified as one Resend inbox message containing the 414 originals; it does not erase the legacy post-snapshot preservation gap. Retain all mail and attachments. Sensitive holds cannot be overridden by a manual or ChatGPT send, and uncertain sends must not be duplicated.
+
+The full market review was reread for this increment. Its bounded scope, explicit permissions, sourced facts and single-send evidence apply to private owner operations; its proposed public product expansion is not activated. Earlier receipts below remain historical.
+
+## Previous product delivery — platform content, shared design and Studio correction
 
 The owner-requested correction is deployed: latest READY production PR69 / `e9a5b0e` contains unchanged PR68 application code. Build, public HTTP/metadata checks and the source-capacity migration passed; authenticated browser acceptance is partial. [Production receipt and remaining checks](releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md). Preserve the restored palette and original Hero/video.
 

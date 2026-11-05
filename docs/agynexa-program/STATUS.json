@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T13:29:47.108987+00:00",
+  "updated_at": "2026-11-05T14:23:13.040939+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "PLATFORM_CORRECTION_DEPLOYED_ACCEPTANCE_PARTIAL",
+  "status": "DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
@@ -170,7 +170,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": true,
-  "next_action": "Merge reviewed candidate, observe matching Git-integrated production deployment and verify affected public/Studio behavior.",
+  "next_action": "Revoke the temporary QA credential; complete owner-interface login/download acceptance and install/authenticate the existing private plugin. Keep durable Gmail ingestion unconnected until separately authorized and verified.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -929,5 +929,85 @@
     "database_constraint_verified": true,
     "build_typescript": "PASS",
     "production_receipt": "releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md"
+  },
+  "owner_mail_private_console": {
+    "status": "DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING",
+    "receipt": "releases/private-mail-2026-11-05/README.md",
+    "scope": "Private owner operations; no new public product capability",
+    "architecture": "Existing Vercel project, dedicated exact host and existing Supabase archive",
+    "host": "mail.agynexa.si",
+    "host_setting": "NEXA_MAIL_CONSOLE_HOST",
+    "dns_cname": "ac841f8fbdec6782.vercel-dns-017.com",
+    "dns_verified": true,
+    "vercel_misconfigured": false,
+    "database_status": "THREE_ADDITIVE_MIGRATIONS_APPLIED_SERVICE_ONLY_ACCESS_VERIFIED",
+    "migrations": [
+      "20261105135029_owner_mail_console_view.sql",
+      "20261105135308_owner_mail_connector_tokens.sql",
+      "20261105140000_owner_mail_knowledge_handoffs.sql"
+    ],
+    "archive_inventory": {
+      "total": 427,
+      "historical": 414,
+      "newer": 13,
+      "scope": "Point-in-time records, not unique inbound conversations",
+      "checkpoint": "Before current production acceptance; subsequent test traffic may increase count"
+    },
+    "archive_zip": {
+      "delivery_status": "delivered",
+      "bytes": 3706546,
+      "eml_count": 414,
+      "download_hash_matches": true,
+      "crc_valid": true,
+      "native_individual_import": false
+    },
+    "pull_request": "https://github.com/adham-younes/vzero/pull/71",
+    "corrective_commit": "fb20016",
+    "deployment_status": "READY",
+    "production_verified": false,
+    "plugin_status": "CREATED_PERSONAL_0.1.0_INSTALL_AUTH_PENDING",
+    "mcp_protocol": "2025-03-26",
+    "gmail_status": "REQUIRES_CONNECTION_AND_VERIFIED_INGESTION",
+    "chatgpt_memory_connected": false,
+    "manual_sensitive_holds": true,
+    "automatic_deletion": false,
+    "secrets_copied": false,
+    "existing_password_protection_advisory": "UNCHANGED",
+    "production_commit": "00e3caa619b69c3fe53439ea3a1cb93ff83c2c40",
+    "deployment_id": "dpl_5LoePoQsD2nZZrhM9YnrU4C74y95",
+    "pull_request_state": "MERGED",
+    "build_and_typescript": "PASSED_AFTER_fb20016",
+    "production_verification_status": "SCOPED_HTTP_MCP_AND_SEND_VERIFIED_OWNER_UI_ACTIVATION_PENDING",
+    "http_mcp_receipt": "releases/private-mail-2026-11-05/http-receipt.json",
+    "http_mcp_checks_passed": 13,
+    "historical_pagination_verified": {
+      "distinct_messages": 414,
+      "attachment_metadata_count": 4
+    },
+    "approved_knowledge_facts_verified": 3,
+    "routine_mcp_reply": {
+      "received_at_utc": "2026-11-05T14:18:46Z",
+      "spf": "pass",
+      "dkim": "pass",
+      "dmarc": "pass"
+    },
+    "duplicate_replay": {
+      "result": "mail_claim_conflict",
+      "second_send_observed": false
+    },
+    "sensitive_hold": {
+      "automatic": "review/sensitive_financial_review",
+      "manual": "mail_owner_review_required",
+      "sent_id_present": false
+    },
+    "both_auto_reply_settings_enabled": true,
+    "qa_token_revocation": "PENDING_CONFIRMATION",
+    "owner_ui": {
+      "signed_out_visual": "PASS",
+      "authenticated_login": "NOT_VERIFIED",
+      "attachment_downloads": "NOT_VERIFIED"
+    },
+    "plugin_id": "plugins_6aec905359688191b39ffabc59232b22",
+    "plugin_url": "https://chatgpt.com/plugins/plugins_6aec905359688191b39ffabc59232b22"
   }
 }

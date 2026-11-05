@@ -52,28 +52,43 @@ export function OwnerMailConsole(){
  const [panel,setPanel]=useState<Panel>('mail')
  const [inbox,setInbox]=useState(ADDRESSES[0])
  const [loginBusy,setLoginBusy]=useState(false)
+ const [loginLinkBusy,setLoginLinkBusy]=useState(false)
  const [email,setEmail]=useState('')
  const [password,setPassword]=useState('')
  const [checking,setChecking]=useState(true)
+ const initialAuthHandled=useRef(false),emailInput=useRef<HTMLInputElement|null>(null)
  const fail=useCallback((error:unknown)=>{
   if(error instanceof RequestError&&error.status===401){setSession({authenticated:false,owner:false});setNotice({text:'انتهت الجلسة. سجّل الدخول مرة أخرى.',error:true});return}
   const code=error instanceof RequestError?error.code:''
   setNotice({error:true,text:code.includes('already')?'تم الرد على هذه الرسالة بالفعل. حدّث المحادثة للاطلاع على الرد.':code.includes('review')?'الإرسال متوقف إلى أن تُراجع هذه الرسالة.':error instanceof RequestError&&error.status===429?'وصلت إلى حدّ المحاولات. انتظر قليلًا ثم حاول مرة أخرى.':'تعذّر إتمام الطلب. لم نؤكد أي تغيير؛ حاول مرة أخرى.'})
  },[])
  const check=useCallback(async()=>{setChecking(true);try{setSession(await api<Session>('/session'))}catch(e){if(e instanceof RequestError&&e.status===401)setSession({authenticated:false,owner:false});else fail(e)}finally{setChecking(false)}},[fail])
- useEffect(()=>{void check()},[check])
- async function login(event:FormEvent){event.preventDefault();setLoginBusy(true);setNotice(null);try{await api('/login',{method:'POST',body:body({email:email.trim(),password})});setPassword('');await check()}catch(e){setNotice({text:'تعذّر تسجيل الدخول. راجع البريد وكلمة المرور وصلاحية حساب المالك.',error:true})}finally{setLoginBusy(false)}}
+ useEffect(()=>{
+  if(initialAuthHandled.current)return
+  initialAuthHandled.current=true
+  const fragment=new URLSearchParams(window.location.hash.slice(1))
+  if(!fragment.has('token_hash')){void check();return}
+  const tokenHash=fragment.get('token_hash')||''
+  window.history.replaceState(window.history.state,'',window.location.pathname+window.location.search)
+  const invalidLink=()=>{setSession({authenticated:false,owner:false});setNotice({text:'تعذّر فتح رابط الدخول. اطلب رابطًا جديدًا من بريد حساب المالك.',error:true});setChecking(false)}
+  if(!/^[a-f0-9]{40,128}$/i.test(tokenHash)){invalidLink();return}
+  setLoginLinkBusy(true)
+  void (async()=>{try{await api('/login-link/verify',{method:'POST',body:body({tokenHash})});await check()}catch{invalidLink()}finally{setLoginLinkBusy(false)}})()
+ },[check])
+ async function login(event:FormEvent){event.preventDefault();if(loginBusy||loginLinkBusy||checking)return;setLoginBusy(true);setNotice(null);try{await api('/login',{method:'POST',body:body({email:email.trim(),password})});setPassword('');await check()}catch(e){setNotice({text:'تعذّر تسجيل الدخول. راجع البريد وكلمة المرور وصلاحية حساب المالك.',error:true})}finally{setLoginBusy(false)}}
+ async function loginLink(){if(loginBusy||loginLinkBusy||checking||!emailInput.current?.reportValidity())return;setLoginLinkBusy(true);setNotice(null);try{await api('/login-link',{method:'POST',body:body({email:email.trim()})});setNotice({text:'لو البريد مرتبط بحساب المالك، سيصلك رابط دخول مؤقت.'})}catch{setNotice({text:'تعذّر طلب رابط الدخول الآن. انتظر قليلًا ثم حاول مرة أخرى.',error:true})}finally{setLoginLinkBusy(false)}}
  async function logout(){try{await api('/logout',{method:'POST'});setSession({authenticated:false,owner:false});setNotice(null);setPassword('')}catch(e){fail(e)}}
  const notify=(text:string)=>setNotice({text})
  return <div className="owner-mail-console" lang="ar" dir="rtl">
   {checking&&!session?<Busy>جارٍ التحقق من الجلسة…</Busy>:!session?.authenticated||!session.owner?<main className="om-login">
    <div className="om-login-brand"><div className="om-brand-icon"><Mail size={25}/></div><span>NEXA <span>MAIL</span></span><span className="om-private"><LockKeyhole size={13}/>خاص</span></div>
    <div className="om-login-card"><span className="om-eyebrow">مساحة البريد الخاصة</span><h1>بريدك، في مكان واحد.</h1><p>الرسائل والمرفقات ومتابعة الردود، بحساب المالك فقط.</p>
-    {notice&&<div role="alert" className="om-notice om-error">{notice.text}</div>}
+    {notice&&<div role={notice.error?'alert':'status'} className={`om-notice ${notice.error?'om-error':''}`}>{notice.text}</div>}
     {session?.authenticated&&!session.owner?<><p className="om-callout">هذا الحساب لا يملك صلاحية فتح البريد.</p><button className="om-primary" onClick={logout}>تسجيل الخروج</button></>:<form onSubmit={login}>
-     <label className="om-field">بريد حساب المالك<input type="email" autoComplete="username" dir="ltr" value={email} onChange={e=>setEmail(e.target.value)} required/></label>
-     <label className="om-field">كلمة المرور<input type="password" autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} required/></label>
-     <button className="om-primary" disabled={loginBusy||checking}>{loginBusy?<LoaderCircle className="om-spin" size={17}/>:<LockKeyhole size={17}/>}دخول إلى البريد</button>
+     <label className="om-field">بريد حساب المالك<input ref={emailInput} type="email" autoComplete="username" dir="ltr" value={email} onChange={e=>setEmail(e.target.value)} disabled={loginBusy||loginLinkBusy||checking} required/></label>
+     <label className="om-field">كلمة المرور<input type="password" autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} disabled={loginBusy||loginLinkBusy||checking} required/></label>
+     <button className="om-primary" disabled={loginBusy||loginLinkBusy||checking}>{loginBusy?<LoaderCircle className="om-spin" size={17}/>:<LockKeyhole size={17}/>}دخول إلى البريد</button>
+     <button type="button" className="om-button" onClick={()=>void loginLink()} disabled={loginBusy||loginLinkBusy||checking||!email.trim()}>{loginLinkBusy?<LoaderCircle className="om-spin" size={17}/>:<Mail size={17}/>}أرسل رابط دخول إلى بريدي</button>
     </form>}
     <p className="om-login-note"><ShieldCheck size={16}/>هذه المساحة مستقلة عن صفحات AGYNEXA العامة.</p>
    </div>

@@ -5,6 +5,7 @@ import {mailConfig} from '@/lib/nexa-email/config'
 import {MailError} from '@/lib/nexa-email/errors'
 import {MAILBOXES,UUID} from '@/lib/owner-mail/policy'
 import {mintConnectorToken} from '@/lib/owner-mail/connector'
+import {sendOwnerLoginLink,verifyOwnerLoginLink} from '@/lib/owner-mail/login'
 import {requireConsole,listMail,readMail,replyMail,holdMail,listKnowledge,saveKnowledge,disableKnowledge,downloadMail,audit,type MailActor} from '@/lib/owner-mail/console'
 export const runtime='nodejs'
 export const maxDuration=60
@@ -14,6 +15,8 @@ async function handle(request:Request,ctx:Context){
  try{
   await requireConsole()
   const {path}=await ctx.params,method=request.method,url=new URL(request.url),name=path.join('/')
+  if(name==='login-link'&&method==='POST'){const b=await mailMutation(request);exactKeys(b,['email']);return json(await sendOwnerLoginLink(request,b.email))}
+  if(name==='login-link/verify'&&method==='POST'){const b=await mailMutation(request);exactKeys(b,['tokenHash']);return json(await verifyOwnerLoginLink(request,b.tokenHash))}
   if(name==='login'&&method==='POST'){
    const body=await mailMutation(request);exactKeys(body,['email','password']);const input=credentials(body);await rateLimit(request,'login',input.email)
    const client=await sessionClient(),{data,error}=await client.auth.signInWithPassword(input)

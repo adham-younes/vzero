@@ -1,6 +1,30 @@
-# Owner mailbox migration — verified cutover, 5 November 2026
+# Owner mail — migration receipt and private console, 5 November 2026
 
-## Current state
+## Current increment: DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING
+
+The owner subsequently authorized a private hosted mailbox and NEXA replies informed by approved project knowledge. The new source provides an owner console, original-message and attachment downloads, knowledge management, manual reply handling and a private ChatGPT MCP connection. This is private owner operation, not a new publicly available product or a claim that Gmail is connected. [Architecture, API inventory and release gates](releases/private-mail-2026-11-05/README.md).
+
+The selected architecture uses the existing Vercel project and Supabase archive, with the dedicated host `mail.agynexa.si`, exact-host checks and a live authenticated owner allowlist. Public `agynexa.si` private-mail routes are designed to return 404. No Vercel secrets are copied into a second project, and no new subscription or mailbox deletion is part of this increment. The three additive migrations, service-only database permissions and DNS/domain binding are verified. Production host isolation and authenticated MCP behavior passed; owner-interface login and attachment download acceptance remain pending.
+
+The pre-acceptance operational snapshot contained **427 archived records: 414 historical messages plus 13 newer records**. This is a point-in-time inventory, not a count of unique incoming conversations or proof of preservation of the legacy synchronization gap below. Messages, original files and attachments remain retained without an automatic deletion job.
+
+The owner's approved ZIP delivery also completed: the 3,706,546-byte archive containing 414 EML files arrived in the Resend inbox for `adham@agynexa.si` at 13:38:16 UTC. The private receipt records `delivered`; verification at 13:38:45 UTC confirmed a matching SHA-256 after downloading the attachment, valid ZIP CRC and the same 414 EML files. It is **one inbox message with an archive attachment**, not 414 separately imported native Resend messages. The original local backup remains preserved. Private provider identifiers and message contents are excluded from this repository.
+
+New reply logic distinguishes owner-private notes from active facts approved for public replies. Only approved facts reach the reply model or the ChatGPT knowledge tool. Sensitivity and uncertainty holds apply to manual console replies and ChatGPT replies as well as the automatic worker. All sending paths share the message ledger, frozen recipient/payload and provider idempotency key; an uncertain send cannot be transferred into a second sending path.
+
+Gmail remains **REQUIRES_CONNECTION_AND_VERIFIED_INGESTION**. Earlier Gmail test messages prove the platform mail round trips, not durable access to the Gmail inbox. The private plugin was created in the owner’s personal account at version 0.1.0. Server-side MCP discovery passed, but installation and authenticated use inside ChatGPT remain pending. No ChatGPT memory connection or background ChatGPT execution is implied.
+
+## New console production acceptance
+
+PR71 production passed 13 bounded HTTP/MCP checks. The authenticated connector listed all 414 historical messages, four attachment metadata entries and three approved knowledge facts. A routine MCP reply reached the owner-controlled Gmail inbox at 14:18:46 UTC with SPF, DKIM and DMARC pass. Repeating the same request was blocked without a second send. A synthetic financial message remained held for review and a manual MCP attempt could not override that hold. Both automatic-reply settings are enabled after restoring the temporary test toggle.
+
+The private NEXA Mail plugin was created at version 0.1.0, but installation/authentication within ChatGPT remain pending. The login screen passed visual inspection; owner-interface login and attachment downloads remain unverified. Gmail background ingestion is still unconnected. Temporary QA-token revocation awaits confirmation. [Detailed evidence and pending activation](releases/private-mail-2026-11-05/README.md).
+
+## Preserved verified migration receipt
+
+The following evidence predates the private-console increment and remains valid only for the scope and observations it records. It does not verify the new console, host isolation, migrations or plugin.
+
+### Verified cutover state
 
 Public DNS now advertises only `@ MX 0 receive-euw1.forge.rmta.net` with TTL 300, independently checked through Google and Cloudflare resolvers. Resend receiving initially retained a failed verification status; a fresh verification request completed and the domain and receiving record now report **verified**, with sending and receiving enabled.
 
