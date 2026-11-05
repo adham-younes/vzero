@@ -1,0 +1,105 @@
+{
+  "environment": "production",
+  "recorded_utc": "2026-11-05T11:49:53Z",
+  "origin": "https://agynexa.si",
+  "application": {
+    "pull_request": 66,
+    "initial_pull_request": 65,
+    "source_branch": "main",
+    "commit": "794c2b8299b95762e6eb173c3c1ff720d5731d7d",
+    "deployment_id": "dpl_AhhLWthKRjRskicjfNrqfy1RPFp8",
+    "deployment_url": "https://vzero-db2ahj7yo-adhamlouxors-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "ready_at": "2026-11-05T11:40:45.130Z",
+    "aliases": [
+      "agynexa.si",
+      "vzero-nine-beryl.vercel.app",
+      "www.agynexa.si",
+      "vzero-adhamlouxors-projects.vercel.app",
+      "vzero-git-main-adhamlouxors-projects.vercel.app"
+    ]
+  },
+  "database": {
+    "project": "xsyxvswbiptbyxyqhdim",
+    "catalog_verification": {
+      "tables": [
+        {
+          "rls": true,
+          "name": "agent_activations",
+          "anon_select": false,
+          "service_select": true,
+          "authenticated_select": false
+        },
+        {
+          "rls": true,
+          "name": "chatgpt_identities",
+          "anon_select": false,
+          "service_select": true,
+          "authenticated_select": false
+        },
+        {
+          "rls": true,
+          "name": "chatgpt_oauth_transactions",
+          "anon_select": false,
+          "service_select": true,
+          "authenticated_select": false
+        },
+        {
+          "rls": true,
+          "name": "studio_provider_credentials",
+          "anon_select": false,
+          "service_select": true,
+          "authenticated_select": false
+        }
+      ],
+      "migrations": [
+        {
+          "name": "studio_openai_runtime",
+          "version": "20261105110459"
+        },
+        {
+          "name": "chatgpt_identity",
+          "version": "20261105110509"
+        }
+      ]
+    }
+  },
+  "acceptance": {
+    "sitemap_pages": 68,
+    "final_page_failures": 0,
+    "initial_additional_query_targets": 60,
+    "final_health_and_access_checks": 10,
+    "legal_graph_checks": 4,
+    "unconfigured_auth_redirect_checks": 3,
+    "actual_openai_runs": 2,
+    "provider": "openai",
+    "model": "gpt-6.1-terra",
+    "reasoning": "high",
+    "web_search": "completed",
+    "python": "completed",
+    "csv_download": "verified",
+    "arabic_private_knowledge": "verified",
+    "locale_draft_preservation": "verified",
+    "new_workflow_context": "verified",
+    "mobile_navigation": "verified",
+    "mobile_geometry": "390px page / 336px composer",
+    "breadcrumb_touch_target_px": 44
+  },
+  "unverified": [
+    "Customer-owned API commercial execution",
+    "Live ChatGPT OIDC login",
+    "ChatGPT plan-funded inference",
+    "Operator commercial approval and payment settlement",
+    "General external business-system actions",
+    "Exhaustive mobile pixel coverage"
+  ],
+  "tripo": {
+    "device_authorization": "completed",
+    "api_credits": 0,
+    "studio_credits": 200,
+    "credits_spent": 0,
+    "published_generated_assets": 0
+  },
+  "evidence_policy": "Synthetic task content and non-secret identifiers only. Post-release documentation is separate from application deployment."
+}

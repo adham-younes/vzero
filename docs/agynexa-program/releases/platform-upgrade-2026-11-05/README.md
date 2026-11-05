@@ -1,6 +1,6 @@
 # AGYNEXA platform and OpenAI Studio upgrade — 5 November 2026
 
-Status: initial product release is live on production and real OpenAI web/Python and Arabic knowledge acceptance passed; both database migrations are applied and permissions verified. A focused production-acceptance follow-up is being released; see PRODUCTION.md and the linked PR receipts. This receipt supersedes older deferral and preview-only notes for this explicitly authorized work package. It does not imply that earlier test results validate the new runtime.
+Status: deployed and verified within the documented scope. PR65 and its focused acceptance follow-up PR66 are merged. Final production source is `794c2b8299b95762e6eb173c3c1ff720d5731d7d`, READY deployment `dpl_AhhLWthKRjRskicjfNrqfy1RPFp8` on `https://agynexa.si`. Real OpenAI web/Python and Arabic knowledge acceptance passed; both database migrations are applied and permissions verified. See [production acceptance](PRODUCTION.md). This receipt supersedes older deferral and preview-only notes for this explicitly authorized work package. It does not imply that earlier test results validate the new runtime.
 
 ## Product behavior
 
@@ -32,7 +32,7 @@ Initial supplied deployment: `d56b775`. Verified main at worktree creation: `45a
 
 Required release build/type checks run before publication. Functional and visual acceptance runs against `https://agynexa.si` after the product release and its focused acceptance follow-up, using synthetic tasks. No preview is presented as production proof. Additive database migrations are applied individually after source review, with existing records retained. A code rollback must keep the compatible additive schema and preserve credential/activation records; encryption secret rotation requires deliberate re-encryption. No destructive database rollback is proposed.
 
-The final deployment SHA, database receipts, actual production checks and unresolved external prerequisites will be recorded in `PRODUCTION.md` and `evidence/`. Never copy user chats, API keys, raw environment values or mailbox data into this public repository.
+The final deployment SHA, database receipts, actual production checks and unresolved external prerequisites are recorded in [PRODUCTION.md](PRODUCTION.md) and `evidence/`. Final documentation is committed separately from production application changes. Never copy user chats, API keys, raw environment values or mailbox data into this public repository.
 
 ## Sources for conditional provider features
 

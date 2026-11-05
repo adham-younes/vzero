@@ -1,0 +1,37 @@
+[
+  {
+    "case": "valid-context-plus-unwanted-field",
+    "status": 302,
+    "location": "https://agynexa.si/ar/login?error=chatgpt_unavailable&returnTo=%2Far%2Fstudio%3Findustry%3Dtelecommunications%26workflow%3Dservice"
+  },
+  {
+    "case": "external",
+    "status": 302,
+    "location": "https://agynexa.si/login?error=chatgpt_unavailable&returnTo=%2Fstudio"
+  },
+  {
+    "case": "external",
+    "status": 302,
+    "location": "https://agynexa.si/login?error=chatgpt_unavailable&returnTo=%2Fstudio"
+  },
+  {
+    "path": "/privacy",
+    "WebPage": true,
+    "BreadcrumbList": true
+  },
+  {
+    "path": "/terms",
+    "WebPage": true,
+    "BreadcrumbList": true
+  },
+  {
+    "path": "/ar/privacy",
+    "WebPage": true,
+    "BreadcrumbList": true
+  },
+  {
+    "path": "/ar/terms",
+    "WebPage": true,
+    "BreadcrumbList": true
+  }
+]
