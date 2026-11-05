@@ -6,6 +6,7 @@ import {Menu,X,ArrowUpRight} from 'lucide-react'
 import {nav} from '@/lib/agynexa'
 import {buttonVariants} from '@/components/ui/button'
 const LanguageContext=createContext({ar:false,t:(copy:readonly string[])=>copy[0]})
+const primaryNav=['solutions','services','industries','architecture','methodology','integrations']
 export const useLanguage=()=>useContext(LanguageContext)
 export function Action({href,children}:{href:string;children:React.ReactNode}){return <Link className={buttonVariants({size:'lg'})} href={href}>{children}<ArrowUpRight size={16}/></Link>}
 export default function Shell({children}:{children:React.ReactNode}){
@@ -23,8 +24,8 @@ export default function Shell({children}:{children:React.ReactNode}){
   return ()=>document.removeEventListener('keydown',close)
  },[open])
  const groups=[
-  {title:['Start here','ابدأ من هنا'],slugs:['solutions','methodology']},
-  {title:['Reference library','مكتبة المراجع'],slugs:['industries','services','architecture','integrations','security','resources','about']},
+  {title:['Explore','استكشف'],slugs:['solutions','services','industries','methodology']},
+  {title:['Learn more','اعرف أكثر'],slugs:['architecture','integrations','security','resources','about']},
  ]
  if(path==='/studio')return <LanguageContext.Provider value={{ar,t}}><a href="#main" className="skip">{t(['Skip to conversation','تجاوز إلى المحادثة'])}</a>{children}</LanguageContext.Provider>
  if(pathname.startsWith('/widget/'))return <>{children}</>
@@ -33,7 +34,10 @@ export default function Shell({children}:{children:React.ReactNode}){
   <header className="site-header">
    <div className="container header-row">
     <Link href="/" aria-label={t(['AGYNEXA home','AGYNEXA الرئيسية'])} className="brand" dir="ltr">AGYNEXA<span className="text-primary">.</span></Link>
-    <nav aria-label={t(['Main navigation','التنقل الرئيسي'])} className="desktop-nav">{['solutions','methodology'].map(item=>nav.find(entry=>entry[0]===item)!).map(([slug,en,arabic])=><Link key={slug} aria-current={path===`/${slug}`?'page':path.startsWith(`/${slug}/`)?'location':undefined} href={`/${slug}`}>{t([en,arabic])}</Link>)}</nav>
+    <nav aria-label={t(['Main navigation','التنقل الرئيسي'])} className="desktop-nav">{primaryNav.map(slug=>{
+     const [,en,arabic]=nav.find(entry=>entry[0]===slug)!
+     return <Link key={slug} aria-current={path===`/${slug}`?'page':path.startsWith(`/${slug}/`)?'location':undefined} href={`/${slug}`}>{t([en,arabic])}</Link>
+    })}</nav>
     <div className="header-actions">
      <button className="language-switch" type="button" aria-label={ar?'Switch to English':'التبديل إلى العربية'} title={ar?'English':'العربية'} lang={ar?'en':'ar'} onClick={()=>router.push((ar?path:`/ar${path==='/'?'':path}`)+window.location.search+window.location.hash)}><span dir="ltr">{ar?'EN':'AR'}</span></button>
      <Link className="header-account" href="/account">{t(['Account','حسابي'])}</Link>

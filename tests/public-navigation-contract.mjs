@@ -68,6 +68,12 @@ for(let offset=0;offset<paths.length;offset+=4){
   assert.match(html,new RegExp(`<html[^>]+dir="${ar?'rtl':'ltr'}"`),`${path} direction`)
   assert.equal((html.match(/<main\b[^>]*id="main"/g)||[]).length,1,`${path} main`)
   assert.equal((html.match(/<h1\b/g)||[]).length,1,`${path} h1`)
+  if(path==='/'||path==='/ar'){
+   const navigation=html.match(/<nav[^>]*class="desktop-nav"[^>]*>(.*?)<\/nav>/s)?.[1]??''
+   const hrefs=[...navigation.matchAll(/href="([^"]+)"/g)].map(match=>match[1])
+   const destinations=['solutions','services','industries','architecture','methodology','integrations']
+   assert.deepEqual(hrefs,destinations.map(slug=>`${ar?'/ar':''}/${slug}`),`${path} primary navigation`)
+  }
   const ids=[...html.matchAll(/\sid="([^"<>]+)"/g)].map(match=>match[1])
   assert.equal(new Set(ids).size,ids.length,`${path} unique DOM identifiers`)
   const parsed=routes.parseSitePath(path.split('/').filter(Boolean))
@@ -76,6 +82,7 @@ for(let offset=0;offset<paths.length;offset+=4){
  }))
 }
 checks.push(`${pages.size} English/Arabic public URLs return 200 with language, direction, main, h1, unique identifiers and canonical`)
+checks.push('Both homepages expose all six primary navigation destinations in their locale')
 let links=0,anchors=0
 for(const [path,html] of pages){
  for(const match of html.matchAll(/\shref="([^"<>]+)"/g)){
