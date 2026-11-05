@@ -33,6 +33,14 @@ async function handle(request:Request,ctx:Context){
   }
   const owner=await mailAdmin(),actor:MailActor={id:owner.actor,kind:'owner'},db=owner.db
   if(method!=='GET'&&method!=='HEAD'&&request.headers.get('origin')!==url.origin)throw new MailError('invalid_origin',403)
+  if(name==='password'&&method==='POST'){
+   const b=await mailMutation(request);exactKeys(b,['password'])
+   if(typeof b.password!=='string'||b.password.length<12||b.password.length>128)throw new InputError('invalid_password',400)
+   await rateLimit(request,'login','owner-password:'+owner.actor)
+   const client=await sessionClient(),result=await client.auth.updateUser({password:b.password})
+   if(result.error)throw new MailError('password_update_failed',400)
+   return json({ok:true})
+  }
   if(name==='logout'&&method==='POST'){const c=await sessionClient();await c.auth.signOut({scope:'local'});return json({ok:true})}
   if(name==='messages'&&method==='GET')return json(await listMail({inbox:url.searchParams.get('inbox')||undefined,status:url.searchParams.get('status')||undefined,q:url.searchParams.get('q')||undefined,cursor:url.searchParams.get('cursor')||undefined}))
   if(path[0]==='messages'&&path[1]){
