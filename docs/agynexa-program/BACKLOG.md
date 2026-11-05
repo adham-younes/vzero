@@ -1,4 +1,18 @@
-# Current correction — 5 November 2026
+# Current owner-mail increment — 5 November 2026
+
+**DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING.** Source is complete for the dedicated private mailbox, approved knowledge and shared automatic/manual/MCP reply policy. [Release scope and API inventory](releases/private-mail-2026-11-05/README.md). This operational scope does not reopen or complete the public product gaps recorded below.
+
+| Item | Current state | Required evidence |
+|---|---|---|
+| MAIL-PRIVATE-PROD | SCOPED_SERVER_VERIFIED_UI_PENDING | READY revision, migrations, DNS and 13 HTTP/MCP checks passed; owner-interface login and attachment downloads remain unverified |
+| MAIL-KNOWLEDGE-SENDS | DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING | Owner-private notes excluded from external context; approved facts used; sensitive manual/automatic requests held; one canonical reply and no uncertain-send duplication |
+| MAIL-CHATGPT-PLUGIN | CREATED_INSTALL_AUTH_PENDING | Personal plugin 0.1.0 exists; server discovery passed, but ChatGPT installation/authentication and in-host discovery remain pending |
+| MAIL-GMAIL-INGESTION | REQUIRES_CONNECTION | A durable authorized route and verified original sender/recipient/authentication; the interactive connector is insufficient |
+| MAIL-LEGACY-GAP | PRESERVATION_BOUNDARY_RETAINED | The 414-message snapshot and ZIP are verified; later legacy arrivals and historical Nexa mailbox contents remain unverified unless independently recovered |
+
+Pre-acceptance archive inventory: 414 historical messages plus 13 newer records. No automatic deletion or new subscription is introduced. The approved ZIP was delivered as one inbox attachment and verified after download. [Preserved migration evidence](OWNER-MAIL-2026-11-05.md).
+
+## Previous product correction — 5 November 2026
 
 Document preview/import, progress transport, public-copy changes and shared palette are deployed. Build, migration and public HTTP checks passed; remaining authenticated acceptance is explicitly listed in the [production receipt](releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md). OCR, legacy Office formats and image extraction remain outside the supported import contract.
 

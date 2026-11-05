@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-05",
+  "environment": "production",
+  "sourceCommit": "00e3caa619b69c3fe53439ea3a1cb93ff83c2c40",
+  "deploymentId": "dpl_5LoePoQsD2nZZrhM9YnrU4C74y95",
+  "host": "https://mail.agynexa.si",
+  "checks": {
+    "routine_mcp_reply": "PASS: one controlled reply accepted and received in owner Gmail inbox at 14:18:46 UTC",
+    "duplicate_request": "PASS: identical replay refused with mail_claim_conflict; original ledger remains sent",
+    "gmail_authentication": {
+      "spf": "pass",
+      "dkim": "pass",
+      "dmarc": "pass"
+    },
+    "sensitive_automatic_hold": "PASS: synthetic financial request held as sensitive_financial_review with no sent_id",
+    "sensitive_manual_override": "PASS: MCP send refused with mail_owner_review_required",
+    "private_knowledge_exclusion": "PASS: active synthetic owner_private record absent from authenticated MCP knowledge result; record subsequently disabled",
+    "credential_revocation": "PASS: temporary acceptance credential revoked; subsequent request rejected with HTTP 401",
+    "auto_reply_settings": "Both platform inboxes enabled after the controlled handoff test"
+  },
+  "plugin": {
+    "url": "https://chatgpt.com/plugins/plugins_6aec905359688191b39ffabc59232b22",
+    "visibility": "PRIVATE",
+    "scope": "USER",
+    "version": "0.1.0",
+    "created": true,
+    "chatgpt_connection_verified": false
+  },
+  "pending": [
+    "Owner login and authenticated visual mailbox/download acceptance",
+    "User installation and secure authentication of private ChatGPT plugin",
+    "Durable Gmail ingestion authorization and verification"
+  ],
+  "boundaries": [
+    "No external customer was contacted; tests used owner-controlled addresses and synthetic messages.",
+    "This proves the deployed MCP endpoint, not a connected ordinary ChatGPT session.",
+    "Gmail delivery is not evidence of a background Gmail ingestion grant.",
+    "Historic four attachment metadata entries counted; their private-console downloads remain untested.",
+    "No automatic data deletion was added."
+  ]
+}

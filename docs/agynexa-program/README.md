@@ -1,4 +1,10 @@
-# Current work — platform content, shared design and Studio correction
+# Current work — private owner mail, 5 November 2026
+
+**DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING.** The owner-authorized private mailbox, approved knowledge and guarded manual/ChatGPT reply paths are deployed through PR71, with scoped server acceptance verified and owner-interface activation still pending. The selected host is `mail.agynexa.si` on the existing Vercel project, with exact-host routing and authenticated owner checks; this is not a public platform mailbox or a new customer product. All three additive migrations and service-only permissions are verified; DNS/domain binding is verified. Thirteen bounded HTTP/MCP checks, guarded live reply delivery, duplicate blocking and sensitive holds passed. Owner-interface login/download acceptance and ChatGPT installation/authentication remain pending. [Current release and API inventory](releases/private-mail-2026-11-05/README.md).
+
+The pre-acceptance archive snapshot contains 414 historical messages and 13 newer records; MCP pagination subsequently verified all 414 historical entries. The approved 414-message ZIP was delivered into the Resend inbox and its downloaded bytes verified. Gmail still requires a durable connection and verified ingestion; the private ChatGPT plugin was created in the owner’s personal account but awaits installation and authentication. [Migration evidence and preservation limits](OWNER-MAIL-2026-11-05.md). Sensitive-message holds apply to automatic and manual replies alike. No secrets, message contents or private account identifiers belong in release documents.
+
+## Previous product delivery — platform content, shared design and Studio correction
 
 The owner-requested correction is deployed: latest READY production PR69 / `e9a5b0e` contains unchanged PR68 application code. Build, public HTTP/metadata checks and the source-capacity migration passed; authenticated browser acceptance is partial. [Production receipt and remaining checks](releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md). Preserve the restored palette and original Hero/video.
 

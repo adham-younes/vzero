@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nexa-mail-plugin",
+  "version": "0.1.0",
+  "description": "Private access to the owner's NEXA mailbox and approved knowledge, with guarded replies to live inbound mail.",
+  "author": { "name": "AGYNEXA" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "NEXA Mail",
+        "shortDescription": "Private mail and replies",
+        "longDescription": "Find and read the owner's archived platform mail, consult knowledge approved for public replies, and send explicitly requested replies through NEXA's shared sending safeguards. Sensitive messages remain held for the owner. This connection does not grant access to Gmail or ChatGPT memory.",
+        "developerName": "AGYNEXA",
+        "category": "Communication",
+        "capabilities": [],
+        "brandColor": "#10B981",
+        "brandColorDark": "#10B981",
+        "defaultPrompt": [
+          "Show my recent platform mail and anything needing my attention.",
+          "Draft a reply using the facts approved for NEXA.",
+          "اعرض رسائلي الأخيرة والرسائل التي تحتاج مراجعتي."
+        ]
+      }
+    }
+  }
+}
