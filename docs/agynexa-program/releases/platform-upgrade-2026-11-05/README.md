@@ -1,6 +1,6 @@
 # AGYNEXA platform and OpenAI Studio upgrade — 5 November 2026
 
-Status: release build and TypeScript passed; both database migrations applied and permissions verified. Application production deployment and acceptance are pending. This receipt supersedes older deferral and preview-only notes for this explicitly authorized work package. It does not imply that earlier test results validate the new runtime.
+Status: initial product release is live on production and real OpenAI web/Python and Arabic knowledge acceptance passed; both database migrations are applied and permissions verified. A focused production-acceptance follow-up is being released; see PRODUCTION.md and the linked PR receipts. This receipt supersedes older deferral and preview-only notes for this explicitly authorized work package. It does not imply that earlier test results validate the new runtime.
 
 ## Product behavior
 
@@ -30,7 +30,7 @@ The initial production review found overlong homepage copy, weak build/test/acti
 
 Initial supplied deployment: `d56b775`. Verified main at worktree creation: `45a37cde3423c582eba159359ba2a0d9845cb352`. A later fetch found `a5a503a5bc11f0a2d2926c877885e62a33bf072b` (PR63/64); those concurrent changes are retained in the release. The worktree is separate from the user's earlier checkout.
 
-Required release build/type checks run before publication. Functional and visual acceptance runs against `https://agynexa.si` after the single product release, using synthetic tasks. No preview is presented as production proof. Additive database migrations are applied individually after source review, with existing records retained. A code rollback must keep the compatible additive schema and preserve credential/activation records; encryption secret rotation requires deliberate re-encryption. No destructive database rollback is proposed.
+Required release build/type checks run before publication. Functional and visual acceptance runs against `https://agynexa.si` after the product release and its focused acceptance follow-up, using synthetic tasks. No preview is presented as production proof. Additive database migrations are applied individually after source review, with existing records retained. A code rollback must keep the compatible additive schema and preserve credential/activation records; encryption secret rotation requires deliberate re-encryption. No destructive database rollback is proposed.
 
 The final deployment SHA, database receipts, actual production checks and unresolved external prerequisites will be recorded in `PRODUCTION.md` and `evidence/`. Never copy user chats, API keys, raw environment values or mailbox data into this public repository.
 
@@ -44,4 +44,4 @@ Official availability does not prove that this application has received commerci
 
 ## Resumed full-site visual scope
 
-The owner reaffirmed all public pages, both languages and presentation on 5 November. Every public subject was source-reviewed, with input/role/output visuals on capabilities, workflows and industries. The homepage adds an accessible isometric four-layer explainer; architecture uses the actual current runtime flow. These are authored SVG/CSS, not generated Tripo assets. Tripo CLI0.7.2 was installed and its device authorization opened; no API credential was available at this checkpoint, so no paid generation was submitted or credits consumed. The planned single P1 textured model is estimated at40 credits within the owner-authorized200-credit budget, conditional on account authorization.
+The owner reaffirmed all public pages, both languages and presentation on 5 November. Every public subject was source-reviewed, with input/role/output visuals on capabilities, workflows and industries. The homepage adds an accessible isometric four-layer explainer; architecture uses the actual current runtime flow. These are authored SVG/CSS, not generated Tripo assets. Tripo CLI0.7.2 device authorization completed. The API balance is0 while the separate Studio balance is200. The current Free plan limits exports and its public pricing labels output non-commercial; no generation or purchase was submitted and0 credits were spent. The original SVG/CSS visuals remain the published implementation; see PRODUCTION.md.

@@ -4,6 +4,7 @@ import {cookies} from 'next/headers'
 import {createRemoteJWKSet,jwtVerify} from 'jose'
 import {InputError} from '@/lib/account-validation'
 import {adminClient,sessionClient,signedIn,rateLimit} from '@/lib/supabase/server'
+import {safeAuthReturn} from '@/lib/auth-return'
 const issuer='https://auth.openai.com'
 const cookieName='agynexa_chatgpt_oauth'
 const digest=(value:string)=>createHash('sha256').update(value).digest('hex')
@@ -35,7 +36,10 @@ export async function beginChatGPT(request:Request){
  if(linking){const {data,error}=await linking.client.from('profiles').select('id').eq('id',linking.user.id).maybeSingle();if(error||!data)throw new InputError('sign_in_required',401)}
  const ip=process.env.VERCEL==='1'?(request.headers.get('x-vercel-forwarded-for')||'unknown'):'local'
  await rateLimit(request,'login','chatgpt-oauth:'+ip)
- const meta=await discovery(),state=random(),verifier=randomBytes(64).toString('base64url'),nonce=random(),browser=random(),db=adminClient()
+ const returnTo=safeAuthReturn(input.searchParams.get('returnTo'),locale==='ar')
+ // The existing transaction hashes the entire cookie, binding its public return context to this browser.
+ // No prompt, credential or external URL is accepted; no additional database field is needed.
+ const meta=await discovery(),state=random(),verifier=randomBytes(64).toString('base64url'),nonce=random(),browser=`${random()}.${Buffer.from(returnTo).toString('base64url')}`,db=adminClient()
  const {error:cleanup}=await db.from('chatgpt_oauth_transactions').delete().lt('expires_at',new Date().toISOString());if(cleanup)throw cleanup
  const {error}=await db.from('chatgpt_oauth_transactions').insert({state_hash:digest(state),browser_hash:digest(browser),code_verifier:verifier,nonce,locale,user_id:linking?.user.id||null,expires_at:new Date(Date.now()+600000).toISOString()});if(error)throw error
  const jar=await cookies();jar.set(cookieName,browser,{httpOnly:true,secure:true,sameSite:'lax',path:'/api/auth/chatgpt',maxAge:600})
@@ -43,17 +47,20 @@ export async function beginChatGPT(request:Request){
  return url.href
 }
 export async function completeChatGPT(request:Request){
- let callbackLocale:'ar'|'en'='en'
+ let callbackLocale:'ar'|'en'='en',callbackReturn:string|null=null
  try{
  const c=chatGPTConfig();if(!c.configured)throw new InputError('chatgpt_unavailable',503)
  const url=new URL(request.url),state=url.searchParams.get('state'),jar=await cookies(),browser=jar.get(cookieName)?.value
  jar.delete({name:cookieName,path:'/api/auth/chatgpt'})
- if(!state||state.length>200||!browser)throw new InputError('chatgpt_failed')
+ if(!state||state.length>200||!browser||browser.length>3000)throw new InputError('chatgpt_failed')
  const db=adminClient()
  // DELETE ... RETURNING provides one-time consumption across serverless instances.
  const {data:t,error}=await db.from('chatgpt_oauth_transactions').delete().eq('state_hash',digest(state)).eq('browser_hash',digest(browser)).gt('expires_at',new Date().toISOString()).select('*').maybeSingle()
  if(error||!t)throw new InputError('chatgpt_failed')
  const locale=t.locale==='ar'?'ar':'en';callbackLocale=locale
+ // Decode only after the one-time database transaction verifies the complete cookie hash.
+ const encodedReturn=browser.split('.')[1]
+ callbackReturn=safeAuthReturn(encodedReturn&&/^[A-Za-z0-9_-]+$/.test(encodedReturn)?Buffer.from(encodedReturn,'base64url').toString('utf8'):null,locale==='ar')
  const fail=(code:string):never=>{throw Object.assign(new InputError(code),{locale})}
  if(url.searchParams.has('error'))fail('chatgpt_cancelled')
  const code=url.searchParams.get('code');if(!code||code.length>4096)fail('chatgpt_failed')
@@ -87,6 +94,6 @@ export async function completeChatGPT(request:Request){
  if(link.error||link.data.user?.id!==userId||!tokenHash)throw new InputError('chatgpt_failed')
  const client=await sessionClient(),verified=await client.auth.verifyOtp({token_hash:tokenHash,type:'email'})
  if(verified.error||verified.data.user?.id!==userId||!verified.data.session)fail('chatgpt_failed')
- return locale==='ar'?'/ar/studio':'/studio'
- }catch(error){if(error&&typeof error==='object')Object.assign(error,{locale:callbackLocale});throw error}
+ return callbackReturn
+ }catch(error){if(error&&typeof error==='object')Object.assign(error,{locale:callbackLocale,returnTo:callbackReturn});throw error}
 }

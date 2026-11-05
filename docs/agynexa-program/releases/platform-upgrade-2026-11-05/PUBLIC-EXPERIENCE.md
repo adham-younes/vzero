@@ -55,3 +55,20 @@ The resumed source review covered 34 public page subjects in English and Arabic 
 - Kept the Hero components, original video and black/emerald identity. The new diagram styles are in an isolated CSS module. The separate home visual is root-owned; no Tripo asset or Tripo approval is claimed by this workstream.
 
 No local application tests, local visual checks, build, commit or deployment were performed by this workstream. Final production checks should cover diagram wrapping/RTL, the nine workflow selections, ten capability selections, ten industry selections and their corresponding `/studio?industry=` presets, alongside the earlier page and metadata checks.
+
+## Observed production HTTP acceptance
+
+After the parent reported deployment of merged `main` `840c58d` (PR 65), this workstream performed read-only GET/source acceptance on `https://agynexa.si`. Evidence: `evidence/production-public-content.json` (timestamps included).
+
+- All 68 public sitemap URLs returned 200 and had exactly one H1, a unique title, description, H1 and main-content body, and the expected canonical and English/Arabic language alternates. The shortest main body was 956 characters. No cross-language internal link, duplicate DOM ID or broken rendered fragment target was found.
+- Every sitemap route appeared in the initial rendered internal-link graph. An additional 60 GET targets covered the public query links, account/Studio entries and all nine workflow plus ten industry Studio deep links in both languages. All returned 200 and preserved their query strings.
+- JSON-LD parsed successfully; every rendered WebPage graph matched its page language, title and description. FAQ questions/answers matched the rendered text. The four legal URLs carry Organization JSON-LD only; adding their page/breadcrumb graph remains a nonblocking consistency opportunity.
+- No user-blocking public-page defect was confirmed by these HTTP checks. A source review raised two Studio entry concerns for root's browser check: switching locale drops workflow/industry query context, and a saved browser-tab draft takes precedence over a newly followed industry/workflow link. These were not reproduced through browser interaction by this workstream.
+
+These observations do not replace the root's production visual, interaction, authenticated runtime or security checks. In particular, Studio returns an authentication-loading shell in raw HTTP, so a successful GET does not prove the client populated the requested preset. No product mutation, commit or deployment was performed during this acceptance pass.
+
+## Legal structured-data follow-up
+
+At the root's request after production acceptance, the four explicit Privacy and Terms route files now emit the existing `pageSchema` helper output with their correct route and locale. This supplies the same WebPage and BreadcrumbList graph used by the other public pages, alongside the shared Organization schema. The JSON serialization uses the existing less-than escaping pattern. Policy text and metadata are unchanged.
+
+This is a source change pending the parent's bundled follow-up build/deployment and production verification; the earlier HTTP evidence remains the unchanged observation of `840c58d`. No local tests, build, commit or deployment were performed by this workstream.

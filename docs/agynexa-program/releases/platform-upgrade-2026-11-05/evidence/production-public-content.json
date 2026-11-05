@@ -1,0 +1,1871 @@
+{
+  "environment": "production",
+  "origin": "https://agynexa.si",
+  "recorded_utc": "2026-11-05T11:20:02Z",
+  "deployment_reference": "Parent confirmed main 840c58d / PR65; this audit independently inspected live HTTP responses.",
+  "scope": "Read-only GET and rendered server HTML for all sitemap pages and linked query targets. No browser automation, authentication, provider call, account creation or product mutation.",
+  "summary": {
+    "public_sitemap_urls": 68,
+    "http_200": 68,
+    "unique_titles": 68,
+    "unique_h1": 68,
+    "unique_descriptions": 68,
+    "unique_main_content": 68,
+    "main_content_chars_min": 956,
+    "cross_locale_internal_links": 0,
+    "broken_rendered_fragment_targets": 0,
+    "alternate_pair_errors": 0,
+    "duplicate_dom_id_pages": 0,
+    "additional_get_targets": 60,
+    "additional_get_200": 60,
+    "query_preservation_failures": 0,
+    "unlinked_sitemap_paths_in_initial_html": []
+  },
+  "structured_data": {
+    "organization_pages": 68,
+    "webpage_graph_pages": 64,
+    "faq_content_matches_rendered_text": true,
+    "json_parse_errors": 0,
+    "page_graph_missing_on": [
+      "/privacy",
+      "/ar/privacy",
+      "/terms",
+      "/ar/terms"
+    ],
+    "assessment": "Legal pages have valid Organization JSON-LD but no WebPage/BreadcrumbList graph. A nonblocking consistency opportunity, not invalid schema or a broken page."
+  },
+  "source_followups": [
+    {
+      "component": "@components/studio-entry.tsx",
+      "observation": "Language link uses /studio or /ar/studio without carrying workflow/industry query; saved session draft takes precedence over newly supplied deep-link context.",
+      "status": "Source-backed concerns sent to root for browser verification; not runtime-reproduced in this audit."
+    }
+  ],
+  "limits": [
+    "Client-side selector interaction, layout, keyboard behavior and hydration are outside this HTTP audit.",
+    "Studio endpoints return an authentication-loading shell to the raw HTTP request; query-preserving 200 responses do not prove preset population or authentication.",
+    "Distinct text and valid metadata do not establish search rankings or measured content effectiveness."
+  ],
+  "pages": [
+    {
+      "url": "https://agynexa.si/",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Build AI agents for your business operations"
+      ],
+      "title": "AI Agent Builder for Business | AGYNEXA Studio",
+      "description": "Build and test custom business agents with company knowledge, web research and code analysis. Review the work, then agree production activation by email.",
+      "canonical": "https://agynexa.si",
+      "alternates": {
+        "en": "https://agynexa.si",
+        "ar": "https://agynexa.si/ar",
+        "x-default": "https://agynexa.si"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 5527,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك"
+      ],
+      "title": "منصة بناء وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "description": "ابنِ وكلاء مخصصين للأعمال واختبرهم بمعرفة الشركة والبحث وتحليل البيانات. راجع العمل ثم اتفق على التفعيل الإنتاجي عبر البريد.",
+      "canonical": "https://agynexa.si/ar",
+      "alternates": {
+        "en": "https://agynexa.si",
+        "ar": "https://agynexa.si/ar",
+        "x-default": "https://agynexa.si"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4464,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "The capabilities behind your agent."
+      ],
+      "title": "Business AI agent capabilities | AGYNEXA",
+      "description": "Explore company knowledge, research, agent roles and workflow controls. See what you can test in Studio and what requires a connected production scope.",
+      "canonical": "https://agynexa.si/services",
+      "alternates": {
+        "en": "https://agynexa.si/services",
+        "ar": "https://agynexa.si/ar/services",
+        "x-default": "https://agynexa.si/services"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 20416,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "القدرات التي تدعم وكيلك."
+      ],
+      "title": "قدرات وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "description": "استكشف المعرفة والبحث وأدوار الوكلاء وضوابط العمل. تعرّف على ما تختبره في الاستوديو وما يحتاج إلى ربط ونطاق إنتاجي.",
+      "canonical": "https://agynexa.si/ar/services",
+      "alternates": {
+        "en": "https://agynexa.si/services",
+        "ar": "https://agynexa.si/ar/services",
+        "x-default": "https://agynexa.si/services"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 15648,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Choose the work your agent will support."
+      ],
+      "title": "AI agents for business workflows | AGYNEXA",
+      "description": "Build and test agent roles for knowledge, document review, sales, service, finance, logistics, procurement and customer operations.",
+      "canonical": "https://agynexa.si/solutions",
+      "alternates": {
+        "en": "https://agynexa.si/solutions",
+        "ar": "https://agynexa.si/ar/solutions",
+        "x-default": "https://agynexa.si/solutions"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 5143,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "اختر العمل الذي سيساعدك فيه الوكيل."
+      ],
+      "title": "وكلاء ذكاء اصطناعي لمسارات الأعمال | AGYNEXA",
+      "description": "ابنِ أدوار وكلاء واختبرها للمعرفة والمستندات والمبيعات والخدمة والمالية واللوجستيات والمشتريات وعمليات العملاء.",
+      "canonical": "https://agynexa.si/ar/solutions",
+      "alternates": {
+        "en": "https://agynexa.si/solutions",
+        "ar": "https://agynexa.si/ar/solutions",
+        "x-default": "https://agynexa.si/solutions"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4101,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/methodology",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Build, test and activate your agent"
+      ],
+      "title": "Build, test and activate your agent | AGYNEXA",
+      "description": "Start with a task you can explain and a result your team can judge. Studio lets you configure the role and test its work before you discuss production activation.",
+      "canonical": "https://agynexa.si/methodology",
+      "alternates": {
+        "en": "https://agynexa.si/methodology",
+        "ar": "https://agynexa.si/ar/methodology",
+        "x-default": "https://agynexa.si/methodology"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2257,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/methodology",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "ابنِ الوكيل واختبره ثم فعّله"
+      ],
+      "title": "ابنِ الوكيل واختبره ثم فعّله | AGYNEXA",
+      "description": "ابدأ بمهمة تستطيع شرحها ونتيجة يستطيع فريقك تقييمها. يتيح الاستوديو إعداد الدور واختبار العمل قبل مناقشة التفعيل الإنتاجي.",
+      "canonical": "https://agynexa.si/ar/methodology",
+      "alternates": {
+        "en": "https://agynexa.si/methodology",
+        "ar": "https://agynexa.si/ar/methodology",
+        "x-default": "https://agynexa.si/methodology"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1782,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/architecture",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "How your agent’s workspace works"
+      ],
+      "title": "How your agent’s workspace works | AGYNEXA",
+      "description": "AGYNEXA brings agent configuration, private knowledge and test conversations into one workspace. OpenAI handles reasoning and supported tools; the application manages access, saved work and activation.",
+      "canonical": "https://agynexa.si/architecture",
+      "alternates": {
+        "en": "https://agynexa.si/architecture",
+        "ar": "https://agynexa.si/ar/architecture",
+        "x-default": "https://agynexa.si/architecture"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2734,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/architecture",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "كيف تعمل مساحة الوكيل؟"
+      ],
+      "title": "كيف تعمل مساحة الوكيل؟ | AGYNEXA",
+      "description": "يجمع AGYNEXA إعداد الوكيل والمعرفة الخاصة ومحادثات التجربة في مساحة واحدة. تتولى OpenAI الاستدلال والأدوات المدعومة، ويدير التطبيق الوصول والأعمال المحفوظة والتفعيل.",
+      "canonical": "https://agynexa.si/ar/architecture",
+      "alternates": {
+        "en": "https://agynexa.si/architecture",
+        "ar": "https://agynexa.si/ar/architecture",
+        "x-default": "https://agynexa.si/architecture"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2158,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/integrations",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Give each connection a clear job"
+      ],
+      "title": "Give each connection a clear job | AGYNEXA",
+      "description": "Research and code tools are available within the agent workspace when enabled. Business systems need a scoped connection for the records and operations your workflow will actually use.",
+      "canonical": "https://agynexa.si/integrations",
+      "alternates": {
+        "en": "https://agynexa.si/integrations",
+        "ar": "https://agynexa.si/ar/integrations",
+        "x-default": "https://agynexa.si/integrations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2929,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/integrations",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "حدّد مهمة كل اتصال"
+      ],
+      "title": "حدّد مهمة كل اتصال | AGYNEXA",
+      "description": "تتوفر أدوات البحث والكود داخل مساحة الوكيل عند تفعيلها. وتحتاج أنظمة الأعمال إلى اتصال محدد بالسجلات والعمليات التي سيستخدمها سير العمل فعلًا.",
+      "canonical": "https://agynexa.si/ar/integrations",
+      "alternates": {
+        "en": "https://agynexa.si/integrations",
+        "ar": "https://agynexa.si/ar/integrations",
+        "x-default": "https://agynexa.si/integrations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2292,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/security",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Keep control of data and decisions"
+      ],
+      "title": "Keep control of data and decisions | AGYNEXA",
+      "description": "Choose what your agent may use, inspect its outputs and identify the actions that require approval. Workspace controls and production responsibilities should be understood before customer work begins.",
+      "canonical": "https://agynexa.si/security",
+      "alternates": {
+        "en": "https://agynexa.si/security",
+        "ar": "https://agynexa.si/ar/security",
+        "x-default": "https://agynexa.si/security"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2250,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/security",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "احتفظ بالسيطرة على البيانات والقرارات"
+      ],
+      "title": "احتفظ بالسيطرة على البيانات والقرارات | AGYNEXA",
+      "description": "اختر ما يستطيع الوكيل استخدامه وافحص مخرجاته وحدّد الإجراءات التي تحتاج إلى اعتماد. افهم ضوابط المساحة ومسؤوليات التشغيل قبل بدء أعمال العملاء.",
+      "canonical": "https://agynexa.si/ar/security",
+      "alternates": {
+        "en": "https://agynexa.si/security",
+        "ar": "https://agynexa.si/ar/security",
+        "x-default": "https://agynexa.si/security"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1747,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/resources",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Practical guides for your first agent"
+      ],
+      "title": "Practical guides for your first agent | AGYNEXA",
+      "description": "Use these working questions to define a role, prepare its context and judge its output. Each guide connects to a task you can try in Studio.",
+      "canonical": "https://agynexa.si/resources",
+      "alternates": {
+        "en": "https://agynexa.si/resources",
+        "ar": "https://agynexa.si/ar/resources",
+        "x-default": "https://agynexa.si/resources"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2474,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/resources",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "إرشادات عملية لوكيلك الأول"
+      ],
+      "title": "إرشادات عملية لوكيلك الأول | AGYNEXA",
+      "description": "استخدم هذه الأسئلة لتحديد الدور وتجهيز سياقه والحكم على مخرجاته. ترتبط الإرشادات بمهام يمكنك تجربتها داخل الاستوديو.",
+      "canonical": "https://agynexa.si/ar/resources",
+      "alternates": {
+        "en": "https://agynexa.si/resources",
+        "ar": "https://agynexa.si/ar/resources",
+        "x-default": "https://agynexa.si/resources"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1862,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/about",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "One platform. Built around your work."
+      ],
+      "title": "One platform. Built around your work. | AGYNEXA",
+      "description": "AGYNEXA is a self-service Agent Builder for businesses. Create and test agents in your own workspace, using your organization’s instructions, knowledge and operating context.",
+      "canonical": "https://agynexa.si/about",
+      "alternates": {
+        "en": "https://agynexa.si/about",
+        "ar": "https://agynexa.si/ar/about",
+        "x-default": "https://agynexa.si/about"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2045,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/about",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "منصة واحدة تتشكل حول عملك."
+      ],
+      "title": "منصة واحدة تتشكل حول عملك. | AGYNEXA",
+      "description": "AGYNEXA منصة ذاتية الخدمة لبناء وكلاء الذكاء الاصطناعي للأعمال. أنشئ الوكلاء واختبرهم داخل مساحتك، وفق تعليمات مؤسستك ومعرفتها وسياق تشغيلها.",
+      "canonical": "https://agynexa.si/ar/about",
+      "alternates": {
+        "en": "https://agynexa.si/about",
+        "ar": "https://agynexa.si/ar/about",
+        "x-default": "https://agynexa.si/about"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1644,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/agentnexos",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "AgentNexOS: a shared model for agent work"
+      ],
+      "title": "AgentNexOS: a shared model for agent work | AGYNEXA",
+      "description": "AgentNexOS describes how roles, knowledge, tools and human decisions fit into a business workflow. Studio is the product workspace where you create and test the agents. Automatic coordination across agents and business systems requires a configured execution path.",
+      "canonical": "https://agynexa.si/agentnexos",
+      "alternates": {
+        "en": "https://agynexa.si/agentnexos",
+        "ar": "https://agynexa.si/ar/agentnexos",
+        "x-default": "https://agynexa.si/agentnexos"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2317,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/agentnexos",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "AgentNexOS: تصور مشترك لعمل الوكلاء"
+      ],
+      "title": "AgentNexOS: تصور مشترك لعمل الوكلاء | AGYNEXA",
+      "description": "يشرح AgentNexOS علاقة الأدوار والمعرفة والأدوات والقرارات البشرية بسير العمل. الاستوديو هو مساحة المنتج التي تنشئ فيها الوكلاء وتختبرهم. ويتطلب التنسيق التلقائي بين الوكلاء وأنظمة الأعمال مسار تنفيذ مجهّزًا.",
+      "canonical": "https://agynexa.si/ar/agentnexos",
+      "alternates": {
+        "en": "https://agynexa.si/agentnexos",
+        "ar": "https://agynexa.si/ar/agentnexos",
+        "x-default": "https://agynexa.si/agentnexos"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1798,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/start",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Bring your first task into Studio."
+      ],
+      "title": "Start building a business agent | AGYNEXA",
+      "description": "Choose a business task, configure a private agent and test its work before discussing production activation.",
+      "canonical": "https://agynexa.si/start",
+      "alternates": {
+        "en": "https://agynexa.si/start",
+        "ar": "https://agynexa.si/ar/start",
+        "x-default": "https://agynexa.si/start"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 2329,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/start",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "ابدأ بمهمتك الأولى داخل الاستوديو."
+      ],
+      "title": "ابدأ بناء وكيل للأعمال | AGYNEXA",
+      "description": "اختر مهمة عمل واضبط وكيلًا خاصًا واختبر مخرجاته قبل مناقشة التفعيل الإنتاجي.",
+      "canonical": "https://agynexa.si/ar/start",
+      "alternates": {
+        "en": "https://agynexa.si/start",
+        "ar": "https://agynexa.si/ar/start",
+        "x-default": "https://agynexa.si/start"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1788,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/contact",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Let’s agree how your agent goes live."
+      ],
+      "title": "Agent activation and contact | AGYNEXA",
+      "description": "Discuss production activation, pricing, payment and terms after testing your agent. Contact AGYNEXA directly at adham@agynexa.si.",
+      "canonical": "https://agynexa.si/contact",
+      "alternates": {
+        "en": "https://agynexa.si/contact",
+        "ar": "https://agynexa.si/ar/contact",
+        "x-default": "https://agynexa.si/contact"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 1159,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/contact",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "لنتفق على تشغيل وكيلك."
+      ],
+      "title": "تفعيل الوكلاء والتواصل | AGYNEXA",
+      "description": "ناقش التفعيل الإنتاجي والسعر والدفع والشروط بعد اختبار الوكيل. تواصل مباشرة مع AGYNEXA عبر adham@agynexa.si.",
+      "canonical": "https://agynexa.si/ar/contact",
+      "alternates": {
+        "en": "https://agynexa.si/contact",
+        "ar": "https://agynexa.si/ar/contact",
+        "x-default": "https://agynexa.si/contact"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 956,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/industries",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Build agents for the way your industry works"
+      ],
+      "title": "Build agents for the way your industry works | AGYNEXA",
+      "description": "Explore ten sector contexts, each with a concrete starting point, expected output and responsible reviewer. Use them to shape a testable agent role; live sector operations require their own access and activation scope.",
+      "canonical": "https://agynexa.si/industries",
+      "alternates": {
+        "en": "https://agynexa.si/industries",
+        "ar": "https://agynexa.si/ar/industries",
+        "x-default": "https://agynexa.si/industries"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 12454,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/industries",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "ابنِ وكلاء يفهمون طريقة العمل في قطاعك"
+      ],
+      "title": "ابنِ وكلاء يفهمون طريقة العمل في قطاعك | AGYNEXA",
+      "description": "استكشف عشرة سياقات قطاعية، لكل منها نقطة بداية ومخرج متوقع ومراجع مسؤول. استخدمها لتحديد دور يمكن اختباره، مع تجهيز الوصول ونطاق التفعيل لأي تشغيل حي في القطاع.",
+      "canonical": "https://agynexa.si/ar/industries",
+      "alternates": {
+        "en": "https://agynexa.si/industries",
+        "ar": "https://agynexa.si/ar/industries",
+        "x-default": "https://agynexa.si/industries"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 9528,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/knowledge",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Answers from your company knowledge"
+      ],
+      "title": "AI agents for company knowledge | AGYNEXA",
+      "description": "Build a company knowledge agent with approved sources, cited answers and a clear review process in AGYNEXA Studio.",
+      "canonical": "https://agynexa.si/solutions/knowledge",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/knowledge",
+        "ar": "https://agynexa.si/ar/solutions/knowledge",
+        "x-default": "https://agynexa.si/solutions/knowledge"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3794,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/knowledge",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "إجابات من معرفة شركتك"
+      ],
+      "title": "وكلاء المعرفة المؤسسية | AGYNEXA",
+      "description": "ابنِ وكيلًا لمعرفة الشركة بمصادر معتمدة وإجابات موثقة وخطوات مراجعة واضحة داخل استوديو AGYNEXA.",
+      "canonical": "https://agynexa.si/ar/solutions/knowledge",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/knowledge",
+        "ar": "https://agynexa.si/ar/solutions/knowledge",
+        "x-default": "https://agynexa.si/solutions/knowledge"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3048,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/documents",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Turn documents into reviewable work"
+      ],
+      "title": "Agentic document processing for business | AGYNEXA",
+      "description": "Turn supplied document content into a sourced review brief. Extract facts, flag gaps and test a document agent in AGYNEXA Studio.",
+      "canonical": "https://agynexa.si/solutions/documents",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/documents",
+        "ar": "https://agynexa.si/ar/solutions/documents",
+        "x-default": "https://agynexa.si/solutions/documents"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3883,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/documents",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "حوّل المستندات إلى عمل قابل للمراجعة"
+      ],
+      "title": "معالجة مستندات الأعمال بالوكلاء | AGYNEXA",
+      "description": "حوّل محتوى المستندات إلى موجز مراجعة بمصادره. استخلص الحقائق وحدد النواقص واختبر وكيل المستندات في استوديو AGYNEXA.",
+      "canonical": "https://agynexa.si/ar/solutions/documents",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/documents",
+        "ar": "https://agynexa.si/ar/solutions/documents",
+        "x-default": "https://agynexa.si/solutions/documents"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3110,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/sales",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Give your sales team a complete brief"
+      ],
+      "title": "AI agents for sales operations | AGYNEXA",
+      "description": "Build a sales agent that prepares qualification and proposal drafts from your customer context and approved offer information.",
+      "canonical": "https://agynexa.si/solutions/sales",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/sales",
+        "ar": "https://agynexa.si/ar/solutions/sales",
+        "x-default": "https://agynexa.si/solutions/sales"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3993,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/sales",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "جهّز لفريق المبيعات موجزًا مكتملًا"
+      ],
+      "title": "وكلاء لعمليات المبيعات | AGYNEXA",
+      "description": "ابنِ وكيل مبيعات يجهز مسودات التأهيل والعروض من سياق العميل ومعلومات العرض المعتمدة، مع مراجعة مسؤول المبيعات.",
+      "canonical": "https://agynexa.si/ar/solutions/sales",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/sales",
+        "ar": "https://agynexa.si/ar/solutions/sales",
+        "x-default": "https://agynexa.si/solutions/sales"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3195,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/service",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Prepare customer responses with context"
+      ],
+      "title": "Customer service agent workflows | AGYNEXA",
+      "description": "Prepare customer replies and escalation briefs using case context and approved guidance. Test the role before agreeing production activation.",
+      "canonical": "https://agynexa.si/solutions/service",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/service",
+        "ar": "https://agynexa.si/ar/solutions/service",
+        "x-default": "https://agynexa.si/solutions/service"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3934,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/service",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "جهّز ردود العملاء بسياق الحالة"
+      ],
+      "title": "مسارات وكلاء خدمة العملاء | AGYNEXA",
+      "description": "جهّز ردود العملاء وموجز التصعيد من سياق الحالة والإرشاد المعتمد. اختبر الدور قبل الاتفاق على التفعيل الإنتاجي.",
+      "canonical": "https://agynexa.si/ar/solutions/service",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/service",
+        "ar": "https://agynexa.si/ar/solutions/service",
+        "x-default": "https://agynexa.si/solutions/service"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3079,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/finance",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Review financial differences with evidence"
+      ],
+      "title": "AI agents for finance operations | AGYNEXA",
+      "description": "Prepare financial discrepancy reports from approved records. Test calculations, inspect evidence and keep review with your finance team.",
+      "canonical": "https://agynexa.si/solutions/finance",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/finance",
+        "ar": "https://agynexa.si/ar/solutions/finance",
+        "x-default": "https://agynexa.si/solutions/finance"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4034,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/finance",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "راجع الفروق المالية بأدلتها"
+      ],
+      "title": "وكلاء للعمليات المالية | AGYNEXA",
+      "description": "جهّز تقارير الفروق المالية من السجلات المعتمدة، واختبر الحسابات وراجع الأدلة مع الفريق المالي داخل استوديو AGYNEXA.",
+      "canonical": "https://agynexa.si/ar/solutions/finance",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/finance",
+        "ar": "https://agynexa.si/ar/solutions/finance",
+        "x-default": "https://agynexa.si/solutions/finance"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3235,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/logistics",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Make shipment exceptions easier to review"
+      ],
+      "title": "AI agents for logistics workflows | AGYNEXA",
+      "description": "Turn shipment events and exceptions into a reviewable operations brief. Build and test your logistics agent in AGYNEXA Studio.",
+      "canonical": "https://agynexa.si/solutions/logistics",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/logistics",
+        "ar": "https://agynexa.si/ar/solutions/logistics",
+        "x-default": "https://agynexa.si/solutions/logistics"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4115,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/logistics",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "نظّم استثناءات الشحن للمراجعة"
+      ],
+      "title": "وكلاء لعمليات الشحن والخدمات اللوجستية | AGYNEXA",
+      "description": "حوّل أحداث الشحن والاستثناءات إلى موجز يستطيع فريق العمليات مراجعته. ابنِ وكيل اللوجستيات واختبره داخل استوديو AGYNEXA.",
+      "canonical": "https://agynexa.si/ar/solutions/logistics",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/logistics",
+        "ar": "https://agynexa.si/ar/solutions/logistics",
+        "x-default": "https://agynexa.si/solutions/logistics"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3227,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/procurement",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Compare supplier offers before approval"
+      ],
+      "title": "AI agents for procurement workflows | AGYNEXA",
+      "description": "Compare supplier offers, normalize quantities and flag missing terms. Build a procurement agent while the buyer retains approval.",
+      "canonical": "https://agynexa.si/solutions/procurement",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/procurement",
+        "ar": "https://agynexa.si/ar/solutions/procurement",
+        "x-default": "https://agynexa.si/solutions/procurement"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4819,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/procurement",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "قارن عروض الموردين قبل الاعتماد"
+      ],
+      "title": "وكلاء لمسارات المشتريات | AGYNEXA",
+      "description": "قارن عروض الموردين ووحّد الكميات وحدد الشروط الناقصة. ابنِ وكيل مشتريات مع بقاء قرار الاعتماد لدى مسؤول الشراء.",
+      "canonical": "https://agynexa.si/ar/solutions/procurement",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/procurement",
+        "ar": "https://agynexa.si/ar/solutions/procurement",
+        "x-default": "https://agynexa.si/solutions/procurement"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3822,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/receivables",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Prepare follow-up from the account facts"
+      ],
+      "title": "Accounts receivable agent workflows | AGYNEXA",
+      "description": "Prepare follow-up plans and message drafts from approved balances and account facts. Review the work before any external action.",
+      "canonical": "https://agynexa.si/solutions/receivables",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/receivables",
+        "ar": "https://agynexa.si/ar/solutions/receivables",
+        "x-default": "https://agynexa.si/solutions/receivables"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4033,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/receivables",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "جهّز المتابعة من حقائق الحساب"
+      ],
+      "title": "وكلاء لمتابعة المستحقات | AGYNEXA",
+      "description": "جهّز خطط المتابعة ومسودات الرسائل من الأرصدة المعتمدة وحقائق الحساب، وراجع العمل قبل أي إجراء خارجي.",
+      "canonical": "https://agynexa.si/ar/solutions/receivables",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/receivables",
+        "ar": "https://agynexa.si/ar/solutions/receivables",
+        "x-default": "https://agynexa.si/solutions/receivables"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3197,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/solutions/customer-operations",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Keep the account handover complete"
+      ],
+      "title": "AI agents for customer operations | AGYNEXA",
+      "description": "Keep account handovers complete with requirements, dependencies and open decisions. Build and test a customer operations agent.",
+      "canonical": "https://agynexa.si/solutions/customer-operations",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/customer-operations",
+        "ar": "https://agynexa.si/ar/solutions/customer-operations",
+        "x-default": "https://agynexa.si/solutions/customer-operations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4080,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/solutions/customer-operations",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "احتفظ بسياق العميل عند تسليم العمل"
+      ],
+      "title": "وكلاء لتنسيق عمليات العملاء | AGYNEXA",
+      "description": "نظّم تسليم حساب العميل بمتطلباته واعتمادياته وقراراته المفتوحة. ابنِ وكيل عمليات العملاء واختبره داخل استوديو AGYNEXA.",
+      "canonical": "https://agynexa.si/ar/solutions/customer-operations",
+      "alternates": {
+        "en": "https://agynexa.si/solutions/customer-operations",
+        "ar": "https://agynexa.si/ar/solutions/customer-operations",
+        "x-default": "https://agynexa.si/solutions/customer-operations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3292,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/customer-service",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "AI agents for customer service"
+      ],
+      "title": "AI agents for customer service | AGYNEXA",
+      "description": "Prepare responses from approved service guidance and organize the next step for each case. Test the role in Studio before connecting a customer channel or case-management system.",
+      "canonical": "https://agynexa.si/services/customer-service",
+      "alternates": {
+        "en": "https://agynexa.si/services/customer-service",
+        "ar": "https://agynexa.si/ar/services/customer-service",
+        "x-default": "https://agynexa.si/services/customer-service"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 13226,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/customer-service",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "وكلاء ذكاء اصطناعي لخدمة العملاء"
+      ],
+      "title": "وكلاء ذكاء اصطناعي لخدمة العملاء | AGYNEXA",
+      "description": "جهّز الردود من إرشادات الخدمة المعتمدة ونظّم الخطوة التالية لكل حالة. اختبر الدور في الاستوديو قبل ربط قناة عملاء أو نظام لإدارة الحالات.",
+      "canonical": "https://agynexa.si/ar/services/customer-service",
+      "alternates": {
+        "en": "https://agynexa.si/services/customer-service",
+        "ar": "https://agynexa.si/ar/services/customer-service",
+        "x-default": "https://agynexa.si/services/customer-service"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 10286,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/employee-operations",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "AI agents for employee operations"
+      ],
+      "title": "AI agents for employee operations | AGYNEXA",
+      "description": "Help employees understand procedures and prepare complete requests. Use the company’s approved knowledge, with HR and IT decisions kept with their responsible owners.",
+      "canonical": "https://agynexa.si/services/employee-operations",
+      "alternates": {
+        "en": "https://agynexa.si/services/employee-operations",
+        "ar": "https://agynexa.si/ar/services/employee-operations",
+        "x-default": "https://agynexa.si/services/employee-operations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 11240,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/employee-operations",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "وكلاء لإجراءات الموظفين"
+      ],
+      "title": "وكلاء لإجراءات الموظفين | AGYNEXA",
+      "description": "ساعد الموظفين على فهم الإجراءات وتجهيز طلبات مكتملة. استخدم معرفة الشركة المعتمدة، مع بقاء قرارات الموارد البشرية والتقنية لدى أصحابها.",
+      "canonical": "https://agynexa.si/ar/services/employee-operations",
+      "alternates": {
+        "en": "https://agynexa.si/services/employee-operations",
+        "ar": "https://agynexa.si/ar/services/employee-operations",
+        "x-default": "https://agynexa.si/services/employee-operations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 8759,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/process-automation",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Agent-assisted business workflows"
+      ],
+      "title": "Agent-assisted business workflows | AGYNEXA",
+      "description": "Turn a recurring task into defined inputs, a useful output and a review point. Test the reasoning in Studio and scope the system actions needed for connected operation.",
+      "canonical": "https://agynexa.si/services/process-automation",
+      "alternates": {
+        "en": "https://agynexa.si/services/process-automation",
+        "ar": "https://agynexa.si/ar/services/process-automation",
+        "x-default": "https://agynexa.si/services/process-automation"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 30142,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/process-automation",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "سير عمل بمساعدة الوكلاء"
+      ],
+      "title": "سير عمل بمساعدة الوكلاء | AGYNEXA",
+      "description": "حوّل المهمة المتكررة إلى مدخلات محددة ومخرج مفيد ونقطة مراجعة. اختبر الاستدلال في الاستوديو وحدّد إجراءات الأنظمة اللازمة للتشغيل المتصل.",
+      "canonical": "https://agynexa.si/ar/services/process-automation",
+      "alternates": {
+        "en": "https://agynexa.si/services/process-automation",
+        "ar": "https://agynexa.si/ar/services/process-automation",
+        "x-default": "https://agynexa.si/services/process-automation"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 23380,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/enterprise-knowledge",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Company knowledge for AI agents"
+      ],
+      "title": "Company knowledge for AI agents | AGYNEXA",
+      "description": "Give the agent relevant text and Markdown knowledge, then inspect the references behind its answers. Use approved procedures and examples that match the responsibility you are testing.",
+      "canonical": "https://agynexa.si/services/enterprise-knowledge",
+      "alternates": {
+        "en": "https://agynexa.si/services/enterprise-knowledge",
+        "ar": "https://agynexa.si/ar/services/enterprise-knowledge",
+        "x-default": "https://agynexa.si/services/enterprise-knowledge"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 18537,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/enterprise-knowledge",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "معرفة الشركة لوكلاء الذكاء الاصطناعي"
+      ],
+      "title": "معرفة الشركة لوكلاء الذكاء الاصطناعي | AGYNEXA",
+      "description": "زوّد الوكيل بمعرفة نصية وMarkdown مناسبة، ثم افحص مراجع الإجابات. استخدم إجراءات وأمثلة معتمدة تطابق المسؤولية التي تختبرها.",
+      "canonical": "https://agynexa.si/ar/services/enterprise-knowledge",
+      "alternates": {
+        "en": "https://agynexa.si/services/enterprise-knowledge",
+        "ar": "https://agynexa.si/ar/services/enterprise-knowledge",
+        "x-default": "https://agynexa.si/services/enterprise-knowledge"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 14467,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/agent-orchestration",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Design roles that work together"
+      ],
+      "title": "Design roles that work together | AGYNEXA",
+      "description": "Define what each specialist agent receives and produces. Evaluate the roles separately, then establish the execution path needed for automatic handoffs and shared process state.",
+      "canonical": "https://agynexa.si/services/agent-orchestration",
+      "alternates": {
+        "en": "https://agynexa.si/services/agent-orchestration",
+        "ar": "https://agynexa.si/ar/services/agent-orchestration",
+        "x-default": "https://agynexa.si/services/agent-orchestration"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 15696,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/agent-orchestration",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "صمّم أدوارًا تعمل معًا"
+      ],
+      "title": "صمّم أدوارًا تعمل معًا | AGYNEXA",
+      "description": "حدّد ما يستلمه كل وكيل متخصص وما ينتجه. قيّم الأدوار منفصلة، ثم جهّز مسار التنفيذ اللازم للانتقال التلقائي وحالة العملية المشتركة.",
+      "canonical": "https://agynexa.si/ar/services/agent-orchestration",
+      "alternates": {
+        "en": "https://agynexa.si/services/agent-orchestration",
+        "ar": "https://agynexa.si/ar/services/agent-orchestration",
+        "x-default": "https://agynexa.si/services/agent-orchestration"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 12045,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/enterprise-integrations",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Connect agents to business operations"
+      ],
+      "title": "Connect agents to business operations | AGYNEXA",
+      "description": "Scope the exact record or action your agent needs from another system. Confirm the interface, permission and success response before including it in an activated workflow.",
+      "canonical": "https://agynexa.si/services/enterprise-integrations",
+      "alternates": {
+        "en": "https://agynexa.si/services/enterprise-integrations",
+        "ar": "https://agynexa.si/ar/services/enterprise-integrations",
+        "x-default": "https://agynexa.si/services/enterprise-integrations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 26567,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/enterprise-integrations",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "اربط الوكلاء بعمليات الأعمال"
+      ],
+      "title": "اربط الوكلاء بعمليات الأعمال | AGYNEXA",
+      "description": "حدّد السجل أو الإجراء الذي يحتاجه الوكيل من نظام آخر. تأكد من الواجهة والصلاحية وتأكيد النجاح قبل إدراجه في سير عمل مفعّل.",
+      "canonical": "https://agynexa.si/ar/services/enterprise-integrations",
+      "alternates": {
+        "en": "https://agynexa.si/services/enterprise-integrations",
+        "ar": "https://agynexa.si/ar/services/enterprise-integrations",
+        "x-default": "https://agynexa.si/services/enterprise-integrations"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 20561,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/voice-agents",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Design voice agent workflows"
+      ],
+      "title": "Design voice agent workflows | AGYNEXA",
+      "description": "Define the conversation, information needed and human handover. Test the role in text first; telephony, speech processing and live customer channels require a separate operating setup.",
+      "canonical": "https://agynexa.si/services/voice-agents",
+      "alternates": {
+        "en": "https://agynexa.si/services/voice-agents",
+        "ar": "https://agynexa.si/ar/services/voice-agents",
+        "x-default": "https://agynexa.si/services/voice-agents"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 15650,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/voice-agents",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "صمّم مسارات الوكلاء الصوتيين"
+      ],
+      "title": "صمّم مسارات الوكلاء الصوتيين | AGYNEXA",
+      "description": "حدّد الحوار والمعلومات المطلوبة والإحالة للموظف. اختبر الدور نصيًا أولًا؛ وتحتاج الهواتف ومعالجة الصوت وقنوات العملاء الحية إلى إعداد تشغيل مستقل.",
+      "canonical": "https://agynexa.si/ar/services/voice-agents",
+      "alternates": {
+        "en": "https://agynexa.si/services/voice-agents",
+        "ar": "https://agynexa.si/ar/services/voice-agents",
+        "x-default": "https://agynexa.si/services/voice-agents"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 11764,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/agent-assist",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "AI assistance for your team"
+      ],
+      "title": "AI assistance for your team | AGYNEXA",
+      "description": "Prepare summaries, research and draft responses while a person leads the work. Keep the evidence and unresolved questions visible so the reviewer can decide what to use.",
+      "canonical": "https://agynexa.si/services/agent-assist",
+      "alternates": {
+        "en": "https://agynexa.si/services/agent-assist",
+        "ar": "https://agynexa.si/ar/services/agent-assist",
+        "x-default": "https://agynexa.si/services/agent-assist"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 15574,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/agent-assist",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "مساعدة ذكية لفريقك"
+      ],
+      "title": "مساعدة ذكية لفريقك | AGYNEXA",
+      "description": "جهّز الملخصات والأبحاث ومسودات الرد بينما يقود الموظف العمل. أظهر الأدلة والأسئلة المفتوحة ليقرر المراجع ما يستخدمه.",
+      "canonical": "https://agynexa.si/ar/services/agent-assist",
+      "alternates": {
+        "en": "https://agynexa.si/services/agent-assist",
+        "ar": "https://agynexa.si/ar/services/agent-assist",
+        "x-default": "https://agynexa.si/services/agent-assist"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 11672,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/governance-security",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Agent permissions and review"
+      ],
+      "title": "Agent permissions and review | AGYNEXA",
+      "description": "Define the data an agent may use and the decisions that stay with people. Review the workspace boundaries and agree controls for any external action before production activation.",
+      "canonical": "https://agynexa.si/services/governance-security",
+      "alternates": {
+        "en": "https://agynexa.si/services/governance-security",
+        "ar": "https://agynexa.si/ar/services/governance-security",
+        "x-default": "https://agynexa.si/services/governance-security"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 20980,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/governance-security",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "صلاحيات الوكلاء ومراجعتهم"
+      ],
+      "title": "صلاحيات الوكلاء ومراجعتهم | AGYNEXA",
+      "description": "حدّد البيانات التي يستخدمها الوكيل والقرارات التي تبقى لدى الأشخاص. راجع حدود المساحة واتفق على ضوابط الإجراءات الخارجية قبل التفعيل الإنتاجي.",
+      "canonical": "https://agynexa.si/ar/services/governance-security",
+      "alternates": {
+        "en": "https://agynexa.si/services/governance-security",
+        "ar": "https://agynexa.si/ar/services/governance-security",
+        "x-default": "https://agynexa.si/services/governance-security"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 16058,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/services/evaluation-observability",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Evaluate agent work and activity"
+      ],
+      "title": "Evaluate agent work and activity | AGYNEXA",
+      "description": "Test representative tasks, inspect the sources and compare the result with the work your team needs. Track correction effort and failures alongside speed and usage.",
+      "canonical": "https://agynexa.si/services/evaluation-observability",
+      "alternates": {
+        "en": "https://agynexa.si/services/evaluation-observability",
+        "ar": "https://agynexa.si/ar/services/evaluation-observability",
+        "x-default": "https://agynexa.si/services/evaluation-observability"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 11815,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/services/evaluation-observability",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "قيّم عمل الوكيل ونشاطه"
+      ],
+      "title": "قيّم عمل الوكيل ونشاطه | AGYNEXA",
+      "description": "اختبر مهام ممثلة وافحص المصادر وقارن النتيجة بما يحتاجه الفريق. تابع جهد التصحيح والإخفاقات إلى جانب السرعة والاستخدام.",
+      "canonical": "https://agynexa.si/ar/services/evaluation-observability",
+      "alternates": {
+        "en": "https://agynexa.si/services/evaluation-observability",
+        "ar": "https://agynexa.si/ar/services/evaluation-observability",
+        "x-default": "https://agynexa.si/services/evaluation-observability"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 9038,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/privacy",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Privacy notice"
+      ],
+      "title": "Privacy Notice | AGYNEXA",
+      "description": "How AGYNEXA uses account information, agent configurations, company knowledge and conversations, including saving, publication and deletion.",
+      "canonical": "https://agynexa.si/privacy",
+      "alternates": {
+        "en": "https://agynexa.si/privacy",
+        "ar": "https://agynexa.si/ar/privacy",
+        "x-default": "https://agynexa.si/privacy"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 4067,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/privacy",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "إشعار الخصوصية"
+      ],
+      "title": "إشعار الخصوصية | AGYNEXA",
+      "description": "تعرّف على استخدام معلومات الحساب وإعدادات الوكلاء والمعرفة والمحادثات في AGYNEXA، وخيارات الحفظ والنشر والحذف.",
+      "canonical": "https://agynexa.si/ar/privacy",
+      "alternates": {
+        "en": "https://agynexa.si/privacy",
+        "ar": "https://agynexa.si/ar/privacy",
+        "x-default": "https://agynexa.si/privacy"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3151,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/terms",
+      "http": 200,
+      "lang": "en",
+      "h1": [
+        "Usage terms"
+      ],
+      "title": "Usage Terms | AGYNEXA",
+      "description": "Responsibilities for using AGYNEXA Studio, providing information, reviewing generated results and managing private or published work.",
+      "canonical": "https://agynexa.si/terms",
+      "alternates": {
+        "en": "https://agynexa.si/terms",
+        "ar": "https://agynexa.si/ar/terms",
+        "x-default": "https://agynexa.si/terms"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3818,
+      "errors": []
+    },
+    {
+      "url": "https://agynexa.si/ar/terms",
+      "http": 200,
+      "lang": "ar",
+      "h1": [
+        "شروط الاستخدام"
+      ],
+      "title": "شروط الاستخدام | AGYNEXA",
+      "description": "مسؤوليات استخدام استوديو AGYNEXA وتقديم المعلومات ومراجعة النتائج المولدة وإدارة العمل الخاص والمحتوى المنشور.",
+      "canonical": "https://agynexa.si/ar/terms",
+      "alternates": {
+        "en": "https://agynexa.si/terms",
+        "ar": "https://agynexa.si/ar/terms",
+        "x-default": "https://agynexa.si/terms"
+      },
+      "og_image": "https://agynexa.si/opengraph-image",
+      "main_chars": 3022,
+      "errors": []
+    }
+  ],
+  "query_checks": [
+    {
+      "path": "/account",
+      "http": 200,
+      "final": "https://agynexa.si/account",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Your account and saved work"
+      ]
+    },
+    {
+      "path": "/ar/account",
+      "http": 200,
+      "final": "https://agynexa.si/ar/account",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "حسابك وأعمالك المحفوظة"
+      ]
+    },
+    {
+      "path": "/ar/integrations?from=%2Findustries",
+      "http": 200,
+      "final": "https://agynexa.si/ar/integrations?from=%2Findustries",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "حدّد مهمة كل اتصال"
+      ]
+    },
+    {
+      "path": "/ar/integrations?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/ar/integrations?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "حدّد مهمة كل اتصال"
+      ]
+    },
+    {
+      "path": "/ar/services/agent-orchestration?from=%2Findustries",
+      "http": 200,
+      "final": "https://agynexa.si/ar/services/agent-orchestration?from=%2Findustries",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "صمّم أدوارًا تعمل معًا"
+      ]
+    },
+    {
+      "path": "/ar/services/agent-orchestration?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/ar/services/agent-orchestration?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "صمّم أدوارًا تعمل معًا"
+      ]
+    },
+    {
+      "path": "/ar/services/customer-service?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/ar/services/customer-service?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "وكلاء ذكاء اصطناعي لخدمة العملاء"
+      ]
+    },
+    {
+      "path": "/ar/solutions/customer-operations?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/ar/solutions/customer-operations?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "احتفظ بسياق العميل عند تسليم العمل"
+      ]
+    },
+    {
+      "path": "/ar/solutions/knowledge?from=%2Fsolutions",
+      "http": 200,
+      "final": "https://agynexa.si/ar/solutions/knowledge?from=%2Fsolutions",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "إجابات من معرفة شركتك"
+      ]
+    },
+    {
+      "path": "/ar/solutions/service?from=%2Findustries",
+      "http": 200,
+      "final": "https://agynexa.si/ar/solutions/service?from=%2Findustries",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "جهّز ردود العملاء بسياق الحالة"
+      ]
+    },
+    {
+      "path": "/ar/solutions/service?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/ar/solutions/service?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": [
+        "جهّز ردود العملاء بسياق الحالة"
+      ]
+    },
+    {
+      "path": "/ar/studio",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=banking",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=banking",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=distribution",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=distribution",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=energy",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=energy",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=healthcare",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=healthcare",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=insurance",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=insurance",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=logistics",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=logistics",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=professional-services",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=professional-services",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=retail",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=retail",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=telecommunications",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=telecommunications",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?industry=travel",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?industry=travel",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=customer-operations",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=customer-operations",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=documents",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=documents",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=finance",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=finance",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=knowledge",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=knowledge",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=logistics",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=logistics",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=procurement",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=procurement",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=receivables",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=receivables",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=sales",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=sales",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/ar/studio?workflow=service",
+      "http": 200,
+      "final": "https://agynexa.si/ar/studio?workflow=service",
+      "query_preserved": true,
+      "lang": "ar",
+      "h1": []
+    },
+    {
+      "path": "/integrations?from=%2Findustries",
+      "http": 200,
+      "final": "https://agynexa.si/integrations?from=%2Findustries",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Give each connection a clear job"
+      ]
+    },
+    {
+      "path": "/integrations?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/integrations?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Give each connection a clear job"
+      ]
+    },
+    {
+      "path": "/services/agent-orchestration?from=%2Findustries",
+      "http": 200,
+      "final": "https://agynexa.si/services/agent-orchestration?from=%2Findustries",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Design roles that work together"
+      ]
+    },
+    {
+      "path": "/services/agent-orchestration?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/services/agent-orchestration?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Design roles that work together"
+      ]
+    },
+    {
+      "path": "/services/customer-service?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/services/customer-service?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "AI agents for customer service"
+      ]
+    },
+    {
+      "path": "/solutions/customer-operations?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/solutions/customer-operations?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Keep the account handover complete"
+      ]
+    },
+    {
+      "path": "/solutions/knowledge?from=%2Fsolutions",
+      "http": 200,
+      "final": "https://agynexa.si/solutions/knowledge?from=%2Fsolutions",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Answers from your company knowledge"
+      ]
+    },
+    {
+      "path": "/solutions/service?from=%2Findustries",
+      "http": 200,
+      "final": "https://agynexa.si/solutions/service?from=%2Findustries",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Prepare customer responses with context"
+      ]
+    },
+    {
+      "path": "/solutions/service?from=%2Fservices",
+      "http": 200,
+      "final": "https://agynexa.si/solutions/service?from=%2Fservices",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": [
+        "Prepare customer responses with context"
+      ]
+    },
+    {
+      "path": "/studio",
+      "http": 200,
+      "final": "https://agynexa.si/studio",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=banking",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=banking",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=distribution",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=distribution",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=energy",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=energy",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=healthcare",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=healthcare",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=insurance",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=insurance",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=logistics",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=logistics",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=professional-services",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=professional-services",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=retail",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=retail",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=telecommunications",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=telecommunications",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?industry=travel",
+      "http": 200,
+      "final": "https://agynexa.si/studio?industry=travel",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=customer-operations",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=customer-operations",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=documents",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=documents",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=finance",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=finance",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=knowledge",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=knowledge",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=logistics",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=logistics",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=procurement",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=procurement",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=receivables",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=receivables",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=sales",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=sales",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    },
+    {
+      "path": "/studio?workflow=service",
+      "http": 200,
+      "final": "https://agynexa.si/studio?workflow=service",
+      "query_preserved": true,
+      "lang": "en",
+      "h1": []
+    }
+  ],
+  "external_link_schemes_and_targets": [
+    "https://wa.me/201110093730",
+    "mailto:adham@agynexa.si",
+    "mailto:adham@agynexa.si?subject=AGYNEXA%20agent%20production%20activation",
+    "tel:+201110093730"
+  ]
+}

@@ -7,8 +7,8 @@ import {useLanguage} from './agynexa-shell'
 import Link from './locale-link'
 import {Button} from '@/components/ui/button'
 import {Input} from '@/components/ui/input'
-import services from '@/lib/service-catalog.json'
-import {solutions} from '@/lib/agynexa'
+import {safeAuthReturn} from '@/lib/auth-return'
+export {safeAuthReturn} from '@/lib/auth-return'
 import './account-workspace.css'
 
 const errors:Record<string,readonly string[]>={
@@ -25,17 +25,6 @@ const errors:Record<string,readonly string[]>={
  try_later:['Too many attempts. Wait before trying again.','تجاوزت عدد المحاولات المسموح. انتظر قبل المحاولة مجددًا.'],
  created_sign_in_required:['Your account was created. Please sign in to continue.','تم إنشاء حسابك. سجّل الدخول للمتابعة.'],
  temporarily_unavailable:['The service is temporarily unavailable. Please try again.','الخدمة غير متاحة مؤقتًا. حاول مرة أخرى.'],
-}
-/** Allow only local product destinations; never carry business text through URLs. */
-export function safeAuthReturn(value:string|null,ar:boolean){
- const fallback=ar?'/ar/studio':'/studio'
- if(!value||!value.startsWith('/')||value.startsWith('//')||value.includes('\\'))return fallback
- try{const url=new URL(value,'https://agynexa.invalid');if(url.origin!=='https://agynexa.invalid'||!/^\/(?:ar\/)?(?:studio|account|start)$/.test(url.pathname))return fallback
-  const query=new URLSearchParams();const service=url.searchParams.get('service');const solution=url.searchParams.get('solution')
-  if(service&&services.some(item=>item.slug===service))query.set('service',service)
-  if(solution&&solutions.some(item=>item.slug===solution))query.set('solution',solution)
-  return url.pathname+(query.size?'?'+query.toString():'')
- }catch{return fallback}
 }
 export function AuthForm({initialMode='login',onSuccess}:{initialMode?:'login'|'register';onSuccess?:()=>void}){
  const {t,ar}=useLanguage();const router=useRouter();const [mode,setMode]=useState(initialMode);const [busy,setBusy]=useState(false);const [error,setError]=useState('');const [showPassword,setShowPassword]=useState(false);const passwordId=useId()
@@ -56,7 +45,7 @@ export function AuthForm({initialMode='login',onSuccess}:{initialMode?:'login'|'
  }
  return <form className="auth-workspace-form" onSubmit={submit}>
   <div className="auth-provider">
-   <button type="button" data-oai-siwc-button data-oai-client-id={chatgpt?.clientId} className="auth-provider-button" disabled={busy||!chatgpt?.configured} aria-describedby={providerHelpId} onClick={()=>{if(chatgpt?.configured){setBusy(true);window.location.assign(`${chatgpt.href}?locale=${ar?'ar':'en'}${linkChatgpt?'&link=1':''}`)}}}>{t(['Continue with ChatGPT','المتابعة باستخدام ChatGPT'])}<ArrowUpRight size={17} aria-hidden="true"/></button>
+   <button type="button" data-oai-siwc-button data-oai-client-id={chatgpt?.clientId} className="auth-provider-button" disabled={busy||!chatgpt?.configured} aria-describedby={providerHelpId} onClick={()=>{if(chatgpt?.configured){setBusy(true);const params=new URLSearchParams(window.location.search),returnTo=safeAuthReturn(params.get('returnTo')||params.get('next')||window.location.pathname+window.location.search,ar),query=new URLSearchParams({locale:ar?'ar':'en',returnTo});if(linkChatgpt)query.set('link','1');window.location.assign(`${chatgpt.href}?${query}`)}}}>{t(['Continue with ChatGPT','المتابعة باستخدام ChatGPT'])}<ArrowUpRight size={17} aria-hidden="true"/></button>
    <p id={providerHelpId} className="auth-provider-note">{chatgpt===null?t(['Checking sign-in options…','جارٍ التحقق من طرق الدخول…']):chatgpt.configured?t(['Use your ChatGPT identity. Model usage is configured separately.','استخدم هوية ChatGPT. يُضبط استخدام النماذج بشكل مستقل.']):t(['ChatGPT sign-in is awaiting activation. Email sign-in is available below.','تسجيل الدخول عبر ChatGPT بانتظار التفعيل. يمكنك الدخول بالبريد أدناه.'])}</p>
   </div>
   <div className="auth-divider"><span>{t(['or use email','أو استخدم البريد الإلكتروني'])}</span></div>

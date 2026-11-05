@@ -29,3 +29,13 @@ The required 19 October market review advocated explicit outcomes, approved sour
 Mobbin search was attempted by the release lead and refused for plan eligibility; no unseen screen was used or cited as a reference. Humanizer's embedded editing process was applied to the new product copy. Bundled Next.js use-client documentation was read after dependencies became available; official Next.js client/CSS documentation was consulted before then.
 
 No interim application tests were run, per the owner's final-production-only verification instruction. No production account, model call, key creation, email send, data write or deployment was performed by this frontend subtask.
+
+## Production handoff correction candidate
+
+Source corrections prepared after the release lead's production review of `840c58d`:
+
+- Signed-out and authenticated Studio locale links retain the existing query and fragment. A versioned draft belongs to one canonical workflow, industry, agent or custom context; a different valid incoming context discards an unrelated draft and selects its own task. `solution` and `workflow` aliases use the same workflow context. Invalid values do not mask a valid industry selection.
+- Authentication consumes only a matching draft. New-agent builder configuration is captured before a locale change, including task, sector, name, instructions, language, template, tools and current step; secrets are not included. Existing saved-agent settings continue to use their existing save flow.
+- Provider `sandbox:/…` Markdown references render as plain labels. The stored answer is unchanged, and the only artifact download link remains the authorized run-artifact route. The HTTP/HTTPS link allowlist is unchanged.
+
+These corrections are IMPLEMENTED and source-reviewed, with production behavioral verification assigned to the release lead. No additional frontend test suite, build, commit or deployment was run for this correction.

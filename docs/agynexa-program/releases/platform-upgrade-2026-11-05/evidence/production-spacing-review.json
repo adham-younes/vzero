@@ -1,0 +1,494 @@
+{
+  "status": "completed",
+  "measured": true,
+  "score": 70,
+  "summary": {
+    "critical": 0,
+    "serious": 0,
+    "moderate": 6,
+    "total": 6
+  },
+  "findings": [
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "architecture-ar-390",
+      "severity": "moderate",
+      "message": "architecture-ar-390 uses 7 off-scale spacing values across 18 elements: 10px, 14px, 18px, 20px, 28px, 30px, 40px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "el-2",
+        "el-16",
+        "el-18",
+        "el-20",
+        "el-22",
+        "el-24",
+        "el-26",
+        "el-27",
+        "el-28",
+        "el-29",
+        "el-30",
+        "el-31",
+        "el-32",
+        "el-33",
+        "el-34",
+        "el-35",
+        "el-37",
+        "el-39"
+      ],
+      "evidence": [
+        {
+          "label": "el-2 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 padding bottom",
+          "value": 30,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-16 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-18 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-20 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-22 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-24 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-26 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "راجع خطوات البناء row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "راجع خطوات البناء column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "متطلبات الربط row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "متطلبات الربط column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "el-29 padding top",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "قدرات مرتبطة — اقرأها هنا margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "معرفة الشركة للوكلاء padding right",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "معرفة الشركة للوكلاء padding left",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "تنسيق عمل الوكلاء padding right",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "تنسيق عمل الوكلاء padding left",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "صلاحيات الوكلاء والإشراف البشري padding right",
+          "value": 14,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-1"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "architecture-ar-390",
+      "severity": "moderate",
+      "message": "الرئيسية measures 47.03x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "el-3"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 47.03,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-2"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "architecture-ar-1440",
+      "severity": "moderate",
+      "message": "architecture-ar-1440 uses 9 off-scale spacing values across 19 elements: 10px, 14px, 18px, 20px, 28px, 36px, 44px, 56px, 80px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "el-2",
+        "el-4",
+        "el-16",
+        "el-18",
+        "el-20",
+        "el-22",
+        "el-24",
+        "el-26",
+        "el-27",
+        "el-28",
+        "el-29",
+        "el-30",
+        "el-31",
+        "el-32",
+        "el-33",
+        "el-34",
+        "el-35",
+        "el-37",
+        "el-39"
+      ],
+      "evidence": [
+        {
+          "label": "el-2 padding top",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 padding bottom",
+          "value": 44,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 margin right",
+          "value": 80,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 margin left",
+          "value": 80,
+          "unit": "px"
+        },
+        {
+          "label": "بنية المنصة margin bottom",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "el-16 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-18 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-20 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-22 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-24 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-26 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "راجع خطوات البناء row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "راجع خطوات البناء column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "متطلبات الربط row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "متطلبات الربط column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "el-29 padding top",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "قدرات مرتبطة — اقرأها هنا margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "معرفة الشركة للوكلاء padding right",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "معرفة الشركة للوكلاء padding left",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "تنسيق عمل الوكلاء padding right",
+          "value": 14,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-3"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "architecture-ar-1440",
+      "severity": "moderate",
+      "message": "الرئيسية measures 47.03x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "el-3"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 47.03,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-4"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "architecture-ar-1728",
+      "severity": "moderate",
+      "message": "architecture-ar-1728 uses 9 off-scale spacing values across 19 elements: 10px, 14px, 18px, 20px, 28px, 36px, 44px, 56px, 224px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "el-2",
+        "el-4",
+        "el-16",
+        "el-18",
+        "el-20",
+        "el-22",
+        "el-24",
+        "el-26",
+        "el-27",
+        "el-28",
+        "el-29",
+        "el-30",
+        "el-31",
+        "el-32",
+        "el-33",
+        "el-34",
+        "el-35",
+        "el-37",
+        "el-39"
+      ],
+      "evidence": [
+        {
+          "label": "el-2 padding top",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 padding bottom",
+          "value": 44,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 margin right",
+          "value": 224,
+          "unit": "px"
+        },
+        {
+          "label": "el-2 margin left",
+          "value": 224,
+          "unit": "px"
+        },
+        {
+          "label": "بنية المنصة margin bottom",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "el-16 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-18 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-20 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-22 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-24 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "el-26 margin top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "راجع خطوات البناء row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "راجع خطوات البناء column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "متطلبات الربط row gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "متطلبات الربط column gap",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "el-29 padding top",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "قدرات مرتبطة — اقرأها هنا margin bottom",
+          "value": 18,
+          "unit": "px"
+        },
+        {
+          "label": "معرفة الشركة للوكلاء padding right",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "معرفة الشركة للوكلاء padding left",
+          "value": 14,
+          "unit": "px"
+        },
+        {
+          "label": "تنسيق عمل الوكلاء padding right",
+          "value": 14,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-5"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "architecture-ar-1728",
+      "severity": "moderate",
+      "message": "الرئيسية measures 47.03x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "el-3"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 47.03,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-6"
+    }
+  ],
+  "density": {
+    "mode": "spacious",
+    "source": "argument",
+    "roles": []
+  },
+  "capturedWidths": [
+    390,
+    1440,
+    1728
+  ],
+  "missingWidths": [],
+  "rubric": [
+    {
+      "id": "review-rules-visual-design",
+      "title": "Visual Design"
+    }
+  ],
+  "rubricStatus": "loaded",
+  "nextStep": "Before you finish this review, call `find-design-system` with the product's description and list its top matches in your report, so the person can pick a style. Restyle the screen only with the one they pick.",
+  "interpretation": "Geometry-only review of architecture in Arabic. No critical or serious finding. Breadcrumb36px touchheight fixed to44px in acceptance patch. Default token-scale warnings include intentional existing spacing and responsive auto margins, not proven overlap or visual defects. Capture omitted detailed roles, so density grading is unavailable."
+}

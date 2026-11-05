@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-11-05T11:29:19.401198+00:00",
+  "cli_version": "0.7.2",
+  "device_authorization": "completed_by_owner",
+  "api_balance": 0,
+  "studio_balance": 200,
+  "credits_spent": 0,
+  "generation_submitted": false,
+  "reason": "Studio is Free with limited exports and the current pricing page labels Free outputs non-commercial; no additional subscription or credit purchase authorized. Authored SVG/CSS visuals are published instead.",
+  "pricing_source": "https://www.tripo3d.ai/pricing",
+  "doc_inconsistency": "October pricing-credits help page says free outputs commercial with attribution; public pricing says non-commercial. Commercial entitlement is therefore unconfirmed.",
+  "asset_provenance": "No Tripo-generated asset is included in this release."
+}
