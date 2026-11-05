@@ -1,6 +1,6 @@
 ## Public information architecture — local candidate, 27 October 2026
 
-PUBLIC-NAV-2026-10-27 — Production navigation is live and scoped functional checks passed. Visual acceptance remains open after owner feedback on the Arabic Capabilities sidebar. [Release scope and evidence](releases/public-navigation-2026-10-27/README.md).
+PUBLIC-NAV-2026-10-27 — The correction for the Arabic Capabilities sidebar is in production. One row groups search, filters and selection in the public catalogues, with one detail area underneath. The scoped checks passed. [Release scope and evidence](releases/public-navigation-2026-10-27/README.md).
 
 Latest verified maintenance: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md), main `445424f` / READY production deployment `dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX`. Dependency advisories8→0, local/public checks and bounded anonymous production rejections passed. Studio/agent planning remains deferred.
 

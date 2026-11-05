@@ -78,3 +78,11 @@ The revised local build and TypeScript passed. The [local contract](evidence/cat
 The [production side-browser checks](evidence/production-browser.json) cover both homepages, six links and playing video, the Sales view on desktop and mobile, Finance to Connections to requirements on one page, reload and locale state, the capability filter/search and browser Back, and the Logistics sector selection across languages. The Studio check was limited to the anonymous entry.
 
 The owner subsequently rejected the sidebar in the published Arabic Capabilities view. After comparing a short card grid and a single selector locally, the owner asked for the display that matches the design system. The follow-up uses the project's Input, Label and Button components, one labelled native item selector and a shared reading layout. Search, filtering and selection share one row at wide widths and stack on phones.
+
+## Shared catalogue controls in production
+
+[PR #55](https://github.com/adham-younes/vzero/pull/55) merged reviewed head `18b2ebc90d6db7b79b30107fe39963ffec6616d3` as `6d9b13a76e222d5ceae42711b9da5e0cb0a85a46`. The matching Vercel Preview passed. Git integration built [`dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V`](https://vercel.com/adhamlouxors-projects/vzero/8rmPcjyi6oAHpaafvQrDwcnRrH3V) with state READY and target production. Both official aliases resolved to that deployment. [Release metadata](evidence/standard-catalogue-release.json).
+
+[Local route checks](evidence/standard-catalogue-local-contract.json) passed on the reviewed layout before the English result-count wording change. The exact PR head passed its Vercel build. [17 read-only production HTTP checks](evidence/standard-catalogue-production-http.json) confirmed the shared control row in both languages, the canonical URLs and redirects, the signed-out Studio entry and the original video hash.
+
+[Production browser evidence](evidence/standard-catalogue-production-browser.json) records the 48px aligned fields at 1280px and their 390px layout. Search by the short label, browser Back and switching languages preserve the query, category and selection. The Finance-to-Connections path and the Logistics example stay within their catalogues. [Arabic desktop](evidence/standard-capabilities-ar-desktop.jpg) · [Arabic mobile](evidence/standard-capabilities-ar-390.jpg).

@@ -1,4 +1,4 @@
-Public navigation was deployed and functionally verified on 5 November 2026 at main `6a79a15`. The owner rejected the sidebar on Arabic Capabilities after viewing production. The next catalogue design is a local review candidate. [Release receipt and evidence](releases/public-navigation-2026-10-27/README.md).
+The shared catalogue controls shipped on 5 November 2026 at main `6d9b13a`. Solutions, Capabilities and Industries use one control row and one selected reading area. The official Arabic Capabilities layout, URL state and mobile flow were checked. [Release receipt and evidence](releases/public-navigation-2026-10-27/README.md).
 
 Latest verified release: [minimal HeronSignal browser installation](releases/heronsignal-sitewide-2026-10-24/README.md), main `80abfdc` / READY production `dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs`. Official tracker200/config/events204 and single-installation checks passed; MCP/dashboard status was not queried. [Arabic handoff](HANDOFF-2026-10-24.md). Studio/agent redesign remains deferred.
 

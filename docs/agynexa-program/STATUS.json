@@ -754,7 +754,7 @@
   },
   "public_navigation_release": {
     "date": "2026-10-27",
-    "status": "DEPLOYED_FUNCTIONAL_CHECKS_PASS_DESIGN_REVISION_REQUESTED",
+    "status": "PRODUCTION_SHARED_CATALOGUE_CONTROLS_VERIFIED",
     "baseline": "c61cc369bfa9f678ed794d71b0f0266423948b8f",
     "branch": "codex/public-navigation-consistency",
     "receipt": "releases/public-navigation-2026-10-27/README.md",
@@ -764,11 +764,11 @@
     "committed": true,
     "pushed": true,
     "deployed": true,
-    "production_commit": "6a79a15edd247e0d1dd7497059c73be89c00eddd",
-    "production_deployment": "dpl_4UMQUBZ7s1SD7gv6YFm5p8kpPMGy",
+    "production_commit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+    "production_deployment": "dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V",
     "production_domain": "https://agynexa.si",
     "auth_database_provider_changed": false,
-    "verification": "Matching READY production deployment and both official aliases, 17 readonly HTTP checks, desktop and 390px side-browser checks. The owner subsequently rejected the sidebar in Arabic Capabilities.",
+    "verification": "Matching READY production deployment and both official aliases, 17 readonly HTTP checks and desktop and 390px side-browser checks on the shared controls, return and language state, and inline requirements.",
     "verified_date": "2026-11-05",
     "production_authorized_date": "2026-11-05",
     "revision_date": "2026-10-28"

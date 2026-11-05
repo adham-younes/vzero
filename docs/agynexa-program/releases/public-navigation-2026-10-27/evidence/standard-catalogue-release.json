@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-05",
+  "officialUrl": "https://agynexa.si",
+  "pullRequest": "https://github.com/adham-younes/vzero/pull/55",
+  "reviewedHead": "18b2ebc90d6db7b79b30107fe39963ffec6616d3",
+  "previewDeployment": "dpl_6dt1XcbrCtDf8YyYz6owx5dUPjSe",
+  "mergeCommit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+  "mergedAtUtc": "2026-11-05T06:50:57Z",
+  "production": {
+    "deployment": "dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V",
+    "state": "READY",
+    "target": "production",
+    "source": "git",
+    "readyAtUtc": "2026-11-05T06:51:25.854Z",
+    "host": "vzero-e0x7bsdno-adhamlouxors-projects.vercel.app",
+    "aliasesVerified": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ]
+  },
+  "previousDeployment": {
+    "deployment": "dpl_4UMQUBZ7s1SD7gv6YFm5p8kpPMGy",
+    "commit": "6a79a15edd247e0d1dd7497059c73be89c00eddd",
+    "limitation": "Functionally verified. The owner rejected the sidebar in Arabic Capabilities."
+  },
+  "verification": {
+    "local": "standard-catalogue-local-contract.json",
+    "publicHttp": "standard-catalogue-production-http.json",
+    "browser": "standard-catalogue-production-browser.json"
+  },
+  "scope": "Public catalogue controls and reading layout. Studio was checked only at the anonymous entry."
+}
