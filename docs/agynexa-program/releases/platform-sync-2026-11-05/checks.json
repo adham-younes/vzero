@@ -1,0 +1,161 @@
+{
+  "date": "2026-11-05",
+  "observedAtUtc": "2026-11-05T07:07:47Z",
+  "status": "OPERATIONAL_CHECKS_PASS_WITH_ADVISORIES",
+  "github": {
+    "repository": "adham-younes/vzero",
+    "branch": "main",
+    "commit": "b4bac3cb819d8599b67ae85921502dcafaa43f6c",
+    "latestProductCommit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+    "sourcePullRequest": "https://github.com/adham-younes/vzero/pull/55",
+    "documentationPullRequest": "https://github.com/adham-younes/vzero/pull/56"
+  },
+  "vercel": {
+    "project": "vzero",
+    "deployment": "dpl_4dEws8CVUtdPNN5MbT9oX3qA12Q3",
+    "state": "READY",
+    "target": "production",
+    "source": "git",
+    "sha": "b4bac3cb819d8599b67ae85921502dcafaa43f6c",
+    "officialAliasesMatched": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ]
+  },
+  "supabase": {
+    "projectRef": "xsyxvswbiptbyxyqhdim",
+    "state": "ACTIVE_HEALTHY",
+    "publicTables": 24,
+    "rlsEnabled": 24,
+    "rlsWithoutPolicies": 7,
+    "rawHistorySelectBlocked": true,
+    "securityAdvisor": {
+      "warnings": 1,
+      "informational": 1,
+      "warningCategory": "Auth hardening",
+      "informationalCategory": "RLS policy coverage"
+    },
+    "migrationHistory": {
+      "repositoryCount": 11,
+      "hostedCount": 11,
+      "missingNames": [],
+      "hostedOnlyNames": [],
+      "versionDifferences": 7,
+      "comparison": [
+        {
+          "name": "accounts_and_project_briefs",
+          "repositoryVersion": "20261020074037",
+          "hostedVersion": "20261020074037"
+        },
+        {
+          "name": "restrict_platform_event_trigger",
+          "repositoryVersion": "20261020074207",
+          "hostedVersion": "20261020074207"
+        },
+        {
+          "name": "studio_foundation",
+          "repositoryVersion": "20261020102401",
+          "hostedVersion": "20261020115103"
+        },
+        {
+          "name": "studio_runtime",
+          "repositoryVersion": "20261020113246",
+          "hostedVersion": "20261020115108"
+        },
+        {
+          "name": "studio_finalize_approval",
+          "repositoryVersion": "20261020120653",
+          "hostedVersion": "20261020120723"
+        },
+        {
+          "name": "customer_chat_profile",
+          "repositoryVersion": "20261021221316",
+          "hostedVersion": "20261021225511"
+        },
+        {
+          "name": "protected_history_reads",
+          "repositoryVersion": "20261021222156",
+          "hostedVersion": "20261021230003"
+        },
+        {
+          "name": "nexa_email_foundation",
+          "repositoryVersion": "20261022011621",
+          "hostedVersion": "20261022015058"
+        },
+        {
+          "name": "studio_saved_work_actions",
+          "repositoryVersion": "20261022012821",
+          "hostedVersion": "20261022015057"
+        },
+        {
+          "name": "nexa_mail_activity_identity",
+          "repositoryVersion": "20261022033751",
+          "hostedVersion": "20261022033751"
+        },
+        {
+          "name": "nexa_inbox_thread_contract",
+          "repositoryVersion": "20261022034859",
+          "hostedVersion": "20261022034859"
+        }
+      ]
+    }
+  },
+  "publicHttp": [
+    {
+      "path": "/",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ar/about?capability=process-automation",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ar/services",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/api/health/supabase",
+      "status": 200,
+      "noStore": true,
+      "noSniff": true,
+      "checks": {
+        "project": "ok",
+        "publishableKey": "ok",
+        "secretKey": "ok"
+      },
+      "pass": true
+    },
+    {
+      "path": "/api/account",
+      "status": 401,
+      "noStore": true,
+      "noSniff": true,
+      "authRejection": true,
+      "pass": true
+    },
+    {
+      "path": "/api/v1/agents",
+      "status": 401,
+      "noStore": true,
+      "noSniff": true,
+      "authRejection": true,
+      "pass": true
+    },
+    {
+      "path": "/api/v1/projects",
+      "status": 401,
+      "noStore": true,
+      "noSniff": true,
+      "authRejection": true,
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Migration comparison covers names and recorded version identifiers. SQL statements were not diffed.",
+    "RLS checks cover table settings and the selected raw-history grants. No authenticated tenant journey, provider call, or email transaction was run.",
+    "Publishing the receipt may create a newer documentation-only deployment. The publication PR records its source and official aliases."
+  ]
+}
