@@ -1,0 +1,42 @@
+{
+  "synthetic": true,
+  "purpose": "Production import and capacity acceptance",
+  "fixtures": [
+    {
+      "name": "cedar-reference.json",
+      "bytes": 82
+    },
+    {
+      "name": "cedar-policy.docx",
+      "bytes": 914
+    },
+    {
+      "name": "cedar-policy.pdf",
+      "bytes": 686
+    },
+    {
+      "name": "invalid-document.pdf",
+      "bytes": 18
+    },
+    {
+      "name": "oversized.txt",
+      "bytes": 4194305
+    },
+    {
+      "name": "cedar-workbook.xlsx",
+      "bytes": 1786
+    },
+    {
+      "name": "cedar-notes.md",
+      "bytes": 142
+    },
+    {
+      "name": "cedar-capacity.txt",
+      "bytes": 24044
+    },
+    {
+      "name": "cedar-table.csv",
+      "bytes": 64
+    }
+  ]
+}

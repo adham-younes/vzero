@@ -1,8 +1,8 @@
-# Current work package — OpenAI Studio upgrade, 5 November 2026
+# Current work — platform content, shared design and Studio correction
 
-The authorized bilingual platform/Studio upgrade is deployed and verified within its documented scope. PR65 and the focused acceptance follow-up PR66 are merged; the platform upgrade was verified at source `794c2b8`. The subsequent [original Studio palette restoration](releases/studio-palette-restoration-2026-11-05.md) is live at main `a7b2f0ab0517071dd521577e8d65f8331dc660a0`, READY production deployment `dpl_2LE5xagbkjHc95kdRcmNJnX36aAz` on agynexa.si. [Current release scope](releases/platform-upgrade-2026-11-05/README.md) and [production acceptance](releases/platform-upgrade-2026-11-05/PRODUCTION.md) supersede older preview-only and Studio-deferral statements below. Both database migrations are applied. All 68 public pages and real OpenAI web/Python, artifact download and Arabic knowledge checks passed. Final evidence is committed separately on the delivery branch and linked from PR66, without a documentation-only production redeployment.
+The owner-requested correction is implemented as a candidate; release build and production acceptance are pending. The additive source-capacity migration is applied and its expanded constraint verified. [Scope and verification boundary](releases/studio-documents-and-response-flow-2026-11-05/README.md). The last verified production remains PR67 / `a7b2f0a`. Preserve its restored palette and the original Hero/video.
 
-Implemented scope: sector agent builder, instructions/knowledge, optional web research and Python, OpenAI Terra/high, encrypted customer API connection, test-before-request activation and email negotiation, updated public content/SEO and private-route telemetry exclusions. ChatGPT sign-in requires issued client configuration; ChatGPT plan billing is not enabled. CRM/ERP connectors, shared team roles and payment settlement are not claimed.
+The correction covers public EN/AR content and shared tokens, removal of the rejected illustration, reviewed PDF/Word/Excel/text import, real run-progress states, fewer repeated reads and a quieter conversation. ChatGPT configuration, plan-funded execution and enterprise connectors remain explicitly limited. Historical evidence below is unchanged.
 
 ---
 

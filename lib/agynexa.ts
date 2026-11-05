@@ -20,12 +20,12 @@ export const solutions = [
       "السؤال وسياق الحالة والمادة المعرفية المعتمدة التي تتصل بها."
     ],
     "flow": [
-      "Locate the applicable material, interpret it for the case and retain the source. Route conflicting or unanswered points to the knowledge owner.",
-      "الوصول إلى المادة المناسبة وتفسيرها في سياق الحالة مع الاحتفاظ بمرجعها، وإحالة التعارض أو الغموض إلى مسؤول المعرفة."
+      "Find the relevant passage, explain it for the question and list any point the source does not resolve.",
+      "استرجاع النص المناسب وشرح علاقته بالسؤال وتحديد النقاط التي لا يحسمها المصدر."
     ],
     "output": [
-      "An answer with relevant sources, open questions and a clear route to the knowledge owner.",
-      "إجابة بمصادر مرتبطة وأسئلة مفتوحة ومسار واضح إلى مسؤول المعرفة."
+      "An answer with the relevant source passages and questions still needing a decision.",
+      "إجابة بنصوص المصادر المرتبطة بها والأسئلة التي تنتظر قرارًا."
     ],
     "accept": [
       "Evaluate case relevance, source support and the correction required, using ordinary questions and genuine exceptions.",
@@ -51,12 +51,12 @@ export const solutions = [
       "محتوى المستند وسياق الحالة أو المشروع والمعلومات المطلوبة وقواعد التعامل مع التعديلات والتعارض."
     ],
     "flow": [
-      "Identify the document, extract the relevant facts, compare them with process requirements and send unresolved issues to the responsible person.",
-      "تحديد المستند واستخلاص حقائقه ومقارنتها بمتطلبات العملية وإحالة المسائل المفتوحة إلى المسؤول المختص."
+      "Extract the requested facts, compare them with your checklist and flag conflicting or missing information.",
+      "استخراج البيانات المطلوبة ومقارنتها بقائمة المتطلبات وتوضيح التعارض والنواقص."
     ],
     "output": [
-      "A structured document brief with extracted facts, source references and missing information.",
-      "موجز منظم للمستند بالحقائق المستخلصة ومراجعها والمعلومات الناقصة."
+      "A summary of the extracted facts, their sources and missing information.",
+      "ملخص بالبيانات المستخرجة ومصادرها والمعلومات الناقصة."
     ],
     "accept": [
       "Check factual accuracy, version handling, exception ownership and the receiving team’s ability to continue the work.",
@@ -82,12 +82,12 @@ export const solutions = [
       "استفسار العميل ونتائج الاجتماعات ومعلومات العرض المعتمدة والحقائق اللازمة لتقييم الملاءمة."
     ],
     "flow": [
-      "Clarify the need, assess it against the offer, resolve delivery questions and prepare the next sales step for the responsible owner.",
-      "توضيح الاحتياج وتقييمه أمام العرض المتاح وحسم متطلبات التسليم ثم تجهيز الخطوة التالية لمسؤول الفرصة."
+      "Summarize the customer’s requirements, compare them with confirmed capabilities and prepare questions for the sales owner.",
+      "تلخيص متطلبات العميل ومقارنتها بالإمكانات المؤكدة وتجهيز أسئلة لمسؤول المبيعات."
     ],
     "output": [
-      "A qualification brief or proposal draft with assumptions and a proposed next step for the sales owner.",
-      "موجز لتأهيل الفرصة أو مسودة عرض، بافتراضات وخطوة تالية مقترحة لمسؤول المبيعات."
+      "A customer needs summary or proposal draft with assumptions for the sales owner to review.",
+      "ملخص لاحتياج العميل أو مسودة عرض بافتراضاتها، يراجعها مسؤول المبيعات."
     ],
     "accept": [
       "Review requirement accuracy, the basis of commercial promises and the quality of handovers between sales and delivery.",
@@ -113,12 +113,12 @@ export const solutions = [
       "مشكلة العميل وتاريخ الحالة والإرشادات المعتمدة والمعلومات المطلوبة للخطوة التالية."
     ],
     "flow": [
-      "Understand the issue, apply the relevant guidance and coordinate resolution or an accepted escalation with its context intact.",
-      "فهم المشكلة وتطبيق الإرشاد المناسب، ثم تنسيق الحل أو التصعيد إلى مسؤول يقبل الحالة مع سياقها الكامل."
+      "Review the case against the policy and prepare a reply or a summary for the responsible specialist.",
+      "مراجعة الحالة وفق السياسة وتجهيز رد أو ملخص للمختص المسؤول."
     ],
     "output": [
-      "A supported response draft or an escalation brief with the information the receiving team needs.",
-      "مسودة رد مدعومة أو ملف تصعيد بالمعلومات التي يحتاجها الفريق المستلم."
+      "A reply draft or a case summary for the specialist handling the issue.",
+      "مسودة رد أو ملخص حالة للمختص الذي يتولى المشكلة."
     ],
     "accept": [
       "Assess correct policy use, case progress, repeated questions and the receiving team’s ability to continue.",
@@ -144,12 +144,12 @@ export const solutions = [
       "السجلات المالية ذات الصلة وقواعد المطابقة والحساب وسياق الفترة والأدلة المؤيدة."
     ],
     "flow": [
-      "Establish the discrepancy, investigate its supported causes and present the case to the finance owner for the authorized treatment.",
-      "تحديد الفرق والتحقيق في أسبابه المدعومة، ثم عرض الحالة على المسؤول المالي لاعتماد المعالجة."
+      "Compare the records using your matching rules, calculate differences and list the evidence for possible causes.",
+      "مقارنة السجلات وفق قواعد المطابقة وحساب الفروق وتحديد الأدلة للأسباب المحتملة."
     ],
     "output": [
-      "An analysis of the discrepancy, supporting records and a proposed treatment for financial review.",
-      "تحليل للفروق والسجلات المؤيدة ومعالجة مقترحة للمراجعة المالية."
+      "A report of financial differences, supporting records and unresolved questions.",
+      "تقرير بالفروق المالية والسجلات المؤيدة والأسئلة غير المحسومة."
     ],
     "accept": [
       "Verify arithmetic independently, assess explanations against records and track unresolved cases and correction effort.",
@@ -175,12 +175,12 @@ export const solutions = [
       "معرفات الشحنة والأحداث المسجلة وخطة الحركة والمستندات والالتزامات ذات الصلة."
     ],
     "flow": [
-      "Establish the event sequence, identify affected dependencies and coordinate an authorized response with the responsible teams.",
-      "تحديد تسلسل الأحداث وآثارها على الأعمال المرتبطة، ثم تنسيق استجابة مخولة مع الفرق المسؤولة."
+      "Put shipment updates in order, identify affected commitments and prepare follow-up options.",
+      "ترتيب تحديثات الشحنة وتحديد الالتزامات المتأثرة وتجهيز خيارات المتابعة."
     ],
     "output": [
-      "An exception brief with confirmed events, affected commitments and response options for operations.",
-      "موجز للاستثناء بالأحداث المؤكدة والالتزامات المتأثرة وخيارات الاستجابة للعمليات."
+      "A summary of confirmed shipment events, affected commitments and follow-up options.",
+      "ملخص بأحداث الشحنة المؤكدة والالتزامات المتأثرة وخيارات المتابعة."
     ],
     "accept": [
       "Review event accuracy, conflicting updates, exception ownership and confirmation of the resulting action.",
@@ -206,12 +206,12 @@ export const solutions = [
       "الاحتياج الداخلي والمواصفات الأساسية وعروض الموردين وقواعد المقارنة وشروط الاعتماد."
     ],
     "flow": [
-      "Clarify the requirement, compare supported terms, resolve technical and commercial exceptions and obtain the authorized purchasing decision.",
-      "توضيح الاحتياج ومقارنة الشروط المعروفة وحسم الاستثناءات الفنية والتجارية وصولًا إلى قرار شراء مخول."
+      "Compare equivalent items, calculate totals and identify missing terms for the buyer to review.",
+      "مقارنة البنود المتكافئة وحساب الإجماليات وتحديد الشروط الناقصة لمراجعة مسؤول الشراء."
     ],
     "output": [
-      "A source-backed offer comparison with missing terms and decisions reserved for the authorized buyer.",
-      "مقارنة عروض بمراجع وشروط ناقصة وقرارات متروكة لمسؤول الشراء المخول."
+      "A supplier comparison with source references and missing terms for the buyer.",
+      "مقارنة للموردين بمراجعها والشروط الناقصة التي يراجعها مسؤول الشراء."
     ],
     "accept": [
       "Check specification coverage, consistent calculations, unresolved terms and the authority behind each commitment.",
@@ -237,12 +237,12 @@ export const solutions = [
       "الفواتير والتسويات وأدلة السداد والشروط المتفق عليها وتاريخ الاعتراضات أو تعهدات السداد."
     ],
     "flow": [
-      "Verify the balance, identify the unresolved dependency and coordinate the appropriate finance decision and follow-up.",
-      "التحقق من الرصيد وتحديد ما يعطل حسمه ثم تنسيق القرار المالي والمتابعة المناسبة."
+      "Review supplied balances and disputes, then prepare a follow-up list and draft messages.",
+      "مراجعة الأرصدة والنزاعات المقدمة، ثم تجهيز قائمة متابعة ومسودات رسائل."
     ],
     "output": [
-      "An account follow-up brief and message drafts for the responsible finance reviewer.",
-      "موجز لمتابعة الحساب ومسودات تواصل للمراجع المالي المسؤول."
+      "A follow-up list and message drafts for the account owner to review.",
+      "قائمة متابعة ومسودات رسائل يراجعها مسؤول الحساب."
     ],
     "accept": [
       "Check balance correctness, payment matching, dispute handling and whether customer contact addresses the actual issue.",
@@ -268,12 +268,12 @@ export const solutions = [
       "النطاق المتفق عليه ومعلومات العميل وشروط البدء ومسؤوليات الفرق التي تخدم الحساب."
     ],
     "flow": [
-      "Coordinate onboarding dependencies, confirm readiness and carry the account context into service and later change decisions.",
-      "تنسيق شروط التجهيز وتأكيد الجاهزية، ثم استمرار سياق الحساب في الخدمة وقرارات التغيير اللاحقة."
+      "Summarize the agreed scope, conditions for starting and outstanding tasks for the receiving team.",
+      "تلخيص النطاق المتفق عليه وشروط البدء والمهام المتبقية للفريق المستلم."
     ],
     "output": [
-      "A handover brief with agreed obligations, unresolved dependencies and the proposed next owner.",
-      "ملف تسليم بالالتزامات المتفق عليها والاعتمادات المفتوحة والمسؤول المقترح للخطوة التالية."
+      "A handover summary of agreed obligations, remaining requirements and the next person responsible.",
+      "ملخص تسليم بالالتزامات المتفق عليها والمتطلبات المتبقية والمسؤول عن الخطوة التالية."
     ],
     "accept": [
       "Review handoff continuity, missed dependencies, repeated requests and consistency between customer and internal information.",
@@ -284,53 +284,53 @@ export const solutions = [
 
 export const headings: Record<string, Copy> = {
   "services": [
-    "The capabilities behind your agent.",
-    "القدرات التي تدعم وكيلك."
+    "AI agent capabilities",
+    "قدرات وكلاء الذكاء الاصطناعي"
   ],
   "solutions": [
-    "Choose the work your agent will support.",
-    "اختر العمل الذي سيساعدك فيه الوكيل."
+    "Choose a task for your agent",
+    "اختر مهمة لوكيلك"
   ],
   "methodology": [
-    "Build, test and activate your agent",
-    "ابنِ الوكيل واختبره ثم فعّله"
+    "Build and test your first agent",
+    "جهّز وكيلك الأول واختبره"
   ],
   "architecture": [
-    "How your agent’s workspace works",
-    "كيف تعمل مساحة الوكيل؟"
+    "How AGYNEXA Studio works",
+    "كيف يعمل استوديو AGYNEXA؟"
   ],
   "integrations": [
-    "Give each connection a clear job",
-    "حدّد مهمة كل اتصال"
+    "Available tools and connection requirements",
+    "الأدوات المتاحة ومتطلبات ربط الأنظمة"
   ],
   "security": [
-    "Keep control of data and decisions",
-    "احتفظ بالسيطرة على البيانات والقرارات"
+    "Your data and access in Studio",
+    "بياناتك وصلاحيات الوصول في الاستوديو"
   ],
   "resources": [
-    "Practical guides for your first agent",
-    "إرشادات عملية لوكيلك الأول"
+    "A practical guide to setting up your agent",
+    "دليل عملي لإعداد الوكيل"
   ],
   "about": [
-    "One platform. Built around your work.",
-    "منصة واحدة تتشكل حول عملك."
+    "About AGYNEXA",
+    "عن AGYNEXA"
   ],
   "agentnexos": [
-    "AgentNexOS: a shared model for agent work",
-    "AgentNexOS: تصور مشترك لعمل الوكلاء"
+    "AgentNexOS: planning agent responsibilities",
+    "AgentNexOS: تخطيط أدوار الوكلاء"
   ],
   "start": [
-    "Bring your first task into Studio.",
-    "ابدأ بمهمتك الأولى داخل الاستوديو."
+    "Set up your first agent",
+    "جهّز وكيلك الأول"
   ],
   "contact": [
-    "Let’s agree how your agent goes live.",
-    "لنتفق على تشغيل وكيلك."
+    "Contact AGYNEXA",
+    "تواصل مع AGYNEXA"
   ],
   "industries": [
-    "Build agents for the way your industry works",
-    "ابنِ وكلاء يفهمون طريقة العمل في قطاعك"
+    "AI agent examples by industry",
+    "أمثلة لوكلاء الذكاء الاصطناعي في قطاعك"
   ]
 }
 
-export const summary: Copy = ["AGYNEXA is an Agent Builder Studio for business. Configure a role, add company knowledge and test its work with OpenAI reasoning, web research and code analysis. Agree the scope and terms by email before production activation.", "AGYNEXA استوديو لبناء وكلاء الأعمال. اضبط الدور وأضف معرفة الشركة واختبر العمل باستدلال OpenAI والبحث وتحليل الكود. اتفق على النطاق والشروط عبر البريد قبل التفعيل الإنتاجي."]
+export const summary: Copy = ["Build AI agents for recurring business tasks. Add your instructions and company sources, test the answers in Studio, and agree production use with AGYNEXA.", "ابنِ وكلاء للمهام المتكررة في شركتك. أضف تعليماتك ومراجعك وجرّب الإجابات في الاستوديو، ثم اتفق مع AGYNEXA على التشغيل الفعلي."]

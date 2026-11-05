@@ -1,0 +1,36 @@
+{
+  "scope": "Static source review, not runtime acceptance",
+  "runtime_review": {
+    "auth": "Live-session RLS and owner membership rechecked",
+    "knowledge": "Request-local evidence batching with final fresh checks",
+    "transport": "Status-only bounded SSE; cancellation and final result preserved",
+    "fixed": "Removed one extra draftScope closing brace before build"
+  },
+  "document_review": {
+    "save": "Extraction preview does not store knowledge; explicit source-add retained",
+    "boundaries": "Extension/signature/UTF8 and bounded ZIP/PDF/XML/sheet checks",
+    "fixed": "Archive preflight abort destroys active ZIP stream and closes archive",
+    "remaining": "Synchronous Mammoth/XLSX parser work is not hard-preemptible; input complexity is bounded"
+  },
+  "database": {
+    "migration": "20261105124017_studio_document_source_capacity",
+    "status": "APPLIED",
+    "constraint": "octet_length(content) between 1 and 1048576",
+    "validated": true,
+    "existing_data_rewritten": false
+  },
+  "environment": {
+    "vercel_node": "24.x",
+    "local_node": "26.12.1"
+  },
+  "tests": "Deferred to production per owner instruction",
+  "release_build": {
+    "result": "PASS",
+    "next": "16.4.1",
+    "typescript": "PASS",
+    "initial_type_errors_fixed": [
+      "SAX strictEntities supported at runtime but absent from declaration",
+      "Removed obsolete PDF.js isEvalSupported option; current library does not execute embedded PDF scripts"
+    ]
+  }
+}

@@ -258,3 +258,8 @@ The owner explicitly authorized both mailboxes, permanent preservation and conte
 ## D-2026-11-05 — Remove the public-site mailbox interface
 
 The owner explicitly rejected a mailbox interface on the published AGYNEXA platform. Remove the newly added pages and archive read/settings API, retain private data and background automation, and use authenticated native Resend inboxes. No deletion of messages. [Corrected scope](OWNER-MAIL-2026-11-05.md).
+
+
+## Owner correction — public content, design and Studio response flow, 5 November 2026
+
+The owner rejected the delivered graphic, generic bilingual copy, inconsistent page colours, text-only source limits, exposed token/cost counters and slow unexplained responses, then instructed Astra ultra to correct the platform without further questions. This extends the same authorized production delivery to all public pages and Studio. Preserve the restored shared palette and original Hero/video; remove the rejected illustration instead of inventing another decorative image. Add bounded document extraction, a larger reviewed-source constraint, progress events and request-local query batching while retaining permission/source checks. Production-only behavioral acceptance and no invented search-ranking claims remain in force.

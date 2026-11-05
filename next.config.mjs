@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  serverExternalPackages: ['unpdf', 'mammoth', 'read-excel-file', 'yauzl', 'sax'],
   images: {
     formats: ['image/avif', 'image/webp'],
   },
