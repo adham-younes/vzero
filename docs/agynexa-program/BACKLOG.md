@@ -1,6 +1,6 @@
 # Current correction — 5 November 2026
 
-Document preview/import, progress transport, public-copy changes and shared palette are implemented candidates. The additive migration is applied; build and affected production acceptance remain pending; see [release](releases/studio-documents-and-response-flow-2026-11-05/README.md). OCR, legacy Office formats and image extraction remain outside the supported import contract.
+Document preview/import, progress transport, public-copy changes and shared palette are deployed. Build, migration and public HTTP checks passed; remaining authenticated acceptance is explicitly listed in the [production receipt](releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md). OCR, legacy Office formats and image extraction remain outside the supported import contract.
 
 # Current release boundaries — 5 November 2026
 
