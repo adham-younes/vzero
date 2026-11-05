@@ -73,7 +73,7 @@ The first local candidate's repeated catalog lenses are superseded. Solutions is
 
 Use large, named, keyboard-operable summaries with a visible chevron, one open panel per directory, prefixed embedded IDs, appropriate heading levels and URL-backed open selection. Reuse complete approved detail content with bounded related depth; avoid reciprocal panels and repeated page CTAs. The source revision remains local pending final verification; identity and Hero/video protection continue unchanged.
 
-### Public catalogue system — 5 November 2026
+### Intermediate catalogue layout with sidebar — 5 November 2026
 
 Use the [list-detail pattern](https://developer.android.com/develop/adaptive-apps/guides/canonical-layouts#list-detail) for choosing a solution, capability or sector. The 272px index and the reading area align to the same top edge at desktop width, with a 48px gutter. At narrow widths a labelled native select precedes the same reading area. Logical properties and the document direction mirror the layout in Arabic. The user-supplied Arabic Sales view is the reference case for the correction.
 

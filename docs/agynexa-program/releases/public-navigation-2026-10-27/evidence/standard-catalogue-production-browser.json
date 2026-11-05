@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-05",
+  "environment": "https://agynexa.si through the in-app side browser",
+  "commit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+  "deployment": "dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V",
+  "status": "PASS_SCOPED",
+  "checks": [
+    {
+      "path": "/ar/services",
+      "width": 1280,
+      "results": [
+        "Search, business area and capability are in one row. All three fields are 48px high and aligned to the same top edge.",
+        "One detail region, no catalogue sidebar or separate category button row. The result count uses Arabic digits.",
+        "Searching the approved short label, opening the standalone capability and browser Back preserve the search, area and selected capability."
+      ],
+      "screenshot": "standard-capabilities-ar-desktop.jpg"
+    },
+    {
+      "path": "/services",
+      "width": 390,
+      "results": [
+        "The fields stack in the same order without horizontal overflow.",
+        "Switching language preserves the active area, capability and query, and shows Results: 1."
+      ]
+    },
+    {
+      "path": "/ar/services",
+      "width": 390,
+      "results": [
+        "A single stack of three labelled controls precedes the details."
+      ],
+      "screenshot": "standard-capabilities-ar-390.jpg"
+    },
+    {
+      "path": "/ar/solutions",
+      "width": 390,
+      "results": [
+        "A direct URL selects Finance. Keyboard selection of Connections exposes its system requirements in place on the same Solutions path."
+      ]
+    },
+    {
+      "path": "/ar/industries and /industries",
+      "width": 390,
+      "results": [
+        "A direct Logistics URL, the open workflow and one fact column survive switching to English."
+      ]
+    }
+  ],
+  "limits": [
+    "The inner system requirements disclosure is document-local. The selected workflow and capability are URL-backed.",
+    "Studio verification in this release is limited to anonymous HTTP entry and indexing policy."
+  ]
+}
