@@ -56,7 +56,7 @@ export default async function RootLayout({
       <body className={`${almarai.variable} antialiased`}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'Organization',name:'AGYNEXA',url:siteUrl,email:'adham@agynexa.si',founder:{'@type':'Person',name:'Adham Younes'}})}}/>
         <Shell>{children}</Shell>
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && process.env.VERCEL && <Analytics />}
         <SpeedInsights />
         <Script id="heronsignal-tracker" src="https://api.heronsignal.com/tracker.js" strategy="afterInteractive" async />
       </body>
