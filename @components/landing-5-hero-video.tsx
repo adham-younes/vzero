@@ -23,7 +23,7 @@ export default function HeroVideo() {
   const fallback = () => {
    if (video.dataset.fallback) return
    video.dataset.fallback = 'true'
-   video.src = 'https://videos.pexels.com/video-files/18419650/18419650-uhd_2560_1440_30fps.mp4'
+   video.src = '/videos/background.mp4'
    video.load()
    resume()
   }
