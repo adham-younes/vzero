@@ -1,1235 +1,799 @@
 {
   "/": {
     "en": {
-      "title": "AI Agent Builder for Business Operations | AGYNEXA",
-      "description": "Create business AI agents in AGYNEXA Studio. Define responsibilities, add company context and test responses. Explore agent system design, handoffs and human review.",
+      "title": "AI Agent Builder for Business | AGYNEXA Studio",
+      "description": "Build and test custom business agents with company knowledge, web research and code analysis. Review the work, then agree production activation by email.",
       "h1": "Build AI agents for your business operations",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AGYNEXA is an Agent Builder for companies and enterprises. Use Studio to create agents, define their responsibilities and test their responses with the context your business provides."
-        },
-        {
-          "type": "paragraph",
-          "text": "Start with a role your team needs. Then map its place in the wider process: what it receives, what it should produce and when the work passes to another agent or a member of your team."
+          "text": "Create a custom agent. Add company knowledge and tools, then test its work in your private Studio."
         },
         {
           "type": "heading",
-          "text": "Give each agent a business responsibility",
+          "text": "Give your agent a job worth doing.",
           "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "Your team might need to prepare a case for review, assess a customer request or make sense of an operational exception. Each task has information it depends on, procedures it follows and someone who needs the result."
-        },
-        {
-          "type": "paragraph",
-          "text": "In AGYNEXA, you describe that work and the outcome you want. You configure the agent’s instructions and try them against situations your team encounters. A role can involve organizing supplied information, answering procedural questions, or preparing analysis and drafts for a responsible person to review."
-        },
-        {
-          "type": "paragraph",
-          "text": "When the process spans several specialties, the relationships between those roles become part of the system design."
-        },
-        {
-          "type": "heading",
-          "text": "From a business process to an agent system",
-          "depth": 2
-        },
-        {
-          "type": "heading",
-          "text": "1. Define the starting point and the outcome",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "Identify what starts the process. It could be a customer request, a document awaiting review or a change in an operating condition. Describe what completion means and who needs the result."
-        },
-        {
-          "type": "paragraph",
-          "text": "This gives the agent a scope and makes clear which questions it must resolve before work moves on."
-        },
-        {
-          "type": "heading",
-          "text": "2. Assign responsibilities to distinct roles",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "A process may need one agent or several specialized roles. Map what each role handles, the information it needs and any results it depends on from another role."
-        },
-        {
-          "type": "paragraph",
-          "text": "Let the work determine that division. Checking whether a file is complete is a different responsibility from interpreting its contents or approving the resulting action."
-        },
-        {
-          "type": "heading",
-          "text": "3. Create the agents and provide their context",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "In Studio, create an agent, review its instructions and add the information its role needs. That context might include operating procedures, company policies or service details."
-        },
-        {
-          "type": "paragraph",
-          "text": "The instructions also establish how to handle missing information, when to ask for clarification and which decisions require a qualified reviewer."
-        },
-        {
-          "type": "heading",
-          "text": "4. Test each role against real situations",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "Use examples from your business, including incomplete requests and exceptions. Check whether the response addresses the task, what supports it and whether the next person can use the result."
-        },
-        {
-          "type": "paragraph",
-          "text": "Use those findings to refine the agent’s instructions and sources, and to identify work that still needs human judgment."
-        },
-        {
-          "type": "heading",
-          "text": "5. Design handoffs and system connections",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "In a multi-agent system, each handoff needs a definition: what starts the task, what reaches the next role and where the process pauses for review."
-        },
-        {
-          "type": "paragraph",
-          "text": "Running that design requires agent coordination and the integrations and permissions needed for actions in company systems. Configuring and testing agents in Studio is part of that journey. An action in an external application depends on a connection configured for that application and the access it permits."
-        },
-        {
-          "type": "heading",
-          "text": "6. Evaluate the work the system supports",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose measures that reflect the process you want to improve: time spent preparing a case, completeness at handoff, rework and whether the responsible person can review the result."
-        },
-        {
-          "type": "paragraph",
-          "text": "These measures show where an agent’s role is useful and where the process design needs adjustment."
-        },
-        {
-          "type": "heading",
-          "text": "How agent roles fit together",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "**An illustrative logistics system design**"
-        },
-        {
-          "type": "paragraph",
-          "text": "When a shipment is delayed, an operations manager needs to understand the impact and available options before making a decision."
-        },
-        {
-          "type": "paragraph",
-          "text": "One agent could review the case and identify missing details. Another could assess options against operating rules, while a further role prepares a customer update. Each role uses defined results from the preceding work, and the operations manager retains the consequential decision."
-        },
-        {
-          "type": "paragraph",
-          "text": "The coordination design establishes task order, information handoffs and how to handle conflicting or incomplete information. Making actual updates requires connections to the relevant operating systems and communication channels."
-        },
-        {
-          "type": "paragraph",
-          "text": "[Explore agent orchestration](/architecture)"
-        },
-        {
-          "type": "heading",
-          "text": "Design around the work in your industry",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "The responsibilities change with the business. Start with the operational problem, available information and decision the team needs to make."
-        },
-        {
-          "type": "table",
-          "header": [
-            "Industry",
-            "Starting problem",
-            "Intended outcome"
-          ],
-          "rows": [
-            [
-              "Logistics",
-              "Delay and exception details are scattered across several parties.",
-              "A coherent case that helps an operations manager assess options and coordinate a response."
-            ],
-            [
-              "Energy and industrial operations",
-              "Maintenance and operating notes arrive incomplete between teams or shifts.",
-              "Clearer handover of information and outstanding work, with technical decisions retained by qualified staff."
-            ],
-            [
-              "Distribution",
-              "Details get lost between a customer inquiry, order preparation and delivery exceptions.",
-              "A complete case that helps teams continue the work and identify decisions that need an owner."
-            ],
-            [
-              "Professional services",
-              "Client requirements change without a clear account of the effect on scope and delivery.",
-              "A structured assessment of the change for the project owner to review."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "[Explore industries](/industries) · [Explore business solutions](/solutions)"
-        },
-        {
-          "type": "heading",
-          "text": "Give agents the company context their work requires",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "Role instructions establish an agent’s responsibility. Company knowledge supplies the context for carrying it out. An approved procedure explains how to handle a case, service information helps interpret a request, and details supplied by the user establish what applies to the task."
-        },
-        {
-          "type": "paragraph",
-          "text": "Studio supports answers grounded in the information you add, with references you can inspect. When that information is insufficient, the missing material becomes part of the review before the result is used."
-        },
-        {
-          "type": "heading",
-          "text": "Keep human decisions in the workflow",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "Your team may need to review a recommendation, resolve an exception or approve a commitment to a customer. Place these decisions within the process and identify what the responsible person must receive to make them."
-        },
-        {
-          "type": "paragraph",
-          "text": "For any action connected to an external system, define the required access and how success will be confirmed. Preparing a proposal, approving it and carrying out the action remain distinct steps."
-        },
-        {
-          "type": "heading",
-          "text": "Build the first role in your agent system",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose a process your team knows and a responsibility that needs support. Create an agent in Studio, provide the business context and test it on cases whose results you can review."
-        },
-        {
-          "type": "paragraph",
-          "text": "Use what you learn to refine that role and establish how it fits with the rest of the system."
         }
       ]
     },
     "ar": {
-      "title": "منصة بناء وكلاء الذكاء الاصطناعي لعمليات الشركات | AGYNEXA",
-      "description": "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك في استوديو AGYNEXA. حدّد الأدوار، وأضف سياق العمل، واختبر النتائج، وتعرّف على تصميم منظومة الوكلاء والمراجعة البشرية.",
+      "title": "منصة بناء وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "description": "ابنِ وكلاء مخصصين للأعمال واختبرهم بمعرفة الشركة والبحث وتحليل البيانات. راجع العمل ثم اتفق على التفعيل الإنتاجي عبر البريد.",
       "h1": "ابنِ وكلاء ذكاء اصطناعي لعمليات شركتك",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AGYNEXA منصة لبناء وكلاء الذكاء الاصطناعي للشركات والمؤسسات. يجمع الاستوديو إعداد الوكلاء وتجربتهم في مساحة عملك، حيث تحدد مسؤولية كل وكيل، وتزوّده بسياق شركتك، وتختبر استجاباته على مهام من واقع العمل."
-        },
-        {
-          "type": "paragraph",
-          "text": "ابدأ بالدور الذي تحتاجه، ثم صمّم علاقته ببقية العملية: المعلومات التي يستقبلها، والنتيجة المطلوبة منه، والمرحلة التي ينتقل فيها العمل إلى وكيل آخر أو إلى أحد أعضاء فريقك."
+          "text": "أنشئ وكيلًا مخصصًا، وأضف معرفة شركتك وأدواته، ثم اختبر عمله داخل استوديو خاص."
         },
         {
           "type": "heading",
-          "text": "ما العمل الذي تريد أن يتولاه الوكيل؟",
+          "text": "امنح الوكيل مهمة تستحق الإنجاز.",
           "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "قد تحتاج إلى تجهيز ملف قبل مراجعته، أو تحليل طلب عميل، أو مساعدة فريق العمليات في فهم حالة استثنائية. لكل مهمة معلومات تعتمد عليها، وإجراءات تحكمها، وشخص يستخدم نتيجتها."
-        },
-        {
-          "type": "paragraph",
-          "text": "في AGYNEXA، تبدأ من هذا الاحتياج. تصف طبيعة العمل والنتيجة المطلوبة، ثم تضبط تعليمات الوكيل وتختبر طريقة تعامله مع الحالات التي تواجه فريقك. يمكن أن يشمل دوره تنظيم المعلومات، والإجابة وفق إجراءات الشركة، وإعداد تحليلات أو مسودات يراجعها المسؤول عن العمل."
-        },
-        {
-          "type": "paragraph",
-          "text": "وعندما تمتد العملية إلى أكثر من تخصص، يصبح تصميم العلاقة بين الأدوار جزءًا أساسيًا من بناء المنظومة."
-        },
-        {
-          "type": "heading",
-          "text": "من وصف العملية إلى بناء منظومة الوكلاء",
-          "depth": 2
-        },
-        {
-          "type": "heading",
-          "text": "١. وضّح البداية والنتيجة المطلوبة",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "حدّد ما يبدأ العملية: طلب عميل، أو مستند يحتاج إلى مراجعة، أو تغير في حالة تشغيلية. ثم صف ما يجب أن يصل إليه العمل، ومن يستلم النتيجة."
-        },
-        {
-          "type": "paragraph",
-          "text": "يساعد هذا الوصف على تحديد نطاق الوكيل والأسئلة التي يجب أن يجيب عنها قبل الانتقال إلى الخطوة التالية."
-        },
-        {
-          "type": "heading",
-          "text": "٢. وزّع المسؤوليات على أدوار واضحة",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "قد تتطلب العملية وكيلًا واحدًا، وقد تحتاج إلى أدوار متخصصة. في تصميم المنظومة، تحدد ما يتولاه كل دور والمعلومات التي يعتمد عليها، وما يحتاجه من بقية الأدوار حتى ينجز مهمته."
-        },
-        {
-          "type": "paragraph",
-          "text": "يظل قرار توزيع العمل مرتبطًا بطبيعة العملية. ففحص اكتمال ملف يختلف عن تحليل محتواه، وكلاهما يختلف عن اعتماد الإجراء الناتج عنه."
-        },
-        {
-          "type": "heading",
-          "text": "٣. أنشئ الوكلاء واضبط سياق العمل",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "داخل الاستوديو، تنشئ الوكيل وتراجع تعليماته، ثم تضيف المعلومات المناسبة لدوره. قد تشمل هذه المعلومات إجراءات التشغيل أو سياسات الشركة أو تفاصيل الخدمة التي يحتاجها أثناء الاستجابة."
-        },
-        {
-          "type": "paragraph",
-          "text": "تحدد التعليمات أيضًا كيفية التعامل مع المعلومات الناقصة، ومتى يطلب الوكيل توضيحًا، وما القرارات التي تحتاج إلى مراجعة مسؤول مختص."
-        },
-        {
-          "type": "heading",
-          "text": "٤. اختبر كل دور قبل الاعتماد على نتائجه",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "جرّب حالات من واقع شركتك، بما فيها الطلبات غير المكتملة والاستثناءات. راجع ما إذا كانت الاستجابة تعالج المطلوب، وما المعلومات التي استندت إليها، وهل النتيجة مفيدة للشخص الذي سيستخدمها."
-        },
-        {
-          "type": "paragraph",
-          "text": "تساعدك هذه التجارب على تعديل تعليمات الوكيل ومصادره، وعلى اكتشاف الخطوات التي ما زالت تحتاج إلى تدخل بشري."
-        },
-        {
-          "type": "heading",
-          "text": "٥. صمّم انتقال العمل والتكامل مع الأنظمة",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "في المنظومة متعددة الوكلاء، يحتاج كل انتقال إلى تعريف واضح: من يبدأ المهمة؟ وما الذي يرسله إلى الدور التالي؟ ومتى يتوقف المسار للمراجعة؟"
-        },
-        {
-          "type": "paragraph",
-          "text": "تشغيل هذا التصميم يتطلب آلية لتنسيق الوكلاء، إلى جانب التكاملات والصلاحيات اللازمة لأي إجراء داخل أنظمة الشركة. إعداد الوكلاء واختبارهم في الاستوديو جزء من هذه الرحلة؛ أما تنفيذ إجراء في نظام خارجي فيعتمد على الاتصال المجهّز لذلك النظام ونطاق الوصول المسموح."
-        },
-        {
-          "type": "heading",
-          "text": "٦. قيّم المنظومة على نتائج العمل",
-          "depth": 3
-        },
-        {
-          "type": "paragraph",
-          "text": "اربط التقييم بما تريد تحسينه: الوقت المستغرق لتجهيز الحالة، واكتمال المعلومات عند تسليمها، وعدد مرات إعادتها للتصحيح، وقدرة المسؤول على مراجعة النتيجة."
-        },
-        {
-          "type": "paragraph",
-          "text": "بهذه المعايير، تعرف أين يفيد دور الوكيل وأين يحتاج تصميم العملية إلى تعديل."
-        },
-        {
-          "type": "heading",
-          "text": "كيف تتكامل أدوار الوكلاء؟",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "**مثال توضيحي لتصميم منظومة لوجستية**"
-        },
-        {
-          "type": "paragraph",
-          "text": "عند تأخر شحنة، يحتاج مسؤول العمليات إلى معرفة أثر التأخير والخيارات المتاحة قبل اتخاذ قرار."
-        },
-        {
-          "type": "paragraph",
-          "text": "يمكن توزيع العمل على وكيل يراجع تفاصيل الحالة ويحدد المعلومات الناقصة، ووكيل يدرس الخيارات وفق قواعد التشغيل، ودور يجهز تحديثًا مناسبًا للعميل. يعتمد كل دور على مخرجات محددة من المرحلة السابقة، ويعود القرار المؤثر إلى مسؤول العمليات."
-        },
-        {
-          "type": "paragraph",
-          "text": "يحدد تصميم التنسيق ترتيب هذه المهام، والمعلومات التي تنتقل بينها، وكيفية التعامل مع التعارض أو نقص البيانات. ويتطلب تنفيذ التحديثات الفعلية ربط المنظومة بأنظمة التشغيل وقنوات التواصل المناسبة."
-        },
-        {
-          "type": "paragraph",
-          "text": "[تعرّف على تنسيق الوكلاء](/ar/architecture)"
-        },
-        {
-          "type": "heading",
-          "text": "عمليات مختلفة، وتصميم يناسب كل قطاع",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "تختلف مسؤوليات الوكلاء باختلاف العمل الذي يخدمونه. تتحدد الأدوار وفق المشكلة، والبيانات المتاحة، والقرار الذي يحتاجه الفريق."
-        },
-        {
-          "type": "table",
-          "header": [
-            "القطاع",
-            "المشكلة التي ينطلق منها التصميم",
-            "النتيجة المطلوبة"
-          ],
-          "rows": [
-            [
-              "اللوجستيات",
-              "تشتت معلومات التأخير والاستثناءات بين أطراف متعددة.",
-              "حالة واضحة تساعد مسؤول العمليات على تقييم الخيارات والتنسيق مع الأطراف المعنية."
-            ],
-            [
-              "الطاقة والعمليات الصناعية",
-              "انتقال ملاحظات الصيانة والتشغيل بصورة غير مكتملة بين الفرق والمناوبات.",
-              "تسليم أوضح للمعلومات والأعمال المعلقة، مع إبقاء القرارات الفنية لدى المختصين."
-            ],
-            [
-              "التوزيع",
-              "نقص التفاصيل بين استفسار العميل وتجهيز الطلب ومتابعة استثناءات التسليم.",
-              "ملف متكامل يساعد الفرق على استكمال العمل وتحديد ما يحتاج إلى قرار."
-            ],
-            [
-              "الخدمات المهنية",
-              "تغير متطلبات العميل أثناء المشروع من دون وضوح أثرها في النطاق والتسليم.",
-              "عرض منظم للتغيير وآثاره لمراجعته مع المسؤول عن المشروع."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "[استكشف القطاعات](/ar/industries) · [تعرّف على حلول الأعمال](/ar/solutions)"
-        },
-        {
-          "type": "heading",
-          "text": "معرفة الشركة تدعم عمل الوكيل",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "تعليمات الدور تحدد مسؤولية الوكيل، ومعرفة الشركة تمنحه السياق الذي يحتاجه لأداء هذه المسؤولية. فالإجراء المعتمد يوضح كيفية التعامل مع الحالة، ومعلومات الخدمة تساعده على تفسير الطلب، وسجل التفاصيل الذي يقدمه المستخدم يحدد ما ينطبق على المهمة."
-        },
-        {
-          "type": "paragraph",
-          "text": "يدعم الاستوديو الإجابات المستندة إلى المعلومات التي تضيفها، مع مراجع تتيح لك مراجعة أساس الإجابة. وعندما تكون المعلومات غير كافية، يصبح استكمالها خطوة واضحة قبل استخدام النتيجة."
-        },
-        {
-          "type": "heading",
-          "text": "حدّد مواضع القرار البشري",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "قد يحتاج فريقك إلى مراجعة توصية، أو حسم استثناء، أو اعتماد التزام تجاه عميل. ضع هذه القرارات في مواضعها داخل تصميم سير العمل، وحدد المعلومات التي يجب أن تصل إلى المسؤول حتى يستطيع اتخاذ القرار."
-        },
-        {
-          "type": "paragraph",
-          "text": "ولأي إجراء متصل بنظام خارجي، يجب تحديد صلاحية الوصول ومعيار التأكد من نجاحه. يظل الفرق واضحًا بين إعداد اقتراح، واعتماده، وتنفيذه بالفعل."
-        },
-        {
-          "type": "heading",
-          "text": "ابدأ ببناء أول دور في منظومتك",
-          "depth": 2
-        },
-        {
-          "type": "paragraph",
-          "text": "اختر عملية يعرفها فريقك، وحدد مسؤولية تحتاج إلى دعم. أنشئ الوكيل في الاستوديو، وأضف سياق العمل، ثم جرّبه على حالات تستطيع مراجعة نتائجها."
-        },
-        {
-          "type": "paragraph",
-          "text": "استخدم ما تتعلمه من التجربة لضبط هذا الدور وتحديد علاقته ببقية أدوار المنظومة."
         }
       ]
     }
   },
   "/services": {
     "en": {
-      "title": "AI Agent Platform Capabilities | AGYNEXA",
-      "description": "Explore agent roles, company knowledge, orchestration, integrations and oversight as connected capabilities of one business Agent Builder platform.",
-      "h1": "The capabilities behind a business agent system",
+      "title": "Business AI agent capabilities | AGYNEXA",
+      "description": "Explore company knowledge, research, agent roles and workflow controls. See what you can test in Studio and what requires a connected production scope.",
+      "h1": "The capabilities behind your agent.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Business agents work within a process that includes people, company information and software. These capabilities explain what each part contributes: how an agent gets its context, how responsibilities connect and how a proposed action reaches an authorized decision."
+          "text": "Choose the capability your workflow needs. Each page explains the task, inputs and review, with a clear distinction between the work you can test in Studio and the connections required for production."
         },
         {
           "type": "heading",
-          "text": "Organize the work around its purpose"
+          "text": "Build around the task",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Customer service and employee operations describe who the system serves. Knowledge and agent assistance provide context at the point of work. Process automation and orchestration explain how individual responsibilities connect into a wider process."
+          "text": "Customer service and employee operations describe the responsibility. Knowledge, research and analysis supply the working context. Integrations and approval rules determine how the result can become a confirmed business action."
         },
         {
           "type": "heading",
-          "text": "Connect understanding to authorized action"
+          "text": "Check the operating scope",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "An agent can interpret a request, but an external action also depends on a supported system interface and permission to use it. Integration, governance and evaluation determine how that action should be bounded and assessed. Voice adds a conversational channel when the workflow calls for it."
-        },
-        {
-          "type": "heading",
-          "text": "Choose a process, then its components"
+          "text": "The catalogue describes parts of one platform and the requirements of wider workflows. Voice channels, enterprise-system actions and automatic multi-agent handoffs require separate configuration; their presence in the catalogue does not mean they are connected to your company."
         },
         {
           "type": "paragraph",
-          "text": "Start with the event that creates work and the result your team needs. A customer issue might combine knowledge, case preparation and an accountable handoff. A cross-team process may require several specialist roles and dependencies. Use the capability pages to understand each component’s responsibility and the solution pages to examine how they fit together."
-        },
-        {
-          "type": "paragraph",
-          "text": "The capability pages describe the components of one Agent Builder platform. The connections and actions used in a particular workflow depend on supported access and the permissions agreed for that work."
-        },
-        {
-          "type": "paragraph",
-          "text": "[See business solutions](/solutions) · [Understand orchestration](/services/agent-orchestration)"
+          "text": "[Explore business workflows](/solutions) · [Read the architecture](/architecture)"
         }
       ]
     },
     "ar": {
-      "title": "قدرات منصة وكلاء الذكاء الاصطناعي | AGYNEXA",
-      "description": "تعرّف على المعرفة وتنسيق الوكلاء والتكاملات والإشراف بوصفها قدرات مترابطة داخل منصة واحدة لبناء وكلاء الأعمال.",
-      "h1": "المكونات التي يقوم عليها نظام الوكلاء",
+      "title": "قدرات وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "description": "استكشف المعرفة والبحث وأدوار الوكلاء وضوابط العمل. تعرّف على ما تختبره في الاستوديو وما يحتاج إلى ربط ونطاق إنتاجي.",
+      "h1": "القدرات التي تدعم وكيلك.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يحتاج نظام الوكلاء إلى سياق عمل ومسؤوليات محددة وطريقة لانتقال المهام بين الأشخاص والوكلاء والبرامج. يشرح هذا الدليل وظيفة كل قدرة وعلاقتها ببقية أجزاء المنصة."
+          "text": "اختر القدرة التي يحتاجها مسار عملك. تشرح كل صفحة المهمة والمدخلات والمراجعة، وتوضح ما يمكنك اختباره في الاستوديو وما يحتاج إلى اتصال للتشغيل الإنتاجي."
         },
         {
           "type": "heading",
-          "text": "القدرات تتحدد بحسب العمل"
+          "text": "ابنِ حول المهمة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "توضح خدمة العملاء والعمليات الداخلية الجهات التي يخدمها النظام. وتوفر المعرفة والمساعدة الذكية السياق اللازم لأداء المهمة. أما أتمتة العمليات وتنسيق الوكلاء فيشرحان كيف ترتبط المسؤوليات الفردية داخل عملية أكبر."
+          "text": "تحدد خدمة العملاء وعمليات الموظفين المسؤولية، وتوفر المعرفة والبحث والتحليل سياق العمل. وتحدد الاتصالات وقواعد الاعتماد كيفية تحويل النتيجة إلى إجراء أعمال مؤكد."
         },
         {
           "type": "heading",
-          "text": "من فهم الطلب إلى الإجراء المسموح"
+          "text": "راجع نطاق التشغيل",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "يفهم الوكيل الطلب من المعلومات المتاحة، لكن تنفيذ إجراء في نظام آخر يحتاج أيضًا إلى واجهة مناسبة وصلاحية محددة. وهنا يأتي دور التكامل والحوكمة والتقييم. ويضيف الصوت قناة للتفاعل عندما تكون مناسبة لطبيعة العملية."
-        },
-        {
-          "type": "heading",
-          "text": "اختر العملية ثم تعرف على مكوناتها"
+          "text": "يشرح الكتالوج أجزاء منصة واحدة ومتطلبات مسارات العمل الأوسع. تحتاج القنوات الصوتية وإجراءات أنظمة المؤسسات والانتقال التلقائي بين الوكلاء إلى إعداد مستقل، ولا يعني عرضها هنا أنها متصلة بشركتك."
         },
         {
           "type": "paragraph",
-          "text": "ابدأ بالحدث الذي ينشئ العمل والنتيجة التي يحتاجها فريقك. فقد تجمع معالجة مشكلة عميل بين المعرفة وتنظيم الحالة وإحالتها إلى المسؤول، بينما تحتاج عملية مشتركة بين أقسام إلى عدة أدوار واعتماد بعضها على بعض."
-        },
-        {
-          "type": "paragraph",
-          "text": "تشرح صفحات القدرات مسؤولية كل مكون في منصة واحدة لبناء الوكلاء، وتعرض صفحات الحلول كيفية اجتماعها في سير عمل. وتتحدد الاتصالات والإجراءات المتاحة لكل عملية بحسب الوصول المدعوم والصلاحيات المقررة لها."
-        },
-        {
-          "type": "paragraph",
-          "text": "[استكشف حلول الأعمال](/ar/solutions) · [تعرّف على تنسيق الوكلاء](/ar/services/agent-orchestration)"
+          "text": "[استكشف مسارات العمل](/solutions) · [اقرأ البنية](/architecture)"
         }
       ]
     }
   },
   "/solutions": {
     "en": {
-      "title": "Agentic Workflow Solutions for Business | AGYNEXA",
-      "description": "Explore connected business workflows for customer operations, knowledge, documents, sales, finance and logistics, with clear agent and human responsibilities.",
-      "h1": "Build around the process your business needs to complete",
+      "title": "AI agents for business workflows | AGYNEXA",
+      "description": "Build and test agent roles for knowledge, document review, sales, service, finance, logistics, procurement and customer operations.",
+      "h1": "Choose the work your agent will support.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A business solution connects the information, responsibilities and decisions needed to reach an outcome. The examples here show how agent capabilities can support that sequence across different parts of a company."
+          "text": "Explore nine business workflows with the information each needs, the output it should produce and the person who reviews it. Take a role into Studio, test it with your context, then discuss the connections required for production."
         },
         {
           "type": "heading",
-          "text": "Follow the work from its starting event"
+          "text": "An outcome someone can use",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A request, document or operational update creates work. Someone must understand it, gather the relevant context and determine the next action. The process may branch, wait for information or need a decision from another team. Its design should make those dependencies explicit."
-        },
-        {
-          "type": "heading",
-          "text": "Give each role a useful contribution"
-        },
-        {
-          "type": "paragraph",
-          "text": "An agent might classify an incoming case or retrieve the applicable procedure. Another role may examine its documents before a specialist decides how to proceed. Orchestration connects those responsibilities. The solution pages illustrate workflow designs; actions in business systems depend on supported connections and the authority configured for the process."
-        },
-        {
-          "type": "heading",
-          "text": "Know when the process has reached its result"
-        },
-        {
-          "type": "paragraph",
-          "text": "For customer service, the result may be a resolved issue or a complete escalation. For logistics, it may be a confirmed next action on a shipment exception. For professional work, it may be a properly prepared case for a specialist. Each solution page explains its own sequence and decision points."
-        },
-        {
-          "type": "paragraph",
-          "text": "[Find your industry](/industries) · [See platform capabilities](/services)"
+          "text": "A useful agent leaves the next person with the relevant facts, a supported result and the unresolved questions. Use the workflow to define a first task and an acceptance example. External execution depends on the operation, permission and activation scope agreed for your company."
         }
       ]
     },
     "ar": {
-      "title": "حلول سير العمل القائمة على الوكلاء | AGYNEXA",
-      "description": "استكشف حلولًا مترابطة للمعرفة والمستندات وعمليات العملاء والمبيعات والمالية واللوجستيات، بأدوار واضحة للوكلاء والأشخاص.",
-      "h1": "صمّم النظام حول العملية التي يحتاجها عملك",
+      "title": "وكلاء ذكاء اصطناعي لمسارات الأعمال | AGYNEXA",
+      "description": "ابنِ أدوار وكلاء واختبرها للمعرفة والمستندات والمبيعات والخدمة والمالية واللوجستيات والمشتريات وعمليات العملاء.",
+      "h1": "اختر العمل الذي سيساعدك فيه الوكيل.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يجمع حل الأعمال المعلومات والمسؤوليات والقرارات اللازمة للوصول إلى نتيجة. توضح الأمثلة هنا كيف تُستخدم قدرات الوكلاء داخل هذا التسلسل في أعمال مختلفة بالمؤسسة."
+          "text": "استكشف تسعة مسارات عمل بمدخلاتها ومخرجاتها والمراجع المسؤول عنها. انقل الدور إلى الاستوديو واختبره بسياق شركتك، ثم ناقش الاتصالات اللازمة للإنتاج."
         },
         {
           "type": "heading",
-          "text": "تتبّع العملية من بدايتها"
+          "text": "نتيجة يستطيع شخص استخدامها",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "قد يبدأ العمل بطلب أو مستند أو تحديث تشغيلي. يحتاج إلى فهم السياق وجمع المعلومات وتحديد الإجراء التالي، وقد يتوقف على معلومة ناقصة أو قرار من قسم آخر. يوضح التصميم ما يتوقف عليه تقدم كل خطوة، حتى يعرف الفريق متى يمكنه الاستمرار."
-        },
-        {
-          "type": "heading",
-          "text": "مسؤولية مفهومة لكل دور"
-        },
-        {
-          "type": "paragraph",
-          "text": "قد يصنف وكيل الحالة أو يبحث عن الإجراء المناسب، ويتولى دور آخر فحص المستندات قبل قرار المختص. يربط التنسيق بين هذه المسؤوليات. تعرض صفحات الحلول أمثلة لتصميم سير العمل، وتتوقف الإجراءات داخل أنظمة الأعمال على الاتصالات المدعومة والصلاحيات المقررة للعملية."
-        },
-        {
-          "type": "heading",
-          "text": "نتيجة تناسب طبيعة العملية"
-        },
-        {
-          "type": "paragraph",
-          "text": "قد تنتهي خدمة العملاء بحل المشكلة أو إحالتها بكامل سياقها، وتنتهي متابعة استثناء لوجستي بإجراء تالٍ مؤكد، ويصل العمل المهني إلى حالة جاهزة للمختص. لكل حل تسلسله والقرارات التي تحدد اكتماله."
-        },
-        {
-          "type": "paragraph",
-          "text": "[حلول حسب القطاع](/ar/industries) · [قدرات المنصة](/ar/services)"
+          "text": "يترك الوكيل المفيد للشخص التالي الحقائق المرتبطة والنتيجة المدعومة والأسئلة المفتوحة. استخدم المسار لتحديد المهمة الأولى ومثال قبولها. ويتوقف التنفيذ الخارجي على العملية والصلاحية ونطاق التفعيل المتفق عليه لشركتك."
         }
       ]
     }
   },
   "/methodology": {
     "en": {
-      "title": "How to Build Business AI Agents | AGYNEXA",
-      "description": "A practical approach to defining agent roles, preparing company context, designing workflow responsibilities and evaluating useful results.",
-      "h1": "Turn the way your team works into a clear agent design",
+      "title": "Build, test and activate your agent | AGYNEXA",
+      "description": "Start with a task you can explain and a result your team can judge. Studio lets you configure the role and test its work before you discuss production activation.",
+      "h1": "Build, test and activate your agent",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The most useful starting point is a process your team can explain. Describe what happens today, where the work changes hands and which result matters. That gives the agent a role with a purpose and gives your team a basis for evaluating it."
+          "text": "Start with a task you can explain and a result your team can judge. Studio lets you configure the role and test its work before you discuss production activation."
         },
         {
           "type": "heading",
-          "text": "Describe the process and its owner"
+          "text": "Choose the job and its owner",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Choose a recurring event: a customer request, an employee need or an operational exception. Identify who owns the process, where the information comes from and what confirms that the work is complete. Include a real exception as well as the usual path."
+          "text": "Describe the event that starts the work, the information available and who receives the result. For a supplier review, that means offers, comparison rules and the buyer who makes the decision. Choose one recurring responsibility for the first agent."
         },
         {
           "type": "heading",
-          "text": "Define the responsibilities"
+          "text": "Configure instructions and company context",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Decide what each agent should understand, produce or hand over. Keep a responsibility together when it uses the same context. Separate roles when they need different knowledge, permissions or evaluation criteria. A multi-agent design is useful when that separation makes the process clearer."
+          "text": "Write the role, expected output and decisions reserved for a person. Add the relevant text or Markdown sources and explain which one governs a disputed fact. The agent should ask for missing information when it affects the result."
         },
         {
           "type": "heading",
-          "text": "Prepare company context"
+          "text": "Enable the tools the task needs",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Use procedures and examples relevant to the role, including the terminology your team uses. Identify the source that governs a disputed fact and the information that changes over time. In Studio, configure the agent’s instructions and add the company knowledge it needs for its answers."
+          "text": "Use web search when the task needs current public information. Use code analysis for calculations or generated files. Review the data you provide and the outputs returned. Access to company systems is configured separately for each supported operation."
         },
         {
           "type": "heading",
-          "text": "Specify actions and decisions"
+          "text": "Test ordinary cases and exceptions",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "For every proposed system action, establish the required connection and authority. For every human decision, identify the responsible person and the information they need. A written instruction cannot grant access to company software."
+          "text": "Try a representative case, missing information, conflicting sources and a request outside the role. Check source support, calculation accuracy and correction effort. Keep a few acceptance cases separate from the examples used to tune the instructions."
         },
         {
           "type": "heading",
-          "text": "Test the ordinary case and the exception"
+          "text": "Agree production activation by email",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Ask questions from the real process. Try a missing fact, conflicting information and a request outside the agent’s responsibility. Inspect its answers and references. Evaluate whether the work is useful to the next person, including how much correction it requires."
+          "text": "After reviewing the test results, email [adham@agynexa.si](mailto:adham@agynexa.si) with the agent name, intended work and required connections. Pricing, payment arrangements, terms and operating scope are discussed by email. A successful test does not automatically activate production access."
         },
         {
           "type": "heading",
-          "text": "Expand from evidence"
+          "text": "Review performance as the work changes",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Use what the tests reveal to improve the configuration. Before adding a responsibility, check its information needs and the effect it has on the rest of the process. External execution and publication each require the supported controls appropriate to that action."
-        },
-        {
-          "type": "paragraph",
-          "text": "[Begin in Studio](/studio) · [Workflow evaluation](/services/evaluation-observability)"
+          "text": "Once a production scope is agreed, use its acceptance criteria to assess outputs, failures and support needs. Review changes to instructions, sources or connected operations before relying on them. [Start in Studio](/studio)."
         }
       ]
     },
     "ar": {
-      "title": "كيفية بناء وكلاء ذكاء اصطناعي للأعمال | AGYNEXA",
-      "description": "منهج عملي لتحديد أدوار الوكلاء وتجهيز معرفة الشركة وتوزيع مسؤوليات سير العمل واختبار فائدة النتائج.",
-      "h1": "حوّل طريقة عمل فريقك إلى تصميم واضح للوكلاء",
+      "title": "ابنِ الوكيل واختبره ثم فعّله | AGYNEXA",
+      "description": "ابدأ بمهمة تستطيع شرحها ونتيجة يستطيع فريقك تقييمها. يتيح الاستوديو إعداد الدور واختبار العمل قبل مناقشة التفعيل الإنتاجي.",
+      "h1": "ابنِ الوكيل واختبره ثم فعّله",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "ابدأ بعملية يستطيع فريقك شرحها: كيف تصل المهمة، ومن يتولاها، وأين تنتقل المسؤولية، وما النتيجة المطلوبة. يساعد هذا الوصف على تحديد دور مفيد للوكيل وعلى تقييمه وفق احتياج العمل."
+          "text": "ابدأ بمهمة تستطيع شرحها ونتيجة يستطيع فريقك تقييمها. يتيح الاستوديو إعداد الدور واختبار العمل قبل مناقشة التفعيل الإنتاجي."
         },
         {
           "type": "heading",
-          "text": "حدّد العملية والمسؤول عنها"
+          "text": "حدّد المهمة والمسؤول عنها",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "اختر حدثًا متكررًا، مثل طلب عميل أو احتياج موظف أو استثناء تشغيلي. وضّح صاحب العملية ومصادر المعلومات وما يثبت اكتمالها. واذكر حالة غير معتادة إلى جانب المسار المعتاد."
+          "text": "صف الحدث الذي يبدأ العمل والمعلومات المتاحة ومن يستلم النتيجة. في مراجعة الموردين مثلًا، حدّد العروض وقواعد المقارنة ومسؤول الشراء الذي يتخذ القرار. ابدأ بمسؤولية متكررة واحدة."
         },
         {
           "type": "heading",
-          "text": "وزّع المسؤوليات"
+          "text": "اضبط التعليمات وسياق الشركة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "حدد ما يفهمه كل وكيل وما ينتجه وما يسلّمه إلى غيره. اجمع الأعمال التي تعتمد على السياق نفسه، وافصل الأدوار عندما تختلف المعرفة أو الصلاحيات أو طريقة التقييم. تكون تعددية الوكلاء مفيدة حين يجعل هذا التقسيم العملية أوضح."
+          "text": "اكتب الدور والمخرج المطلوب والقرارات المتروكة للمراجع. أضف المصادر النصية أو ملفات Markdown المناسبة، ووضح المرجع الذي يحسم التعارض. اطلب من الوكيل استكمال المعلومة إذا كان غيابها يؤثر في النتيجة."
         },
         {
           "type": "heading",
-          "text": "جهّز سياق الشركة"
+          "text": "فعّل الأدوات اللازمة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "اختر الإجراءات والأمثلة المرتبطة بالدور، مع المصطلحات التي يستخدمها الفريق. وحدد المرجع الذي يحسم التعارض والمعلومات التي تتغير مع الوقت. وفي الاستوديو، اضبط تعليمات الوكيل وأضف معلومات الشركة التي يحتاجها للإجابة."
+          "text": "استخدم البحث عندما تحتاج المهمة إلى معلومات عامة حديثة، وتحليل الكود للحسابات أو الملفات الناتجة. راجع البيانات المقدمة والمخرجات المستلمة. ويُجهّز الوصول إلى أنظمة الشركة بصورة مستقلة لكل عملية مدعومة."
         },
         {
           "type": "heading",
-          "text": "وضّح الإجراءات والقرارات"
+          "text": "اختبر الحالات المعتادة والاستثناءات",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "لكل إجراء مقترح داخل نظام آخر اتصال وصلاحية لازمان. ولكل قرار بشري مسؤول ومعلومات يحتاجها قبل الحسم. كتابة التعليمة وحدها لا تمنح الوكيل وصولًا لبرامج الشركة."
+          "text": "جرّب حالة ممثلة وأخرى ناقصة المعلومات ومصادر متعارضة وطلبًا خارج الدور. افحص الاستشهادات والحسابات وجهد التصحيح، واحتفظ بحالات قبول منفصلة عن الأمثلة المستخدمة لتحسين التعليمات."
         },
         {
           "type": "heading",
-          "text": "اختبر الحالات الفعلية"
+          "text": "اتفق على التفعيل الإنتاجي بالبريد",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "جرّب أسئلة من العملية نفسها، ثم حالة بمعلومة ناقصة وأخرى بمعلومات متعارضة وطلبًا خارج مسؤولية الوكيل. افحص الإجابات ومراجعها، وقيّم فائدتها لمن يستلم العمل وحجم التصحيح الذي تحتاجه."
+          "text": "بعد مراجعة النتائج، راسل [adham@agynexa.si](mailto:adham@agynexa.si) باسم الوكيل والعمل المطلوب والاتصالات اللازمة. تُناقش الأسعار وطريقة الدفع والشروط ونطاق التشغيل عبر البريد. نجاح التجربة لا يفعّل الوصول الإنتاجي تلقائيًا."
         },
         {
           "type": "heading",
-          "text": "وسّع النطاق وفق النتيجة"
+          "text": "راجع الأداء عندما يتغير العمل",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "حسّن الإعدادات بناءً على ما تكشفه التجربة، وافصل مراجعة الإجابات عن ضوابط النشر والإجراءات الخارجية. هكذا يتسع النظام حول عملية مفهومة للفريق، وتبقى لكل إضافة مسؤولية يمكن تقييمها."
-        },
-        {
-          "type": "paragraph",
-          "text": "[ابدأ في الاستوديو](/ar/studio) · [تقييم سير العمل](/ar/services/evaluation-observability)"
+          "text": "بعد الاتفاق على نطاق الإنتاج، استخدم معايير قبوله لتقييم المخرجات والإخفاقات واحتياجات الدعم. راجع تغييرات التعليمات والمصادر والعمليات المتصلة قبل الاعتماد عليها. [ابدأ في الاستوديو](/studio)."
         }
       ]
     }
   },
   "/architecture": {
     "en": {
-      "title": "Multi-Agent Architecture and Orchestration | AGYNEXA",
-      "description": "Understand the relationship between agent roles, company knowledge, workflow state, tools and human decisions in a business agent system.",
-      "h1": "How the parts of an agent system work together",
+      "title": "How your agent’s workspace works | AGYNEXA",
+      "description": "AGYNEXA brings agent configuration, private knowledge and test conversations into one workspace. OpenAI handles reasoning and supported tools; the application manages access, saved work and activation.",
+      "h1": "How your agent’s workspace works",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An agent system combines language understanding with the software and rules a process depends on. The model interprets information. Agent roles divide responsibilities. Orchestration connects the work. Business systems remain the source of authority for their own records."
+          "text": "AGYNEXA brings agent configuration, private knowledge and test conversations into one workspace. OpenAI handles reasoning and supported tools; the application manages access, saved work and activation."
         },
         {
           "type": "heading",
-          "text": "A role defines what the agent is responsible for"
+          "text": "A private workspace for your work",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Instructions describe the purpose, permitted work and expected result. Knowledge supplies the business context. A role should be specific enough to evaluate without turning every exception into a new instruction."
+          "text": "Your account owns its agent configurations, sources and saved conversations. Each request is checked against the workspace before private records are read or changed. Enterprise teams and shared access need their own agreed role and permission model."
         },
         {
           "type": "heading",
-          "text": "Knowledge supplies context; tools supply access"
+          "text": "Instructions define responsibility",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A procedure can explain how an issue should be handled. It cannot establish a shipment’s live location or authorize a refund. Those actions require an appropriate system connection, identity and permission. Separating knowledge from tools makes the system’s authority easier to understand."
+          "text": "Set what the agent should do, the evidence it should use and the output format. Include the limits of the role and the point at which a person must decide. Instructions guide behavior; they do not grant access to another application."
         },
         {
           "type": "heading",
-          "text": "Orchestration connects specialist work"
+          "text": "Knowledge supplies company context",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A process can assign different responsibilities to intake, investigation and follow-up roles. The orchestration design determines which runs next, what information it receives and what dependency must be resolved before work continues. Parallel tasks still need an agreed way to combine their results."
+          "text": "Text and Markdown sources supply approved context for the agent. Source references let you inspect the basis of an answer. Keep the content relevant and current; a saved procedure cannot confirm the live state of an order or an account."
         },
         {
           "type": "heading",
-          "text": "Process state belongs to the application"
+          "text": "Reasoning uses enabled tools",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A conversation may explain a case, but a reliable workflow also needs an authoritative record of its stage, owner and decisions. A model’s statement that a task is complete is not confirmation that another system accepted an action. Calculations, authorization and state changes belong in controlled software operations."
+          "text": "Studio uses GPT-6.1 Terra with high reasoning. Web search can gather current public sources, and Python runs in an OpenAI-hosted sandbox for analysis and file generation. The platform keeps provider credentials on the server. The tools enabled for a task determine what the agent can attempt."
         },
         {
           "type": "heading",
-          "text": "Human decisions are part of the flow"
+          "text": "A proposed action needs a confirmed result",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Identify the exact point that requires judgment or approval, the person responsible and what they must inspect. If the proposed action changes after approval, the system design must determine whether a new decision is needed. “Human in the loop” is meaningful when that responsibility is explicit."
+          "text": "A recommendation, a person’s approval and a completed system action are different records. Connected workflows need an authorized operation and confirmation from the receiving system. CRM, ERP, voice and automatic agent handoffs require separate connection and execution work."
         },
         {
           "type": "heading",
-          "text": "Design for uncertainty and interruption"
+          "text": "Activation follows a reviewed test",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Missing data, unavailable systems and conflicting records are ordinary operating conditions. A process needs a defined response: ask for information, pause, retry safely or pass the work to an owner. A failed attempt must not silently become a duplicate action."
-        },
-        {
-          "type": "heading",
-          "text": "Apply the architecture to the available scope"
-        },
-        {
-          "type": "paragraph",
-          "text": "In Studio, users configure agents, add company knowledge and work with private conversations. The architecture described here explains how those roles fit within a wider workflow. Its connected actions and execution services depend on the support and permissions available for the particular process."
-        },
-        {
-          "type": "paragraph",
-          "text": "[Agent orchestration](/services/agent-orchestration) · [System integration](/integrations)"
+          "text": "Build and evaluate the agent in Studio first. Production publication depends on an activation decision after the operating scope, pricing and terms are agreed by email. [Review the build process](/methodology) or [connection requirements](/integrations)."
         }
       ]
     },
     "ar": {
-      "title": "بنية أنظمة الوكلاء وتنسيقها | AGYNEXA",
-      "description": "افهم علاقة أدوار الوكلاء بمعرفة الشركة والأدوات وحالة سير العمل والقرارات البشرية داخل نظام أعمال مترابط.",
-      "h1": "كيف تعمل مكونات نظام الوكلاء معًا؟",
+      "title": "كيف تعمل مساحة الوكيل؟ | AGYNEXA",
+      "description": "يجمع AGYNEXA إعداد الوكيل والمعرفة الخاصة ومحادثات التجربة في مساحة واحدة. تتولى OpenAI الاستدلال والأدوات المدعومة، ويدير التطبيق الوصول والأعمال المحفوظة والتفعيل.",
+      "h1": "كيف تعمل مساحة الوكيل؟",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يجمع نظام الوكلاء بين فهم اللغة والبرامج والقواعد التي تعتمد عليها العملية. يفسر النموذج المعلومات، وتوزع الأدوار المسؤوليات، ويربط التنسيق بين الأعمال. وتبقى أنظمة الشركة المرجع المعتمد للسجلات التي تديرها."
+          "text": "يجمع AGYNEXA إعداد الوكيل والمعرفة الخاصة ومحادثات التجربة في مساحة واحدة. تتولى OpenAI الاستدلال والأدوات المدعومة، ويدير التطبيق الوصول والأعمال المحفوظة والتفعيل."
         },
         {
           "type": "heading",
-          "text": "الدور يحدد مسؤولية الوكيل"
+          "text": "مساحة خاصة لأعمالك",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "توضح التعليمات غرض الوكيل والعمل المسموح له والنتيجة المنتظرة منه، وتوفر المعرفة سياق المؤسسة. ويساعد تحديد الدور على تقييمه ومعرفة الحالات التي يحيلها إلى شخص أو دور آخر."
+          "text": "يرتبط إعداد الوكلاء والمصادر والمحادثات المحفوظة بمساحة حسابك. يُفحص الطلب أمام مساحة العمل قبل قراءة السجلات الخاصة أو تعديلها. وتحتاج فرق المؤسسات والوصول المشترك إلى نموذج أدوار وصلاحيات متفق عليه."
         },
         {
           "type": "heading",
-          "text": "المعرفة تشرح، والأداة تتيح الوصول"
+          "text": "التعليمات تحدد المسؤولية",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "قد توضح السياسة طريقة التعامل مع المشكلة، لكنها لا تكشف وحدها موقع شحنة حيًا ولا تمنح صلاحية رد مبلغ. يحتاج الإجراء إلى اتصال مناسب وهوية وصلاحية. ويساعد الفصل بين المعرفة والأدوات على فهم حدود مسؤولية النظام."
+          "text": "حدّد ما يفعله الوكيل والأدلة التي يستخدمها وشكل المخرج. أضف حدود الدور والموضع الذي يحتاج إلى قرار بشري. توجه التعليمات السلوك، لكنها لا تمنح صلاحية دخول تطبيق آخر."
         },
         {
           "type": "heading",
-          "text": "التنسيق يربط الأعمال المتخصصة"
+          "text": "المعرفة توفر سياق الشركة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "يمكن توزيع استقبال الحالة وفحصها ومتابعتها على أدوار مختلفة. يحدد تصميم التنسيق ترتيب تشغيلها والمعلومات التي يستلمها كل دور والشرط الذي يجب استيفاؤه قبل استمرار العملية. وحتى الأعمال المتوازية تحتاج طريقة متفقًا عليها لجمع نتائجها."
+          "text": "توفر المصادر النصية وMarkdown سياقًا معتمدًا للوكيل، وتتيح المراجع فحص أساس الإجابة. احتفظ بمحتوى مناسب وحديث؛ فالإجراء المحفوظ لا يؤكد وحده الحالة الحية لطلب أو حساب."
         },
         {
           "type": "heading",
-          "text": "حالة العملية مسؤولية التطبيق"
+          "text": "الاستدلال يستخدم الأدوات المفعّلة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "تساعد المحادثة على فهم الحالة، لكن سير العمل يحتاج سجلًا معتمدًا لمرحلته وصاحبه وقراراته. قول النموذج إن المهمة انتهت لا يثبت قبول النظام الآخر للإجراء. وتنفذ الحسابات وفحوص الصلاحية وتغييرات الحالة من خلال عمليات برمجية مضبوطة."
+          "text": "يستخدم الاستوديو GPT-6.1 Terra بمستوى استدلال مرتفع. يجمع البحث مصادر عامة حديثة، ويعمل Python في بيئة معزولة لدى OpenAI للتحليل وإنتاج الملفات. تحتفظ المنصة ببيانات اتصال المزود على الخادم، وتحدد الأدوات المفعّلة ما يستطيع الوكيل محاولة تنفيذه."
         },
         {
           "type": "heading",
-          "text": "القرار البشري خطوة لها متطلبات"
+          "text": "للإجراء المقترح نتيجة مؤكدة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "حدد موضع القرار أو الاعتماد، والشخص المسؤول عنه، والمعلومات التي يفحصها. وإذا تغير الإجراء المقترح بعد اعتماده، فيجب أن يحدد التصميم متى يلزم قرار جديد. هذا ما يجعل الإشراف البشري جزءًا عمليًا من النظام."
+          "text": "التوصية واعتماد الشخص والإجراء المكتمل في النظام سجلات مختلفة. يحتاج سير العمل المتصل إلى عملية مخولة وتأكيد من النظام المستلم. ويتطلب CRM وERP والصوت والانتقال التلقائي بين الوكلاء إعدادًا مستقلًا للربط والتنفيذ."
         },
         {
           "type": "heading",
-          "text": "توقّع النقص والتوقف"
+          "text": "التفعيل بعد مراجعة التجربة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "نقص البيانات وتعطل الاتصال وتعارض السجلات حالات معتادة في التشغيل. تحتاج كل منها استجابة معروفة: طلب معلومة، أو انتظار، أو إعادة محاولة آمنة، أو إحالة إلى المسؤول. ولا يجوز أن تتحول المحاولة الفاشلة إلى إجراء مكرر من دون ملاحظة."
-        },
-        {
-          "type": "heading",
-          "text": "اربط التصميم بالنطاق المتاح"
-        },
-        {
-          "type": "paragraph",
-          "text": "يتيح الاستوديو إعداد الوكلاء وإضافة معرفة الشركة والعمل بالمحادثات الخاصة. وتوضح هذه البنية كيف تدخل الأدوار ضمن سير عمل أوسع. وتتحدد إجراءات الربط وخدمات التنفيذ بحسب ما تدعمه العملية والصلاحيات المتاحة لها."
-        },
-        {
-          "type": "paragraph",
-          "text": "[تنسيق عمل الوكلاء](/ar/services/agent-orchestration) · [تكامل الأنظمة](/ar/integrations)"
+          "text": "ابنِ الوكيل وقيّمه داخل الاستوديو أولًا. يعتمد نشره للإنتاج على قرار تفعيل بعد الاتفاق على نطاق التشغيل والسعر والشروط عبر البريد. [راجع خطوات البناء](/methodology) أو [متطلبات الربط](/integrations)."
         }
       ]
     }
   },
   "/integrations": {
     "en": {
-      "title": "AI Agent Integrations and System Access | AGYNEXA",
-      "description": "Understand how knowledge sources and authorized system actions fit an agent workflow, including permissions, confirmation and connection requirements.",
-      "h1": "Connect a process to the information and actions it needs",
+      "title": "Give each connection a clear job | AGYNEXA",
+      "description": "Research and code tools are available within the agent workspace when enabled. Business systems need a scoped connection for the records and operations your workflow will actually use.",
+      "h1": "Give each connection a clear job",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A useful connection has a specific job. It may supply the current case status, retrieve an approved record or submit an authorized change. Define that operation before choosing a connector or asking for access."
+          "text": "Research and code tools are available within the agent workspace when enabled. Business systems need a scoped connection for the records and operations your workflow will actually use."
         },
         {
           "type": "heading",
-          "text": "Separate knowledge from live records"
+          "text": "Company knowledge",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A company procedure explains how work should happen. A business application holds its current transactions and status. Decide which source answers each question, how recent the information must be and what happens when the sources disagree."
+          "text": "Start with approved text or Markdown material in the workspace. A live repository such as SharePoint or Google Drive needs a separate connector, source permissions and update behavior. Adding a document does not connect the account that stores it."
         },
         {
           "type": "heading",
-          "text": "Read access and action authority are different"
+          "text": "Web research and code analysis",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Finding a record does not authorize changing it. Define the account or identity used, the records it may access and the operations it may perform. A write action also needs a clear result to inspect and an owner for exceptions."
+          "text": "Enable public web search when freshness matters. Enable the code interpreter for calculations and output files. Review citations and generated artifacts in the task context. These tools do not grant permission to private business applications."
         },
         {
           "type": "heading",
-          "text": "Use the interface the operation requires"
+          "text": "CRM, ERP and operational systems",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "APIs let a workflow request information or an action. Webhooks can notify it when an event occurs, while MCP provides a standard interface for exposing tools to agents. Suitability still depends on the product edition, access scopes, supported operations and failure behavior of the actual connection."
+          "text": "Name the system, edition and required operation: read an order, look up stock or create a reviewed draft. Availability depends on the interface, license and permissions. These are connection requirements to assess for your activation scope, not a catalogue of preconnected customer systems."
         },
         {
           "type": "heading",
-          "text": "Plan the return path"
+          "text": "Email, voice and customer channels",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "A request sent to another system needs a response that confirms what happened. Delays, duplicate events and rejected updates require explicit handling. A workflow should retain the external result rather than relying on the agent’s wording as proof of execution."
+          "text": "A customer-facing channel needs an authorized sender or account, delivery handling and a clear handover path. Voice also needs a supported telephony and speech runtime. Agree the exact channel and communication permissions before activating it for customers."
         },
         {
           "type": "heading",
-          "text": "Check availability for the workflow"
+          "text": "Customer OpenAI access",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "This page explains the requirements for a connected workflow. Adding company knowledge in Studio and authorizing access to a business system are separate steps. Before including an external action, confirm that the required application, operation and permission are supported."
+          "text": "The platform’s OpenAI connection powers Studio by default. You can connect a customer-owned API key through the dedicated credentials control; it is stored encrypted and used on the server. Using an eligible ChatGPT plan needs a separately supported and authorized integration. Signing in and production activation are separate decisions."
+        },
+        {
+          "type": "heading",
+          "text": "Agree the operation and its evidence",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "[Integration capability](/services/enterprise-integrations) · [Permissions and oversight](/security)"
+          "text": "Before live use, establish who authorizes the action, what confirms success and what happens if the connection fails. Send the system name and intended operation to [adham@agynexa.si](mailto:adham@agynexa.si) when discussing production activation."
         }
       ]
     },
     "ar": {
-      "title": "تكامل الوكلاء مع أنظمة الشركة | AGYNEXA",
-      "description": "تعرّف على متطلبات ربط المعرفة والسجلات والإجراءات بسير عمل الوكلاء، من الصلاحيات إلى تأكيد نتيجة التنفيذ.",
-      "h1": "اربط العملية بالمعلومة والإجراء اللذين تحتاجهما",
+      "title": "حدّد مهمة كل اتصال | AGYNEXA",
+      "description": "تتوفر أدوات البحث والكود داخل مساحة الوكيل عند تفعيلها. وتحتاج أنظمة الأعمال إلى اتصال محدد بالسجلات والعمليات التي سيستخدمها سير العمل فعلًا.",
+      "h1": "حدّد مهمة كل اتصال",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "للاتصال المفيد وظيفة محددة: جلب حالة محدثة، أو قراءة سجل معتمد، أو تقديم تغيير مصرح به. حدد العملية المطلوبة قبل اختيار الموصل أو طلب صلاحيات الوصول."
+          "text": "تتوفر أدوات البحث والكود داخل مساحة الوكيل عند تفعيلها. وتحتاج أنظمة الأعمال إلى اتصال محدد بالسجلات والعمليات التي سيستخدمها سير العمل فعلًا."
         },
         {
           "type": "heading",
-          "text": "ميّز المعرفة عن السجلات الحية"
+          "text": "معرفة الشركة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "تشرح إجراءات الشركة كيف ينبغي تنفيذ العمل، بينما يحتفظ نظام الأعمال بمعاملاته وحالته الفعلية. حدد المصدر الذي يجيب عن كل سؤال، ومدى حداثة المعلومة المطلوبة، وما يحدث إذا تعارضت المصادر."
+          "text": "ابدأ بمادة نصية أو Markdown معتمدة في مساحة العمل. ويحتاج المستودع الحي، مثل SharePoint أو Google Drive، إلى موصل مستقل وصلاحيات للمصادر وقواعد للتحديث. إضافة مستند لا تربط تلقائيًا الحساب الذي يحتفظ به."
         },
         {
           "type": "heading",
-          "text": "القراءة لا تمنح حق التغيير"
+          "text": "البحث وتحليل الكود",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "الوصول إلى سجل لا يعني السماح بتعديله. عرّف الهوية المستخدمة والسجلات المسموحة والعمليات التي يحق لها تنفيذها. ويحتاج إجراء الكتابة إلى نتيجة يمكن فحصها ومسؤول يتولى الاستثناءات."
+          "text": "فعّل البحث العام عندما تكون حداثة المعلومة مهمة، ومفسّر الكود للحسابات وإنتاج الملفات. راجع المراجع والملفات في سياق المهمة. لا تمنح هذه الأدوات صلاحية الدخول إلى تطبيقات العمل الخاصة."
         },
         {
           "type": "heading",
-          "text": "اختر الواجهة المناسبة للعملية"
+          "text": "أنظمة إدارة العملاء والموارد والتشغيل",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "تتيح واجهات API طلب معلومة أو إجراء، وتبلغ إشعارات webhooks سير العمل بوقوع حدث، بينما يوفر بروتوكول MCP واجهة موحدة لإتاحة الأدوات للوكلاء. وتتوقف ملاءمة الاتصال على إصدار المنتج ونطاق الوصول والعمليات المدعومة وطريقة التعامل مع الإخفاق."
+          "text": "حدّد النظام وإصداره والعملية المطلوبة: قراءة طلب أو استعلام عن مخزون أو إنشاء مسودة مراجعة. تعتمد الإتاحة على الواجهة والترخيص والصلاحيات. تُراجع هذه المتطلبات ضمن نطاق التفعيل، ولا تعني أن أنظمة العملاء متصلة مسبقًا."
         },
         {
           "type": "heading",
-          "text": "تأكد مما حدث بعد الطلب"
+          "text": "البريد والصوت وقنوات العملاء",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "يحتاج الطلب المرسل إلى نظام آخر إلى رد يؤكد النتيجة. ويجب تحديد كيفية التعامل مع التأخير والأحداث المكررة والتحديثات المرفوضة. يحتفظ سير العمل بنتيجة النظام الخارجي بدل اعتبار صياغة الوكيل دليلًا على التنفيذ."
+          "text": "تحتاج قناة التواصل إلى حساب أو مرسل مخول ومعالجة للتسليم ومسار واضح للإحالة. ويحتاج الصوت أيضًا إلى تشغيل هاتفي وصوتي مدعوم. اتفق على القناة وصلاحيات التواصل قبل تفعيلها للعملاء."
         },
         {
           "type": "heading",
-          "text": "تحقّق من الاتصال المطلوب"
+          "text": "وصول العميل إلى OpenAI",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "تشرح هذه الصفحة متطلبات سير العمل المتصل بالأنظمة. إضافة معرفة الشركة في الاستوديو وتفويض الوصول إلى نظام أعمال خطوتان منفصلتان. وقبل إدراج إجراء خارجي، تأكد من دعم التطبيق والعملية والصلاحية المطلوبة."
+          "text": "يشغّل اتصال OpenAI الخاص بالمنصة الاستوديو افتراضيًا. ويمكن ربط مفتاح API مملوك للعميل من أداة بيانات الاتصال المخصصة؛ يُحفظ مشفرًا ويُستخدم على الخادم. ويتطلب استخدام خطة ChatGPT مؤهلة تكاملًا مستقلًا مدعومًا ومخولًا. تسجيل الدخول والتفعيل الإنتاجي قراران منفصلان."
+        },
+        {
+          "type": "heading",
+          "text": "اتفق على الإجراء ودليل نجاحه",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "[قدرة تكامل الأنظمة](/ar/services/enterprise-integrations) · [الصلاحيات والإشراف](/ar/security)"
+          "text": "قبل الاستخدام الحي، حدّد من يجيز الإجراء وما يثبت نجاحه وما يحدث عند فشل الاتصال. أرسل اسم النظام والعملية المطلوبة إلى [adham@agynexa.si](mailto:adham@agynexa.si) عند مناقشة التفعيل الإنتاجي."
         }
       ]
     }
   },
   "/security": {
     "en": {
-      "title": "AI Agent Security, Permissions and Oversight | AGYNEXA",
-      "description": "Understand the data, access and human responsibilities behind a business agent workflow. Review private workspace use and publication decisions.",
-      "h1": "Make authority clear before an agent acts",
+      "title": "Keep control of data and decisions | AGYNEXA",
+      "description": "Choose what your agent may use, inspect its outputs and identify the actions that require approval. Workspace controls and production responsibilities should be understood before customer work begins.",
+      "h1": "Keep control of data and decisions",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An agent’s responsibility should be matched by the information it may use and the actions it may take. Security begins with those boundaries and the people accountable for them."
+          "text": "Choose what your agent may use, inspect its outputs and identify the actions that require approval. Workspace controls and production responsibilities should be understood before customer work begins."
         },
         {
           "type": "heading",
-          "text": "Decide what belongs in the workspace"
+          "text": "Private work belongs to its workspace",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Use company material you are authorized to provide. Choose information appropriate to the task and the service’s processing arrangements. Keep credentials and sensitive case records out of examples and public knowledge. Check the privacy notice before introducing information that needs special safeguards."
+          "text": "Agents, private sources and conversations are associated with the signed-in account’s workspace. Server-side authorization and database policies scope access to those records. Use only information you are authorized to provide; review sensitive-data requirements before a production agreement."
         },
         {
           "type": "heading",
-          "text": "Keep private use and publication separate"
+          "text": "Tool access is a deliberate choice",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Your signed-in workspace holds private agents and conversations. Public publication is a separate decision about what other people may access. Review the information approved for that use, including any content already included in a published version."
+          "text": "Enable only the tools needed for the task. Web search uses public sources; code analysis runs in an isolated provider environment. Business-system credentials and operations require a separate authorized connection. Never paste passwords or API keys into agent instructions."
         },
         {
           "type": "heading",
-          "text": "Make the approval decision explicit"
+          "text": "Review what the output supports",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "An effective review identifies the proposed action, its business impact and the responsible decision maker. A person must be able to understand what they are accepting. Internal approval and an action confirmed by an external system are different events."
+          "text": "Inspect relevant sources, tool activity and unresolved questions. Verify financial calculations and consequential recommendations with the responsible specialist. A model response is not confirmation that an external payment, message or record change succeeded."
         },
         {
           "type": "heading",
-          "text": "Examine controls at the level of the process"
+          "text": "Publication is separate from testing",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Signing in controls access to the workspace. A business-system action also needs its own permissions and any approval required by the process. Review access, public knowledge and external actions separately, using the requirements of each operation."
+          "text": "A private test helps evaluate the role. Production publication requires activation for an agreed scope. Any public experience must be reviewed for the data it exposes, the audience it serves and the operations it permits."
         },
         {
           "type": "heading",
-          "text": "Preserve accountability when something goes wrong"
+          "text": "Agree operating responsibilities",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "When work fails or stops, the process owner needs the relevant inputs and the last confirmed result. An activity record helps locate the problem; confirmation from the affected system or responsible person establishes whether the task succeeded. Review both when deciding what should happen next."
-        },
-        {
-          "type": "paragraph",
-          "text": "[Privacy notice](/privacy) · [Usage terms](/terms) · [Governance capability](/services/governance-security)"
+          "text": "Discuss reviewers, data handling, incident contact and support through the activation conversation. Specific compliance requirements or service commitments must be agreed for the deployment; this page does not assert an external certification. [Privacy notice](/privacy) · [Usage terms](/terms)."
         }
       ]
     },
     "ar": {
-      "title": "أمان الوكلاء والصلاحيات والإشراف | AGYNEXA",
-      "description": "افهم حدود البيانات والوصول ومسؤوليات الأشخاص داخل سير عمل الوكلاء، والفرق بين مساحة العمل الخاصة والنشر العام.",
-      "h1": "صلاحيات مفهومة ومسؤولية محددة قبل التنفيذ",
+      "title": "احتفظ بالسيطرة على البيانات والقرارات | AGYNEXA",
+      "description": "اختر ما يستطيع الوكيل استخدامه وافحص مخرجاته وحدّد الإجراءات التي تحتاج إلى اعتماد. افهم ضوابط المساحة ومسؤوليات التشغيل قبل بدء أعمال العملاء.",
+      "h1": "احتفظ بالسيطرة على البيانات والقرارات",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "ترتبط مسؤولية الوكيل بالمعلومات المسموح له استخدامها والإجراءات التي يحق له اتخاذها. يبدأ الأمان من تحديد هذه الحدود ومعرفة المسؤول عن كل قرار."
+          "text": "اختر ما يستطيع الوكيل استخدامه وافحص مخرجاته وحدّد الإجراءات التي تحتاج إلى اعتماد. افهم ضوابط المساحة ومسؤوليات التشغيل قبل بدء أعمال العملاء."
         },
         {
           "type": "heading",
-          "text": "اختر المعلومات المناسبة للمساحة"
+          "text": "العمل الخاص مرتبط بمساحته",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "استخدم مواد يحق لك تقديمها، وبالقدر الذي تحتاجه المهمة ويتناسب مع ترتيبات معالجة البيانات. أبقِ بيانات الدخول والحالات الحساسة خارج الأمثلة والمعرفة العامة. وراجع إشعار الخصوصية قبل إضافة معلومات تحتاج إلى حماية خاصة."
+          "text": "يرتبط الوكلاء والمصادر الخاصة والمحادثات بمساحة الحساب المسجل. تحدد فحوص الخادم وسياسات قاعدة البيانات الوصول إلى هذه السجلات. استخدم المعلومات المسموح لك بتقديمها، وراجع متطلبات البيانات الحساسة قبل اتفاق الإنتاج."
         },
         {
           "type": "heading",
-          "text": "افصل الاستخدام الخاص عن النشر"
+          "text": "الوصول إلى الأدوات اختيار مقصود",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "تحتفظ مساحة الحساب بوكلائك ومحادثاتك الخاصة. أما النشر العام فهو قرار مستقل بشأن ما يمكن للآخرين الوصول إليه. راجع المعلومات المسموح بعرضها، وما قد تتضمنه نسخة سبق نشرها."
+          "text": "فعّل الأدوات التي تحتاجها المهمة فقط. يستخدم البحث مصادر عامة، ويعمل تحليل الكود في بيئة معزولة لدى المزود. تحتاج بيانات اتصال أنظمة الأعمال وعملياتها إلى ربط مخول مستقل. لا تضع كلمات المرور أو مفاتيح API في تعليمات الوكيل."
         },
         {
           "type": "heading",
-          "text": "وضّح ما الذي يعتمده الشخص"
+          "text": "راجع ما تثبته النتيجة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "تحتاج المراجعة إلى إجراء مقترح مفهوم وأثر معلوم وصاحب قرار مسؤول. يجب أن يعرف الشخص ما يقبله تحديدًا. والاعتماد داخل المساحة يختلف عن إجراء يؤكد نظام خارجي تنفيذه."
+          "text": "افحص المصادر المرتبطة ونشاط الأدوات والأسئلة المفتوحة. تحقّق من الحسابات المالية والتوصيات المؤثرة مع المختص المسؤول. استجابة النموذج لا تثبت نجاح دفعة أو رسالة أو تعديل سجل في نظام خارجي."
         },
         {
           "type": "heading",
-          "text": "افحص الضابط المرتبط بكل عملية"
+          "text": "النشر منفصل عن التجربة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "يضبط تسجيل الدخول الوصول إلى مساحة الحساب. ويحتاج الإجراء في نظام أعمال إلى صلاحياته وأي اعتماد تتطلبه العملية. راجع الوصول والمحتوى العام والإجراءات الخارجية كلًا بحسب متطلباته، حتى يكون الضابط واضحًا عند استخدامه."
+          "text": "تساعد التجربة الخاصة على تقييم الدور. ويتطلب النشر الإنتاجي تفعيلًا لنطاق متفق عليه. تُراجع أي تجربة عامة من حيث البيانات التي تظهرها والجمهور الذي تخدمه والعمليات التي تسمح بها."
         },
         {
           "type": "heading",
-          "text": "احتفظ بسياق يساعد على فهم الإخفاق"
+          "text": "اتفق على مسؤوليات التشغيل",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "عندما يتوقف العمل أو يفشل، يحتاج صاحب العملية إلى المدخلات المرتبطة به وآخر نتيجة مؤكدة. يساعد سجل النشاط على تحديد موضع المشكلة، ويبين تأكيد النظام المعني أو الشخص المسؤول ما إذا كانت المهمة نجحت. يُراجع الاثنان لتحديد التصرف التالي."
-        },
-        {
-          "type": "paragraph",
-          "text": "[إشعار الخصوصية](/ar/privacy) · [شروط الاستخدام](/ar/terms) · [حوكمة الوكلاء](/ar/services/governance-security)"
+          "text": "ناقش المراجعين والتعامل مع البيانات والتواصل عند الحوادث والدعم ضمن اتفاق التفعيل. تُحدد متطلبات الامتثال والتزامات الخدمة لكل تشغيل، ولا تمثل هذه الصفحة شهادة اعتماد خارجية. [إشعار الخصوصية](/privacy) · [شروط الاستخدام](/terms)."
         }
       ]
     }
   },
   "/resources": {
     "en": {
-      "title": "Business AI Agent Design Guide | AGYNEXA",
-      "description": "Practical guidance on defining business agent roles, preparing company knowledge, handling exceptions and measuring workflow results.",
-      "h1": "Practical guidance for designing a useful agent system",
+      "title": "Practical guides for your first agent | AGYNEXA",
+      "description": "Use these working questions to define a role, prepare its context and judge its output. Each guide connects to a task you can try in Studio.",
+      "h1": "Practical guides for your first agent",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Use these notes to turn a broad automation idea into decisions your team can work with. The aim is to understand the process well enough to define a useful agent role and judge its result."
+          "text": "Use these working questions to define a role, prepare its context and judge its output. Each guide connects to a task you can try in Studio."
         },
         {
           "type": "heading",
-          "text": "What should an agent’s role include?"
+          "text": "Write a useful system instruction",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Describe its purpose, the information it can use, the work it should produce and what it must leave to someone else. “Help the operations team” is context. “Organize a shipment exception using its confirmed milestones and identify the next responsible team” is a responsibility that can be evaluated."
+          "text": "Specify the job, authorized sources, output format and escalation condition. For example: “Compare the supplied offers against the purchasing requirements. Cite the source of each term. Mark missing terms and leave the award decision to the buyer.” Add examples only when they explain a recurring exception."
         },
         {
           "type": "heading",
-          "text": "When is more than one agent useful?"
+          "text": "Prepare a small, relevant knowledge set",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Separate roles when their knowledge, access or evaluation differs. Keep them together when splitting them only adds handoffs. A multi-agent design should specify what each role receives, when it acts and which result allows the work to continue."
+          "text": "Choose the policies and records that answer the agent’s actual questions. Name their owner and version, resolve contradictions and remove material outside the task. Test a question answered by the sources and another that the sources cannot answer. [Knowledge capability](/services/enterprise-knowledge)."
         },
         {
           "type": "heading",
-          "text": "How should company knowledge be prepared?"
+          "text": "Use search when the date changes the answer",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Choose the material relevant to the role and identify its owner. Resolve contradictory instructions where possible. Include terminology and examples that reflect how the team works. Test whether an answer cites the correct information rather than merely mentioning a plausible source."
+          "text": "Ask for the fact needed and its date or jurisdiction. Review the sources the agent returns and check whether they support the conclusion. Public research cannot establish a private order status or a company-specific permission."
         },
         {
           "type": "heading",
-          "text": "What should happen when information is missing?"
+          "text": "Check analysis against the original data",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Define the fact needed and who can supply it. A useful request for clarification explains why the information matters and lets the process continue once it is provided. Repeated broad questions usually indicate that the role or process needs a clearer definition."
+          "text": "For a calculation task, provide units, matching rules and the intended output. Ask the agent to explain exclusions and missing values. Compare totals with the source data, and inspect generated files before sending them to a colleague or customer."
         },
         {
           "type": "heading",
-          "text": "How do you know the workflow is useful?"
+          "text": "Create acceptance cases you can judge",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Compare the result with the work people actually need to do next. Include correction effort, failed handoffs and unresolved exceptions alongside time and usage. Keep a few representative acceptance cases separate from the examples used to tune the instructions."
+          "text": "Keep a usual case, an exception, a missing-input case and an out-of-scope request. Record what a useful response must contain. Compare time and correction effort with the existing process; a persuasive answer alone does not establish a better workflow. [Evaluation capability](/services/evaluation-observability)."
+        },
+        {
+          "type": "heading",
+          "text": "Prepare the activation conversation",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "[Design methodology](/methodology) · [Evaluation and monitoring](/services/evaluation-observability)"
+          "text": "Include the agent name, reviewed tasks, expected users and any connected operation. Email [adham@agynexa.si](mailto:adham@agynexa.si) to discuss pricing, payment and terms. Keep credentials and sensitive customer records out of the initial message."
         }
       ]
     },
     "ar": {
-      "title": "دليل تصميم وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
-      "description": "إرشادات عملية لتحديد أدوار الوكلاء وتجهيز معرفة الشركة ومعالجة الاستثناءات وقياس فائدة سير العمل.",
-      "h1": "إرشادات تساعدك على تصميم نظام مفيد للعمل",
+      "title": "إرشادات عملية لوكيلك الأول | AGYNEXA",
+      "description": "استخدم هذه الأسئلة لتحديد الدور وتجهيز سياقه والحكم على مخرجاته. ترتبط الإرشادات بمهام يمكنك تجربتها داخل الاستوديو.",
+      "h1": "إرشادات عملية لوكيلك الأول",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تساعد هذه الملاحظات على تحويل فكرة عامة للأتمتة إلى قرارات يستطيع الفريق العمل بها. الهدف فهم العملية بما يكفي لتحديد دور مفيد للوكيل والحكم على نتيجته."
+          "text": "استخدم هذه الأسئلة لتحديد الدور وتجهيز سياقه والحكم على مخرجاته. ترتبط الإرشادات بمهام يمكنك تجربتها داخل الاستوديو."
         },
         {
           "type": "heading",
-          "text": "ماذا يتضمن دور الوكيل؟"
+          "text": "اكتب تعليمات نظام مفيدة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "وضح غرضه والمعلومات التي يستخدمها والعمل الذي ينتجه وما يتركه لغيره. عبارة «مساعدة فريق العمليات» تشرح السياق، أما «تنظيم استثناء في شحنة اعتمادًا على مراحلها المؤكدة وتحديد الجهة المسؤولة عن الخطوة التالية» فتحدد مسؤولية يمكن تقييمها."
+          "text": "حدّد المهمة والمصادر المسموحة وشكل المخرج وشرط الإحالة. مثال: «قارن العروض المقدمة بمتطلبات الشراء، واذكر مصدر كل شرط، ووضّح النواقص واترك قرار الترسية لمسؤول الشراء». أضف الأمثلة عندما تشرح استثناء متكررًا."
         },
         {
           "type": "heading",
-          "text": "متى تحتاج إلى أكثر من وكيل؟"
+          "text": "جهّز معرفة محدودة ومرتبطة بالدور",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "افصل الأدوار عندما تختلف المعرفة أو الصلاحيات أو طريقة التقييم، وأبقها معًا إذا كان الفصل سيضيف إحالات دون فائدة. يوضح تصميم التنسيق ما يستلمه كل دور، ومتى يعمل، والنتيجة التي تسمح باستمرار العملية."
+          "text": "اختر السياسات والسجلات التي تجيب عن أسئلة الوكيل الفعلية. حدّد صاحبها ونسختها وعالج التعارض واستبعد المادة غير المرتبطة. اختبر سؤالًا تجيب عنه المصادر وآخر لا تتضمن إجابته. [قدرة المعرفة](/services/enterprise-knowledge)."
         },
         {
           "type": "heading",
-          "text": "كيف تجهز معرفة الشركة؟"
+          "text": "استخدم البحث عندما يؤثر التاريخ في الإجابة",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "اختر المادة المرتبطة بالدور وحدد صاحبها، وعالج التعليمات المتعارضة قدر الإمكان. أضف مصطلحات وأمثلة تعكس العمل الفعلي. وعند الاختبار، افحص ارتباط الإجابة بالمعلومة الصحيحة، لا مجرد ظهور مرجع يبدو مناسبًا."
+          "text": "حدّد المعلومة المطلوبة وتاريخها أو نطاقها الجغرافي. راجع المصادر المعادة وافحص ما إذا كانت تدعم الاستنتاج. لا يثبت البحث العام حالة طلب خاص أو صلاحية داخل الشركة."
         },
         {
           "type": "heading",
-          "text": "ما التصرف المناسب عند نقص المعلومات؟"
+          "text": "طابق التحليل مع البيانات الأصلية",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "حدد المعلومة اللازمة ومن يمكنه تقديمها. يوضح سؤال الاستكمال الجيد سبب الحاجة إليها، ويسمح باستمرار العمل بعد الحصول عليها. أما الأسئلة العامة المتكررة فغالبًا تحتاج إلى تحسين تعريف الدور أو العملية."
+          "text": "في مهام الحساب، قدّم الوحدات وقواعد المطابقة والمخرج المطلوب. اطلب توضيح القيم المستبعدة والناقصة. طابق المجاميع مع المصدر وافحص الملفات الناتجة قبل إرسالها إلى زميل أو عميل."
         },
         {
           "type": "heading",
-          "text": "كيف تقيس فائدة سير العمل؟"
+          "text": "جهّز حالات قبول تستطيع تقييمها",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "قارن النتيجة بما يحتاجه الشخص في الخطوة التالية. احسب جهد التصحيح والإحالات الفاشلة والاستثناءات المفتوحة، إلى جانب الزمن والاستخدام. واحتفظ بحالات قبول ممثلة لا تستخدمها كلها أثناء ضبط التعليمات."
+          "text": "احتفظ بحالة معتادة واستثناء وحالة ناقصة المدخلات وطلب خارج النطاق. سجّل ما يجب أن تحتويه الاستجابة المفيدة. قارن الزمن وجهد التصحيح بالطريقة الحالية؛ الإجابة المقنعة وحدها لا تثبت تحسن العمل. [قدرة التقييم](/services/evaluation-observability)."
+        },
+        {
+          "type": "heading",
+          "text": "جهّز مناقشة التفعيل",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "[منهجية التصميم](/ar/methodology) · [التقييم ومتابعة التشغيل](/ar/services/evaluation-observability)"
+          "text": "اذكر اسم الوكيل والمهام التي راجعتها والمستخدمين المتوقعين وأي إجراء متصل. راسل [adham@agynexa.si](mailto:adham@agynexa.si) لمناقشة السعر والدفع والشروط. لا ترسل بيانات الدخول أو سجلات العملاء الحساسة في الرسالة الأولى."
         }
       ]
     }
   },
   "/about": {
     "en": {
-      "title": "About AGYNEXA | Business Agent Builder",
-      "description": "Learn about AGYNEXA’s product approach: one Agent Builder platform, different company contexts, and clear responsibilities for agents and people.",
-      "h1": "One Agent Builder platform for different companies",
+      "title": "One platform. Built around your work. | AGYNEXA",
+      "description": "AGYNEXA is a self-service Agent Builder for businesses. Create and test agents in your own workspace, using your organization’s instructions, knowledge and operating context.",
+      "h1": "One platform. Built around your work.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AGYNEXA is a platform for building AI agents around business operations. One Studio brings together agent configuration and company knowledge, while each user works with their own agents and information."
+          "text": "AGYNEXA is a self-service Agent Builder for businesses. Create and test agents in your own workspace, using your organization’s instructions, knowledge and operating context."
         },
         {
           "type": "heading",
@@ -1270,13 +834,13 @@
       ]
     },
     "ar": {
-      "title": "عن AGYNEXA | منصة بناء وكلاء الأعمال",
-      "description": "تعرّف على فكرة AGYNEXA: منصة واحدة لبناء الوكلاء، وسياق مستقل لكل شركة، ومسؤوليات واضحة للوكلاء والأشخاص.",
-      "h1": "منصة واحدة تستوعب اختلاف طرق العمل",
+      "title": "منصة واحدة تتشكل حول عملك. | AGYNEXA",
+      "description": "AGYNEXA منصة ذاتية الخدمة لبناء وكلاء الذكاء الاصطناعي للأعمال. أنشئ الوكلاء واختبرهم داخل مساحتك، وفق تعليمات مؤسستك ومعرفتها وسياق تشغيلها.",
+      "h1": "منصة واحدة تتشكل حول عملك.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AGYNEXA منصة لبناء وكلاء الذكاء الاصطناعي حول عمليات الشركات والمؤسسات. يجمع الاستوديو إعداد الوكلاء ومعرفة الشركة، ويعمل كل مستخدم بوكلائه ومعلوماته داخل مساحة حسابه."
+          "text": "AGYNEXA منصة ذاتية الخدمة لبناء وكلاء الذكاء الاصطناعي للأعمال. أنشئ الوكلاء واختبرهم داخل مساحتك، وفق تعليمات مؤسستك ومعرفتها وسياق تشغيلها."
         },
         {
           "type": "heading",
@@ -1319,13 +883,13 @@
   },
   "/agentnexos": {
     "en": {
-      "title": "AgentNexOS | Agent Systems within AGYNEXA",
-      "description": "Understand AgentNexOS in the AGYNEXA product concept: agent roles, shared process context and accountable movement of work.",
-      "h1": "AgentNexOS: the operating model behind coordinated agents",
+      "title": "AgentNexOS: a shared model for agent work | AGYNEXA",
+      "description": "AgentNexOS describes how roles, knowledge, tools and human decisions fit into a business workflow. Studio is the product workspace where you create and test the agents. Automatic coordination across agents and business systems requires a configured execution path.",
+      "h1": "AgentNexOS: a shared model for agent work",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "AgentNexOS names the agent-system concept within AGYNEXA. It brings the discussion back to how responsibilities, knowledge and decisions belong to one business process. AGYNEXA is the platform; Studio is the workspace where users configure and work with their agents."
+          "text": "AgentNexOS describes how roles, knowledge, tools and human decisions fit into a business workflow. Studio is the product workspace where you create and test the agents. Automatic coordination across agents and business systems requires a configured execution path."
         },
         {
           "type": "heading",
@@ -1366,13 +930,13 @@
       ]
     },
     "ar": {
-      "title": "AgentNexOS ضمن منصة AGYNEXA",
-      "description": "تعرّف على موقع AgentNexOS في تصور AGYNEXA: أدوار الوكلاء وسياق العملية وانتقال العمل مع وضوح المسؤولية.",
-      "h1": "AgentNexOS: تصور التشغيل الذي يربط أدوار الوكلاء",
+      "title": "AgentNexOS: تصور مشترك لعمل الوكلاء | AGYNEXA",
+      "description": "يشرح AgentNexOS علاقة الأدوار والمعرفة والأدوات والقرارات البشرية بسير العمل. الاستوديو هو مساحة المنتج التي تنشئ فيها الوكلاء وتختبرهم. ويتطلب التنسيق التلقائي بين الوكلاء وأنظمة الأعمال مسار تنفيذ مجهّزًا.",
+      "h1": "AgentNexOS: تصور مشترك لعمل الوكلاء",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يشير AgentNexOS إلى تصور نظام الوكلاء داخل AGYNEXA، وعلاقة المسؤوليات والمعرفة والقرارات بعملية العمل. AGYNEXA هي المنصة، والاستوديو مساحة إعداد الوكلاء والعمل معهم."
+          "text": "يشرح AgentNexOS علاقة الأدوار والمعرفة والأدوات والقرارات البشرية بسير العمل. الاستوديو هو مساحة المنتج التي تنشئ فيها الوكلاء وتختبرهم. ويتطلب التنسيق التلقائي بين الوكلاء وأنظمة الأعمال مسار تنفيذ مجهّزًا."
         },
         {
           "type": "heading",
@@ -1415,173 +979,203 @@
   },
   "/start": {
     "en": {
-      "title": "Get Started with AGYNEXA Studio",
-      "description": "Prepare a useful first agent: choose its business role, provide relevant company knowledge and test the result in your private workspace.",
-      "h1": "Bring one real responsibility into Studio",
+      "title": "Start building a business agent | AGYNEXA",
+      "description": "Choose a business task, configure a private agent and test its work before discussing production activation.",
+      "h1": "Bring your first task into Studio.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Choose a responsibility your team understands well enough to explain and evaluate. It can belong to customer service, internal operations or another business process. The first useful configuration starts with a clear role and the context needed to perform it."
+          "text": "Choose a recurring responsibility and a result you can evaluate. Open Studio to configure the agent, add company context and try the task in a private conversation."
         },
         {
           "type": "heading",
-          "text": "What to have ready"
+          "text": "Prepare one useful example",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Describe the company, the people who need the result and the responsibility you want the agent to take. Prepare relevant, authorized company information and a few questions that represent the work. Include one situation in which the agent should ask for clarification or refer the decision to a person."
+          "text": "Bring the task description, approved information and the output you expect. Include a missing-input case so you can check how the agent asks for clarification. Use material you are authorized to share with the platform and its processing provider."
         },
         {
           "type": "heading",
-          "text": "What happens when you enter"
+          "text": "Create and test the role",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Open Studio and sign in or create an account. Describe your need in the conversation, create a private agent and configure its role and knowledge. Check the instructions and sources, then use your test questions to inspect the agent’s answers."
+          "text": "Sign in, create your agent and review its instructions. Enable the relevant tools and add knowledge. Run the example, inspect the output and sources, then adjust the role until you can judge where it helps and what remains with your team."
         },
         {
           "type": "heading",
-          "text": "If you want to organize the process first"
+          "text": "Discuss production when you are ready",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "The optional planning form records the organization, process and intended outcome. Saving keeps that record in your account; it does not create an agent, send a message or confirm that AGYNEXA has received a request. Use the contact details if you need to reach us."
+          "text": "Email [adham@agynexa.si](mailto:adham@agynexa.si) with the reviewed task and intended operating scope. Pricing, payment and terms are agreed by email before production activation."
+        },
+        {
+          "type": "heading",
+          "text": "Keep an optional planning record",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "[Open Studio](/studio) · [Contact details](/contact)"
+          "text": "The form below can organize your process and intended outcome. Saving it stores a planning record in your account; it does not create an agent or send an activation request."
+        },
+        {
+          "type": "paragraph",
+          "text": "[Open Studio](/studio)"
         }
       ]
     },
     "ar": {
-      "title": "ابدأ استخدام استوديو AGYNEXA",
-      "description": "جهّز وكيلك الأول بتحديد مسؤوليته ومعرفة الشركة المناسبة، ثم اختبر النتيجة داخل مساحة عملك الخاصة.",
-      "h1": "ابدأ بمسؤولية فعلية يعرفها فريقك",
+      "title": "ابدأ بناء وكيل للأعمال | AGYNEXA",
+      "description": "اختر مهمة عمل واضبط وكيلًا خاصًا واختبر مخرجاته قبل مناقشة التفعيل الإنتاجي.",
+      "h1": "ابدأ بمهمتك الأولى داخل الاستوديو.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "اختر مسؤولية تستطيع شرحها وتقييمها، سواء كانت في خدمة العملاء أو العمليات الداخلية أو أي عملية أخرى بالشركة. يحتاج الإعداد الأول إلى دور واضح وسياق يساعد الوكيل على أدائه."
+          "text": "اختر مسؤولية متكررة ونتيجة تستطيع تقييمها. افتح الاستوديو لضبط الوكيل وإضافة سياق الشركة وتجربة المهمة في محادثة خاصة."
         },
         {
           "type": "heading",
-          "text": "ماذا تجهز قبل البدء؟"
+          "text": "جهّز مثالًا مفيدًا",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "اشرح نشاط الشركة ومن يستخدم النتيجة والمسؤولية التي تريد إسنادها للوكيل. جهز معلومات مرتبطة بها ويحق لك استخدامها، مع أسئلة تمثل العمل. وأضف حالة ينبغي أن يطلب فيها الوكيل توضيحًا أو يرجع بالقرار إلى شخص مسؤول."
+          "text": "جهّز وصف المهمة والمعلومات المعتمدة والمخرج المتوقع. أضف حالة ناقصة المدخلات لتفحص طريقة استكمالها. استخدم مادة مسموحًا لك بمشاركتها مع المنصة ومزود المعالجة."
         },
         {
           "type": "heading",
-          "text": "ماذا يحدث داخل الاستوديو؟"
+          "text": "أنشئ الدور واختبره",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "افتح الاستوديو وسجّل الدخول أو أنشئ حسابًا. اشرح احتياجك في المحادثة، وأنشئ وكيلًا خاصًا واضبط دوره ومعرفته. راجع التعليمات والمصادر، ثم اختبر إجاباته بالأسئلة التي جهزتها."
+          "text": "سجّل الدخول وأنشئ الوكيل وراجع تعليماته. فعّل الأدوات المناسبة وأضف المعرفة. جرّب المثال وافحص المخرج والمصادر، ثم عدّل الدور حتى تعرف ما يفيد فيه وما يبقى لدى الفريق."
         },
         {
           "type": "heading",
-          "text": "إذا احتجت إلى تنظيم الفكرة أولًا"
+          "text": "ناقش الإنتاج عندما تكون جاهزًا",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "يساعد نموذج التخطيط الاختياري على تسجيل المؤسسة والعملية والنتيجة المطلوبة. تُحفظ هذه البيانات في حسابك عند استخدام إجراء الحفظ؛ وهذا لا ينشئ وكيلًا أو يرسل رسالة إلى AGYNEXA. وللتواصل المباشر، استخدم بيانات الاتصال."
+          "text": "راسل [adham@agynexa.si](mailto:adham@agynexa.si) بالمهمة التي راجعتها ونطاق التشغيل المطلوب. نتفق على السعر والدفع والشروط عبر البريد قبل التفعيل الإنتاجي."
+        },
+        {
+          "type": "heading",
+          "text": "احتفظ بسجل تخطيط اختياري",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "[افتح الاستوديو](/ar/studio) · [بيانات التواصل](/ar/contact)"
+          "text": "يساعد النموذج أدناه على تنظيم العملية والنتيجة المطلوبة. يحفظ السجل في حسابك، ولا ينشئ وكيلًا أو يرسل طلب تفعيل."
+        },
+        {
+          "type": "paragraph",
+          "text": "[افتح الاستوديو](/studio)"
         }
       ]
     }
   },
   "/contact": {
     "en": {
-      "title": "Contact AGYNEXA",
-      "description": "Contact AGYNEXA about the platform, an agent workflow or a product question. Find the direct email address and what information is useful to include.",
-      "h1": "Contact AGYNEXA",
+      "title": "Agent activation and contact | AGYNEXA",
+      "description": "Discuss production activation, pricing, payment and terms after testing your agent. Contact AGYNEXA directly at adham@agynexa.si.",
+      "h1": "Let’s agree how your agent goes live.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For a question about the platform or a business workflow, email adham@agynexa.si. Include the company context and the specific question you want to resolve."
+          "text": "Test your agent in Studio, then email [adham@agynexa.si](mailto:adham@agynexa.si) to discuss production activation. Pricing, payment arrangements and operating terms are agreed directly by email."
         },
         {
           "type": "heading",
-          "text": "Make the question easy to understand"
+          "text": "Include the work you want to activate",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Explain the process, where the difficulty occurs and which teams are involved. If your question concerns a system connection, name the application and the operation you need. You do not need to send private business records to explain the initial issue."
+          "text": "Tell us the agent name, the task you tested and the result your team needs. Include expected users and the business systems or customer channels involved. A short description is enough to begin."
         },
         {
           "type": "heading",
-          "text": "Share only what the discussion needs"
+          "text": "Review scope before production use",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "Use a short description or a fictional example first. Keep passwords, access keys and sensitive customer or employee information out of an initial message. Agree an appropriate way to exchange material before sharing anything that needs special protection."
+          "text": "The discussion establishes which operations the agent will support and what must be connected or reviewed. Production activation follows a separate decision; creating an account or completing a test does not confirm an agreement."
         },
         {
           "type": "heading",
-          "text": "Sending and saving are separate"
+          "text": "Send your message from your email app",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "The email link opens a draft in your email application. You decide whether to send it. A planning record saved in your AGYNEXA account does not notify this address or establish that a message has been received."
+          "text": "[Email AGYNEXA](mailto:adham@agynexa.si?subject=AGYNEXA%20agent%20production%20activation). The link opens a draft for you to review and send. Keep passwords, access keys and sensitive business records out of the initial message."
         },
         {
           "type": "paragraph",
-          "text": "[Getting started](/start) · [Platform capabilities](/services)"
+          "text": "[Return to Studio](/studio) · [Build and test guidance](/methodology)"
         }
       ]
     },
     "ar": {
-      "title": "التواصل مع AGYNEXA",
-      "description": "تواصل مع AGYNEXA للاستفسار عن المنصة أو سير عمل للوكلاء، وتعرّف على المعلومات المفيدة لإيضاح سؤالك.",
-      "h1": "تواصل مع AGYNEXA",
+      "title": "تفعيل الوكلاء والتواصل | AGYNEXA",
+      "description": "ناقش التفعيل الإنتاجي والسعر والدفع والشروط بعد اختبار الوكيل. تواصل مباشرة مع AGYNEXA عبر adham@agynexa.si.",
+      "h1": "لنتفق على تشغيل وكيلك.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "للاستفسار عن المنصة أو عملية عمل، راسل adham@agynexa.si. اذكر سياق الشركة والسؤال الذي تحتاج إلى حسمه."
+          "text": "اختبر الوكيل في الاستوديو، ثم راسل [adham@agynexa.si](mailto:adham@agynexa.si) لمناقشة التفعيل الإنتاجي. نتفق على السعر وطريقة الدفع وشروط التشغيل مباشرة عبر البريد."
         },
         {
           "type": "heading",
-          "text": "وضّح موضع الاحتياج"
+          "text": "اذكر العمل المطلوب تفعيله",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "اشرح العملية والصعوبة التي تواجهها والفرق المشاركة فيها. وإذا كان السؤال عن اتصال بنظام، فاذكر التطبيق والإجراء المطلوب. لا تحتاج إلى إرسال سجلات الشركة الخاصة لشرح المشكلة الأولية."
+          "text": "اذكر اسم الوكيل والمهمة التي اختبرتها والنتيجة التي يحتاجها فريقك. أضف المستخدمين المتوقعين وأنظمة العمل أو قنوات العملاء المرتبطة. يكفي وصف مختصر لبدء النقاش."
         },
         {
           "type": "heading",
-          "text": "شارك القدر اللازم للنقاش"
+          "text": "راجع النطاق قبل التشغيل",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "ابدأ بوصف قصير أو مثال افتراضي. لا ترفق كلمات مرور أو مفاتيح وصول أو معلومات حساسة تخص العملاء أو الموظفين. واتفق على طريقة مناسبة لتبادل المادة قبل مشاركة ما يحتاج إلى حماية خاصة."
+          "text": "تحدد المناقشة العمليات التي سيدعمها الوكيل وما يحتاج إلى ربط أو مراجعة. يأتي التفعيل بقرار مستقل؛ إنشاء الحساب أو إنهاء التجربة لا يؤكدان وجود اتفاق."
         },
         {
           "type": "heading",
-          "text": "الحفظ يختلف عن الإرسال"
+          "text": "أرسل رسالتك من تطبيق بريدك",
+          "depth": 2
         },
         {
           "type": "paragraph",
-          "text": "يفتح رابط البريد مسودة في تطبيقك، وأنت من يقرر إرسالها. أما سجل التخطيط المحفوظ في حساب AGYNEXA فلا يُشعر عنوان البريد ولا يثبت استلام رسالة."
+          "text": "[راسل AGYNEXA](mailto:adham@agynexa.si?subject=AGYNEXA%20agent%20production%20activation). يفتح الرابط مسودة تراجعها وترسلها بنفسك. لا تضع كلمات مرور أو مفاتيح وصول أو سجلات حساسة في الرسالة الأولى."
         },
         {
           "type": "paragraph",
-          "text": "[خطوات البدء](/ar/start) · [قدرات المنصة](/ar/services)"
+          "text": "[العودة إلى الاستوديو](/studio) · [إرشادات البناء والتجربة](/methodology)"
         }
       ]
     }
   },
   "/industries": {
     "en": {
-      "title": "AI Agents by Industry | AGYNEXA",
-      "description": "Explore how business agent systems relate to banking, insurance, healthcare administration, retail, telecom, hospitality, logistics, energy and other industries.",
-      "h1": "Business agent workflows in their industry context",
+      "title": "Build agents for the way your industry works | AGYNEXA",
+      "description": "Explore ten sector contexts, each with a concrete starting point, expected output and responsible reviewer. Use them to shape a testable agent role; live sector operations require their own access and activation scope.",
+      "h1": "Build agents for the way your industry works",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The same agent platform can be applied to different company contexts, but a useful workflow must reflect the industry’s work. Its records, dependencies and decision owners determine the agent roles it needs."
+          "text": "Explore ten sector contexts, each with a concrete starting point, expected output and responsible reviewer. Use them to shape a testable agent role; live sector operations require their own access and activation scope."
         },
         {
           "type": "heading",
@@ -1606,13 +1200,13 @@
       ]
     },
     "ar": {
-      "title": "وكلاء الذكاء الاصطناعي لقطاعات الأعمال | AGYNEXA",
-      "description": "تعرّف على علاقة أنظمة الوكلاء بعمليات البنوك والتأمين وإدارة الخدمات الصحية والتجزئة والاتصالات والضيافة واللوجستيات والطاقة وغيرها.",
-      "h1": "لكل قطاع عملياته ومتطلبات إنجازها",
+      "title": "ابنِ وكلاء يفهمون طريقة العمل في قطاعك | AGYNEXA",
+      "description": "استكشف عشرة سياقات قطاعية، لكل منها نقطة بداية ومخرج متوقع ومراجع مسؤول. استخدمها لتحديد دور يمكن اختباره، مع تجهيز الوصول ونطاق التفعيل لأي تشغيل حي في القطاع.",
+      "h1": "ابنِ وكلاء يفهمون طريقة العمل في قطاعك",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تخدم المنصة سياقات مختلفة، ويعتمد تصميم كل مسار على طبيعة القطاع. تحدد السجلات وترتيب الخطوات وأصحاب القرار الأدوار التي يحتاجها نظام الوكلاء."
+          "text": "استكشف عشرة سياقات قطاعية، لكل منها نقطة بداية ومخرج متوقع ومراجع مسؤول. استخدمها لتحديد دور يمكن اختباره، مع تجهيز الوصول ونطاق التفعيل لأي تشغيل حي في القطاع."
         },
         {
           "type": "heading",
@@ -1649,6 +1243,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Information you provide"
         },
         {
@@ -1657,18 +1252,34 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "How information is used"
         },
         {
           "type": "paragraph",
-          "text": "Account information supports sign-in and access to your workspace. Agent instructions, relevant conversation context and source excerpts may be processed by the model service to generate a response. Application records support saving, retrieval and the controls available in the workspace."
-        },
-        {
-          "type": "paragraph",
-          "text": "Service providers perform hosting, authentication, storage, model processing and website measurements. Session cookies support sign-in; technical request information also supports performance and abuse prevention. Processing location, provider retention and any restrictions on further use should be confirmed before introducing information that requires specific contractual safeguards. Questions about those arrangements can be sent to adham@agynexa.si."
+          "text": "Account information supports sign-in and access to your workspace. Agent instructions, relevant conversation context and source excerpts may be processed by the model service to generate a response. Application records support saving, retrieval and the controls available in the workspace.\n\nService providers perform hosting, authentication, storage, model processing and website measurements. Session cookies support sign-in; technical request information also supports performance and abuse prevention. Processing location, provider retention and any restrictions on further use should be confirmed before introducing information that requires specific contractual safeguards. Questions about those arrangements can be sent to adham@agynexa.si."
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "OpenAI processing and enabled tools"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studio sends the task, relevant conversation context, instructions and selected source material to OpenAI to produce the response. If web search or code analysis is enabled, information needed for that tool may also be processed by OpenAI’s tool services. Code runs in an OpenAI-hosted sandbox, and references to generated files and tool activity may be saved with the run. Confirm provider processing arrangements before using information that requires specific contractual restrictions."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "Optional customer API credentials"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you connect your own OpenAI API key through the dedicated credentials control, it is encrypted before database storage and used server-side for the workspace’s authorized requests. The saved plaintext key is not returned to the interface. You can remove the stored credential; revocation of the key itself is managed in your OpenAI account. Do not put API keys in conversations or knowledge sources."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "Private work and public content"
         },
         {
@@ -1677,6 +1288,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Your choices and deletion"
         },
         {
@@ -1685,14 +1297,16 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Account and information responsibilities"
         },
         {
           "type": "paragraph",
-          "text": "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Do not submit passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records."
+          "text": "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Use a dedicated credential control when connecting a supported provider key. Do not put passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records."
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Privacy questions"
         },
         {
@@ -1712,6 +1326,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "المعلومات التي تقدمها"
         },
         {
@@ -1720,18 +1335,34 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "أغراض الاستخدام"
         },
         {
           "type": "paragraph",
-          "text": "تُستخدم معلومات الحساب لتسجيل الدخول والوصول إلى مساحتك. وقد تعالج خدمة النموذج تعليمات الوكيل وسياق المحادثة المناسب ومقتطفات المصادر لتوليد الإجابة. وتتيح سجلات التطبيق الحفظ والاسترجاع والضوابط المتاحة في المساحة."
-        },
-        {
-          "type": "paragraph",
-          "text": "يتولى مزودو الخدمات الاستضافة والمصادقة والتخزين ومعالجة النماذج وقياسات الموقع. وتدعم ملفات الجلسة تسجيل الدخول، بينما تساعد معلومات الطلبات التقنية في متابعة الأداء ومنع الإساءة. قبل إضافة بيانات تتطلب ضمانات تعاقدية خاصة، تأكد من بلد المعالجة ومدد الاحتفاظ لدى المزودين وقيود الاستخدام اللاحق. ويمكن الاستفسار عن هذه الترتيبات عبر adham@agynexa.si."
+          "text": "تُستخدم معلومات الحساب لتسجيل الدخول والوصول إلى مساحتك. وقد تعالج خدمة النموذج تعليمات الوكيل وسياق المحادثة المناسب ومقتطفات المصادر لتوليد الإجابة. وتتيح سجلات التطبيق الحفظ والاسترجاع والضوابط المتاحة في المساحة.\n\nيتولى مزودو الخدمات الاستضافة والمصادقة والتخزين ومعالجة النماذج وقياسات الموقع. وتدعم ملفات الجلسة تسجيل الدخول، بينما تساعد معلومات الطلبات التقنية في متابعة الأداء ومنع الإساءة. قبل إضافة بيانات تتطلب ضمانات تعاقدية خاصة، تأكد من بلد المعالجة ومدد الاحتفاظ لدى المزودين وقيود الاستخدام اللاحق. ويمكن الاستفسار عن هذه الترتيبات عبر adham@agynexa.si."
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "معالجة OpenAI والأدوات المفعّلة"
+        },
+        {
+          "type": "paragraph",
+          "text": "يرسل الاستوديو المهمة وسياق المحادثة المناسب والتعليمات ومادة المصادر المختارة إلى OpenAI لإنتاج الاستجابة. وعند تفعيل البحث أو تحليل الكود، قد تعالج خدمات الأدوات لدى OpenAI المعلومات اللازمة لذلك. يعمل الكود في بيئة معزولة تستضيفها OpenAI، وقد تُحفظ مراجع الملفات الناتجة ونشاط الأدوات مع سجل التشغيل. أكّد ترتيبات المعالجة لدى المزود قبل استخدام بيانات تتطلب قيودًا تعاقدية خاصة."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "بيانات API الاختيارية للعميل"
+        },
+        {
+          "type": "paragraph",
+          "text": "إذا ربطت مفتاح OpenAI API الخاص بك من أداة بيانات الاتصال المخصصة، يُشفّر قبل حفظه في قاعدة البيانات ويُستخدم على الخادم لطلبات مساحة العمل المخولة. لا تعيد الواجهة المفتاح المحفوظ بصورته الأصلية. يمكنك إزالة بيانات الاتصال المخزنة، أما إلغاء المفتاح نفسه فيتم من حساب OpenAI. لا تضع المفاتيح في المحادثات أو مصادر المعرفة."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "العمل الخاص والمحتوى العام"
         },
         {
@@ -1740,6 +1371,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "خيارات الحذف"
         },
         {
@@ -1748,14 +1380,16 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "مسؤوليات الحساب والمعلومات"
         },
         {
           "type": "paragraph",
-          "text": "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. ولا تضف كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
+          "text": "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. استخدم أداة بيانات الاتصال المخصصة عند ربط مفتاح مزود مدعوم. ولا تضع كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "الاستفسارات المتعلقة بالخصوصية"
         },
         {
@@ -1777,6 +1411,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Using the workspace"
         },
         {
@@ -1785,6 +1420,25 @@
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "Testing and production activation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studio testing lets you review an agent before production use. Production publication and the agreed operating scope require a separate activation decision after discussion by email at adham@agynexa.si. Pricing, payment arrangements and commercial terms are negotiated by email. The website does not collect a checkout payment or establish a fixed price by creating an account, saving an agent or running a test."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "Provider access and customer usage"
+        },
+        {
+          "type": "paragraph",
+          "text": "The platform’s configured OpenAI connection powers Studio by default. If you connect a customer-owned API key, usage is billed under that OpenAI account’s arrangements. ChatGPT sign-in requires a configured and available identity integration. Using a customer’s ChatGPT plan requires separate supported access and eligibility; identity sign-in or an API key does not establish that entitlement. AGYNEXA production activation remains a separate decision."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "Your information and account"
         },
         {
@@ -1793,6 +1447,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Reviewing AI-generated work"
         },
         {
@@ -1801,6 +1456,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Decisions, actions and saving"
         },
         {
@@ -1809,6 +1465,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Publication and access"
         },
         {
@@ -1817,6 +1474,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Availability and usage"
         },
         {
@@ -1825,6 +1483,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Questions and specific business requirements"
         },
         {
@@ -1844,6 +1503,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "استخدام مساحة العمل"
         },
         {
@@ -1852,6 +1512,25 @@
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "التجربة والتفعيل الإنتاجي"
+        },
+        {
+          "type": "paragraph",
+          "text": "تتيح تجربة الاستوديو مراجعة الوكيل قبل الاستخدام الإنتاجي. يحتاج نشره ونطاق تشغيله المتفق عليه إلى قرار تفعيل مستقل بعد المناقشة عبر adham@agynexa.si. يجري التفاوض على السعر وترتيبات الدفع والشروط التجارية بالبريد. لا يجمع الموقع دفعة عند الدفع الإلكتروني، ولا ينشئ سعرًا ثابتًا بمجرد إنشاء حساب أو حفظ وكيل أو تشغيل تجربة."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "وصول المزود واستخدام العميل"
+        },
+        {
+          "type": "paragraph",
+          "text": "يشغّل اتصال OpenAI المجهّز للمنصة الاستوديو افتراضيًا. وإذا ربطت مفتاح API مملوكًا للعميل، يُحاسب الاستخدام وفق ترتيبات حساب OpenAI المعني. يحتاج تسجيل ChatGPT إلى تكامل هوية مجهّز ومتاح. ويتطلب استخدام خطة ChatGPT الخاصة بالعميل وصولًا مدعومًا وأهلية مستقلين؛ تسجيل الهوية أو مفتاح API لا يثبتان هذه الأهلية. ويظل التفعيل الإنتاجي في AGYNEXA قرارًا مستقلًا."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "معلوماتك وحسابك"
         },
         {
@@ -1860,6 +1539,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "مراجعة نتائج الذكاء الاصطناعي"
         },
         {
@@ -1868,6 +1548,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "القرارات والإجراءات والحفظ"
         },
         {
@@ -1876,6 +1557,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "النشر والوصول"
         },
         {
@@ -1884,6 +1566,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "الإتاحة والاستخدام"
         },
         {
@@ -1892,6 +1575,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "الاستفسارات ومتطلبات الأعمال"
         },
         {
@@ -1903,13 +1587,13 @@
   },
   "/services/customer-service": {
     "en": {
-      "title": "Customer service agents | AGYNEXA",
-      "description": "Explore customer service agent workflows: understand requests, apply company guidance, coordinate resolution and keep staff in control of exceptions.",
-      "h1": "Customer service that keeps the whole case in view",
+      "title": "AI agents for customer service | AGYNEXA",
+      "description": "Prepare responses from approved service guidance and organize the next step for each case. Test the role in Studio before connecting a customer channel or case-management system.",
+      "h1": "AI agents for customer service",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A service agent needs to understand the request, find the applicable guidance and help the case reach its next useful step. In an Agent Builder, that role connects customer context with the work of the people responsible for resolution."
+          "text": "Prepare responses from approved service guidance and organize the next step for each case. Test the role in Studio before connecting a customer channel or case-management system."
         },
         {
           "type": "heading",
@@ -1990,13 +1674,13 @@
       ]
     },
     "ar": {
-      "title": "وكلاء خدمة العملاء | AGYNEXA",
-      "description": "تعرّف على سير عمل وكلاء خدمة العملاء، من فهم الطلب وإرشادات الشركة إلى تنسيق المعالجة وإحالة الاستثناءات للمسؤول.",
-      "h1": "خدمة عملاء تحافظ على سياق الحالة",
+      "title": "وكلاء ذكاء اصطناعي لخدمة العملاء | AGYNEXA",
+      "description": "جهّز الردود من إرشادات الخدمة المعتمدة ونظّم الخطوة التالية لكل حالة. اختبر الدور في الاستوديو قبل ربط قناة عملاء أو نظام لإدارة الحالات.",
+      "h1": "وكلاء ذكاء اصطناعي لخدمة العملاء",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يحتاج وكيل الخدمة إلى فهم الطلب ومعرفة الإجراء المناسب ومساعدة الحالة على الوصول إلى الخطوة التالية. ويجمع تصميم دوره بين سياق العميل والعمل الذي يتولاه مسؤولو المعالجة."
+          "text": "جهّز الردود من إرشادات الخدمة المعتمدة ونظّم الخطوة التالية لكل حالة. اختبر الدور في الاستوديو قبل ربط قناة عملاء أو نظام لإدارة الحالات."
         },
         {
           "type": "heading",
@@ -2079,13 +1763,13 @@
   },
   "/services/employee-operations": {
     "en": {
-      "title": "Employee and internal operations | AGYNEXA",
-      "description": "Design employee agent roles around procedures, internal requests and cross-team dependencies, with clear information, ownership and access boundaries.",
-      "h1": "Internal requests that keep moving between teams",
+      "title": "AI agents for employee operations | AGYNEXA",
+      "description": "Help employees understand procedures and prepare complete requests. Use the company’s approved knowledge, with HR and IT decisions kept with their responsible owners.",
+      "h1": "AI agents for employee operations",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An employee request often depends on several departments. A useful agent role helps people find the procedure, prepare the right information and understand what the next team needs before its work can begin."
+          "text": "Help employees understand procedures and prepare complete requests. Use the company’s approved knowledge, with HR and IT decisions kept with their responsible owners."
         },
         {
           "type": "heading",
@@ -2166,13 +1850,13 @@
       ]
     },
     "ar": {
-      "title": "عمليات الموظفين والعمل الداخلي | AGYNEXA",
-      "description": "افهم دور الوكلاء في إجراءات الموظفين والطلبات الداخلية وتبعيات الأقسام، مع وضوح المعلومات والمسؤوليات وحدود الوصول.",
-      "h1": "طلبات داخلية تتكامل خطواتها بين الأقسام",
+      "title": "وكلاء لإجراءات الموظفين | AGYNEXA",
+      "description": "ساعد الموظفين على فهم الإجراءات وتجهيز طلبات مكتملة. استخدم معرفة الشركة المعتمدة، مع بقاء قرارات الموارد البشرية والتقنية لدى أصحابها.",
+      "h1": "وكلاء لإجراءات الموظفين",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يرتبط طلب الموظف أحيانًا بأكثر من قسم. ويساعد دور الوكيل على معرفة الإجراء وتجهيز المعلومات وفهم ما يحتاجه الفريق التالي حتى يبدأ عمله."
+          "text": "ساعد الموظفين على فهم الإجراءات وتجهيز طلبات مكتملة. استخدم معرفة الشركة المعتمدة، مع بقاء قرارات الموارد البشرية والتقنية لدى أصحابها."
         },
         {
           "type": "heading",
@@ -2255,13 +1939,13 @@
   },
   "/services/process-automation": {
     "en": {
-      "title": "Business process automation | AGYNEXA",
-      "description": "Understand agentic process automation: triggers, business state, decisions, tools and exceptions that connect individual steps to an operational result.",
-      "h1": "A business process needs more than a sequence of answers",
+      "title": "Agent-assisted business workflows | AGYNEXA",
+      "description": "Turn a recurring task into defined inputs, a useful output and a review point. Test the reasoning in Studio and scope the system actions needed for connected operation.",
+      "h1": "Agent-assisted business workflows",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A process has a starting event, rules for moving forward and a condition that says the work is complete. Agentic automation places interpretation inside that structure while keeping business decisions and operational state explicit."
+          "text": "Turn a recurring task into defined inputs, a useful output and a review point. Test the reasoning in Studio and scope the system actions needed for connected operation."
         },
         {
           "type": "heading",
@@ -2342,13 +2026,13 @@
       ]
     },
     "ar": {
-      "title": "أتمتة عمليات العمل | AGYNEXA",
-      "description": "افهم أتمتة العمليات بالوكلاء، من الحدث وحالة العمل إلى القرارات والأدوات والاستثناءات التي تربط الخطوات بالنتيجة.",
-      "h1": "من خطوات متفرقة إلى عملية مترابطة",
+      "title": "سير عمل بمساعدة الوكلاء | AGYNEXA",
+      "description": "حوّل المهمة المتكررة إلى مدخلات محددة ومخرج مفيد ونقطة مراجعة. اختبر الاستدلال في الاستوديو وحدّد إجراءات الأنظمة اللازمة للتشغيل المتصل.",
+      "h1": "سير عمل بمساعدة الوكلاء",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "للعملية حدث يبدأها وقواعد للانتقال وشرط يحدد اكتمالها. وتدخل قدرات الوكيل على الفهم ضمن هذا التنظيم، مع بقاء قرارات العمل وحالته واضحة."
+          "text": "حوّل المهمة المتكررة إلى مدخلات محددة ومخرج مفيد ونقطة مراجعة. اختبر الاستدلال في الاستوديو وحدّد إجراءات الأنظمة اللازمة للتشغيل المتصل."
         },
         {
           "type": "heading",
@@ -2431,13 +2115,13 @@
   },
   "/services/enterprise-knowledge": {
     "en": {
-      "title": "Company knowledge for agents | AGYNEXA",
-      "description": "Explore agent knowledge: retrieval, missing information and inspectable sources, with a clear distinction between guidance and current business records.",
-      "h1": "Company knowledge that supports the task at hand",
+      "title": "Company knowledge for AI agents | AGYNEXA",
+      "description": "Give the agent relevant text and Markdown knowledge, then inspect the references behind its answers. Use approved procedures and examples that match the responsibility you are testing.",
+      "h1": "Company knowledge for AI agents",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An agent needs the relevant part of company knowledge at the moment a question or decision requires it. Retrieval brings that material into the response context, and source references let the reader inspect its basis."
+          "text": "Give the agent relevant text and Markdown knowledge, then inspect the references behind its answers. Use approved procedures and examples that match the responsibility you are testing."
         },
         {
           "type": "heading",
@@ -2518,13 +2202,13 @@
       ]
     },
     "ar": {
-      "title": "معرفة الشركة للوكلاء | AGYNEXA",
-      "description": "اربط دور الوكيل بمعرفة الشركة المعتمدة، وافهم الاسترجاع ومراجع الإجابة ونقص المعلومات والفرق بين الإرشاد والسجلات الحالية.",
-      "h1": "معرفة الشركة في سياق المهمة",
+      "title": "معرفة الشركة لوكلاء الذكاء الاصطناعي | AGYNEXA",
+      "description": "زوّد الوكيل بمعرفة نصية وMarkdown مناسبة، ثم افحص مراجع الإجابات. استخدم إجراءات وأمثلة معتمدة تطابق المسؤولية التي تختبرها.",
+      "h1": "معرفة الشركة لوكلاء الذكاء الاصطناعي",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يحتاج الوكيل إلى الجزء المناسب من معرفة الشركة عندما يتطلبه سؤال أو قرار. ويصل الاسترجاع بهذه المادة إلى سياق الإجابة، وتتيح المراجع للقارئ فحص أساسها."
+          "text": "زوّد الوكيل بمعرفة نصية وMarkdown مناسبة، ثم افحص مراجع الإجابات. استخدم إجراءات وأمثلة معتمدة تطابق المسؤولية التي تختبرها."
         },
         {
           "type": "heading",
@@ -2607,13 +2291,13 @@
   },
   "/services/agent-orchestration": {
     "en": {
-      "title": "Agent orchestration | AGYNEXA",
-      "description": "Understand multi-agent orchestration through specialist roles, task dependencies, shared context, handoffs and the authority that governs each step.",
-      "h1": "Specialist agents need a way to work together",
+      "title": "Design roles that work together | AGYNEXA",
+      "description": "Define what each specialist agent receives and produces. Evaluate the roles separately, then establish the execution path needed for automatic handoffs and shared process state.",
+      "h1": "Design roles that work together",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Several agents can contribute to one business process when their responsibilities are distinct. Orchestration defines who handles each part, what information passes between roles and what must happen before the work can continue."
+          "text": "Define what each specialist agent receives and produces. Evaluate the roles separately, then establish the execution path needed for automatic handoffs and shared process state."
         },
         {
           "type": "heading",
@@ -2694,13 +2378,13 @@
       ]
     },
     "ar": {
-      "title": "تنسيق عمل الوكلاء | AGYNEXA",
-      "description": "افهم تنسيق الوكلاء المتخصصين وتبعيات المهام والسياق المشترك والإحالات والصلاحيات التي تضبط كل خطوة.",
-      "h1": "عمل مترابط لوكلاء تختلف مسؤولياتهم",
+      "title": "صمّم أدوارًا تعمل معًا | AGYNEXA",
+      "description": "حدّد ما يستلمه كل وكيل متخصص وما ينتجه. قيّم الأدوار منفصلة، ثم جهّز مسار التنفيذ اللازم للانتقال التلقائي وحالة العملية المشتركة.",
+      "h1": "صمّم أدوارًا تعمل معًا",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يشارك عدة وكلاء في عملية واحدة عندما تختلف مسؤولياتهم فعلًا. ويحدد التنسيق دور كل منهم والمعلومات المنتقلة بين الأدوار وما يلزم قبل متابعة العمل."
+          "text": "حدّد ما يستلمه كل وكيل متخصص وما ينتجه. قيّم الأدوار منفصلة، ثم جهّز مسار التنفيذ اللازم للانتقال التلقائي وحالة العملية المشتركة."
         },
         {
           "type": "heading",
@@ -2783,13 +2467,13 @@
   },
   "/services/enterprise-integrations": {
     "en": {
-      "title": "Connections and agent tools | AGYNEXA",
-      "description": "Understand business-system connections for agents: authorized records, narrow tools, read and write permissions, destination checks and failure handling.",
-      "h1": "A connection gives an agent a defined way to act",
+      "title": "Connect agents to business operations | AGYNEXA",
+      "description": "Scope the exact record or action your agent needs from another system. Confirm the interface, permission and success response before including it in an activated workflow.",
+      "h1": "Connect agents to business operations",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An agent may need information from a business system or a permitted change in that system. A useful connection describes the exact operation, the identity carrying it out and the result the workflow needs back."
+          "text": "Scope the exact record or action your agent needs from another system. Confirm the interface, permission and success response before including it in an activated workflow."
         },
         {
           "type": "heading",
@@ -2870,13 +2554,13 @@
       ]
     },
     "ar": {
-      "title": "اتصالات الوكلاء وأدواتهم | AGYNEXA",
-      "description": "افهم اتصال الوكلاء بأنظمة العمل: السجلات المسموحة والأدوات المحددة وصلاحيات القراءة والتعديل وفحص النتيجة ومعالجة الإخفاق.",
-      "h1": "اتصال محدد بين دور الوكيل وأنظمة العمل",
+      "title": "اربط الوكلاء بعمليات الأعمال | AGYNEXA",
+      "description": "حدّد السجل أو الإجراء الذي يحتاجه الوكيل من نظام آخر. تأكد من الواجهة والصلاحية وتأكيد النجاح قبل إدراجه في سير عمل مفعّل.",
+      "h1": "اربط الوكلاء بعمليات الأعمال",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يحتاج الوكيل إلى معلومة من نظام العمل أو تغيير مسموح داخله. ويحدد الاتصال العملية بدقة والهوية التي تجريها والنتيجة التي يحتاجها سير العمل لمتابعة المهمة."
+          "text": "حدّد السجل أو الإجراء الذي يحتاجه الوكيل من نظام آخر. تأكد من الواجهة والصلاحية وتأكيد النجاح قبل إدراجه في سير عمل مفعّل."
         },
         {
           "type": "heading",
@@ -2959,13 +2643,13 @@
   },
   "/services/voice-agents": {
     "en": {
-      "title": "Voice agents for business | AGYNEXA",
-      "description": "Explore voice agents as part of a business process: understand speech, preserve important details, check actions and transfer context to a human.",
-      "h1": "A voice conversation is part of a larger job",
+      "title": "Design voice agent workflows | AGYNEXA",
+      "description": "Define the conversation, information needed and human handover. Test the role in text first; telephony, speech processing and live customer channels require a separate operating setup.",
+      "h1": "Design voice agent workflows",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A caller may be explaining a problem, checking a service or asking for a change. The voice role needs to preserve what matters, establish the permitted next step and know when a person should continue the conversation."
+          "text": "Define the conversation, information needed and human handover. Test the role in text first; telephony, speech processing and live customer channels require a separate operating setup."
         },
         {
           "type": "heading",
@@ -3046,13 +2730,13 @@
       ]
     },
     "ar": {
-      "title": "الوكلاء الصوتيون للأعمال | AGYNEXA",
-      "description": "تعرّف على دور الوكيل الصوتي في عملية العمل، من فهم الكلام وحفظ التفاصيل إلى فحص الإجراء ونقل المعلومات للموظف.",
-      "h1": "المحادثة الصوتية ضمن مهمة عمل كاملة",
+      "title": "صمّم مسارات الوكلاء الصوتيين | AGYNEXA",
+      "description": "حدّد الحوار والمعلومات المطلوبة والإحالة للموظف. اختبر الدور نصيًا أولًا؛ وتحتاج الهواتف ومعالجة الصوت وقنوات العملاء الحية إلى إعداد تشغيل مستقل.",
+      "h1": "صمّم مسارات الوكلاء الصوتيين",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يشرح المتصل مشكلة أو يستفسر عن خدمة أو يطلب تغييرًا. ويحتاج دور الوكيل الصوتي إلى حفظ التفاصيل المهمة وتحديد الخطوة المسموحة ومعرفة متى يتولى الموظف الحوار."
+          "text": "حدّد الحوار والمعلومات المطلوبة والإحالة للموظف. اختبر الدور نصيًا أولًا؛ وتحتاج الهواتف ومعالجة الصوت وقنوات العملاء الحية إلى إعداد تشغيل مستقل."
         },
         {
           "type": "heading",
@@ -3135,13 +2819,13 @@
   },
   "/services/agent-assist": {
     "en": {
-      "title": "Assistance for business teams | AGYNEXA",
-      "description": "Understand employee-side AI assistance: relevant case context, source-based guidance and useful preparation while a person controls the customer interaction.",
-      "h1": "Useful context while a person leads the work",
+      "title": "AI assistance for your team | AGYNEXA",
+      "description": "Prepare summaries, research and draft responses while a person leads the work. Keep the evidence and unresolved questions visible so the reviewer can decide what to use.",
+      "h1": "AI assistance for your team",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An employee may need a case history, policy detail or proposed response while handling a live task. Agent assistance organizes that material around the employee’s immediate question and leaves the interaction under their control."
+          "text": "Prepare summaries, research and draft responses while a person leads the work. Keep the evidence and unresolved questions visible so the reviewer can decide what to use."
         },
         {
           "type": "heading",
@@ -3222,13 +2906,13 @@
       ]
     },
     "ar": {
-      "title": "مساندة فرق العمل | AGYNEXA",
-      "description": "افهم مساندة الموظف بالسياق المناسب وإرشادات المصادر وتجهيز العمل، مع احتفاظه بإدارة التفاعل والقرار.",
-      "h1": "معلومات مناسبة بينما يقود الموظف العمل",
+      "title": "مساعدة ذكية لفريقك | AGYNEXA",
+      "description": "جهّز الملخصات والأبحاث ومسودات الرد بينما يقود الموظف العمل. أظهر الأدلة والأسئلة المفتوحة ليقرر المراجع ما يستخدمه.",
+      "h1": "مساعدة ذكية لفريقك",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يحتاج الموظف أثناء المهمة إلى تاريخ الحالة أو تفصيل في السياسة أو رد مقترح. وتنظم المساندة هذه المادة حول حاجته الحالية، مع احتفاظه بإدارة التفاعل."
+          "text": "جهّز الملخصات والأبحاث ومسودات الرد بينما يقود الموظف العمل. أظهر الأدلة والأسئلة المفتوحة ليقرر المراجع ما يستخدمه."
         },
         {
           "type": "heading",
@@ -3311,13 +2995,13 @@
   },
   "/services/governance-security": {
     "en": {
-      "title": "Agent authority and human oversight | AGYNEXA",
-      "description": "Understand agent governance through access boundaries, exact approvals, change control and the distinction between a proposal and a confirmed action.",
-      "h1": "Authority should be clear before an agent acts",
+      "title": "Agent permissions and review | AGYNEXA",
+      "description": "Define the data an agent may use and the decisions that stay with people. Review the workspace boundaries and agree controls for any external action before production activation.",
+      "h1": "Agent permissions and review",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A business role describes the work an agent helps with. Authority determines which information it may use, which action it may request and whose decision is required before anything consequential happens."
+          "text": "Define the data an agent may use and the decisions that stay with people. Review the workspace boundaries and agree controls for any external action before production activation."
         },
         {
           "type": "heading",
@@ -3398,13 +3082,13 @@
       ]
     },
     "ar": {
-      "title": "صلاحيات الوكلاء والإشراف البشري | AGYNEXA",
-      "description": "افهم حوكمة الوكلاء عبر حدود الوصول والاعتماد المحدد وضبط التغيير والفرق بين المقترح والإجراء المؤكد.",
-      "h1": "صلاحيات واضحة قبل إجراء الوكيل",
+      "title": "صلاحيات الوكلاء ومراجعتهم | AGYNEXA",
+      "description": "حدّد البيانات التي يستخدمها الوكيل والقرارات التي تبقى لدى الأشخاص. راجع حدود المساحة واتفق على ضوابط الإجراءات الخارجية قبل التفعيل الإنتاجي.",
+      "h1": "صلاحيات الوكلاء ومراجعتهم",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يصف الدور العمل الذي يساعد فيه الوكيل. أما الصلاحية فتحدد المعلومات التي يستخدمها والإجراء الذي يطلبه وصاحب القرار المطلوب قبل أي تغيير مؤثر."
+          "text": "حدّد البيانات التي يستخدمها الوكيل والقرارات التي تبقى لدى الأشخاص. راجع حدود المساحة واتفق على ضوابط الإجراءات الخارجية قبل التفعيل الإنتاجي."
         },
         {
           "type": "heading",
@@ -3487,13 +3171,13 @@
   },
   "/services/evaluation-observability": {
     "en": {
-      "title": "Evaluation and operational visibility | AGYNEXA",
-      "description": "Evaluate business agents by task outcomes, source support, exceptions and human effort. Understand how run records help locate failures and compare changes.",
-      "h1": "Know whether the work meets its purpose",
+      "title": "Evaluate agent work and activity | AGYNEXA",
+      "description": "Test representative tasks, inspect the sources and compare the result with the work your team needs. Track correction effort and failures alongside speed and usage.",
+      "h1": "Evaluate agent work and activity",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A clear answer can still omit a fact, choose the wrong next step or leave the business task unfinished. Evaluation establishes what a useful result means; operational visibility helps explain where a run met or missed that standard."
+          "text": "Test representative tasks, inspect the sources and compare the result with the work your team needs. Track correction effort and failures alongside speed and usage."
         },
         {
           "type": "heading",
@@ -3574,13 +3258,13 @@
       ]
     },
     "ar": {
-      "title": "التقييم ومتابعة التشغيل | AGYNEXA",
-      "description": "قيّم الوكلاء بنتائج المهام وسند المصادر والاستثناءات وجهد المراجعة، وافهم دور سجلات التشغيل في تحديد الإخفاق ومقارنة التغييرات.",
-      "h1": "اعرف هل تحقق المهمة غرضها",
+      "title": "قيّم عمل الوكيل ونشاطه | AGYNEXA",
+      "description": "اختبر مهام ممثلة وافحص المصادر وقارن النتيجة بما يحتاجه الفريق. تابع جهد التصحيح والإخفاقات إلى جانب السرعة والاستخدام.",
+      "h1": "قيّم عمل الوكيل ونشاطه",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يسقط الرد الواضح حقيقة أو يختار خطوة غير مناسبة أو يترك المهمة ناقصة. ويحدد التقييم معنى النتيجة المفيدة، بينما تساعد متابعة التشغيل على فهم موضع النجاح أو الإخفاق."
+          "text": "اختبر مهام ممثلة وافحص المصادر وقارن النتيجة بما يحتاجه الفريق. تابع جهد التصحيح والإخفاقات إلى جانب السرعة والاستخدام."
         },
         {
           "type": "heading",
@@ -3664,12 +3348,12 @@
   "/solutions/knowledge": {
     "en": {
       "title": "AI agents for company knowledge | AGYNEXA",
-      "description": "Design knowledge agents that use company sources to answer operational questions, explain their basis and identify decisions that need a responsible owner.",
-      "h1": "AI agents for company knowledge",
+      "description": "Build a company knowledge agent with approved sources, cited answers and a clear review process in AGYNEXA Studio.",
+      "h1": "Answers from your company knowledge",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Employees need to know which company rule applies to the work in front of them. The answer may depend on a customer agreement, a local procedure or an exception recorded elsewhere. A useful knowledge agent brings those facts into the question and shows the source behind its answer."
+          "text": "Use approved procedures and reference material to answer a question in its business context. Test the agent’s answer and citations, and leave unresolved policy decisions with the knowledge owner."
         },
         {
           "type": "paragraph",
@@ -3702,17 +3386,26 @@
         {
           "type": "paragraph",
           "text": "Use questions that staff actually encounter, including outdated guidance and exceptions. Review whether the answer applies to the right case, whether its references support it and how much correction a person needs. A successful result helps someone act on company knowledge while keeping consequential interpretations with the responsible owner."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء المعرفة المؤسسية | AGYNEXA",
-      "description": "تصميم وكلاء يستندون إلى معرفة الشركة للإجابة عن أسئلة العمل، مع توضيح مصادر الإجابة والحالات التي تحتاج إلى قرار من صاحب الاختصاص.",
-      "h1": "وكلاء يستخدمون معرفة الشركة في سياق العمل",
+      "description": "ابنِ وكيلًا لمعرفة الشركة بمصادر معتمدة وإجابات موثقة وخطوات مراجعة واضحة داخل استوديو AGYNEXA.",
+      "h1": "إجابات من معرفة شركتك",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يحتاج الموظف إلى إجابة تنطبق على الحالة التي يعالجها. وقد تتوزع هذه الإجابة بين اتفاقية عميل وإجراء داخلي واستثناء وافقت عليه الشركة. دور وكيل المعرفة هو الوصول إلى المعلومات ذات الصلة، وفهم علاقتها بالسؤال، ثم تقديم إجابة يستطيع الموظف التحقق من أساسها."
+          "text": "استخدم الإجراءات والمراجع المعتمدة للإجابة عن السؤال في سياق العمل. اختبر إجابة الوكيل واستشهاداته، واترك قرارات السياسة غير المحسومة لمسؤول المعرفة."
         },
         {
           "type": "paragraph",
@@ -3745,6 +3438,15 @@
         {
           "type": "paragraph",
           "text": "تُقيَّم الإجابات على أسئلة من العمل اليومي، تشمل تعليمات قديمة وحالات استثنائية. تشمل المراجعة انطباق الإجابة على الحالة، وصحة الاستشهاد، وحجم التصحيح الذي احتاجه الموظف. وتبقى التفسيرات المؤثرة في التزامات الشركة لدى المسؤول المختص، مع الاستفادة من الوكيل في الوصول إلى المعرفة وفهمها."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -3752,12 +3454,12 @@
   "/solutions/documents": {
     "en": {
       "title": "Agentic document processing for business | AGYNEXA",
-      "description": "Explore a document workflow that identifies business records, checks their contents and passes reliable information to the responsible process owner.",
-      "h1": "Document processing that carries the work forward",
+      "description": "Turn supplied document content into a sourced review brief. Extract facts, flag gaps and test a document agent in AGYNEXA Studio.",
+      "h1": "Turn documents into reviewable work",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A business document usually arrives because something needs to happen: a project changes scope, a customer supplies onboarding information or a team completes a handover. Processing it requires an understanding of its purpose and the work that follows. Extracted text alone does not establish that the case is ready to proceed."
+          "text": "Extract the facts your team needs from supplied document content, preserve their source and flag missing information. Review the resulting brief before a record is accepted or sent to another system."
         },
         {
           "type": "paragraph",
@@ -3790,17 +3492,26 @@
         {
           "type": "paragraph",
           "text": "Evaluate ordinary packages alongside revisions, duplicate files and conflicting references. Check whether required information survives the process and whether the right issue reaches the right owner. Measure correction effort and readiness for the next task, as well as extraction accuracy. The business result is a handover that the receiving team can use without reconstructing the whole file."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "معالجة مستندات الأعمال بالوكلاء | AGYNEXA",
-      "description": "مسار لفهم مستندات الأعمال واستخلاص المعلومات المطلوبة ومعالجة التعارضات، حتى تصل النتيجة إلى المسؤول عن الخطوة التالية.",
-      "h1": "معالجة المستندات ضمن سير العمل",
+      "description": "حوّل محتوى المستندات إلى موجز مراجعة بمصادره. استخلص الحقائق وحدد النواقص واختبر وكيل المستندات في استوديو AGYNEXA.",
+      "h1": "حوّل المستندات إلى عمل قابل للمراجعة",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يرتبط وصول المستند عادةً بخطوة مطلوبة في العمل. فقد يحمل تغييرًا في نطاق مشروع، أو معلومات لاستقبال عميل جديد، أو محضر تسليم بين فريقين. لذلك تحتاج معالجته إلى فهم الغرض منه وما سيعتمد عليه لاحقًا، حتى تصل المعلومات إلى الشخص المناسب بصورة قابلة للاستخدام."
+          "text": "استخلص الحقائق التي يحتاجها الفريق من محتوى المستندات المقدمة، واحتفظ بمراجعها وحدّد النواقص. راجع الموجز الناتج قبل اعتماد السجل أو إرساله إلى نظام آخر."
         },
         {
           "type": "paragraph",
@@ -3833,6 +3544,15 @@
         {
           "type": "paragraph",
           "text": "تشمل التجربة مستندات معتادة وتعديلات متلاحقة ونسخًا مكررة ومراجع متعارضة. تراجع الشركة دقة المعلومات المستخلصة، وقدرة المسار على إيصال المشكلة إلى صاحبها، وحجم التصحيح المطلوب. ويُقاس نجاح المعالجة أيضًا بقدرة الفريق المستلم على متابعة العمل دون إعادة قراءة الملف كاملًا أو تكرار جمع المعلومات."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -3840,12 +3560,12 @@
   "/solutions/sales": {
     "en": {
       "title": "AI agents for sales operations | AGYNEXA",
-      "description": "Connect customer discovery, requirement assessment and proposal preparation in a sales workflow with clear ownership and controlled commercial commitments.",
-      "h1": "AI agents for sales operations",
+      "description": "Build a sales agent that prepares qualification and proposal drafts from your customer context and approved offer information.",
+      "h1": "Give your sales team a complete brief",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A sales opportunity develops through several decisions. The team needs to understand the customer's operation, establish whether the offer fits and agree on a credible next step. Information often passes between sales, a technical specialist and a delivery owner before a proposal can be made."
+          "text": "Bring the customer inquiry, approved offer information and discovery notes together. Ask the agent to prepare a qualification or proposal draft that keeps assumptions and questions visible to the sales owner."
         },
         {
           "type": "paragraph",
@@ -3882,17 +3602,26 @@
         {
           "type": "paragraph",
           "text": "Review requirement accuracy, unsupported capability matches and the number of clarifications repeated between teams. Use lost context and stalled decisions as test cases. These measures show whether the workflow helps the team advance an opportunity. They do not establish a higher conversion rate without observed sales results."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء لعمليات المبيعات | AGYNEXA",
-      "description": "ربط فهم احتياج العميل وتقييم المتطلبات وإعداد العرض في مسار مبيعات واضح، مع تحديد المسؤول عن الفرصة والالتزامات التجارية.",
-      "h1": "تنسيق عمليات المبيعات بوكلاء الذكاء الاصطناعي",
+      "description": "ابنِ وكيل مبيعات يجهز مسودات التأهيل والعروض من سياق العميل ومعلومات العرض المعتمدة، مع مراجعة مسؤول المبيعات.",
+      "h1": "جهّز لفريق المبيعات موجزًا مكتملًا",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تمر فرصة البيع بقرارات تتجاوز كتابة عرض جيد. يحتاج الفريق إلى فهم عمل العميل، والتأكد من ملاءمة المنتج، ثم الاتفاق على خطوة عملية يستطيع الوفاء بها. وغالبًا ما يشارك في ذلك مسؤول المبيعات ومختص تقني وفريق يتولى التسليم، لكل منهم معلومات وقرارات مختلفة."
+          "text": "اجمع استفسار العميل ومعلومات العرض المعتمدة وملاحظات فهم الاحتياج. اطلب من الوكيل موجز تأهيل أو مسودة عرض تظهر الافتراضات والأسئلة لمسؤول المبيعات."
         },
         {
           "type": "paragraph",
@@ -3929,6 +3658,15 @@
         {
           "type": "paragraph",
           "text": "تراجع الشركة دقة فهم المتطلبات والمطابقات غير المدعومة، وتسأل أين تكررت الأسئلة أو تعطلت القرارات. تكشف هذه المراجعة جودة انتقال الفرصة بين الفرق. أما ارتفاع نسبة إتمام الصفقات فيحتاج إلى نتائج فعلية يمكن قياسها، ولا يُستنتج من جودة العرض المكتوب وحدها."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -3936,12 +3674,12 @@
   "/solutions/service": {
     "en": {
       "title": "Customer service agent workflows | AGYNEXA",
-      "description": "Design customer service workflows that preserve case context, apply the right guidance and coordinate resolution or escalation across responsible teams.",
-      "h1": "Customer service agents across the resolution process",
+      "description": "Prepare customer replies and escalation briefs using case context and approved guidance. Test the role before agreeing production activation.",
+      "h1": "Prepare customer responses with context",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A customer may explain a problem to one team while another team holds the information or authority to resolve it. Service breaks down when the request loses its context between those teams, or when a suggested answer is treated as a completed resolution."
+          "text": "Use the customer’s issue, case facts and approved service guidance to prepare a response or escalation. Review the proposal before a channel sends it or a service system changes the case."
         },
         {
           "type": "paragraph",
@@ -3978,17 +3716,26 @@
         {
           "type": "paragraph",
           "text": "Test a familiar issue, an ambiguous description and a case that needs specialist judgment. Review policy accuracy, repeated questions and whether the next team receives enough context to act. Measure case progress and correction effort. A fluent response is useful only when it helps move the customer's issue toward its actual resolution."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "مسارات وكلاء خدمة العملاء | AGYNEXA",
-      "description": "تصميم مسارات تحافظ على سياق طلب العميل وتربط الإرشادات بفرق المعالجة، حتى يصل الطلب إلى حل مؤكد أو تصعيد له مسؤول واضح.",
-      "h1": "وكلاء خدمة العملاء من استقبال المشكلة إلى معالجتها",
+      "description": "جهّز ردود العملاء وموجز التصعيد من سياق الحالة والإرشاد المعتمد. اختبر الدور قبل الاتفاق على التفعيل الإنتاجي.",
+      "h1": "جهّز ردود العملاء بسياق الحالة",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يشرح العميل مشكلته لفريق، بينما توجد المعلومة أو الصلاحية اللازمة لحلها لدى فريق آخر. تتعطل الخدمة عندما ينتقل الطلب دون تاريخه، أو عندما يُسجَّل الرد المقترح باعتباره حلًا مكتملًا. يحتاج العميل إلى تقدم في معالجة المشكلة، ويحتاج الموظف إلى معرفة الخطوة التي يملك تنفيذها."
+          "text": "استخدم مشكلة العميل وحقائق الحالة وإرشادات الخدمة المعتمدة لتجهيز رد أو تصعيد. راجع المقترح قبل إرساله عبر قناة تواصل أو تعديل الحالة داخل نظام الخدمة."
         },
         {
           "type": "paragraph",
@@ -4025,6 +3772,15 @@
         {
           "type": "paragraph",
           "text": "تشمل التجربة مشكلة معتادة ووصفًا ملتبسًا وحالة تتطلب حكمًا متخصصًا. تُراجع دقة تطبيق السياسة والأسئلة المكررة وكفاية المعلومات لدى الفريق المستلم. ويبين تتبع تقدم الحالة وحجم التصحيح ما إذا كان المسار يخدم الحل الفعلي، إلى جانب جودة الصياغة التي يتلقاها العميل."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -4032,12 +3788,12 @@
   "/solutions/finance": {
     "en": {
       "title": "AI agents for finance operations | AGYNEXA",
-      "description": "Explore agent workflows for financial reconciliation and exception handling, with traceable records, verified calculations and decisions owned by finance.",
-      "h1": "AI agents for finance operations",
+      "description": "Prepare financial discrepancy reports from approved records. Test calculations, inspect evidence and keep review with your finance team.",
+      "h1": "Review financial differences with evidence",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Finance teams coordinate reconciliations, expense questions, reporting inputs and unresolved transactions. Much of that work involves finding the right records and explaining a difference before anyone decides how it should be treated. The calculation, the investigation and the accounting decision have different responsibilities."
+          "text": "Give the agent approved records and clear matching rules. Use its analysis to prepare a discrepancy report, check the calculations and bring unresolved treatments to the responsible finance specialist."
         },
         {
           "type": "paragraph",
@@ -4074,17 +3830,26 @@
         {
           "type": "paragraph",
           "text": "Test unmatched records, duplicate references and incomplete evidence alongside ordinary reconciliations. Check calculations independently of the explanation. Review missed differences, unsupported causes and the effort needed to resolve a case. The result should give finance a reliable path from a detected discrepancy to an authorized, confirmed disposition."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء للعمليات المالية | AGYNEXA",
-      "description": "مسارات للمطابقة المالية والتحقيق في الفروق، تربط السجلات والحسابات بالقرار المحاسبي وصاحب الصلاحية في اعتماده.",
-      "h1": "وكلاء لتنظيم العمل داخل الإدارة المالية",
+      "description": "جهّز تقارير الفروق المالية من السجلات المعتمدة، واختبر الحسابات وراجع الأدلة مع الفريق المالي داخل استوديو AGYNEXA.",
+      "h1": "راجع الفروق المالية بأدلتها",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تتابع فرق المالية المطابقات والمصروفات ومدخلات التقارير والمعاملات التي لم تُحسم. ويبدأ كثير من هذا العمل بالبحث عن السجلات وفهم سبب الاختلاف، قبل اتخاذ قرار بشأن معالجته. للحساب العددي قواعد، ولتفسير الفرق أدلة، وللمعالجة المحاسبية صاحب صلاحية مسؤول عنها."
+          "text": "زوّد الوكيل بسجلات معتمدة وقواعد مطابقة واضحة. استخدم التحليل لإعداد تقرير بالفروق، وتحقق من الحسابات وأحِل المعالجات غير المحسومة إلى المختص المالي."
         },
         {
           "type": "paragraph",
@@ -4121,6 +3886,15 @@
         {
           "type": "paragraph",
           "text": "تُختبر الحالات المعتادة إلى جانب السجلات التي تعذر ربطها والمراجع المكررة والأدلة الناقصة. تُراجع العمليات الحسابية بصورة مستقلة عن الشرح، وتُقاس الفروق التي لم تُكتشف والأسباب غير المدعومة والجهد اللازم لحسم الحالة. النتيجة المفيدة مسار واضح من اختلاف معروف إلى معالجة مخولة ثبت تنفيذها، مع إمكانية الرجوع إلى أساس القرار."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -4128,12 +3902,12 @@
   "/solutions/logistics": {
     "en": {
       "title": "AI agents for logistics workflows | AGYNEXA",
-      "description": "Design logistics agent workflows that organize shipment events, investigate exceptions and coordinate an authorized response across operations and customers.",
-      "h1": "AI agents for logistics and shipment exceptions",
+      "description": "Turn shipment events and exceptions into a reviewable operations brief. Build and test your logistics agent in AGYNEXA Studio.",
+      "h1": "Make shipment exceptions easier to review",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A delayed shipment affects more than a tracking status. It may change a warehouse plan, an onward movement and the commitment made to a customer. Operations teams need to know which event is reliable, what depends on it and who can authorize a response."
+          "text": "Organize confirmed shipment events, affected commitments and the information still missing. The agent prepares an exception brief and response options for the operations owner; live tracking and changes need an authorized connection."
         },
         {
           "type": "paragraph",
@@ -4170,17 +3944,26 @@
         {
           "type": "paragraph",
           "text": "Test late updates, conflicting identifiers and an unavailable source. Review whether the sequence remains correct and whether people receive the information they need at the right stage. Useful measures include time to identify the owner, repeated coordination work and confirmed exception resolution. Those measures describe the workflow's performance without promising on-time delivery beyond the information and authority available."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء لعمليات الشحن والخدمات اللوجستية | AGYNEXA",
-      "description": "تنسيق أحداث الشحن ومعالجة الاستثناءات وربط فرق التشغيل وخدمة العملاء بخطوة تالية مخولة ومؤكدة.",
-      "h1": "وكلاء لتنسيق عمليات الشحن ومعالجة التعطل",
+      "description": "حوّل أحداث الشحن والاستثناءات إلى موجز يستطيع فريق العمليات مراجعته. ابنِ وكيل اللوجستيات واختبره داخل استوديو AGYNEXA.",
+      "h1": "نظّم استثناءات الشحن للمراجعة",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تأخر الشحنة يؤثر في خطة الاستلام والحركة التالية والتزام الشركة أمام العميل. ويحتاج فريق التشغيل إلى معرفة الحدث الذي يمكن الاعتماد عليه، والأعمال المرتبطة به، وصاحب الصلاحية في تغيير الخطة. وقد تأتي المعلومات من جهات متعددة، لكل منها توقيت مختلف وطريقة مختلفة في وصف الحالة."
+          "text": "نظّم أحداث الشحنة المؤكدة والالتزامات المتأثرة والمعلومات الناقصة. يجهّز الوكيل موجز الاستثناء وخيارات الاستجابة لمسؤول العمليات، بينما يحتاج التتبع الحي والتعديل إلى اتصال مخول."
         },
         {
           "type": "paragraph",
@@ -4217,6 +4000,15 @@
         {
           "type": "paragraph",
           "text": "تشمل التجربة تحديثات متأخرة ومعرفات متعارضة ومصدرًا تعذر الوصول إليه. تُراجع صحة ترتيب الأحداث وكفاية المعلومات لدى كل فريق في توقيتها المناسب. ويمكن قياس زمن تحديد المسؤول والجهد المتكرر في التنسيق وحالات التعطل التي حُسمت. تعكس هذه المقاييس جودة سير العمل دون تحويل تقدير التسليم إلى ضمان يتجاوز المعلومات والصلاحيات المتاحة."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -4224,12 +4016,12 @@
   "/solutions/procurement": {
     "en": {
       "title": "AI agents for procurement workflows | AGYNEXA",
-      "description": "Connect internal requirements, supplier information, offer assessment and purchasing decisions in a procurement workflow with explicit authority.",
-      "h1": "Procurement workflows from requirement to authorized purchase",
+      "description": "Compare supplier offers, normalize quantities and flag missing terms. Build a procurement agent while the buyer retains approval.",
+      "h1": "Compare supplier offers before approval",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A purchase begins with an operational need. The buyer must understand what the requesting team requires, determine which offers meet that need and resolve the terms that affect delivery. Price is one part of a decision that may also involve technical suitability, availability and ongoing responsibility."
+          "text": "Bring supplier offers and the purchasing requirement into one review. Ask the agent to compare terms, normalize quantities and flag what is missing, while the buyer retains the decision on price, suitability and award."
         },
         {
           "type": "paragraph",
@@ -4266,17 +4058,26 @@
         {
           "type": "paragraph",
           "text": "Use offers with different units, partial availability and unresolved conditions. Check the calculation separately from the written assessment. Review whether essential requirements remain visible and whether the right person decides each exception. Measure clarification and correction effort across the process, including the work needed after approval."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء لمسارات المشتريات | AGYNEXA",
-      "description": "ربط احتياج الأقسام ومعلومات الموردين وتقييم العروض واعتماد الشراء في مسار يوضح المسؤوليات وشروط الانتقال بين الخطوات.",
-      "h1": "تنسيق المشتريات من تحديد الاحتياج إلى اعتماد الشراء",
+      "description": "قارن عروض الموردين ووحّد الكميات وحدد الشروط الناقصة. ابنِ وكيل مشتريات مع بقاء قرار الاعتماد لدى مسؤول الشراء.",
+      "h1": "قارن عروض الموردين قبل الاعتماد",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تبدأ المشتريات باحتياج تشغيلي له غرض وتوقيت ومواصفات. ويحتاج المشتري إلى معرفة ما يطلبه القسم فعلًا، والعروض التي تلبيه، والشروط التي ستؤثر في التنفيذ. ويشارك في القرار مختص فني ومسؤول ميزانية، إلى جانب من يتابع المورد والاستلام بعد صدور الطلب."
+          "text": "اجمع عروض الموردين ومتطلبات الشراء في مراجعة واحدة. اطلب من الوكيل مقارنة الشروط وتوحيد الكميات وتحديد النواقص، مع بقاء قرار السعر والملاءمة والترسية لدى مسؤول الشراء."
         },
         {
           "type": "paragraph",
@@ -4313,6 +4114,15 @@
         {
           "type": "paragraph",
           "text": "تشمل التجربة عروضًا بوحدات مختلفة وإتاحة جزئية وشروطًا غير مكتملة. تُفحص الحسابات مستقلةً عن التقييم المكتوب، وتُراجع قدرة المسار على إبقاء المتطلبات الأساسية ظاهرة وإيصال الاستثناء إلى صاحب قراره. ويشمل القياس وقت الاستيضاح والتصحيح وما يلزم لمتابعة الالتزام بعد الاعتماد، حتى يظهر أثر المسار على دورة الشراء كاملة."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -4320,12 +4130,12 @@
   "/solutions/receivables": {
     "en": {
       "title": "Accounts receivable agent workflows | AGYNEXA",
-      "description": "Organize receivables follow-up around confirmed balances, payment evidence and disputes, with finance controlling communication and resolution.",
-      "h1": "Receivables follow-up with the account context intact",
+      "description": "Prepare follow-up plans and message drafts from approved balances and account facts. Review the work before any external action.",
+      "h1": "Prepare follow-up from the account facts",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An overdue item may reflect a payment delay, an unallocated receipt or a dispute about delivery. Those situations require different responses. A useful receivables workflow establishes what is owed and what is preventing resolution before it prepares the next customer contact."
+          "text": "Use approved balances, due dates and dispute information to prepare a follow-up plan. The agent can draft a contextual message for review; sending it and changing account treatment require the appropriate authority."
         },
         {
           "type": "paragraph",
@@ -4362,17 +4172,26 @@
         {
           "type": "paragraph",
           "text": "Test partial payments, conflicting references and disputes that depend on another department. Review incorrect balances, inappropriate contact and the time spent reconstructing account history. Track whether the underlying issue was resolved. The workflow can be assessed on these outcomes without promising collection or improved cash flow from a prepared follow-up alone."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء لمتابعة المستحقات | AGYNEXA",
-      "description": "تنظيم متابعة المستحقات بالاستناد إلى الرصيد وأدلة السداد والاعتراضات، مع إبقاء اعتماد التواصل وحسم المعالجة لدى الإدارة المالية.",
-      "h1": "متابعة المستحقات على أساس موقف الحساب",
+      "description": "جهّز خطط المتابعة ومسودات الرسائل من الأرصدة المعتمدة وحقائق الحساب، وراجع العمل قبل أي إجراء خارجي.",
+      "h1": "جهّز المتابعة من حقائق الحساب",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يتأخر أحد المستحقات بسبب تأخر السداد، أو لوجود مبلغ وصل ولم يُربط بالفاتورة، أو لاعتراض على التوريد. ولكل حالة متابعة مختلفة. لذلك يحتاج الفريق إلى فهم الرصيد وسبب تعطله قبل اختيار الرسالة المناسبة أو تحديد الشخص الذي يجب الرجوع إليه."
+          "text": "استخدم الأرصدة المعتمدة ومواعيد الاستحقاق وبيانات النزاع لتجهيز خطة متابعة. يمكن للوكيل إعداد مسودة تناسب الحالة، ويحتاج إرسالها أو تغيير معالجة الحساب إلى الصلاحية المناسبة."
         },
         {
           "type": "paragraph",
@@ -4409,6 +4228,15 @@
         {
           "type": "paragraph",
           "text": "تُختبر المدفوعات الجزئية والمراجع المتعارضة والاعتراضات التي يتوقف حلها على قسم آخر. تشمل المراجعة صحة الرصيد وملاءمة التواصل والوقت اللازم لإعادة بناء تاريخ الحساب. ويتابع الفريق أيضًا ما إذا كان سبب التعطل قد عولج فعلًا. أما ضمان التحصيل أو تحسن التدفق النقدي، فلا يُستنتج من إعداد متابعة جيدة وحدها."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }
@@ -4416,12 +4244,12 @@
   "/solutions/customer-operations": {
     "en": {
       "title": "AI agents for customer operations | AGYNEXA",
-      "description": "Coordinate customer onboarding, delivery dependencies and ongoing account work through agent roles that share context and preserve human authority.",
-      "h1": "Customer operations across the account lifecycle",
+      "description": "Keep account handovers complete with requirements, dependencies and open decisions. Build and test a customer operations agent.",
+      "h1": "Keep the account handover complete",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A customer's experience depends on several teams acting on the same commitments. Sales may agree the scope, operations may prepare delivery and service may take responsibility once the customer starts using the offer. A gap between those stages can delay the whole relationship while each department appears to have finished its own task."
+          "text": "Organize the agreed scope, customer requirements and dependencies across the teams serving an account. Test an agent that prepares the handover brief, identifies open conditions and proposes the next responsible owner."
         },
         {
           "type": "paragraph",
@@ -4458,17 +4286,26 @@
         {
           "type": "paragraph",
           "text": "Test an ordinary onboarding, a blocked dependency and a scope change after activation. Review missed commitments, repeated information requests and uncertainty over ownership. Measure whether the customer and the responsible teams receive consistent information. This assesses coordination across the relationship, beyond the quality of an individual answer or service ticket."
+        },
+        {
+          "type": "heading",
+          "text": "Test the role, then agree activation",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "Create this agent in Studio using an authorized example from your process. Inspect the output, source support and questions left for the reviewer. Email adham@agynexa.si to discuss the connections, pricing and terms needed for production activation."
         }
       ]
     },
     "ar": {
       "title": "وكلاء لتنسيق عمليات العملاء | AGYNEXA",
-      "description": "ربط استقبال العميل وتجهيز الخدمة والمتابعة المستمرة بأدوار للوكلاء تتشارك سياق الحساب وتوضح الاعتمادات ومسؤولية القرارات.",
-      "h1": "تنسيق عمليات العميل عبر أقسام الشركة",
+      "description": "نظّم تسليم حساب العميل بمتطلباته واعتمادياته وقراراته المفتوحة. ابنِ وكيل عمليات العملاء واختبره داخل استوديو AGYNEXA.",
+      "h1": "احتفظ بسياق العميل عند تسليم العمل",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تعتمد تجربة العميل على التزام أقسام متعددة بما اتُّفق عليه معه. تحدد المبيعات النطاق، وتجهز العمليات ما يلزم للتسليم، ثم تتولى الخدمة المتابعة أثناء الاستخدام. وقد تتعطل العلاقة بين مرحلتين رغم أن كل قسم أنهى المهمة التي يراها من اختصاصه، لأن خطوة يعتمد عليها الآخر لم تكتمل."
+          "text": "نظّم النطاق المتفق عليه ومتطلبات العميل والاعتماديات بين الفرق التي تخدم الحساب. اختبر وكيلًا يجهّز ملف التسليم ويحدد الشروط المفتوحة ويقترح المسؤول عن الخطوة التالية."
         },
         {
           "type": "paragraph",
@@ -4505,6 +4342,15 @@
         {
           "type": "paragraph",
           "text": "تشمل المراجعة استقبالًا معتادًا وشرطًا عطل البدء وتغييرًا في النطاق بعد التشغيل. تُراجع الالتزامات التي ضاعت والأسئلة المتكررة ومواضع غموض المسؤولية. ويُقاس أيضًا اتساق المعلومات التي تصل إلى العميل والفرق المعنية. تكشف هذه النتائج جودة تنسيق العلاقة كاملة، بما يتجاوز جودة إجابة منفردة أو تذكرة خدمة واحدة."
+        },
+        {
+          "type": "heading",
+          "text": "اختبر الدور ثم اتفق على التفعيل",
+          "depth": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "أنشئ الوكيل في الاستوديو بمثال مأذون من إجراءاتك. افحص المخرج ومراجعه والأسئلة المتروكة للمراجع، ثم راسل adham@agynexa.si لمناقشة الاتصالات والسعر والشروط اللازمة للتفعيل الإنتاجي."
         }
       ]
     }

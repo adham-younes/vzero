@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AGYNEXA implemented HTTP API",
-    "version": "2026-11-05-owner-mail",
-    "description": "57 implemented HTTP operations. Owner mailbox deployment and routing state are recorded in OWNER-MAIL-2026-11-05.md."
+    "version": "2026-11-05-openai-studio",
+    "description": "67 implemented HTTP operations across 51 route files. New runtime verification is governed by the platform-upgrade release receipt; source availability is not proof of production success."
   },
   "servers": [
     {
@@ -1868,7 +1868,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -2076,7 +2076,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -2149,7 +2149,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -2224,7 +2224,7 @@
             "agentKey": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -3823,6 +3823,399 @@
           },
           "503": {
             "description": "Model unavailable"
+          }
+        }
+      }
+    },
+    "/api/admin/agents/{agentId}/activation": {
+      "post": {
+        "summary": "Allowlisted operator only: record a nonempty agreement reference and activate a customer-key-connected agent, or withdraw activation",
+        "operationId": "postapiadminagentsagentIdactivation",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Allowlisted operator only: record a nonempty agreement reference and activate a customer-key-connected agent, or withdraw activation. Workspace ownership alone grants no operator authority.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        },
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/auth/chatgpt/callback": {
+      "get": {
+        "summary": "Consume one-time OAuth transaction, validate JWT identity and create the existing Supabase session",
+        "operationId": "getapiauthchatgptcallback",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [],
+        "description": "Consume one-time OAuth transaction, validate JWT identity and create the existing Supabase session. Redirects to Studio or a safe localized error; never returns provider tokens.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        }
+      }
+    },
+    "/api/auth/chatgpt/start": {
+      "get": {
+        "summary": "Begin configured canonical-domain OIDC with PKCE, browser-bound state and nonce; link=1 requires an existing active account",
+        "operationId": "getapiauthchatgptstart",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [],
+        "description": "Begin configured canonical-domain OIDC with PKCE, browser-bound state and nonce; link=1 requires an existing active account. Returns 302 or availability error.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        }
+      }
+    },
+    "/api/auth/providers": {
+      "get": {
+        "summary": "Configured identity-provider status only; reports planUsage false",
+        "operationId": "getapiauthproviders",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [],
+        "description": "Configured identity-provider status only; reports planUsage false. No credentials are returned.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/activation": {
+      "get": {
+        "summary": "Owner-only activation state and email draft; POST requires a successful source-visible OpenAI test of the saved revision",
+        "operationId": "getapiv1agentsagentIdactivation",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Owner-only activation state and email draft; POST requires a successful source-visible OpenAI test of the saved revision. Saving does not send email or activate production.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        },
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "summary": "Owner-only activation state and email draft; POST requires a successful source-visible OpenAI test of the saved revision",
+        "operationId": "postapiv1agentsagentIdactivation",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Owner-only activation state and email draft; POST requires a successful source-visible OpenAI test of the saved revision. Saving does not send email or activate production.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        },
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/runs/{runId}/artifacts/{artifactId}": {
+      "get": {
+        "summary": "Owner session or exact same-agent API bearer; verifies persisted artifact, workspace, source visibility and publication identity",
+        "operationId": "getapiv1runsrunIdartifactsartifactId",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          },
+          {
+            "agentKey": []
+          }
+        ],
+        "description": "Owner session or exact same-agent API bearer; verifies persisted artifact, workspace, source visibility and publication identity. Temporary provider file, maximum 4 MiB, attachment, no-store.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        },
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "artifactId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/workspace/provider": {
+      "get": {
+        "summary": "Owner-only customer OpenAI credential status, model-access validation plus AES-GCM storage, or disconnect",
+        "operationId": "getapiv1workspaceprovider",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Owner-only customer OpenAI credential status, model-access validation plus AES-GCM storage, or disconnect. Plaintext keys are never returned. Disconnect stops external publication/runs.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        }
+      },
+      "put": {
+        "summary": "Owner-only customer OpenAI credential status, model-access validation plus AES-GCM storage, or disconnect",
+        "operationId": "putapiv1workspaceprovider",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Owner-only customer OpenAI credential status, model-access validation plus AES-GCM storage, or disconnect. Plaintext keys are never returned. Disconnect stops external publication/runs.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Owner-only customer OpenAI credential status, model-access validation plus AES-GCM storage, or disconnect",
+        "operationId": "deleteapiv1workspaceprovider",
+        "x-implementation-status": "IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Owner-only customer OpenAI credential status, model-access validation plus AES-GCM storage, or disconnect. Plaintext keys are never returned. Disconnect stops external publication/runs.",
+        "responses": {
+          "200": {
+            "description": "Successful operation; inspect the returned status."
+          },
+          "400": {
+            "description": "Invalid request or callback."
+          },
+          "401": {
+            "description": "Authentication required."
+          },
+          "403": {
+            "description": "Permission denied."
+          },
+          "404": {
+            "description": "Resource unavailable."
+          },
+          "409": {
+            "description": "Prerequisites or revision conflict."
+          },
+          "503": {
+            "description": "Provider or integration unavailable."
           }
         }
       }

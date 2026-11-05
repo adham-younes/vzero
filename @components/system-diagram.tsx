@@ -1,17 +1,19 @@
 'use client'
 import {useLanguage} from './agynexa-shell'
-import {ShieldCheck} from 'lucide-react'
+import {ArrowDown,BookOpen,BrainCircuit,Code2,FileCheck2,Globe2,ShieldCheck,SlidersHorizontal} from 'lucide-react'
+import styles from './public-process-visuals.module.css'
+
 export default function SystemDiagram(){
  const {t}=useLanguage()
- return <figure className="system-graphic"><div className="graphic-toolbar"><span>AGYNEXA / {t(['System structure','بنية النظام'])}</span><ShieldCheck size={18} className="text-primary"/></div><svg viewBox="0 0 560 360" role="img" aria-label={t(['Information, workflow rules and permitted tools relate to an agent role, human review and an output with supporting evidence.','ترتبط المعلومات وقواعد العمل والأدوات المسموحة بدور الوكيل والمراجعة البشرية ومخرج تدعمه الأدلة.'])}>
- <defs><pattern id="diagram-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#ffffff18"/></pattern></defs>
- <rect width="560" height="360" fill="url(#diagram-dots)"/>
- <g stroke="var(--primary)" strokeWidth="1.5" fill="none"><path d="M140 85H185V180H220M140 180H220M140 275H185V180M340 180H392V112H430M392 180V275H430"/><circle cx="185" cy="180" r="4" fill="var(--primary)"/><circle cx="392" cy="180" r="4" fill="var(--primary)"/></g>
- {[{y:56,label:t(['Approved information','معلومات معتمدة'])},{y:151,label:t(['Authorized systems','أنظمة مصرح بها'])},{y:246,label:t(['Workflow rules','قواعد سير العمل'])}].map(x=><g key={x.y}><rect x="24" y={x.y} width="116" height="58" rx="7" fill="var(--card)" stroke="var(--border)"/><text x="82" y={x.y+34} textAnchor="middle" fontSize="10">{x.label}</text></g>)}
- <rect x="218" y="118" width="124" height="124" rx="12" fill="var(--background)" stroke="var(--primary)" strokeWidth="1.5"/>
- <g transform="translate(261,139)" stroke="var(--primary)" strokeWidth="1.5" fill="none"><rect width="38" height="38" rx="8"/><path d="M10 27L19 10L28 27M14 21H24M19 0V-6M19 38V44M0 19H-6M38 19H44"/></g>
- <text x="280" y="206" textAnchor="middle" fontSize="12">{t(['Agent coordination','تنسيق الوكلاء'])}</text><text x="280" y="226" textAnchor="middle" fontSize="10" opacity=".7">{t(['Roles & dependencies','أدوار واعتماديات'])}</text>
- <rect x="430" y="77" width="106" height="70" rx="7" fill="var(--card)" stroke="var(--primary)"/><text x="483" y="109" textAnchor="middle" fontSize="12">{t(['Human review','مراجعة بشرية'])}</text><path d="m474 125 6 5 12-12" stroke="var(--primary)" fill="none" strokeWidth="2"/>
- <rect x="430" y="246" width="106" height="58" rx="7" fill="var(--card)" stroke="var(--border)"/><text x="483" y="280" textAnchor="middle" fontSize="10.5">{t(['Process outcome','نتيجة العملية'])}</text>
- </svg><figcaption>{t(['Conceptual system structure: company context and permitted tools support coordinated roles, with human decisions at the appropriate steps.','بنية تصورية للنظام: يدعم سياق الشركة والأدوات المسموحة أدوارًا مترابطة، مع قرارات بشرية في مواضعها المناسبة.'])}</figcaption></figure>
+ return <figure className={styles.system}>
+  <div className={styles.systemHeading}><span>AGYNEXA / {t(['Agent workspace','مساحة الوكيل'])}</span><ShieldCheck size={18}/></div>
+  <div className={styles.systemBody}>
+   <div className={styles.inputs}><div className={styles.input}><SlidersHorizontal size={17}/><span>{t(['Your instructions','تعليماتك'])}</span></div><div className={styles.input}><BookOpen size={17}/><span>{t(['Company knowledge','معرفة الشركة'])}</span></div></div>
+   <ArrowDown className={styles.connector} size={20} aria-hidden="true"/>
+   <div className={styles.engine}><span><BrainCircuit size={18}/>{t(['Private task','مهمة خاصة'])}</span><strong>{t(['Your configured agent','وكيلك بالإعدادات التي اخترتها'])}</strong><p>{t(['OpenAI reasoning with the tools you enable','استدلال OpenAI بالأدوات التي تفعّلها'])}</p><div className={styles.tools}><span><Globe2 size={14}/>{t(['Web research','بحث الويب'])}</span><span><Code2 size={14}/>{t(['Python analysis','تحليل Python'])}</span></div></div>
+   <ArrowDown className={styles.connector} size={20} aria-hidden="true"/>
+   <div className={styles.outcome}><FileCheck2 size={22}/><div><strong>{t(['A result your team can review','نتيجة يستطيع فريقك مراجعتها'])}</strong><p>{t(['Answer, evidence, tool activity and available files','إجابة وأدلة ونشاط الأدوات والملفات المتاحة'])}</p></div></div>
+  </div>
+  <figcaption>{t(['Studio saves the work in your private workspace. Production activation and external system connections are agreed separately after the test.','يحفظ الاستوديو العمل داخل مساحتك الخاصة. يُتفق على التفعيل الإنتاجي والاتصالات الخارجية بصورة مستقلة بعد التجربة.'])}</figcaption>
+ </figure>
 }

@@ -1,0 +1,51 @@
+.system{width:100%;padding-block:76px 66px;color:var(--foreground);min-width:0}
+.heading{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:38px}
+.kicker{font-size:11px;letter-spacing:.12em;font-weight:500;color:var(--primary);margin-bottom:13px}
+.heading h2{font-size:clamp(28px,3.1vw,42px);line-height:1.25;letter-spacing:-1.3px;font-weight:450;max-width:560px}
+.heading>p{font-size:16px;line-height:1.85;color:var(--muted-foreground);max-width:490px;justify-self:end}
+.workbench{display:grid;grid-template-columns:1.05fr 1fr;gap:0;min-width:0;border:1px solid #ffffff14;border-radius:12px;overflow:hidden;background:#090e0b}
+.visual{position:relative;min-width:0;display:flex;flex-direction:column;background:#080c09;border-inline-end:1px solid #ffffff0e;isolation:isolate}
+.visualHeader{display:flex;align-items:center;gap:8px;padding:25px 28px;font-size:10px;letter-spacing:.09em;color:#83a38d}
+.statusDot{width:5px;height:5px;border-radius:50%;background:var(--primary);flex-shrink:0}
+.visualCounter{margin-inline-start:auto;color:#547561;font-size:10px;letter-spacing:.05em}
+.stack{display:block;width:100%;height:auto;flex:1;min-height:350px;max-height:510px;overflow:visible;padding:2px 12px 12px}
+.floor{stroke:#10b98113;stroke-width:1;stroke-dasharray:3 7;fill:#10b98102}
+.guide{stroke:#10b98112;stroke-width:1;stroke-dasharray:3 7}
+.layer{transition:transform .36s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.plane{fill:#0b1710;stroke:#284e35;stroke-width:1;transition:fill .3s,stroke .3s}
+.sideLeft{fill:#08120c;stroke:#24412e;stroke-width:1}.sideRight{fill:#0e2015;stroke:#284c35;stroke-width:1}
+.grid{stroke:#24432f;stroke-width:.7;opacity:.35}
+.innerFrame{stroke:#30513b;stroke-width:.8;opacity:.6}
+.layerSymbol{stroke:#486d54;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;fill:#142b1b;opacity:.75}
+.labelRule{stroke:#456a50;stroke-width:.8;opacity:.6}.labelDot{fill:#578565}.layerNumber{fill:#729f7f;font:10px ui-monospace,SFMono-Regular,monospace;letter-spacing:1px}
+.frontAccent{stroke:#427b55;stroke-width:2;stroke-linecap:round}
+.activeLayer .plane{fill:#103721;stroke:#10b981}
+.activeLayer .sideLeft{fill:#0b2014;stroke:#10b98175}.activeLayer .sideRight{fill:#104329;stroke:#10b98190}
+.activeLayer .innerFrame{stroke:#10b981;opacity:.65}.activeLayer .grid{stroke:#48ac70;opacity:.25}
+.activeLayer .layerSymbol{stroke:#8bddaa;fill:#174d2c;opacity:1}.activeLayer .frontAccent{stroke:#65e299;stroke-width:3}
+.activeLayer .labelRule{stroke:#10b981;opacity:1}.activeLayer .labelDot{fill:#10b981}.activeLayer .layerNumber{fill:#8bdaad}
+.visualFooter{border-top:1px solid #ffffff08;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:21px 28px;font-size:12px;color:#a4b7aa;min-height:62px}
+.currentLayer{display:inline-flex;align-items:center;gap:7px;color:#b5d2bf;font-size:12px}
+.controls{display:flex;flex-direction:column;min-width:0;padding:25px 29px 24px;background:#0b110d}
+.layerSelector{border:0;padding:0;margin:0;min-width:0;display:grid;gap:3px}
+.layerControl{position:relative;display:flex;align-items:center;gap:15px;padding:15px 13px;cursor:pointer;border:1px solid transparent;border-radius:7px;min-height:78px;transition:background .2s,border-color .2s}
+.layerControl input{position:absolute;opacity:0;width:1px;height:1px;inset-inline-start:0;pointer-events:none}
+.layerControl:has(input:focus-visible){outline:2px solid var(--primary);outline-offset:3px}
+.layerControl:hover{background:#ffffff03}.selectedControl{background:#10b98108;border-color:#10b9812e}.selectedControl:hover{background:#10b9810d}
+.controlNumber{font:10px ui-monospace,SFMono-Regular,monospace;color:#466950;align-self:flex-start;padding-top:3px;flex-shrink:0}
+.selectedControl .controlNumber{color:var(--primary)}
+.controlCopy{display:grid;gap:7px;flex:1;min-width:0}.controlCopy strong{font-size:15px;font-weight:500;line-height:1.5;color:#c6d7cc}.controlCopy>span{font-size:14px;line-height:1.6;color:#a4b7aa}
+.controlIcon{color:#466d53;flex-shrink:0}.selectedControl .controlIcon{color:var(--primary)}
+.detail{border-top:1px solid #ffffff0e;margin-top:21px;padding-top:24px;display:grid;gap:20px}
+.description{font-size:15px;line-height:1.9;color:#a4b7aa;min-height:74px}
+.flow{display:grid;grid-template-columns:1fr 18px 1fr;gap:14px;margin:0;min-width:0;align-items:center}
+.flow>dl{min-width:0;margin:0}.flow dt{font-size:12px;color:#a4b7aa;margin-bottom:7px}.flow dd{font-size:14px;line-height:1.8;color:#bbcec2}
+.flowArrow{color:#548e68;font-size:15px;align-self:end;padding-bottom:6px;text-align:center}
+.boundary{font-size:12px;line-height:1.9;color:#a4b7aa;display:flex;align-items:flex-start;gap:8px}.boundary>svg{flex-shrink:0;margin-top:4px}
+.nextStep{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:23px;font-size:14px;line-height:1.8;color:#a4b7aa}.nextStep a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--primary);white-space:nowrap}.nextStep a:hover{text-decoration:underline;text-underline-offset:4px}.nextStep a:focus-visible{outline:2px solid var(--primary);outline-offset:5px;border-radius:3px}
+:global([dir=rtl]) .heading h2{letter-spacing:0;line-height:1.5;font-size:clamp(27px,2.8vw,38px)}
+:global([dir=rtl]) .kicker,:global([dir=rtl]) .visualHeader{letter-spacing:0}
+:global([dir=rtl]) .controlCopy>span,:global([dir=rtl]) .description,:global([dir=rtl]) .flow dd{line-height:2}
+@media(max-width:1050px){.heading{gap:36px}.workbench{grid-template-columns:1fr 1.1fr}.controls{padding:22px}.visualHeader,.visualFooter{padding-inline:22px}.stack{min-height:320px;padding:0;align-self:center}.layerControl{gap:11px;padding:13px 10px;min-height:76px}.controlCopy strong{font-size:15px}.controlCopy>span{font-size:14px}.detail{gap:17px}.flow{gap:10px;grid-template-columns:1fr 14px 1fr}.flow dd{font-size:14px}}
+@media(max-width:767px){.system{padding-block:48px 42px}.heading{grid-template-columns:1fr;gap:17px;margin-bottom:26px}.kicker{font-size:10px;margin-bottom:11px}.heading h2{font-size:30px;letter-spacing:-.8px;max-width:430px}.heading>p{font-size:15px;justify-self:start;max-width:540px;line-height:1.9}.workbench{grid-template-columns:1fr}.visual{border-inline-end:0;border-bottom:1px solid #ffffff0e}.visualHeader{padding:19px 21px;font-size:9px}.visualFooter{padding:16px 21px;min-height:52px;font-size:12px}.currentLayer{font-size:12px}.stack{min-height:0;max-height:330px;padding:0 24px 5px;flex:none}.controls{padding:20px}.layerSelector{grid-template-columns:1fr 1fr;gap:8px}.layerControl{display:grid;grid-template-columns:18px 1fr 16px;gap:7px;align-items:start;min-height:0;padding:13px 10px}.controlCopy{gap:0}.controlCopy strong{font-size:14px}.controlCopy>span{display:none}.controlNumber{font-size:9px;padding-top:3px}.controlIcon{padding-top:1px}.controlIcon svg{width:14px;height:14px}.detail{margin-top:21px;padding-top:22px;gap:18px}.description{font-size:15px;min-height:0}.flow{grid-template-columns:1fr 15px 1fr;gap:11px}.flow dd{font-size:14px}.flow dt{font-size:12px}.boundary{font-size:12px}.nextStep{align-items:flex-start;padding-top:18px;font-size:13px;gap:15px}.nextStep>span{max-width:65%}.nextStep a{font-size:13px;min-height:35px}.nextStep svg{width:14px;height:14px}:global([dir=rtl]) .heading h2{font-size:28px}:global([dir=rtl]) .controlCopy strong{font-size:14px}:global([dir=rtl]) .nextStep>span{max-width:58%}}
+@media(prefers-reduced-motion:reduce){.layer,.plane,.layerControl{transition:none}.layer{will-change:auto}}

@@ -1,6 +1,6 @@
 {
-  "recorded_date": "2026-10-20",
-  "product_commit": "CUSTOMER_RELEASE_CANDIDATE",
+  "recorded_date": "2026-11-05",
+  "product_commit": "OPENAI_STUDIO_UPGRADE_CANDIDATE",
   "source_files": [
     "lib/site-routes.ts",
     "lib/agynexa.ts",
@@ -432,5 +432,7 @@
       "path": "/api/owner-mail/worker",
       "method": "get"
     }
-  ]
+  ],
+  "api_route_files": 51,
+  "http_operations": 67
 }

@@ -1,3 +1,9 @@
+# Current API contract — OpenAI Studio upgrade
+
+Source inventory: **67 operations in 51 route files**. [Current OpenAPI](current-api.openapi.json) and [runtime/activation contract](../releases/platform-upgrade-2026-11-05/BACKEND.md) supersede historical counts below. New surfaces cover configured ChatGPT OIDC, encrypted customer provider connections, tested activation requests, operator activation and authenticated provider artifacts. Publication/invoke/key issuance require activation and customer billing; revocation remains available. Mailbox UI/archive removal from main PR64 is retained. Final verification occurs on production; do not infer deployed behavior from the contract alone.
+
+---
+
 Current essential candidate inventory: 41 route files / 52 HTTP operations (derive exact counts from STATUS/OpenAPI). See [release](../../launch/2026-10-22/ESSENTIAL-WORKSPACE-RELEASE.md). Earlier counts below are historical.
 
 # حالة APIs وسلوك الوظائف الفعلي

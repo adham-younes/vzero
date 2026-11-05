@@ -1,5 +1,6 @@
 // Product-facing modes; provider identifiers remain unchanged in server contracts.
 export function modelLabel(id:string,ar:boolean){
+ if(id==='gpt-6.1-terra')return 'GPT-6.1 Terra'
  if(id==='openai/gpt-oss-120b')return ar?'متقدم':'Advanced'
  if(id==='openai/gpt-oss-20b')return ar?'سريع':'Fast'
  if(id==='qwen/qwen3.8-27b')return ar?'متعدد اللغات (معاينة)':'Multilingual (preview)'

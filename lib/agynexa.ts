@@ -24,8 +24,8 @@ export const solutions = [
       "الوصول إلى المادة المناسبة وتفسيرها في سياق الحالة مع الاحتفاظ بمرجعها، وإحالة التعارض أو الغموض إلى مسؤول المعرفة."
     ],
     "output": [
-      "An answer grounded in the relevant sources, with unresolved conditions visible to the person using it.",
-      "إجابة تستند إلى المصادر ذات الصلة، وتوضح للمستخدم ما بقي دون حسم."
+      "An answer with relevant sources, open questions and a clear route to the knowledge owner.",
+      "إجابة بمصادر مرتبطة وأسئلة مفتوحة ومسار واضح إلى مسؤول المعرفة."
     ],
     "accept": [
       "Evaluate case relevance, source support and the correction required, using ordinary questions and genuine exceptions.",
@@ -55,8 +55,8 @@ export const solutions = [
       "تحديد المستند واستخلاص حقائقه ومقارنتها بمتطلبات العملية وإحالة المسائل المفتوحة إلى المسؤول المختص."
     ],
     "output": [
-      "A usable business record with source references, open items and the conditions for the next process step.",
-      "سجل أعمال قابل للاستخدام يضم المراجع والمسائل المفتوحة وشروط الانتقال إلى الخطوة التالية."
+      "A structured document brief with extracted facts, source references and missing information.",
+      "موجز منظم للمستند بالحقائق المستخلصة ومراجعها والمعلومات الناقصة."
     ],
     "accept": [
       "Check factual accuracy, version handling, exception ownership and the receiving team’s ability to continue the work.",
@@ -86,8 +86,8 @@ export const solutions = [
       "توضيح الاحتياج وتقييمه أمام العرض المتاح وحسم متطلبات التسليم ثم تجهيز الخطوة التالية لمسؤول الفرصة."
     ],
     "output": [
-      "A qualified opportunity or scoped proposal with a named owner, clear assumptions and an agreed next step.",
-      "فرصة مؤهلة أو عرض محدد النطاق، له مسؤول وافتراضات واضحة وخطوة تالية متفق عليها."
+      "A qualification brief or proposal draft with assumptions and a proposed next step for the sales owner.",
+      "موجز لتأهيل الفرصة أو مسودة عرض، بافتراضات وخطوة تالية مقترحة لمسؤول المبيعات."
     ],
     "accept": [
       "Review requirement accuracy, the basis of commercial promises and the quality of handovers between sales and delivery.",
@@ -117,8 +117,8 @@ export const solutions = [
       "فهم المشكلة وتطبيق الإرشاد المناسب، ثم تنسيق الحل أو التصعيد إلى مسؤول يقبل الحالة مع سياقها الكامل."
     ],
     "output": [
-      "A confirmed service outcome or an owned escalation, with a customer response that matches the actual case status.",
-      "نتيجة خدمة مؤكدة أو تصعيد له مسؤول، ورد للعميل يطابق الوضع الفعلي للحالة."
+      "A supported response draft or an escalation brief with the information the receiving team needs.",
+      "مسودة رد مدعومة أو ملف تصعيد بالمعلومات التي يحتاجها الفريق المستلم."
     ],
     "accept": [
       "Assess correct policy use, case progress, repeated questions and the receiving team’s ability to continue.",
@@ -148,8 +148,8 @@ export const solutions = [
       "تحديد الفرق والتحقيق في أسبابه المدعومة، ثم عرض الحالة على المسؤول المالي لاعتماد المعالجة."
     ],
     "output": [
-      "A resolved finance case with its basis and decision, plus confirmation of any separately authorized system action.",
-      "حالة مالية حُسمت مع أساسها وقرارها، وتأكيد أي إجراء منفصل جرى تفويضه في النظام."
+      "An analysis of the discrepancy, supporting records and a proposed treatment for financial review.",
+      "تحليل للفروق والسجلات المؤيدة ومعالجة مقترحة للمراجعة المالية."
     ],
     "accept": [
       "Verify arithmetic independently, assess explanations against records and track unresolved cases and correction effort.",
@@ -179,8 +179,8 @@ export const solutions = [
       "تحديد تسلسل الأحداث وآثارها على الأعمال المرتبطة، ثم تنسيق استجابة مخولة مع الفرق المسؤولة."
     ],
     "output": [
-      "An owned exception and a confirmed next action, with operational and customer updates based on the same facts.",
-      "استثناء له مسؤول وإجراء تالٍ مؤكد، وتحديثات للتشغيل والعميل تستند إلى الحقائق نفسها."
+      "An exception brief with confirmed events, affected commitments and response options for operations.",
+      "موجز للاستثناء بالأحداث المؤكدة والالتزامات المتأثرة وخيارات الاستجابة للعمليات."
     ],
     "accept": [
       "Review event accuracy, conflicting updates, exception ownership and confirmation of the resulting action.",
@@ -210,8 +210,8 @@ export const solutions = [
       "توضيح الاحتياج ومقارنة الشروط المعروفة وحسم الاستثناءات الفنية والتجارية وصولًا إلى قرار شراء مخول."
     ],
     "output": [
-      "An authorized purchasing position with comparable terms, recorded decisions and ownership of fulfillment follow-up.",
-      "موقف شرائي معتمد بشروط قابلة للمقارنة وقرارات مسجلة ومسؤولية واضحة عن متابعة التوريد."
+      "A source-backed offer comparison with missing terms and decisions reserved for the authorized buyer.",
+      "مقارنة عروض بمراجع وشروط ناقصة وقرارات متروكة لمسؤول الشراء المخول."
     ],
     "accept": [
       "Check specification coverage, consistent calculations, unresolved terms and the authority behind each commitment.",
@@ -241,8 +241,8 @@ export const solutions = [
       "التحقق من الرصيد وتحديد ما يعطل حسمه ثم تنسيق القرار المالي والمتابعة المناسبة."
     ],
     "output": [
-      "A confirmed account position with a resolved issue or a clearly owned next action.",
-      "موقف حساب مؤكد ومسألة حُسمت أو إجراء تالٍ له مسؤول معلوم."
+      "An account follow-up brief and message drafts for the responsible finance reviewer.",
+      "موجز لمتابعة الحساب ومسودات تواصل للمراجع المالي المسؤول."
     ],
     "accept": [
       "Check balance correctness, payment matching, dispute handling and whether customer contact addresses the actual issue.",
@@ -272,8 +272,8 @@ export const solutions = [
       "تنسيق شروط التجهيز وتأكيد الجاهزية، ثم استمرار سياق الحساب في الخدمة وقرارات التغيير اللاحقة."
     ],
     "output": [
-      "A coherent account lifecycle with understood obligations, responsible owners and confirmed next actions.",
-      "رحلة مترابطة للحساب، بالتزامات مفهومة ومسؤوليات محددة وخطوات تالية مؤكدة."
+      "A handover brief with agreed obligations, unresolved dependencies and the proposed next owner.",
+      "ملف تسليم بالالتزامات المتفق عليها والاعتمادات المفتوحة والمسؤول المقترح للخطوة التالية."
     ],
     "accept": [
       "Review handoff continuity, missed dependencies, repeated requests and consistency between customer and internal information.",
@@ -283,53 +283,54 @@ export const solutions = [
 ] as const
 
 export const headings: Record<string, Copy> = {
-  "security": [
-    "Make authority clear before an agent acts",
-    "صلاحيات مفهومة ومسؤولية محددة قبل التنفيذ"
-  ],
-  "contact": [
-    "Contact AGYNEXA",
-    "تواصل مع AGYNEXA"
-  ],
   "services": [
-    "The capabilities behind a business agent system",
-    "المكونات التي يقوم عليها نظام الوكلاء"
-  ],
-  "architecture": [
-    "How the parts of an agent system work together",
-    "كيف تعمل مكونات نظام الوكلاء معًا؟"
-  ],
-  "methodology": [
-    "Turn the way your team works into a clear agent design",
-    "حوّل طريقة عمل فريقك إلى تصميم واضح للوكلاء"
-  ],
-  "integrations": [
-    "Connect a process to the information and actions it needs",
-    "اربط العملية بالمعلومة والإجراء اللذين تحتاجهما"
-  ],
-  "industries": [
-    "Business agent workflows in their industry context",
-    "لكل قطاع عملياته ومتطلبات إنجازها"
-  ],
-  "resources": [
-    "Practical guidance for designing a useful agent system",
-    "إرشادات تساعدك على تصميم نظام مفيد للعمل"
-  ],
-  "about": [
-    "One Agent Builder platform for different companies",
-    "منصة واحدة تستوعب اختلاف طرق العمل"
+    "The capabilities behind your agent.",
+    "القدرات التي تدعم وكيلك."
   ],
   "solutions": [
-    "Build around the process your business needs to complete",
-    "صمّم النظام حول العملية التي يحتاجها عملك"
+    "Choose the work your agent will support.",
+    "اختر العمل الذي سيساعدك فيه الوكيل."
   ],
-  "start": [
-    "Bring one real responsibility into Studio",
-    "ابدأ بمسؤولية فعلية يعرفها فريقك"
+  "methodology": [
+    "Build, test and activate your agent",
+    "ابنِ الوكيل واختبره ثم فعّله"
+  ],
+  "architecture": [
+    "How your agent’s workspace works",
+    "كيف تعمل مساحة الوكيل؟"
+  ],
+  "integrations": [
+    "Give each connection a clear job",
+    "حدّد مهمة كل اتصال"
+  ],
+  "security": [
+    "Keep control of data and decisions",
+    "احتفظ بالسيطرة على البيانات والقرارات"
+  ],
+  "resources": [
+    "Practical guides for your first agent",
+    "إرشادات عملية لوكيلك الأول"
+  ],
+  "about": [
+    "One platform. Built around your work.",
+    "منصة واحدة تتشكل حول عملك."
   ],
   "agentnexos": [
-    "AgentNexOS: the operating model behind coordinated agents",
-    "AgentNexOS: تصور التشغيل الذي يربط أدوار الوكلاء"
+    "AgentNexOS: a shared model for agent work",
+    "AgentNexOS: تصور مشترك لعمل الوكلاء"
+  ],
+  "start": [
+    "Bring your first task into Studio.",
+    "ابدأ بمهمتك الأولى داخل الاستوديو."
+  ],
+  "contact": [
+    "Let’s agree how your agent goes live.",
+    "لنتفق على تشغيل وكيلك."
+  ],
+  "industries": [
+    "Build agents for the way your industry works",
+    "ابنِ وكلاء يفهمون طريقة العمل في قطاعك"
   ]
 }
-export const summary: Copy = ["AGYNEXA is an Agent Builder Studio for business operations. Bring your company’s knowledge into the workspace, define what each agent is responsible for, and shape its work around the processes your organization follows.", "AGYNEXA استوديو لبناء وكلاء الذكاء الاصطناعي لعمليات الشركات والمؤسسات. أضف معرفة شركتك، وحدد مسؤولية كل وكيل، وصمّم دوره وفق الإجراءات التي يعتمد عليها فريقك في إنجاز العمل."]
+
+export const summary: Copy = ["AGYNEXA is an Agent Builder Studio for business. Configure a role, add company knowledge and test its work with OpenAI reasoning, web research and code analysis. Agree the scope and terms by email before production activation.", "AGYNEXA استوديو لبناء وكلاء الأعمال. اضبط الدور وأضف معرفة الشركة واختبر العمل باستدلال OpenAI والبحث وتحليل الكود. اتفق على النطاق والشروط عبر البريد قبل التفعيل الإنتاجي."]

@@ -1,0 +1,12 @@
+{
+  "environment": "isolated_local_worktree",
+  "recorded_date": "2026-11-05",
+  "build": "PASS",
+  "typescript": "PASS",
+  "documentation_inventory": "PASS",
+  "canonical_urls": 68,
+  "http_operations": 67,
+  "protected_hero_components_and_video": "UNCHANGED_AGAINST_LATEST_MAIN",
+  "functional_tests": "RESERVED_FOR_PRODUCTION",
+  "base_main": "a5a503a5bc11f0a2d2926c877885e62a33bf072b"
+}

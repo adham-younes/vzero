@@ -1,5 +1,9 @@
-// Models are allowlisted. Preview models require an internal evaluator.
-export const modelIds = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'] as const
+// Runtime models and sector contexts are explicitly allowlisted.
+export const modelIds = ['gpt-6.1-terra'] as const
+export const sectorIds = ['general','customer-service','sales','operations','finance','hr','procurement','healthcare','education','real-estate','technology'] as const
+export type Sector = typeof sectorIds[number]
+export type AgentTools = {webSearch:boolean;codeInterpreter:boolean}
+export const defaultTools:AgentTools={webSearch:false,codeInterpreter:false}
 export const templates = {
  knowledgegrid: {
   title: 'KnowledgeGrid',
@@ -20,5 +24,8 @@ export type Template = keyof typeof templates
 export type Agent = {
  id:string; org_id:string; name:string; template:Template; instructions:string;
  language:'ar'|'en'; model:typeof modelIds[number]; revision:number;
- chat_profile?:'grounded_v1'|'customer_v1'; created_at:string; updated_at:string;
+ sector?:Sector; tools?:AgentTools; chat_profile?:'grounded_v1'|'customer_v1'; created_at:string; updated_at:string;
 }
+
+// Existing persisted provider IDs are compatibility data; every active invocation uses Terra.
+export function normalizeAgent<T extends {model?:unknown}>(agent:T):T & {model:typeof modelIds[number]}{return {...agent,model:modelIds[0]}}

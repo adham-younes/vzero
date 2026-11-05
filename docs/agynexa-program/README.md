@@ -1,3 +1,13 @@
+# Current work package — OpenAI Studio upgrade, 5 November 2026
+
+The owner explicitly authorized the full bilingual platform/Studio upgrade, compatible database changes, merge and one production release. Source now includes the latest main `a5a503a` (including mailbox UI removal). [Current release scope and evidence](releases/platform-upgrade-2026-11-05/README.md) supersedes older preview-only and Studio-deferral statements below. The new release is a candidate until its production receipt is recorded; historic verification must not be reused as proof of the new OpenAI runtime. Final production evidence is recorded in the release PR and the task-local `PRODUCTION.md`, without a documentation-only production redeployment.
+
+Implemented scope: sector agent builder, instructions/knowledge, optional web research and Python, OpenAI Terra/high, encrypted customer API connection, test-before-request activation and email negotiation, updated public content/SEO and private-route telemetry exclusions. ChatGPT sign-in requires issued client configuration; ChatGPT plan billing is not enabled. CRM/ERP connectors, shared team roles and payment settlement are not claimed.
+
+---
+
+## Historical records
+
 The shared catalogue controls shipped on 5 November 2026 at main `6d9b13a`. Solutions, Capabilities and Industries use one control row and one selected reading area. The official Arabic Capabilities layout, URL state and mobile flow were checked. [Release receipt and evidence](releases/public-navigation-2026-10-27/README.md).
 
 [فحص GitHub وVercel وSupabase في 5 نوفمبر 2026](releases/platform-sync-2026-11-05/README.md) يسجل تطابق مصدر الإنتاج وفحص الاتصال والترحيلات وتنبيهات المتابعة.

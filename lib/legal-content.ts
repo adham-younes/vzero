@@ -40,6 +40,26 @@ export const legalContent:Record<'privacy'|'terms',Notice> = {
       },
       {
         "title": [
+          "OpenAI processing and enabled tools",
+          "معالجة OpenAI والأدوات المفعّلة"
+        ],
+        "body": [
+          "Studio sends the task, relevant conversation context, instructions and selected source material to OpenAI to produce the response. If web search or code analysis is enabled, information needed for that tool may also be processed by OpenAI’s tool services. Code runs in an OpenAI-hosted sandbox, and references to generated files and tool activity may be saved with the run. Confirm provider processing arrangements before using information that requires specific contractual restrictions.",
+          "يرسل الاستوديو المهمة وسياق المحادثة المناسب والتعليمات ومادة المصادر المختارة إلى OpenAI لإنتاج الاستجابة. وعند تفعيل البحث أو تحليل الكود، قد تعالج خدمات الأدوات لدى OpenAI المعلومات اللازمة لذلك. يعمل الكود في بيئة معزولة تستضيفها OpenAI، وقد تُحفظ مراجع الملفات الناتجة ونشاط الأدوات مع سجل التشغيل. أكّد ترتيبات المعالجة لدى المزود قبل استخدام بيانات تتطلب قيودًا تعاقدية خاصة."
+        ]
+      },
+      {
+        "title": [
+          "Optional customer API credentials",
+          "بيانات API الاختيارية للعميل"
+        ],
+        "body": [
+          "If you connect your own OpenAI API key through the dedicated credentials control, it is encrypted before database storage and used server-side for the workspace’s authorized requests. The saved plaintext key is not returned to the interface. You can remove the stored credential; revocation of the key itself is managed in your OpenAI account. Do not put API keys in conversations or knowledge sources.",
+          "إذا ربطت مفتاح OpenAI API الخاص بك من أداة بيانات الاتصال المخصصة، يُشفّر قبل حفظه في قاعدة البيانات ويُستخدم على الخادم لطلبات مساحة العمل المخولة. لا تعيد الواجهة المفتاح المحفوظ بصورته الأصلية. يمكنك إزالة بيانات الاتصال المخزنة، أما إلغاء المفتاح نفسه فيتم من حساب OpenAI. لا تضع المفاتيح في المحادثات أو مصادر المعرفة."
+        ]
+      },
+      {
+        "title": [
           "Private work and public content",
           "العمل الخاص والمحتوى العام"
         ],
@@ -64,8 +84,8 @@ export const legalContent:Record<'privacy'|'terms',Notice> = {
           "مسؤوليات الحساب والمعلومات"
         ],
         "body": [
-          "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Do not submit passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records.",
-          "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. ولا تضف كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
+          "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Use a dedicated credential control when connecting a supported provider key. Do not put passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records.",
+          "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. استخدم أداة بيانات الاتصال المخصصة عند ربط مفتاح مزود مدعوم. ولا تضع كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
         ]
       },
       {
@@ -98,6 +118,26 @@ export const legalContent:Record<'privacy'|'terms',Notice> = {
         "body": [
           "Studio lets you configure private agents, provide supported company knowledge and work with conversations and generated results. Agent creation saves a configuration; it does not train a new model. Capability and solution pages explain system components and workflow designs. A described system action requires its own supported connection and authorization.",
           "يتيح الاستوديو إعداد وكلاء خاصين وإضافة معرفة الشركة المدعومة والعمل بالمحادثات والنتائج المولدة. يحفظ إنشاء الوكيل إعداداته، ولا يدرب نموذجًا جديدًا. وتشرح صفحات القدرات والحلول مكونات الأنظمة وتصميمات سير العمل؛ أما الإجراءات داخل أنظمة أخرى فتحتاج إلى اتصال مدعوم وتفويض مناسب."
+        ]
+      },
+      {
+        "title": [
+          "Testing and production activation",
+          "التجربة والتفعيل الإنتاجي"
+        ],
+        "body": [
+          "Studio testing lets you review an agent before production use. Production publication and the agreed operating scope require a separate activation decision after discussion by email at adham@agynexa.si. Pricing, payment arrangements and commercial terms are negotiated by email. The website does not collect a checkout payment or establish a fixed price by creating an account, saving an agent or running a test.",
+          "تتيح تجربة الاستوديو مراجعة الوكيل قبل الاستخدام الإنتاجي. يحتاج نشره ونطاق تشغيله المتفق عليه إلى قرار تفعيل مستقل بعد المناقشة عبر adham@agynexa.si. يجري التفاوض على السعر وترتيبات الدفع والشروط التجارية بالبريد. لا يجمع الموقع دفعة عند الدفع الإلكتروني، ولا ينشئ سعرًا ثابتًا بمجرد إنشاء حساب أو حفظ وكيل أو تشغيل تجربة."
+        ]
+      },
+      {
+        "title": [
+          "Provider access and customer usage",
+          "وصول المزود واستخدام العميل"
+        ],
+        "body": [
+          "The platform’s configured OpenAI connection powers Studio by default. If you connect a customer-owned API key, usage is billed under that OpenAI account’s arrangements. ChatGPT sign-in requires a configured and available identity integration. Using a customer’s ChatGPT plan requires separate supported access and eligibility; identity sign-in or an API key does not establish that entitlement. AGYNEXA production activation remains a separate decision.",
+          "يشغّل اتصال OpenAI المجهّز للمنصة الاستوديو افتراضيًا. وإذا ربطت مفتاح API مملوكًا للعميل، يُحاسب الاستخدام وفق ترتيبات حساب OpenAI المعني. يحتاج تسجيل ChatGPT إلى تكامل هوية مجهّز ومتاح. ويتطلب استخدام خطة ChatGPT الخاصة بالعميل وصولًا مدعومًا وأهلية مستقلين؛ تسجيل الهوية أو مفتاح API لا يثبتان هذه الأهلية. ويظل التفعيل الإنتاجي في AGYNEXA قرارًا مستقلًا."
         ]
       },
       {

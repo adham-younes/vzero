@@ -3,57 +3,88 @@ import {setTimeout as delay} from 'node:timers/promises'
 import {InputError} from '@/lib/account-validation'
 import type {RawProviderChatV2} from './chat-contract'
 import {modelRegistry,pricingDate,pricingSource,type ModelId} from './models'
+import type {AgentTools} from './settings'
 
-const keyNames=['GROQ_API_KEY','GROQ_API_KEY_2','GROQ_API_KEY_3'] as const
-function credential(model:ModelId){const key=process.env[keyNames[modelRegistry[model].slot-1]]?.trim();if(!key)throw new InputError('provider_not_configured',503);return key}
-export function configuredModels(){return Object.entries(modelRegistry).map(([id,info])=>({id,...info,configured:!!process.env[keyNames[info.slot-1]]?.trim(),availability:'not_checked',structuredWithTools:false,structuredWithStreaming:false}))}
+export function openAIKey(){const key=process.env.OPENAI_API_KEY?.trim();if(!key)throw new InputError('provider_not_configured',503);return key}
+export function configuredModels(){return Object.entries(modelRegistry).map(([id,info])=>({id,...info,provider:'openai',configured:!!process.env.OPENAI_API_KEY?.trim(),availability:'not_checked',structuredWithTools:true,structuredWithStreaming:false}))}
 export function numberSetting(name:string,fallback:number,min:number,max:number){const n=Number(process.env[name]);return Number.isFinite(n)&&n>=min&&n<=max?Math.floor(n):fallback}
 export type GroundedAnswer={answerable:boolean;answer:string;citations:{chunkId:string}[];support:{propose:boolean;title:string;details:string}}
-const schema={type:'object',additionalProperties:false,required:['answerable','answer','citations','support'],properties:{answerable:{type:'boolean'},answer:{type:'string'},citations:{type:'array',items:{type:'object',additionalProperties:false,required:['chunkId'],properties:{chunkId:{type:'string'}}}},support:{type:'object',additionalProperties:false,required:['propose','title','details'],properties:{propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}}}}}
+const object=(properties:Record<string,unknown>)=>({type:'object',additionalProperties:false,required:Object.keys(properties),properties})
+const supportSchema=object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})
+const schema=object({answerable:{type:'boolean'},answer:{type:'string'},citations:{type:'array',items:object({chunkId:{type:'string'}})},support:supportSchema})
+const partSchema=(kinds:string[],citationIds?:string[])=>object({kind:{type:'string',enum:kinds},text:{type:'string'},...(citationIds?{citationChunkIds:{type:'array',minItems:1,items:{type:'string',enum:citationIds}}}:{})})
+const chatSchema=(citationIds:string[])=>object({parts:{type:'array',items:{anyOf:[...(citationIds.length?[partSchema(['grounded'],citationIds)]:[]),partSchema(['capability']),partSchema(['discovery','draft']),partSchema(['missing_evidence','unavailable_action'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:supportSchema})
 export function parseAnswer(content:string):GroundedAnswer{
  let v:GroundedAnswer
  try{v=JSON.parse(content)}catch{throw new InputError('invalid_model_output',502)}
  if(!v||typeof v.answerable!=='boolean'||typeof v.answer!=='string'||!v.answer.trim()||!Array.isArray(v.citations)||v.citations.length>6||v.citations.some(c=>!c||typeof c.chunkId!=='string')||!v.support||typeof v.support.propose!=='boolean'||typeof v.support.title!=='string'||v.support.title.length>160||typeof v.support.details!=='string'||v.support.details.length>3000)throw new InputError('invalid_model_output',502)
  return v
 }
-export async function groqAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[],chatV2=false){
- const responseSchema=chatV2?chatSchema(citationIds):schema
- const key=credential(model);const started=Date.now();let response:Response|undefined
+// Request metadata is allowlisted. Raw provider errors, credentials and reasoning never reach the browser.
+// Diagnostic values are selected from fixed vocabularies, never copied from an error message.
+const providerErrorCodes=new Set(['invalid_api_key','insufficient_quota','rate_limit_exceeded','model_not_found','model_not_supported','unsupported_model','unsupported_parameter','unsupported_value','unsupported_tool','invalid_tool','invalid_json_schema','invalid_value','invalid_type','invalid_request_error','missing_required_parameter','unknown_parameter','context_length_exceeded','permission_denied','organization_deactivated','project_not_found','billing_hard_limit_reached','billing_not_active','server_error'])
+const providerErrorTypes=new Set(['invalid_request_error','authentication_error','permission_error','rate_limit_error','insufficient_quota','server_error','api_error','not_found_error','conflict_error','unprocessable_entity_error','billing_error'])
+const providerErrorParams=['text.format.schema','text.format.name','text.format.strict','text.format.type','reasoning.effort','tools.container.memory_limit','tools.container.type','tools.container','tools.search_context_size','tools.external_web_access','tools.type','tool_choice','max_output_tokens','max_tool_calls','include','model','input','tools','reasoning','text','store']
+function diagnosticValue(value:unknown,allowed:Set<string>){return typeof value==='string'&&allowed.has(value)?value:null}
+function diagnosticParam(value:unknown){
+ if(typeof value!=='string'||value.length>512)return null
+ const normalized=value.replace(/\[\d{1,3}\]/g,'')
+ // Log only a recognized parameter prefix; user-controlled schema paths/content are omitted.
+ return providerErrorParams.find(p=>normalized===p||normalized.startsWith(p+'.'))||null
+}
+async function logProviderFailure(response:Response){
+ const data=await response.clone().json().catch(()=>null),error=data?.error
+ const rawId=response.headers.get('x-request-id')||response.headers.get('openai-request-id')||''
+ const requestId=/^(?:req_[a-f0-9]{16,128}|[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$/i.test(rawId)?rawId:null
+ const diagnostic={status:response.status,code:diagnosticValue(error?.code,providerErrorCodes),type:diagnosticValue(error?.type,providerErrorTypes),param:diagnosticParam(error?.param),requestId}
+ console.error('AGYNEXA_OPENAI_FAILURE '+JSON.stringify(diagnostic))
+ return diagnostic
+}
+export async function openAIResponse(body:Record<string,unknown>,signal:AbortSignal,customerKey?:string|null){
+ let response:Response|undefined
  for(let attempt=0;attempt<2;attempt++){
-  response=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',cache:'no-store',signal,headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({model,messages,stream:false,max_completion_tokens:modelRegistry[model].maxOutput,reasoning_effort:model.startsWith('qwen/')?'none':'low',reasoning_format:'hidden',response_format:{type:'json_schema',json_schema:{name:chatV2?'customer_chat_v2':'grounded_answer',strict:true,schema:responseSchema}}})})
-  if(response.status===400){
-   const failure=await response.clone().json().catch(()=>null)
-   if(failure?.error?.code==='json_validate_failed'){
-    // One immediate retry of the SAME strict schema, never an unrestricted fallback.
-    if(!attempt)continue
-    throw new InputError('invalid_model_output',502)
-   }
-  }
+  response=await fetch('https://api.openai.com/v1/responses',{method:'POST',cache:'no-store',redirect:'error',signal,headers:{Authorization:`Bearer ${customerKey||openAIKey()}`,'Content-Type':'application/json'},body:JSON.stringify({...body,store:false})})
   if(response.status!==429)break
-  const retry=response.headers.get('retry-after');const seconds=retry===null?1:Number(retry)
-  if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5)throw new InputError('provider_rate_limited',429)
-  await delay(Math.ceil(seconds*1000),undefined,{signal})
+  const details=await logProviderFailure(response)
+  if(details.code==='insufficient_quota'){await response.body?.cancel();throw new InputError('provider_billing',503)}
+  const retry=response.headers.get('retry-after'),seconds=retry===null?1:Number(retry)
+  if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5){await response.body?.cancel();throw new InputError('provider_rate_limited',429)}
+  await response.body?.cancel();await delay(Math.ceil(seconds*1000),undefined,{signal})
  }
- if(!response?.ok){const status=response?.status;throw new InputError(status===401||status===403?'provider_access_denied':status===402?'provider_billing':status===400||status===404?'provider_model_unsupported':'provider_unavailable',status===400?502:503)}
- const data=await response.json();const content=data.choices?.[0]?.message?.content
- if(typeof content!=='string'||data.choices?.[0]?.finish_reason!=='stop')throw new InputError('invalid_model_output',502)
- const answer=chatV2?JSON.parse(content) as RawProviderChatV2:parseAnswer(content);
- // Non-grounded schema variants have no citation field; attach the canonical empty list server-side.
+ if(!response?.ok){const status=response?.status;if(response)await logProviderFailure(response);await response?.body?.cancel();throw new InputError(status===401||status===403?'provider_access_denied':status===402?'provider_billing':status===400||status===404?'provider_model_unsupported':'provider_unavailable',status===400?502:503)}
+ const data=await response.json()
+ if(data.status!=='completed')throw new InputError(data.status==='incomplete'?'response_incomplete':'provider_unavailable',502)
+ return {data,requestId:String(response.headers.get('x-request-id')||data.id||'').slice(0,160)}
+}
+export function responseText(data:{output?:Array<{type?:string;content?:Array<{type?:string;text?:string}>}>}){
+ return (data.output||[]).filter(x=>x.type==='message').flatMap(x=>x.content||[]).filter(x=>x.type==='output_text').map(x=>x.text||'').join('')
+}
+function safeUrl(value:unknown){if(typeof value!=='string')return null;try{const url=new URL(value);return ['http:','https:'].includes(url.protocol)&&!url.username&&!url.password?url.href:null}catch{return null}}
+export async function openAIAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[],chatV2=false,enabled?:AgentTools,customerKey?:string|null){
+ const started=Date.now(),tools:Record<string,unknown>[]=[]
+ // Tools are restricted to customer trials and activated customer API agents. Public widgets remain grounded.
+ if(chatV2&&enabled?.webSearch)tools.push({type:'web_search',search_context_size:'low',external_web_access:true})
+ if(chatV2&&enabled?.codeInterpreter)tools.push({type:'code_interpreter',container:{type:'auto',memory_limit:'1g'}})
+ const {data,requestId}=await openAIResponse({model,input:messages,reasoning:{effort:'high'},max_output_tokens:numberSetting('AGYNEXA_MAX_OUTPUT_TOKENS',modelRegistry[model].maxOutput,2048,12000),max_tool_calls:4,...(tools.length?{tools,include:['web_search_call.action.sources']}:{}),text:{format:{type:'json_schema',name:chatV2?'customer_chat_v2':'grounded_answer',strict:true,schema:chatV2?chatSchema(citationIds):schema}}},signal,customerKey)
+ const content=responseText(data);if(!content)throw new InputError('invalid_model_output',502)
+ let answer:GroundedAnswer|RawProviderChatV2
+ try{answer=chatV2?JSON.parse(content) as RawProviderChatV2:parseAnswer(content)}catch{throw new InputError('invalid_model_output',502)}
  if(chatV2&&Array.isArray((answer as RawProviderChatV2).parts))for(const part of (answer as RawProviderChatV2).parts){if(part){part.basis=part.kind==='grounded'?'approved_sources':part.kind==='capability'?'product_capabilities':'suggestion';if(part.kind!=='grounded'&&!Object.hasOwn(part,'citationChunkIds'))part.citationChunkIds=[]}}
-const input=Math.max(0,Number(data.usage?.prompt_tokens)||0),output=Math.max(0,Number(data.usage?.completion_tokens)||0);const prices=modelRegistry[model]
- return {answer,usage:{input_tokens:input,output_tokens:output,latency_ms:Date.now()-started,request_id:String(data.x_groq?.id||response.headers.get('x-request-id')||data.id||'').slice(0,160),estimated_cost_usd:(input*prices.inputPrice+output*prices.outputPrice)/1000000,pricing_date:pricingDate,pricing_source:pricingSource,key_slot:prices.slot}}
+ const toolCalls:Array<{type:string;status:string}>=[],sources:Array<{url:string;title:string}>=[],artifacts:Array<{id:string;containerId:string;filename:string}>=[]
+ for(const item of data.output||[]){
+  if(item.type==='web_search_call'||item.type==='code_interpreter_call')toolCalls.push({type:item.type,status:String(item.status||'unknown')})
+  for(const source of item.type==='web_search_call'?item.action?.sources||[]:[]){const url=safeUrl(source.url);if(url)sources.push({url,title:String(source.title||url).slice(0,300)})}
+  for(const part of item.type==='message'?item.content||[]:[])for(const annotation of part.annotations||[]){
+   if(annotation.type==='url_citation'){const url=safeUrl(annotation.url);if(url)sources.push({url,title:String(annotation.title||url).slice(0,300)})}
+   if(annotation.type==='container_file_citation'&&/^cfile_[a-zA-Z0-9_-]+$/.test(annotation.file_id)&&/^cntr_[a-zA-Z0-9_-]+$/.test(annotation.container_id))artifacts.push({id:annotation.file_id,containerId:annotation.container_id,filename:String(annotation.filename||'output').slice(0,180)})
+  }
+ }
+ const input=Math.max(0,Number(data.usage?.input_tokens)||0),output=Math.max(0,Number(data.usage?.output_tokens)||0),cached=Math.max(0,Math.min(input,Number(data.usage?.input_tokens_details?.cached_tokens)||0)),prices=modelRegistry[model]
+ return {answer,usage:{provider:'openai',reasoning_effort:'high',input_tokens:input,output_tokens:output,cached_input_tokens:cached,latency_ms:Date.now()-started,request_id:requestId,estimated_cost_usd:((input-cached)*prices.inputPrice+cached*0.05+output*prices.outputPrice)/1000000,cost_scope:'model_tokens_only_tools_billed_separately',pricing_date:pricingDate,pricing_source:pricingSource,key_slot:1,tool_calls:toolCalls,sources:sources.filter((s,i,a)=>a.findIndex(x=>x.url===s.url)===i).slice(0,25),artifacts:artifacts.filter((s,i,a)=>a.findIndex(x=>x.id===s.id)===i).slice(0,10)}}
 }
 export async function checkProvider(){
  return await Promise.all(Object.keys(modelRegistry).map(async id=>{
-  const model=id as ModelId
-  try{const response=await fetch('https://api.groq.com/openai/v1/models',{headers:{Authorization:`Bearer ${credential(model)}`},cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)return {model,status:'rejected',http:response.status};const data=await response.json();return {model,status:data.data?.some((x:{id:string})=>x.id===model)?'listed':'not_listed',http:response.status}}
-  catch{return {model,status:'unavailable'}}
+  try{const response=await fetch(`https://api.openai.com/v1/models/${encodeURIComponent(id)}`,{headers:{Authorization:`Bearer ${openAIKey()}`},cache:'no-store',redirect:'error',signal:AbortSignal.timeout(10000)});if(!response.ok)await logProviderFailure(response);await response.body?.cancel();return {model:id,status:response.ok?'listed':response.status===404?'not_listed':'rejected',http:response.status}}
+  catch{return {model:id,status:'unavailable'}}
  }))
 }
-
-const object=(properties:Record<string,unknown>)=>({type:'object',additionalProperties:false,required:Object.keys(properties),properties})
-const partSchema=(kinds:string[],citationIds?:string[])=>object({kind:{type:'string',enum:kinds},text:{type:'string'},...(citationIds?{citationChunkIds:{type:'array',minItems:1,items:{type:'string',enum:citationIds}}}:{})})
-// Only the grounded schema variant can contain citation IDs. The adapter attaches
-// [] to other variants and derives basis from kind. Only kind discriminates the union;
-// Groq rejects a union with multiple enum discriminator candidates. Server validation remains strict.
-const chatSchema=(citationIds:string[])=>object({parts:{type:'array',items:{anyOf:[...(citationIds.length?[partSchema(['grounded'],citationIds)]:[]),partSchema(['capability']),partSchema(['discovery','draft']),partSchema(['missing_evidence','unavailable_action'])]}},nextQuestion:{type:['string','null']},briefDraft:{type:'null'},support:object({propose:{type:'boolean'},title:{type:'string'},details:{type:'string'}})})

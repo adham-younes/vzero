@@ -6,7 +6,7 @@ export type ProjectActivity={id:string;project_id:string;task_id:string|null;kin
 export type StudioActionKind='agent.create'|'project.create'|'project.set_status'|'task.create'|'task.set_status'
 export type StudioActionResult={kind:StudioActionKind;id:string;projectId?:string}
 export type ActionPayloads={
- 'agent.create':{name:string;instructions:string;language:'en'|'ar';template:'knowledgegrid'|'serviceflow';model:'openai/gpt-oss-20b'|'openai/gpt-oss-120b'|'qwen/qwen3.8-27b';builder:true}
+ 'agent.create':{name:string;instructions:string;language:'en'|'ar';template:'knowledgegrid'|'serviceflow';model:'gpt-6.1-terra';builder:true;sector?:import('./settings').Sector;tools?:import('./settings').AgentTools}
  'project.create':{name:string;description:string}
  'project.set_status':{projectId:string;status:ProjectStatus;expectedRevision:number}
  'task.create':{projectId:string;title:string;description:string}

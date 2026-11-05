@@ -10,7 +10,7 @@ function Inline({text}:{text:string}){
  // Editorial source is static text; React escapes every value. Only local paths
  // and the published contact address become links, never arbitrary HTML.
  const tokens=text.split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g)
- return <>{tokens.map((s,i)=>s.startsWith('**')?<strong key={i}>{s.slice(2,-2)}</strong>:s.startsWith('`')?<bdi dir="ltr" key={i}>{s.slice(1,-1)}</bdi>:s.startsWith('[')?(()=>{const m=s.match(/^\[([^\]]+)\]\(([^)]+)\)$/)!;return m[2].startsWith('/')?<Link key={i} href={m[2]} className="text-link">{m[1]}</Link>:<Fragment key={i}>{m[1]}</Fragment>})():<Fragment key={i}>{s}</Fragment>)}</>
+ return <>{tokens.map((s,i)=>s.startsWith('**')?<strong key={i}>{s.slice(2,-2)}</strong>:s.startsWith('`')?<bdi dir="ltr" key={i}>{s.slice(1,-1)}</bdi>:s.startsWith('[')?(()=>{const m=s.match(/^\[([^\]]+)\]\(([^)]+)\)$/)!;return m[2].startsWith('/')&&!m[2].startsWith('//')?<Link key={i} href={m[2]} className="text-link">{m[1]}</Link>:/^mailto:adham@agynexa\.si(?:\?|$)/.test(m[2])?<a key={i} href={m[2]} className="text-link">{m[1]}</a>:<Fragment key={i}>{m[1]}</Fragment>})():<Fragment key={i}>{s}</Fragment>)}</>
 }
 function LinkParagraph({text}:{text:string}){
  const clean=text.replace(/^(?:Links?|Primary link|Secondary link|Supporting link|Action|الروابط|الرابط الرئيسي|الرابط الثاني|رابط مساعد|الرابط|الإجراء):\s*/,'')
