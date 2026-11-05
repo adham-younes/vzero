@@ -3,7 +3,7 @@
   "info": {
     "title": "AGYNEXA implemented HTTP API",
     "version": "2026-11-05-owner-mail",
-    "description": "58 implemented HTTP operations. Owner mailbox deployment and routing state are recorded in OWNER-MAIL-2026-11-05.md."
+    "description": "59 implemented HTTP operations. Owner mailbox deployment and routing state are recorded in OWNER-MAIL-2026-11-05.md."
   },
   "servers": [
     {
@@ -3808,6 +3808,21 @@
           },
           "503": {
             "description": "Temporarily unavailable"
+          }
+        }
+      },
+      "get": {
+        "summary": "Run static reply-model diagnostic without sending email",
+        "description": "Dedicated worker bearer token required. Uses a fixed synthetic inquiry, no private customer data. Never sends email.",
+        "responses": {
+          "200": {
+            "description": "Model diagnostic and bounded sample"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "503": {
+            "description": "Model unavailable"
           }
         }
       }

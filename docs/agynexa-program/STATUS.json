@@ -89,7 +89,7 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 58,
+    "http_operations": 59,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
@@ -790,10 +790,12 @@
     "revision_date": "2026-10-28"
   },
   "owner_mail_migration": {
-    "state": "IMPLEMENTED_PENDING_DEPLOYMENT_IMPORT_AND_DNS",
+    "state": "DEPLOYED_IMPORTING_DNS_PENDING",
     "receipt": "OWNER-MAIL-2026-11-05.md",
     "source_backup_messages": 414,
     "automatic_replies_enabled": false,
-    "dns_cutover": false
+    "dns_cutover": false,
+    "deployment": "dpl_GXG9nzikyb35M6oE7Lf7EmpbUNWu",
+    "merge_commit": "45a37cde3423c582eba159359ba2a0d9845cb352"
   }
 }
