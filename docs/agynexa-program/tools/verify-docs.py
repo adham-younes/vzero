@@ -61,7 +61,7 @@ require(len(services) == routes["services"] == 10 and len(solutions) == routes["
 
 api = read_json(DOCS / "architecture/current-api.openapi.json")
 expected_api = set()
-route_files = list((ROOT / "app/api").rglob("route.ts"))
+route_files = list((ROOT / "app/api").rglob("route.ts")) + list((ROOT / "app/.well-known").rglob("route.ts"))
 for route_file in route_files:
     route = "/" + route_file.parent.relative_to(ROOT / "app").as_posix()
     route = re.sub(r"\[([^\]]+)\]", r"{\1}", route)

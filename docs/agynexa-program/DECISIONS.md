@@ -275,3 +275,7 @@ Owner knowledge distinguishes `owner_private` from active, approved `public_repl
 Use a private plugin connected to the existing MCP endpoint with hashed, expiring and revocable bearer credentials. Its source contains no credentials. The endpoint uses the verified dedicated domain; HTTP behavior remains pending. Packaging, installation, authentication and discovery are separate proof steps. No ChatGPT memory or background wake is inferred. Gmail remains a separate connection requirement until durable ingestion and sender authentication are verified.
 
 The earlier migration, external round trips, archive preservation and ZIP-delivery receipts remain intact. New source is **DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING**, with three additive migrations and DNS binding verified, PR71 production READY, and scoped HTTP/MCP/send acceptance passed. Owner-interface login/downloads, ChatGPT installation/authentication and durable Gmail ingestion remain pending. [Current release](releases/private-mail-2026-11-05/README.md) · [Migration and archive receipt](OWNER-MAIL-2026-11-05.md).
+
+## D-2026-11-05 — Direct private mailbox OAuth
+
+The owner explicitly requested direct ChatGPT access and full tool permission. Implement owner-consented, PKCE-protected OAuth for the private mailbox; API-key packaging alone is insufficient for ChatGPT. Preserve sensitive-mail holds, the shared reply ledger, the existing Resend grants and all archived mail. See [OAuth receipt](releases/private-mail-2026-11-05/OAUTH.md).

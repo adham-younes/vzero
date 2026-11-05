@@ -89,13 +89,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 74,
+    "http_operations": 77,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 54
+    "route_files": 57
   },
   "last_product_checks": {
     "release_build_typescript": "PASS",
@@ -1017,6 +1017,14 @@
       "password_changed": false,
       "token_recorded": false
     },
-    "final_receipt": "releases/private-mail-2026-11-05/login-receipt.json"
+    "final_receipt": "releases/private-mail-2026-11-05/login-receipt.json",
+    "direct_chatgpt_oauth": {
+      "status": "IMPLEMENTED_PENDING_PRODUCTION_ACCEPTANCE",
+      "receipt": "releases/private-mail-2026-11-05/OAUTH.md",
+      "client_id": "nexa-mail-chatgpt",
+      "auth_method": "none",
+      "pkce": "S256_REQUIRED",
+      "refresh_tokens": false
+    }
   }
 }
