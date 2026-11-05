@@ -1,5 +1,6 @@
 import {createElement as h} from 'react'
 import Link from 'next/link'
+import {PublicPageHeader,PublicSectionNav} from '@/components/public-layout'
 
 type Bilingual = readonly [string,string]
 type Notice = {title:Bilingual;intro:Bilingual;sections:{title:Bilingual;body:Bilingual}[]}
@@ -165,14 +166,13 @@ export const legalContent:Record<'privacy'|'terms',Notice> = {
 
 export function LegalContent({kind,ar}:{kind:'privacy'|'terms';ar:boolean}){
  const data=legalContent[kind],i=ar?1:0,local=(path:string)=>`${ar?'/ar':''}${path}`
- return h('main',{id:'main'},
-  h('section',{className:'container page-intro'},
-   h(Link,{href:local('/security'),className:'text-link'},ar?'الأمان وحدود الاستخدام':'Security and usage boundaries'),
-   h('h1',{className:'text-4xl md:text-6xl max-w-4xl tracking-tight mt-6'},data.title[i]),
-   h('p',{className:'muted mt-6 max-w-3xl text-lg'},data.intro[i])),
-  h('section',{className:'container pb-24 max-w-4xl'},
-   ...data.sections.map(s=>h('article',{key:s.title[0],className:'border-t pt-8 pb-10'},h('h2',{className:'text-2xl'},s.title[i]),h('p',{className:'muted mt-5 whitespace-pre-line'},s.body[i]))),
-   h('nav',{className:'related-links mt-8','aria-label':ar?'روابط الخصوصية والاستخدام':'Privacy and usage links'},
+ return h('main',{id:'main',className:'public-page'},
+  h(PublicPageHeader,{eyebrow:['Privacy and usage','الخصوصية والاستخدام'],title:data.title[i],description:h('p',null,data.intro[i])},
+   h(PublicSectionNav,{items:data.sections.map((section,index)=>({id:`notice-${index+1}`,label:section.title[i]}))})),
+  h('div',{className:'container public-page-body'},
+   ...data.sections.map((section,index)=>h('section',{id:`notice-${index+1}`,key:section.title[0],className:'public-editorial-section'},h('div',{className:'public-section-label'},h('span',{'aria-hidden':true},String(index+1).padStart(2,'0')),h('h2',null,section.title[i])),h('div',{className:'public-reading'},h('p',{className:'whitespace-pre-line'},section.body[i])))),
+   h('nav',{className:'public-legal-links','aria-label':ar?'روابط الخصوصية والاستخدام':'Privacy and usage links'},
+    h(Link,{href:local('/security')},ar?'الأمان وحدود الاستخدام':'Security and usage boundaries'),
     h(Link,{href:local(kind==='privacy'?'/terms':'/privacy')},kind==='privacy'?(ar?'شروط الاستخدام':'Usage terms'):(ar?'إشعار الخصوصية':'Privacy notice')),
     h(Link,{href:local('/studio')},ar?'فتح Studio الخاص':'Open private Studio'))))
 }
