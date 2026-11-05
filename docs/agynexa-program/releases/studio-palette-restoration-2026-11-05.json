@@ -1,0 +1,35 @@
+{
+  "environment": "production",
+  "origin": "https://agynexa.si",
+  "recorded_utc": "2026-11-05T12:03:45Z",
+  "pr": 67,
+  "commit": "a7b2f0ab0517071dd521577e8d65f8331dc660a0",
+  "deployment": "dpl_2LE5xagbkjHc95kdRcmNJnX36aAz",
+  "ready": true,
+  "checked_surfaces": [
+    "Arabic conversation",
+    "English agent configuration",
+    "English activation"
+  ],
+  "computed_palette": {
+    "app_background": "rgb(5, 5, 5)",
+    "sidebar_background": "rgb(11, 11, 11)",
+    "conversation_background": "rgb(5, 5, 5)",
+    "composer_background": "rgb(11, 11, 11)",
+    "inspector_background": "rgb(11, 11, 11)",
+    "form_section_background": "rgb(11, 11, 11)",
+    "activation_card_background": "rgb(11, 11, 11)",
+    "user_message_background": "rgb(21, 21, 21)",
+    "foreground": "rgb(235, 235, 235)",
+    "muted_foreground": "rgb(191, 191, 191)",
+    "send_background": "rgb(16, 185, 129)"
+  },
+  "validation": {
+    "build_typescript": "PASS",
+    "css_changes": "COLOR_DECLARATIONS_ONLY",
+    "layout_typography_selectors": "UNCHANGED",
+    "saved_content_visible": true,
+    "new_inference_runs": 0,
+    "database_changes": false
+  }
+}
