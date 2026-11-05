@@ -236,3 +236,5 @@ The owner authorized publication via the existing GitHub and Vercel workflow and
 ### Owner feedback on the first production build
 
 The owner rejected the two-link header and the oversized nested cards shown in Arabic Sales. Restore the baseline desktop destinations and add Industries. Use one shared index and reading area for public catalogues, with a native select on mobile, equal workflow summary columns and shallow in-page capability selection. [Design contract](../../DESIGN.md) · [Release receipt](releases/public-navigation-2026-10-27/README.md).
+
+The owner then rejected the sidebar in Arabic Capabilities and asked for the display that matches the design system. The chosen pattern is one labelled control row and one reading area. It uses the existing shadcn/ui primitives and native item selectors. Search accepts the short names shown in the controls. The same structure applies to Solutions, Capabilities and Industries, with locale and URL state retained. [Design contract](../../DESIGN.md).
