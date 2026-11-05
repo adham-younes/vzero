@@ -36,17 +36,20 @@ importers:
         specifier: ^6.2.12
         version: 6.2.12
       lucide-react:
-        specifier: latest
+        specifier: 1.59.0
         version: 1.59.0(@types/react@19.2.14)(react@19.2.4)
       mammoth:
         specifier: ^1.13.0
         version: 1.13.0
       motion:
-        specifier: latest
+        specifier: 14.3.0
         version: 14.3.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next:
         specifier: 16.4.1
         version: 16.4.1(@babel/core@7.29.7)(@types/node@24.19.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      postal-mime:
+        specifier: 4.2.0
+        version: 4.2.0
       react:
         specifier: 19.2.4
         version: 19.2.4
@@ -1746,6 +1749,10 @@ packages:
 
   postal-mime@2.7.6:
     resolution: {integrity: sha512-UUlyE2KlxmvwMGq060onF/VWU3zD6dVW31FwokQ5v26jWd35fbs2MoTFzh+jXnPwAyV2MULMKXcBInGOl5TO6Q==}
+
+  postal-mime@4.2.0:
+    resolution: {integrity: sha512-QG5Rh8wY/zjwFF1lKWcBbwWcAWR5jWodmMPL4gMik43XDLebtWoAAPyG0lrE2kYYZ5IHTASrepGuGO0YIwNKAg==}
+    engines: {node: '>=20'}
 
   postcss-selector-parser@7.1.6:
     resolution: {integrity: sha512-7qASPzhKF2l2KLboRZux8CCTRMdGiV08vWmyKzPz22qZ7ZjQBOeY7rNzNoCLSUiftJ7HUq0GERHmxw/t0dCdMw==}
@@ -3635,6 +3642,8 @@ snapshots:
       find-up: 3.0.0
 
   postal-mime@2.7.6: {}
+
+  postal-mime@4.2.0: {}
 
   postcss-selector-parser@7.1.6:
     dependencies:
