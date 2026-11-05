@@ -4466,6 +4466,201 @@
           }
         }
       }
+    },
+    "/api/private-mail/{...path}": {
+      "get": {
+        "summary": "Owner console GET operation",
+        "description": "Dedicated exact mail host only. Existing allowlisted owner session and live profile required for data. Same-origin mutations. POST login and rate-limited login-link/verify are session-establishment exceptions; GET session returns only authentication state. See private-mail-2026-11-05/README.md for suffix inventory. DELETE only revokes a connector or disables knowledge; never deletes mail.",
+        "parameters": [
+          {
+            "name": "...path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Private console operation suffix"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized operation result; attachment download may return original bytes"
+          },
+          "401": {
+            "description": "Owner authentication required"
+          },
+          "403": {
+            "description": "Origin or owner access denied"
+          },
+          "404": {
+            "description": "Wrong host or unknown suffix"
+          },
+          "409": {
+            "description": "Policy, state or attachment ambiguity prevents action"
+          },
+          "429": {
+            "description": "Rate limit reached"
+          },
+          "503": {
+            "description": "Service unavailable"
+          }
+        },
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFIED"
+      },
+      "post": {
+        "summary": "Owner console POST operation",
+        "description": "Dedicated exact mail host only. Existing allowlisted owner session and live profile required for data. Same-origin mutations. POST login and rate-limited login-link/verify are session-establishment exceptions; GET session returns only authentication state. See private-mail-2026-11-05/README.md for suffix inventory. DELETE only revokes a connector or disables knowledge; never deletes mail.",
+        "parameters": [
+          {
+            "name": "...path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Private console operation suffix"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized operation result; attachment download may return original bytes"
+          },
+          "401": {
+            "description": "Owner authentication required"
+          },
+          "403": {
+            "description": "Origin or owner access denied"
+          },
+          "404": {
+            "description": "Wrong host or unknown suffix"
+          },
+          "409": {
+            "description": "Policy, state or attachment ambiguity prevents action"
+          },
+          "429": {
+            "description": "Rate limit reached"
+          },
+          "503": {
+            "description": "Service unavailable"
+          }
+        },
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFIED"
+      },
+      "patch": {
+        "summary": "Owner console PATCH operation",
+        "description": "Dedicated exact mail host only. Existing allowlisted owner session and live profile required for data. Same-origin mutations. POST login and rate-limited login-link/verify are session-establishment exceptions; GET session returns only authentication state. See private-mail-2026-11-05/README.md for suffix inventory. DELETE only revokes a connector or disables knowledge; never deletes mail.",
+        "parameters": [
+          {
+            "name": "...path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Private console operation suffix"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized operation result; attachment download may return original bytes"
+          },
+          "401": {
+            "description": "Owner authentication required"
+          },
+          "403": {
+            "description": "Origin or owner access denied"
+          },
+          "404": {
+            "description": "Wrong host or unknown suffix"
+          },
+          "409": {
+            "description": "Policy, state or attachment ambiguity prevents action"
+          },
+          "429": {
+            "description": "Rate limit reached"
+          },
+          "503": {
+            "description": "Service unavailable"
+          }
+        },
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFIED"
+      },
+      "delete": {
+        "summary": "Owner console DELETE operation",
+        "description": "Dedicated exact mail host only. Existing allowlisted owner session and live profile required for data. Same-origin mutations. POST login and rate-limited login-link/verify are session-establishment exceptions; GET session returns only authentication state. See private-mail-2026-11-05/README.md for suffix inventory. DELETE only revokes a connector or disables knowledge; never deletes mail.",
+        "parameters": [
+          {
+            "name": "...path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Private console operation suffix"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized operation result; attachment download may return original bytes"
+          },
+          "401": {
+            "description": "Owner authentication required"
+          },
+          "403": {
+            "description": "Origin or owner access denied"
+          },
+          "404": {
+            "description": "Wrong host or unknown suffix"
+          },
+          "409": {
+            "description": "Policy, state or attachment ambiguity prevents action"
+          },
+          "429": {
+            "description": "Rate limit reached"
+          },
+          "503": {
+            "description": "Service unavailable"
+          }
+        },
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFIED"
+      }
+    },
+    "/api/private-mail/mcp": {
+      "post": {
+        "summary": "Private owner mail Streamable HTTP MCP",
+        "description": "Protocol 2025-03-26; initialize, ping, tools/list and tools/call. Four tools: list_mail, read_mail, reply_to_mail, list_knowledge. Shared canonical reply and sensitive holds; no received-mail instruction can grant authority.",
+        "security": [
+          {
+            "ownerMailConnector": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "MCP JSON result or protocol error"
+          },
+          "202": {
+            "description": "Notification accepted without reply"
+          },
+          "401": {
+            "description": "Credential missing, expired, revoked or owner denied"
+          },
+          "404": {
+            "description": "Wrong host"
+          },
+          "429": {
+            "description": "Rate limit reached"
+          }
+        },
+        "x-implementation-status": "DEPLOYED_SCOPED_VERIFIED"
+      },
+      "get": {
+        "summary": "Reject unsupported MCP GET transport",
+        "responses": {
+          "405": {
+            "description": "Only POST supported"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -4888,6 +5083,11 @@
         "type": "http",
         "scheme": "bearer",
         "description": "Public-source-only widget token, expires in ten minutes; publication generation checked on every call."
+      },
+      "ownerMailConnector": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Owner-bound scoped credential; SHA-256 stored, revocable, expires after 30 days. Live owner/profile and exact mail host checked each request."
       }
     }
   }

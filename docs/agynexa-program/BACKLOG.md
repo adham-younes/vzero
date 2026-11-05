@@ -4,7 +4,7 @@
 
 | Item | Current state | Required evidence |
 |---|---|---|
-| MAIL-PRIVATE-PROD | SCOPED_SERVER_VERIFIED_UI_PENDING | READY revision, migrations, DNS and 13 HTTP/MCP checks passed; owner-interface login and attachment downloads remain unverified |
+| MAIL-PRIVATE-PROD | SCOPED_SERVER_AND_OWNER_LOGIN_VERIFIED | PR72 READY; migrations, DNS, 13 HTTP/MCP checks and one-time owner login passed; authenticated mailbox lists visible; downloads through the new UI remain unverified |
 | MAIL-KNOWLEDGE-SENDS | DEPLOYED_SCOPED_PRODUCTION_VERIFIED_ACTIVATION_PENDING | Owner-private notes excluded from external context; approved facts used; sensitive manual/automatic requests held; one canonical reply and no uncertain-send duplication |
 | MAIL-CHATGPT-PLUGIN | CREATED_INSTALL_AUTH_PENDING | Personal plugin 0.1.0 exists; server discovery passed, but ChatGPT installation/authentication and in-host discovery remain pending |
 | MAIL-GMAIL-INGESTION | REQUIRES_CONNECTION | A durable authorized route and verified original sender/recipient/authentication; the interactive connector is insufficient |

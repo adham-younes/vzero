@@ -65,7 +65,7 @@ route_files = list((ROOT / "app/api").rglob("route.ts"))
 for route_file in route_files:
     route = "/" + route_file.parent.relative_to(ROOT / "app").as_posix()
     route = re.sub(r"\[([^\]]+)\]", r"{\1}", route)
-    methods = re.findall(r"export\s+(?:async\s+)?function\s+(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)\b", route_file.read_text())
+    methods = re.findall(r"export\s+(?:(?:async\s+)?function\s+|const\s+)(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)\b", route_file.read_text())
     require(methods, f"No recognized HTTP handler in {route_file}; update inventory extraction")
     expected_api.update((method.lower(), route) for method in methods)
 require(len(route_files) == status["implemented"]["route_files"], "STATUS route-file count mismatch")

@@ -89,13 +89,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 68,
+    "http_operations": 74,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 52
+    "route_files": 54
   },
   "last_product_checks": {
     "release_build_typescript": "PASS",
@@ -961,10 +961,10 @@
       "crc_valid": true,
       "native_individual_import": false
     },
-    "pull_request": "https://github.com/adham-younes/vzero/pull/71",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/72",
     "corrective_commit": "fb20016",
     "deployment_status": "READY",
-    "production_verified": false,
+    "production_verified": true,
     "plugin_status": "CREATED_PERSONAL_0.1.0_INSTALL_AUTH_PENDING",
     "mcp_protocol": "2025-03-26",
     "gmail_status": "REQUIRES_CONNECTION_AND_VERIFIED_INGESTION",
@@ -973,11 +973,11 @@
     "automatic_deletion": false,
     "secrets_copied": false,
     "existing_password_protection_advisory": "UNCHANGED",
-    "production_commit": "00e3caa619b69c3fe53439ea3a1cb93ff83c2c40",
-    "deployment_id": "dpl_5LoePoQsD2nZZrhM9YnrU4C74y95",
+    "production_commit": "2ea5449e56438c1e6dc77ab248f2000e772ee6ff",
+    "deployment_id": "dpl_553QgPHhZnWtzjJ8ciQGCx5fDpAN",
     "pull_request_state": "MERGED",
-    "build_and_typescript": "PASSED_AFTER_fb20016",
-    "production_verification_status": "SCOPED_HTTP_MCP_AND_SEND_VERIFIED_OWNER_UI_ACTIVATION_PENDING",
+    "build_and_typescript": "PASS_PR72",
+    "production_verification_status": "SCOPED_HTTP_MCP_SEND_AND_OWNER_LOGIN_VERIFIED_EXTERNAL_CONNECTIONS_PENDING",
     "http_mcp_receipt": "releases/private-mail-2026-11-05/http-receipt.json",
     "http_mcp_checks_passed": 13,
     "historical_pagination_verified": {
@@ -1001,13 +1001,22 @@
       "sent_id_present": false
     },
     "both_auto_reply_settings_enabled": true,
-    "qa_token_revocation": "PENDING_CONFIRMATION",
+    "qa_token_revocation": "VERIFIED_REVOKED_2026-11-05T14:22:17Z_SUBSEQUENT_REQUEST_401",
     "owner_ui": {
       "signed_out_visual": "PASS",
-      "authenticated_login": "NOT_VERIFIED",
-      "attachment_downloads": "NOT_VERIFIED"
+      "authenticated_login": "PASS_SINGLE_USE_EMAIL_LINK_PRODUCTION",
+      "attachment_downloads": "NOT_VERIFIED_THROUGH_NEW_UI",
+      "message_list": "PASS_BOTH_MAILBOXES_AND_HISTORICAL_LABELS_VISIBLE"
     },
     "plugin_id": "plugins_6aec905359688191b39ffabc59232b22",
-    "plugin_url": "https://chatgpt.com/plugins/plugins_6aec905359688191b39ffabc59232b22"
+    "plugin_url": "https://chatgpt.com/plugins/plugins_6aec905359688191b39ffabc59232b22",
+    "owner_login": {
+      "method": "Existing allowlisted account; password or one-time email link",
+      "delivery": "VERIFIED_OWNER_GMAIL_INBOX",
+      "login": "VERIFIED_AUTHENTICATED_BROWSER",
+      "password_changed": false,
+      "token_recorded": false
+    },
+    "final_receipt": "releases/private-mail-2026-11-05/login-receipt.json"
   }
 }
