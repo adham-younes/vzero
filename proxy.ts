@@ -16,7 +16,7 @@ export function proxy(request:NextRequest){
   response.headers.set('Cache-Control','private, no-store')
   response.headers.set('X-Frame-Options','DENY')
   response.headers.set('Referrer-Policy','no-referrer')
-  response.headers.set('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'")
+  response.headers.set('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"+(path==='/api/private-mail/oauth/authorize'?' https://chatgpt.com/connector_platform_oauth_redirect':''))
  }
  return response
 }
