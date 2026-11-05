@@ -1,0 +1,2541 @@
+{
+  "environment": "production",
+  "origin": "https://agynexa.si",
+  "commit": "2a90d7a4c47557208cdc4e6e511ba777bb4c38a5",
+  "deployment_id": "dpl_ATon9ThTMUzPXoKvYaoQUZ4NZuXe",
+  "started_at": "2026-11-05T13:01:54.432275+00:00",
+  "completed_at": "2026-11-05T13:03:39.583769+00:00",
+  "scope": "Public HTTP and metadata plus anonymous synthetic access rejection only; no credentials, real user data, browser actions or provider invocations. No redirects followed.",
+  "request_count": 78,
+  "maximum_parallel_page_requests": 4,
+  "sitemap": {
+    "http_status": 200,
+    "count": 68,
+    "expected_count": 68,
+    "missing_expected_urls": [],
+    "unexpected_urls": [],
+    "duplicate_count": 0,
+    "parse_error": false,
+    "passed": true
+  },
+  "pages": [
+    {
+      "path": "/",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 619,
+      "title": "AI Agent Builder for Business | AGYNEXA Studio",
+      "description": "Build and test custom business agents with company knowledge, web research and code analysis. Review the work, then agree production activation by email.",
+      "canonical": [
+        "https://agynexa.si"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si"
+        ],
+        "ar": [
+          "https://agynexa.si/ar"
+        ],
+        "x-default": [
+          "https://agynexa.si"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 614,
+      "title": "منصة بناء وكلاء الذكاء الاصطناعي للأعمال | AGYNEXA",
+      "description": "ابنِ وكلاء مخصصين للأعمال واختبرهم بمعرفة الشركة والبحث وتحليل البيانات. راجع العمل ثم اتفق على التفعيل الإنتاجي عبر البريد.",
+      "canonical": [
+        "https://agynexa.si/ar"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si"
+        ],
+        "ar": [
+          "https://agynexa.si/ar"
+        ],
+        "x-default": [
+          "https://agynexa.si"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/security",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 1340,
+      "title": "Agent Data, Privacy and Access Controls | AGYNEXA",
+      "description": "Understand AGYNEXA workspace access, private sources, tool data use and the checks needed before publishing a business agent.",
+      "canonical": [
+        "https://agynexa.si/security"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/security"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/security"
+        ],
+        "x-default": [
+          "https://agynexa.si/security"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/security",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 703,
+      "title": "بيانات الوكلاء والخصوصية وصلاحيات الوصول | AGYNEXA",
+      "description": "افهم صلاحيات مساحة AGYNEXA ومصادر الوكيل الخاصة واستخدام الأدوات للبيانات وما تحتاج إلى مراجعته قبل نشر وكيل للأعمال.",
+      "canonical": [
+        "https://agynexa.si/ar/security"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/security"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/security"
+        ],
+        "x-default": [
+          "https://agynexa.si/security"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 398,
+      "title": "Contact AGYNEXA | AGYNEXA",
+      "description": "Discuss production activation, pricing, payment and terms after testing your agent. Contact AGYNEXA directly at adham@agynexa.si.",
+      "canonical": [
+        "https://agynexa.si/contact"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/contact"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/contact"
+        ],
+        "x-default": [
+          "https://agynexa.si/contact"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/contact",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 383,
+      "title": "تواصل مع AGYNEXA | AGYNEXA",
+      "description": "ناقش التفعيل الإنتاجي والسعر والدفع والشروط بعد اختبار الوكيل. تواصل مباشرة مع AGYNEXA عبر adham@agynexa.si.",
+      "canonical": [
+        "https://agynexa.si/ar/contact"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/contact"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/contact"
+        ],
+        "x-default": [
+          "https://agynexa.si/contact"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 512,
+      "title": "AI agent capabilities | AGYNEXA",
+      "description": "Explore ten AI agent capabilities: company knowledge, service requests, employee assistance, analysis and the requirements for wider workflows.",
+      "canonical": [
+        "https://agynexa.si/services"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services"
+        ],
+        "x-default": [
+          "https://agynexa.si/services"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 476,
+      "title": "قدرات وكلاء الذكاء الاصطناعي | AGYNEXA",
+      "description": "تعرّف على عشر قدرات لوكلاء الذكاء الاصطناعي، من مراجع الشركة وطلبات الخدمة ومساعدة الموظفين إلى التحليل ومتطلبات مسارات العمل الأوسع.",
+      "canonical": [
+        "https://agynexa.si/ar/services"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services"
+        ],
+        "x-default": [
+          "https://agynexa.si/services"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/architecture",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 421,
+      "title": "AI Agent Architecture and Studio Runtime | AGYNEXA",
+      "description": "How AGYNEXA combines agent instructions, company sources, OpenAI, web search and Python in a private workspace with saved conversations.",
+      "canonical": [
+        "https://agynexa.si/architecture"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/architecture"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/architecture"
+        ],
+        "x-default": [
+          "https://agynexa.si/architecture"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/architecture",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 406,
+      "title": "بنية وكلاء الذكاء الاصطناعي والاستوديو | AGYNEXA",
+      "description": "تعرّف على طريقة عمل استوديو AGYNEXA: تعليمات الوكيل ومراجع الشركة وOpenAI والبحث وPython، مع محادثات محفوظة داخل مساحة خاصة.",
+      "canonical": [
+        "https://agynexa.si/ar/architecture"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/architecture"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/architecture"
+        ],
+        "x-default": [
+          "https://agynexa.si/architecture"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/methodology",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 398,
+      "title": "How to Build and Test a Business AI Agent | AGYNEXA",
+      "description": "Set up your first business agent: choose a task, write instructions, add sources and test the results before requesting production activation.",
+      "canonical": [
+        "https://agynexa.si/methodology"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/methodology"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/methodology"
+        ],
+        "x-default": [
+          "https://agynexa.si/methodology"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/methodology",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 402,
+      "title": "كيفية بناء وكيل ذكاء اصطناعي للأعمال واختباره | AGYNEXA",
+      "description": "جهّز وكيلك الأول للأعمال: اختر المهمة واكتب التعليمات وأضف المراجع واختبر النتائج قبل طلب تفعيل التشغيل الفعلي.",
+      "canonical": [
+        "https://agynexa.si/ar/methodology"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/methodology"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/methodology"
+        ],
+        "x-default": [
+          "https://agynexa.si/methodology"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/integrations",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 485,
+      "title": "AI Agent Tools and CRM / ERP Requirements | AGYNEXA",
+      "description": "See available web search and Python tools, customer OpenAI API setup, and requirements for future CRM, ERP and customer-channel connections.",
+      "canonical": [
+        "https://agynexa.si/integrations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/integrations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/integrations"
+        ],
+        "x-default": [
+          "https://agynexa.si/integrations"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/integrations",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 399,
+      "title": "أدوات الوكلاء ومتطلبات ربط CRM وERP | AGYNEXA",
+      "description": "تعرّف على أدوات البحث وPython المتاحة، وإعداد مفتاح OpenAI API، ومتطلبات ربط الوكلاء بأنظمة المبيعات والموارد وقنوات العملاء.",
+      "canonical": [
+        "https://agynexa.si/ar/integrations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/integrations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/integrations"
+        ],
+        "x-default": [
+          "https://agynexa.si/integrations"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/industries",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 478,
+      "title": "Business AI Agent Examples by Industry | AGYNEXA",
+      "description": "Explore AI agent examples for ten industries, with task inputs, proposed outputs and review responsibilities to guide your Studio setup.",
+      "canonical": [
+        "https://agynexa.si/industries"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/industries"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/industries"
+        ],
+        "x-default": [
+          "https://agynexa.si/industries"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/industries",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 545,
+      "title": "أمثلة وكلاء الذكاء الاصطناعي حسب القطاع | AGYNEXA",
+      "description": "استكشف أمثلة لوكلاء الذكاء الاصطناعي في عشرة قطاعات، مع المعلومات المطلوبة والنتائج المتوقعة ودور المراجع، لتجهيز وكيلك في الاستوديو.",
+      "canonical": [
+        "https://agynexa.si/ar/industries"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/industries"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/industries"
+        ],
+        "x-default": [
+          "https://agynexa.si/industries"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/resources",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 387,
+      "title": "AI Agent Setup Guide: Instructions, Sources and Tests | AGYNEXA",
+      "description": "Practical guidance for agent instructions, company knowledge, web research, calculation checks and test cases in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/resources"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/resources"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/resources"
+        ],
+        "x-default": [
+          "https://agynexa.si/resources"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/resources",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 378,
+      "title": "دليل إعداد الوكلاء: التعليمات والمراجع والاختبار | AGYNEXA",
+      "description": "إرشادات عملية لكتابة تعليمات الوكيل واختيار مراجع الشركة ومراجعة البحث والحسابات وتجهيز أمثلة الاختبار في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/resources"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/resources"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/resources"
+        ],
+        "x-default": [
+          "https://agynexa.si/resources"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 384,
+      "title": "About AGYNEXA | AI Agent Builder for Business",
+      "description": "Learn about AGYNEXA, its founder Adham Younes Mohamed, and the Studio for building and testing business agents in Arabic and English.",
+      "canonical": [
+        "https://agynexa.si/about"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/about"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/about"
+        ],
+        "x-default": [
+          "https://agynexa.si/about"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/about",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 386,
+      "title": "عن AGYNEXA | منصة بناء وكلاء الذكاء الاصطناعي للأعمال",
+      "description": "تعرّف على AGYNEXA ومؤسسها أدهم يونس محمد، وعلى الاستوديو الذي يتيح بناء وكلاء للأعمال واختبارهم بالعربية والإنجليزية.",
+      "canonical": [
+        "https://agynexa.si/ar/about"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/about"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/about"
+        ],
+        "x-default": [
+          "https://agynexa.si/about"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 404,
+      "title": "Choose a task for your agent | AGYNEXA",
+      "description": "Find an AI agent task for sales, customer service, documents, finance, logistics, procurement, receivables or company knowledge.",
+      "canonical": [
+        "https://agynexa.si/solutions"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 389,
+      "title": "اختر مهمة لوكيلك | AGYNEXA",
+      "description": "اختر مهمة لوكيلك في المبيعات أو خدمة العملاء أو المستندات أو المالية أو اللوجستيات أو المشتريات أو المستحقات أو مراجع الشركة.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/start",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 371,
+      "title": "Set up your first agent | AGYNEXA",
+      "description": "Choose a business task, configure a private agent and test its work before discussing production activation.",
+      "canonical": [
+        "https://agynexa.si/start"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/start"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/start"
+        ],
+        "x-default": [
+          "https://agynexa.si/start"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/start",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 374,
+      "title": "جهّز وكيلك الأول | AGYNEXA",
+      "description": "اختر مهمة عمل واضبط وكيلًا خاصًا واختبر مخرجاته قبل مناقشة التفعيل الإنتاجي.",
+      "canonical": [
+        "https://agynexa.si/ar/start"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/start"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/start"
+        ],
+        "x-default": [
+          "https://agynexa.si/start"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/agentnexos",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 469,
+      "title": "AgentNexOS | Agent Roles and Workflow Planning",
+      "description": "A reference for planning agent responsibilities, handovers and human decisions. Create and test individual agents in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/agentnexos"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/agentnexos"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/agentnexos"
+        ],
+        "x-default": [
+          "https://agynexa.si/agentnexos"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/agentnexos",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 391,
+      "title": "AgentNexOS | تخطيط أدوار الوكلاء وسير العمل",
+      "description": "مرجع لتخطيط مسؤوليات الوكلاء وتسليم العمل والقرارات البشرية. أنشئ كل وكيل واختبره داخل استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/agentnexos"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/agentnexos"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/agentnexos"
+        ],
+        "x-default": [
+          "https://agynexa.si/agentnexos"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/knowledge",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 412,
+      "title": "Answers from your company’s policies | AGYNEXA",
+      "description": "Build an AI agent that answers questions from company policies and procedures. Review its source references in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/knowledge"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/knowledge"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/knowledge"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/knowledge"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/knowledge",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 456,
+      "title": "إجابات من سياسات شركتك وإجراءاتها | AGYNEXA",
+      "description": "ابنِ وكيلًا يجيب عن الأسئلة من سياسات الشركة وإجراءاتها، وراجع مصادر الإجابة داخل استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/knowledge"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/knowledge"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/knowledge"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/knowledge"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/documents",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 381,
+      "title": "Extract and review document information | AGYNEXA",
+      "description": "Extract document facts, compare requirements and identify conflicting or missing information with a document review agent in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/documents"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/documents"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/documents"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/documents"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/documents",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 372,
+      "title": "استخلاص المعلومات من المستندات ومراجعتها | AGYNEXA",
+      "description": "استخلص بيانات المستندات وقارنها بالمتطلبات واكتشف النواقص والتعارض باستخدام وكيل مراجعة المستندات في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/documents"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/documents"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/documents"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/documents"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/sales",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 374,
+      "title": "Prepare a customer enquiry for sales review | AGYNEXA",
+      "description": "Prepare customer enquiry summaries and proposal drafts from approved product information. Test a sales agent in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/sales"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/sales"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/sales"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/sales"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/sales",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 384,
+      "title": "تجهيز استفسار العميل لفريق المبيعات | AGYNEXA",
+      "description": "جهّز ملخصات استفسارات العملاء ومسودات العروض من معلومات المنتج المعتمدة، واختبر وكيل المبيعات في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/sales"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/sales"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/sales"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/sales"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/service",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 367,
+      "title": "Draft customer replies from your service policy | AGYNEXA",
+      "description": "Draft customer replies and specialist handover summaries from your service policy. Review the results in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/service"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/service"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/service"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/service"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/service",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 389,
+      "title": "صياغة ردود العملاء وفق سياسة الخدمة | AGYNEXA",
+      "description": "صغ ردود العملاء وملخصات الإحالة إلى المختصين وفق سياسة الخدمة، وراجع النتائج في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/service"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/service"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/service"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/service"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/finance",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 392,
+      "title": "Compare financial records and explain differences | AGYNEXA",
+      "description": "Compare financial records, calculate differences and prepare a report for your finance reviewer with an agent in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/finance"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/finance"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/finance"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/finance"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/finance",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 390,
+      "title": "مقارنة السجلات المالية وتوضيح الفروق | AGYNEXA",
+      "description": "قارن السجلات المالية واحسب الفروق وجهّز تقريرًا يراجعه المختص المالي باستخدام وكيل في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/finance"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/finance"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/finance"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/finance"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/logistics",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 374,
+      "title": "Review shipment delays and exceptions | AGYNEXA",
+      "description": "Summarize shipment updates, review delays and prepare follow-up options for operations with a logistics agent in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/logistics"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/logistics"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/logistics"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/logistics"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/logistics",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 430,
+      "title": "مراجعة تأخر الشحنات ومشكلاتها | AGYNEXA",
+      "description": "لخّص تحديثات الشحنات وراجع التأخيرات وجهّز خيارات المتابعة لفريق العمليات باستخدام وكيل اللوجستيات في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/logistics"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/logistics"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/logistics"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/logistics"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/procurement",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 491,
+      "title": "Compare supplier offers before approval | AGYNEXA",
+      "description": "Compare supplier prices, quantities and delivery terms. Identify missing details for the buyer to review in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/procurement"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/procurement"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/procurement"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/procurement"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 393,
+      "title": "قارن عروض الموردين قبل الاعتماد | AGYNEXA",
+      "description": "قارن أسعار الموردين والكميات وشروط التسليم، وحدّد التفاصيل الناقصة التي يحتاج مسؤول الشراء إلى مراجعتها في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/procurement"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/procurement"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/procurement"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/procurement"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/receivables",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 380,
+      "title": "Plan follow-up for outstanding invoices | AGYNEXA",
+      "description": "Organize outstanding invoices and disputes into a follow-up list and message drafts for the account owner to review in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/receivables"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/receivables"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/receivables"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/receivables"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/receivables",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 456,
+      "title": "تنظيم متابعة الفواتير المستحقة | AGYNEXA",
+      "description": "نظّم الفواتير المستحقة والنزاعات في قائمة متابعة ومسودات رسائل يراجعها مسؤول الحساب داخل استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/receivables"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/receivables"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/receivables"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/receivables"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/customer-operations",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 370,
+      "title": "Prepare customer handovers between teams | AGYNEXA",
+      "description": "Prepare customer handover summaries with the agreed scope, outstanding requirements and next responsibilities in AGYNEXA Studio.",
+      "canonical": [
+        "https://agynexa.si/solutions/customer-operations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/customer-operations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/customer-operations"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/customer-operations"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/solutions/customer-operations",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 374,
+      "title": "تجهيز تسليم أعمال العميل بين الفرق | AGYNEXA",
+      "description": "جهّز ملخصات تسليم أعمال العملاء بالنطاق المتفق عليه والمتطلبات المتبقية والمسؤوليات التالية في استوديو AGYNEXA.",
+      "canonical": [
+        "https://agynexa.si/ar/solutions/customer-operations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/solutions/customer-operations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/solutions/customer-operations"
+        ],
+        "x-default": [
+          "https://agynexa.si/solutions/customer-operations"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/customer-service",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 393,
+      "title": "AI agents for customer service | AGYNEXA",
+      "description": "Prepare a customer reply from your service policy, or summarize a case for the person handling an exception. Test the answers against your approved guidance.",
+      "canonical": [
+        "https://agynexa.si/services/customer-service"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/customer-service"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/customer-service"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/customer-service"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/customer-service",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 467,
+      "title": "وكلاء ذكاء اصطناعي لخدمة العملاء | AGYNEXA",
+      "description": "جهّز ردًا على العميل بالرجوع إلى سياسة الخدمة، أو لخّص الحالة للمسؤول عن الاستثناء. جرّب الإجابات وراجعها وفق الإرشادات المعتمدة.",
+      "canonical": [
+        "https://agynexa.si/ar/services/customer-service"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/customer-service"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/customer-service"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/customer-service"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/employee-operations",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 381,
+      "title": "AI agents for employee requests | AGYNEXA",
+      "description": "Explain company procedures and help employees prepare the information a request needs. HR and IT specialists review the decisions within their responsibility.",
+      "canonical": [
+        "https://agynexa.si/services/employee-operations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/employee-operations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/employee-operations"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/employee-operations"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/employee-operations",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 489,
+      "title": "وكلاء لمساعدة الموظفين في طلباتهم | AGYNEXA",
+      "description": "ساعد الموظف على فهم الإجراء وتجهيز بيانات طلبه، مع مراجعة قرارات الموارد البشرية والدعم التقني لدى المسؤول المختص.",
+      "canonical": [
+        "https://agynexa.si/ar/services/employee-operations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/employee-operations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/employee-operations"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/employee-operations"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/process-automation",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 586,
+      "title": "Plan recurring work with AI agents | AGYNEXA",
+      "description": "Ask an agent to organize a request, identify missing information and prepare the next step. Use Studio to test that task before considering automation across company systems.",
+      "canonical": [
+        "https://agynexa.si/services/process-automation"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/process-automation"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/process-automation"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/process-automation"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/process-automation",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 481,
+      "title": "تنظيم المهام المتكررة بمساعدة الوكلاء | AGYNEXA",
+      "description": "اطلب من الوكيل تنظيم الطلب وتحديد المعلومات الناقصة وتجهيز الخطوة التالية. اختبر المهمة في الاستوديو قبل التفكير في أتمتتها عبر أنظمة الشركة.",
+      "canonical": [
+        "https://agynexa.si/ar/services/process-automation"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/process-automation"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/process-automation"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/process-automation"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/enterprise-knowledge",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 466,
+      "title": "AI agents for company knowledge | AGYNEXA",
+      "description": "Use your company’s policies, procedures and product information to answer work questions. Add the relevant sources and check the references returned with the answer.",
+      "canonical": [
+        "https://agynexa.si/services/enterprise-knowledge"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/enterprise-knowledge"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/enterprise-knowledge"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/enterprise-knowledge"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/enterprise-knowledge",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 493,
+      "title": "وكلاء للإجابة من مراجع الشركة | AGYNEXA",
+      "description": "أجب عن أسئلة العمل بالاستناد إلى سياسات شركتك وإجراءاتها ومعلومات منتجاتها. أضف المراجع المناسبة وراجع المصادر التي يستند إليها الوكيل.",
+      "canonical": [
+        "https://agynexa.si/ar/services/enterprise-knowledge"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/enterprise-knowledge"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/enterprise-knowledge"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/enterprise-knowledge"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/agent-orchestration",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 481,
+      "title": "Planning specialist agent roles | AGYNEXA",
+      "description": "Define a separate responsibility for each agent and test the results individually. Automatic handovers between agents require an execution workflow beyond the current Studio.",
+      "canonical": [
+        "https://agynexa.si/services/agent-orchestration"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/agent-orchestration"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/agent-orchestration"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/agent-orchestration"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/agent-orchestration",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 406,
+      "title": "تخطيط أدوار الوكلاء المتخصصين | AGYNEXA",
+      "description": "حدد مهمة مستقلة لكل وكيل واختبر نتائجها. أما انتقال العمل تلقائيًا بين الوكلاء فيحتاج إلى مسار تنفيذ إضافي خارج إمكانات الاستوديو الحالية.",
+      "canonical": [
+        "https://agynexa.si/ar/services/agent-orchestration"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/agent-orchestration"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/agent-orchestration"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/agent-orchestration"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/enterprise-integrations",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 492,
+      "title": "Requirements for connecting business systems | AGYNEXA",
+      "description": "Identify the records an agent needs to read and the actions it would need to take. A CRM or ERP connection must be assessed and implemented for the agreed scope.",
+      "canonical": [
+        "https://agynexa.si/services/enterprise-integrations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/enterprise-integrations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/enterprise-integrations"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/enterprise-integrations"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/enterprise-integrations",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 407,
+      "title": "متطلبات ربط الوكلاء بأنظمة الشركة | AGYNEXA",
+      "description": "حدّد السجلات التي يحتاج الوكيل إلى قراءتها والإجراءات المطلوبة منه. يخضع ربط أنظمة المبيعات أو الموارد للتقييم والتنفيذ وفق نطاق متفق عليه.",
+      "canonical": [
+        "https://agynexa.si/ar/services/enterprise-integrations"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/enterprise-integrations"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/enterprise-integrations"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/enterprise-integrations"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/voice-agents",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 664,
+      "title": "Planning a voice agent conversation | AGYNEXA",
+      "description": "Write the conversation instructions and test the answers in text. A working phone agent also requires telephony, speech services and an agreed route to a human operator.",
+      "canonical": [
+        "https://agynexa.si/services/voice-agents"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/voice-agents"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/voice-agents"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/voice-agents"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/voice-agents",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 427,
+      "title": "تجهيز حوار الوكيل الصوتي | AGYNEXA",
+      "description": "اكتب تعليمات الحوار واختبر الإجابات نصيًا. ويحتاج تشغيل الوكيل عبر الهاتف إلى خدمات اتصال وصوت، مع تحديد طريقة تحويل المكالمة إلى الموظف.",
+      "canonical": [
+        "https://agynexa.si/ar/services/voice-agents"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/voice-agents"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/voice-agents"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/voice-agents"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/agent-assist",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 465,
+      "title": "AI assistance for day-to-day work | AGYNEXA",
+      "description": "Prepare a summary, research a question or draft a response while you lead the work. Review the answer and its sources, then choose what to use.",
+      "canonical": [
+        "https://agynexa.si/services/agent-assist"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/agent-assist"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/agent-assist"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/agent-assist"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/agent-assist",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 394,
+      "title": "مساعد ذكي لمهام الموظف اليومية | AGYNEXA",
+      "description": "استعن بالوكيل لتلخيص مستند أو البحث عن معلومة أو إعداد مسودة رد. راجع الإجابة ومصادرها، ثم اختر ما تستخدمه في عملك.",
+      "canonical": [
+        "https://agynexa.si/ar/services/agent-assist"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/agent-assist"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/agent-assist"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/agent-assist"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/governance-security",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 391,
+      "title": "Agent data access and human review | AGYNEXA",
+      "description": "Choose the information an agent can use and identify the results that need review. Understand the private workspace controls before agreeing production responsibilities.",
+      "canonical": [
+        "https://agynexa.si/services/governance-security"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/governance-security"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/governance-security"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/governance-security"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/governance-security",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 412,
+      "title": "وصول الوكلاء إلى البيانات ومراجعة النتائج | AGYNEXA",
+      "description": "اختر المعلومات التي يستخدمها الوكيل وحدد النتائج التي تحتاج إلى مراجعة. تعرّف على ضوابط مساحة العمل الخاصة قبل الاتفاق على مسؤوليات التشغيل.",
+      "canonical": [
+        "https://agynexa.si/ar/services/governance-security"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/governance-security"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/governance-security"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/governance-security"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/services/evaluation-observability",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 369,
+      "title": "Testing agent answers and tool results | AGYNEXA",
+      "description": "Try work examples whose answers you can check. Review the sources, calculations and corrections needed before deciding whether the agent meets your requirements.",
+      "canonical": [
+        "https://agynexa.si/services/evaluation-observability"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/evaluation-observability"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/evaluation-observability"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/evaluation-observability"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/services/evaluation-observability",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 467,
+      "title": "اختبار إجابات الوكيل ونتائج الأدوات | AGYNEXA",
+      "description": "جرّب مهام تعرف كيف تراجع إجاباتها. افحص المصادر والحسابات والتصحيحات المطلوبة لتقرر إن كان الوكيل يلبي احتياجك.",
+      "canonical": [
+        "https://agynexa.si/ar/services/evaluation-observability"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/services/evaluation-observability"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/services/evaluation-observability"
+        ],
+        "x-default": [
+          "https://agynexa.si/services/evaluation-observability"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/privacy",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 380,
+      "title": "Privacy Notice | AGYNEXA",
+      "description": "How AGYNEXA uses account information, agent configurations, company knowledge and conversations, including saving, publication and deletion.",
+      "canonical": [
+        "https://agynexa.si/privacy"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/privacy"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/privacy"
+        ],
+        "x-default": [
+          "https://agynexa.si/privacy"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/privacy",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 392,
+      "title": "إشعار الخصوصية | AGYNEXA",
+      "description": "تعرّف على استخدام معلومات الحساب وإعدادات الوكلاء والمعرفة والمحادثات في AGYNEXA، وخيارات الحفظ والنشر والحذف.",
+      "canonical": [
+        "https://agynexa.si/ar/privacy"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/privacy"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/privacy"
+        ],
+        "x-default": [
+          "https://agynexa.si/privacy"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/terms",
+      "locale": "en",
+      "status": 200,
+      "duration_ms": 388,
+      "title": "Usage Terms | AGYNEXA",
+      "description": "Responsibilities for using AGYNEXA Studio, providing information, reviewing generated results and managing private or published work.",
+      "canonical": [
+        "https://agynexa.si/terms"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/terms"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/terms"
+        ],
+        "x-default": [
+          "https://agynexa.si/terms"
+        ]
+      },
+      "html_lang": "en",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/ar/terms",
+      "locale": "ar",
+      "status": 200,
+      "duration_ms": 388,
+      "title": "شروط الاستخدام | AGYNEXA",
+      "description": "مسؤوليات استخدام استوديو AGYNEXA وتقديم المعلومات ومراجعة النتائج المولدة وإدارة العمل الخاص والمحتوى المنشور.",
+      "canonical": [
+        "https://agynexa.si/ar/terms"
+      ],
+      "hreflang": {
+        "en": [
+          "https://agynexa.si/terms"
+        ],
+        "ar": [
+          "https://agynexa.si/ar/terms"
+        ],
+        "x-default": [
+          "https://agynexa.si/terms"
+        ]
+      },
+      "html_lang": "ar",
+      "checks": {
+        "status_200": true,
+        "title_matches_source": true,
+        "description_matches_source": true,
+        "single_correct_canonical": true,
+        "hreflang_en": true,
+        "hreflang_ar": true,
+        "hreflang_default": true,
+        "html_language": true,
+        "public_indexable": true,
+        "within_response_bound": true
+      },
+      "passed": true
+    }
+  ],
+  "health": {
+    "http_status": 200,
+    "status": "ok",
+    "checks": {
+      "project": "ok",
+      "publishableKey": "ok",
+      "secretKey": "ok"
+    },
+    "cache_control": "no-store",
+    "passed": true
+  },
+  "access_checks": [
+    {
+      "operation": "sources/import",
+      "case": "anonymous_same_origin",
+      "status": 401,
+      "error": "sign_in_required",
+      "expected_status": 401,
+      "expected_error": "sign_in_required",
+      "content_type": "application/json",
+      "cache_control": "private, no-store",
+      "passed": true
+    },
+    {
+      "operation": "sources/import",
+      "case": "missing_origin",
+      "status": 403,
+      "error": "invalid_origin",
+      "expected_status": 403,
+      "expected_error": "invalid_origin",
+      "content_type": "application/json",
+      "cache_control": "private, no-store",
+      "passed": true
+    },
+    {
+      "operation": "test-runs",
+      "case": "anonymous_same_origin",
+      "status": 401,
+      "error": "sign_in_required",
+      "expected_status": 401,
+      "expected_error": "sign_in_required",
+      "content_type": "application/json",
+      "cache_control": "private, no-store",
+      "passed": true
+    },
+    {
+      "operation": "test-runs",
+      "case": "missing_origin",
+      "status": 403,
+      "error": "invalid_origin",
+      "expected_status": 403,
+      "expected_error": "invalid_origin",
+      "content_type": "application/json",
+      "cache_control": "private, no-store",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "pages_checked": 68,
+    "pages_passed": 68,
+    "page_failures": [],
+    "sitemap_passed": true,
+    "health_passed": true,
+    "access_checks_passed": 4,
+    "access_checks_total": 4
+  },
+  "harness_notes": [
+    "Root URL comparison normalizes an empty path to /; raw canonical and hreflang values are retained.",
+    "The first four negative access responses were not captured because the initial harness discarded HTTPError objects. Only those four synthetic checks were repeated with corrected response handling; no public pages or health requests were repeated."
+  ]
+}

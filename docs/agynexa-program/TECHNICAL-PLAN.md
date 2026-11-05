@@ -1,6 +1,6 @@
 # Current work — platform content, shared design and Studio correction
 
-The owner-requested correction is implemented as a candidate; release build and production acceptance are pending. The additive source-capacity migration is applied and its expanded constraint verified. [Scope and verification boundary](releases/studio-documents-and-response-flow-2026-11-05/README.md). The last verified production remains PR67 / `a7b2f0a`. Preserve its restored palette and the original Hero/video.
+The owner-requested correction is deployed: latest READY production PR69 / `e9a5b0e` contains unchanged PR68 application code. Build, public HTTP/metadata checks and the source-capacity migration passed; authenticated browser acceptance is partial. [Production receipt and remaining checks](releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md). Preserve the restored palette and original Hero/video.
 
 The correction covers public EN/AR content and shared tokens, removal of the rejected illustration, reviewed PDF/Word/Excel/text import, real run-progress states, fewer repeated reads and a quieter conversation. ChatGPT configuration, plan-funded execution and enterprise connectors remain explicitly limited. Historical evidence below is unchanged.
 
@@ -180,12 +180,12 @@ The live release combines search, filter and item selection in one control row u
 
 ## Owner mail, 5 November 2026
 
-[Current mailbox scope](OWNER-MAIL-2026-11-05.md): private service-only archive/storage, signed Resend Inbox webhooks, durable leased jobs, immutable native replies, trusted sender authentication, bounded Groq inference and temporary historical import. Mailbox dashboards were removed from the public site; use native authenticated Resend. Local RLS/concurrency tests passed. DNS and activation are verified; external automatic-reply delivery remains unverified.
+[Current mailbox scope](OWNER-MAIL-2026-11-05.md): private service-only archive/storage, signed Resend Inbox webhooks, durable leased jobs, immutable native replies, trusted sender authentication, bounded Groq inference and temporary historical import. Mailbox dashboards were removed from the public site; use native authenticated Resend. Local RLS/concurrency tests passed. DNS and activation are verified; external automatic-reply delivery and private archival passed for both mailboxes. SpaceMail renewal is Off; domain renewal remains On.
 
 
-Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 historical messages are verified in private storage; native Resend remains the mailbox interface.
+Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 messages in the personal-mailbox snapshot are verified in private storage; native Resend remains the mailbox interface.
 
 
 ### Mail cutover verified — 5 November 2026
 
-[Current mailbox receipt](OWNER-MAIL-2026-11-05.md): sole Resend MX verified publicly and by Resend; both actual inbox addresses receive and archive attachments; personal native sending delivered. Reply settings enabled. The owner reports old SpaceMail disconnected; final IMAP sync was rejected. 414 historical messages are preserved, later legacy arrivals are unverified. No public mailbox UI. External automatic-reply acceptance and old renewal status remain unverified.
+[Current mailbox receipt](OWNER-MAIL-2026-11-05.md): sole Resend MX verified publicly and by Resend; both actual inbox addresses receive and archive attachments; personal native sending delivered. Reply settings enabled. The owner reports old SpaceMail disconnected; final IMAP sync was rejected. 414 personal-mailbox historical messages are preserved; later legacy arrivals and any old Nexa mailbox history are unverified. No public mailbox UI. Both external automatic replies and private archival are verified. SpaceMail renewal is Off; domain renewal remains On.

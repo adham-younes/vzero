@@ -1,25 +1,28 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T15:14:13.561973+02:00",
+  "updated_at": "2026-11-05T13:29:47.108987+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "PLATFORM_CORRECTION_READY_FOR_PRODUCTION",
+  "status": "PLATFORM_CORRECTION_DEPLOYED_ACCEPTANCE_PARTIAL",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
     "production_branch": "main"
   },
   "current_product_release": {
-    "merge_commit": "a7b2f0ab0517071dd521577e8d65f8331dc660a0",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/67",
+    "implementation_commit": "21858bfc224b84b8fe1a3fd0c167f442231e96d6",
+    "merge_commit": "2a90d7a4c47557208cdc4e6e511ba777bb4c38a5",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/68",
     "domain": "https://agynexa.si",
-    "status_at_verification": "READY_ORIGINAL_STUDIO_PALETTE_VERIFIED",
-    "deployment_id": "dpl_2LE5xagbkjHc95kdRcmNJnX36aAz",
-    "receipt": "releases/studio-palette-restoration-2026-11-05.md"
+    "status_at_verification": "READY_PUBLIC_HTTP_VERIFIED_AUTHENTICATED_ACCEPTANCE_PARTIAL",
+    "deployment_id": "dpl_GDYozFzLEuLgBsH9BU9jjPi63Haw",
+    "deployment_commit": "e9a5b0ec170fe57161c17db984caf0a33e6e1467",
+    "deployment_commit_scope": "PR69 documentation only, application unchanged from PR68",
+    "receipt": "releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md"
   },
   "stage_status": [
     {
@@ -147,9 +150,9 @@
   "current_documentation_work": {
     "branch": "codex/studio-documents-and-response-flow",
     "receipt": "releases/studio-documents-and-response-flow-2026-11-05/README.md",
-    "scope": "Public EN/AR content and shared palette; reviewed document import, progress transport and request-local latency improvements.",
-    "product_code_changed": true,
-    "database_changed": true,
+    "scope": "Documentation-only production closeout; records the already deployed correction and explicit remaining browser acceptance.",
+    "product_code_changed": false,
+    "database_changed": false,
     "baseline_main": "a7b2f0ab0517071dd521577e8d65f8331dc660a0"
   },
   "known_limitations": [
@@ -794,7 +797,7 @@
     "revision_date": "2026-10-28"
   },
   "owner_mail_migration": {
-    "state": "DNS_VERIFIED_PUBLIC_DELIVERY_AND_ARCHIVE_VERIFIED",
+    "state": "DNS_EXTERNAL_ROUND_TRIPS_ARCHIVE_VERIFIED_SPACEMAIL_RENEWAL_OFF",
     "receipt": "OWNER-MAIL-2026-11-05.md",
     "source_backup_messages": 414,
     "automatic_replies_enabled": true,
@@ -803,13 +806,30 @@
     "merge_commit": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
     "archived_historical_messages": 414,
     "public_mailbox_interface": false,
-    "next_step": "Observe an owner-controlled external sender test for automatic reply delivery; renewal cancellation is not independently verified. Historical preservation is verified only through the 414-message snapshot.",
+    "next_step": "No migration activation step remains. Preserve the historical backup evidence gap; verify any later messages only if recovered from the old provider. No public mailbox UI and no automatic deletion.",
     "historical_archive_bytes": 11065933,
     "source_backup_complete_at": "2026-11-05T11:30:17+02:00",
     "latest_legacy_sync": "LOGIN_REJECTED_AFTER_OWNER_REPORTED_DISCONNECTION",
     "legacy_service_disconnected_owner_report": true,
-    "external_auto_reply_delivery_verified": false,
-    "deployment_scope": "Mailbox privacy correction; separate from newer product releases"
+    "external_auto_reply_delivery_verified": true,
+    "deployment_scope": "Mailbox privacy correction; separate from newer product releases",
+    "source_backup_mailbox_scope": "adham@agynexa.si only; no historical Nexa backup established",
+    "external_auto_reply_mailboxes": [
+      "adham@agynexa.si",
+      "nexa.agent@agynexa.si"
+    ],
+    "external_test_auto_reply_counts": [
+      1,
+      1
+    ],
+    "native_resend_agent_actions_enabled": false,
+    "spacemail_auto_renew": false,
+    "spacemail_connections": 0,
+    "spacemail_expiry": "2026-11-15",
+    "domain_auto_renew": true,
+    "domain_expiry": "2027-10-16",
+    "dmarc_dns_verified": true,
+    "dmarc_gmail_header_pass_verified": false
   },
   "historical_product_release_before_platform_upgrade": {
     "implementation_commit": "ffa354f180babbae60ded85516630ca75a038d0b",
@@ -898,7 +918,7 @@
     }
   },
   "platform_correction": {
-    "status": "BUILD_PASSED_MIGRATION_APPLIED_PENDING_PRODUCTION",
+    "status": "DEPLOYED_PUBLIC_HTTP_PASS_AUTHENTICATED_ACCEPTANCE_PARTIAL",
     "receipt": "releases/studio-documents-and-response-flow-2026-11-05/README.md",
     "source_max_bytes": 1048576,
     "upload_max_bytes": 4194304,
@@ -907,6 +927,7 @@
     "preserve_original_hero_video": true,
     "database_migration": "20261105124017_studio_document_source_capacity",
     "database_constraint_verified": true,
-    "build_typescript": "PASS"
+    "build_typescript": "PASS",
+    "production_receipt": "releases/studio-documents-and-response-flow-2026-11-05/PRODUCTION-RECEIPT.md"
   }
 }

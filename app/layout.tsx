@@ -5,6 +5,7 @@ import { Almarai } from 'next/font/google'
 import Shell from '@/components/agynexa-shell'
 import {headers} from 'next/headers'
 import {siteUrl} from '@/lib/site-routes'
+import {isMailConsoleHost} from '@/lib/owner-mail/host'
 const almarai = Almarai({ subsets: ['arabic'], weight: ['400', '700'], variable: '--font-arabic' })
 
 export const metadata: Metadata = {
@@ -40,7 +41,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const ar=(await headers()).get('x-agynexa-locale')==='ar'
+  const requestHeaders=await headers(),ar=requestHeaders.get('x-agynexa-locale')==='ar'
+  if(isMailConsoleHost(requestHeaders.get('host')))return <html lang="ar" dir="rtl" className="dark"><body className={`${almarai.variable} antialiased`}>{children}</body></html>
   return (
     <html lang={ar?'ar':'en'} dir={ar?'rtl':'ltr'} className="dark">
       <body className={`${almarai.variable} antialiased`}>

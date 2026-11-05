@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-11-05T13:22:54.583073+00:00",
+  "environment": "production",
+  "domain": "https://agynexa.si",
+  "deployment_id": "dpl_GDYozFzLEuLgBsH9BU9jjPi63Haw",
+  "source_commit": "e9a5b0ec170fe57161c17db984caf0a33e6e1467",
+  "remote_main_matches": true,
+  "state": "READY",
+  "aliases": [
+    "agynexa.si",
+    "www.agynexa.si"
+  ],
+  "alias_error": null,
+  "application_merge_commit": "2a90d7a4c47557208cdc4e6e511ba777bb4c38a5",
+  "latest_commit_delta": "documentation_only_5_files",
+  "new_deployment_requested": false,
+  "verification_boundary": "Fresh provider and Git metadata; earlier production HTTP evidence remains tied to PR68; authenticated browser acceptance partial."
+}
