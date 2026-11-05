@@ -414,26 +414,7 @@
   "inventory_reviewed_against": "4799a2e",
   "canonical_origin": "https://agynexa.si",
   "legacy_origin_compatibility": "https://vzero-nine-beryl.vercel.app",
-  "admin_pages": [
-    {
-      "en": "/admin/nexa-mail",
-      "ar": "/ar/admin/nexa-mail",
-      "index": false,
-      "auth": "verified live session plus immutable admin UUID allowlist"
-    },
-    {
-      "en": "/admin/nexa-mail/activity",
-      "ar": "/ar/admin/nexa-mail/activity",
-      "index": false,
-      "auth": "verified live session plus immutable admin UUID allowlist"
-    },
-    {
-      "en": "/admin/mail",
-      "ar": "/ar/admin/mail",
-      "index": false,
-      "auth": "verified live session plus existing immutable owner UUID allowlist"
-    }
-  ],
+  "admin_pages": [],
   "owner_mail_operations": [
     {
       "path": "/api/owner-mail/import",
@@ -446,14 +427,6 @@
     {
       "path": "/api/owner-mail/worker",
       "method": "post"
-    },
-    {
-      "path": "/api/owner-mail/archive",
-      "method": "get"
-    },
-    {
-      "path": "/api/owner-mail/archive",
-      "method": "patch"
     },
     {
       "path": "/api/owner-mail/worker",

@@ -89,13 +89,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 59,
+    "http_operations": 57,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 45
+    "route_files": 44
   },
   "last_product_checks": {
     "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
@@ -790,12 +790,15 @@
     "revision_date": "2026-10-28"
   },
   "owner_mail_migration": {
-    "state": "DEPLOYED_IMPORTING_DNS_PENDING",
+    "state": "PRIVATE_ARCHIVE_VERIFIED_PUBLIC_UI_REMOVAL_IN_PROGRESS",
     "receipt": "OWNER-MAIL-2026-11-05.md",
     "source_backup_messages": 414,
-    "automatic_replies_enabled": false,
+    "automatic_replies_enabled": true,
     "dns_cutover": false,
     "deployment": "dpl_GXG9nzikyb35M6oE7Lf7EmpbUNWu",
-    "merge_commit": "45a37cde3423c582eba159359ba2a0d9845cb352"
+    "merge_commit": "45a37cde3423c582eba159359ba2a0d9845cb352",
+    "archived_historical_messages": 414,
+    "public_mailbox_interface": false,
+    "next_step": "Remove public-site mailbox interface at owner request; native Resend inboxes remain the mailbox UI. DNS cutover still pending."
   }
 }

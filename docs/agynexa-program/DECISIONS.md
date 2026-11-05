@@ -242,3 +242,7 @@ The owner then rejected the sidebar in Arabic Capabilities and asked for the dis
 ## D-2026-11-05 — Owner mailbox migration and automated replies
 
 The owner explicitly authorized both mailboxes, permanent preservation and content-aware automated responses. This supersedes historical personal-mail exclusions and mail deferral. Reuse existing services without purchasing subscriptions; do not delete messages or switch DNS before readiness. [Scope and receipt](OWNER-MAIL-2026-11-05.md).
+
+## D-2026-11-05 — Remove the public-site mailbox interface
+
+The owner explicitly rejected a mailbox interface on the published AGYNEXA platform. Remove the newly added pages and archive read/settings API, retain private data and background automation, and use authenticated native Resend inboxes. No deletion of messages. [Corrected scope](OWNER-MAIL-2026-11-05.md).

@@ -78,3 +78,6 @@ The owner rejected the earlier content Preview and approved a complete global En
 ## Current owner mail work — 5 November
 
 Continue from [owner mailbox migration](OWNER-MAIL-2026-11-05.md). Local mail backup is verified. New code is under review; database archive/scheduler migrations applied with no public read grants. Production import and DNS remain pending.
+
+
+Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 historical messages are verified in private storage; native Resend remains the mailbox interface.

@@ -130,3 +130,6 @@ The owner rejected the earlier content Preview and approved a complete global En
 ## Owner mailbox migration — active
 
 [Receipt](OWNER-MAIL-2026-11-05.md). Implemented private archive and reply queue; remaining: production deployment, import/verification of 414 historical messages, live diagnostic, worker activation, DNS cutover and final SpaceMail delta backup. No paid upgrade.
+
+
+Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 historical messages are verified in private storage; native Resend remains the mailbox interface.
