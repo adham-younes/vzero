@@ -180,7 +180,7 @@ The live release combines search, filter and item selection in one control row u
 
 ## Owner mail, 5 November 2026
 
-[Current mailbox scope](OWNER-MAIL-2026-11-05.md): private service-only archive/storage, signed Resend Inbox webhooks, durable leased jobs, immutable native replies, trusted sender authentication, bounded Groq inference and temporary historical import. Mailbox dashboards were removed from the public site; use native authenticated Resend. Local RLS/concurrency tests passed. DNS and activation are verified; external automatic-reply delivery remains unverified.
+[Current mailbox scope](OWNER-MAIL-2026-11-05.md): private service-only archive/storage, signed Resend Inbox webhooks, durable leased jobs, immutable native replies, trusted sender authentication, bounded Groq inference and temporary historical import. Mailbox dashboards were removed from the public site; use native authenticated Resend. Local RLS/concurrency tests passed. DNS and activation are verified; personal external automatic-reply delivery verified through Gmail.
 
 
 Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 historical messages are verified in private storage; native Resend remains the mailbox interface.
@@ -188,4 +188,4 @@ Owner correction: the mailbox interface must not appear on the public platform. 
 
 ### Mail cutover verified — 5 November 2026
 
-[Current mailbox receipt](OWNER-MAIL-2026-11-05.md): sole Resend MX verified publicly and by Resend; both actual inbox addresses receive and archive attachments; personal native sending delivered. Reply settings enabled. The owner reports old SpaceMail disconnected; final IMAP sync was rejected. 414 historical messages are preserved, later legacy arrivals are unverified. No public mailbox UI. External automatic-reply acceptance and old renewal status remain unverified.
+[Current mailbox receipt](OWNER-MAIL-2026-11-05.md): sole Resend MX verified publicly and by Resend; both actual inbox addresses receive and archive attachments; personal native sending delivered. Reply settings enabled. The owner reports old SpaceMail disconnected; final IMAP sync was rejected. 414 historical messages are preserved, later legacy arrivals are unverified. No public mailbox UI. Personal external automatic-reply acceptance verified through Gmail at 13:22 UTC; old renewal status remains unverified.
