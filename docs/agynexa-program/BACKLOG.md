@@ -1,8 +1,12 @@
+# Current correction — 5 November 2026
+
+Document preview/import, progress transport, public-copy changes and shared palette are implemented candidates. The additive migration is applied; build and affected production acceptance remain pending; see [release](releases/studio-documents-and-response-flow-2026-11-05/README.md). OCR, legacy Office formats and image extraction remain outside the supported import contract.
+
 # Current release boundaries — 5 November 2026
 
 See [platform upgrade](releases/platform-upgrade-2026-11-05/README.md). Remaining external prerequisites: issued ChatGPT commercial client/registered redirect; separately eligible ChatGPT plan inference; a customer API key and actual agreement before production activation. These cannot be inferred from an existing developer account. Production acceptance of the supported release passed on main `794c2b8`; see [the scoped results and boundaries](releases/platform-upgrade-2026-11-05/PRODUCTION.md).
 
-Retained product gaps: single owner per workspace, no general ERP/CRM/voice/browser execution, no payment settlement, no arbitrary PDF/Excel ingestion, no permanent provider artifact storage, and no independently measured search-ranking or business-outcome guarantee. Supabase leaked-password protection was reported disabled at baseline; no unrelated auth setting was changed. Public session replay is removed, and private routes/query strings are excluded from aggregate telemetry.
+Retained product gaps: single owner per workspace, no general ERP/CRM/voice/browser execution, no payment settlement, no OCR or arbitrary document/image ingestion, no permanent provider artifact storage, and no independently measured search-ranking or business-outcome guarantee. Supabase leaked-password protection was reported disabled at baseline; no unrelated auth setting was changed. Public session replay is removed, and private routes/query strings are excluded from aggregate telemetry.
 
 Earlier entries below are historical; they do not supersede this explicitly authorized release.
 

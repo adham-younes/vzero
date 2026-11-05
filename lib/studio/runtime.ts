@@ -4,8 +4,8 @@ import {createHash,randomUUID} from 'node:crypto'
 import {adminClient} from '@/lib/supabase/server'
 import {InputError,field} from '@/lib/account-validation'
 import {agentId} from './validation'
-import {studioSession,ownerWorkspace} from './server'
-import {openAIAnswer,numberSetting,type GroundedAnswer} from './provider'
+import {studioSession} from './server'
+import {openAIAnswer,numberSetting,type GroundedAnswer,type RunProgress} from './provider'
 import {modelRegistry,type ModelId} from './models'
 import {normalizeAgent,type Agent} from './settings'
 import {customerChatEnabled,normalizedSearchEnabled,validateChatResponse,type ChatScope,type RawProviderChatV2} from './chat-contract'
@@ -24,8 +24,10 @@ export function dbError(error:{code?:string;message?:string}|null){
  throw code?new InputError(code,code==='not_found'?404:code==='sign_in_required'?401:code==='concurrency_limit'?429:409):new Error('Database operation failed')
 }
 export async function ownedAgent(id:string){
- agentId(id);const session=await studioSession();const org=await ownerWorkspace(session);if(!org)throw new InputError('not_found',404)
- const {data,error}=await session.client.from('agents').select('*').eq('id',id).eq('org_id',org.id).maybeSingle();dbError(error);if(!data)throw new InputError('not_found',404)
+ agentId(id);const session=await studioSession()
+ const [record,membership]=await Promise.all([session.client.from('agents').select('*').eq('id',id).maybeSingle(),session.client.from('memberships').select('org_id').eq('user_id',session.user.id).eq('role','owner').maybeSingle()])
+ dbError(record.error);dbError(membership.error);const data=record.data
+ if(!data||!membership.data||data.org_id!==membership.data.org_id)throw new InputError('not_found',404)
  return {...session,agent:normalizeAgent(data) as Agent}
 }
 export async function mutate(id:string,operation:string,payload:Record<string,unknown>){const ctx=await ownedAgent(id);const {data,error}=await ctx.client.rpc('studio_mutate',{agent:id,operation,payload});dbError(error);return data}
@@ -38,7 +40,10 @@ export async function draftScope(id:string,model?:string):Promise<RunScope>{
  const ctx=await ownedAgent(id);const a={...ctx.agent};if(model)a.model=model as ModelId
  if(!Object.hasOwn(modelRegistry,a.model))throw new InputError('unsupported_model')
  const {data,error}=await ctx.client.from('knowledge_sources').select('id').eq('agent_id',id).eq('status','ready');dbError(error)
- return {agent:a,sourceIds:(data||[]).map(x=>x.id),versionId:null,kind:'studio',actorId:ctx.user.id,identity:ctx.user.id,assertAccess:async()=>{await ownedAgent(id)}}
+ return {agent:a,sourceIds:(data||[]).map(x=>x.id),versionId:null,kind:'studio',actorId:ctx.user.id,identity:ctx.user.id,assertAccess:async()=>{
+  // Both reads retain live-session RLS. Reuse this request's authenticated client, not a cross-request cache.
+  const [record,owner]=await Promise.all([ctx.client.from('agents').select('id').eq('id',id).eq('org_id',a.org_id).maybeSingle(),ctx.client.from('memberships').select('org_id').eq('org_id',a.org_id).eq('user_id',ctx.user.id).eq('role','owner').maybeSingle()]);dbError(record.error);dbError(owner.error);if(!record.data||!owner.data)throw new InputError('sign_in_required',401)
+ }}
 }
 export type Citation={chunkId:string;sourceId:string;title:string;quote:string}
 type Chunk={id:string;source_id:string;title:string;content:string;score:number}
@@ -47,12 +52,13 @@ export function groundedCitations(items:{chunkId:string}[],chunks:Chunk[]):Citat
 }
 export const publicRunFields='id,agent_id,conversation_id,model,status,question,answer,citations,usage,error_code,created_at,finished_at,version_id'
 export function visibleRun(r:Record<string,unknown>){return Object.fromEntries(publicRunFields.split(',').map(k=>[k,r[k]]))}
-export async function executeRun(scope:RunScope,body:Record<string,unknown>,request:Request){
+export async function executeRun(scope:RunScope,body:Record<string,unknown>,request:Pick<Request,'signal'>,onProgress?:RunProgress){
+ const began=Date.now();onProgress?.('preparing')
  const allowed=scope.kind==='studio'?['message','requestKey','conversationId','runId','model']:['message','requestKey','conversationId']
  if(Object.keys(body).some(key=>!allowed.includes(key)))throw new InputError('invalid_input')
  const question=field(body.message,3000),requestKey=agentId(field(body.requestKey,36)),id=body.runId!==undefined?agentId(field(body.runId,36)):randomUUID(),conversation=body.conversationId!==undefined?agentId(field(body.conversationId,36)):requestKey
  const db=adminClient();await scope.assertAccess()
- await abuseLimit('global-runs',numberSetting('AGYNEXA_GLOBAL_RUNS_PER_MINUTE',20,1,100));await abuseLimit(scope.kind+':'+scope.identity,numberSetting('AGYNEXA_RUNS_PER_MINUTE',6,1,100))
+ await Promise.all([abuseLimit('global-runs',numberSetting('AGYNEXA_GLOBAL_RUNS_PER_MINUTE',20,1,100)),abuseLimit(scope.kind+':'+scope.identity,numberSetting('AGYNEXA_RUNS_PER_MINUTE',6,1,100))])
  const hourly=await db.rpc('consume_auth_limit',{bucket_key:hash('studio-hour:'+scope.agent.org_id),max_attempts:numberSetting('AGYNEXA_RUNS_PER_HOUR',40,1,100)});dbError(hourly.error);if(!hourly.data)throw new InputError('trial_limit_reached',429)
  const chatScope:ChatScope={orgId:scope.agent.org_id,agentId:scope.agent.id,actorId:scope.actorId,accessKind:scope.kind,identity:scope.identity,conversationId:conversation,sourceIds:scope.sourceIds,versionId:scope.versionId,generation:scope.generation}
  const customer=scope.kind!=='widget'&&scope.agent.chat_profile==='customer_v1'&&customerChatEnabled()
@@ -82,14 +88,13 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
  const timer=setInterval(async()=>{if(checking)return;checking=true;try{const {data,error}=await db.from('agent_runs').select('status').eq('id',id).eq('org_id',scope.agent.org_id).maybeSingle();if(error||!data||data.status!=='running')cancel.abort()}catch{cancel.abort()}finally{checking=false}},1500)
  let result:Record<string,unknown>,usage:Record<string,unknown>={}
  try{
-  const providerKey=await customerProviderKey(scope.agent.org_id)
+  const [providerKey,turns]=await Promise.all([customerProviderKey(scope.agent.org_id),loadConversationContext(chatScope)])
   if(scope.kind!=='studio'&&!providerKey)throw new InputError('customer_credentials_required',403)
-  const turns=await loadConversationContext(chatScope)
   const behavior=customer?customerTurn(question,turns,scope.agent.language,scope.agent.name):null
   const effectiveQuestion=behavior?.effectiveQuestion||question
   const retrieval=buildRetrievalQuery(effectiveQuestion,turns)
   const normalized=normalizedSearchEnabled()
-  const {data,error}=await db.rpc(normalized?'search_agent_knowledge_v2':'search_agent_knowledge',{workspace:scope.agent.org_id,agent:scope.agent.id,source_ids:scope.sourceIds,query:retrieval.query,...(normalized?{history_query:retrieval.historyQuery}:{})});dbError(error)
+  const {data,error}=scope.sourceIds.length?await db.rpc(normalized?'search_agent_knowledge_v2':'search_agent_knowledge',{workspace:scope.agent.org_id,agent:scope.agent.id,source_ids:scope.sourceIds,query:retrieval.query,...(normalized?{history_query:retrieval.historyQuery}:{})}):{data:[],error:null};dbError(error)
   let chunks=(data||[]) as Chunk[]
   if(retrieval.continuation&&turns.length){
    const priorIds=turns.at(-1)!.sourceDependencies.slice(0,2).map(d=>d.chunkId)
@@ -110,7 +115,8 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
   else{
    const canSupport=scope.kind==='studio'&&scope.agent.template==='serviceflow'
    const messages=[{role:'system' as const,content:chatSystemPolicy(scope.agent,scope.kind,effectiveQuestion,customer,canSupport,behavior?.language)},...turns.flatMap(t=>[{role:'user' as const,content:t.userText},...(behavior?.languageOnly?[]:[{role:'assistant' as const,content:t.assistantParts.map(p=>p.text).join('\n\n')}])]),{role:'user' as const,content:JSON.stringify({question:effectiveQuestion,passages:chunks.map(c=>({chunkId:c.id,text:c.content}))})}]
-   const generate=(repair:boolean)=>openAIAnswer(scope.agent.model,repair?[...messages,{role:'system' as const,content:`The previous attempt used the wrong language. Regenerate the same response in ${behavior!.language}, using only the current user facts and authorized passages. Do not add a task, sector or fact. Preserve the required JSON schema and citation constraints.`}]:messages,signal,chunks.map(c=>c.id),customer,scope.agent.tools,providerKey)
+   onProgress?.('thinking')
+   const generate=(repair:boolean)=>openAIAnswer(scope.agent.model,repair?[...messages,{role:'system' as const,content:`The previous attempt used the wrong language. Regenerate the same response in ${behavior!.language}, using only the current user facts and authorized passages. Do not add a task, sector or fact. Preserve the required JSON schema and citation constraints.`}]:messages,signal,chunks.map(c=>c.id),customer,scope.agent.tools,providerKey,onProgress)
    const provider=customer?await customerLanguageReply(async repair=>{const value=await generate(repair);return {...value,answer:value.answer as RawProviderChatV2}},behavior!.language):await generate(false);usage={...provider.usage,billing_mode:providerKey?'customer_api_key':'platform_trial'}
    if(customer){
     const raw=provider.answer as RawProviderChatV2,chat=validateChatResponse(raw,{customer:true,support:canSupport},chunks)
@@ -125,10 +131,12 @@ export async function executeRun(scope:RunScope,body:Record<string,unknown>,requ
     result={status:'succeeded',answer,citations,usage,support,chat_v2:{schemaVersion:2,profile:'grounded_v1',policyVersion:'2026-10-v1',response:chat,sourceDependencies:dependencies}}
    }
   }
+  onProgress?.('checking')
   if(result.status==='succeeded')assertOutputCapacity({run:{question,model:scope.agent.model,answer:result.answer,citations:result.citations,usage:result.usage,chat:scope.kind==='studio'?(result.chat_v2 as {response?:unknown}|undefined)?.response:undefined}})
   signal.throwIfAborted();await scope.assertAccess()
  }catch(error){result={status:signal.aborted?'cancelled':'failed',error_code:signal.aborted?'execution_cancelled':error instanceof InputError?error.code:'provider_unavailable',usage}}
  finally{clearInterval(timer)}
+ result.usage={...(result.usage as Record<string,unknown>||{}),application_elapsed_ms:Date.now()-began}
  const {data:finished,error:finishError}=await db.rpc('finish_agent_run',{run_id:id,result});dbError(finishError)
  return presentRun(chatScope,finished,scope.kind==='studio')
 }

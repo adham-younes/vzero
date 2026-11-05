@@ -5,6 +5,9 @@ import type {RawProviderChatV2} from './chat-contract'
 import {modelRegistry,pricingDate,pricingSource,type ModelId} from './models'
 import type {AgentTools} from './settings'
 
+export type RunPhase='preparing'|'thinking'|'searching'|'coding'|'checking'
+export type RunProgress=(phase:RunPhase)=>void
+
 export function openAIKey(){const key=process.env.OPENAI_API_KEY?.trim();if(!key)throw new InputError('provider_not_configured',503);return key}
 export function configuredModels(){return Object.entries(modelRegistry).map(([id,info])=>({id,...info,provider:'openai',configured:!!process.env.OPENAI_API_KEY?.trim(),availability:'not_checked',structuredWithTools:true,structuredWithStreaming:false}))}
 export function numberSetting(name:string,fallback:number,min:number,max:number){const n=Number(process.env[name]);return Number.isFinite(n)&&n>=min&&n<=max?Math.floor(n):fallback}
@@ -40,10 +43,10 @@ async function logProviderFailure(response:Response){
  console.error('AGYNEXA_OPENAI_FAILURE '+JSON.stringify(diagnostic))
  return diagnostic
 }
-export async function openAIResponse(body:Record<string,unknown>,signal:AbortSignal,customerKey?:string|null){
+export async function openAIResponse(body:Record<string,unknown>,signal:AbortSignal,customerKey?:string|null,onProgress?:RunProgress){
  let response:Response|undefined
  for(let attempt=0;attempt<2;attempt++){
-  response=await fetch('https://api.openai.com/v1/responses',{method:'POST',cache:'no-store',redirect:'error',signal,headers:{Authorization:`Bearer ${customerKey||openAIKey()}`,'Content-Type':'application/json'},body:JSON.stringify({...body,store:false})})
+  response=await fetch('https://api.openai.com/v1/responses',{method:'POST',cache:'no-store',redirect:'error',signal,headers:{Authorization:`Bearer ${customerKey||openAIKey()}`,'Content-Type':'application/json'},body:JSON.stringify({...body,store:false,...(onProgress?{stream:true}:{})})})
   if(response.status!==429)break
   const details=await logProviderFailure(response)
   if(details.code==='insufficient_quota'){await response.body?.cancel();throw new InputError('provider_billing',503)}
@@ -52,20 +55,41 @@ export async function openAIResponse(body:Record<string,unknown>,signal:AbortSig
   await response.body?.cancel();await delay(Math.ceil(seconds*1000),undefined,{signal})
  }
  if(!response?.ok){const status=response?.status;if(response)await logProviderFailure(response);await response?.body?.cancel();throw new InputError(status===401||status===403?'provider_access_denied':status===402?'provider_billing':status===400||status===404?'provider_model_unsupported':'provider_unavailable',status===400?502:503)}
- const data=await response.json()
+ const data=onProgress?await readProviderStream(response,onProgress):await response.json()
  if(data.status!=='completed')throw new InputError(data.status==='incomplete'?'response_incomplete':'provider_unavailable',502)
  return {data,requestId:String(response.headers.get('x-request-id')||data.id||'').slice(0,160)}
+}
+// Read provider events without releasing unvalidated answer fragments or reasoning.
+async function readProviderStream(response:Response,onProgress:RunProgress){
+ const reader=response.body?.getReader();if(!reader)throw new InputError('provider_unavailable',502)
+ const decoder=new TextDecoder();let buffer='',completed:any=null,received=0
+ const consume=(frame:string)=>{
+  const raw=frame.split('\n').filter(line=>line.startsWith('data:')).map(line=>line.slice(5).trimStart()).join('\n');if(!raw||raw==='[DONE]')return
+  let event:any;try{event=JSON.parse(raw)}catch{throw new InputError('invalid_model_output',502)}
+  if(event.type==='response.web_search_call.in_progress'||event.type==='response.web_search_call.searching')onProgress('searching')
+  else if(event.type==='response.code_interpreter_call.in_progress'||event.type==='response.code_interpreter_call.interpreting')onProgress('coding')
+  else if(event.type==='response.web_search_call.completed'||event.type==='response.code_interpreter_call.completed')onProgress('thinking')
+  else if(event.type==='response.completed')completed=event.response
+  else if(event.type==='response.incomplete')throw new InputError('response_incomplete',502)
+  else if(event.type==='response.failed'||event.type==='error')throw new InputError('provider_unavailable',502)
+ }
+ try{
+  while(true){const {done,value}=await reader.read();if(done)break;received+=value.byteLength;if(received>8*1024*1024)throw new InputError('response_too_large',502);buffer+=decoder.decode(value,{stream:true});let boundary:RegExpExecArray|null;while((boundary=/\r?\n\r?\n/.exec(buffer))){consume(buffer.slice(0,boundary.index).replace(/\r/g,''));buffer=buffer.slice(boundary.index+boundary[0].length)}if(buffer.length>4*1024*1024)throw new InputError('response_too_large',502)}
+  buffer+=decoder.decode();if(buffer.trim())consume(buffer.replace(/\r/g,''))
+  if(!completed)throw new InputError('provider_unavailable',502)
+  return completed
+ }finally{await reader.cancel().catch(()=>{});reader.releaseLock()}
 }
 export function responseText(data:{output?:Array<{type?:string;content?:Array<{type?:string;text?:string}>}>}){
  return (data.output||[]).filter(x=>x.type==='message').flatMap(x=>x.content||[]).filter(x=>x.type==='output_text').map(x=>x.text||'').join('')
 }
 function safeUrl(value:unknown){if(typeof value!=='string')return null;try{const url=new URL(value);return ['http:','https:'].includes(url.protocol)&&!url.username&&!url.password?url.href:null}catch{return null}}
-export async function openAIAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[],chatV2=false,enabled?:AgentTools,customerKey?:string|null){
+export async function openAIAnswer(model:ModelId,messages:{role:'system'|'user'|'assistant';content:string}[],signal:AbortSignal,citationIds:string[],chatV2=false,enabled?:AgentTools,customerKey?:string|null,onProgress?:RunProgress){
  const started=Date.now(),tools:Record<string,unknown>[]=[]
  // Tools are restricted to customer trials and activated customer API agents. Public widgets remain grounded.
  if(chatV2&&enabled?.webSearch)tools.push({type:'web_search',search_context_size:'low',external_web_access:true})
  if(chatV2&&enabled?.codeInterpreter)tools.push({type:'code_interpreter',container:{type:'auto',memory_limit:'1g'}})
- const {data,requestId}=await openAIResponse({model,input:messages,reasoning:{effort:'high'},max_output_tokens:numberSetting('AGYNEXA_MAX_OUTPUT_TOKENS',modelRegistry[model].maxOutput,2048,12000),max_tool_calls:4,...(tools.length?{tools,include:['web_search_call.action.sources']}:{}),text:{format:{type:'json_schema',name:chatV2?'customer_chat_v2':'grounded_answer',strict:true,schema:chatV2?chatSchema(citationIds):schema}}},signal,customerKey)
+ const {data,requestId}=await openAIResponse({model,input:messages,reasoning:{effort:'high'},max_output_tokens:numberSetting('AGYNEXA_MAX_OUTPUT_TOKENS',modelRegistry[model].maxOutput,2048,12000),max_tool_calls:4,...(tools.length?{tools,include:['web_search_call.action.sources']}:{}),text:{format:{type:'json_schema',name:chatV2?'customer_chat_v2':'grounded_answer',strict:true,schema:chatV2?chatSchema(citationIds):schema}}},signal,customerKey,onProgress)
  const content=responseText(data);if(!content)throw new InputError('invalid_model_output',502)
  let answer:GroundedAnswer|RawProviderChatV2
  try{answer=chatV2?JSON.parse(content) as RawProviderChatV2:parseAnswer(content)}catch{throw new InputError('invalid_model_output',502)}

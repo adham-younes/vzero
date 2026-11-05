@@ -1,26 +1,25 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T11:49:53Z",
+  "updated_at": "2026-11-05T12:39:45.544823+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "PLATFORM_UPGRADE_DEPLOYED_SCOPED_PRODUCTION_VERIFIED",
+  "status": "PLATFORM_CORRECTION_READY_FOR_PRODUCTION",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
     "production_branch": "main"
   },
   "current_product_release": {
-    "merge_commit": "794c2b8299b95762e6eb173c3c1ff720d5731d7d",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/66",
-    "initial_pull_request": "https://github.com/adham-younes/vzero/pull/65",
+    "merge_commit": "a7b2f0ab0517071dd521577e8d65f8331dc660a0",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/67",
     "domain": "https://agynexa.si",
-    "status_at_verification": "READY_SCOPED_PRODUCTION_ACCEPTANCE_PASSED",
-    "deployment_id": "dpl_AhhLWthKRjRskicjfNrqfy1RPFp8",
-    "receipt": "releases/platform-upgrade-2026-11-05/PRODUCTION.md"
+    "status_at_verification": "READY_ORIGINAL_STUDIO_PALETTE_VERIFIED",
+    "deployment_id": "dpl_2LE5xagbkjHc95kdRcmNJnX36aAz",
+    "receipt": "releases/studio-palette-restoration-2026-11-05.md"
   },
   "stage_status": [
     {
@@ -87,13 +86,13 @@
       "DELETE /api/v1/project-briefs"
     ],
     "tenant_scope": "one owner per isolated workspace; no invitations or shared roles",
-    "http_operations": 67,
+    "http_operations": 68,
     "anonymous_site_apis": [
       "GET /api/v1/catalog/services",
       "POST /api/v1/procurement/review",
       "GET /api/health/supabase"
     ],
-    "route_files": 51
+    "route_files": 52
   },
   "last_product_checks": {
     "release_build_typescript": "PASS",
@@ -146,12 +145,12 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/platform-upgrade-2026-11-05",
-    "baseline_main": "794c2b8299b95762e6eb173c3c1ff720d5731d7d",
-    "product_code_changed": false,
-    "database_changed": false,
-    "receipt": "releases/platform-upgrade-2026-11-05/PRODUCTION.md",
-    "scope": "Final production evidence and current status; separate documentation commit without another production deployment."
+    "branch": "codex/studio-documents-and-response-flow",
+    "receipt": "releases/studio-documents-and-response-flow-2026-11-05/README.md",
+    "scope": "Public EN/AR content and shared palette; reviewed document import, progress transport and request-local latency improvements.",
+    "product_code_changed": true,
+    "database_changed": true,
+    "baseline_main": "a7b2f0ab0517071dd521577e8d65f8331dc660a0"
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -168,7 +167,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": true,
-  "next_action": "Supported release complete. External prerequisites remain explicit in BACKLOG.md; do not claim configured ChatGPT login, plan-funded inference or tested customer commercial execution.",
+  "next_action": "Merge reviewed candidate, observe matching Git-integrated production deployment and verify affected public/Studio behavior.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -856,5 +855,52 @@
     "full_suite_repeated": false,
     "model_tests_repeated": false,
     "evidence": "../launch/2026-10-22/evidence/owner-identity-production/browser.json"
+  },
+  "studio_palette_restoration": {
+    "environment": "production",
+    "origin": "https://agynexa.si",
+    "recorded_utc": "2026-11-05T12:03:45Z",
+    "pr": 67,
+    "commit": "a7b2f0ab0517071dd521577e8d65f8331dc660a0",
+    "deployment": "dpl_2LE5xagbkjHc95kdRcmNJnX36aAz",
+    "ready": true,
+    "checked_surfaces": [
+      "Arabic conversation",
+      "English agent configuration",
+      "English activation"
+    ],
+    "computed_palette": {
+      "app_background": "rgb(5, 5, 5)",
+      "sidebar_background": "rgb(11, 11, 11)",
+      "conversation_background": "rgb(5, 5, 5)",
+      "composer_background": "rgb(11, 11, 11)",
+      "inspector_background": "rgb(11, 11, 11)",
+      "form_section_background": "rgb(11, 11, 11)",
+      "activation_card_background": "rgb(11, 11, 11)",
+      "user_message_background": "rgb(21, 21, 21)",
+      "foreground": "rgb(235, 235, 235)",
+      "muted_foreground": "rgb(191, 191, 191)",
+      "send_background": "rgb(16, 185, 129)"
+    },
+    "validation": {
+      "build_typescript": "PASS",
+      "css_changes": "COLOR_DECLARATIONS_ONLY",
+      "layout_typography_selectors": "UNCHANGED",
+      "saved_content_visible": true,
+      "new_inference_runs": 0,
+      "database_changes": false
+    }
+  },
+  "platform_correction": {
+    "status": "BUILD_PASSED_MIGRATION_APPLIED_PENDING_PRODUCTION",
+    "receipt": "releases/studio-documents-and-response-flow-2026-11-05/README.md",
+    "source_max_bytes": 1048576,
+    "upload_max_bytes": 4194304,
+    "progress_streaming": "status_only_validated_final_response",
+    "public_content": "independent_EN_AR_review",
+    "preserve_original_hero_video": true,
+    "database_migration": "20261105124017_studio_document_source_capacity",
+    "database_constraint_verified": true,
+    "build_typescript": "PASS"
   }
 }

@@ -15,14 +15,14 @@ const workflows:Record<string,Process>={
  logistics:{input:['Shipment events and exception','أحداث الشحنة والاستثناء'],work:['Identify impacts and options','تحديد الآثار والخيارات'],output:['Operations review brief','موجز لمراجعة العمليات']},
  procurement:{input:['Supplier offers and requirements','عروض الموردين والمتطلبات'],work:['Compare terms and calculations','مقارنة الشروط والحسابات'],output:['Comparison for the buyer','مقارنة لمسؤول الشراء']},
  receivables:{input:['Balances and account context','الأرصدة وسياق الحساب'],work:['Identify follow-up priorities','تحديد أولويات المتابعة'],output:['Reviewable follow-up drafts','مسودات متابعة للمراجعة']},
- 'customer-operations':{input:['Account request and obligations','طلب العميل والالتزامات'],work:['Organize dependencies and ownership','تنظيم الاعتماديات والمسؤوليات'],output:['Handover brief for the team','ملف تسليم للفريق']},
+ 'customer-operations':{input:['Account request and obligations','طلب العميل والالتزامات'],work:['Organize dependencies and ownership','ترتيب متطلبات العمل ومسؤولياته'],output:['Handover brief for the team','ملف تسليم للفريق']},
 }
 const capabilities:Record<string,Process>={
  'customer-service':workflows.service,
  'employee-operations':{input:['Employee request and policy','طلب الموظف والسياسة'],work:['Explain requirements and next steps','شرح المتطلبات والخطوات التالية'],output:['Request checklist for review','قائمة متطلبات للمراجعة']},
  'process-automation':{input:['Recurring task and business rules','مهمة متكررة وقواعد العمل'],work:['Prepare the next process step','تجهيز الخطوة التالية في العملية'],output:['Proposed work for approval','عمل مقترح للاعتماد']},
  'enterprise-knowledge':workflows.knowledge,
- 'agent-orchestration':{input:['Roles and their responsibilities','الأدوار ومسؤولياتها'],work:['Define the handoff and dependencies','تحديد التسليم والاعتماديات'],output:['Coordination design to evaluate','تصميم تنسيق قابل للتقييم']},
+ 'agent-orchestration':{input:['Roles and their responsibilities','الأدوار ومسؤولياتها'],work:['Define the handoff and dependencies','تحديد التسليم والمتطلبات المرتبطة'],output:['Coordination design to evaluate','تصميم تنسيق قابل للتقييم']},
  'enterprise-integrations':{input:['Required record or system action','السجل أو الإجراء المطلوب'],work:['Check interface and permissions','فحص الواجهة والصلاحيات'],output:['Defined connection requirements','متطلبات اتصال محددة']},
  'voice-agents':{input:['Conversation purpose and policy','غرض الحوار والسياسة'],work:['Test the role through text','اختبار الدور بالمحادثة النصية'],output:['Conversation and handover design','تصميم الحوار والإحالة']},
  'agent-assist':{input:['Case context and approved guidance','سياق الحالة والإرشاد المعتمد'],work:['Research and prepare the response','البحث وتجهيز الاستجابة'],output:['Draft for the employee to review','مسودة يراجعها الموظف']},
@@ -33,6 +33,6 @@ const capabilities:Record<string,Process>={
 export function TaskProcessVisual({slug,kind='workflow'}:{slug:string;kind?:'workflow'|'capability'}){
  const {t}=useLanguage();const process=(kind==='capability'?capabilities:workflows)[slug]
  if(!process)return null
- const steps=[{label:['Input','المدخل'],value:process.input},{label:['Agent responsibility','مسؤولية الوكيل'],value:process.work},{label:['Reviewable output','المخرج القابل للمراجعة'],value:process.output}]
- return <figure className={styles.visual}><div className={styles.captionTop}><Workflow size={16}/><span>{t(['The role at a glance','الدور في نظرة سريعة'])}</span></div><ol className={styles.nodes}>{steps.map((step,index)=><li className={styles.node} key={step.label[0]}><span className={styles.stage}>{t(step.label)}</span><strong>{t(step.value)}</strong>{index<steps.length-1&&<ArrowRight className={styles.arrow} size={16} aria-hidden="true"/>}</li>)}</ol><figcaption className={styles.note}>{t(['A task design to test. Connected actions need the relevant system access and an agreed production scope.','تصميم مهمة لاختباره. تحتاج الإجراءات المتصلة إلى صلاحيات النظام ونطاق إنتاجي متفق عليه.'])}</figcaption></figure>
+ const steps=[{label:['Input','المدخل'],value:process.input},{label:['Agent responsibility','مسؤولية الوكيل'],value:process.work},{label:['Result to review','النتيجة التي تراجعها'],value:process.output}]
+ return <figure className={styles.visual}><div className={styles.captionTop}><Workflow size={16}/><span>{t(['Example task','مثال للمهمة'])}</span></div><ol className={styles.nodes}>{steps.map((step,index)=><li className={styles.node} key={step.label[0]}><span className={styles.stage}>{t(step.label)}</span><strong>{t(step.value)}</strong>{index<steps.length-1&&<ArrowRight className={styles.arrow} size={16} aria-hidden="true"/>}</li>)}</ol><figcaption className={styles.note}>{t(['Use this example to prepare your instructions, then test it with your own sources.','استخدم المثال لتجهيز التعليمات، ثم جرّبه بالمراجع الخاصة بعملك.'])}</figcaption></figure>
 }

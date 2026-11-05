@@ -1,6 +1,6 @@
 {
   "recorded_date": "2026-11-05",
-  "product_commit": "OPENAI_STUDIO_UPGRADE_CANDIDATE",
+  "product_commit": "DOCUMENTS_AND_RESPONSE_FLOW_CANDIDATE",
   "source_files": [
     "lib/site-routes.ts",
     "lib/agynexa.ts",
@@ -299,6 +299,12 @@
       ]
     },
     {
+      "path": "/api/v1/agents/{agentId}/sources/import",
+      "methods": [
+        "post"
+      ]
+    },
+    {
       "path": "/api/v1/agents/{agentId}/sources/{sourceId}",
       "methods": [
         "get",
@@ -433,6 +439,6 @@
       "method": "get"
     }
   ],
-  "api_route_files": 51,
-  "http_operations": 67
+  "api_route_files": 52,
+  "http_operations": 68
 }

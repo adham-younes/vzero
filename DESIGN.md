@@ -100,3 +100,7 @@ References: Humanizer writing review and Better Design spacing/form/comprehensio
 ### Owner correction — restore the original Studio colours, 5 November 2026
 
 The owner rejected the green-tinted Studio surfaces and text introduced by the upgrade. Studio must use the existing shared palette exactly: background `#050505`, card/popover `#0B0B0B`, muted `#111111`, secondary `#151515`, foreground `#EBEBEB`, secondary text `#BFBFBF` and emerald `#10B981`. Reference these shared CSS variables; do not introduce a separate Studio palette. Preserve the shipped layout and behavior while restoring these colours. [Correction receipt](docs/agynexa-program/releases/studio-palette-restoration-2026-11-05.md).
+
+### Owner correction — consistent public design and useful copy, 5 November 2026
+
+Public page surfaces, rules, selected states and text now share the same palette variables as Studio. Preserve the exact neutral/emerald token values; no independent tinted surfaces. Remove the rejected “clear structure for useful work” illustration. Explain services with actual inputs, decisions and outputs; write English and Arabic independently, with concise headings and no decorative claims. Import shows editable extracted text before saving. Conversation shows plain-language progress; diagnostics remain an explicit Activity disclosure. [Correction scope](docs/agynexa-program/releases/studio-documents-and-response-flow-2026-11-05/README.md).

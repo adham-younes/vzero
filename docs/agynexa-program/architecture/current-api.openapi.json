@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AGYNEXA implemented HTTP API",
-    "version": "2026-11-05-openai-studio",
-    "description": "67 implemented HTTP operations across 51 route files. New runtime verification is governed by the platform-upgrade release receipt; source availability is not proof of production success."
+    "version": "2026-11-05-documents-and-response-flow",
+    "description": "68 implemented HTTP operations across 52 route files. Document import and SSE progress are corrective release candidates until production acceptance is recorded; source availability is not proof of production success."
   },
   "servers": [
     {
@@ -1492,7 +1492,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1538,7 +1538,7 @@
         }
       },
       "post": {
-        "summary": "Process a private text source",
+        "summary": "Save reviewed source text with exact idempotent request key",
         "operationId": "postagentsagentIdsources",
         "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
         "security": [
@@ -1546,7 +1546,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "Requires same-origin authenticated workspace owner. Save only text the user reviewed, up to 1,048,576 UTF-8 bytes, without NUL/unsupported control characters. Dedicated streamed JSON body ceiling is 3,162,112 bytes; other mutation body limits remain unchanged. The existing source_add RPC, RLS, publicApproved choice, chunking and request-key conflict behavior are retained. Import alone does not save a source. Responses are private/no-store.",
         "parameters": [
           {
             "name": "agentId",
@@ -1581,13 +1581,30 @@
             "description": "Revision/idempotency conflict or prerequisites missing"
           },
           "413": {
-            "description": "Body exceeds limit"
+            "description": "source_text_too_large: reviewed text or bounded JSON envelope exceeds capacity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
           },
           "429": {
             "description": "Rate or concurrency limit"
           },
           "503": {
             "description": "Unavailable dependency"
+          },
+          "415": {
+            "description": "invalid_content_type: JSON required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
           }
         },
         "requestBody": {
@@ -1603,7 +1620,9 @@
                   },
                   "content": {
                     "type": "string",
-                    "maxLength": 12000
+                    "minLength": 1,
+                    "maxLength": 1048576,
+                    "description": "At most 1,048,576 UTF-8 bytes after trim; character count alone is not sufficient."
                   },
                   "publicApproved": {
                     "type": "boolean"
@@ -1618,11 +1637,14 @@
                   "content",
                   "publicApproved",
                   "requestKey"
-                ]
+                ],
+                "additionalProperties": false
               }
             }
           }
-        }
+        },
+        "x-max-body-bytes": 3162112,
+        "x-max-content-utf8-bytes": 1048576
       }
     },
     "/api/v1/agents/{agentId}/sources/{sourceId}": {
@@ -1635,7 +1657,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1698,7 +1720,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -1775,7 +1797,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. With Accept: text/event-stream, HTTP 200 starts an SSE response. status events carry only {phase:preparing|thinking|searching|coding|checking}; result carries {run} after authorization/output checks and final persistence; error carries a sanitized {error} for post-start failures. Keepalive comments arrive about every 15 seconds. No partial model JSON, reasoning or unvalidated answer is streamed. Failures before the stream starts use normal JSON HTTP errors; HTTP 200 alone is not successful execution. Client disconnect aborts the active request signal.",
         "parameters": [
           {
             "name": "agentId",
@@ -1785,11 +1807,45 @@
               "type": "string",
               "format": "uuid"
             }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "application/json",
+                "text/event-stream"
+              ]
+            },
+            "description": "Request SSE progress with text/event-stream. Existing JSON clients keep the persisted run response."
           }
         ],
         "responses": {
           "200": {
-            "description": "Operation result; inspect run.status"
+            "description": "JSON persisted run, or SSE status/result/error events according to Accept. Inspect final run.status.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "run"
+                  ],
+                  "properties": {
+                    "run": {
+                      "type": "object"
+                    }
+                  }
+                }
+              },
+              "text/event-stream": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "event: status\ndata: {\"phase\":\"preparing\"}\n\nevent: status\ndata: {\"phase\":\"thinking\"}\n\nevent: result\ndata: {\"run\":{\"status\":\"succeeded\"}}\n\n"
+              }
+            }
           },
           "201": {
             "description": "Resource created when applicable"
@@ -1868,7 +1924,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -1952,7 +2008,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -2020,7 +2076,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "agentId",
@@ -2076,7 +2132,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -2149,7 +2205,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -2224,7 +2280,7 @@
             "agentKey": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Production creation/execution requires recorded activation and a customer OpenAI connection. Owner key revocation and unpublish remain available.",
         "parameters": [
           {
             "name": "agentId",
@@ -2309,7 +2365,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "runId",
@@ -2365,7 +2421,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "runId",
@@ -2433,7 +2489,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [
           {
             "name": "approvalId",
@@ -2511,7 +2567,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [],
         "responses": {
           "200": {
@@ -2557,7 +2613,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [],
         "responses": {
           "200": {
@@ -2601,7 +2657,7 @@
             "supabaseSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits. Auth transport/server/unknown errors return 503 temporarily_unavailable; upstream 429 returns try_later, rather than falsely treating those failures as a rejected session. No upstream message or credential is exposed.",
         "parameters": [],
         "responses": {
           "200": {
@@ -2655,7 +2711,7 @@
         "operationId": "postwidgetpublicIdsession",
         "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
         "security": [],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits.",
         "parameters": [
           {
             "name": "publicId",
@@ -2723,7 +2779,7 @@
             "widgetSession": []
           }
         ],
-        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Source uploads capped at 12 KB UTF-8. See STAGES-CDE for idempotency and limits.",
+        "description": "No shared caching. Mutations with session cookies require matching Origin. Payload limited to 20 KB. Runs return persisted status; failed/cancelled is not a successful answer. Reviewed sources support up to 1 MiB UTF-8; document import supports files up to 4 MiB through its dedicated endpoint. See STAGES-CDE for idempotency and limits.",
         "parameters": [
           {
             "name": "publicId",
@@ -4216,6 +4272,197 @@
           },
           "503": {
             "description": "Provider or integration unavailable."
+          }
+        }
+      }
+    },
+    "/api/v1/agents/{agentId}/sources/import": {
+      "post": {
+        "operationId": "importAgentSourceDocument",
+        "summary": "Extract a document to editable reviewed text without saving",
+        "x-implementation-status": "IMPLEMENTED_RELEASE_VERIFICATION",
+        "security": [
+          {
+            "supabaseSession": []
+          }
+        ],
+        "description": "Same-origin authenticated owner only, verified before reading the file and again before returning text. Exactly one multipart field named file. UTF-8 TXT/MD/CSV/JSON, text PDF, DOCX and XLSX; extension and binary/text structure are checked without trusting MIME. 4 MiB file, 1 MiB extracted UTF-8. No external file transmission, OCR, macro/formula execution or durable original-file storage. Office ZIP/XML expansion and PDF/sheet complexity are bounded. Import returns a draft; only the separate source POST saves it. Global 20/minute and per-user 6/minute import limits; private/no-store.",
+        "x-max-body-bytes": 4259840,
+        "x-max-file-bytes": 4194304,
+        "x-max-extracted-utf8-bytes": 1048576,
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "file"
+                ],
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "One TXT, MD, CSV, JSON, text PDF, DOCX or XLSX file, at most 4,194,304 bytes."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Editable import preview; nothing saved as agent knowledge",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "title",
+                    "content",
+                    "format"
+                  ],
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "maxLength": 160
+                    },
+                    "content": {
+                      "type": "string",
+                      "maxLength": 1048576,
+                      "description": "UTF-8 byte limit is 1,048,576."
+                    },
+                    "format": {
+                      "type": "string",
+                      "enum": [
+                        "txt",
+                        "md",
+                        "csv",
+                        "json",
+                        "pdf",
+                        "docx",
+                        "xlsx"
+                      ]
+                    },
+                    "notices": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "pdf_layout_review",
+                          "docx_layout_review",
+                          "xlsx_values_only",
+                          "xlsx_hidden_sheets_omitted"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "source_file_required, source_file_encrypted, source_file_unreadable, source_file_empty or source_pdf_scanned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "sign_in_required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "invalid_origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "not_found: missing or foreign agent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "408": {
+            "description": "source_import_timeout: reduce file complexity or retry",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "source_file_too_large, source_text_too_large or source_file_complex",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "invalid_content_type or source_file_unsupported",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "try_later: import or authentication limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "temporarily_unavailable or disabled Studio",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
           }
         }
       }
