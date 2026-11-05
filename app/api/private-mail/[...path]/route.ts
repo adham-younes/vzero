@@ -1,3 +1,4 @@
+import {mailOAuth} from '@/lib/owner-mail/oauth'
 import {credentials,InputError} from '@/lib/account-validation'
 import {adminClient,authFailure,json,rateLimit,sessionClient} from '@/lib/supabase/server'
 import {mailAdmin,mailMutation,exactKeys} from '@/lib/nexa-email/admin'
@@ -15,6 +16,7 @@ async function handle(request:Request,ctx:Context){
  try{
   await requireConsole()
   const {path}=await ctx.params,method=request.method,url=new URL(request.url),name=path.join('/')
+  if(path[0]==='oauth'&&path.length===2)return mailOAuth(request,path[1])
   if(name==='login-link'&&method==='POST'){const b=await mailMutation(request);exactKeys(b,['email']);return json(await sendOwnerLoginLink(request,b.email))}
   if(name==='login-link/verify'&&method==='POST'){const b=await mailMutation(request);exactKeys(b,['tokenHash']);return json(await verifyOwnerLoginLink(request,b.tokenHash))}
   if(name==='login'&&method==='POST'){

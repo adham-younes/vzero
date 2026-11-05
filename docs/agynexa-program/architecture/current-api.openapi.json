@@ -4661,6 +4661,48 @@
           }
         }
       }
+    },
+    "/.well-known/oauth-authorization-server": {
+      "get": {
+        "summary": "Private mail OAuth discovery metadata",
+        "description": "Public protocol metadata on exact mail host; no owner or mail data. Other hosts return 404.",
+        "responses": {
+          "200": {
+            "description": "OAuth metadata"
+          },
+          "404": {
+            "description": "Wrong host"
+          }
+        }
+      }
+    },
+    "/.well-known/oauth-protected-resource": {
+      "get": {
+        "summary": "Private mail OAuth discovery metadata",
+        "description": "Public protocol metadata on exact mail host; no owner or mail data. Other hosts return 404.",
+        "responses": {
+          "200": {
+            "description": "OAuth metadata"
+          },
+          "404": {
+            "description": "Wrong host"
+          }
+        }
+      }
+    },
+    "/.well-known/oauth-protected-resource/api/private-mail/mcp": {
+      "get": {
+        "summary": "Private mail OAuth discovery metadata",
+        "description": "Public protocol metadata on exact mail host; no owner or mail data. Other hosts return 404.",
+        "responses": {
+          "200": {
+            "description": "OAuth metadata"
+          },
+          "404": {
+            "description": "Wrong host"
+          }
+        }
+      }
     }
   },
   "components": {

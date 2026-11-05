@@ -131,7 +131,7 @@ export async function POST(request:Request){
  }catch(error){
   const status=error instanceof MailError||error instanceof InputError?error.status:503
   const response=json(failure(null,-32000,safeError(error)),status)
-  if(status===401)response.headers.set('WWW-Authenticate','Bearer realm="nexa-mail"')
+  if(status===401)response.headers.set('WWW-Authenticate','Bearer realm="nexa-mail", resource_metadata="https://mail.agynexa.si/.well-known/oauth-protected-resource"')
   if(status===429)response.headers.set('Retry-After','60')
   return response
  }

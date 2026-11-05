@@ -2,7 +2,8 @@ import {NextRequest,NextResponse} from 'next/server'
 import {isMailConsoleHost} from '@/lib/owner-mail/host'
 export function proxy(request:NextRequest){
  const path=request.nextUrl.pathname,consoleMode=isMailConsoleHost(request.headers.get('host'))
- const privatePath=path==='/private-mail'||path.startsWith('/private-mail/')||path.startsWith('/api/private-mail/')
+ const oauthMetadata=['/.well-known/oauth-authorization-server','/.well-known/oauth-protected-resource','/.well-known/oauth-protected-resource/api/private-mail/mcp'].includes(path)
+ const privatePath=oauthMetadata||path==='/private-mail'||path.startsWith('/private-mail/')||path.startsWith('/api/private-mail/')
  if(!consoleMode&&privatePath)return new NextResponse('Not found',{status:404})
  if(consoleMode){
   if(path==='/')return NextResponse.redirect(new URL('/private-mail',request.url))
