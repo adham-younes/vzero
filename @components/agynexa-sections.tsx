@@ -1,14 +1,15 @@
 'use client'
-import {ArrowUpRight,ChevronDown,Database,ShieldCheck,Workflow,FileCheck2,BrainCircuit,BookOpen,MessagesSquare,Package,Receipt,Truck,Users,FileSearch,BriefcaseBusiness} from 'lucide-react'
+import {ArrowUpRight,ChevronDown,Database,ShieldCheck,Workflow,FileCheck2,BrainCircuit} from 'lucide-react'
 import Link from './locale-link'
 import {useCatalogState} from './catalog-state'
 import {CatalogWorkspace,WorkflowBody,StandaloneReference,IndustryFacts,industryKeys,industrySolutions} from './inline-details'
+import {CatalogSearch,CatalogSelect} from './catalog-controls'
+import {Button} from '@/components/ui/button'
 import pages from '@/lib/program-pages.json'
 import {solutions,summary} from '@/lib/agynexa'
 import {Action,useLanguage} from './agynexa-shell'
 import {CopyBlocks,usePageCopy,CopyBlock} from './public-copy'
 import SystemDiagram from './system-diagram'
-const solutionIcons=[BookOpen,FileSearch,BriefcaseBusiness,MessagesSquare,Receipt,Truck,Package,Receipt,Users]
 export function Flow(){const {t}=useLanguage();const steps=[{Icon:Database,title:['Knowledge','المعرفة'],body:['Approved sources and access rules.','مصادر معتمدة وقواعد وصول.']},{Icon:BrainCircuit,title:['Reasoning','الاستدلال'],body:['A task with bounded tools.','مهمة بأدوات محددة الصلاحيات.']},{Icon:ShieldCheck,title:['Human review','مراجعة بشرية'],body:['The right person reviews the action.','المسؤول المخوّل يراجع الإجراء.']},{Icon:FileCheck2,title:['Approved output','مخرج معتمد'],body:['A result with supporting evidence.','نتيجة بأدلة يمكن الرجوع إليها.']}];return <div><ol className="flow-strip">{steps.map(({Icon,title,body})=><li key={title[0]}><Icon size={28}/><p>{t(title)}</p><small>{t(body)}</small></li>)}</ol><p className="muted text-sm mt-5">{t(['An illustrative process: check the information, available operations and review required by the task.','مسار توضيحي: افحص المعلومات والعمليات المتاحة والمراجعة التي تحتاجها المهمة.'])}</p></div>}
 export function SolutionGrid({limit}:{limit?:number}){
  const {t}=useLanguage()
@@ -28,47 +29,41 @@ export function SolutionGrid({limit}:{limit?:number}){
    <h2>{t(['Choose the work your team needs to complete','اختر العملية التي يحتاج فريقك إلى إنجازها'])}</h2>
    <p className="muted mt-3">{t(['Open a workflow to read its process, requirements and supporting capabilities here.','افتح مسار العمل لقراءة خطواته ومتطلباته والقدرات التي تدعمه هنا.'])}</p>
   </div>
-  {!limit&&<div className="public-catalog-controls">
-   <div className="public-search-row">
-    <label className="public-search">
-     <span>{t(['Search solutions','ابحث في الحلول'])}</span>
-     <input className="field" type="search" value={query} onChange={event=>update({q:event.target.value})} aria-controls="solution-results" placeholder={t(['Knowledge, finance, logistics…','المعرفة، المالية، اللوجستيات…'])}/>
-    </label>
-    <p className="public-result-count" role="status" aria-live="polite" aria-atomic="true">{list.length} {t(['of 9 solutions','من ٩ حلول'])}</p>
-   </div>
-   <label className="catalog-industry-picker">
-    <span>{t(['Industry context (optional)','سياق القطاع (اختياري)'])}</span>
-    <select className="field" value={industry?state.industry:''} onChange={event=>chooseIndustry(event.target.value)}>
-     <option value="">{t(['Choose an industry','اختر القطاع'])}</option>
-     {pages.industries.sections.map((section,index)=><option value={industryKeys[index]} key={industryKeys[index]}>{t(section.title)}</option>)}
-    </select>
-   </label>
-   {industry&&<details className="catalog-long-reading catalog-industry-reading" key={state.industry}>
-    <summary><span>{t(['Read the industry example','اقرأ مثال القطاع'])}</span><ChevronDown size={16} aria-hidden="true"/></summary>
-    <section className="inline-industry-context">
-     <h3>{t(industry.title)}</h3>
-     <IndustryFacts index={industryIndex}/>
-    </section>
-   </details>}
-  </div>}
   <div id="solution-results">
-   <CatalogWorkspace queryKey="solution" group="solution-directory" indexTitle={t(['Workflows','مسارات العمل'])} items={list.map(solution=>{
-    const Icon=solutionIcons[solutions.indexOf(solution)]
-    return {
+   <CatalogWorkspace
+    queryKey="solution" group="solution-directory" indexTitle={t(['Choose a workflow','اختر مسار العمل'])}
+    resultCount={limit?undefined:list.length}
+    controls={!limit&&<>
+     <CatalogSearch label={t(['Search solutions','ابحث في الحلول'])}
+      placeholder={t(['Knowledge, finance, logistics…','المعرفة، المالية، اللوجستيات…'])}
+      query={query} onSearch={value=>update({q:value})} controls="solution-directory-detail"/>
+     <CatalogSelect label={t(['Industry context (optional)','سياق القطاع (اختياري)'])}
+      value={industry?state.industry:''} onChange={chooseIndustry} controls="solution-directory-detail">
+      <option value="">{t(['Choose an industry','اختر القطاع'])}</option>
+      {pages.industries.sections.map((section,index)=><option value={industryKeys[index]} key={industryKeys[index]}>{t(section.title)}</option>)}
+     </CatalogSelect>
+    </>}
+    context={!limit&&industry&&<details className="catalog-long-reading catalog-industry-reading" key={state.industry}>
+     <summary><span>{t(['Read the industry example','اقرأ مثال القطاع'])}</span><ChevronDown size={16} aria-hidden="true"/></summary>
+     <section className="inline-industry-context">
+      <h3>{t(industry.title)}</h3>
+      <IndustryFacts index={industryIndex}/>
+     </section>
+    </details>}
+    items={list.map(solution=>({
      key:solution.slug,
      title:t(solution.name),
      description:t(solution.problem),
-     icon:<Icon/>,
      content:<>
       <WorkflowBody slug={solution.slug} prefix={`solution-${solution.slug}`} headingLevel={4} catalog/>
       <StandaloneReference path={`/solutions/${solution.slug}`}/>
      </>,
-    }
-   })}/>
+    }))}
+   />
   </div>
   {!list.length&&<div className="public-empty">
    <p>{t(['No solutions match your search.','لا حلول تطابق بحثك.'])}</p>
-   <button className="quiet" onClick={()=>update({q:''})}>{t(['Clear search','مسح البحث'])}</button>
+   <Button variant="outline" onClick={()=>update({q:''})}>{t(['Clear search','مسح البحث'])}</Button>
   </div>}
  </>
 }

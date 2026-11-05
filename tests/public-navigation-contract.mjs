@@ -78,6 +78,10 @@ for(let offset=0;offset<paths.length;offset+=4){
    assert.equal((html.match(/class="catalog-detail"/g)||[]).length,1,`${path} selected detail area`)
    assert.doesNotMatch(html,/<details[^>]*name="(?:solution|capability)-directory"/,`${path} no catalogue-sized disclosures`)
   }
+  if(['/solutions','/ar/solutions','/services','/ar/services','/industries','/ar/industries'].includes(path)){
+   assert.equal((html.match(/class="catalog-toolbar"/g)||[]).length,1,`${path} shared control row`)
+   assert.doesNotMatch(html,/class="(?:catalog-index|public-filters)"/,`${path} no separate sidebar or filter row`)
+  }
   const ids=[...html.matchAll(/\sid="([^"<>]+)"/g)].map(match=>match[1])
   assert.equal(new Set(ids).size,ids.length,`${path} unique DOM identifiers`)
   const parsed=routes.parseSitePath(path.split('/').filter(Boolean))
@@ -88,6 +92,7 @@ for(let offset=0;offset<paths.length;offset+=4){
 checks.push(`${pages.size} English/Arabic public URLs return 200 with language, direction, main, h1, unique identifiers and canonical`)
 checks.push('Both homepages expose all six primary navigation destinations in their locale')
 checks.push('Solutions and Capabilities render one selected reading area in each locale')
+checks.push('Solutions, Capabilities and Industries use one shared control row without a catalogue sidebar')
 let links=0,anchors=0
 for(const [path,html] of pages){
  for(const match of html.matchAll(/\shref="([^"<>]+)"/g)){

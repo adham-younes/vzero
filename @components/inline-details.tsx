@@ -15,6 +15,7 @@ import {usePathname} from 'next/navigation'
 import {CopyBlocks,usePageCopy,type CopyBlock} from './public-copy'
 import ProcurementReview from './procurement-review'
 import {splitCopySections} from './public-layout'
+import {CatalogChoices,CatalogSelect,CatalogToolbar} from './catalog-controls'
 
 export const industryKeys=['banking','insurance','healthcare','retail','telecommunications','travel','professional-services','logistics','energy','distribution']
 export const industryCapabilities=['agent-orchestration','process-automation','employee-operations','customer-service','agent-assist','agent-orchestration','enterprise-knowledge','agent-orchestration','enterprise-knowledge','process-automation']
@@ -22,7 +23,7 @@ export const industrySolutions=['service','documents','customer-operations','ser
 export type HeadingLevel=2|3|4|5|6
 const nextHeading=(level:HeadingLevel)=>Math.min(6,level+1) as HeadingLevel
 const heading=(level:HeadingLevel)=>`h${level}` as ElementType
-export type InlinePanelItem={key:string;title:string;description?:string;icon?:ReactNode;content:ReactNode}
+export type InlinePanelItem={key:string;title:string;label?:string;description?:string;icon?:ReactNode;content:ReactNode}
 
 export const capabilityIcons:Record<string,LucideIcon>={
  'customer-service':MessagesSquare,
@@ -37,54 +38,39 @@ export const capabilityIcons:Record<string,LucideIcon>={
  'evaluation-observability':ChartNoAxesCombined,
 }
 
-export function CatalogWorkspace({items,queryKey,group,indexTitle,headingLevel=3}:{
+export function CatalogWorkspace({items,queryKey,group,indexTitle,headingLevel=3,controls,context,resultCount}:{
  items:InlinePanelItem[]
  queryKey:string
  group:string
  indexTitle:string
  headingLevel?:HeadingLevel
+ controls?:ReactNode
+ context?:ReactNode
+ resultCount?:number
 }){
  const [state,update]=useCatalogState({[queryKey]:''})
  const selected=items.find(item=>item.key===state[queryKey])||items[0]
- if(!selected)return null
 
  const Heading=heading(headingLevel)
- const indexHeadingId=`${group}-index-title`
  const detailId=`${group}-detail`
  const detailHeadingId=`${detailId}-title`
  const choose=(key:string)=>update({[queryKey]:key})
 
- return <div className="catalog-workspace">
-  <aside className="catalog-index" aria-labelledby={indexHeadingId}>
-   <Heading className="catalog-index-heading" id={indexHeadingId}>{indexTitle}</Heading>
-   <div className="catalog-choices" role="group" aria-labelledby={indexHeadingId}>
-    {items.map(item=><button
-     className="catalog-choice"
-     id={`${group}-${item.key}`}
-     key={item.key}
-     type="button"
-     aria-pressed={selected.key===item.key}
-     aria-controls={detailId}
-     onClick={()=>choose(item.key)}
-    >
-     {item.icon&&<span aria-hidden="true">{item.icon}</span>}
-     <span>{item.title}</span>
-    </button>)}
-   </div>
-   <label className="catalog-mobile-picker">
-    <span>{indexTitle}</span>
-    <select className="field" value={selected.key} aria-controls={detailId} onChange={event=>choose(event.target.value)}>
-     {items.map(item=><option key={item.key} value={item.key}>{item.title}</option>)}
-    </select>
-   </label>
-  </aside>
-  <article className="catalog-detail" id={detailId} key={selected.key} aria-labelledby={detailHeadingId}>
+ return <div className="catalog-stack">
+  <CatalogToolbar count={resultCount}>
+   {controls}
+   {selected&&<CatalogSelect label={indexTitle} value={selected.key} onChange={choose} controls={detailId}>
+    {items.map(item=><option key={item.key} value={item.key}>{item.label||item.title}</option>)}
+   </CatalogSelect>}
+  </CatalogToolbar>
+  {context}
+  {selected&&<article className="catalog-detail" id={detailId} key={selected.key} aria-labelledby={detailHeadingId}>
    <header className="catalog-detail-header">
     <Heading id={detailHeadingId}>{selected.title}</Heading>
     {selected.description&&<p>{selected.description}</p>}
    </header>
    {selected.content}
-  </article>
+  </article>}
  </div>
 }
 
@@ -159,23 +145,17 @@ export function CapabilityPanels({slugs,prefix,headingLevel=3,prioritizeRequirem
  const detailId=`${prefix}-capabilities-detail`
 
  return <>
-  <div className="catalog-related-choices" role="group" aria-label={t(['Supporting capabilities','القدرات الداعمة'])}>
-   {choices.map(service=>{
+  <CatalogChoices
+   items={choices.map(service=>{
     const Icon=capabilityIcons[service.slug]
-    return <button
-     className="catalog-related-choice"
-     id={`${prefix}-capabilities-${service.slug}`}
-     key={service.slug}
-     type="button"
-     aria-pressed={selected?.slug===service.slug}
-     aria-controls={detailId}
-     onClick={()=>update({capability:service.slug})}
-    >
-     <Icon aria-hidden="true"/>
-     <span>{t(service.detailTitle)}</span>
-    </button>
+    return {key:service.slug,label:t(service.title),icon:<Icon/>}
    })}
-  </div>
+   label={t(['Supporting capabilities','القدرات الداعمة'])}
+   selected={selected?.slug||''}
+   onChoose={value=>update({capability:value})}
+   controls={detailId}
+   idPrefix={`${prefix}-capabilities`}
+  />
   <div id={detailId}>
    {selected&&<section className="catalog-related-detail" key={selected.slug} aria-labelledby={`${detailId}-title`}>
     <header className="catalog-related-detail-header">
