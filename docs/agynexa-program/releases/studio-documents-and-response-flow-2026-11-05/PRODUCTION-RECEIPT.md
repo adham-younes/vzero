@@ -15,7 +15,7 @@ The laptop shutdown warning interrupted the broader browser acceptance. The TXT 
 
 Two Tripo raster prototypes cost 20 Studio credits total, leaving 180. The gray first output was rejected; the corrected green/black preview was shown privately. Neither is deployed; no mesh/animation was generated and Free-plan commercial-use limits remain unresolved. [Tripo details](TRIPO.md).
 
-Mail operates separately: [current mailbox migration receipt](../../OWNER-MAIL-2026-11-05.md) records verified DNS/receiving/internal delivery/archive and the remaining external automatic-reply and subscription-renewal checks. This product receipt does not claim those mail checks completed.
+Mail operates separately: [current mailbox migration receipt](../../OWNER-MAIL-2026-11-05.md) records verified DNS, external receipt/automatic reply and private archival for both mailboxes. SpaceMail renewal is now Off and domain renewal remains On. The historical preservation gap remains explicit. No application redeployment was needed for the mail closeout.
 
 ## Durable continuation
 

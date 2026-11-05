@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T13:22:54.583073+00:00",
+  "updated_at": "2026-11-05T13:29:47.108987+00:00",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -797,7 +797,7 @@
     "revision_date": "2026-10-28"
   },
   "owner_mail_migration": {
-    "state": "DNS_VERIFIED_PUBLIC_DELIVERY_AND_ARCHIVE_VERIFIED",
+    "state": "DNS_EXTERNAL_ROUND_TRIPS_ARCHIVE_VERIFIED_SPACEMAIL_RENEWAL_OFF",
     "receipt": "OWNER-MAIL-2026-11-05.md",
     "source_backup_messages": 414,
     "automatic_replies_enabled": true,
@@ -806,13 +806,30 @@
     "merge_commit": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
     "archived_historical_messages": 414,
     "public_mailbox_interface": false,
-    "next_step": "Observe an owner-controlled external sender test for automatic reply delivery; renewal cancellation is not independently verified. Historical preservation is verified only through the 414-message snapshot.",
+    "next_step": "No migration activation step remains. Preserve the historical backup evidence gap; verify any later messages only if recovered from the old provider. No public mailbox UI and no automatic deletion.",
     "historical_archive_bytes": 11065933,
     "source_backup_complete_at": "2026-11-05T11:30:17+02:00",
     "latest_legacy_sync": "LOGIN_REJECTED_AFTER_OWNER_REPORTED_DISCONNECTION",
     "legacy_service_disconnected_owner_report": true,
-    "external_auto_reply_delivery_verified": false,
-    "deployment_scope": "Mailbox privacy correction; separate from newer product releases"
+    "external_auto_reply_delivery_verified": true,
+    "deployment_scope": "Mailbox privacy correction; separate from newer product releases",
+    "source_backup_mailbox_scope": "adham@agynexa.si only; no historical Nexa backup established",
+    "external_auto_reply_mailboxes": [
+      "adham@agynexa.si",
+      "nexa.agent@agynexa.si"
+    ],
+    "external_test_auto_reply_counts": [
+      1,
+      1
+    ],
+    "native_resend_agent_actions_enabled": false,
+    "spacemail_auto_renew": false,
+    "spacemail_connections": 0,
+    "spacemail_expiry": "2026-11-15",
+    "domain_auto_renew": true,
+    "domain_expiry": "2027-10-16",
+    "dmarc_dns_verified": true,
+    "dmarc_gmail_header_pass_verified": false
   },
   "historical_product_release_before_platform_upgrade": {
     "implementation_commit": "ffa354f180babbae60ded85516630ca75a038d0b",
