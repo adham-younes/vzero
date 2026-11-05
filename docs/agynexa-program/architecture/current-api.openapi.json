@@ -3,7 +3,7 @@
   "info": {
     "title": "AGYNEXA implemented HTTP API",
     "version": "2026-11-05-owner-mail",
-    "description": "59 implemented HTTP operations. Owner mailbox deployment and routing state are recorded in OWNER-MAIL-2026-11-05.md."
+    "description": "57 implemented HTTP operations. Owner mailbox deployment and routing state are recorded in OWNER-MAIL-2026-11-05.md."
   },
   "servers": [
     {
@@ -3823,40 +3823,6 @@
           },
           "503": {
             "description": "Model unavailable"
-          }
-        }
-      }
-    },
-    "/api/owner-mail/archive": {
-      "get": {
-        "summary": "archive get",
-        "description": "Existing live owner session and immutable admin allowlist. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
-        "responses": {
-          "200": {
-            "description": "Authorized operation completed"
-          },
-          "403": {
-            "description": "Access denied"
-          },
-          "503": {
-            "description": "Temporarily unavailable"
-          }
-        }
-      },
-      "patch": {
-        "summary": "archive patch",
-        "description": "Existing live owner session and immutable admin allowlist. Private/no-store. No message deletion operation.",
-        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
-        "responses": {
-          "200": {
-            "description": "Authorized operation completed"
-          },
-          "403": {
-            "description": "Access denied"
-          },
-          "503": {
-            "description": "Temporarily unavailable"
           }
         }
       }

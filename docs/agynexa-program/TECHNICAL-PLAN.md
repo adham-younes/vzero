@@ -171,3 +171,6 @@ The live release combines search, filter and item selection in one control row u
 ## Owner mail, 5 November 2026
 
 [Current mailbox scope](OWNER-MAIL-2026-11-05.md): private service-only archive/storage, signed Resend Inbox webhooks, durable leased jobs, immutable native replies, trusted sender authentication, bounded Groq inference, owner-only dashboard and temporary historical import. Local RLS/concurrency tests passed. DNS and activation remain pending.
+
+
+Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 historical messages are verified in private storage; native Resend remains the mailbox interface.
