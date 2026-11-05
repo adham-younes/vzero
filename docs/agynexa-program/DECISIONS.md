@@ -232,3 +232,7 @@ The owner's direct correction requires related information in the current contex
 ## D-2026-11-05 — Publish the verified public navigation candidate
 
 The owner authorized publication via the existing GitHub and Vercel workflow and requested bilingual checks on the official domain. The release covers public navigation and presentation. The protected assets are the existing Hero components, homepage video and visual identity. Studio remains paused and outside the release scope. [Release and evidence](releases/public-navigation-2026-10-27/README.md).
+
+### Owner feedback on the first production build
+
+The owner rejected the two-link header and the oversized nested cards shown in Arabic Sales. Restore the baseline desktop destinations and add Industries. Use one shared index and reading area for public catalogues, with a native select on mobile, equal workflow summary columns and shallow in-page capability selection. [Design contract](../../DESIGN.md) · [Release receipt](releases/public-navigation-2026-10-27/README.md).
