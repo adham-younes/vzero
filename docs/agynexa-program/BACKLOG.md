@@ -126,3 +126,7 @@ The owner rejected the earlier content Preview and approved a complete global En
 ## Public scan follow-up — owner supplied,24October
 
 [Scan interpretation](releases/heronsignal-sitewide-2026-10-24/README.md): add a suitable social sharing image; assess CSP with report-only observation before enforcement; frame protections must preserve intentional `/widget/*` third-party embedding. These are pending separate bounded changes, not included in the exact HeronSignal snippet request. The94score/363ms scan does not establish field Core Web Vitals or search rankings.
+
+## Owner mailbox migration — active
+
+[Receipt](OWNER-MAIL-2026-11-05.md). Implemented private archive and reply queue; remaining: production deployment, import/verification of 414 historical messages, live diagnostic, worker activation, DNS cutover and final SpaceMail delta backup. No paid upgrade.

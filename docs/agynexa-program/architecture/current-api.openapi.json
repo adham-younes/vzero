@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AGYNEXA implemented HTTP API",
-    "version": "2026-10-22-nexa-cloud",
-    "description": "53 implemented HTTP operations. NEXA cloud increment and actual deployment state: docs/launch/2026-10-22/NEXA-CLOUD-MAIL.md. Private approval/provider acceptance is not external delivery."
+    "version": "2026-11-05-owner-mail",
+    "description": "58 implemented HTTP operations. Owner mailbox deployment and routing state are recorded in OWNER-MAIL-2026-11-05.md."
   },
   "servers": [
     {
@@ -3026,7 +3026,7 @@
       "post": {
         "operationId": "post_api_webhooks_resend",
         "summary": "POST /api/webhooks/resend",
-        "description": "Raw UTF-8 body up to 65536 bytes; five second read deadline. Verify signature freshness before fixed provider fetch. Durable event/payload-hash lease and atomic completion; duplicate acknowledged only after completion. Disabled unless receiver, secret and ingress are configured. No HTML/attachment fetch or autonomous actions.",
+        "description": "Svix signature verification. OWNER_MAIL_ENABLED selects durable private archive and queue for two allowlisted inboxes; legacy Nexa ingress remains available when disabled. Automatic sending requires per-inbox settings.",
         "security": [],
         "x-implementation-status": "DEPLOYED_SCOPED_VERIFICATION_MAIL_TRANSPORT_OFF",
         "responses": {
@@ -3756,6 +3756,92 @@
           },
           "503": {
             "description": "Sanitized mail unavailable; never raw upstream error"
+          }
+        }
+      }
+    },
+    "/api/owner-mail/import": {
+      "post": {
+        "summary": "import post",
+        "description": "Dedicated server bearer token; import token also expires. Private/no-store. No message deletion operation.",
+        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "responses": {
+          "200": {
+            "description": "Authorized operation completed"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "503": {
+            "description": "Temporarily unavailable"
+          }
+        }
+      },
+      "get": {
+        "summary": "import get",
+        "description": "Dedicated server bearer token; import token also expires. Private/no-store. No message deletion operation.",
+        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "responses": {
+          "200": {
+            "description": "Authorized operation completed"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "503": {
+            "description": "Temporarily unavailable"
+          }
+        }
+      }
+    },
+    "/api/owner-mail/worker": {
+      "post": {
+        "summary": "worker post",
+        "description": "Dedicated server bearer token; import token also expires. Private/no-store. No message deletion operation.",
+        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "responses": {
+          "200": {
+            "description": "Authorized operation completed"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "503": {
+            "description": "Temporarily unavailable"
+          }
+        }
+      }
+    },
+    "/api/owner-mail/archive": {
+      "get": {
+        "summary": "archive get",
+        "description": "Existing live owner session and immutable admin allowlist. Private/no-store. No message deletion operation.",
+        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "responses": {
+          "200": {
+            "description": "Authorized operation completed"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "503": {
+            "description": "Temporarily unavailable"
+          }
+        }
+      },
+      "patch": {
+        "summary": "archive patch",
+        "description": "Existing live owner session and immutable admin allowlist. Private/no-store. No message deletion operation.",
+        "x-implementation-status": "IMPLEMENTED_PENDING_DEPLOYMENT",
+        "responses": {
+          "200": {
+            "description": "Authorized operation completed"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "503": {
+            "description": "Temporarily unavailable"
           }
         }
       }
