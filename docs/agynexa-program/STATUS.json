@@ -1035,5 +1035,18 @@
       "token_expires_at": "2026-12-05T15:45:15.028Z",
       "password_setup": "AUTHENTICATED_FORM_READY_USER_SAVE_NOT_CONFIRMED"
     }
+  },
+  "codex_cloud_2026_11_05": {
+    "status": "CONFIGURATION_PUBLISHED",
+    "environment": "vzero",
+    "repository": "adham-younes/vzero",
+    "ref": "main",
+    "start_skill": "cloud/START-SKILL.md",
+    "receipt": "cloud/README.md",
+    "public_internet": "ALREADY_ENABLED_OBSERVED",
+    "computer_browser": "UNSUPPORTED_IN_CODEX_CLOUD_PER_OFFICIAL_DOCS",
+    "all_connectors": "NOT_ACTIVATED_OR_RUNTIME_VERIFIED",
+    "existing_task_head": "NOT_VERIFIED",
+    "secrets_copied": false
   }
 }
