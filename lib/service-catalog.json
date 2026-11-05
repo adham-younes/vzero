@@ -86,16 +86,16 @@
       }
     ],
     "seo": [
-      "Explore customer service agent workflows: understand requests, apply company guidance, coordinate resolution and keep staff in control of exceptions.",
-      "تعرّف على سير عمل وكلاء خدمة العملاء، من فهم الطلب وإرشادات الشركة إلى تنسيق المعالجة وإحالة الاستثناءات للمسؤول."
+      "Prepare responses from approved service guidance and organize the next step for each case. Test the role in Studio before connecting a customer channel or case-management system.",
+      "جهّز الردود من إرشادات الخدمة المعتمدة ونظّم الخطوة التالية لكل حالة. اختبر الدور في الاستوديو قبل ربط قناة عملاء أو نظام لإدارة الحالات."
     ],
     "detailTitle": [
-      "Customer service that keeps the whole case in view",
-      "خدمة عملاء تحافظ على سياق الحالة"
+      "AI agents for customer service",
+      "وكلاء ذكاء اصطناعي لخدمة العملاء"
     ],
     "detailOffer": [
-      "A service agent needs to understand the request, find the applicable guidance and help the case reach its next useful step. In an Agent Builder, that role connects customer context with the work of the people responsible for resolution.",
-      "يحتاج وكيل الخدمة إلى فهم الطلب ومعرفة الإجراء المناسب ومساعدة الحالة على الوصول إلى الخطوة التالية. ويجمع تصميم دوره بين سياق العميل والعمل الذي يتولاه مسؤولو المعالجة."
+      "Prepare responses from approved service guidance and organize the next step for each case. Test the role in Studio before connecting a customer channel or case-management system.",
+      "جهّز الردود من إرشادات الخدمة المعتمدة ونظّم الخطوة التالية لكل حالة. اختبر الدور في الاستوديو قبل ربط قناة عملاء أو نظام لإدارة الحالات."
     ]
   },
   {
@@ -185,16 +185,16 @@
       }
     ],
     "seo": [
-      "Design employee agent roles around procedures, internal requests and cross-team dependencies, with clear information, ownership and access boundaries.",
-      "افهم دور الوكلاء في إجراءات الموظفين والطلبات الداخلية وتبعيات الأقسام، مع وضوح المعلومات والمسؤوليات وحدود الوصول."
+      "Help employees understand procedures and prepare complete requests. Use the company’s approved knowledge, with HR and IT decisions kept with their responsible owners.",
+      "ساعد الموظفين على فهم الإجراءات وتجهيز طلبات مكتملة. استخدم معرفة الشركة المعتمدة، مع بقاء قرارات الموارد البشرية والتقنية لدى أصحابها."
     ],
     "detailTitle": [
-      "Internal requests that keep moving between teams",
-      "طلبات داخلية تتكامل خطواتها بين الأقسام"
+      "AI agents for employee operations",
+      "وكلاء لإجراءات الموظفين"
     ],
     "detailOffer": [
-      "An employee request often depends on several departments. A useful agent role helps people find the procedure, prepare the right information and understand what the next team needs before its work can begin.",
-      "يرتبط طلب الموظف أحيانًا بأكثر من قسم. ويساعد دور الوكيل على معرفة الإجراء وتجهيز المعلومات وفهم ما يحتاجه الفريق التالي حتى يبدأ عمله."
+      "Help employees understand procedures and prepare complete requests. Use the company’s approved knowledge, with HR and IT decisions kept with their responsible owners.",
+      "ساعد الموظفين على فهم الإجراءات وتجهيز طلبات مكتملة. استخدم معرفة الشركة المعتمدة، مع بقاء قرارات الموارد البشرية والتقنية لدى أصحابها."
     ]
   },
   {
@@ -284,16 +284,16 @@
       }
     ],
     "seo": [
-      "Understand agentic process automation: triggers, business state, decisions, tools and exceptions that connect individual steps to an operational result.",
-      "افهم أتمتة العمليات بالوكلاء، من الحدث وحالة العمل إلى القرارات والأدوات والاستثناءات التي تربط الخطوات بالنتيجة."
+      "Turn a recurring task into defined inputs, a useful output and a review point. Test the reasoning in Studio and scope the system actions needed for connected operation.",
+      "حوّل المهمة المتكررة إلى مدخلات محددة ومخرج مفيد ونقطة مراجعة. اختبر الاستدلال في الاستوديو وحدّد إجراءات الأنظمة اللازمة للتشغيل المتصل."
     ],
     "detailTitle": [
-      "A business process needs more than a sequence of answers",
-      "من خطوات متفرقة إلى عملية مترابطة"
+      "Agent-assisted business workflows",
+      "سير عمل بمساعدة الوكلاء"
     ],
     "detailOffer": [
-      "A process has a starting event, rules for moving forward and a condition that says the work is complete. Agentic automation places interpretation inside that structure while keeping business decisions and operational state explicit.",
-      "للعملية حدث يبدأها وقواعد للانتقال وشرط يحدد اكتمالها. وتدخل قدرات الوكيل على الفهم ضمن هذا التنظيم، مع بقاء قرارات العمل وحالته واضحة."
+      "Turn a recurring task into defined inputs, a useful output and a review point. Test the reasoning in Studio and scope the system actions needed for connected operation.",
+      "حوّل المهمة المتكررة إلى مدخلات محددة ومخرج مفيد ونقطة مراجعة. اختبر الاستدلال في الاستوديو وحدّد إجراءات الأنظمة اللازمة للتشغيل المتصل."
     ]
   },
   {
@@ -383,16 +383,16 @@
       }
     ],
     "seo": [
-      "Explore agent knowledge: retrieval, missing information and inspectable sources, with a clear distinction between guidance and current business records.",
-      "اربط دور الوكيل بمعرفة الشركة المعتمدة، وافهم الاسترجاع ومراجع الإجابة ونقص المعلومات والفرق بين الإرشاد والسجلات الحالية."
+      "Give the agent relevant text and Markdown knowledge, then inspect the references behind its answers. Use approved procedures and examples that match the responsibility you are testing.",
+      "زوّد الوكيل بمعرفة نصية وMarkdown مناسبة، ثم افحص مراجع الإجابات. استخدم إجراءات وأمثلة معتمدة تطابق المسؤولية التي تختبرها."
     ],
     "detailTitle": [
-      "Company knowledge that supports the task at hand",
-      "معرفة الشركة في سياق المهمة"
+      "Company knowledge for AI agents",
+      "معرفة الشركة لوكلاء الذكاء الاصطناعي"
     ],
     "detailOffer": [
-      "An agent needs the relevant part of company knowledge at the moment a question or decision requires it. Retrieval brings that material into the response context, and source references let the reader inspect its basis.",
-      "يحتاج الوكيل إلى الجزء المناسب من معرفة الشركة عندما يتطلبه سؤال أو قرار. ويصل الاسترجاع بهذه المادة إلى سياق الإجابة، وتتيح المراجع للقارئ فحص أساسها."
+      "Give the agent relevant text and Markdown knowledge, then inspect the references behind its answers. Use approved procedures and examples that match the responsibility you are testing.",
+      "زوّد الوكيل بمعرفة نصية وMarkdown مناسبة، ثم افحص مراجع الإجابات. استخدم إجراءات وأمثلة معتمدة تطابق المسؤولية التي تختبرها."
     ]
   },
   {
@@ -482,16 +482,16 @@
       }
     ],
     "seo": [
-      "Understand multi-agent orchestration through specialist roles, task dependencies, shared context, handoffs and the authority that governs each step.",
-      "افهم تنسيق الوكلاء المتخصصين وتبعيات المهام والسياق المشترك والإحالات والصلاحيات التي تضبط كل خطوة."
+      "Define what each specialist agent receives and produces. Evaluate the roles separately, then establish the execution path needed for automatic handoffs and shared process state.",
+      "حدّد ما يستلمه كل وكيل متخصص وما ينتجه. قيّم الأدوار منفصلة، ثم جهّز مسار التنفيذ اللازم للانتقال التلقائي وحالة العملية المشتركة."
     ],
     "detailTitle": [
-      "Specialist agents need a way to work together",
-      "عمل مترابط لوكلاء تختلف مسؤولياتهم"
+      "Design roles that work together",
+      "صمّم أدوارًا تعمل معًا"
     ],
     "detailOffer": [
-      "Several agents can contribute to one business process when their responsibilities are distinct. Orchestration defines who handles each part, what information passes between roles and what must happen before the work can continue.",
-      "قد يشارك عدة وكلاء في عملية واحدة عندما تختلف مسؤولياتهم فعلًا. ويحدد التنسيق دور كل منهم والمعلومات المنتقلة بين الأدوار وما يلزم قبل متابعة العمل."
+      "Define what each specialist agent receives and produces. Evaluate the roles separately, then establish the execution path needed for automatic handoffs and shared process state.",
+      "حدّد ما يستلمه كل وكيل متخصص وما ينتجه. قيّم الأدوار منفصلة، ثم جهّز مسار التنفيذ اللازم للانتقال التلقائي وحالة العملية المشتركة."
     ]
   },
   {
@@ -581,16 +581,16 @@
       }
     ],
     "seo": [
-      "Understand business-system connections for agents: authorized records, narrow tools, read and write permissions, destination checks and failure handling.",
-      "افهم اتصال الوكلاء بأنظمة العمل: السجلات المسموحة والأدوات المحددة وصلاحيات القراءة والتعديل وفحص النتيجة ومعالجة الإخفاق."
+      "Scope the exact record or action your agent needs from another system. Confirm the interface, permission and success response before including it in an activated workflow.",
+      "حدّد السجل أو الإجراء الذي يحتاجه الوكيل من نظام آخر. تأكد من الواجهة والصلاحية وتأكيد النجاح قبل إدراجه في سير عمل مفعّل."
     ],
     "detailTitle": [
-      "A connection gives an agent a defined way to act",
-      "اتصال محدد بين دور الوكيل وأنظمة العمل"
+      "Connect agents to business operations",
+      "اربط الوكلاء بعمليات الأعمال"
     ],
     "detailOffer": [
-      "An agent may need information from a business system or a permitted change in that system. A useful connection describes the exact operation, the identity carrying it out and the result the workflow needs back.",
-      "قد يحتاج الوكيل إلى معلومة من نظام العمل أو تغيير مسموح داخله. ويحدد الاتصال العملية بدقة والهوية التي تجريها والنتيجة التي يحتاجها سير العمل لمتابعة المهمة."
+      "Scope the exact record or action your agent needs from another system. Confirm the interface, permission and success response before including it in an activated workflow.",
+      "حدّد السجل أو الإجراء الذي يحتاجه الوكيل من نظام آخر. تأكد من الواجهة والصلاحية وتأكيد النجاح قبل إدراجه في سير عمل مفعّل."
     ]
   },
   {
@@ -680,16 +680,16 @@
       }
     ],
     "seo": [
-      "Explore voice agents as part of a business process: understand speech, preserve important details, check actions and transfer context to a human.",
-      "تعرّف على دور الوكيل الصوتي في عملية العمل، من فهم الكلام وحفظ التفاصيل إلى فحص الإجراء ونقل المعلومات للموظف."
+      "Define the conversation, information needed and human handover. Test the role in text first; telephony, speech processing and live customer channels require a separate operating setup.",
+      "حدّد الحوار والمعلومات المطلوبة والإحالة للموظف. اختبر الدور نصيًا أولًا؛ وتحتاج الهواتف ومعالجة الصوت وقنوات العملاء الحية إلى إعداد تشغيل مستقل."
     ],
     "detailTitle": [
-      "A voice conversation is part of a larger job",
-      "المحادثة الصوتية ضمن مهمة عمل كاملة"
+      "Design voice agent workflows",
+      "صمّم مسارات الوكلاء الصوتيين"
     ],
     "detailOffer": [
-      "A caller may be explaining a problem, checking a service or asking for a change. The voice role needs to preserve what matters, establish the permitted next step and know when a person should continue the conversation.",
-      "قد يشرح المتصل مشكلة أو يستفسر عن خدمة أو يطلب تغييرًا. ويحتاج دور الوكيل الصوتي إلى حفظ التفاصيل المهمة وتحديد الخطوة المسموحة ومعرفة متى يتولى الموظف الحوار."
+      "Define the conversation, information needed and human handover. Test the role in text first; telephony, speech processing and live customer channels require a separate operating setup.",
+      "حدّد الحوار والمعلومات المطلوبة والإحالة للموظف. اختبر الدور نصيًا أولًا؛ وتحتاج الهواتف ومعالجة الصوت وقنوات العملاء الحية إلى إعداد تشغيل مستقل."
     ]
   },
   {
@@ -779,16 +779,16 @@
       }
     ],
     "seo": [
-      "Understand employee-side AI assistance: relevant case context, source-based guidance and useful preparation while a person controls the customer interaction.",
-      "افهم مساندة الموظف بالسياق المناسب وإرشادات المصادر وتجهيز العمل، مع احتفاظه بإدارة التفاعل والقرار."
+      "Prepare summaries, research and draft responses while a person leads the work. Keep the evidence and unresolved questions visible so the reviewer can decide what to use.",
+      "جهّز الملخصات والأبحاث ومسودات الرد بينما يقود الموظف العمل. أظهر الأدلة والأسئلة المفتوحة ليقرر المراجع ما يستخدمه."
     ],
     "detailTitle": [
-      "Useful context while a person leads the work",
-      "معلومات مناسبة بينما يقود الموظف العمل"
+      "AI assistance for your team",
+      "مساعدة ذكية لفريقك"
     ],
     "detailOffer": [
-      "An employee may need a case history, policy detail or proposed response while handling a live task. Agent assistance organizes that material around the employee’s immediate question and leaves the interaction under their control.",
-      "قد يحتاج الموظف أثناء المهمة إلى تاريخ الحالة أو تفصيل في السياسة أو رد مقترح. وتنظم المساندة هذه المادة حول حاجته الحالية، مع احتفاظه بإدارة التفاعل."
+      "Prepare summaries, research and draft responses while a person leads the work. Keep the evidence and unresolved questions visible so the reviewer can decide what to use.",
+      "جهّز الملخصات والأبحاث ومسودات الرد بينما يقود الموظف العمل. أظهر الأدلة والأسئلة المفتوحة ليقرر المراجع ما يستخدمه."
     ]
   },
   {
@@ -878,16 +878,16 @@
       }
     ],
     "seo": [
-      "Understand agent governance through access boundaries, exact approvals, change control and the distinction between a proposal and a confirmed action.",
-      "افهم حوكمة الوكلاء عبر حدود الوصول والاعتماد المحدد وضبط التغيير والفرق بين المقترح والإجراء المؤكد."
+      "Define the data an agent may use and the decisions that stay with people. Review the workspace boundaries and agree controls for any external action before production activation.",
+      "حدّد البيانات التي يستخدمها الوكيل والقرارات التي تبقى لدى الأشخاص. راجع حدود المساحة واتفق على ضوابط الإجراءات الخارجية قبل التفعيل الإنتاجي."
     ],
     "detailTitle": [
-      "Authority should be clear before an agent acts",
-      "صلاحيات واضحة قبل إجراء الوكيل"
+      "Agent permissions and review",
+      "صلاحيات الوكلاء ومراجعتهم"
     ],
     "detailOffer": [
-      "A business role describes the work an agent helps with. Authority determines which information it may use, which action it may request and whose decision is required before anything consequential happens.",
-      "يصف الدور العمل الذي يساعد فيه الوكيل. أما الصلاحية فتحدد المعلومات التي يستخدمها والإجراء الذي يطلبه وصاحب القرار المطلوب قبل أي تغيير مؤثر."
+      "Define the data an agent may use and the decisions that stay with people. Review the workspace boundaries and agree controls for any external action before production activation.",
+      "حدّد البيانات التي يستخدمها الوكيل والقرارات التي تبقى لدى الأشخاص. راجع حدود المساحة واتفق على ضوابط الإجراءات الخارجية قبل التفعيل الإنتاجي."
     ]
   },
   {
@@ -977,16 +977,16 @@
       }
     ],
     "seo": [
-      "Evaluate business agents by task outcomes, source support, exceptions and human effort. Understand how run records help locate failures and compare changes.",
-      "قيّم الوكلاء بنتائج المهام وسند المصادر والاستثناءات وجهد المراجعة، وافهم دور سجلات التشغيل في تحديد الإخفاق ومقارنة التغييرات."
+      "Test representative tasks, inspect the sources and compare the result with the work your team needs. Track correction effort and failures alongside speed and usage.",
+      "اختبر مهام ممثلة وافحص المصادر وقارن النتيجة بما يحتاجه الفريق. تابع جهد التصحيح والإخفاقات إلى جانب السرعة والاستخدام."
     ],
     "detailTitle": [
-      "Know whether the work meets its purpose",
-      "اعرف هل تحقق المهمة غرضها"
+      "Evaluate agent work and activity",
+      "قيّم عمل الوكيل ونشاطه"
     ],
     "detailOffer": [
-      "A clear answer can still omit a fact, choose the wrong next step or leave the business task unfinished. Evaluation establishes what a useful result means; operational visibility helps explain where a run met or missed that standard.",
-      "قد يسقط الرد الواضح حقيقة أو يختار خطوة غير مناسبة أو يترك المهمة ناقصة. ويحدد التقييم معنى النتيجة المفيدة، بينما تساعد متابعة التشغيل على فهم موضع النجاح أو الإخفاق."
+      "Test representative tasks, inspect the sources and compare the result with the work your team needs. Track correction effort and failures alongside speed and usage.",
+      "اختبر مهام ممثلة وافحص المصادر وقارن النتيجة بما يحتاجه الفريق. تابع جهد التصحيح والإخفاقات إلى جانب السرعة والاستخدام."
     ]
   }
 ]

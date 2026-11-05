@@ -14,6 +14,7 @@ import Link from './locale-link'
 import {usePathname} from 'next/navigation'
 import {CopyBlocks,usePageCopy,type CopyBlock} from './public-copy'
 import ProcurementReview from './procurement-review'
+import {CapabilityAvailability,WorkflowLaunch} from './platform-experience'
 import {splitCopySections} from './public-layout'
 import {CatalogChoices,CatalogSelect,CatalogToolbar} from './catalog-controls'
 
@@ -129,7 +130,7 @@ export function CapabilityBody({slug,prefix='capability',headingLevel=2,includeR
  includeSystemRequirements?:boolean
 }){
  const {t}=useLanguage();const service=services.find(item=>item.slug===slug)!;const Heading=heading(headingLevel);const Subheading=heading(nextHeading(headingLevel))
- return <div className="inline-detail-content">{includeIntro&&<p className="inline-detail-lead">{t(service.detailOffer)}</p>}<section id={`${prefix}-overview`} className="public-facts-grid">{[[['Teams and responsibilities','الفرق والمسؤوليات'],service.audience],[['The process to improve','العملية المطلوب تحسينها'],service.problem]].map(([label,copy])=><article key={label[0]}><Heading>{t(label)}</Heading><p>{t(copy)}</p></article>)}</section>
+ return <div className="inline-detail-content">{includeIntro&&<p className="inline-detail-lead">{t(service.detailOffer)}</p>}<CapabilityAvailability slug={slug}/><section id={`${prefix}-overview`} className="public-facts-grid">{[[['Teams and responsibilities','الفرق والمسؤوليات'],service.audience],[['The process to improve','العملية المطلوب تحسينها'],service.problem]].map(([label,copy])=><article key={label[0]}><Heading>{t(label)}</Heading><p>{t(copy)}</p></article>)}</section>
   <section id={`${prefix}-workflow`} className="public-editorial-section"><div className="public-section-label"><span aria-hidden="true">01</span><Heading>{t(['How the process works','كيف تسير العملية؟'])}</Heading><p className="muted mt-5">{t(service.inputs)}</p></div><ol className="service-flow">{service.steps.map(step=><li key={step[0]}><p>{t(step)}</p></li>)}</ol></section>
   <section className="public-editorial-section"><div className="public-section-label"><span aria-hidden="true">02</span><Heading>{t(['The process in practice','تطبيق العملية'])}</Heading></div><ul className="public-output-list">{service.outputs.map(output=><li key={output[0]}>{t(output)}</li>)}</ul></section>
   <section id={`${prefix}-requirements`} className="public-editorial-section"><div className="public-section-label"><span aria-hidden="true">03</span><Heading>{t(['Decisions and operating requirements','القرارات ومتطلبات التشغيل'])}</Heading></div><div className="public-reading"><Subheading>{t(['Decisions and operating controls','القرارات وضوابط التشغيل'])}</Subheading><p>{t(service.controls)}</p><details className="public-disclosure"><summary>{t(['Evaluation checks and industry context','فحوص التقييم وسياق القطاعات'])}</summary><Subheading>{t(['Evaluation checks','فحوص التقييم'])}</Subheading><p>{t(service.metrics)}</p><Subheading>{t(['Relevant industries','القطاعات ذات الصلة'])}</Subheading><p>{t(service.industries)}</p></details>{includeSystemRequirements&&<SystemRequirements systems={service.systems} headingLevel={nextHeading(headingLevel)}/>}</div></section>
@@ -208,6 +209,7 @@ export function WorkflowBody({slug,prefix='workflow',headingLevel=2,includeIntro
     <p className="catalog-workflow-audience">{t(solution.audience)}</p>
     <dl className="catalog-workflow-facts">{facts}</dl>
    </section>
+   <WorkflowLaunch slug={slug}/>
    {capabilities}
    <details className="catalog-long-reading">
     <summary><span>{t(['Read the full workflow','اقرأ شرح المسار كاملًا'])}</span><ChevronDown size={16} aria-hidden="true"/></summary>
@@ -236,6 +238,7 @@ export function WorkflowBody({slug,prefix='workflow',headingLevel=2,includeIntro
     <ProcurementReview id={`${prefix}-review-workspace`} headingLevel={headingLevel}/>
    </details>}
   </section>}
+  <WorkflowLaunch slug={slug}/>
   {capabilities}
  </div>
 }

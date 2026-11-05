@@ -16,10 +16,10 @@ export function parseWorkAction(body:Record<string,unknown>):{requestKey:string;
  if(!['agent.create','project.create','project.set_status','task.create','task.set_status'].includes(String(kind)))throw new InputError('invalid_action')
  const p=body.payload;let payload:Record<string,unknown>
  if(kind==='agent.create'){
-  exact(p,['name','instructions','language','template','model','builder']);if(p.builder!==true)throw new InputError('invalid_input')
-  text(p.name,100,1);text(p.instructions,6000,1)
-  const settings=agentSettings({...p,requestKey},true);if(!('template' in settings))throw new InputError('invalid_input')
-  payload={name:settings.name,instructions:settings.instructions,language:settings.language,template:settings.template,model:settings.model,builder:true}
+  if(!p||typeof p!=='object'||Array.isArray(p))throw new InputError('invalid_input');const input=p as Record<string,unknown>;if(Object.keys(input).some(k=>!['name','instructions','language','template','model','builder','sector','tools'].includes(k)))throw new InputError('invalid_input');if(input.builder!==true)throw new InputError('invalid_input')
+  text(input.name,100,1);text(input.instructions,6000,1)
+  const settings=agentSettings({...input,requestKey},true);if(!('template' in settings))throw new InputError('invalid_input')
+  payload={name:settings.name,instructions:settings.instructions,language:settings.language,template:settings.template,model:settings.model,builder:true,sector:settings.sector,tools:settings.tools}
  }else if(kind==='project.create'){
   exact(p,['name','description']);payload={name:text(p.name,100,1),description:text(p.description,3000)}
  }else if(kind==='task.create'){

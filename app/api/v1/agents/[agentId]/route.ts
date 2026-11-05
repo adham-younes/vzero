@@ -1,3 +1,4 @@
+import {normalizeAgent} from '@/lib/studio/settings'
 import {readMutation,InputError} from '@/lib/account-validation'
 import {json,failure} from '@/lib/supabase/server'
 import {agentId,agentSettings} from '@/lib/studio/validation'
@@ -16,7 +17,7 @@ export async function GET(_request:Request,context:Context){try{
  const {data,error}=await client.from('agents').select(agentFields).eq('id',id).eq('org_id',orgId).maybeSingle()
  if(error)throw error
  if(!data)throw new InputError('not_found',404)
- return json({agent:data})
+ return json({agent:normalizeAgent(data)})
 }catch(error){return failure(error)}}
 export async function PATCH(request:Request,context:Context){try{
  const body=await readMutation(request);const settings=agentSettings(body,false)
@@ -28,5 +29,5 @@ export async function PATCH(request:Request,context:Context){try{
   if(readError)throw readError
   throw new InputError(exists?'revision_conflict':'not_found',exists?409:404)
  }
- return json({agent:data})
+ return json({agent:normalizeAgent(data)})
 }catch(error){return failure(error)}}

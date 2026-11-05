@@ -1,10 +1,9 @@
-// Documented provider capabilities; actual account availability is checked separately.
+// Account access is checked separately from documented model capabilities.
 export const modelRegistry = {
- 'openai/gpt-oss-120b': {slot:1,stage:'production',text:true,images:false,tools:true,structured:true,context:131072,maxOutput:65536,inputPrice:0.15,outputPrice:0.60},
- 'openai/gpt-oss-20b': {slot:2,stage:'production',text:true,images:false,tools:true,structured:true,context:131072,maxOutput:65536,inputPrice:0.075,outputPrice:0.30},
- 'qwen/qwen3.8-27b': {slot:3,stage:'production',text:true,images:true,tools:true,structured:true,context:131072,maxOutput:16384,inputPrice:0.80,outputPrice:4.00},
+ 'gpt-6.1-terra': {slot:1,stage:'production',text:true,images:true,tools:true,structured:true,context:1050000,maxOutput:8192,inputPrice:1,outputPrice:5,reasoningEffort:'high'},
 } as const
 export type ModelId=keyof typeof modelRegistry
-export const pricingDate='2026-10-22'
-export const pricingSource='https://console.groq.com/docs/models'
-export const productionModels:ModelId[]=['openai/gpt-oss-120b','openai/gpt-oss-20b','qwen/qwen3.8-27b']
+export const defaultModel:ModelId='gpt-6.1-terra'
+export const pricingDate='2026-11-05'
+export const pricingSource='https://developers.openai.com/api/docs/models/gpt-6.1-terra'
+export const productionModels:ModelId[]=[defaultModel]

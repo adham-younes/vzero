@@ -1,7 +1,7 @@
 'use client'
 import Breadcrumbs from './breadcrumbs'
 import {useEffect,useState,useId} from 'react'
-import {Eye,EyeOff} from 'lucide-react'
+import {Eye,EyeOff,ArrowUpRight,LockKeyhole,SlidersHorizontal,FlaskConical,Mail} from 'lucide-react'
 import {useRouter} from 'next/navigation'
 import {useLanguage} from './agynexa-shell'
 import Link from './locale-link'
@@ -9,8 +9,15 @@ import {Button} from '@/components/ui/button'
 import {Input} from '@/components/ui/input'
 import services from '@/lib/service-catalog.json'
 import {solutions} from '@/lib/agynexa'
+import './account-workspace.css'
 
 const errors:Record<string,readonly string[]>={
+ chatgpt_unavailable:['ChatGPT sign-in is awaiting activation. Continue with your email account.','تسجيل الدخول عبر ChatGPT بانتظار التفعيل. يمكنك المتابعة بحساب البريد الإلكتروني.'],
+ chatgpt_cancelled:['ChatGPT sign-in was cancelled. You can try again or continue with email.','تم إلغاء تسجيل الدخول عبر ChatGPT. يمكنك المحاولة مجددًا أو المتابعة بالبريد.'],
+ chatgpt_failed:['ChatGPT sign-in could not be completed. Try again or use your email account.','تعذر إكمال تسجيل الدخول عبر ChatGPT. حاول مجددًا أو استخدم حساب البريد.'],
+ chatgpt_email_unverified:['Verify your email with OpenAI before using ChatGPT sign-in here.','تحقق من بريدك لدى OpenAI قبل استخدام تسجيل الدخول عبر ChatGPT هنا.'],
+ chatgpt_link_required:['An account with this email already exists. Sign in with email first, then return here and choose Continue with ChatGPT to link it.','يوجد حساب بهذا البريد بالفعل. سجّل الدخول بالبريد أولًا، ثم ارجع هنا واختر المتابعة باستخدام ChatGPT لربطه.'],
+ chatgpt_identity_conflict:['This ChatGPT identity is linked to another account. Sign in with the original account.','هوية ChatGPT هذه مرتبطة بحساب آخر. سجّل الدخول بالحساب الأصلي.'],
  delete_failed:['The record could not be deleted. Refresh its status before trying again.','تعذّر حذف السجل. حدّث حالته قبل المحاولة مجددًا.'],
  invalid_credentials:['The email address or password is incorrect. Check your details and try again.','البريد الإلكتروني أو كلمة المرور غير صحيحة. راجع البيانات وحاول مرة أخرى.'],
  registration_failed:['Unable to create this account. Check your details, or sign in if you already have an account.','تعذر إنشاء الحساب. راجع البيانات أو سجّل الدخول إذا كان لديك حساب بالفعل.'],
@@ -32,6 +39,14 @@ export function safeAuthReturn(value:string|null,ar:boolean){
 }
 export function AuthForm({initialMode='login',onSuccess}:{initialMode?:'login'|'register';onSuccess?:()=>void}){
  const {t,ar}=useLanguage();const router=useRouter();const [mode,setMode]=useState(initialMode);const [busy,setBusy]=useState(false);const [error,setError]=useState('');const [showPassword,setShowPassword]=useState(false);const passwordId=useId()
+ const [chatgpt,setChatgpt]=useState<{configured:boolean;href:string;clientId?:string}|null>(null);const [linkChatgpt,setLinkChatgpt]=useState(false);const providerHelpId=useId()
+ useEffect(()=>{
+  let active=true
+  const code=new URLSearchParams(window.location.search).get('error')
+  if(code&&code.startsWith('chatgpt_')&&errors[code])setError(code)
+  fetch('/api/auth/providers',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(async data=>{if(active)setChatgpt(data?.chatgpt||{configured:false,href:'/api/auth/chatgpt/start'});if(data?.chatgpt?.configured){const account=await fetch('/api/account',{cache:'no-store'});if(active)setLinkChatgpt(account.ok)}}).catch(()=>{if(active)setChatgpt({configured:false,href:'/api/auth/chatgpt/start'})})
+  return()=>{active=false}
+ },[])
  async function submit(event:React.FormEvent<HTMLFormElement>){
   event.preventDefault();setBusy(true);setError('');const data=new FormData(event.currentTarget)
   try{const response=await fetch(`/api/auth/${mode}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:data.get('name'),email:data.get('email'),password:data.get('password')})});const result=await response.json()
@@ -39,7 +54,12 @@ export function AuthForm({initialMode='login',onSuccess}:{initialMode?:'login'|'
    if(onSuccess)onSuccess();else{const params=new URLSearchParams(window.location.search);router.push(safeAuthReturn(params.get('returnTo')||params.get('next'),ar));router.refresh()}
   }catch{setError('temporarily_unavailable')}finally{setBusy(false)}
  }
- return <form className="grid gap-5" onSubmit={submit}>
+ return <form className="auth-workspace-form" onSubmit={submit}>
+  <div className="auth-provider">
+   <button type="button" data-oai-siwc-button data-oai-client-id={chatgpt?.clientId} className="auth-provider-button" disabled={busy||!chatgpt?.configured} aria-describedby={providerHelpId} onClick={()=>{if(chatgpt?.configured){setBusy(true);window.location.assign(`${chatgpt.href}?locale=${ar?'ar':'en'}${linkChatgpt?'&link=1':''}`)}}}>{t(['Continue with ChatGPT','المتابعة باستخدام ChatGPT'])}<ArrowUpRight size={17} aria-hidden="true"/></button>
+   <p id={providerHelpId} className="auth-provider-note">{chatgpt===null?t(['Checking sign-in options…','جارٍ التحقق من طرق الدخول…']):chatgpt.configured?t(['Use your ChatGPT identity. Model usage is configured separately.','استخدم هوية ChatGPT. يُضبط استخدام النماذج بشكل مستقل.']):t(['ChatGPT sign-in is awaiting activation. Email sign-in is available below.','تسجيل الدخول عبر ChatGPT بانتظار التفعيل. يمكنك الدخول بالبريد أدناه.'])}</p>
+  </div>
+  <div className="auth-divider"><span>{t(['or use email','أو استخدم البريد الإلكتروني'])}</span></div>
   {mode==='register'&&<label className="grid gap-2">{t(['Display name','اسم العرض'])}<Input name="name" autoComplete="name" required maxLength={100}/></label>}
   <label className="grid gap-2">{t(['Email address','البريد الإلكتروني'])}<Input name="email" type="email" dir="ltr" autoComplete="email" required maxLength={254}/></label>
   <div className="grid gap-2"><label htmlFor={passwordId}>{t(['Password','كلمة المرور'])}</label><div className="password-control"><Input id={passwordId} name="password" type={showPassword?'text':'password'} dir="ltr" autoComplete={mode==='register'?'new-password':'current-password'} required minLength={mode==='register'?12:1} maxLength={128}/><button type="button" className="password-toggle" aria-label={t(showPassword?['Hide password','إخفاء كلمة المرور']:['Show password','إظهار كلمة المرور'])} aria-pressed={showPassword} onClick={()=>setShowPassword(!showPassword)}>{showPassword?<EyeOff size={20}/>:<Eye size={20}/>}</button></div></div>
@@ -47,10 +67,17 @@ export function AuthForm({initialMode='login',onSuccess}:{initialMode?:'login'|'
   {error&&<p role="alert" className="text-sm">{t(errors[error]||errors.temporarily_unavailable)}</p>}
   <Button type="submit" disabled={busy} size="lg">{busy?t(['Please wait…','جارٍ التنفيذ…']):t(mode==='register'?['Create account','إنشاء حساب']:['Sign in','تسجيل الدخول'])}</Button>
   <button type="button" className="text-link justify-self-start" disabled={busy} onClick={()=>{setMode(mode==='login'?'register':'login');setError('');setShowPassword(false)}}>{t(mode==='login'?['New here? Create an account','مستخدم جديد؟ أنشئ حسابًا']:['Already registered? Sign in','لديك حساب؟ سجّل الدخول'])}</button>
-  <p className="muted text-sm mt-6">{t(['Password recovery is not available through the service. Keep your sign-in details secure.','استعادة كلمة المرور غير متاحة عبر الخدمة. احتفظ ببيانات دخولك في مكان آمن.'])}</p>
+  <p className="auth-recovery-note">{t(['Keep your sign-in details safe. Password recovery is not available yet.','احتفظ ببيانات الدخول في مكان آمن. استعادة كلمة المرور غير متاحة حاليًا.'])}</p>
  </form>
 }
-export function AuthPage({mode}:{mode:'login'|'register'}){const {t}=useLanguage();return <main id="main" className="container account-page"><div className="max-w-lg mx-auto"><Breadcrumbs/><h1 className="text-4xl mb-6">{t(mode==='register'?['Create your private workspace','أنشئ مساحة عملك الخاصة']:['Sign in to your workspace','سجّل الدخول إلى مساحتك'])}</h1><p className="muted mb-10">{t(mode==='register'?['Create private agents, add company knowledge and return to your conversations. Your workspace has one account owner.','أنشئ وكلاء خاصين وأضف معرفة الشركة وارجع إلى محادثاتك. لكل مساحة مالك حساب واحد.']:['Open your private agents and continue the work saved in your account.','افتح وكلاءك الخاصين وتابع العمل المحفوظ في حسابك.'])}</p><AuthForm initialMode={mode}/>{mode==='register'&&<p className="muted text-sm mt-6">{t(['Before you continue, read the Privacy notice and Usage terms. Password recovery and self-service whole-account deletion are unavailable. Begin with non-sensitive examples.','قبل المتابعة، اقرأ إشعار الخصوصية وشروط الاستخدام. استعادة كلمة المرور وحذف الحساب بالكامل ذاتيًا غير متاحين. ابدأ بأمثلة غير حساسة.'])} <Link className="text-link" href="/privacy">{t(['Privacy notice','إشعار الخصوصية'])}</Link> · <Link className="text-link" href="/terms">{t(['Usage terms','شروط الاستخدام'])}</Link></p>}</div></main>}
+export function AuthPage({mode}:{mode:'login'|'register'}){
+ const {t}=useLanguage()
+ const steps=[{icon:SlidersHorizontal,title:['Define the work','حدد المهمة'],body:['Choose a role, instructions and tools for the outcome you need.','اختر دور الوكيل وتعليماته وأدواته وفق النتيجة المطلوبة.']},{icon:FlaskConical,title:['Test and refine','جرّب وحسّن'],body:['Run representative tasks and inspect the results in your private workspace.','اختبر مهامًا ممثلة للعمل وراجع النتائج داخل مساحتك الخاصة.']},{icon:Mail,title:['Arrange production','اتفق على التشغيل'],body:['Discuss activation, pricing and terms with adham@agynexa.si after your review.','بعد مراجعة التجربة، ناقش التفعيل والسعر والشروط عبر adham@agynexa.si.']}]
+ return <main id="main" className="container account-page auth-workspace-page"><Breadcrumbs/><div className="auth-workspace-layout">
+  <section className="auth-workspace-story"><p className="eyebrow">AGYNEXA STUDIO</p><h1>{t(mode==='register'?['Your next agent starts here.','هنا تبدأ ببناء وكيلك.']:['Welcome back to your workspace.','أهلًا بعودتك إلى مساحة عملك.'])}</h1><p className="auth-story-lead">{t(['Build an agent around the work your team actually needs to do. Keep its instructions, sources and conversations together.','ابنِ وكيلًا للمهمة التي يحتاجها فريقك فعلًا. اجمع تعليماته ومصادره ومحادثاته في مكان واحد.'])}</p><ol className="auth-workspace-steps">{steps.map((step,i)=><li key={i}><step.icon size={20} aria-hidden="true"/><div><h2>{t(step.title)}</h2><p>{t(step.body)}</p></div></li>)}</ol><Link className="text-link" href="/studio">{t(['Explore the builder','استكشف مساحة البناء'])}<ArrowUpRight size={17} aria-hidden="true"/></Link></section>
+  <section className="auth-workspace-card" aria-labelledby="auth-form-heading"><div className="auth-card-heading"><LockKeyhole size={20} aria-hidden="true"/><span>{t(['Private workspace','مساحة عمل خاصة'])}</span></div><h2 id="auth-form-heading">{t(mode==='register'?['Create your account','أنشئ حسابك']:['Sign in','تسجيل الدخول'])}</h2><p className="auth-card-intro">{t(['Save your agents and continue your work from any device.','احفظ وكلاءك وتابع عملك من أي جهاز.'])}</p><AuthForm initialMode={mode}/><p className="auth-legal-links">{t(['Your workspace has one account owner.','لكل مساحة عمل مالك حساب واحد.'])} <Link href="/privacy">{t(['Privacy','الخصوصية'])}</Link><span aria-hidden="true"> · </span><Link href="/terms">{t(['Terms','الشروط'])}</Link></p></section>
+ </div></main>
+}
 
 type Brief={id:string;organization:string;contact_email:string;service:string;problem:string;sources:string;acceptance:string;created_at:string}
 export function AccountPage(){
