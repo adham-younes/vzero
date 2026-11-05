@@ -117,7 +117,7 @@ export async function downloadMail(id:string,attachment:string|null){
    const matches=parsed.attachments.filter(part=>(part.filename||'attachment')===name&&(meta.size===null||meta.size===undefined||(typeof part.content==='string'?Buffer.byteLength(part.content):part.content.byteLength)===meta.size))
    if(matches.length!==1)throw new MailError('mail_attachment_ambiguous',409)
    const part=matches[0]
-   data=typeof part.content==='string'?Buffer.from(part.content):Buffer.from(part.content);name=part.filename||name
+   data=typeof part.content==='string'?Buffer.from(part.content):Buffer.from(part.content instanceof Uint8Array?part.content:new Uint8Array(part.content));name=part.filename||name
   }else{if(typeof meta.path!=='string'||!meta.path.startsWith(row.inbox+'/'))throw new MailError('mail_not_found',404);data=await storedObject(meta.path,meta.sha256)}
  }
  const filename=name.replace(/[\r\n\0/\\]/g,'_').slice(0,180)
