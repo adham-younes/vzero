@@ -143,7 +143,7 @@ The owner rejected the earlier content Preview and approved a complete global En
 
 ## Owner mailbox migration — active
 
-[Receipt](OWNER-MAIL-2026-11-05.md). Private archive and reply queue deployed; 414 historical messages imported and verified, model diagnostic and scheduled worker checked, DNS cutover verified. Final SpaceMail delta sync was rejected after owner disconnection. External automatic-reply delivery and old renewal status remain unverified. No paid upgrade.
+[Receipt](OWNER-MAIL-2026-11-05.md). Private archive and reply queue deployed; 414 historical messages imported and verified, model diagnostic and scheduled worker checked, DNS cutover verified. Final SpaceMail delta sync was rejected after owner disconnection. Personal external automatic-reply delivery verified through Gmail; old renewal status remains unverified. No paid upgrade.
 
 
 Owner correction: the mailbox interface must not appear on the public platform. [Corrected current scope](OWNER-MAIL-2026-11-05.md) supersedes prior UI instructions. All 414 historical messages are verified in private storage; native Resend remains the mailbox interface.
@@ -151,4 +151,4 @@ Owner correction: the mailbox interface must not appear on the public platform. 
 
 ### Mail cutover verified — 5 November 2026
 
-[Current mailbox receipt](OWNER-MAIL-2026-11-05.md): sole Resend MX verified publicly and by Resend; both actual inbox addresses receive and archive attachments; personal native sending delivered. Reply settings enabled. The owner reports old SpaceMail disconnected; final IMAP sync was rejected. 414 historical messages are preserved, later legacy arrivals are unverified. No public mailbox UI. External automatic-reply acceptance and old renewal status remain unverified.
+[Current mailbox receipt](OWNER-MAIL-2026-11-05.md): sole Resend MX verified publicly and by Resend; both actual inbox addresses receive and archive attachments; personal native sending delivered. Reply settings enabled. The owner reports old SpaceMail disconnected; final IMAP sync was rejected. 414 historical messages are preserved, later legacy arrivals are unverified. No public mailbox UI. Personal external automatic-reply acceptance verified through Gmail at 13:22 UTC; old renewal status remains unverified.
