@@ -1,6 +1,8 @@
 # Direct ChatGPT connection — 5 November 2026
 
-Status: IMPLEMENTED_PENDING_PRODUCTION_ACCEPTANCE.
+Status: DEPLOYED_DISCOVERY_VERIFIED_OWNER_CONSENT_PENDING.
+
+Production: PR74 merged at `f0046208a265d48cbbf62e514b0bc9f29986166c`; deployment `dpl_BRZyZ9NQ4XzXeSVuJ8R4X5gDCKuz` is READY. Cloud build passed. Seven production checks passed: authorization metadata, resource metadata, public-host isolation, authenticated MCP challenge, foreign redirect rejection, plain PKCE rejection and unknown-code rejection. ChatGPT custom MCP UI discovered the exact endpoints, stable callback and all three scopes. The provided public client is entered. Creating the connection and granting owner access await action-time confirmation. No OAuth token has been issued at this checkpoint.
 
 The private plugin archive contains API-key MCP configuration, but ChatGPT custom MCP setup offers OAuth and no-authentication, not an API-key prompt. The standalone archive is not evidence of a connected app. The existing Resend ChatGPT OAuth grants have full_access independently. Both backend mailbox auto_reply settings and the minute retry scheduler are enabled; two automatic sends and the guarded manual test are recorded.
 
