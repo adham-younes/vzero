@@ -143,3 +143,9 @@ export async function processJob(id:string|null=null){
   return {processed:true,retry:true}
  }
 }
+
+/** Static, authenticated diagnostic: exercises the configured model without sending mail. */
+export async function checkResponder(){
+ const decision=await generate('طلب توضيح عن أتمتة العمل','مرحبًا، عندي شركة صغيرة وأريد فهم كيف يمكن لوكلاء الذكاء الاصطناعي مساعدتي في متابعة طلبات العملاء. ما المعلومات المطلوبة للبدء؟',MAILBOXES[0].address)
+ return {ok:decision.action==='reply',action:decision.action,sample:decision.text,sent:false}
+}

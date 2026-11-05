@@ -454,6 +454,10 @@
     {
       "path": "/api/owner-mail/archive",
       "method": "patch"
+    },
+    {
+      "path": "/api/owner-mail/worker",
+      "method": "get"
     }
   ]
 }
