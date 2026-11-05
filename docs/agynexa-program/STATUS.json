@@ -760,6 +760,12 @@
     "supabase_project_status": "ACTIVE_HEALTHY",
     "matched_migration_names": 11,
     "migration_version_differences": 7,
+    "owner_confirmed_production": {
+      "commit": "e91734bb3fe62151fb833444674f352e0f7d849d",
+      "deployment_id": "dpl_9QYGzUTGvFnZj18CtdZJhSpUDcse",
+      "immutable_url": "https://vzero-9joetsjw0-adhamlouxors-projects.vercel.app",
+      "receipt": "releases/platform-sync-2026-11-05/checks.json"
+    },
     "receipt": "releases/platform-sync-2026-11-05/README.md"
   },
   "public_navigation_release": {
