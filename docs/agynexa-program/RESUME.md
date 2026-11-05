@@ -1,3 +1,7 @@
+## Cloud environment update — 5 November 2026
+
+See [cloud configuration and capability boundaries](cloud/README.md) and the versioned [start skill](cloud/START-SKILL.md). PR78 is merged and its production deployment is READY.
+
 ## Direct ChatGPT connection verified
 
 PR77 is production READY at `a25c8c815d2f82c26aa96a810b788c175bf0df81`. OAuth connected successfully, UI and permission API confirm Allow all actions, and ordinary ChatGPT searched and read the acceptance message without sending mail or changing settings. Private NEXA Mail 0.1.1 now binds to the actual connected app. [Current receipt](releases/private-mail-2026-11-05/OAUTH.md).
