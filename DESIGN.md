@@ -80,3 +80,9 @@ Use the [list-detail pattern](https://developer.android.com/develop/adaptive-app
 Use 48px selection controls, a single 24–36px detail heading, 16px reading text and a 70-character maximum reading measure. Summarize information, process and outcome in three equal columns on desktop and one column on mobile. Use the existing emerald selection token and quiet rules between sections. Keep supporting capability choices shallow and expose one related reading area. Put the extended workflow behind one plain reading control. This follows the separation of outcome and technical reading recorded in the [Kore research](docs/agynexa-program/prior-research/agynexa-kore-page-evidence.json).
 
 The desktop header lists Solutions, Capabilities, Industries, Architecture, How to build and Integrations. The mobile menu groups Solutions, Capabilities, Industries and How to build under Explore. Standalone references and URL selection remain available.
+
+### Catalogue controls after owner review
+
+Use the project's existing shadcn/ui Input, Label and Button. Use a labelled [native select](https://ui.shadcn.com/docs/components/base/native-select) for choosing a catalogue item. Put search, the area or context filter, and the item selector in one aligned row with 48px fields, 8px corners and 16px gaps. Stack those same controls in reading order on phones. Industries needs only the sector selector. Use the approved short catalogue names in selectors and the accepted explanatory titles in the reading area. The count sits beside the controls and formats numbers in the current language.
+
+One detail area follows the row. Summary facts and reading rules use the same typography and neutral separators in Solutions and Capabilities. Supporting actions use the standard Button and open in place. The current catalogue layout has no sidebar, separate row of filter buttons or set of selectable cards.

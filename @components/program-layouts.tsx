@@ -7,6 +7,7 @@ import OwnerIdentity from './owner-identity'
 import {CopyBlocks} from './public-copy'
 import {useCatalogState} from './catalog-state'
 import {industryKeys,industryCapabilities,industrySolutions,IndustryFacts,ReferencePanels} from './inline-details'
+import {CatalogSelect,CatalogToolbar} from './catalog-controls'
 const sectorIcons=[Landmark,ShieldCheck,HeartPulse,ShoppingBag,Radio,Plane,Briefcase,Truck,Factory,Package]
 const sectorKeys=industryKeys
 const sectorServices=industryCapabilities
@@ -21,25 +22,12 @@ export function IndustryExplorer(){
  const Icon=sectorIcons[active]
  const pickerLabel=t(['Choose your industry','اختر قطاعك'])
 
- return <div className="industry-layout public-industry">
-  <fieldset className="industry-nav public-industry-nav catalog-sector-index">
-   <legend>{pickerLabel}</legend>
-   {sectors.map((section,i)=>{
-    const SectorIcon=sectorIcons[i]
-    return <label key={sectorKeys[i]}>
-     <input type="radio" name="industry" value={sectorKeys[i]} checked={active===i}
-      onChange={()=>update({industry:sectorKeys[i]})} aria-controls="industry-detail"/>
-     <span><SectorIcon aria-hidden="true"/>{t(section.title)}</span>
-    </label>
-   })}
-  </fieldset>
-  <label className="catalog-mobile-picker">
-   <span>{pickerLabel}</span>
-   <select className="field" value={sectorKeys[active]} aria-controls="industry-detail"
-    onChange={event=>update({industry:event.target.value})}>
+ return <div className="catalog-stack">
+  <CatalogToolbar>
+   <CatalogSelect label={pickerLabel} value={sectorKeys[active]} onChange={value=>update({industry:value})} controls="industry-detail">
     {sectors.map((section,i)=><option key={sectorKeys[i]} value={sectorKeys[i]}>{t(section.title)}</option>)}
-   </select>
-  </label>
+   </CatalogSelect>
+  </CatalogToolbar>
   <section className="industry-detail" id="industry-detail" aria-labelledby="industry-title">
    <p className="public-kicker">{t(['Workflow design example','مثال لتصميم سير العمل'])}</p>
    <h2 id="industry-title" aria-live="polite">{t(item.title)}</h2>

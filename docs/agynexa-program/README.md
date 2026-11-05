@@ -1,4 +1,4 @@
-Current public navigation release candidate — 5 November 2026. The owner authorized production publication after local bilingual and mobile verification. Solutions keeps workflows, supporting capabilities and requirements in one place. Shareable reference pages remain available. Follow the [release receipt](releases/public-navigation-2026-10-27/README.md) for the deployment and live verification.
+Public navigation was deployed and functionally verified on 5 November 2026 at main `6a79a15`. The owner rejected the sidebar on Arabic Capabilities after viewing production. The next catalogue design is a local review candidate. [Release receipt and evidence](releases/public-navigation-2026-10-27/README.md).
 
 Latest verified release: [minimal HeronSignal browser installation](releases/heronsignal-sitewide-2026-10-24/README.md), main `80abfdc` / READY production `dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs`. Official tracker200/config/events204 and single-installation checks passed; MCP/dashboard status was not queried. [Arabic handoff](HANDOFF-2026-10-24.md). Studio/agent redesign remains deferred.
 

@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-05",
+  "environment": "Production browser checks on https://agynexa.si",
+  "release": "6a79a15edd247e0d1dd7497059c73be89c00eddd",
+  "deployment": "dpl_4UMQUBZ7s1SD7gv6YFm5p8kpPMGy",
+  "status": "PASS_SCOPED_FUNCTIONAL_CHECKS",
+  "checks": [
+    {
+      "paths": ["/", "/ar"],
+      "viewport": "Desktop",
+      "results": [
+        "The main header displayed all six links in English and Arabic: Solutions, Capabilities, Industries, Architecture, How to build and Integrations.",
+        "The homepage hero video was playing in each locale. Its currentTime was greater than zero and playback controls were absent."
+      ],
+      "screenshots": ["released-home-en-desktop.jpg", "released-home-ar-desktop.jpg"]
+    },
+    {
+      "path": "/ar/solutions?solution=sales",
+      "viewportCssPx": 1280,
+      "results": [
+        "Direct entry displayed the selected Sales workflow in Arabic.",
+        "The catalogue index and detail tracks measured 272px and 912px. The facts occupied three 288px columns."
+      ],
+      "screenshots": ["released-sales-ar-desktop.jpg"]
+    },
+    {
+      "paths": ["/ar/solutions", "/solutions"],
+      "viewport": "Desktop",
+      "results": [
+        "Keyboard interaction selected Finance and Connections and opened the integration requirements within the same localized Solutions pathname.",
+        "Reload and the switch to English retained the selected workflow and capability. The inner requirements disclosure could be reopened in the restored context."
+      ]
+    },
+    {
+      "viewportCssPx": 390,
+      "results": [
+        "The mobile navigation menu opened.",
+        "On /ar/services, the Customer experience category and search narrowed the catalogue to Agent Assist. Opening its standalone page and using browser Back restored the category, search and selected capability.",
+        "The mobile industry selector displayed Logistics and its workflow. The selection and workflow survived switching between Arabic and English, and the facts occupied one column.",
+        "The Arabic Sales facts occupied one 350px column with no horizontal overflow."
+      ],
+      "screenshots": ["released-sales-ar-390.jpg"]
+    }
+  ],
+  "designAcceptance": {
+    "status": "REJECTED_ARABIC_CAPABILITIES_SIDEBAR",
+    "path": "/ar/services",
+    "source": "The user subsequently rejected the sidebar design in a message with a screenshot. The attachment was not copied into the repository.",
+    "scope": "The functional results above do not establish design acceptance."
+  }
+}

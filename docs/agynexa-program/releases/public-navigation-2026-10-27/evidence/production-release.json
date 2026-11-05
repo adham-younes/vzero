@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-05",
+  "repository": "adham-younes/vzero",
+  "productionBranch": "main",
+  "officialUrl": "https://agynexa.si",
+  "workflow": "Reviewed GitHub pull requests with Vercel Git integration",
+  "initialProduction": {
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/53",
+    "commit": "693ee736ccef86e59b2727b1f2b7dd2d2a55fb68",
+    "deployment": "dpl_EdviXEidWrYj4zUnzerneMivmcNS",
+    "outcome": "Superseded after owner feedback on header and nested workflow layout"
+  },
+  "correction": {
+    "pullRequest": "https://github.com/adham-younes/vzero/pull/54",
+    "reviewedHead": "2500ee367247bcead7187e78b198192b6fd64b06",
+    "previewDeployment": "dpl_7ugx7G1PwNXQJFqAEL3cLhmjDkA4",
+    "commit": "6a79a15edd247e0d1dd7497059c73be89c00eddd",
+    "deployment": "dpl_4UMQUBZ7s1SD7gv6YFm5p8kpPMGy",
+    "target": "production",
+    "state": "READY",
+    "source": "git",
+    "host": "vzero-bkvt6xnx3-adhamlouxors-projects.vercel.app",
+    "aliasVerified": [
+      "agynexa.si",
+      "www.agynexa.si"
+    ],
+    "readyAtUtc": "2026-11-05T06:34:27.014Z",
+    "status": "DEPLOYED_FUNCTIONAL_CHECKS_PASS_DESIGN_REVISION_REQUESTED"
+  },
+  "verifiedPreReleaseFallback": {
+    "commit": "c61cc369bfa9f678ed794d71b0f0266423948b8f",
+    "deployment": "dpl_ChMsf9dGxZrPEvcsVMfrVAiN1yF3"
+  },
+  "scope": {
+    "publicNavigation": true,
+    "protectedHeroAndVideo": true,
+    "studio": "paused; only anonymous entry checked",
+    "designAcceptance": "Owner rejected the sidebar on the published Arabic Capabilities page."
+  }
+}

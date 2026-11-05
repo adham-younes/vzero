@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "date": "2026-11-05",
+  "environment": "https://agynexa.si",
+  "release": "6a79a15edd247e0d1dd7497059c73be89c00eddd",
+  "deployment": "dpl_4UMQUBZ7s1SD7gv6YFm5p8kpPMGy",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "locale": "en",
+      "check": "all six primary links, autoplay markup and canonical"
+    },
+    {
+      "path": "/ar",
+      "status": 200,
+      "locale": "ar",
+      "check": "all six primary links, autoplay markup and canonical"
+    },
+    {
+      "path": "/solutions",
+      "status": 200,
+      "locale": "en",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/ar/solutions",
+      "status": 200,
+      "locale": "ar",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "locale": "en",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/ar/industries",
+      "status": 200,
+      "locale": "ar",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "locale": "en",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/ar/services",
+      "status": 200,
+      "locale": "ar",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/services/enterprise-integrations",
+      "status": 200,
+      "locale": "en",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/ar/services/agent-assist",
+      "status": 200,
+      "locale": "ar",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/solutions/procurement",
+      "status": 200,
+      "locale": "en",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/ar/solutions/procurement",
+      "status": 200,
+      "locale": "ar",
+      "check": "public HTML, locale and canonical"
+    },
+    {
+      "path": "/studio",
+      "status": 200,
+      "locale": "en",
+      "check": "anonymous entry and noindex"
+    },
+    {
+      "path": "/ar/studio",
+      "status": 200,
+      "locale": "ar",
+      "check": "anonymous entry and noindex"
+    },
+    {
+      "path": "/services/solutions",
+      "status": 308,
+      "to": "/services"
+    },
+    {
+      "path": "/ar/services/solutions",
+      "status": 308,
+      "to": "/ar/services"
+    },
+    {
+      "path": "/videos/background.mp4",
+      "status": 200,
+      "sha256": "b12fece112afbb09094f352fe152bb8ada1485527f84f5abad5f9b8af32abf85",
+      "matchesSourceAndPriorProduction": true
+    }
+  ]
+}

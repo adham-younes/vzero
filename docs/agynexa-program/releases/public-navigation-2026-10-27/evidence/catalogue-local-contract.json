@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-05",
+  "environment": "local production build; no live credentials",
+  "baseline": "c61cc369bfa9f678ed794d71b0f0266423948b8f",
+  "source": "2500ee367247bcead7187e78b198192b6fd64b06",
+  "base": "http://127.0.0.1:3037",
+  "status": "PASS",
+  "checks": [
+    "Public paths, canonicals, hreflang and metadata retain the approved contract",
+    "Ten capabilities, nine solutions and ten sectors retain accepted source content",
+    "Homepage, original Hero/video, application shell entry and dependency versions are preserved",
+    "Paused Studio, private routes, runtime, migrations and provider settings have no diff",
+    "68 English/Arabic public URLs return 200 with language, direction, main, h1, unique identifiers and canonical",
+    "Both homepages expose all six primary navigation destinations in their locale",
+    "Solutions and Capabilities render one selected reading area in each locale",
+    "2216 rendered links to public pages resolve; 312 linked section targets exist",
+    "Both legacy capability redirects remain 308 to their localized catalogues"
+  ],
+  "publicUrls": 68,
+  "publicLinks": 2216,
+  "sectionAnchors": 312,
+  "productionVerified": false
+}
