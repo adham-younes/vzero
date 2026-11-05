@@ -1,0 +1,40 @@
+{
+  "status": "PASS_SCOPED",
+  "environment": "Local production-mode build at http://127.0.0.1:3037; Computer Use in the in-app side browser",
+  "source": "Uncommitted isolated local revision with in-place details",
+  "checks": [
+    {
+      "date": "2026-10-28",
+      "viewport": "desktop",
+      "results": [
+        "Nine workflow choices reveal details without primary page links.",
+        "Arabic Finance opens in Solutions. Connections and the integration requirements open on the same pathname.",
+        "Expanded workflow and capability identifiers remain unique.",
+        "Finance to Logistics to Finance leaves one primary workflow open; Enter activates the workflow summary.",
+        "Reload and switching to English preserve the selected workflow and supporting capability."
+      ],
+      "screenshots": ["local-workflow-capability-ar-desktop.jpg"]
+    },
+    {
+      "date": "2026-11-05",
+      "viewport": "390 CSS px",
+      "results": [
+        "Arabic Capabilities keeps Customer Experience selected while search narrows the catalogue and Agent Assist stays open.",
+        "The explicit standalone link opens the Arabic Agent Assist detail; browser Back restores the category, query and open capability.",
+        "Logistics in Arabic and English has five facts in one 350px column and no horizontal overflow. Its workflow opens in place; the sector and workflow stay selected on language switch.",
+        "Finance and Connections restore from a direct Solutions URL and remain open on language switch. The system context and integration requirements open on the same localized Solutions pathname in both languages, with no horizontal overflow."
+      ],
+      "screenshots": [
+        "final-logistics-ar-390.jpg",
+        "final-logistics-en-390.jpg",
+        "final-solutions-requirements-ar-390.jpg",
+        "final-solutions-requirements-en-390.jpg"
+      ]
+    }
+  ],
+  "limits": [
+    "The nested requirements disclosure closes on locale change; it can be reopened within the restored workflow and capability.",
+    "Production baseline screenshots are separate from the local revision.",
+    "No production deployment, Studio, live connector, Auth or production data operation."
+  ]
+}

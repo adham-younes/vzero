@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "environment": "local production build before progressive-detail revision",
+  "status": "PASS_SCOPED_SUPERSEDED_PRESENTATION",
+  "checks": [
+    "Solution query is restored on direct entry",
+    "Capability return preserves category and search",
+    "Capability detail marks its parent navigation active",
+    "Capability browser Back restores category, search and one result",
+    "Visible capability return restores the filtered catalogue",
+    "Same-path header link clears category, query and URL together",
+    "Native category radios support keyboard and remain exclusive",
+    "Empty search exposes useful reset action",
+    "Reset restores all ten capabilities and removes URL filters",
+    "Capability category and search survive EN to AR language switch",
+    "Arabic capability has a single integration requirement destination",
+    "Industry selection uses stable language-independent URL state",
+    "Arabic logistics facts use one readable mobile column with no overflow",
+    "Logistics remains selected when switching Arabic to English",
+    "English logistics facts use one mobile column without overflow",
+    "Industry detail link carries selected sector into workflow return",
+    "Browser Back restores the selected logistics industry",
+    "Reload restores logistics from its URL",
+    "Visible workflow return restores selected industry context"
+  ],
+  "limits": [
+    "Solutions Back test was interrupted by active in-app browsing; not counted",
+    "These results cover the first local candidate, before the later user requirement for inline details",
+    "No deployment, authenticated Studio, provider or production data operation"
+  ]
+}

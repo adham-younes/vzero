@@ -1,0 +1,9 @@
+▲ Next.js 16.4.1 (webpack)
+✓ Running next.config.mjs took 8ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.8s
+  Running TypeScript ...
+@components/catalog-state.ts(13,74): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+@components/catalog-state.ts(14,83): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Failed to type check.
