@@ -170,8 +170,8 @@
           "يسجل دور الاستقبال الشكوى ومتطلبات التحقق الواردة في إجراء البنك. ويحدد دور المعرفة قواعد الخدمة المناسبة، بينما يجمع دور الحالة السجلات والردود السابقة ذات الصلة. يستلم المختص المسألة المفتوحة وتاريخها، ويعود الإجراء المقترح إلى صاحب الصلاحية قبل تحديث موقف الحالة أمام العميل."
         ],
         "outcome": [
-          "A complaint with a responsible owner, the information needed for investigation and a confirmed decision or next step.",
-          "شكوى لها مسؤول ومعلومات كافية للتحقيق وقرار مؤكد أو خطوة تالية محددة."
+          "A complaint brief with the relevant facts, open questions and a proposed next owner for authorized review.",
+          "موجز شكوى بالحقائق المرتبطة والأسئلة المفتوحة والمسؤول المقترح للمراجعة المخولة."
         ],
         "reviewer": [
           "Authorized staff decide financial commitments, redress and regulated matters. Reading or changing account records requires the permissions appropriate to the operation.",
@@ -200,8 +200,8 @@
           "ينشئ الإخطار حالة مرتبطة بوثيقة التأمين وتسلسل الواقعة. تربط أدوار المستندات كل مادة بالمطالبة الصحيحة وتحدد ما ينقص المقيم، ثم يوجه التنسيق طلب استكمال محدد وينقل المادة إلى التقييم. وبعد حسم المختص، يحدد القرار المؤكد خطوة المعالجة التالية والتوضيح المقدم لصاحب المطالبة."
         ],
         "outcome": [
-          "A claim that reaches its next processing stage with a known owner, the assessment material and any outstanding condition clearly identified.",
-          "مطالبة تنتقل إلى المرحلة التالية بمسؤول معروف ومادة التقييم، مع بيان أي شرط ما زال مفتوحًا."
+          "A claim preparation file with the supporting material, missing documents and conditions for the specialist to review.",
+          "ملف تجهيز مطالبة بالمادة المؤيدة والمستندات الناقصة والشروط التي يراجعها المختص."
         ],
         "reviewer": [
           "The authorized insurance specialist decides coverage, settlement or rejection under the applicable policy. Agent preparation supports that assessment.",
@@ -230,8 +230,8 @@
           "في طلب إداري مرتبط بموعد، يحدد الاستقبال الخدمة والمعلومات التي يتطلبها إجراؤها. يوضح دور المعرفة الخطوات الإدارية المناسبة، وينظم التنسيق استكمال النقص. وبعد استيفاء المتطلبات، ينتقل الطلب إلى مسؤول المواعيد ليؤكد الحجز أو سبب الانتظار قبل إبلاغ مقدم الطلب."
         ],
         "outcome": [
-          "An administrative request with a confirmed booking or a specific outstanding requirement and a person responsible for resolving it.",
-          "طلب إداري له موعد مؤكد، أو متطلب محدد لم يكتمل ومسؤول عن استيفائه."
+          "An administrative checklist and handover brief, with any booking or patient-record action left for authorized staff.",
+          "قائمة متطلبات إدارية وملف تسليم، مع ترك الحجز أو تعديل سجل المريض للموظف المخول."
         ],
         "reviewer": [
           "Qualified professionals retain clinical assessment, treatment and clinical urgency decisions. Access to patient records requires supported permissions and suitable data-processing arrangements; the example concerns administrative coordination.",
@@ -260,8 +260,8 @@
           "يحدد الاستقبال الطلب وسبب الإرجاع، ويراجع دور المعرفة السياسة المناسبة، بينما يحدد دور العمليات ما يلزم من فحص أو ترتيبات استلام. تسير الحالة المعتادة وفق الإجراء المسموح، ويصل الاستثناء إلى المدير مع سياق الشراء. ثم يتلقى العميل القرار المؤكد وتعليمات الخطوة التالية."
         ],
         "outcome": [
-          "An accepted return path or a reasoned decision, with store, fulfillment and customer updates referring to the same case.",
-          "مسار إرجاع مقبول أو قرار مفسر، وتحديثات للمتجر والتنفيذ والعميل تشير إلى الحالة نفسها."
+          "A return or service recommendation with order facts, policy references and questions for the responsible reviewer.",
+          "توصية بشأن إرجاع أو خدمة، ببيانات الطلب ومراجع السياسة والأسئلة الموجهة للمراجع المسؤول."
         ],
         "reviewer": [
           "Order lookup, inventory and refunds require authorized system access. Commercial exceptions and refunds remain subject to the assigned authority.",
@@ -290,8 +290,8 @@
           "يجمع دور السياق الأعراض والاختبارات السابقة وتحديثات الخدمة المؤكدة. ويحدد دور الإرشاد خطوة الفحص المناسبة. وإذا احتاجت المشكلة إلى فحص الشبكة أو زيارة ميدانية، ينقل التنسيق تاريخها والسؤال المطلوب حسمه. وتستند متابعة العميل إلى النتيجة الفنية وما بقي غير مؤكد بشأن عودة الخدمة."
         ],
         "outcome": [
-          "A service issue that reaches its responsible technical owner with its history intact and a customer update based on confirmed progress.",
-          "مشكلة تصل إلى المسؤول الفني بتاريخها الكامل، وتحديث للعميل يستند إلى تقدم مؤكد في المعالجة."
+          "A troubleshooting or escalation brief that preserves the reported symptoms and confirmed service updates.",
+          "موجز تشخيص أو تصعيد يحتفظ بالأعراض المبلغ عنها وتحديثات الخدمة المؤكدة."
         ],
         "reviewer": [
           "Live network status requires an authorized source. Service changes, compensation and field commitments need the responsible authority.",
@@ -320,8 +320,8 @@
           "يسجل الاستقبال التغيير المطلوب وسياق الحجز. ويراجع دور المعرفة الشروط المناسبة، ويحدد التنسيق تأكيدات الحجز والخدمة اللازمة. يحسم الموظفون الاستثناء ويؤكدون الترتيب المتاح، وينتقل التجهيز غير المكتمل إلى الوردية التالية بمسؤول واضح. ويعكس تحديث النزيل ما تم الاتفاق عليه بالفعل."
         ],
         "outcome": [
-          "An agreed service arrangement with owned preparation tasks and continuity across shifts.",
-          "ترتيب خدمة متفق عليه ومهام تجهيز لها مسؤولون، مع استمرار المتابعة بين الورديات."
+          "A guest-request brief with proposed arrangements, open requirements and a handover for the service team.",
+          "موجز لطلب الضيف بترتيبات مقترحة ومتطلبات مفتوحة وتسليم واضح لفريق الخدمة."
         ],
         "reviewer": [
           "Availability and reservations need current authorized records. Rebooking, cancellation and compensation require specific permission and confirmation.",
@@ -350,8 +350,8 @@
           "يسجل الاستقبال العمل المطلوب أو تعديل النطاق. وتنظم أدوار المعلومات حقائق العميل والإرشادات الداخلية والأسئلة المفتوحة. يجمع التنسيق التوضيح من مسؤول العلاقة قبل تجهيز المادة للمختص. وتحسم المراجعة المهنية ما يمكن تسليمه، ثم ينتقل النطاق المتفق عليه مع العمل إلى الخطوة التالية."
         ],
         "outcome": [
-          "An agreed next deliverable and a working file that lets the specialist proceed with the right scope and source material.",
-          "مخرج تالٍ متفق عليه وملف عمل يتيح للمختص الاستمرار بالنطاق الصحيح والمصادر المناسبة."
+          "A working brief with the relevant sources, proposed deliverable and scope questions for the qualified practitioner.",
+          "موجز عمل بالمصادر المرتبطة والمخرج المقترح وأسئلة النطاق للمختص المؤهل."
         ],
         "reviewer": [
           "Professional advice and external commitments remain with the qualified practitioner. Preparation does not constitute a legal, tax or accounting opinion.",
@@ -380,8 +380,8 @@
           "يربط دور الأحداث التحديث بالشحنة الصحيحة ويميز وقت الحدث من وقت الإبلاغ. وتحدد أدوار المستندات والسياق الحركة المتأثرة والمتطلبات الناقصة. يطلب التنسيق تأكيد المصدر وينظم الاستجابة المتاحة، ويعرض التغييرات المؤثرة على مسؤول التشغيل. ثم تُبنى تحديثات المستودع والعميل على الموقف المؤكد نفسه."
         ],
         "outcome": [
-          "An exception with a consistent history, a responsible next action and a confirmed status.",
-          "استثناء له تاريخ متسق وإجراء تالٍ معلوم المسؤول وحالة مؤكدة."
+          "A shipment-exception brief with confirmed milestones, open issues and response options for operations review.",
+          "موجز لاستثناء الشحنة بالمراحل المؤكدة والمسائل المفتوحة وخيارات الاستجابة لمراجعة العمليات."
         ],
         "reviewer": [
           "Tracking and operational changes require authorized system access. Customs submissions, rerouting and contractual commitments remain with the people authorized for those actions.",
@@ -410,8 +410,8 @@
           "يصل دور المعرفة إلى الإجراء المعتمد للأصل أو مهمة الصيانة، ويجمع دور السياق تاريخها والأعمال المتبقية. يربط التنسيق متطلبات المواد والتجهيز بمسؤوليها، ويحيل الأسئلة الفنية المفتوحة إلى المختص المؤهل. ويستلم فريق الوردية العمل مع معرفة ما بقي ومسؤولية كل خطوة."
         ],
         "outcome": [
-          "A maintenance preparation or shift handover with the applicable procedure, required resources and ownership of unfinished work.",
-          "تجهيز صيانة أو تسليم وردية يوضح الإجراء المطبق والموارد المطلوبة ومسؤولية العمل غير المكتمل."
+          "A maintenance preparation or shift-handover brief with the applicable procedure and outstanding requirements.",
+          "موجز لتجهيز الصيانة أو تسليم المناوبة، بالإجراء المنطبق والمتطلبات المعلقة."
         ],
         "reviewer": [
           "This example concerns coordination and administrative support. Equipment control, permit issuance and safety-critical decisions require their own qualified authority and engineered systems.",
@@ -440,8 +440,8 @@
           "يسجل الاستقبال الاحتياج ومراجع الأصناف، وتميز أدوار المطابقة البنود المؤكدة من الوحدات أو البدائل غير المحسومة. يجمع التنسيق قرارات السعر والائتمان والإتاحة من أصحابها قبل اعتماد العرض أو الطلب. ثم توجه الشروط المتفق عليها التنفيذ، وتُحال حالات التسليم الجزئي أو تعطل السداد إلى الفريق المسؤول."
         ],
         "outcome": [
-          "An order that progresses with consistent product information and named ownership of exceptions.",
-          "طلب يتقدم ببيانات أصناف متسقة ومسؤول معلوم عن استثناءاته."
+          "An inquiry or order-preparation brief with approved product information, missing terms and decisions for the owner.",
+          "موجز لتجهيز استفسار أو طلب، بمعلومات المنتجات المعتمدة والشروط الناقصة والقرارات المتروكة للمسؤول."
         ],
         "reviewer": [
           "Use approved prices and explicit calculation rules. Substitutions, discounts, credit and order release require the appropriate owner’s decision; system actions also need supported access.",

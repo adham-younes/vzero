@@ -30,7 +30,7 @@ export async function widgetSession(publicId:string,request:Request){
  if(!studioEnabled())throw new InputError('studio_unavailable',503)
  agentId(publicId);await abuseLimit('widget-session:'+trustedIp(request),20)
  const db=adminClient();const {data:p,error}=await db.from('agent_publications').select('agent_id,generation').eq('public_id',publicId).eq('active',true).eq('widget_enabled',true).maybeSingle();dbError(error);if(!p)throw new InputError('not_published',404)
- const {data:agent,error:agentError}=await db.from('agents').select('org_id').eq('id',p.agent_id).single();dbError(agentError);await requireActivation(p.agent_id,agent.org_id)
+ const {data:agent,error:agentError}=await db.from('agents').select('org_id').eq('id',p.agent_id).single();dbError(agentError);if(!agent)throw new InputError('not_published',404);await requireActivation(p.agent_id,agent.org_id)
  await abuseLimit('widget-agent:'+p.agent_id,60)
  const token=newToken('agw_');const {error:e}=await db.rpc('studio_widget_session',{operation:'create',token_hash:hash(token),agent:p.agent_id,generation:p.generation});dbError(e)
  return {token,agentId:p.agent_id,expiresIn:600}

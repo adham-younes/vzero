@@ -13,8 +13,8 @@ import {CatalogReturnLink,PublicPageHeader,PublicSectionNav,SupportingReading,wi
 
 export function ServiceCards({compact=false}:{compact?:boolean}) {return <ServiceDirectory compact={compact}/>}
 export function ServiceCatalogue(){
- const copy=usePageCopy('/services')
- return <main id="main" className="public-page"><PublicPageHeader eyebrow={['Platform capabilities','قدرات المنصة']} title={copy.h1} description={<CopyBlocks blocks={copy.blocks.slice(0,1)}/>}/><div className="container public-page-body"><ServiceCards/><SupportingReading title={['How these capabilities work together','كيف تتكامل هذه القدرات؟']} blocks={withoutNavigationParagraphs(copy.blocks.slice(1))}/><ReferencePanels links={[{label:copy.blocks.find(block=>block.text?.includes('/services/agent-orchestration'))?.text?.match(/\[([^\]]+)\]\((?:\/ar)?\/services\/agent-orchestration\)/)?.[1]||'Agent orchestration',href:'/services/agent-orchestration'}]} prefix="capability-catalog-reading"/></div><DiscoveryClosing/></main>
+ const {t}=useLanguage();const copy=usePageCopy('/services')
+ return <main id="main" className="public-page"><PublicPageHeader eyebrow={['Platform capabilities','قدرات المنصة']} title={copy.h1} description={<CopyBlocks blocks={copy.blocks.slice(0,1)}/>}/><div className="container public-page-body"><ServiceCards/><SupportingReading title={['How these capabilities work together','كيف تتكامل هذه القدرات؟']} blocks={withoutNavigationParagraphs(copy.blocks.slice(1))}/><ReferencePanels links={[{label:t(['Agent orchestration','تنسيق الوكلاء']),href:'/services/agent-orchestration'}]} prefix="capability-catalog-reading"/></div><DiscoveryClosing/></main>
 }
 export function ServiceDetail({slug}:{slug:string}){
  const {t}=useLanguage();const service=services.find(item=>item.slug===slug)!

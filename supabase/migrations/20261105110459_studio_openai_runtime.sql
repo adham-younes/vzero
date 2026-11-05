@@ -32,29 +32,76 @@ begin
   raise exception 'activation_required' using errcode='42501';
  end if;
  return new;
-end $$;
+end;
+$$;
 revoke all on function agynexa_private.guard_agent_activation() from public,anon,authenticated;
 create trigger agent_activation_guard before insert or update on public.agent_publications for each row execute function agynexa_private.guard_agent_activation();
 
-create or replace function agynexa_private.validate_work_action(k text,p jsonb) returns void language plpgsql security invoker set search_path='' as $$
-declare allowed text[];field_name text;begin
- allowed:=case k when 'agent.create' then array['name','instructions','language','template','model','builder','sector','tools'] when 'project.create' then array['name','description'] when 'project.set_status' then array['projectId','status','expectedRevision'] when 'task.create' then array['projectId','title','description'] when 'task.set_status' then array['projectId','taskId','status','expectedRevision'] else null end;
- if allowed is null then raise exception 'invalid_action';end if;
- if jsonb_typeof(p) is distinct from 'object' or (select count(*) from jsonb_object_keys(p))<>cardinality(allowed) - case when k='agent.create' then (case when p ? 'sector' then 0 else 1 end)+(case when p ? 'tools' then 0 else 1 end) else 0 end or exists(select 1 from jsonb_object_keys(p) x where not x=any(allowed)) then raise exception 'invalid_input';end if;
- foreach field_name in array allowed loop
-  if (field_name<>'sector' or p ? 'sector') and field_name not in ('builder','expectedRevision','tools') and jsonb_typeof(p->field_name) is distinct from 'string' then raise exception 'invalid_input';end if;
+create or replace function agynexa_private.validate_work_action(k text,p jsonb) returns void
+language plpgsql security invoker set search_path='' as $$
+declare
+ required_keys text[];
+ allowed_keys text[];
+ field_name text;
+ tools_value jsonb;
+begin
+ required_keys := case k
+  when 'agent.create' then array['name','instructions','language','template','model','builder']
+  when 'project.create' then array['name','description']
+  when 'project.set_status' then array['projectId','status','expectedRevision']
+  when 'task.create' then array['projectId','title','description']
+  when 'task.set_status' then array['projectId','taskId','status','expectedRevision']
+  else null
+ end;
+ if required_keys is null then raise exception 'invalid_action'; end if;
+ if jsonb_typeof(p) is distinct from 'object' then raise exception 'invalid_input'; end if;
+ allowed_keys := required_keys;
+ if k='agent.create' then allowed_keys := allowed_keys || array['sector','tools']; end if;
+ -- Required keys remain exact. Sector and tools are optional for immutable legacy proposals.
+ if not (p ?& required_keys) then raise exception 'invalid_input'; end if;
+ if exists(select 1 from jsonb_object_keys(p) as supplied(key) where not (supplied.key=any(allowed_keys))) then
+  raise exception 'invalid_input';
+ end if;
+ foreach field_name in array required_keys loop
+  if field_name not in ('builder','expectedRevision') and jsonb_typeof(p->field_name) is distinct from 'string' then
+   raise exception 'invalid_input';
+  end if;
  end loop;
- if k in ('agent.create','project.create') and char_length(trim(p->>'name')) not between 1 and 100 then raise exception 'invalid_input';end if;
- if k='task.create' and char_length(trim(p->>'title')) not between 1 and 100 then raise exception 'invalid_input';end if;
- if p ? 'description' and char_length(p->>'description')>3000 then raise exception 'invalid_input';end if;
- if p ? 'projectId' and (p->>'projectId') !~ '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$' then raise exception 'invalid_input';end if;
- if p ? 'taskId' and (p->>'taskId') !~ '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$' then raise exception 'invalid_input';end if;
- if p ? 'expectedRevision' and (jsonb_typeof(p->'expectedRevision') is distinct from 'number' or (p->>'expectedRevision') !~ '^[1-9][0-9]{0,8}$') then raise exception 'invalid_input';end if;
- if k='project.set_status' and p->>'status' not in ('active','paused','completed') then raise exception 'invalid_input';end if;
- if k='task.set_status' and p->>'status' not in ('todo','in_progress','blocked','done') then raise exception 'invalid_input';end if;
- if k='agent.create' and (char_length(trim(p->>'instructions')) not between 1 and 6000 or p->>'language' not in ('en','ar') or p->>'template' not in ('knowledgegrid','serviceflow') or p->>'model' not in ('gpt-6.1-terra','openai/gpt-oss-120b','openai/gpt-oss-20b','qwen/qwen3.8-27b') or p->'builder' is distinct from 'true'::jsonb) then raise exception 'invalid_input';end if;
- if k='agent.create' and (coalesce(p->>'sector','general') not in ('general','customer-service','sales','operations','finance','hr','procurement','healthcare','education','real-estate','technology') or (p ? 'tools' and (jsonb_typeof(p->'tools') is distinct from 'object' or not ((p->'tools') ?& array['webSearch','codeInterpreter']) or jsonb_typeof(p->'tools'->'webSearch') is distinct from 'boolean' or jsonb_typeof(p->'tools'->'codeInterpreter') is distinct from 'boolean' or ((p->'tools')-'webSearch'-'codeInterpreter')<>'{}'::jsonb))) then raise exception 'invalid_input';end if;
-end $$;
+ if k in ('agent.create','project.create') and char_length(trim(p->>'name')) not between 1 and 100 then raise exception 'invalid_input'; end if;
+ if k='task.create' and char_length(trim(p->>'title')) not between 1 and 100 then raise exception 'invalid_input'; end if;
+ if p ? 'description' and char_length(p->>'description')>3000 then raise exception 'invalid_input'; end if;
+ if p ? 'projectId' and (p->>'projectId') !~ '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$' then raise exception 'invalid_input'; end if;
+ if p ? 'taskId' and (p->>'taskId') !~ '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$' then raise exception 'invalid_input'; end if;
+ if p ? 'expectedRevision' and (jsonb_typeof(p->'expectedRevision') is distinct from 'number' or (p->>'expectedRevision') !~ '^[1-9][0-9]{0,8}$') then raise exception 'invalid_input'; end if;
+ if k='project.set_status' and p->>'status' not in ('active','paused','completed') then raise exception 'invalid_input'; end if;
+ if k='task.set_status' and p->>'status' not in ('todo','in_progress','blocked','done') then raise exception 'invalid_input'; end if;
+ if k='agent.create' then
+  if char_length(trim(p->>'instructions')) not between 1 and 6000
+   or p->>'language' not in ('en','ar')
+   or p->>'template' not in ('knowledgegrid','serviceflow')
+   or p->>'model' not in ('gpt-6.1-terra','openai/gpt-oss-120b','openai/gpt-oss-20b','qwen/qwen3.8-27b')
+   or p->'builder' is distinct from 'true'::jsonb then
+   raise exception 'invalid_input';
+  end if;
+  if p ? 'sector' then
+   if jsonb_typeof(p->'sector') is distinct from 'string'
+    or p->>'sector' not in ('general','customer-service','sales','operations','finance','hr','procurement','healthcare','education','real-estate','technology') then
+    raise exception 'invalid_input';
+   end if;
+  end if;
+  if p ? 'tools' then
+   tools_value := p->'tools';
+   if jsonb_typeof(tools_value) is distinct from 'object' then raise exception 'invalid_input'; end if;
+   if not (tools_value ?& array['webSearch','codeInterpreter'])
+    or jsonb_typeof(tools_value->'webSearch') is distinct from 'boolean'
+    or jsonb_typeof(tools_value->'codeInterpreter') is distinct from 'boolean'
+    or (tools_value-'webSearch'-'codeInterpreter')<>'{}'::jsonb then
+    raise exception 'invalid_input';
+   end if;
+  end if;
+ end if;
+end;
+$$;
 revoke all on function agynexa_private.validate_work_action(text,jsonb) from public,anon,authenticated;
 
 create or replace function agynexa_private.apply_work(p_action_id uuid,p_version integer,p_snapshot_hash text) returns jsonb language plpgsql security definer set search_path='' as $$
@@ -91,7 +138,8 @@ declare workspace uuid:=agynexa_private.studio_work_org();actor uuid:=auth.uid()
  update public.studio_work_actions set status='applied',result=r,applied_at=now() where id=a.id returning * into a;
  insert into public.studio_work_audit(org_id,created_by,action_id,event,snapshot_hash) values(workspace,actor,a.id,'applied',a.snapshot_hash);
  return to_jsonb(a);
-end $$;
+end;
+$$;
 revoke all on function agynexa_private.apply_work(uuid,integer,text) from public,anon,authenticated;
 grant execute on function agynexa_private.apply_work(uuid,integer,text) to authenticated;
 
@@ -163,7 +211,8 @@ begin
   return jsonb_build_object('cancelled',true);
  end if;
  raise exception 'invalid_operation' using errcode='22023';
-end $$;
+end;
+$$;
 
 
 -- Removing a customer's API connection or withdrawing activation immediately closes live entry points.
@@ -177,7 +226,8 @@ begin
   update public.agent_runs set status='cancelled',finished_at=now(),error_code='activation_required' where agent_id=new.agent_id and access_kind<>'studio' and status='running';
  end if;
  return null;
-end $$;
+end;
+$$;
 revoke all on function agynexa_private.revoke_agent_activation() from public,anon,authenticated;
 create trigger customer_provider_disconnect after delete on public.studio_provider_credentials for each row execute function agynexa_private.revoke_agent_activation();
 create trigger customer_activation_withdrawn after update on public.agent_activations for each row execute function agynexa_private.revoke_agent_activation();

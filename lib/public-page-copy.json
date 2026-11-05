@@ -1243,6 +1243,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Information you provide"
         },
         {
@@ -1251,18 +1252,34 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "How information is used"
         },
         {
           "type": "paragraph",
-          "text": "Account information supports sign-in and access to your workspace. Agent instructions, relevant conversation context and source excerpts may be processed by the model service to generate a response. Application records support saving, retrieval and the controls available in the workspace."
-        },
-        {
-          "type": "paragraph",
-          "text": "Service providers perform hosting, authentication, storage, model processing and website measurements. Session cookies support sign-in; technical request information also supports performance and abuse prevention. Processing location, provider retention and any restrictions on further use should be confirmed before introducing information that requires specific contractual safeguards. Questions about those arrangements can be sent to adham@agynexa.si."
+          "text": "Account information supports sign-in and access to your workspace. Agent instructions, relevant conversation context and source excerpts may be processed by the model service to generate a response. Application records support saving, retrieval and the controls available in the workspace.\n\nService providers perform hosting, authentication, storage, model processing and website measurements. Session cookies support sign-in; technical request information also supports performance and abuse prevention. Processing location, provider retention and any restrictions on further use should be confirmed before introducing information that requires specific contractual safeguards. Questions about those arrangements can be sent to adham@agynexa.si."
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "OpenAI processing and enabled tools"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studio sends the task, relevant conversation context, instructions and selected source material to OpenAI to produce the response. If web search or code analysis is enabled, information needed for that tool may also be processed by OpenAI’s tool services. Code runs in an OpenAI-hosted sandbox, and references to generated files and tool activity may be saved with the run. Confirm provider processing arrangements before using information that requires specific contractual restrictions."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "Optional customer API credentials"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you connect your own OpenAI API key through the dedicated credentials control, it is encrypted before database storage and used server-side for the workspace’s authorized requests. The saved plaintext key is not returned to the interface. You can remove the stored credential; revocation of the key itself is managed in your OpenAI account. Do not put API keys in conversations or knowledge sources."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "Private work and public content"
         },
         {
@@ -1271,6 +1288,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Your choices and deletion"
         },
         {
@@ -1279,14 +1297,16 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Account and information responsibilities"
         },
         {
           "type": "paragraph",
-          "text": "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Do not submit passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records."
+          "text": "The workspace has one account owner. Registration does not verify ownership of the email address, and password recovery is not available. Keep your credentials safe and use information you are authorized to provide. Use a dedicated credential control when connecting a supported provider key. Do not put passwords, access keys, payment credentials or sensitive patient, employment, financial or insurance case records."
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Privacy questions"
         },
         {
@@ -1306,6 +1326,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "المعلومات التي تقدمها"
         },
         {
@@ -1314,18 +1335,34 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "أغراض الاستخدام"
         },
         {
           "type": "paragraph",
-          "text": "تُستخدم معلومات الحساب لتسجيل الدخول والوصول إلى مساحتك. وقد تعالج خدمة النموذج تعليمات الوكيل وسياق المحادثة المناسب ومقتطفات المصادر لتوليد الإجابة. وتتيح سجلات التطبيق الحفظ والاسترجاع والضوابط المتاحة في المساحة."
-        },
-        {
-          "type": "paragraph",
-          "text": "يتولى مزودو الخدمات الاستضافة والمصادقة والتخزين ومعالجة النماذج وقياسات الموقع. وتدعم ملفات الجلسة تسجيل الدخول، بينما تساعد معلومات الطلبات التقنية في متابعة الأداء ومنع الإساءة. قبل إضافة بيانات تتطلب ضمانات تعاقدية خاصة، تأكد من بلد المعالجة ومدد الاحتفاظ لدى المزودين وقيود الاستخدام اللاحق. ويمكن الاستفسار عن هذه الترتيبات عبر adham@agynexa.si."
+          "text": "تُستخدم معلومات الحساب لتسجيل الدخول والوصول إلى مساحتك. وقد تعالج خدمة النموذج تعليمات الوكيل وسياق المحادثة المناسب ومقتطفات المصادر لتوليد الإجابة. وتتيح سجلات التطبيق الحفظ والاسترجاع والضوابط المتاحة في المساحة.\n\nيتولى مزودو الخدمات الاستضافة والمصادقة والتخزين ومعالجة النماذج وقياسات الموقع. وتدعم ملفات الجلسة تسجيل الدخول، بينما تساعد معلومات الطلبات التقنية في متابعة الأداء ومنع الإساءة. قبل إضافة بيانات تتطلب ضمانات تعاقدية خاصة، تأكد من بلد المعالجة ومدد الاحتفاظ لدى المزودين وقيود الاستخدام اللاحق. ويمكن الاستفسار عن هذه الترتيبات عبر adham@agynexa.si."
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "معالجة OpenAI والأدوات المفعّلة"
+        },
+        {
+          "type": "paragraph",
+          "text": "يرسل الاستوديو المهمة وسياق المحادثة المناسب والتعليمات ومادة المصادر المختارة إلى OpenAI لإنتاج الاستجابة. وعند تفعيل البحث أو تحليل الكود، قد تعالج خدمات الأدوات لدى OpenAI المعلومات اللازمة لذلك. يعمل الكود في بيئة معزولة تستضيفها OpenAI، وقد تُحفظ مراجع الملفات الناتجة ونشاط الأدوات مع سجل التشغيل. أكّد ترتيبات المعالجة لدى المزود قبل استخدام بيانات تتطلب قيودًا تعاقدية خاصة."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "بيانات API الاختيارية للعميل"
+        },
+        {
+          "type": "paragraph",
+          "text": "إذا ربطت مفتاح OpenAI API الخاص بك من أداة بيانات الاتصال المخصصة، يُشفّر قبل حفظه في قاعدة البيانات ويُستخدم على الخادم لطلبات مساحة العمل المخولة. لا تعيد الواجهة المفتاح المحفوظ بصورته الأصلية. يمكنك إزالة بيانات الاتصال المخزنة، أما إلغاء المفتاح نفسه فيتم من حساب OpenAI. لا تضع المفاتيح في المحادثات أو مصادر المعرفة."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "العمل الخاص والمحتوى العام"
         },
         {
@@ -1334,6 +1371,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "خيارات الحذف"
         },
         {
@@ -1342,14 +1380,16 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "مسؤوليات الحساب والمعلومات"
         },
         {
           "type": "paragraph",
-          "text": "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. ولا تضف كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
+          "text": "للمساحة مالك حساب واحد. لا يتحقق التسجيل من ملكية البريد الإلكتروني، واستعادة كلمة المرور غير متاحة. احمِ بيانات الدخول واستخدم معلومات يحق لك تقديمها. استخدم أداة بيانات الاتصال المخصصة عند ربط مفتاح مزود مدعوم. ولا تضع كلمات مرور أو مفاتيح وصول أو بيانات دفع أو سجلات حساسة للمرضى أو الموظفين أو المعاملات المالية أو المطالبات التأمينية."
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "الاستفسارات المتعلقة بالخصوصية"
         },
         {
@@ -1371,6 +1411,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Using the workspace"
         },
         {
@@ -1379,6 +1420,25 @@
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "Testing and production activation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studio testing lets you review an agent before production use. Production publication and the agreed operating scope require a separate activation decision after discussion by email at adham@agynexa.si. Pricing, payment arrangements and commercial terms are negotiated by email. The website does not collect a checkout payment or establish a fixed price by creating an account, saving an agent or running a test."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "Provider access and customer usage"
+        },
+        {
+          "type": "paragraph",
+          "text": "The platform’s configured OpenAI connection powers Studio by default. If you connect a customer-owned API key, usage is billed under that OpenAI account’s arrangements. ChatGPT sign-in requires a configured and available identity integration. Using a customer’s ChatGPT plan requires separate supported access and eligibility; identity sign-in or an API key does not establish that entitlement. AGYNEXA production activation remains a separate decision."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "Your information and account"
         },
         {
@@ -1387,6 +1447,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Reviewing AI-generated work"
         },
         {
@@ -1395,6 +1456,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Decisions, actions and saving"
         },
         {
@@ -1403,6 +1465,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Publication and access"
         },
         {
@@ -1411,6 +1474,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Availability and usage"
         },
         {
@@ -1419,6 +1483,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "Questions and specific business requirements"
         },
         {
@@ -1438,6 +1503,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "استخدام مساحة العمل"
         },
         {
@@ -1446,6 +1512,25 @@
         },
         {
           "type": "heading",
+          "depth": 2,
+          "text": "التجربة والتفعيل الإنتاجي"
+        },
+        {
+          "type": "paragraph",
+          "text": "تتيح تجربة الاستوديو مراجعة الوكيل قبل الاستخدام الإنتاجي. يحتاج نشره ونطاق تشغيله المتفق عليه إلى قرار تفعيل مستقل بعد المناقشة عبر adham@agynexa.si. يجري التفاوض على السعر وترتيبات الدفع والشروط التجارية بالبريد. لا يجمع الموقع دفعة عند الدفع الإلكتروني، ولا ينشئ سعرًا ثابتًا بمجرد إنشاء حساب أو حفظ وكيل أو تشغيل تجربة."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "وصول المزود واستخدام العميل"
+        },
+        {
+          "type": "paragraph",
+          "text": "يشغّل اتصال OpenAI المجهّز للمنصة الاستوديو افتراضيًا. وإذا ربطت مفتاح API مملوكًا للعميل، يُحاسب الاستخدام وفق ترتيبات حساب OpenAI المعني. يحتاج تسجيل ChatGPT إلى تكامل هوية مجهّز ومتاح. ويتطلب استخدام خطة ChatGPT الخاصة بالعميل وصولًا مدعومًا وأهلية مستقلين؛ تسجيل الهوية أو مفتاح API لا يثبتان هذه الأهلية. ويظل التفعيل الإنتاجي في AGYNEXA قرارًا مستقلًا."
+        },
+        {
+          "type": "heading",
+          "depth": 2,
           "text": "معلوماتك وحسابك"
         },
         {
@@ -1454,6 +1539,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "مراجعة نتائج الذكاء الاصطناعي"
         },
         {
@@ -1462,6 +1548,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "القرارات والإجراءات والحفظ"
         },
         {
@@ -1470,6 +1557,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "النشر والوصول"
         },
         {
@@ -1478,6 +1566,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "الإتاحة والاستخدام"
         },
         {
@@ -1486,6 +1575,7 @@
         },
         {
           "type": "heading",
+          "depth": 2,
           "text": "الاستفسارات ومتطلبات الأعمال"
         },
         {
@@ -3258,12 +3348,12 @@
   "/solutions/knowledge": {
     "en": {
       "title": "AI agents for company knowledge | AGYNEXA",
-      "description": "Design knowledge agents that use company sources to answer operational questions, explain their basis and identify decisions that need a responsible owner.",
-      "h1": "AI agents for company knowledge",
+      "description": "Build a company knowledge agent with approved sources, cited answers and a clear review process in AGYNEXA Studio.",
+      "h1": "Answers from your company knowledge",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Employees need to know which company rule applies to the work in front of them. The answer may depend on a customer agreement, a local procedure or an exception recorded elsewhere. A useful knowledge agent brings those facts into the question and shows the source behind its answer."
+          "text": "Use approved procedures and reference material to answer a question in its business context. Test the agent’s answer and citations, and leave unresolved policy decisions with the knowledge owner."
         },
         {
           "type": "paragraph",
@@ -3310,12 +3400,12 @@
     },
     "ar": {
       "title": "وكلاء المعرفة المؤسسية | AGYNEXA",
-      "description": "تصميم وكلاء يستندون إلى معرفة الشركة للإجابة عن أسئلة العمل، مع توضيح مصادر الإجابة والحالات التي تحتاج إلى قرار من صاحب الاختصاص.",
-      "h1": "وكلاء يستخدمون معرفة الشركة في سياق العمل",
+      "description": "ابنِ وكيلًا لمعرفة الشركة بمصادر معتمدة وإجابات موثقة وخطوات مراجعة واضحة داخل استوديو AGYNEXA.",
+      "h1": "إجابات من معرفة شركتك",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يحتاج الموظف إلى إجابة تنطبق على الحالة التي يعالجها. وقد تتوزع هذه الإجابة بين اتفاقية عميل وإجراء داخلي واستثناء وافقت عليه الشركة. دور وكيل المعرفة هو الوصول إلى المعلومات ذات الصلة، وفهم علاقتها بالسؤال، ثم تقديم إجابة يستطيع الموظف التحقق من أساسها."
+          "text": "استخدم الإجراءات والمراجع المعتمدة للإجابة عن السؤال في سياق العمل. اختبر إجابة الوكيل واستشهاداته، واترك قرارات السياسة غير المحسومة لمسؤول المعرفة."
         },
         {
           "type": "paragraph",
@@ -3364,12 +3454,12 @@
   "/solutions/documents": {
     "en": {
       "title": "Agentic document processing for business | AGYNEXA",
-      "description": "Explore a document workflow that identifies business records, checks their contents and passes reliable information to the responsible process owner.",
-      "h1": "Document processing that carries the work forward",
+      "description": "Turn supplied document content into a sourced review brief. Extract facts, flag gaps and test a document agent in AGYNEXA Studio.",
+      "h1": "Turn documents into reviewable work",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A business document usually arrives because something needs to happen: a project changes scope, a customer supplies onboarding information or a team completes a handover. Processing it requires an understanding of its purpose and the work that follows. Extracted text alone does not establish that the case is ready to proceed."
+          "text": "Extract the facts your team needs from supplied document content, preserve their source and flag missing information. Review the resulting brief before a record is accepted or sent to another system."
         },
         {
           "type": "paragraph",
@@ -3416,12 +3506,12 @@
     },
     "ar": {
       "title": "معالجة مستندات الأعمال بالوكلاء | AGYNEXA",
-      "description": "مسار لفهم مستندات الأعمال واستخلاص المعلومات المطلوبة ومعالجة التعارضات، حتى تصل النتيجة إلى المسؤول عن الخطوة التالية.",
-      "h1": "معالجة المستندات ضمن سير العمل",
+      "description": "حوّل محتوى المستندات إلى موجز مراجعة بمصادره. استخلص الحقائق وحدد النواقص واختبر وكيل المستندات في استوديو AGYNEXA.",
+      "h1": "حوّل المستندات إلى عمل قابل للمراجعة",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "يرتبط وصول المستند عادةً بخطوة مطلوبة في العمل. فقد يحمل تغييرًا في نطاق مشروع، أو معلومات لاستقبال عميل جديد، أو محضر تسليم بين فريقين. لذلك تحتاج معالجته إلى فهم الغرض منه وما سيعتمد عليه لاحقًا، حتى تصل المعلومات إلى الشخص المناسب بصورة قابلة للاستخدام."
+          "text": "استخلص الحقائق التي يحتاجها الفريق من محتوى المستندات المقدمة، واحتفظ بمراجعها وحدّد النواقص. راجع الموجز الناتج قبل اعتماد السجل أو إرساله إلى نظام آخر."
         },
         {
           "type": "paragraph",
@@ -3470,12 +3560,12 @@
   "/solutions/sales": {
     "en": {
       "title": "AI agents for sales operations | AGYNEXA",
-      "description": "Connect customer discovery, requirement assessment and proposal preparation in a sales workflow with clear ownership and controlled commercial commitments.",
-      "h1": "AI agents for sales operations",
+      "description": "Build a sales agent that prepares qualification and proposal drafts from your customer context and approved offer information.",
+      "h1": "Give your sales team a complete brief",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A sales opportunity develops through several decisions. The team needs to understand the customer's operation, establish whether the offer fits and agree on a credible next step. Information often passes between sales, a technical specialist and a delivery owner before a proposal can be made."
+          "text": "Bring the customer inquiry, approved offer information and discovery notes together. Ask the agent to prepare a qualification or proposal draft that keeps assumptions and questions visible to the sales owner."
         },
         {
           "type": "paragraph",
@@ -3526,12 +3616,12 @@
     },
     "ar": {
       "title": "وكلاء لعمليات المبيعات | AGYNEXA",
-      "description": "ربط فهم احتياج العميل وتقييم المتطلبات وإعداد العرض في مسار مبيعات واضح، مع تحديد المسؤول عن الفرصة والالتزامات التجارية.",
-      "h1": "تنسيق عمليات المبيعات بوكلاء الذكاء الاصطناعي",
+      "description": "ابنِ وكيل مبيعات يجهز مسودات التأهيل والعروض من سياق العميل ومعلومات العرض المعتمدة، مع مراجعة مسؤول المبيعات.",
+      "h1": "جهّز لفريق المبيعات موجزًا مكتملًا",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تمر فرصة البيع بقرارات تتجاوز كتابة عرض جيد. يحتاج الفريق إلى فهم عمل العميل، والتأكد من ملاءمة المنتج، ثم الاتفاق على خطوة عملية يستطيع الوفاء بها. وغالبًا ما يشارك في ذلك مسؤول المبيعات ومختص تقني وفريق يتولى التسليم، لكل منهم معلومات وقرارات مختلفة."
+          "text": "اجمع استفسار العميل ومعلومات العرض المعتمدة وملاحظات فهم الاحتياج. اطلب من الوكيل موجز تأهيل أو مسودة عرض تظهر الافتراضات والأسئلة لمسؤول المبيعات."
         },
         {
           "type": "paragraph",
@@ -3584,12 +3674,12 @@
   "/solutions/service": {
     "en": {
       "title": "Customer service agent workflows | AGYNEXA",
-      "description": "Design customer service workflows that preserve case context, apply the right guidance and coordinate resolution or escalation across responsible teams.",
-      "h1": "Customer service agents across the resolution process",
+      "description": "Prepare customer replies and escalation briefs using case context and approved guidance. Test the role before agreeing production activation.",
+      "h1": "Prepare customer responses with context",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A customer may explain a problem to one team while another team holds the information or authority to resolve it. Service breaks down when the request loses its context between those teams, or when a suggested answer is treated as a completed resolution."
+          "text": "Use the customer’s issue, case facts and approved service guidance to prepare a response or escalation. Review the proposal before a channel sends it or a service system changes the case."
         },
         {
           "type": "paragraph",
@@ -3640,12 +3730,12 @@
     },
     "ar": {
       "title": "مسارات وكلاء خدمة العملاء | AGYNEXA",
-      "description": "تصميم مسارات تحافظ على سياق طلب العميل وتربط الإرشادات بفرق المعالجة، حتى يصل الطلب إلى حل مؤكد أو تصعيد له مسؤول واضح.",
-      "h1": "وكلاء خدمة العملاء من استقبال المشكلة إلى معالجتها",
+      "description": "جهّز ردود العملاء وموجز التصعيد من سياق الحالة والإرشاد المعتمد. اختبر الدور قبل الاتفاق على التفعيل الإنتاجي.",
+      "h1": "جهّز ردود العملاء بسياق الحالة",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يشرح العميل مشكلته لفريق، بينما توجد المعلومة أو الصلاحية اللازمة لحلها لدى فريق آخر. تتعطل الخدمة عندما ينتقل الطلب دون تاريخه، أو عندما يُسجَّل الرد المقترح باعتباره حلًا مكتملًا. يحتاج العميل إلى تقدم في معالجة المشكلة، ويحتاج الموظف إلى معرفة الخطوة التي يملك تنفيذها."
+          "text": "استخدم مشكلة العميل وحقائق الحالة وإرشادات الخدمة المعتمدة لتجهيز رد أو تصعيد. راجع المقترح قبل إرساله عبر قناة تواصل أو تعديل الحالة داخل نظام الخدمة."
         },
         {
           "type": "paragraph",
@@ -3698,12 +3788,12 @@
   "/solutions/finance": {
     "en": {
       "title": "AI agents for finance operations | AGYNEXA",
-      "description": "Explore agent workflows for financial reconciliation and exception handling, with traceable records, verified calculations and decisions owned by finance.",
-      "h1": "AI agents for finance operations",
+      "description": "Prepare financial discrepancy reports from approved records. Test calculations, inspect evidence and keep review with your finance team.",
+      "h1": "Review financial differences with evidence",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Finance teams coordinate reconciliations, expense questions, reporting inputs and unresolved transactions. Much of that work involves finding the right records and explaining a difference before anyone decides how it should be treated. The calculation, the investigation and the accounting decision have different responsibilities."
+          "text": "Give the agent approved records and clear matching rules. Use its analysis to prepare a discrepancy report, check the calculations and bring unresolved treatments to the responsible finance specialist."
         },
         {
           "type": "paragraph",
@@ -3754,12 +3844,12 @@
     },
     "ar": {
       "title": "وكلاء للعمليات المالية | AGYNEXA",
-      "description": "مسارات للمطابقة المالية والتحقيق في الفروق، تربط السجلات والحسابات بالقرار المحاسبي وصاحب الصلاحية في اعتماده.",
-      "h1": "وكلاء لتنظيم العمل داخل الإدارة المالية",
+      "description": "جهّز تقارير الفروق المالية من السجلات المعتمدة، واختبر الحسابات وراجع الأدلة مع الفريق المالي داخل استوديو AGYNEXA.",
+      "h1": "راجع الفروق المالية بأدلتها",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تتابع فرق المالية المطابقات والمصروفات ومدخلات التقارير والمعاملات التي لم تُحسم. ويبدأ كثير من هذا العمل بالبحث عن السجلات وفهم سبب الاختلاف، قبل اتخاذ قرار بشأن معالجته. للحساب العددي قواعد، ولتفسير الفرق أدلة، وللمعالجة المحاسبية صاحب صلاحية مسؤول عنها."
+          "text": "زوّد الوكيل بسجلات معتمدة وقواعد مطابقة واضحة. استخدم التحليل لإعداد تقرير بالفروق، وتحقق من الحسابات وأحِل المعالجات غير المحسومة إلى المختص المالي."
         },
         {
           "type": "paragraph",
@@ -3812,12 +3902,12 @@
   "/solutions/logistics": {
     "en": {
       "title": "AI agents for logistics workflows | AGYNEXA",
-      "description": "Design logistics agent workflows that organize shipment events, investigate exceptions and coordinate an authorized response across operations and customers.",
-      "h1": "AI agents for logistics and shipment exceptions",
+      "description": "Turn shipment events and exceptions into a reviewable operations brief. Build and test your logistics agent in AGYNEXA Studio.",
+      "h1": "Make shipment exceptions easier to review",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A delayed shipment affects more than a tracking status. It may change a warehouse plan, an onward movement and the commitment made to a customer. Operations teams need to know which event is reliable, what depends on it and who can authorize a response."
+          "text": "Organize confirmed shipment events, affected commitments and the information still missing. The agent prepares an exception brief and response options for the operations owner; live tracking and changes need an authorized connection."
         },
         {
           "type": "paragraph",
@@ -3868,12 +3958,12 @@
     },
     "ar": {
       "title": "وكلاء لعمليات الشحن والخدمات اللوجستية | AGYNEXA",
-      "description": "تنسيق أحداث الشحن ومعالجة الاستثناءات وربط فرق التشغيل وخدمة العملاء بخطوة تالية مخولة ومؤكدة.",
-      "h1": "وكلاء لتنسيق عمليات الشحن ومعالجة التعطل",
+      "description": "حوّل أحداث الشحن والاستثناءات إلى موجز يستطيع فريق العمليات مراجعته. ابنِ وكيل اللوجستيات واختبره داخل استوديو AGYNEXA.",
+      "h1": "نظّم استثناءات الشحن للمراجعة",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تأخر الشحنة يؤثر في خطة الاستلام والحركة التالية والتزام الشركة أمام العميل. ويحتاج فريق التشغيل إلى معرفة الحدث الذي يمكن الاعتماد عليه، والأعمال المرتبطة به، وصاحب الصلاحية في تغيير الخطة. وقد تأتي المعلومات من جهات متعددة، لكل منها توقيت مختلف وطريقة مختلفة في وصف الحالة."
+          "text": "نظّم أحداث الشحنة المؤكدة والالتزامات المتأثرة والمعلومات الناقصة. يجهّز الوكيل موجز الاستثناء وخيارات الاستجابة لمسؤول العمليات، بينما يحتاج التتبع الحي والتعديل إلى اتصال مخول."
         },
         {
           "type": "paragraph",
@@ -3926,12 +4016,12 @@
   "/solutions/procurement": {
     "en": {
       "title": "AI agents for procurement workflows | AGYNEXA",
-      "description": "Connect internal requirements, supplier information, offer assessment and purchasing decisions in a procurement workflow with explicit authority.",
-      "h1": "Procurement workflows from requirement to authorized purchase",
+      "description": "Compare supplier offers, normalize quantities and flag missing terms. Build a procurement agent while the buyer retains approval.",
+      "h1": "Compare supplier offers before approval",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A purchase begins with an operational need. The buyer must understand what the requesting team requires, determine which offers meet that need and resolve the terms that affect delivery. Price is one part of a decision that may also involve technical suitability, availability and ongoing responsibility."
+          "text": "Bring supplier offers and the purchasing requirement into one review. Ask the agent to compare terms, normalize quantities and flag what is missing, while the buyer retains the decision on price, suitability and award."
         },
         {
           "type": "paragraph",
@@ -3982,12 +4072,12 @@
     },
     "ar": {
       "title": "وكلاء لمسارات المشتريات | AGYNEXA",
-      "description": "ربط احتياج الأقسام ومعلومات الموردين وتقييم العروض واعتماد الشراء في مسار يوضح المسؤوليات وشروط الانتقال بين الخطوات.",
-      "h1": "تنسيق المشتريات من تحديد الاحتياج إلى اعتماد الشراء",
+      "description": "قارن عروض الموردين ووحّد الكميات وحدد الشروط الناقصة. ابنِ وكيل مشتريات مع بقاء قرار الاعتماد لدى مسؤول الشراء.",
+      "h1": "قارن عروض الموردين قبل الاعتماد",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تبدأ المشتريات باحتياج تشغيلي له غرض وتوقيت ومواصفات. ويحتاج المشتري إلى معرفة ما يطلبه القسم فعلًا، والعروض التي تلبيه، والشروط التي ستؤثر في التنفيذ. ويشارك في القرار مختص فني ومسؤول ميزانية، إلى جانب من يتابع المورد والاستلام بعد صدور الطلب."
+          "text": "اجمع عروض الموردين ومتطلبات الشراء في مراجعة واحدة. اطلب من الوكيل مقارنة الشروط وتوحيد الكميات وتحديد النواقص، مع بقاء قرار السعر والملاءمة والترسية لدى مسؤول الشراء."
         },
         {
           "type": "paragraph",
@@ -4040,12 +4130,12 @@
   "/solutions/receivables": {
     "en": {
       "title": "Accounts receivable agent workflows | AGYNEXA",
-      "description": "Organize receivables follow-up around confirmed balances, payment evidence and disputes, with finance controlling communication and resolution.",
-      "h1": "Receivables follow-up with the account context intact",
+      "description": "Prepare follow-up plans and message drafts from approved balances and account facts. Review the work before any external action.",
+      "h1": "Prepare follow-up from the account facts",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An overdue item may reflect a payment delay, an unallocated receipt or a dispute about delivery. Those situations require different responses. A useful receivables workflow establishes what is owed and what is preventing resolution before it prepares the next customer contact."
+          "text": "Use approved balances, due dates and dispute information to prepare a follow-up plan. The agent can draft a contextual message for review; sending it and changing account treatment require the appropriate authority."
         },
         {
           "type": "paragraph",
@@ -4096,12 +4186,12 @@
     },
     "ar": {
       "title": "وكلاء لمتابعة المستحقات | AGYNEXA",
-      "description": "تنظيم متابعة المستحقات بالاستناد إلى الرصيد وأدلة السداد والاعتراضات، مع إبقاء اعتماد التواصل وحسم المعالجة لدى الإدارة المالية.",
-      "h1": "متابعة المستحقات على أساس موقف الحساب",
+      "description": "جهّز خطط المتابعة ومسودات الرسائل من الأرصدة المعتمدة وحقائق الحساب، وراجع العمل قبل أي إجراء خارجي.",
+      "h1": "جهّز المتابعة من حقائق الحساب",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "قد يتأخر أحد المستحقات بسبب تأخر السداد، أو لوجود مبلغ وصل ولم يُربط بالفاتورة، أو لاعتراض على التوريد. ولكل حالة متابعة مختلفة. لذلك يحتاج الفريق إلى فهم الرصيد وسبب تعطله قبل اختيار الرسالة المناسبة أو تحديد الشخص الذي يجب الرجوع إليه."
+          "text": "استخدم الأرصدة المعتمدة ومواعيد الاستحقاق وبيانات النزاع لتجهيز خطة متابعة. يمكن للوكيل إعداد مسودة تناسب الحالة، ويحتاج إرسالها أو تغيير معالجة الحساب إلى الصلاحية المناسبة."
         },
         {
           "type": "paragraph",
@@ -4154,12 +4244,12 @@
   "/solutions/customer-operations": {
     "en": {
       "title": "AI agents for customer operations | AGYNEXA",
-      "description": "Coordinate customer onboarding, delivery dependencies and ongoing account work through agent roles that share context and preserve human authority.",
-      "h1": "Customer operations across the account lifecycle",
+      "description": "Keep account handovers complete with requirements, dependencies and open decisions. Build and test a customer operations agent.",
+      "h1": "Keep the account handover complete",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A customer's experience depends on several teams acting on the same commitments. Sales may agree the scope, operations may prepare delivery and service may take responsibility once the customer starts using the offer. A gap between those stages can delay the whole relationship while each department appears to have finished its own task."
+          "text": "Organize the agreed scope, customer requirements and dependencies across the teams serving an account. Test an agent that prepares the handover brief, identifies open conditions and proposes the next responsible owner."
         },
         {
           "type": "paragraph",
@@ -4210,12 +4300,12 @@
     },
     "ar": {
       "title": "وكلاء لتنسيق عمليات العملاء | AGYNEXA",
-      "description": "ربط استقبال العميل وتجهيز الخدمة والمتابعة المستمرة بأدوار للوكلاء تتشارك سياق الحساب وتوضح الاعتمادات ومسؤولية القرارات.",
-      "h1": "تنسيق عمليات العميل عبر أقسام الشركة",
+      "description": "نظّم تسليم حساب العميل بمتطلباته واعتمادياته وقراراته المفتوحة. ابنِ وكيل عمليات العملاء واختبره داخل استوديو AGYNEXA.",
+      "h1": "احتفظ بسياق العميل عند تسليم العمل",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "تعتمد تجربة العميل على التزام أقسام متعددة بما اتُّفق عليه معه. تحدد المبيعات النطاق، وتجهز العمليات ما يلزم للتسليم، ثم تتولى الخدمة المتابعة أثناء الاستخدام. وقد تتعطل العلاقة بين مرحلتين رغم أن كل قسم أنهى المهمة التي يراها من اختصاصه، لأن خطوة يعتمد عليها الآخر لم تكتمل."
+          "text": "نظّم النطاق المتفق عليه ومتطلبات العميل والاعتماديات بين الفرق التي تخدم الحساب. اختبر وكيلًا يجهّز ملف التسليم ويحدد الشروط المفتوحة ويقترح المسؤول عن الخطوة التالية."
         },
         {
           "type": "paragraph",

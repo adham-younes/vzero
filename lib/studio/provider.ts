@@ -21,18 +21,37 @@ export function parseAnswer(content:string):GroundedAnswer{
  return v
 }
 // Request metadata is allowlisted. Raw provider errors, credentials and reasoning never reach the browser.
+// Diagnostic values are selected from fixed vocabularies, never copied from an error message.
+const providerErrorCodes=new Set(['invalid_api_key','insufficient_quota','rate_limit_exceeded','model_not_found','model_not_supported','unsupported_model','unsupported_parameter','unsupported_value','unsupported_tool','invalid_tool','invalid_json_schema','invalid_value','invalid_type','invalid_request_error','missing_required_parameter','unknown_parameter','context_length_exceeded','permission_denied','organization_deactivated','project_not_found','billing_hard_limit_reached','billing_not_active','server_error'])
+const providerErrorTypes=new Set(['invalid_request_error','authentication_error','permission_error','rate_limit_error','insufficient_quota','server_error','api_error','not_found_error','conflict_error','unprocessable_entity_error','billing_error'])
+const providerErrorParams=['text.format.schema','text.format.name','text.format.strict','text.format.type','reasoning.effort','tools.container.memory_limit','tools.container.type','tools.container','tools.search_context_size','tools.external_web_access','tools.type','tool_choice','max_output_tokens','max_tool_calls','include','model','input','tools','reasoning','text','store']
+function diagnosticValue(value:unknown,allowed:Set<string>){return typeof value==='string'&&allowed.has(value)?value:null}
+function diagnosticParam(value:unknown){
+ if(typeof value!=='string'||value.length>512)return null
+ const normalized=value.replace(/\[\d{1,3}\]/g,'')
+ // Log only a recognized parameter prefix; user-controlled schema paths/content are omitted.
+ return providerErrorParams.find(p=>normalized===p||normalized.startsWith(p+'.'))||null
+}
+async function logProviderFailure(response:Response){
+ const data=await response.clone().json().catch(()=>null),error=data?.error
+ const rawId=response.headers.get('x-request-id')||response.headers.get('openai-request-id')||''
+ const requestId=/^(?:req_[a-f0-9]{16,128}|[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$/i.test(rawId)?rawId:null
+ const diagnostic={status:response.status,code:diagnosticValue(error?.code,providerErrorCodes),type:diagnosticValue(error?.type,providerErrorTypes),param:diagnosticParam(error?.param),requestId}
+ console.error('AGYNEXA_OPENAI_FAILURE '+JSON.stringify(diagnostic))
+ return diagnostic
+}
 export async function openAIResponse(body:Record<string,unknown>,signal:AbortSignal,customerKey?:string|null){
  let response:Response|undefined
  for(let attempt=0;attempt<2;attempt++){
   response=await fetch('https://api.openai.com/v1/responses',{method:'POST',cache:'no-store',redirect:'error',signal,headers:{Authorization:`Bearer ${customerKey||openAIKey()}`,'Content-Type':'application/json'},body:JSON.stringify({...body,store:false})})
   if(response.status!==429)break
-  const details=await response.clone().json().catch(()=>null)
-  if(details?.error?.code==='insufficient_quota')throw new InputError('provider_billing',503)
+  const details=await logProviderFailure(response)
+  if(details.code==='insufficient_quota'){await response.body?.cancel();throw new InputError('provider_billing',503)}
   const retry=response.headers.get('retry-after'),seconds=retry===null?1:Number(retry)
-  if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5)throw new InputError('provider_rate_limited',429)
+  if(attempt||!Number.isFinite(seconds)||seconds<0||seconds>5){await response.body?.cancel();throw new InputError('provider_rate_limited',429)}
   await response.body?.cancel();await delay(Math.ceil(seconds*1000),undefined,{signal})
  }
- if(!response?.ok){const status=response?.status;await response?.body?.cancel();throw new InputError(status===401||status===403?'provider_access_denied':status===402?'provider_billing':status===400||status===404?'provider_model_unsupported':'provider_unavailable',status===400?502:503)}
+ if(!response?.ok){const status=response?.status;if(response)await logProviderFailure(response);await response?.body?.cancel();throw new InputError(status===401||status===403?'provider_access_denied':status===402?'provider_billing':status===400||status===404?'provider_model_unsupported':'provider_unavailable',status===400?502:503)}
  const data=await response.json()
  if(data.status!=='completed')throw new InputError(data.status==='incomplete'?'response_incomplete':'provider_unavailable',502)
  return {data,requestId:String(response.headers.get('x-request-id')||data.id||'').slice(0,160)}
@@ -65,7 +84,7 @@ export async function openAIAnswer(model:ModelId,messages:{role:'system'|'user'|
 }
 export async function checkProvider(){
  return await Promise.all(Object.keys(modelRegistry).map(async id=>{
-  try{const response=await fetch(`https://api.openai.com/v1/models/${encodeURIComponent(id)}`,{headers:{Authorization:`Bearer ${openAIKey()}`},cache:'no-store',redirect:'error',signal:AbortSignal.timeout(10000)});await response.body?.cancel();return {model:id,status:response.ok?'listed':response.status===404?'not_listed':'rejected',http:response.status}}
+  try{const response=await fetch(`https://api.openai.com/v1/models/${encodeURIComponent(id)}`,{headers:{Authorization:`Bearer ${openAIKey()}`},cache:'no-store',redirect:'error',signal:AbortSignal.timeout(10000)});if(!response.ok)await logProviderFailure(response);await response.body?.cancel();return {model:id,status:response.ok?'listed':response.status===404?'not_listed':'rejected',http:response.status}}
   catch{return {model:id,status:'unavailable'}}
  }))
 }

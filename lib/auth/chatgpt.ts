@@ -80,11 +80,12 @@ export async function completeChatGPT(request:Request){
   else userId=created.data.user.id
  }
  if(!known){const {error:linkError}=await db.from('chatgpt_identities').insert({...identity,user_id:userId});if(linkError){const reread=await lookup();if(reread.data?.user_id!==userId)fail('chatgpt_identity_conflict')}}
- const account=await db.auth.admin.getUserById(userId!);if(account.error||!account.data.user?.email)fail('chatgpt_failed')
+ const account=await db.auth.admin.getUserById(userId!),email=account.data.user?.email;
+ if(account.error||!email)throw new InputError('chatgpt_failed')
  // Issue the app's existing Supabase session only after verified OIDC identity. No email is sent.
- const link=await db.auth.admin.generateLink({type:'magiclink',email:account.data.user.email!})
- if(link.error||link.data.user.id!==userId||!link.data.properties.hashed_token)fail('chatgpt_failed')
- const client=await sessionClient(),verified=await client.auth.verifyOtp({token_hash:link.data.properties.hashed_token,type:'email'})
+ const link=await db.auth.admin.generateLink({type:'magiclink',email}),tokenHash=link.data.properties?.hashed_token
+ if(link.error||link.data.user?.id!==userId||!tokenHash)throw new InputError('chatgpt_failed')
+ const client=await sessionClient(),verified=await client.auth.verifyOtp({token_hash:tokenHash,type:'email'})
  if(verified.error||verified.data.user?.id!==userId||!verified.data.session)fail('chatgpt_failed')
  return locale==='ar'?'/ar/studio':'/studio'
  }catch(error){if(error&&typeof error==='object')Object.assign(error,{locale:callbackLocale});throw error}
