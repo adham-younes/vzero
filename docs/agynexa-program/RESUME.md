@@ -1,6 +1,10 @@
-## Direct ChatGPT activation in progress
+## Direct ChatGPT connection verified
 
-PR74 OAuth is production READY. [OAuth receipt](releases/private-mail-2026-11-05/OAUTH.md). ChatGPT discovered its authorization metadata and all scopes; the custom connection form is prepared with public client `nexa-mail-chatgpt`, method `none`, and exact stable callback. Await the owner action-time consent request before creating/granting this new mailbox connection. Do not repeat production discovery checks or replace the existing Resend grants. Direct activation and Full access are not yet verified.
+PR77 is production READY at `a25c8c815d2f82c26aa96a810b788c175bf0df81`. OAuth connected successfully, UI and permission API confirm Allow all actions, and ordinary ChatGPT searched and read the acceptance message without sending mail or changing settings. Private NEXA Mail 0.1.1 now binds to the actual connected app. [Current receipt](releases/private-mail-2026-11-05/OAUTH.md).
+
+Password setting is deployed and its authenticated Settings form is open. The owner has not confirmed saving a new password; a separate login attempt used a mailbox address instead of the existing AGYNEXA owner account. Do not claim password completion. Gmail background ingestion remains unconnected.
+
+## Earlier mailbox checkpoint (superseded for ChatGPT activation)
 
 # Resume private owner mail — 5 November 2026
 
