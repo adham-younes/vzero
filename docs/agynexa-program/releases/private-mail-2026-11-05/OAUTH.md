@@ -15,3 +15,5 @@ Final activation requires creating the private ChatGPT MCP connection with provi
 Reference: https://developers.openai.com/plugins/build/auth
 
 During actual ChatGPT initiation, the authorization request reached the POST consent guard with URL parameters and returned invalid_origin. Initiation POSTs with valid OAuth URL parameters now normalize to GET without issuing a code. The consent form posts to a query-free explicit same-origin action and retains its Origin, signature, expiry and owner checks. Final connection remains pending acceptance.
+
+A fresh authorization GET showed the consent page, but its native HTML form still returned invalid_origin. The authorization document inherited no-referrer, which can give non-CORS form POSTs a null Origin. Only that document now uses same-origin referrer policy; the exact Origin guard is retained, and cross-origin callback navigation still sends no referrer. This supersedes the initial POST-initiation diagnosis; the normalizer remains a harmless compatibility path.
