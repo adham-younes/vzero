@@ -1,4 +1,4 @@
-# Public navigation and page consistency — local candidate, 27 October 2026
+# Public navigation and catalogue design — 5 November 2026
 
 On 5 November 2026 the owner authorized production release of the verified public navigation revision. The product commit is `f31d44dc17f0d3f8b1d464c463158e5585e93d11` on `codex/public-navigation-consistency`, based on `c61cc369bfa9f678ed794d71b0f0266423948b8f`. The release covers public navigation and layout. Studio remains paused and outside the release scope.
 
@@ -62,3 +62,9 @@ There is no repeated three-way catalog menu. The optional industry selector insi
 URL keys add `solution`, `capability` and `reading` to the existing `q`, `category` and `industry` state. Invalid panels remain closed. Exclusive native close events retain the newly opened sibling instead of clearing it. Small subordinate links explicitly offer a standalone page for sharing/reference, with the current catalog context retained.
 
 The first candidate's successful build, public-route checks and browser checks describe that earlier presentation. The Verification section records the checks performed on the revised source before production publication.
+
+## First production build and owner feedback
+
+[PR #53](https://github.com/adham-younes/vzero/pull/53) merged as `693ee736ccef86e59b2727b1f2b7dd2d2a55fb68`. Vercel built it from Git and assigned `agynexa.si` and `www.agynexa.si` to READY production deployment [`dpl_EdviXEidWrYj4zUnzerneMivmcNS`](https://vercel.com/adhamlouxors-projects/vzero/EdviXEidWrYj4zUnzerneMivmcNS).
+
+The owner rejected the reduction of desktop navigation to two destinations and pointed to the oversized Arabic Sales disclosure. The follow-up restores the five baseline destinations and places Industries alongside them. The three catalogues use the same spacing, typography and structure. At wide widths a compact list selects a separate reading area. At phone width a labelled selector sits above the details. Workflow summary facts use equal columns where space allows. A supporting capability and its integration requirements stay within the selected workflow. [Design contract](../../../../DESIGN.md).
