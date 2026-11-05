@@ -1,6 +1,6 @@
 The shared catalogue controls shipped on 5 November 2026 at main `6d9b13a`. Solutions, Capabilities and Industries use one control row and one selected reading area. The official Arabic Capabilities layout, URL state and mobile flow were checked. [Release receipt and evidence](releases/public-navigation-2026-10-27/README.md).
 
-Latest verified release: [minimal HeronSignal browser installation](releases/heronsignal-sitewide-2026-10-24/README.md), main `80abfdc` / READY production `dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs`. Official tracker200/config/events204 and single-installation checks passed; MCP/dashboard status was not queried. [Arabic handoff](HANDOFF-2026-10-24.md). Studio/agent redesign remains deferred.
+HeronSignal release, 24 October 2026: [minimal HeronSignal browser installation](releases/heronsignal-sitewide-2026-10-24/README.md), main `80abfdc` / READY production `dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs`. Official tracker200/config/events204 and single-installation checks passed; MCP/dashboard status was not queried. [Arabic handoff](HANDOFF-2026-10-24.md). Studio/agent redesign remains deferred.
 
 Latest verified maintenance: [security update and platform closeout](releases/security-closeout-2026-10-24/README.md), main `445424f` / READY production deployment `dpl_97GBctYLSzVJ2usGnDRFEzVW4HmX`. Dependency advisories8→0, local/public checks and bounded anonymous production rejections passed. Studio/agent planning remains deferred.
 

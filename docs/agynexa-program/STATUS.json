@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-10-24T15:29:14.700294+00:00",
+  "updated_at": "2026-11-05T06:59:12Z",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
@@ -14,15 +14,15 @@
     "production_branch": "main"
   },
   "current_product_release": {
-    "implementation_commit": "ca15207d37fa32d18c62b66d4c5b0ee2db967bc3",
-    "reviewed_head": "60156f8726a752eb820ec1391507836ba2468bea",
-    "merge_commit": "80abfdc3e2f3a623e8e2e5ca4117b3c9827f6c16",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/50",
+    "implementation_commit": "ffa354f180babbae60ded85516630ca75a038d0b",
+    "reviewed_head": "18b2ebc90d6db7b79b30107fe39963ffec6616d3",
+    "merge_commit": "6d9b13a76e222d5ceae42711b9da5e0cb0a85a46",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/55",
     "pull_request_state": "MERGED",
     "domain": "https://agynexa.si",
-    "status_at_verification": "READY_HERONSIGNAL_BROWSER_VERIFIED",
-    "deployment_id": "dpl_Ha1b83WfDd7EFmcYT6wkMDYtMrHs",
-    "receipt": "releases/heronsignal-sitewide-2026-10-24/README.md"
+    "status_at_verification": "PRODUCTION_SHARED_CATALOGUE_CONTROLS_VERIFIED",
+    "deployment_id": "dpl_8rmPcjyi6oAHpaafvQrDwcnRrH3V",
+    "receipt": "releases/public-navigation-2026-10-27/README.md"
   },
   "stage_status": [
     {
@@ -64,7 +64,7 @@
   "implemented": {
     "service_count": 10,
     "solution_count": 9,
-    "canonical_urls": 64,
+    "canonical_urls": 68,
     "locales": [
       "en",
       "ar"
@@ -756,7 +756,7 @@
     "date": "2026-10-27",
     "status": "PRODUCTION_SHARED_CATALOGUE_CONTROLS_VERIFIED",
     "baseline": "c61cc369bfa9f678ed794d71b0f0266423948b8f",
-    "branch": "codex/public-navigation-consistency",
+    "branch": "codex/standard-public-catalogue",
     "receipt": "releases/public-navigation-2026-10-27/README.md",
     "scope": "Public navigation, six header destinations, shared catalogues and in-place workflow, capability and requirements reading with URL-backed state.",
     "studio": "PAUSED_EXCLUDED",

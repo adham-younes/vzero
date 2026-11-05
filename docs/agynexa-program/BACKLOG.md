@@ -1,4 +1,4 @@
-## Public information architecture — local candidate, 27 October 2026
+## Public catalogue release — 5 November 2026
 
 PUBLIC-NAV-2026-10-27 — The correction for the Arabic Capabilities sidebar is in production. One row groups search, filters and selection in the public catalogues, with one detail area underneath. The scoped checks passed. [Release scope and evidence](releases/public-navigation-2026-10-27/README.md).
 
