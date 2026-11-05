@@ -86,3 +86,9 @@ The owner subsequently rejected the sidebar in the published Arabic Capabilities
 [Local route checks](evidence/standard-catalogue-local-contract.json) passed on the reviewed layout before the English result-count wording change. The exact PR head passed its Vercel build. [17 read-only production HTTP checks](evidence/standard-catalogue-production-http.json) confirmed the shared control row in both languages, the canonical URLs and redirects, the signed-out Studio entry and the original video hash.
 
 [Production browser evidence](evidence/standard-catalogue-production-browser.json) records the 48px aligned fields at 1280px and their 390px layout. Search by the short label, browser Back and switching languages preserve the query, category and selection. The Finance-to-Connections path and the Logistics example stay within their catalogues. [Arabic desktop](evidence/standard-capabilities-ar-desktop.jpg) · [Arabic mobile](evidence/standard-capabilities-ar-390.jpg).
+
+## Repository publication — 5 November 2026
+
+The owner requested that the complete record be included on `main`. This documentation delivery includes the dated release and deployment metadata, the local contract, public HTTP and side-browser results, and Arabic desktop and mobile screenshots. The release index, technical plan, backlog and handoff point to this receipt.
+
+Before merging the documentation, the official domain resolved to [`dpl_5L17oNkuQVUSt81NZ1xSeSX1QTZG`](https://vercel.com/adhamlouxors-projects/vzero/5L17oNkuQVUSt81NZ1xSeSX1QTZG), a READY production redeployment of the same product commit `6d9b13a76e222d5ceae42711b9da5e0cb0a85a46`. The release metadata above identifies the original deployment of that product change. The documentation pull request records the final source and official aliases observed after its own merge.
