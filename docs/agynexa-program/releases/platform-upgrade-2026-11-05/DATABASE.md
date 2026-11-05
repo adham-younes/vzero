@@ -13,4 +13,6 @@ Local migration filenames match the versions assigned by the database connector,
 
 Post-apply catalog verification confirmed sector/tools columns; the activation, credential, OAuth transaction and identity tables; and the publication/disconnect/withdrawal triggers. All four new tables have RLS enabled, no SELECT privilege for anon or authenticated, and service_role access. No secret value or customer content was read for this verification. Existing data was preserved.
 
-The historical leaked-password-protection warning remains; this task did not change that Auth configuration. Runtime behavior and user interactions are recorded separately after the application release.
+The same catalog and permission checks passed again after final production deployment `dpl_AhhLWthKRjRskicjfNrqfy1RPFp8` / source `794c2b8`. PR66 needed no additional migration. The non-secret final verification is included in [production-release.json](evidence/production-release.json).
+
+The historical leaked-password-protection warning remains; this task did not change that Auth configuration. Runtime behavior and user interactions are recorded separately in [PRODUCTION.md](PRODUCTION.md).

@@ -96,3 +96,7 @@ Studio uses a dedicated full-height shell with readable chat, a two-step configu
 Authentication uses a two-column explanation and form on desktop, one ordered column on mobile. ChatGPT sign-in is availability-aware and must never imply entitlement to customer plan billing. Activation is email negotiation, without invented prices, checkout success or implied contracts. Public aggregate telemetry excludes private routes and query strings; session replay is removed from the shared application layout.
 
 References: Humanizer writing review and Better Design spacing/form/comprehension guidance. Mobbin was attempted but paid access was unavailable; no Mobbin screen was used. Production visual evidence belongs in the [release receipt](docs/agynexa-program/releases/platform-upgrade-2026-11-05/README.md), and is pending until the release is actually inspected.
+
+### Owner correction — restore the original Studio colours, 5 November 2026
+
+The owner rejected the green-tinted Studio surfaces and text introduced by the upgrade. Studio must use the existing shared palette exactly: background `#050505`, card/popover `#0B0B0B`, muted `#111111`, secondary `#151515`, foreground `#EBEBEB`, secondary text `#BFBFBF` and emerald `#10B981`. Reference these shared CSS variables; do not introduce a separate Studio palette. Preserve the shipped layout and behavior while restoring these colours. [Correction receipt](docs/agynexa-program/releases/studio-palette-restoration-2026-11-05.md).

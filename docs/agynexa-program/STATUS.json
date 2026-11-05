@@ -1,25 +1,26 @@
 {
   "schema_version": 2,
   "program": "AGYNEXA",
-  "updated_at": "2026-11-05T10:16:40.859944+00:00",
+  "updated_at": "2026-11-05T11:49:53Z",
   "documentation_priority": "REQUIRED_WITH_EVERY_DELIVERY",
   "documentation_index": "README.md",
   "master_plan": "MASTER-PLAN.md",
   "master_plan_sha256": "a0fdc42bf6a2eceb7a17adaf16d7fea53210971bf0254803fa65f489d7923ef3",
   "stage": 6,
-  "status": "PLATFORM_UPGRADE_IMPLEMENTED_PRODUCTION_VERIFICATION_PENDING",
+  "status": "PLATFORM_UPGRADE_DEPLOYED_SCOPED_PRODUCTION_VERIFIED",
   "repository": {
     "url": "https://github.com/adham-younes/vzero",
     "visibility": "PUBLIC",
     "production_branch": "main"
   },
   "current_product_release": {
-    "merge_commit": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
-    "pull_request": "https://github.com/adham-younes/vzero/pull/64",
+    "merge_commit": "794c2b8299b95762e6eb173c3c1ff720d5731d7d",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/66",
+    "initial_pull_request": "https://github.com/adham-younes/vzero/pull/65",
     "domain": "https://agynexa.si",
-    "status_at_verification": "READY_BASELINE_BEFORE_UPGRADE",
-    "deployment_id": "dpl_jKvCTBheATAHLi9Rm3oHpvPaVAhG",
-    "receipt": "OWNER-MAIL-2026-11-05.md"
+    "status_at_verification": "READY_SCOPED_PRODUCTION_ACCEPTANCE_PASSED",
+    "deployment_id": "dpl_AhhLWthKRjRskicjfNrqfy1RPFp8",
+    "receipt": "releases/platform-upgrade-2026-11-05/PRODUCTION.md"
   },
   "stage_status": [
     {
@@ -95,16 +96,24 @@
     "route_files": 51
   },
   "last_product_checks": {
-    "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
-    "unchanged_candidate_local_build": "PREVIOUS_PASS_REUSED",
-    "local_affected_samples": "PREVIOUS_8_PASS_REUSED",
-    "production_affected_http_pages": 4,
-    "production_browser_samples": 4,
-    "google_exact_bytes": "PASS_200_53_BYTES_SHA256_NO_NEWLINE",
-    "protected_paths_unchanged": 12,
-    "full_suite_repeated": false,
-    "model_tests_repeated": false,
-    "evidence": "../launch/2026-10-22/evidence/owner-identity-production/browser.json"
+    "release_build_typescript": "PASS",
+    "production_sitemap_pages": 68,
+    "production_page_failures": 0,
+    "additional_public_query_targets": 60,
+    "health_and_access_checks": 10,
+    "actual_openai_runs": 2,
+    "model": "gpt-6.1-terra",
+    "reasoning": "high",
+    "web_search": "COMPLETED",
+    "python": "COMPLETED",
+    "artifact_download": "VERIFIED",
+    "arabic_private_source": "VERIFIED",
+    "locale_draft_preservation": "VERIFIED",
+    "new_sector_context": "VERIFIED",
+    "database_migrations": "APPLIED_AND_PERMISSIONS_VERIFIED",
+    "customer_commercial_execution": "NOT_EXERCISED",
+    "chatgpt_oidc": "CLIENT_NOT_CONFIGURED",
+    "evidence": "releases/platform-upgrade-2026-11-05/evidence/production-release.json"
   },
   "speed_insights": {
     "status": "INSTRUMENTATION_EVENTS_VERIFIED",
@@ -137,12 +146,12 @@
     }
   },
   "current_documentation_work": {
-    "branch": "codex/agynexa-domain-cutover",
-    "baseline_main": "3cc7f8e1754946233c3d5bae63298ec3c0d32e3a",
+    "branch": "codex/platform-upgrade-2026-11-05",
+    "baseline_main": "794c2b8299b95762e6eb173c3c1ff720d5731d7d",
     "product_code_changed": false,
     "database_changed": false,
-    "receipt": "../launch/2026-10-22/DOMAIN-CUTOVER.md",
-    "scope": "Final domain evidence local Git and merged PR body; no docs-only redeploy."
+    "receipt": "releases/platform-upgrade-2026-11-05/PRODUCTION.md",
+    "scope": "Final production evidence and current status; separate documentation commit without another production deployment."
   },
   "known_limitations": [
     "BACKLOG.md",
@@ -159,7 +168,7 @@
   },
   "next_stage": null,
   "next_stage_authorized": true,
-  "next_action": "Complete the authorized production release and final checks; record actual results and remaining OpenAI commercial prerequisites.",
+  "next_action": "Supported release complete. External prerequisites remain explicit in BACKLOG.md; do not claim configured ChatGPT login, plan-funded inference or tested customer commercial execution.",
   "connected_design_resources": {
     "count": 11,
     "connection_status": "CONNECTED_OWNER_CONFIRMED",
@@ -809,7 +818,7 @@
     "receipt": "releases/public-navigation-2026-10-27/README.md"
   },
   "platform_upgrade": {
-    "status": "IMPLEMENTED_AWAITING_RELEASE",
+    "status": "DEPLOYED_SCOPED_PRODUCTION_VERIFIED",
     "branch": "codex/platform-upgrade-2026-11-05",
     "baseline_main": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
     "receipt": "releases/platform-upgrade-2026-11-05/README.md",
@@ -819,8 +828,33 @@
     "chatgpt_plan_inference": false,
     "customer_api_credentials": "ENCRYPTED_SERVER_ONLY",
     "commercial_activation": "TEST_THEN_EMAIL_NEGOTIATION_AND_OPERATOR_ACTIVATION",
-    "final_evidence": "Merged release PR and task-local production receipt; no docs-only production redeploy",
+    "final_evidence": "releases/platform-upgrade-2026-11-05/evidence/production-release.json",
     "database_status": "APPLIED_AND_CATALOG_PERMISSIONS_VERIFIED",
-    "database_receipt": "releases/platform-upgrade-2026-11-05/DATABASE.md"
+    "database_receipt": "releases/platform-upgrade-2026-11-05/DATABASE.md",
+    "merge_commit": "794c2b8299b95762e6eb173c3c1ff720d5731d7d",
+    "production_deployment": "dpl_AhhLWthKRjRskicjfNrqfy1RPFp8",
+    "production_receipt": "releases/platform-upgrade-2026-11-05/PRODUCTION.md",
+    "actual_openai_execution": "WEB_PYTHON_ARTIFACT_AND_ARABIC_KNOWLEDGE_VERIFIED",
+    "tripo": "AUTHORIZED_API_ZERO_STUDIO_200_NO_CREDITS_SPENT"
+  },
+  "historical_product_release_immediately_before_platform_upgrade": {
+    "merge_commit": "a5a503a5bc11f0a2d2926c877885e62a33bf072b",
+    "pull_request": "https://github.com/adham-younes/vzero/pull/64",
+    "domain": "https://agynexa.si",
+    "status_at_verification": "READY_BASELINE_BEFORE_UPGRADE",
+    "deployment_id": "dpl_jKvCTBheATAHLi9Rm3oHpvPaVAhG",
+    "receipt": "OWNER-MAIL-2026-11-05.md"
+  },
+  "historical_product_checks_before_platform_upgrade": {
+    "vercel_build_typescript": "PASS_READY_RELEASE_BUILD",
+    "unchanged_candidate_local_build": "PREVIOUS_PASS_REUSED",
+    "local_affected_samples": "PREVIOUS_8_PASS_REUSED",
+    "production_affected_http_pages": 4,
+    "production_browser_samples": 4,
+    "google_exact_bytes": "PASS_200_53_BYTES_SHA256_NO_NEWLINE",
+    "protected_paths_unchanged": 12,
+    "full_suite_repeated": false,
+    "model_tests_repeated": false,
+    "evidence": "../launch/2026-10-22/evidence/owner-identity-production/browser.json"
   }
 }
