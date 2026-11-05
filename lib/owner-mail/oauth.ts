@@ -43,12 +43,18 @@ export async function mailOAuth(request:Request,action:string){
  try{
   await requireConsole();await limit(request)
   if(action==='authorize'){
+   // OAuth clients can initiate a top-level POST with parameters in the URL.
+   // Normalize initiation to GET; this never creates a code or grants access.
+   if(request.method==='POST'&&new URL(request.url).searchParams.has('response_type')){
+    parameters(new URL(request.url).searchParams)
+    return new Response(null,{status:303,headers:{Location:request.url,'Cache-Control':'no-store'}})
+   }
    if(request.method==='GET'){
     const p=parameters(new URL(request.url).searchParams)
     let owner;try{owner=await mailAdmin()}catch(e){if(e instanceof InputError&&e.status===401)return new Response('<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><p>سجّل الدخول إلى بريد NEXA في تبويب آخر، ثم حدّث صفحة التفويض.</p><a href="/private-mail" target="_blank" rel="noopener">دخول المالك</a></html>',{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store'}});throw e}
     const payload=Buffer.from(JSON.stringify({...p,owner:owner.actor,exp:Date.now()+600000,nonce:randomBytes(24).toString('base64url')})).toString('base64url')
     const ticket=payload+'.'+sign(payload)
-    return new Response(`<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>ربط NEXA Mail بـChatGPT</title><style>body{background:#050505;color:#eee;font:18px system-ui;max-width:620px;margin:10vh auto;padding:24px;line-height:1.8}button{background:#10b981;color:#050505;padding:14px 24px;border:0;border-radius:10px;font:inherit}a{color:#10b981}</style><h1>ربط بريدك بـChatGPT</h1><p>يسمح هذا الاتصال لـChatGPT بقراءة رسائل الصندوقين وبيانات مرفقاتها، وقراءة المعرفة المعتمدة، وإرسال ردود ضمن قواعد NEXA.</p><p>الرسائل الحساسة تبقى للمراجعة. لا يتيح حذف الرسائل أو الدخول إلى Gmail. ينتهي الاتصال بعد 30 يومًا ويمكن إلغاؤه من إعدادات البريد.</p><form method="post"><input type="hidden" name="ticket" value="${escape(ticket)}"><button type="submit">السماح وربط ChatGPT</button></form><p><a href="/private-mail">إلغاء والعودة للبريد</a></p></html>`,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY'}})
+    return new Response(`<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>ربط NEXA Mail بـChatGPT</title><style>body{background:#050505;color:#eee;font:18px system-ui;max-width:620px;margin:10vh auto;padding:24px;line-height:1.8}button{background:#10b981;color:#050505;padding:14px 24px;border:0;border-radius:10px;font:inherit}a{color:#10b981}</style><h1>ربط بريدك بـChatGPT</h1><p>يسمح هذا الاتصال لـChatGPT بقراءة رسائل الصندوقين وبيانات مرفقاتها، وقراءة المعرفة المعتمدة، وإرسال ردود ضمن قواعد NEXA.</p><p>الرسائل الحساسة تبقى للمراجعة. لا يتيح حذف الرسائل أو الدخول إلى Gmail. ينتهي الاتصال بعد 30 يومًا ويمكن إلغاؤه من إعدادات البريد.</p><form method="post" action="/api/private-mail/oauth/authorize"><input type="hidden" name="ticket" value="${escape(ticket)}"><button type="submit">السماح وربط ChatGPT</button></form><p><a href="/private-mail">إلغاء والعودة للبريد</a></p></html>`,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY'}})
    }
    if(request.method!=='POST')fail()
    if(request.headers.get('origin')!==MAIL_ISSUER)throw new MailError('invalid_origin',403)

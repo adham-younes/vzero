@@ -13,3 +13,5 @@ The additive OAuth-code table is service-only with RLS and no anonymous/authenti
 Final activation requires creating the private ChatGPT MCP connection with provided public client ID, approving the concrete owner consent, selecting full access for the resulting actual app, and a harmless tools/read check. Do not call archive installation or Resend access proof of this direct connection.
 
 Reference: https://developers.openai.com/plugins/build/auth
+
+During actual ChatGPT initiation, the authorization request reached the POST consent guard with URL parameters and returned invalid_origin. Initiation POSTs with valid OAuth URL parameters now normalize to GET without issuing a code. The consent form posts to a query-free explicit same-origin action and retains its Origin, signature, expiry and owner checks. Final connection remains pending acceptance.
